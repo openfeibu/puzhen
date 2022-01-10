@@ -19,10 +19,13 @@ class QrCodeController extends BaseController
     }
     public function getQrCodes(Request $request)
     {
+        $user = User::tokenAuth();
         $name = $request->get('name','');
-        $qrcodes = QrCodeModel::when($name, function($query)use($name){
+        $qrcodes = QrCodeModel::where('user_id',$user->id)
+            ->when($name, function($query)use($name){
                 return $query->where('name','like','%'.$name.'%');
-            })->orderBy('id','desc')
+            })
+            ->orderBy('id','desc')
             ->paginate(20);
         foreach ($qrcodes as $key => $qrcode)
         {
