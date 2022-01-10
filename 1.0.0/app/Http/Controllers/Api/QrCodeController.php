@@ -17,9 +17,13 @@ class QrCodeController extends BaseController
         parent::__construct();
         $this->middleware('auth.api');
     }
-    public function getQrCodes()
+    public function getQrCodes(Request $request)
     {
-        $qrcodes = QrCodeModel::orderBy('id','desc')->paginate(20);
+        $name = $request->get('name','');
+        $qrcodes = QrCodeModel::when($name, function($query)use($name){
+                return $query->where('name','like','%'.$name.'%');
+            })->orderBy('id','desc')
+            ->paginate(20);
         foreach ($qrcodes as $key => $qrcode)
         {
             $qrcodes[$key]['image'] = config('app.image_url').'/image/original'.$qrcode['image'];
@@ -27,7 +31,7 @@ class QrCodeController extends BaseController
         }
         return $this->response->success()->data($qrcodes->toArray()['data'])->json();
     }
-    public function getQrCode($id)
+    public function getQrCode(Request $request,$id)
     {
         $user = User::tokenAuth();
         $qrcode = QrCodeModel::where('user_id',$user->id)

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api\Auth;
 
-use App\Repositories\Eloquent\PageRepositoryInterface;
+use App\Exceptions\OutputServerMessageException;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Api\BaseController;
 use App\Models\User;
@@ -27,15 +27,47 @@ class WeAppUserLoginController extends BaseController
         $user_info->avatarUrl = '';
         $user_info->nickName = '';
         $user_info->city = "";
-        $this->storeUser($user_info, $token, $we_data['session_key']);
+        //$this->storeUser($user_info, $token, $we_data['session_key']);
+        $user = app(User::class)->findUserByOpenId($user_info->openId);
+
+        return $this->response->success()->data($user)->json();
+
+    }
+    //wx.getUserProfile 获取opedId，没有真实昵称，由前端提供$rawData
+    public function login(Request $request)
+    {
+        $code = $request->input('code');
+        $encryptedData = $request->input('encryptedData');
+        $iv = $request->input('iv');
+        $raw_data = json_decode($request->input('rawData'),true);
+
+        $data = $this->getSessionKey($code);
+        $sessionKey = $data['session_key'];
+
+        $token = $this->generatetoken($sessionKey);
+
+        $WXBizDataCryptService = new WXBizDataCryptService($sessionKey);
+
+        $errCode = $WXBizDataCryptService->decryptData($encryptedData, $iv, $data );
+
+        if ($errCode != 0) {
+            throw new OutputServerMessageException($errCode);
+        }
+
+        $user_info = json_decode($data);
+        $user_info->nickName = $raw_data['nickName'];
+        $user_info->avatarUrl = $raw_data['avatarUrl'];
+        $user_info->city = $raw_data['city'];
+
+        $this->storeUser($user_info, $token, $sessionKey);
+
         $user = app(User::class)->findUserByToken($token);
 
-        return response()->json([
-            'code' => '200',
-            'data' => $user,
-        ]);
+        return $this->response->success()->data($user)->json();
     }
-    public function login(Request $request)
+    //wx.getUserInfo 真实昵称，没有openId
+    /*
+    public function update(Request $request)
     {
         $code = $request->input('code');
         $encryptedData = $request->input('encryptedData');
@@ -51,10 +83,7 @@ class WeAppUserLoginController extends BaseController
         $errCode = $WXBizDataCryptService->decryptData($encryptedData, $iv, $data );
 
         if ($errCode != 0) {
-            return response()->json([
-                'code' => '400',
-                'message' => $errCode,
-            ]);
+            throw new OutputServerMessageException($errCode);
         }
 
         $user_info = json_decode($data);
@@ -63,11 +92,9 @@ class WeAppUserLoginController extends BaseController
 
         $user = app(User::class)->findUserByToken($token);
 
-        return response()->json([
-            'code' => '200',
-            'data' => $user,
-        ]);
+        return $this->response->success()->data($user)->json();
     }
+    */
     /**
      * 通过 code 换取 session key
      * @param string $code
