@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Exceptions\OutputServerMessageException;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Api\BaseController;
 use Auth,Log,File,Storage,QrCode;
@@ -25,6 +26,19 @@ class QrCodeController extends BaseController
             $qrcodes[$key]['data'] = json_decode($qrcode['data']);
         }
         return $this->response->success()->data($qrcodes->toArray()['data'])->json();
+    }
+    public function getQrCode($id)
+    {
+        $user = User::tokenAuth();
+        $qrcode = QrCodeModel::where('user_id',$user->id)
+            ->where('id',$id)
+            ->first();
+        if(!$qrcode)
+        {
+           throw new ModelNotFoundException('未找到相关数据');
+        }
+        $qrcode['data'] = json_decode($qrcode['data']);
+        return $this->response->success()->data($qrcode)->json();
     }
     public function destroy(Request $request, $id)
     {

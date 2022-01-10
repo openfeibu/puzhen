@@ -29,6 +29,7 @@ $api->version('v1', function ($api) {
 
     $api->post('/qrcodes/generate','App\Http\Controllers\Api\QrCodeController@generateQrCode');
     $api->get('/qrcodes','App\Http\Controllers\Api\QrCodeController@getQrCodes');
+    $api->get('/qrcodes/{id}','App\Http\Controllers\Api\QrCodeController@getQrCode');
     $api->delete('/qrcodes/{id}','App\Http\Controllers\Api\QrCodeController@destroy');
     
     $api->get('/banners','App\Http\Controllers\Api\HomeController@getBanners');
