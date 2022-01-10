@@ -27,9 +27,11 @@ class QrCodeController extends BaseController
         foreach ($qrcodes as $key => $qrcode)
         {
             $qrcodes[$key]['image'] = config('app.image_url').'/image/original'.$qrcode['image'];
-            $qrcodes[$key]['data'] = json_decode($qrcode['data']);
+            $data = json_decode($qrcode['data'],true);
+            $data['tea_name'] = config('model.qrcode.qrcode.tea')[$data['tea']];
+            $qrcodes[$key]['data'] = $data;
         }
-        return $this->response->success()->data($qrcodes->toArray()['data'])->json();
+        return $this->response->success()->data($qrcodes->toArray()['data'])->count($qrcodes->total())->json();
     }
     public function getQrCode(Request $request,$id)
     {
@@ -41,7 +43,9 @@ class QrCodeController extends BaseController
         {
            throw new ModelNotFoundException('未找到相关数据');
         }
-        $qrcode['data'] = json_decode($qrcode['data']);
+        $data = json_decode($qrcode['data'],true);
+        $data['tea_name'] = config('model.qrcode.qrcode.tea')[$data['tea']];
+        $qrcode['data'] = $data;
         return $this->response->success()->data($qrcode)->json();
     }
     public function destroy(Request $request, $id)
