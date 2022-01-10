@@ -43,6 +43,8 @@ class QrCodeController extends BaseController
         {
            throw new ModelNotFoundException('未找到相关数据');
         }
+        $qrcode['image'] = config('app.image_url').'/image/original'.$qrcode['image'];
+
         $data = json_decode($qrcode['data'],true);
         $data['tea_name'] = config('model.qrcode.qrcode.tea')[$data['tea']];
         $qrcode['data'] = $data;
