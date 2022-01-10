@@ -62,7 +62,7 @@ class QrCodeController extends BaseController
                 $qrcode->forceDelete();
             }
             return $this->response->message(trans('messages.success.deleted', ['Module' => '二维码']))
-                ->http_code(202)
+                ->http_code(200)
                 ->status('success')
                 ->json();
 
