@@ -84,13 +84,16 @@ class QrCodeController extends BaseController
         $tea = $request->get('tea','');
         $weight = $request->get('weight','');
         $number = $request->get('number',0);
-        $temperature_arr = $request->get('temperature',[]);
-        $seconds = $request->get('seconds',[]);
+        $temperature = $request->get('temperature','');
+        $seconds = $request->get('seconds','');
+		$temperature_arr = explode(',',$temperature);
+		$seconds_arr = explode(',',$seconds);
         $qrcode_url = $url.'&PZ '.$tea.' '.$weight.' '.$number.' ';
         $temperature = implode(' ',$temperature_arr);
-        $second = implode(' ',$seconds);
+        $second = implode(' ',$seconds_arr);
+		
         $qrcode_url .=  $temperature.' '.$second.' O';
-        $data = compact('name','url','tea','weight','number','temperature_arr','seconds');
+        $data = compact('name','url','tea','weight','number','temperature_arr','seconds_arr');
         $user = User::tokenAuth();
         $user_id = $user->id;
         $directory = '/qrcode/'.$user_id;
