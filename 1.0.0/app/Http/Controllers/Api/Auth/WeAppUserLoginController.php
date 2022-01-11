@@ -41,13 +41,14 @@ class WeAppUserLoginController extends BaseController
         $iv = $request->input('iv');
         $raw_data = json_decode($request->input('rawData'),true);
 
-        $data = $this->getSessionKey($code);
-        $sessionKey = $data['session_key'];
+        $wx_data = $this->getSessionKey($code);
+        $sessionKey = $wx_data['session_key'];
 
         $token = $this->generatetoken($sessionKey);
 
         $WXBizDataCryptService = new WXBizDataCryptService($sessionKey);
 
+		$data = [];
         $errCode = $WXBizDataCryptService->decryptData($encryptedData, $iv, $data );
 
         if ($errCode != 0) {
@@ -55,6 +56,7 @@ class WeAppUserLoginController extends BaseController
         }
 
         $user_info = json_decode($data);
+		$user_info->openId = $wx_data['openid'];
         $user_info->nickName = $raw_data['nickName'];
         $user_info->avatarUrl = $raw_data['avatarUrl'];
         $user_info->city = $raw_data['city'];
