@@ -143,11 +143,12 @@ class QrCodeController extends BaseController
             $qrcode->update([
                 'name' => $name
             ]);
-            return $this->response->message(trans('messages.success.updated', ['Module' => '二维码']))
-                ->http_code(200)
-                ->status('success')
-                ->json();
+
         }
+        return $this->response->message(trans('messages.success.updated', ['Module' => '二维码']))
+            ->http_code(200)
+            ->status('success')
+            ->json();
     }
 
 }
