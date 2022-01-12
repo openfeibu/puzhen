@@ -127,5 +127,27 @@ class QrCodeController extends BaseController
         ])->json();
 
     }
+    public function updateQrCode(Request $request, $id)
+    {
+        $name = $request->get('name','');
+        $user = User::tokenAuth();
+        $qrcode = QrCodeModel::where('user_id',$user->id)
+            ->where('id',$id)
+            ->first();
+        if(!$qrcode)
+        {
+            throw new ModelNotFoundException('未找到相关数据');
+        }
+        if($name)
+        {
+            $qrcode->update([
+                'name' => $name
+            ]);
+            return $this->response->message(trans('messages.success.updated', ['Module' => '二维码']))
+                ->http_code(200)
+                ->status('success')
+                ->json();
+        }
+    }
 
 }

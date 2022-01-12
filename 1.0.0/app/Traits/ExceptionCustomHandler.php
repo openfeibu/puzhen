@@ -55,7 +55,7 @@ trait ExceptionCustomHandler
                 $responseJson = [
                     'code' => 404,
                     'status' => 'error',
-                    'message' => trans('error.404'),
+                    'message' => $exception->getMessage() ? $exception->getMessage() : trans('error.404'),
                 ];
                 break;
             case ($exception instanceof \Illuminate\Session\TokenMismatchException):
