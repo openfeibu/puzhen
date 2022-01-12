@@ -22,7 +22,7 @@ return [
         'visible'      => [],
         'guarded'      => ['*'],
         //'slugs'        => ['slug' => 'name'],
-        'fillable'     => ['user_id','name','image', 'data'],
+        'fillable'     => ['user_id','name','image','detail_image', 'data'],
         'translate'    => [],
         'upload_folder' => '/qrcode',
         'encrypt'      => ['id'],
