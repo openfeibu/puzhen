@@ -57,7 +57,7 @@ class QrCodeController extends BaseController
                 ->generate($qrcode_url, $file);
         }
 
-        $detail_image_name = 'detail-'.urlencode($name).'-'.$image_name;
+        $detail_image_name = 'detail-'.md5($name).'-'.$image_name;
         $text = config('model.qrcode.qrcode.tea')[$tea].'·'.$weight.'g·'.$number.'泡';
         $detail_image =  $directory.'/'.$detail_image_name;
         $this->generateDetailQrCode($name,$text,$detail_image,$file,$directory,$detail_image_name);
@@ -109,7 +109,7 @@ class QrCodeController extends BaseController
             {
                 $image_name = basename($qrcode['image']);
                 $directory = '/qrcode/'.$user->id;
-                $detail_image_name = 'detail-'.urlencode($name).'-'.$image_name;
+                $detail_image_name = 'detail-'.md5($name).'-'.$image_name;
 
                 $data = json_decode($qrcode['data'],true);
                 $data['tea_name'] = config('model.qrcode.qrcode.tea')[$data['tea']];
