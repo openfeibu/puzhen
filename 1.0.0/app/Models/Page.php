@@ -12,7 +12,7 @@ use App\Traits\Trans\Translatable;
 
 class Page extends BaseModel
 {
-    use Filer, SoftDeletes, Hashids, Slugger, Translatable, LogsActivity;
+    use Filer, Hashids, Slugger, Translatable, LogsActivity;
 
     /**
      * Configuartion for the model.
