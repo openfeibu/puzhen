@@ -5,15 +5,15 @@
         <div class="layui-col-md12">
             <div class="tabel-message">
                 <div class="layui-inline tabel-btn">
-                    <button class="layui-btn layui-btn-warm "><a href="{{guard_url('system_page/create')}}">{{ trans('app.add') }}系统文章</a></button>
-                    <button class="layui-btn layui-btn-primary " data-type="del" data-events="del">{{ trans('app.delete') }}</button>
+                    <button class="layui-btn layui-btn-warm "><a href="{{guard_url('page/expert/create')}}">{{ trans('app.add') }}</a></button>
                 </div>
                 <div class="layui-inline">
-                    <input class="layui-input search_key" name="title" id="demoReload" placeholder="{{ trans('app.search') }}标题" autocomplete="off">
+                    <input class="layui-input search_key" name="title" id="demoReload" placeholder="{{ trans('app.search') }}{{ trans('page.label.title') }}" autocomplete="off">
                 </div>
-                <button class="layui-btn" data-type="reload">{{ trans('app.search') }}</button>
+                <div class="layui-inline">
+                    <button class="layui-btn" data-type="reload">{{ trans('app.search') }}</button>
+                </div>
             </div>
-
             <table id="fb-table" class="layui-table"  lay-filter="fb-table">
 
             </table>
@@ -25,7 +25,6 @@
 </script>
 <script type="text/html" id="barDemo">
     <a class="layui-btn layui-btn-sm" lay-event="edit">{{ trans('app.edit') }}</a>
-    <a class="layui-btn layui-btn-danger layui-btn-sm" lay-event="del">{{ trans('app.delete') }}</a>
 </script>
 <script type="text/html" id="imageTEM">
     <img src="@{{d.image}}" alt="" height="28">
@@ -44,14 +43,14 @@
             ,cols: [[
                 {checkbox: true, fixed: true}
                 ,{field:'id',title:'ID', width:80, sort: true}
-                ,{field:'title',title:'标题', width:200}
-                ,{field:'slug',title:'标示', width:200}
-                ,{field:'image',title:'封面', toolbar:'#imageTEM',}
-                ,{field:'score',title:'{{ trans('app.actions') }}', width:200, align: 'right',toolbar:'#barDemo'}
+                ,{field:'title',title:'{{ trans('app.title') }}', width:200}
+                ,{field:'slug',title:'{{ trans('app.slug') }}', width:200}
+                ,{field:'image',title:'{{ trans('page.label.image') }}', toolbar:'#imageTEM',}
+                ,{field:'score',title:'{{ trans('app.actions') }}', width:200, align: 'right',fixed: 'right',toolbar:'#barDemo'}
             ]]
             ,id: 'fb-table'
             ,page: true
-            ,limit: 20
+            ,limit: '{{ config('app.limit') }}'
             ,height: 'full-200'
         });
 
