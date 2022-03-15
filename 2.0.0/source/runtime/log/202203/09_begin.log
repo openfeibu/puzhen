@@ -1,0 +1,606 @@
+---------------------------------------------------------------
+[ 2022-03-09T17:27:00+08:00 ] 192.168.20.1 GET yoshop1145.g.com/index.php?s=/admin
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.g.com; _qddaz=QD.383130550736149',
+  'accept-language' => 'en,zh-CN;q=0.9,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'dnt' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yoshop1145.g.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ begin ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2022-03-09T17:27:00+08:00 ] 192.168.20.1 GET yoshop1145.g.com/index.php?s=/admin/passport/login
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'passport',
+    2 => 'login',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.g.com; _qddaz=QD.383130550736149; PHPSESSID=aa5ntu0cmdp764b5bj0p0bct8d',
+  'accept-language' => 'en,zh-CN;q=0.9,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'dnt' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yoshop1145.g.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ begin ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2022-03-09T17:27:16+08:00 ] 192.168.20.1 POST yoshop1145.g.com/index.php?s=/admin/passport/login
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'passport',
+    2 => 'login',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.g.com; _qddaz=QD.383130550736149; PHPSESSID=aa5ntu0cmdp764b5bj0p0bct8d',
+  'accept-language' => 'en,zh-CN;q=0.9,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yoshop1145.g.com/index.php?s=/admin/passport/login',
+  'origin' => 'http://yoshop1145.g.com',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'dnt' => '1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '52',
+  'connection' => 'keep-alive',
+  'host' => 'yoshop1145.g.com',
+)
+[ begin ] [ PARAM ] array (
+  'User' => 
+  array (
+    'user_name' => 'admin',
+    'password' => 'yinghuo',
+  ),
+)
+---------------------------------------------------------------
+[ 2022-03-09T17:27:23+08:00 ] 192.168.20.1 POST yoshop1145.g.com/index.php?s=/admin/passport/login
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'passport',
+    2 => 'login',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.g.com; _qddaz=QD.383130550736149; PHPSESSID=aa5ntu0cmdp764b5bj0p0bct8d',
+  'accept-language' => 'en,zh-CN;q=0.9,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yoshop1145.g.com/index.php?s=/admin/passport/login',
+  'origin' => 'http://yoshop1145.g.com',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'dnt' => '1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '52',
+  'connection' => 'keep-alive',
+  'host' => 'yoshop1145.g.com',
+)
+[ begin ] [ PARAM ] array (
+  'User' => 
+  array (
+    'user_name' => 'admin',
+    'password' => 'yinghuo',
+  ),
+)
+---------------------------------------------------------------
+[ 2022-03-09T17:27:26+08:00 ] 192.168.20.1 POST yoshop1145.g.com/index.php?s=/admin/passport/login
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'passport',
+    2 => 'login',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.g.com; _qddaz=QD.383130550736149; PHPSESSID=aa5ntu0cmdp764b5bj0p0bct8d',
+  'accept-language' => 'en,zh-CN;q=0.9,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yoshop1145.g.com/index.php?s=/admin/passport/login',
+  'origin' => 'http://yoshop1145.g.com',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'dnt' => '1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '52',
+  'connection' => 'keep-alive',
+  'host' => 'yoshop1145.g.com',
+)
+[ begin ] [ PARAM ] array (
+  'User' => 
+  array (
+    'user_name' => 'admin',
+    'password' => 'yinghuo',
+  ),
+)
+---------------------------------------------------------------
+[ 2022-03-09T17:27:38+08:00 ] 192.168.20.1 POST yoshop1145.g.com/index.php?s=/admin/passport/login
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'passport',
+    2 => 'login',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.g.com; _qddaz=QD.383130550736149; PHPSESSID=aa5ntu0cmdp764b5bj0p0bct8d',
+  'accept-language' => 'en,zh-CN;q=0.9,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yoshop1145.g.com/index.php?s=/admin/passport/login',
+  'origin' => 'http://yoshop1145.g.com',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'dnt' => '1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '52',
+  'connection' => 'keep-alive',
+  'host' => 'yoshop1145.g.com',
+)
+[ begin ] [ PARAM ] array (
+  'User' => 
+  array (
+    'user_name' => 'admin',
+    'password' => 'yinghuo',
+  ),
+)
+---------------------------------------------------------------
+[ 2022-03-09T17:27:40+08:00 ] 192.168.20.1 GET yoshop1145.g.com/index.php?s=/admin/index/index
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.g.com; _qddaz=QD.383130550736149; PHPSESSID=aa5ntu0cmdp764b5bj0p0bct8d',
+  'accept-language' => 'en,zh-CN;q=0.9,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yoshop1145.g.com/index.php?s=/admin/passport/login',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36',
+  'dnt' => '1',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yoshop1145.g.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ begin ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2022-03-09T17:27:44+08:00 ] 192.168.20.1 GET yoshop1145.g.com/index.php?s=/admin/admin.user/renew
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin.user',
+    2 => 'renew',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.g.com; _qddaz=QD.383130550736149; PHPSESSID=aa5ntu0cmdp764b5bj0p0bct8d',
+  'accept-language' => 'en,zh-CN;q=0.9,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yoshop1145.g.com/index.php?s=/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36',
+  'dnt' => '1',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yoshop1145.g.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ begin ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2022-03-09T17:27:50+08:00 ] 192.168.20.1 POST yoshop1145.g.com/index.php?s=/admin/admin.user/renew
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin.user',
+    2 => 'renew',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.g.com; _qddaz=QD.383130550736149; PHPSESSID=aa5ntu0cmdp764b5bj0p0bct8d',
+  'accept-language' => 'en,zh-CN;q=0.9,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yoshop1145.g.com/index.php?s=/admin/admin.user/renew',
+  'origin' => 'http://yoshop1145.g.com',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundarydXPRXv1AbZnlnh9H',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'dnt' => '1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '469',
+  'connection' => 'keep-alive',
+  'host' => 'yoshop1145.g.com',
+)
+[ begin ] [ PARAM ] array (
+  'user' => 
+  array (
+    'user_name' => 'admin',
+    'password' => '123456',
+    'password_confirm' => '123456',
+  ),
+)
+---------------------------------------------------------------
+[ 2022-03-09T17:27:52+08:00 ] 192.168.20.1 GET yoshop1145.g.com/index.php?s=/admin/admin.user/renew
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin.user',
+    2 => 'renew',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.g.com; _qddaz=QD.383130550736149; PHPSESSID=aa5ntu0cmdp764b5bj0p0bct8d',
+  'accept-language' => 'en,zh-CN;q=0.9,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yoshop1145.g.com/index.php?s=/admin/admin.user/renew',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36',
+  'dnt' => '1',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'yoshop1145.g.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ begin ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2022-03-09T17:27:53+08:00 ] 192.168.20.1 GET yoshop1145.g.com/index.php?s=/admin/admin.user/renew
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'admin.user',
+    2 => 'renew',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.g.com; _qddaz=QD.383130550736149; PHPSESSID=aa5ntu0cmdp764b5bj0p0bct8d',
+  'accept-language' => 'en,zh-CN;q=0.9,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yoshop1145.g.com/index.php?s=/admin/admin.user/renew',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36',
+  'dnt' => '1',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yoshop1145.g.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ begin ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2022-03-09T17:27:54+08:00 ] 192.168.20.1 GET yoshop1145.g.com/index.php?s=/admin/passport/logout
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'passport',
+    2 => 'logout',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.g.com; _qddaz=QD.383130550736149; PHPSESSID=aa5ntu0cmdp764b5bj0p0bct8d',
+  'accept-language' => 'en,zh-CN;q=0.9,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yoshop1145.g.com/index.php?s=/admin/admin.user/renew',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36',
+  'dnt' => '1',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yoshop1145.g.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ begin ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2022-03-09T17:27:54+08:00 ] 192.168.20.1 GET yoshop1145.g.com/index.php?s=/admin/passport/login
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'passport',
+    2 => 'login',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.g.com; _qddaz=QD.383130550736149; PHPSESSID=aa5ntu0cmdp764b5bj0p0bct8d',
+  'accept-language' => 'en,zh-CN;q=0.9,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yoshop1145.g.com/index.php?s=/admin/admin.user/renew',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36',
+  'dnt' => '1',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yoshop1145.g.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ begin ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2022-03-09T17:28:03+08:00 ] 192.168.20.1 POST yoshop1145.g.com/index.php?s=/admin/passport/login
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'passport',
+    2 => 'login',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.g.com; _qddaz=QD.383130550736149; PHPSESSID=aa5ntu0cmdp764b5bj0p0bct8d',
+  'accept-language' => 'en,zh-CN;q=0.9,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yoshop1145.g.com/index.php?s=/admin/passport/login',
+  'origin' => 'http://yoshop1145.g.com',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'dnt' => '1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '51',
+  'connection' => 'keep-alive',
+  'host' => 'yoshop1145.g.com',
+)
+[ begin ] [ PARAM ] array (
+  'User' => 
+  array (
+    'user_name' => 'admin',
+    'password' => '123456',
+  ),
+)
+---------------------------------------------------------------
+[ 2022-03-09T17:28:04+08:00 ] 192.168.20.1 GET yoshop1145.g.com/index.php?s=/admin/index/index
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.g.com; _qddaz=QD.383130550736149; PHPSESSID=aa5ntu0cmdp764b5bj0p0bct8d',
+  'accept-language' => 'en,zh-CN;q=0.9,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yoshop1145.g.com/index.php?s=/admin/passport/login',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36',
+  'dnt' => '1',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yoshop1145.g.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ begin ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2022-03-09T17:28:11+08:00 ] 192.168.20.1 GET yoshop1145.g.com/index.php?s=/admin/store/index
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'store',
+    2 => 'index',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.g.com; _qddaz=QD.383130550736149; PHPSESSID=aa5ntu0cmdp764b5bj0p0bct8d',
+  'accept-language' => 'en,zh-CN;q=0.9,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yoshop1145.g.com/index.php?s=/admin/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36',
+  'dnt' => '1',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yoshop1145.g.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ begin ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2022-03-09T17:28:14+08:00 ] 192.168.20.1 GET yoshop1145.g.com/index.php?s=/admin/store/enter/wxapp_id/10001
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'store',
+    2 => 'enter',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.g.com; _qddaz=QD.383130550736149; PHPSESSID=aa5ntu0cmdp764b5bj0p0bct8d',
+  'accept-language' => 'en,zh-CN;q=0.9,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yoshop1145.g.com/index.php?s=/admin/store/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'dnt' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yoshop1145.g.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ begin ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+)
+---------------------------------------------------------------
+[ 2022-03-09T17:28:15+08:00 ] 192.168.20.1 GET yoshop1145.g.com/index.php?s=/store/index/index
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.g.com; _qddaz=QD.383130550736149; PHPSESSID=aa5ntu0cmdp764b5bj0p0bct8d',
+  'accept-language' => 'en,zh-CN;q=0.9,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yoshop1145.g.com/index.php?s=/admin/store/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'dnt' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yoshop1145.g.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ begin ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2022-03-09T17:28:23+08:00 ] 192.168.20.1 GET yoshop1145.g.com/index.php?s=/store/wxapp/setting
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'wxapp',
+    2 => 'setting',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.g.com; _qddaz=QD.383130550736149; PHPSESSID=aa5ntu0cmdp764b5bj0p0bct8d',
+  'accept-language' => 'en,zh-CN;q=0.9,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yoshop1145.g.com/index.php?s=/store/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36',
+  'dnt' => '1',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'yoshop1145.g.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ begin ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2022-03-09T17:50:12+08:00 ] 192.168.20.1 GET yoshop1145.g.com/index.php?s=/store/wxapp/setting
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'wxapp',
+    2 => 'setting',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.g.com; _qddaz=QD.383130550736149; PHPSESSID=aa5ntu0cmdp764b5bj0p0bct8d',
+  'accept-language' => 'en,zh-CN;q=0.9,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yoshop1145.g.com/index.php?s=/store/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'dnt' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'yoshop1145.g.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ begin ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2022-03-09T17:50:14+08:00 ] 192.168.20.1 GET yoshop1145.g.com/index.php?s=/store/wxapp/setting
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'wxapp',
+    2 => 'setting',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.g.com; _qddaz=QD.383130550736149; PHPSESSID=aa5ntu0cmdp764b5bj0p0bct8d',
+  'accept-language' => 'en,zh-CN;q=0.9,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://yoshop1145.g.com/index.php?s=/store/index/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'dnt' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'yoshop1145.g.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ begin ] [ PARAM ] array (
+)

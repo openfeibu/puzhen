@@ -1,0 +1,6 @@
+---------------------------------------------------------------
+[ 2022-03-09T17:28:15+08:00 ] 192.168.20.1 GET yoshop1145.g.com/index.php?s=/store/index/index
+[ yoshop-info ] behavior Order --close --close_days 3 --deadline_time 1646558894 --orderIds []
+[ yoshop-info ] behavior Order --receive --receive_days 10 --deadline_time 1645954094 --orderIds []
+[ yoshop-info ] behavior Order --settled --refund_days 7 --deadline_time 1646213294 --orderIds []
+[ yoshop-info ] behavior sharp Order --close --close_minute 10 --deadline_time 1646817495 --orderIds []

@@ -1,0 +1,222 @@
+---------------------------------------------------------------
+[ 2022-03-15T10:53:59+08:00 ] 192.168.20.1 POST puzhenshop.g.com/index.php?s=/admin/passport/login
+[ sql ] [ DB ] CONNECT:[ UseTime:0.148429s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_admin_user` [ RunTime:0.020438s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_admin_user` WHERE  `user_name` = 'admin'  AND `password` = '9c4cb25665cf08667c815420ab383cb5' LIMIT 1 [ RunTime:0.017821s ]
+---------------------------------------------------------------
+[ 2022-03-15T10:54:31+08:00 ] 192.168.20.1 POST puzhenshop.g.com/index.php?s=/admin/passport/login
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028174s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_admin_user` [ RunTime:0.021331s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_admin_user` WHERE  `user_name` = 'admin'  AND `password` = '9ae7b2e6f25c907a1fc81b503b16e25f' LIMIT 1 [ RunTime:0.019101s ]
+---------------------------------------------------------------
+[ 2022-03-15T10:54:39+08:00 ] 192.168.20.1 GET puzhenshop.g.com/index.php?s=/admin/admin.user/renew
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029278s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_admin_user` [ RunTime:0.021109s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_admin_user` WHERE  `admin_user_id` = 10001 LIMIT 1 [ RunTime:0.019250s ]
+---------------------------------------------------------------
+[ 2022-03-15T10:54:53+08:00 ] 192.168.20.1 POST puzhenshop.g.com/index.php?s=/admin/admin.user/renew
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028695s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_admin_user` [ RunTime:0.020156s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_admin_user` WHERE  `admin_user_id` = 10001 LIMIT 1 [ RunTime:0.017824s ]
+[ sql ] [ SQL ] UPDATE `puzhen_admin_user`  SET `password`='9c4cb25665cf08667c815420ab383cb5',`update_time`=1647312893  WHERE  `admin_user_id` = 10001 [ RunTime:0.022602s ]
+---------------------------------------------------------------
+[ 2022-03-15T10:54:54+08:00 ] 192.168.20.1 GET puzhenshop.g.com/index.php?s=/admin/admin.user/renew
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030448s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_admin_user` [ RunTime:0.022704s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_admin_user` WHERE  `admin_user_id` = 10001 LIMIT 1 [ RunTime:0.020620s ]
+---------------------------------------------------------------
+[ 2022-03-15T10:54:59+08:00 ] 192.168.20.1 POST puzhenshop.g.com/index.php?s=/admin/passport/login
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032665s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_admin_user` [ RunTime:0.020851s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_admin_user` WHERE  `user_name` = 'admin'  AND `password` = '9c4cb25665cf08667c815420ab383cb5' LIMIT 1 [ RunTime:0.019461s ]
+---------------------------------------------------------------
+[ 2022-03-15T10:55:06+08:00 ] 192.168.20.1 GET puzhenshop.g.com/index.php?s=/admin/store/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030263s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_wxapp` [ RunTime:0.022682s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_wxapp` WHERE  `is_recycle` = 0  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.021198s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_wxapp` WHERE  `is_recycle` = 0  AND `is_delete` = 0 ORDER BY `create_time` DESC LIMIT 0,15 [ RunTime:0.021200s ]
+---------------------------------------------------------------
+[ 2022-03-15T10:55:07+08:00 ] 192.168.20.1 GET puzhenshop.g.com/index.php?s=/admin/store/enter/wxapp_id/10001
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029867s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_wxapp` [ RunTime:0.023170s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_store_user` [ RunTime:0.021028s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_store_user` WHERE  `is_delete` = 0  AND `wxapp_id` = 10001  AND `is_super` = 1 LIMIT 1 [ RunTime:0.018307s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_wxapp` WHERE  `wxapp_id` = 10001 [ RunTime:0.020723s ]
+---------------------------------------------------------------
+[ 2022-03-15T10:55:08+08:00 ] 192.168.20.1 GET puzhenshop.g.com/index.php?s=/store/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.027032s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_store_user` [ RunTime:0.018282s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_store_user` WHERE  `puzhen_store_user`.`wxapp_id` = 10001  AND `is_delete` = 0  AND `store_user_id` = 10001 LIMIT 1 [ RunTime:0.016568s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_order` [ RunTime:0.019382s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_user` [ RunTime:0.018827s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_order` WHERE  ( `puzhen_order`.`wxapp_id` = 10001 AND `puzhen_order`.`wxapp_id` = 10001 )  AND `pay_status` = 10  AND `order_status` = 10  AND `create_time` <= 1647053708  AND `is_delete` = 0 [ RunTime:0.017480s ]
+[ sql ] [ SQL ] SELECT `order_id` FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `delivery_status` = 20  AND `receipt_status` = 10  AND `delivery_time` <= 1646448908 [ RunTime:0.016300s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `order_status` = 30  AND `receipt_time` <= 1646708108  AND `is_settled` = 0  AND `is_delete` = 0 [ RunTime:0.016687s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_sharp_setting` [ RunTime:0.018976s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_sharp_setting` WHERE  `puzhen_sharp_setting`.`wxapp_id` = 10001 [ RunTime:0.017469s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `order_source` = 30  AND `pay_status` = 10  AND `order_status` = 10  AND `create_time` <= 1647312308  AND `is_delete` = 0 [ RunTime:0.017354s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_goods` [ RunTime:0.018358s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_goods` WHERE  `puzhen_goods`.`wxapp_id` = 10001  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.015546s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_user` WHERE  `puzhen_user`.`wxapp_id` = 10001  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.015744s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.016844s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_comment` [ RunTime:0.018253s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_comment` WHERE  `puzhen_comment`.`wxapp_id` = 10001  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.015623s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `puzhen_order` WHERE  ( `puzhen_order`.`wxapp_id` = 10001 AND `puzhen_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1647273600 AND `pay_time` < 1647360000 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.015541s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `puzhen_order` WHERE  ( `puzhen_order`.`wxapp_id` = 10001 AND `puzhen_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1647187200 AND `pay_time` < 1647273600 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.016720s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1647273600 AND `pay_time` < 1647360000 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.015162s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1647187200 AND `pay_time` < 1647273600 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.015658s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_user` WHERE  ( `puzhen_user`.`wxapp_id` = 10001 AND `puzhen_user`.`wxapp_id` = 10001 )  AND ( `create_time` >= 1647273600 AND `create_time` < 1647360000 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.020504s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_user` WHERE  ( `puzhen_user`.`wxapp_id` = 10001 AND `puzhen_user`.`wxapp_id` = 10001 )  AND ( `create_time` >= 1647187200 AND `create_time` < 1647273600 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.015275s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `user_id` FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND ( `pay_time` >= 1647273600 AND `pay_time` < 1647360000 )  AND `pay_status` = 20  AND `is_delete` = 0 [ RunTime:0.016216s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `user_id` FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND ( `pay_time` >= 1647187200 AND `pay_time` < 1647273600 )  AND `pay_status` = 20  AND `is_delete` = 0 [ RunTime:0.016337s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1646755200 AND `pay_time` < 1646841600 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.017005s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1646841600 AND `pay_time` < 1646928000 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.015451s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1646928000 AND `pay_time` < 1647014400 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.015437s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1647014400 AND `pay_time` < 1647100800 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.015597s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1647100800 AND `pay_time` < 1647187200 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.017192s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1647187200 AND `pay_time` < 1647273600 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.015740s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1647273600 AND `pay_time` < 1647360000 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.016539s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `puzhen_order` WHERE  ( `puzhen_order`.`wxapp_id` = 10001 AND `puzhen_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1646755200 AND `pay_time` < 1646841600 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.016300s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `puzhen_order` WHERE  ( `puzhen_order`.`wxapp_id` = 10001 AND `puzhen_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1646841600 AND `pay_time` < 1646928000 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.016413s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `puzhen_order` WHERE  ( `puzhen_order`.`wxapp_id` = 10001 AND `puzhen_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1646928000 AND `pay_time` < 1647014400 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.015775s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `puzhen_order` WHERE  ( `puzhen_order`.`wxapp_id` = 10001 AND `puzhen_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1647014400 AND `pay_time` < 1647100800 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.015613s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `puzhen_order` WHERE  ( `puzhen_order`.`wxapp_id` = 10001 AND `puzhen_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1647100800 AND `pay_time` < 1647187200 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.015724s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `puzhen_order` WHERE  ( `puzhen_order`.`wxapp_id` = 10001 AND `puzhen_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1647187200 AND `pay_time` < 1647273600 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.015714s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `puzhen_order` WHERE  ( `puzhen_order`.`wxapp_id` = 10001 AND `puzhen_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1647273600 AND `pay_time` < 1647360000 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.015304s ]
+---------------------------------------------------------------
+[ 2022-03-15T10:55:11+08:00 ] 192.168.20.1 GET puzhenshop.g.com/index.php?s=/store/passport/logout
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028281s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_store_user` [ RunTime:0.019833s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_store_user` WHERE  `puzhen_store_user`.`wxapp_id` = 10001  AND `is_delete` = 0  AND `store_user_id` = 10001 LIMIT 1 [ RunTime:0.017762s ]
+---------------------------------------------------------------
+[ 2022-03-15T10:55:15+08:00 ] 192.168.20.1 POST puzhenshop.g.com/index.php?s=/store/passport/login
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029713s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_wxapp` [ RunTime:0.021056s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_store_user` [ RunTime:0.021224s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_store_user` WHERE  `user_name` = 'admin'  AND `password` = '9c4cb25665cf08667c815420ab383cb5'  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.019460s ]
+---------------------------------------------------------------
+[ 2022-03-15T10:55:18+08:00 ] 192.168.20.1 POST puzhenshop.g.com/index.php?s=/store/passport/login
+[ sql ] [ DB ] CONNECT:[ UseTime:0.024950s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_wxapp` [ RunTime:0.023044s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_store_user` [ RunTime:0.018212s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_store_user` WHERE  `user_name` = 'admin'  AND `password` = '9c4cb25665cf08667c815420ab383cb5'  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.017172s ]
+---------------------------------------------------------------
+[ 2022-03-15T10:55:20+08:00 ] 192.168.20.1 POST puzhenshop.g.com/index.php?s=/store/passport/login
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030223s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_wxapp` [ RunTime:0.021385s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_store_user` [ RunTime:0.020789s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_store_user` WHERE  `user_name` = 'admin'  AND `password` = '9ae7b2e6f25c907a1fc81b503b16e25f'  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.020517s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_wxapp` WHERE  `wxapp_id` = 10001 [ RunTime:0.025283s ]
+---------------------------------------------------------------
+[ 2022-03-15T10:55:22+08:00 ] 192.168.20.1 GET puzhenshop.g.com/index.php?s=/store/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.031477s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_store_user` [ RunTime:0.023767s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_store_user` WHERE  `puzhen_store_user`.`wxapp_id` = 10001  AND `is_delete` = 0  AND `store_user_id` = 10001 LIMIT 1 [ RunTime:0.021843s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_sharp_setting` [ RunTime:0.023362s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_sharp_setting` WHERE  `puzhen_sharp_setting`.`wxapp_id` = 10001 [ RunTime:0.021862s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_order` [ RunTime:0.025686s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_user` [ RunTime:0.022207s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `order_source` = 30  AND `pay_status` = 10  AND `order_status` = 10  AND `create_time` <= 1647312322  AND `is_delete` = 0 [ RunTime:0.021184s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_goods` [ RunTime:0.022891s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_goods` WHERE  `puzhen_goods`.`wxapp_id` = 10001  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.020804s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_user` WHERE  `puzhen_user`.`wxapp_id` = 10001  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.019679s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.020649s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_comment` [ RunTime:0.023088s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_comment` WHERE  `puzhen_comment`.`wxapp_id` = 10001  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.019606s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `puzhen_order` WHERE  ( `puzhen_order`.`wxapp_id` = 10001 AND `puzhen_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1647273600 AND `pay_time` < 1647360000 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.019953s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `puzhen_order` WHERE  ( `puzhen_order`.`wxapp_id` = 10001 AND `puzhen_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1647187200 AND `pay_time` < 1647273600 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.019655s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1647273600 AND `pay_time` < 1647360000 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.020476s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1647187200 AND `pay_time` < 1647273600 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.021310s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_user` WHERE  ( `puzhen_user`.`wxapp_id` = 10001 AND `puzhen_user`.`wxapp_id` = 10001 )  AND ( `create_time` >= 1647273600 AND `create_time` < 1647360000 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.021323s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_user` WHERE  ( `puzhen_user`.`wxapp_id` = 10001 AND `puzhen_user`.`wxapp_id` = 10001 )  AND ( `create_time` >= 1647187200 AND `create_time` < 1647273600 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.019789s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `user_id` FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND ( `pay_time` >= 1647273600 AND `pay_time` < 1647360000 )  AND `pay_status` = 20  AND `is_delete` = 0 [ RunTime:0.020002s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `user_id` FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND ( `pay_time` >= 1647187200 AND `pay_time` < 1647273600 )  AND `pay_status` = 20  AND `is_delete` = 0 [ RunTime:0.022200s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1646755200 AND `pay_time` < 1646841600 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.019932s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1646841600 AND `pay_time` < 1646928000 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.020278s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1646928000 AND `pay_time` < 1647014400 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.020482s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1647014400 AND `pay_time` < 1647100800 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.019819s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1647100800 AND `pay_time` < 1647187200 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.019937s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1647187200 AND `pay_time` < 1647273600 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.019473s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1647273600 AND `pay_time` < 1647360000 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.019813s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `puzhen_order` WHERE  ( `puzhen_order`.`wxapp_id` = 10001 AND `puzhen_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1646755200 AND `pay_time` < 1646841600 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.019580s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `puzhen_order` WHERE  ( `puzhen_order`.`wxapp_id` = 10001 AND `puzhen_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1646841600 AND `pay_time` < 1646928000 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.019698s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `puzhen_order` WHERE  ( `puzhen_order`.`wxapp_id` = 10001 AND `puzhen_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1646928000 AND `pay_time` < 1647014400 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.020103s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `puzhen_order` WHERE  ( `puzhen_order`.`wxapp_id` = 10001 AND `puzhen_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1647014400 AND `pay_time` < 1647100800 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.019271s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `puzhen_order` WHERE  ( `puzhen_order`.`wxapp_id` = 10001 AND `puzhen_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1647100800 AND `pay_time` < 1647187200 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.019726s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `puzhen_order` WHERE  ( `puzhen_order`.`wxapp_id` = 10001 AND `puzhen_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1647187200 AND `pay_time` < 1647273600 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.019251s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `puzhen_order` WHERE  ( `puzhen_order`.`wxapp_id` = 10001 AND `puzhen_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1647273600 AND `pay_time` < 1647360000 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.019492s ]
+---------------------------------------------------------------
+[ 2022-03-15T10:55:26+08:00 ] 192.168.20.1 GET puzhenshop.g.com/index.php?s=/store/store.user/renew
+[ sql ] [ DB ] CONNECT:[ UseTime:0.031550s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_store_user` [ RunTime:0.021788s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_store_user` WHERE  `puzhen_store_user`.`wxapp_id` = 10001  AND `is_delete` = 0  AND `store_user_id` = 10001 LIMIT 1 [ RunTime:0.020026s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_store_user` WHERE  `puzhen_store_user`.`wxapp_id` = 10001  AND `is_delete` = 0  AND `store_user_id` = 10001 LIMIT 1 [ RunTime:0.019835s ]
+---------------------------------------------------------------
+[ 2022-03-15T10:55:30+08:00 ] 192.168.20.1 POST puzhenshop.g.com/index.php?s=/store/store.user/renew
+[ sql ] [ DB ] CONNECT:[ UseTime:0.027265s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_store_user` [ RunTime:0.020141s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_store_user` WHERE  `puzhen_store_user`.`wxapp_id` = 10001  AND `is_delete` = 0  AND `store_user_id` = 10001 LIMIT 1 [ RunTime:0.017478s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_store_user` WHERE  `puzhen_store_user`.`wxapp_id` = 10001  AND `is_delete` = 0  AND `store_user_id` = 10001 LIMIT 1 [ RunTime:0.017842s ]
+[ sql ] [ SQL ] UPDATE `puzhen_store_user`  SET `password`='9c4cb25665cf08667c815420ab383cb5',`update_time`=1647312930  WHERE  `store_user_id` = 10001 [ RunTime:0.021359s ]
+---------------------------------------------------------------
+[ 2022-03-15T10:55:32+08:00 ] 192.168.20.1 GET puzhenshop.g.com/index.php?s=/store/store.user/renew
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032931s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_store_user` [ RunTime:0.023015s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_store_user` WHERE  `puzhen_store_user`.`wxapp_id` = 10001  AND `is_delete` = 0  AND `store_user_id` = 10001 LIMIT 1 [ RunTime:0.021258s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_store_user` WHERE  `puzhen_store_user`.`wxapp_id` = 10001  AND `is_delete` = 0  AND `store_user_id` = 10001 LIMIT 1 [ RunTime:0.021184s ]
+---------------------------------------------------------------
+[ 2022-03-15T10:55:32+08:00 ] 192.168.20.1 GET puzhenshop.g.com/index.php?s=/store/passport/logout
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028357s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_store_user` [ RunTime:0.021802s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_store_user` WHERE  `puzhen_store_user`.`wxapp_id` = 10001  AND `is_delete` = 0  AND `store_user_id` = 10001 LIMIT 1 [ RunTime:0.018920s ]
+---------------------------------------------------------------
+[ 2022-03-15T10:55:35+08:00 ] 192.168.20.1 POST puzhenshop.g.com/index.php?s=/store/passport/login
+[ sql ] [ DB ] CONNECT:[ UseTime:0.027144s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_wxapp` [ RunTime:0.019667s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_store_user` [ RunTime:0.020774s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_store_user` WHERE  `user_name` = 'admin'  AND `password` = '9c4cb25665cf08667c815420ab383cb5'  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.018322s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_wxapp` WHERE  `wxapp_id` = 10001 [ RunTime:0.017811s ]
+---------------------------------------------------------------
+[ 2022-03-15T10:55:37+08:00 ] 192.168.20.1 GET puzhenshop.g.com/index.php?s=/store/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028038s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_store_user` [ RunTime:0.021172s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_store_user` WHERE  `puzhen_store_user`.`wxapp_id` = 10001  AND `is_delete` = 0  AND `store_user_id` = 10001 LIMIT 1 [ RunTime:0.018722s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_sharp_setting` [ RunTime:0.020982s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_sharp_setting` WHERE  `puzhen_sharp_setting`.`wxapp_id` = 10001 [ RunTime:0.019904s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_order` [ RunTime:0.021601s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_user` [ RunTime:0.020607s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `order_source` = 30  AND `pay_status` = 10  AND `order_status` = 10  AND `create_time` <= 1647312337  AND `is_delete` = 0 [ RunTime:0.018524s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_goods` [ RunTime:0.022654s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_goods` WHERE  `puzhen_goods`.`wxapp_id` = 10001  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.017441s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_user` WHERE  `puzhen_user`.`wxapp_id` = 10001  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.017146s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.017185s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_comment` [ RunTime:0.019556s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_comment` WHERE  `puzhen_comment`.`wxapp_id` = 10001  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.017255s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `puzhen_order` WHERE  ( `puzhen_order`.`wxapp_id` = 10001 AND `puzhen_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1647273600 AND `pay_time` < 1647360000 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.017523s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `puzhen_order` WHERE  ( `puzhen_order`.`wxapp_id` = 10001 AND `puzhen_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1647187200 AND `pay_time` < 1647273600 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.017284s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1647273600 AND `pay_time` < 1647360000 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.018372s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1647187200 AND `pay_time` < 1647273600 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.017706s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_user` WHERE  ( `puzhen_user`.`wxapp_id` = 10001 AND `puzhen_user`.`wxapp_id` = 10001 )  AND ( `create_time` >= 1647273600 AND `create_time` < 1647360000 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.018379s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_user` WHERE  ( `puzhen_user`.`wxapp_id` = 10001 AND `puzhen_user`.`wxapp_id` = 10001 )  AND ( `create_time` >= 1647187200 AND `create_time` < 1647273600 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.017963s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `user_id` FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND ( `pay_time` >= 1647273600 AND `pay_time` < 1647360000 )  AND `pay_status` = 20  AND `is_delete` = 0 [ RunTime:0.017990s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `user_id` FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND ( `pay_time` >= 1647187200 AND `pay_time` < 1647273600 )  AND `pay_status` = 20  AND `is_delete` = 0 [ RunTime:0.017371s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1646755200 AND `pay_time` < 1646841600 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.018073s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1646841600 AND `pay_time` < 1646928000 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.017417s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1646928000 AND `pay_time` < 1647014400 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.018129s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1647014400 AND `pay_time` < 1647100800 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.019396s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1647100800 AND `pay_time` < 1647187200 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.017514s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1647187200 AND `pay_time` < 1647273600 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.018727s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1647273600 AND `pay_time` < 1647360000 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.017751s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `puzhen_order` WHERE  ( `puzhen_order`.`wxapp_id` = 10001 AND `puzhen_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1646755200 AND `pay_time` < 1646841600 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.017949s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `puzhen_order` WHERE  ( `puzhen_order`.`wxapp_id` = 10001 AND `puzhen_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1646841600 AND `pay_time` < 1646928000 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.017934s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `puzhen_order` WHERE  ( `puzhen_order`.`wxapp_id` = 10001 AND `puzhen_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1646928000 AND `pay_time` < 1647014400 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.017687s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `puzhen_order` WHERE  ( `puzhen_order`.`wxapp_id` = 10001 AND `puzhen_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1647014400 AND `pay_time` < 1647100800 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.018118s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `puzhen_order` WHERE  ( `puzhen_order`.`wxapp_id` = 10001 AND `puzhen_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1647100800 AND `pay_time` < 1647187200 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.017605s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `puzhen_order` WHERE  ( `puzhen_order`.`wxapp_id` = 10001 AND `puzhen_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1647187200 AND `pay_time` < 1647273600 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.017955s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `puzhen_order` WHERE  ( `puzhen_order`.`wxapp_id` = 10001 AND `puzhen_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1647273600 AND `pay_time` < 1647360000 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.018007s ]
+---------------------------------------------------------------
+[ 2022-03-15T10:55:49+08:00 ] 192.168.20.1 GET puzhenshop.g.com/index.php?s=/admin/store/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.026694s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_wxapp` [ RunTime:0.018241s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_wxapp` WHERE  `is_recycle` = 0  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.019241s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_wxapp` WHERE  `is_recycle` = 0  AND `is_delete` = 0 ORDER BY `create_time` DESC LIMIT 0,15 [ RunTime:0.019381s ]
