@@ -105,7 +105,7 @@ class Setting extends BaseModel
                 'describe' => '商城设置',
                 'values' => [
                     // 商城名称
-                    'name' => $storeName ?: '萤火小程序商城',
+                    'name' => $storeName ?: '朴真小程序商城',
                     // 配送方式
                     'delivery_type' => array_keys(DeliveryTypeEnum::data()),
                     // 快递100
@@ -168,7 +168,7 @@ class Setting extends BaseModel
                         'aliyun' => [
                             'AccessKeyId' => '',
                             'AccessKeySecret' => '',
-                            'sign' => '萤火科技',
+                            'sign' => '朴真',
                             'order_pay' => [
                                 'is_enable' => '0',
                                 'template_code' => '',
