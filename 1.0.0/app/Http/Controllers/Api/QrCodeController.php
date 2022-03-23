@@ -101,9 +101,7 @@ class QrCodeController extends BaseController
         }
         if($name)
         {
-            $qrcode->update([
-                'name' => $name
-            ]);
+
             $file = storage_path('uploads').$qrcode['image'];
             if(file_exists($file))
             {
@@ -119,7 +117,10 @@ class QrCodeController extends BaseController
                 $this->generateDetailQrCode($name,$text,$detail_image,$file,$directory,$detail_image_name);
 
             }
-
+            $qrcode->update([
+                'name' => $name,
+                'detail_image' => $detail_image
+            ]);
 
         }
         return $this->response->message(trans('messages.success.updated', ['Module' => '二维码']))
