@@ -33,7 +33,7 @@ class TeaQrCode extends TeaQrCodeModel
         // 整理列表数据并返回
         return $list;
     }
-    public function add()
+    public function add($user)
     {
         $size = 600;
         $name = request()->param('name','');
@@ -54,9 +54,7 @@ class TeaQrCode extends TeaQrCodeModel
 
         $data = compact('name','url','tea','weight','number','temperature_arr','seconds_arr');
 
-        $user_id = 10001;
-
-        $directory = '/qrcode/'.$user_id;
+        $directory = '/qrcode/'.$user['user_id'];
         $image_name = $size.'-'.md5($qrcode_url).'.png';
         $file = WEB_PATH.'uploads'.DIRECTORY_SEPARATOR.$directory.DIRECTORY_SEPARATOR.$image_name;
         $image_url = $directory.'/'.$image_name;
@@ -86,7 +84,7 @@ class TeaQrCode extends TeaQrCodeModel
         $this->generateDetailQrCode($name,$text,$detail_image,$file,$directory,$detail_image_name);
 
         $this->data([
-            'user_id' => $user_id,
+            'user_id' => $user['user_id'],
             'name' => $name,
             'data' => json_encode($data),
             'image' => $image_url,
