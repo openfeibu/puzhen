@@ -44,7 +44,7 @@ class TeaQrCode extends Controller
     public function add()
     {
         $user = $this->getUser();
-        if ($tea_qrcode = $this->model->add($user['user_id']))
+        if ($tea_qrcode = $this->model->add($user))
         {
             return $this->renderSuccess(['detail' => $tea_qrcode], '添加成功');
         }
