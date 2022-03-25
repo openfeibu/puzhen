@@ -27,7 +27,7 @@ class TeaQrCode extends TeaQrCodeModel
         $list =$this->where('user_id',$user_id)
             ->where($filter)
             ->order('tea_qrcode_id desc')
-            ->paginate(20, false, [
+            ->paginate(15, false, [
                 'query' => \request()->request()
             ]);
         // 整理列表数据并返回
