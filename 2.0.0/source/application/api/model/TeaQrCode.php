@@ -69,7 +69,7 @@ class TeaQrCode extends TeaQrCodeModel
             $qrCode->setWriterByName('png');
             $qrCode->setSize($size);
             $qrCode->setMargin(1);
-            $qrCode->setLogoPath(WEB_PATH.'/uploads/codelogo.jpg');
+            $qrCode->setLogoPath(WEB_PATH.'assets/common/i/codelogo.jpg');
             $qrCode->setLogoSize(100,100);
             $qrCode->setEncoding('UTF-8');
             $qrCode->setRoundBlockSize(true);
@@ -125,7 +125,7 @@ class TeaQrCode extends TeaQrCodeModel
     private function generateDetailQrCode($name,$text,$detail_image,$file,$directory,$detail_image_name)
     {
         //背景图片
-        $source = WEB_PATH.'uploads/bg_code.jpg';
+        $source = WEB_PATH.'assets/common/i/bg_code.jpg';
         $codeImg = new QrCodeService();
         $codeImg->generateImg($source,$detail_image, $file, $source_width = 150, $source_height= 50, $code_width = 300, $code_height = 300);
         //新文件
