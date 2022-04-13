@@ -6,7 +6,7 @@ use app\common\exception\BaseException;
 use app\common\model\Article as ArticleModel;
 
 /**
- * 商品评价模型
+ * 文章模型
  * Class Article
  * @package app\api\model
  */

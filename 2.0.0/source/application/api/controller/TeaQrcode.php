@@ -28,7 +28,6 @@ class TeaQrCode extends Controller
     {
         parent::_initialize();
         $this->model = new TeaQrCodeModel;
-        $user = $this->getUser();
     }
     /**
      * 列表
@@ -64,7 +63,7 @@ class TeaQrCode extends Controller
         return $this->renderError($model->getError() ?: '更新失败');
     }
     /**
-     * 获取商品详情
+     * 获取二维码详情
      * @param $tea_qrcode_id
      * @return array
      * @throws \app\common\exception\BaseException
@@ -72,14 +71,13 @@ class TeaQrCode extends Controller
      */
     public function detail($tea_qrcode_id)
     {
-        $user = $this->getUser();
-        // 商品详情
-        $model = $this->model->detail($user['user_id'],$tea_qrcode_id);
+        // 二维码详情
+        $model = $this->model->get($tea_qrcode_id);
         if ($model === false) {
             return $this->renderError($this->model->getError() ?: '数据不存在');
         }
         return $this->renderSuccess([
-            // 商品详情
+            // 二维码详情
             'detail' => $model,
 
         ]);
