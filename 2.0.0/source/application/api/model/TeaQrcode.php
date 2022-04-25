@@ -9,14 +9,14 @@ use Endroid\QrCode\QrCode;
 use think\Cache;
 use app\common\library\wechat\WxUser;
 use app\common\exception\BaseException;
-use app\common\model\TeaQrCode as TeaQrCodeModel;
+use app\common\model\TeaQrcode as TeaQrcodeModel;
 
 /**
  * 用户模型类
  * Class User
  * @package app\api\model
  */
-class TeaQrcode extends TeaQrCodeModel
+class TeaQrcode extends TeaQrcodeModel
 {
     public function getList($user_id)
     {

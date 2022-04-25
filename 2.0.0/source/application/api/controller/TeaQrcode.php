@@ -3,17 +3,17 @@
 namespace app\api\controller;
 
 use app\api\model\User as UserModel;
-use app\api\model\TeaQrCode as TeaQrCodeModel;
+use app\api\model\TeaQrcode as TeaQrcodeModel;
 use app\common\model\Tea;
 
 /**
  * 茶泡机二维码
- * Class TeaQrCode
+ * Class TeaQrcode
  * @package app\api
  */
 class TeaQrcode extends Controller
 {
-    /* @var \app\api\model\TeaQrCode $model */
+    /* @var \app\api\model\TeaQrcode $model */
     private $model;
 
     /**
@@ -24,7 +24,7 @@ class TeaQrcode extends Controller
     public function _initialize()
     {
         parent::_initialize();
-        $this->model = new TeaQrCodeModel;
+        $this->model = new TeaQrcodeModel;
     }
     /**
      * 列表
@@ -51,7 +51,7 @@ class TeaQrcode extends Controller
     {
         $user = $this->getUser();
         $user_id = $user['user_id'];
-        $model = TeaQrCodeModel::get(compact('user_id','tea_qrcode_id'));
+        $model = TeaQrcodeModel::get(compact('user_id','tea_qrcode_id'));
         if (!$model) {
             return $this->renderError($this->model->getError() ?: '数据不存在');
         }
@@ -70,7 +70,7 @@ class TeaQrcode extends Controller
     public function detail($tea_qrcode_id)
     {
         // 二维码详情
-        $model = TeaQrCodeModel::detail($tea_qrcode_id);
+        $model = TeaQrcodeModel::detail($tea_qrcode_id);
         if (!$model) {
             return $this->renderError($this->model->getError() ?: '数据不存在');
         }
@@ -85,7 +85,7 @@ class TeaQrcode extends Controller
     {
         $user = $this->getUser();
         $user_id = $user['user_id'];
-        $model = TeaQrCodeModel::get(compact('user_id','tea_qrcode_id'));
+        $model = TeaQrcodeModel::get(compact('user_id','tea_qrcode_id'));
         if (!$model) {
             return $this->renderError($this->model->getError() ?: '数据不存在');
         }

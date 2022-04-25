@@ -20,7 +20,7 @@ class TeaQrcodeComment extends BaseModel
      */
     public function TeaQrcode()
     {
-        return $this->belongsTo('TeaQrCode');
+        return $this->belongsTo('TeaQrcode');
     }
 
     /**

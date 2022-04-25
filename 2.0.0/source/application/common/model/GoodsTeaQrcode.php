@@ -5,7 +5,7 @@ namespace app\common\model;
 
 /**
  * 冲泡二维码模型类
- * Class TeaQrCode
+ * Class TeaQrcode
  * @package app\common\model
  */
 class GoodsTeaQrcode extends BaseModel
