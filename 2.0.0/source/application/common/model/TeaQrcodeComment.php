@@ -18,7 +18,7 @@ class TeaQrcodeComment extends BaseModel
      * 评论的冲泡码
      * @return \think\model\relation\BelongsTo
      */
-    public function TeaQrcode()
+    public function teaQrcode()
     {
         return $this->belongsTo('TeaQrcode');
     }
@@ -27,9 +27,9 @@ class TeaQrcodeComment extends BaseModel
      * 我的冲泡码
      * @return \think\model\relation\BelongsTo
      */
-    public function MyTeaQrcode()
+    public function commentTeaQrcode()
     {
-        return $this->belongsTo('TeaQrcode','my_tea_qrcode_id','tea_qrcode_id');
+        return $this->belongsTo('TeaQrcode','comment_tea_qrcode_id','tea_qrcode_id');
     }
 
     /**

@@ -47,7 +47,7 @@ class TeaQrcodeComment extends TeaQrcodeCommentModel
             'status' => 1,
         ];
         // 评分
-        return $this->with(['user', 'MyTeaQrcode'])
+        return $this->with(['user', 'commentTeaQrcode'])
             ->where($filter)
             ->order(['sort' => 'asc', 'create_time' => 'desc'])
             ->paginate(15, false, [
@@ -78,7 +78,7 @@ class TeaQrcodeComment extends TeaQrcodeCommentModel
                 'status' => 1,
                 'user_id' => $user['user_id'],
                 'tea_qrcode_id' => $tea_qrcode_id,
-                'my_tea_qrcode_id' => $post['my_tea_qrcode_id'] ?? 0,
+                'comment_tea_qrcode_id' => $post['comment_tea_qrcode_id'] ?? 0,
                 'wxapp_id' => self::$wxapp_id
             ]);
             return true;

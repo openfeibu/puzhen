@@ -14,6 +14,11 @@ class TeaQrcode extends BaseModel
 {
     protected $name = 'tea_qrcode';
 
+    public function goodsTeaQrcode()
+    {
+        return $this->hasOne('goods_tea_qrcode');
+    }
+
     public function getDataAttr($value, $data)
     {
         $tea_qrcode_data = json_decode($data['data'], true);

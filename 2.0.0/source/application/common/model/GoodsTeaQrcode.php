@@ -17,4 +17,9 @@ class GoodsTeaQrcode extends BaseModel
         $module = self::getCalledModule() ?: 'common';
         return $this->belongsTo("app\\{$module}\\model\\TeaQrcode");
     }
+    public function goods()
+    {
+        $module = self::getCalledModule() ?: 'common';
+        return $this->belongsTo("app\\{$module}\\model\\Goods");
+    }
 }

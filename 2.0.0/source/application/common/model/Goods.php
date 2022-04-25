@@ -60,7 +60,6 @@ class Goods extends BaseModel
         return $this->belongsTo('Factory');
     }
 
-
     public function goodsTeaQrcode()
     {
         return $this->hasOne('goods_tea_qrcode');
