@@ -53,9 +53,8 @@ class TeaQrCode extends Controller
     public function edit($tea_qrcode_id)
     {
         $user = $this->getUser();
-        $user_id = $user['user_id'];
-        $model = TeaQrCodeModel::get(compact('user_id','tea_qrcode_id'));
-        if (!$model) {
+        $model = $this->model->detail($user['user_id'],$tea_qrcode_id);
+        if ($model === false) {
             return $this->renderError($this->model->getError() ?: '数据不存在');
         }
         if ($model->edit($this->request->post())) {
@@ -73,8 +72,8 @@ class TeaQrCode extends Controller
     public function detail($tea_qrcode_id)
     {
         // 二维码详情
-        $model = TeaQrCodeModel::detail($tea_qrcode_id);
-        if (!$model) {
+        $model = $this->model->get($tea_qrcode_id);
+        if ($model === false) {
             return $this->renderError($this->model->getError() ?: '数据不存在');
         }
         return $this->renderSuccess([
@@ -87,9 +86,8 @@ class TeaQrCode extends Controller
     public function delete($tea_qrcode_id)
     {
         $user = $this->getUser();
-        $user_id = $user['user_id'];
-        $model = TeaQrCodeModel::get(compact('user_id','tea_qrcode_id'));
-        if (!$model) {
+        $model = $this->model->detail($user['user_id'], $tea_qrcode_id);
+        if ($model === false) {
             return $this->renderError($this->model->getError() ?: '数据不存在');
         }
         if ($model->delete()) {
