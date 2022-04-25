@@ -9,7 +9,7 @@ use app\common\model\GoodsTeaQrCode as GoodsTeaQrCodeModel;
  * Class User
  * @package app\api\model
  */
-class GoodsTeaQrCode extends GoodsTeaQrCodeModel
+class GoodsTeaQrcode extends GoodsTeaQrCodeModel
 {
 
 }
