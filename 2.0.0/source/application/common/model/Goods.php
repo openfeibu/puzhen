@@ -55,6 +55,22 @@ class Goods extends BaseModel
         return $this->belongsTo('Category');
     }
 
+    public function factory()
+    {
+        return $this->belongsTo('Factory');
+    }
+
+
+    public function goodsTeaQrcode()
+    {
+        return $this->hasOne('goods_tea_qrcode');
+    }
+
+    public function teaQrcode()
+    {
+        return $this->has('goods_tea_qrcode');
+    }
+
     /**
      * 关联商品规格表
      * @return \think\model\relation\HasMany
@@ -121,8 +137,10 @@ class Goods extends BaseModel
     {
         // 商品列表获取条件
         $params = array_merge([
+            'goods_id' => 0,
             'status' => 10,         // 商品状态
             'category_id' => 0,     // 分类id
+            'factory_id' => 0,     // 工厂id
             'search' => '',         // 搜索关键词
             'sortType' => 'all',    // 排序类型
             'sortPrice' => false,   // 价格排序 高低
@@ -132,6 +150,8 @@ class Goods extends BaseModel
         $filter = [];
         $params['category_id'] > 0 && $filter['category_id'] = ['IN', Category::getSubCategoryId($params['category_id'])];
         $params['status'] > 0 && $filter['goods_status'] = $params['status'];
+        $params['goods_id'] > 0 && $filter['goods_id'] = $params['goods_id'];
+        $params['factory_id'] > 0 && $filter['factory_id'] = $params['factory_id'];
         !empty($params['search']) && $filter['goods_name'] = ['like', '%' . trim($params['search']) . '%'];
         // 排序规则
         $sort = [];

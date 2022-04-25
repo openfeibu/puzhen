@@ -155,6 +155,68 @@ return [
             ],
         ]
     ],
+    'factory' => [
+        'name' => '工厂管理',
+        'icon' => 'icon-shop',
+        'index' => 'factory/index',
+        'submenu' => [
+            [
+                'name' => '工厂管理',
+                'active' => true,
+                'index' => 'factory/index',
+                'submenu' => [
+                    [
+                        'name' => '工厂列表',
+                        'index' => 'factory/index',
+                        'uris' => [
+                            'factory/index',
+                            'factory/add',
+                            'factory/edit',
+                        ]
+                    ],
+                ]
+            ],
+
+        ]
+    ],
+    'distributor' => [
+        'name' => '经销商管理',
+        'icon' => 'icon-shop',
+        'index' => 'distributor/index',
+        'submenu' => [
+            [
+                'name' => '经销商管理',
+                'active' => true,
+                'index' => 'distributor/index',
+                'submenu' => [
+                    [
+                        'name' => '经销商列表',
+                        'index' => 'distributor/index',
+                        'uris' => [
+                            'distributor/index',
+                            'distributor/add',
+                            'distributor/edit',
+                        ]
+                    ],
+                ]
+            ],
+            [
+                'name' => '关联商品管理',
+                'active' => true,
+                'index' => 'distributor.goods/index',
+                'submenu' => [
+                    [
+                        'name' => '商品列表',
+                        'index' => 'distributor.goods/index',
+                        'uris' => [
+                            'distributor.goods/index',
+                        ]
+                    ],
+                ]
+            ],
+        ]
+    ],
+
     'shop' => [
         'name' => '门店管理',
         'icon' => 'icon-shop',

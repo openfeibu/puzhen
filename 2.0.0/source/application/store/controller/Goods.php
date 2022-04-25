@@ -2,6 +2,7 @@
 
 namespace app\store\controller;
 
+use app\store\model\Factory as FactoryModel;
 use app\store\model\Goods as GoodsModel;
 use app\store\model\Category as CategoryModel;
 use app\store\service\Goods as GoodsService;
@@ -25,7 +26,8 @@ class Goods extends Controller
         $list = $model->getList(array_merge(['status' => -1], $this->request->param()));
         // 商品分类
         $catgory = CategoryModel::getCacheTree();
-        return $this->fetch('index', compact('list', 'catgory'));
+        $factoryList = FactoryModel::getAllList();
+        return $this->fetch('index', compact('list', 'catgory','factoryList'));
     }
 
     /**
@@ -36,9 +38,10 @@ class Goods extends Controller
     public function add()
     {
         if (!$this->request->isAjax()) {
+            $factoryList = FactoryModel::getAllList();
             return $this->fetch(
                 'add',
-                array_merge(GoodsService::getEditData(null, 'add'), [])
+                array_merge(GoodsService::getEditData(null, 'add'), compact('factoryList'))
             );
         }
         $model = new GoodsModel;
@@ -59,9 +62,10 @@ class Goods extends Controller
         // 商品详情
         $model = GoodsModel::detail($goods_id);
         if (!$this->request->isAjax()) {
+            $factoryList = FactoryModel::getAllList();
             return $this->fetch(
                 'edit',
-                array_merge(GoodsService::getEditData($model, 'copy'), compact('model'))
+                array_merge(GoodsService::getEditData($model, 'copy'), compact('model','factoryList'))
             );
         }
         $model = new GoodsModel;
@@ -81,9 +85,10 @@ class Goods extends Controller
         // 商品详情
         $model = GoodsModel::detail($goods_id);
         if (!$this->request->isAjax()) {
+            $factoryList = FactoryModel::getAllList();
             return $this->fetch(
                 'edit',
-                array_merge(GoodsService::getEditData($model), compact('model'))
+                array_merge(GoodsService::getEditData($model), compact('model','factoryList'))
             );
         }
         // 更新记录

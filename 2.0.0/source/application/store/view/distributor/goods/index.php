@@ -3,7 +3,7 @@
         <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
             <div class="widget am-cf">
                 <div class="widget-head am-cf">
-                    <div class="widget-title am-cf">出售中的商品</div>
+                    <div class="widget-title am-cf">经销商关联商品</div>
                 </div>
                 <div class="widget-body am-fr">
                     <!-- 工具栏 -->
@@ -25,8 +25,21 @@
                             <div class="am-u-sm-12 am-u-md-9">
                                 <div class="am fr">
                                     <div class="am-form-group am-fl">
+                                        <select name="distributor_id"
+                                                data-am-selected="{searchBox: 1, btnSize: 'sm', placeholder: '经销商', maxHeight: 400}">
+                                            <option value="0">全部经销商</option>
+                                            <?php if (isset($distributorList)): foreach ($distributorList as $distributor): ?>
+                                                <option value="<?= $distributor['distributor_id'] ?>"
+                                                    <?= $request->get('distributor_id') == $distributor['distributor_id'] ? 'selected' : '' ?>>
+                                                    <?= $distributor['distributor_name'] ?>
+                                                </option>
+                                            <?php endforeach; endif; ?>
+                                        </select>
+                                    </div>
+
+                                    <div class="am-form-group am-fl">
                                         <select name="factory_id"
-                                                data-am-selected="{searchBox: 1, btnSize: 'sm', placeholder: '工厂', maxHeight: 400, btnWidth:150}">
+                                                data-am-selected="{searchBox: 1, btnSize: 'sm', placeholder: '工厂', maxHeight: 400}">
                                             <option value="0">全部工厂</option>
                                             <?php if (isset($factoryList)): foreach ($factoryList as $factory): ?>
                                                 <option value="<?= $factory['factory_id'] ?>"
@@ -99,58 +112,49 @@
                                 <th>商品名称</th>
                                 <th>商品分类</th>
                                 <th>工厂</th>
-                                <th>实际销量</th>
-                                <th>商品排序</th>
+                                <th>经销商</th>
                                 <th>商品状态</th>
-                                <th>添加时间</th>
+                                <th>关联时间</th>
                                 <th>操作</th>
                             </tr>
                             </thead>
                             <tbody>
                             <?php if (!$list->isEmpty()): foreach ($list as $item): ?>
                                 <tr>
-                                    <td class="am-text-middle"><?= $item['goods_id'] ?></td>
+                                    <td class="am-text-middle"><?= $item['goods']['goods_id'] ?></td>
                                     <td class="am-text-middle">
-                                        <a href="<?= $item['image'][0]['file_path'] ?>"
+                                        <a href="<?= $item['goods_image'] ?>"
                                            title="点击查看大图" target="_blank">
-                                            <img src="<?= $item['image'][0]['file_path'] ?>"
+                                            <img src="<?= $item['goods_image'] ?>"
                                                  width="50" height="50" alt="商品图片">
                                         </a>
                                     </td>
                                     <td class="am-text-middle">
                                         <p class="item-title"><?= $item['goods_name'] ?></p>
                                     </td>
-                                    <td class="am-text-middle"><?= $item['category']['name'] ?></td>
-                                    <td class="am-text-middle"><?= $item['factory']['factory_name'] ?></td>
-                                    <td class="am-text-middle"><?= $item['sales_actual'] ?></td>
-                                    <td class="am-text-middle"><?= $item['goods_sort'] ?></td>
+                                    <td class="am-text-middle"><?= $item['goods']['category']['name'] ?></td>
+                                    <td class="am-text-middle"><?= $item['goods']['factory']['factory_name'] ?></td>
+                                    <td class="am-text-middle"><?= $item['distributor']['distributor_name'] ?></td>
                                     <td class="am-text-middle">
                                            <span class="j-state am-badge x-cur-p
-                                           am-badge-<?= $item['goods_status']['value'] == 10 ? 'success' : 'warning' ?>"
-                                                 data-id="<?= $item['goods_id'] ?>"
-                                                 data-state="<?= $item['goods_status']['value'] ?>">
-                                               <?= $item['goods_status']['text'] ?>
+                                           am-badge-<?= $item['goods']['goods_status']['value'] == 10 ? 'success' : 'warning' ?>"
+                                                 data-id="<?= $item['goods']['goods_id'] ?>"
+                                                 data-state="<?= $item['goods']['goods_status']['value'] ?>">
+                                               <?= $item['goods']['goods_status']['text'] ?>
                                            </span>
                                     </td>
                                     <td class="am-text-middle"><?= $item['create_time'] ?></td>
                                     <td class="am-text-middle">
                                         <div class="tpl-table-black-operation">
                                             <?php if (checkPrivilege('goods/edit')): ?>
-                                                <a href="<?= url('goods/edit',
-                                                    ['goods_id' => $item['goods_id']]) ?>">
-                                                    <i class="am-icon-pencil"></i> 编辑
+                                                <a href="<?= url('goods/index&goods_id='.$item['goods']['goods_id']) ?>" target="_blank">
+                                                    <i class="am-icon-pencil"></i> 前往管理
                                                 </a>
                                             <?php endif; ?>
                                             <?php if (checkPrivilege('goods/delete')): ?>
                                                 <a href="javascript:;" class="item-delete tpl-table-black-operation-del"
-                                                   data-id="<?= $item['goods_id'] ?>">
-                                                    <i class="am-icon-trash"></i> 删除
-                                                </a>
-                                            <?php endif; ?>
-                                            <?php if (checkPrivilege('goods/copy')): ?>
-                                                <a class="tpl-table-black-operation-green" href="<?= url('goods/copy',
-                                                    ['goods_id' => $item['goods_id']]) ?>">
-                                                    一键复制
+                                                   data-id="<?= $item['id'] ?>">
+                                                    <i class="am-icon-trash"></i> 取消关联
                                                 </a>
                                             <?php endif; ?>
                                         </div>
@@ -202,8 +206,8 @@
         });
 
         // 删除元素
-        var url = "<?= url('goods/delete') ?>";
-        $('.item-delete').delete('goods_id', url);
+        var url = "<?= url('distributor.goods/delete') ?>";
+        $('.item-delete').delete('id', url,"确定要取消关联吗？(放心，只删除经销商与产品关联，不会删除原产品)");
 
     });
 </script>

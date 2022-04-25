@@ -83,6 +83,7 @@ class Goods extends GoodsModel
         // 获取商品详情
         $detail = $this->with([
             'category',
+            'goods_tea_qrcode' => ['tea_qrcode'],
             'image' => ['file'],
             'sku' => ['image'],
             'spec_rel' => ['spec'],

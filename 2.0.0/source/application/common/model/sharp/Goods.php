@@ -26,6 +26,7 @@ class Goods extends BaseModel
         return $this->belongsTo("app\\{$module}\\model\\Goods");
     }
 
+
     /**
      * 关联商品规格表
      * @return \think\model\relation\HasMany

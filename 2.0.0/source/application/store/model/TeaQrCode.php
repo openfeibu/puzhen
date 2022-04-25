@@ -1,30 +1,27 @@
 <?php
 
-namespace app\api\model;
+namespace app\store\model;
 
 use app\common\model\Tea;
 use app\common\service\QrCodeService;
 use Endroid\QrCode\LabelAlignment;
 use Endroid\QrCode\QrCode;
-use think\Cache;
-use app\common\library\wechat\WxUser;
-use app\common\exception\BaseException;
 use app\common\model\TeaQrCode as TeaQrCodeModel;
 
 /**
- * 用户模型类
+ * 冲泡码模型类
  * Class User
  * @package app\api\model
  */
 class TeaQrCode extends TeaQrCodeModel
 {
-    public function getList($user_id)
+    public function getList()
     {
         $params = request()->param();
         $filter = [];
         !empty($params['name']) && $filter['name'] = ['like', '%' . trim($params['name']) . '%'];
 
-        $list =$this->where('user_id',$user_id)
+        $list =$this
             ->where($filter)
             ->order('tea_qrcode_id desc')
             ->paginate(15, false, [
@@ -33,9 +30,10 @@ class TeaQrCode extends TeaQrCodeModel
         // 整理列表数据并返回
         return $list;
     }
-    public function add($user)
+    public function add()
     {
         $size = 600;
+        $factory_id = request()->param('factory_id','');
         $name = request()->param('name','');
         $url = request()->param('url','');
         $tea = request()->param('tea','');
@@ -54,7 +52,7 @@ class TeaQrCode extends TeaQrCodeModel
 
         $data = compact('name','url','tea','weight','number','temperature_arr','seconds_arr');
 
-        $directory = '/qrcode/'.$user['user_id'];
+        $directory = '/factory_qrcode/'.$factory_id;
         $image_name = $size.'-'.md5($qrcode_url).'.png';
         $file = WEB_PATH.'uploads'.DIRECTORY_SEPARATOR.$directory.DIRECTORY_SEPARATOR.$image_name;
         $image_url = $directory.'/'.$image_name;
@@ -84,7 +82,8 @@ class TeaQrCode extends TeaQrCodeModel
         $this->generateDetailQrCode($name,$text,$detail_image,$file,$directory,$detail_image_name);
 
         $this->data([
-            'user_id' => $user['user_id'],
+            'factory_id' => $factory_id,
+            'user_id' => 0,
             'name' => $name,
             'data' => json_encode($data),
             'image' => $image_url,
@@ -93,17 +92,7 @@ class TeaQrCode extends TeaQrCodeModel
         ])->save() ;
         return $this;
     }
-    /*
-    public function detail($user_id,$tea_qrcode_id)
-    {
-        $tea_qrcode = $this->get(compact('user_id', 'tea_qrcode_id'));
-        if (empty($tea_qrcode)) {
-            $this->error = '很抱歉，数据不存在';
-            return false;
-        }
-        return $tea_qrcode;
-    }
-    */
+
     public function edit($data)
     {
         $name = $data['name'];
@@ -112,7 +101,7 @@ class TeaQrCode extends TeaQrCodeModel
             $image_name = basename($this->getData('image'));
             $detail_image = $this->getData('detail_image');
             if (file_exists($file)) {
-                $directory = '/qrcode/' . $this['user_id'];
+                $directory = '/factory_qrcode/' . $this['factory_id'];
                 $detail_image_name = 'detail-' . md5($name) . '-' . $image_name;
                 $text = $this['data']['tea_name'] . '·' . $this['data']['weight'] . 'g·' . $this['data']['number'] . '泡';
                 $detail_image = $directory . '/' . $detail_image_name;
@@ -123,12 +112,5 @@ class TeaQrCode extends TeaQrCodeModel
         return true;
     }
 
-    public function getImageAttr($value, $data)
-    {
-        return self::$base_url . 'uploads' . $data['image'];
-    }
-    public function getDetailImageAttr($value, $data)
-    {
-        return self::$base_url . 'uploads' . $data['detail_image'];
-    }
+
 }

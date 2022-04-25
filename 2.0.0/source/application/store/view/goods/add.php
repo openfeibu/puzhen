@@ -11,6 +11,21 @@
                                 <div class="widget-title am-fl">基本信息</div>
                             </div>
                             <div class="am-form-group">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 工厂 </label>
+                                <div class="am-u-sm-9 am-u-end">
+                                    <select name="goods[factory_id]" require
+                                            data-am-selected="{searchBox: 1, btnSize: 'sm', placeholder:'请选择', maxHeight: 400}"
+                                    >
+                                        <option value=""></option>
+                                        <?php if (isset($factoryList) && !$factoryList->isEmpty()):
+                                            foreach ($factoryList as $item): ?>
+                                                <option value="<?= $item['factory_id'] ?>">
+                                                    <?= $item['factory_name'] ?></option>
+                                            <?php endforeach; endif; ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">商品名称 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <input type="text" class="tpl-form-input" name="goods[goods_name]"
@@ -156,13 +171,7 @@
                                                 <input type="text" v-model="batchData.goods_no" placeholder="商家编码">
                                             </div>
                                             <div class="am-form-group">
-                                                <input type="number" v-model="batchData.goods_price" placeholder="销售价">
-                                            </div>
-                                            <div class="am-form-group">
-                                                <input type="number" v-model="batchData.line_price" placeholder="划线价">
-                                            </div>
-                                            <div class="am-form-group">
-                                                <input type="number" v-model="batchData.stock_num" placeholder="库存数量">
+                                                <input type="number" v-model="batchData.ref_price" placeholder="参考零售价">
                                             </div>
                                             <div class="am-form-group">
                                                 <input type="number" v-model="batchData.goods_weight" placeholder="重量">
@@ -181,9 +190,7 @@
                                                 <th v-for="item in spec_attr">{{ item.group_name }}</th>
                                                 <th>规格图片</th>
                                                 <th>商家编码</th>
-                                                <th>销售价</th>
-                                                <th>划线价</th>
-                                                <th>库存</th>
+                                                <th>参考零售价</th>
                                                 <th>重量(kg)</th>
                                             </tr>
                                             <tr v-for="(item, index) in spec_list">
@@ -208,16 +215,8 @@
                                                            v-model="item.form.goods_no">
                                                 </td>
                                                 <td>
-                                                    <input type="number" class="ipt-w80" name="goods_price"
-                                                           v-model="item.form.goods_price" required>
-                                                </td>
-                                                <td>
-                                                    <input type="number" class="ipt-w80" name="line_price"
-                                                           v-model="item.form.line_price">
-                                                </td>
-                                                <td>
-                                                    <input type="number" class="ipt-w80" name="stock_num"
-                                                           v-model="item.form.stock_num" required>
+                                                    <input type="number" class="ipt-w80" name="ref_price"
+                                                           v-model="item.form.ref_price" required>
                                                 </td>
                                                 <td>
                                                     <input type="number" class="ipt-w80" name="goods_weight"
@@ -239,23 +238,11 @@
                                                value="">
                                     </div>
                                 </div>
+
                                 <div class="am-form-group">
-                                    <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">商品价格 </label>
+                                    <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">参考零售价 </label>
                                     <div class="am-u-sm-9 am-u-end">
-                                        <input type="number" class="tpl-form-input" name="goods[sku][goods_price]"
-                                               required>
-                                    </div>
-                                </div>
-                                <div class="am-form-group">
-                                    <label class="am-u-sm-3 am-u-lg-2 am-form-label">商品划线价 </label>
-                                    <div class="am-u-sm-9 am-u-end">
-                                        <input type="number" class="tpl-form-input" name="goods[sku][line_price]">
-                                    </div>
-                                </div>
-                                <div class="am-form-group">
-                                    <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">当前库存数量 </label>
-                                    <div class="am-u-sm-9 am-u-end">
-                                        <input type="number" class="tpl-form-input" name="goods[sku][stock_num]"
+                                        <input type="number" class="tpl-form-input" name="goods[sku][ref_price]"
                                                required>
                                     </div>
                                 </div>
@@ -268,20 +255,6 @@
                                 </div>
                             </div>
 
-                            <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">库存计算方式 </label>
-                                <div class="am-u-sm-9 am-u-end">
-                                    <label class="am-radio-inline">
-                                        <input type="radio" name="goods[deduct_stock_type]" value="10" data-am-ucheck>
-                                        下单减库存
-                                    </label>
-                                    <label class="am-radio-inline">
-                                        <input type="radio" name="goods[deduct_stock_type]" value="20" data-am-ucheck
-                                               checked>
-                                        付款减库存
-                                    </label>
-                                </div>
-                            </div>
 
                             <div class="widget-head am-cf">
                                 <div class="widget-title am-fl">商品详情</div>
@@ -295,23 +268,6 @@
                             </div>
                             <div class="widget-head am-cf">
                                 <div class="widget-title am-fl">其他设置</div>
-                            </div>
-                            <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">运费模板 </label>
-                                <div class="am-u-sm-9 am-u-end">
-                                    <select name="goods[delivery_id]" required
-                                            data-am-selected="{searchBox: 1, btnSize: 'sm',  placeholder:'请选择运费模板'}">
-                                        <option value="">请选择运费模板</option>
-                                        <?php foreach ($delivery as $item): ?>
-                                            <option value="<?= $item['delivery_id'] ?>">
-                                                <?= $item['name'] ?> (<?= $item['method']['text'] ?>)
-                                            </option>
-                                        <?php endforeach; ?>
-                                    </select>
-                                    <small class="am-margin-left-xs">
-                                        <a href="<?= url('setting.delivery/add') ?>">去添加</a>
-                                    </small>
-                                </div>
                             </div>
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">商品状态 </label>
@@ -328,190 +284,11 @@
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">初始销量</label>
-                                <div class="am-u-sm-9 am-u-end">
-                                    <input type="number" class="tpl-form-input" name="goods[sales_initial]"
-                                           value="0">
-                                </div>
-                            </div>
-                            <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">商品排序 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <input type="number" class="tpl-form-input" name="goods[goods_sort]"
                                            value="100" required>
                                     <small>数字越小越靠前</small>
-                                </div>
-                            </div>
-
-                            <!-- 商品积分设置 -->
-                            <div class="widget-head am-cf">
-                                <div class="widget-title am-fl">积分设置</div>
-                            </div>
-                            <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 是否开启积分赠送 </label>
-                                <div class="am-u-sm-9 am-u-end">
-                                    <label class="am-radio-inline">
-                                        <input type="radio" name="goods[is_points_gift]" value="1" data-am-ucheck
-                                               checked>
-                                        开启
-                                    </label>
-                                    <label class="am-radio-inline">
-                                        <input type="radio" name="goods[is_points_gift]" value="0" data-am-ucheck>
-                                        关闭
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 是否允许使用积分抵扣 </label>
-                                <div class="am-u-sm-9 am-u-end">
-                                    <label class="am-radio-inline">
-                                        <input type="radio" name="goods[is_points_discount]" value="1" data-am-ucheck
-                                               checked>
-                                        允许
-                                    </label>
-                                    <label class="am-radio-inline">
-                                        <input type="radio" name="goods[is_points_discount]" value="0" data-am-ucheck>
-                                        不允许
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label"></label>
-                                <div class="am-u-sm-9 am-u-end">
-                                    <div class="help-block">
-                                        <small>注：如需使用积分功能必须在 [营销管理 - 积分设置] 中开启</small>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 会员折扣设置 -->
-                            <div class="widget-head am-cf">
-                                <div class="widget-title am-fl">会员折扣设置</div>
-                            </div>
-                            <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 是否开启会员折扣 </label>
-                                <div class="am-u-sm-9 am-u-end">
-                                    <label class="am-radio-inline">
-                                        <input type="radio" name="goods[is_enable_grade]" value="1" data-am-ucheck
-                                               checked>
-                                        开启
-                                    </label>
-                                    <label class="am-radio-inline">
-                                        <input type="radio" name="goods[is_enable_grade]" value="0" data-am-ucheck>
-                                        关闭
-                                    </label>
-                                    <div class="help-block">
-                                        <small>如果不开启会员折扣，该商品则不享受会员等级折扣价</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel-grade__content">
-                                <div class="am-form-group">
-                                    <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 会员折扣设置 </label>
-                                    <div class="am-u-sm-9 am-u-end">
-                                        <label class="am-radio-inline">
-                                            <input type="radio" name="goods[is_alone_grade]" value="0" data-am-ucheck
-                                                   checked>
-                                            默认折扣
-                                        </label>
-                                        <label class="am-radio-inline">
-                                            <input type="radio" name="goods[is_alone_grade]" value="1" data-am-ucheck>
-                                            单独设置折扣
-                                        </label>
-                                        <div class="help-block">
-                                            <small>默认折扣：默认为用户所属会员等级的折扣率</small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="panel-grade-alone__content hide">
-                                    <div class="am-form-group">
-                                        <label class="am-u-sm-3 am-u-lg-2 am-form-label"> </label>
-                                        <div class="am-u-sm-9 am-u-md-6 am-u-lg-5 am-u-end">
-                                            <!-- 会员等级列表-->
-                                            <?php foreach ($gradeList as $item): ?>
-                                                <div class="am-input-group am-margin-bottom-sm">
-                                                    <span class="am-input-group-label am-input-group-label__left">
-                                                        <?= $item['name'] ?>：
-                                                    </span>
-                                                    <input type="number" class="am-form-field"
-                                                           name="goods[alone_grade_equity][<?= $item['grade_id'] ?>]"
-                                                           value="" min="0" max="10" required>
-                                                    <span class="am-input-group-label am-input-group-label__right">折</span>
-                                                </div>
-                                            <?php endforeach; ?>
-                                            <div class="help-block">
-                                                <small>注：折扣率范围0-10，9.5代表9.5折，0代表不折扣</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 分销设置 -->
-                            <div class="widget-head am-cf">
-                                <div class="widget-title am-fl">分销设置</div>
-                            </div>
-                            <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">是否开启单独分销 </label>
-                                <div class="am-u-sm-9 am-u-end">
-                                    <label class="am-radio-inline">
-                                        <input type="radio" name="goods[is_ind_dealer]" value="0" data-am-ucheck
-                                               checked>
-                                        关闭
-                                    </label>
-                                    <label class="am-radio-inline">
-                                        <input type="radio" name="goods[is_ind_dealer]" value="1" data-am-ucheck>
-                                        开启
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="panel-dealer__content hide">
-                                <div class="am-form-group">
-                                    <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">分销佣金类型 </label>
-                                    <div class="am-u-sm-9 am-u-end">
-                                        <label class="am-radio-inline">
-                                            <input type="radio" name="goods[dealer_money_type]" value="10"
-                                                   data-am-ucheck
-                                                   checked>
-                                            百分比
-                                        </label>
-                                        <label class="am-radio-inline">
-                                            <input type="radio" name="goods[dealer_money_type]" value="20"
-                                                   data-am-ucheck>
-                                            固定金额
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="am-form-group">
-                                    <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">单独分销设置 </label>
-                                    <div class="am-u-sm-9 am-u-md-6 am-u-lg-5 am-u-end">
-                                        <div class="am-input-group am-margin-bottom">
-                                            <span class="am-input-group-label am-input-group-label__left">一级佣金：</span>
-                                            <input type="text" name="goods[first_money]" value=""
-                                                   class="am-form-field">
-                                            <span class="widget-dealer__unit am-input-group-label am-input-group-label__right">%</span>
-                                        </div>
-                                        <div class="am-input-group am-margin-bottom">
-                                            <span class="am-input-group-label am-input-group-label__left">二级佣金：</span>
-                                            <input type="text" name="goods[second_money]" value=""
-                                                   class="am-form-field">
-                                            <span class="widget-dealer__unit am-input-group-label am-input-group-label__right">%</span>
-                                        </div>
-                                        <div class="am-input-group am-margin-bottom">
-                                            <span class="am-input-group-label am-input-group-label__left">三级佣金：</span>
-                                            <input type="text" name="goods[third_money]" value=""
-                                                   class="am-form-field">
-                                            <span class="widget-dealer__unit am-input-group-label am-input-group-label__right">%</span>
-                                        </div>
-                                        <div class="help-block">
-                                            <p>
-                                                <small>注：如需使用分销功能必须在 [分销中心 - 分销设置] 中开启</small>
-                                            </p>
-                                            <p>
-                                                <small>注：如不开启单独分销则默认使用全局分销比例</small>
-                                            </p>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
 
