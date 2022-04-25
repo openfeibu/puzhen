@@ -6,6 +6,7 @@ use app\api\controller\Controller;
 use app\api\model\Order as OrderModel;
 use app\api\model\OrderGoods as OrderGoodsModel;
 use app\api\model\Comment as CommentModel;
+use app\api\model\TeaQrcodeComment as TeaQrcodeCommentModel;
 
 /**
  * 订单评价管理
@@ -15,13 +16,13 @@ use app\api\model\Comment as CommentModel;
 class Comment extends Controller
 {
     /**
-     * 待评价订单商品列表
-     * @param $order_id
-     * @return array
-     * @throws \Exception
-     * @throws \app\common\exception\BaseException
-     * @throws \think\exception\DbException
-     */
+ * 待评价订单商品列表
+ * @param $order_id
+ * @return array
+ * @throws \Exception
+ * @throws \app\common\exception\BaseException
+ * @throws \think\exception\DbException
+ */
     public function order($order_id)
     {
         // 用户信息
@@ -49,5 +50,7 @@ class Comment extends Controller
         }
         return $this->renderSuccess(compact('goodsList'));
     }
+
+
 
 }

@@ -15,12 +15,21 @@ class TeaQrcodeComment extends BaseModel
 
 
     /**
-     * 订单商品
+     * 评论的冲泡码
      * @return \think\model\relation\BelongsTo
      */
     public function TeaQrcode()
     {
         return $this->belongsTo('TeaQrcode');
+    }
+
+    /**
+     * 我的冲泡码
+     * @return \think\model\relation\BelongsTo
+     */
+    public function MyTeaQrcode()
+    {
+        return $this->belongsTo('TeaQrcode','my_tea_qrcode_id','tea_qrcode_id');
     }
 
     /**
@@ -40,7 +49,7 @@ class TeaQrcodeComment extends BaseModel
      */
     public static function detail($comment_id)
     {
-        return self::get($comment_id, ['user', 'tea_qrcode']);
+        return self::get($comment_id, ['user','tea_qrcode', 'my_tea_qrcode']);
     }
 
     /**
