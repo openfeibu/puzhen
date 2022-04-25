@@ -95,4 +95,5 @@ class TeaQrcode extends Controller
         return $this->renderError($model->getError() ?: '删除失败');
     }
 
+    
 }
