@@ -13,9 +13,6 @@ use app\common\model\Tea;
  */
 class TeaQrCode extends Controller
 {
-    /* @var \app\api\model\User $user */
-    private $user;
-
     /* @var \app\api\model\TeaQrCode $model */
     private $model;
 
