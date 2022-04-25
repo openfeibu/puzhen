@@ -61,7 +61,7 @@ class Goods extends BaseModel
     }
 
 
-    public function goodsTeaQrcode()
+    public function goodsTeaQrCode()
     {
         return $this->hasOne('goods_tea_qrcode');
     }
