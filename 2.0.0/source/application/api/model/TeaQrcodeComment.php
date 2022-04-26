@@ -71,7 +71,6 @@ class TeaQrcodeComment extends TeaQrcodeCommentModel
             return false;
         }
         return $this->transaction(function () use ($user,$tea_qrcode_id,$post) {
-            // 添加收货地址
             $this->allowField(true)->save([
                 'content' => $post['content'],
                 'sort' => 100,

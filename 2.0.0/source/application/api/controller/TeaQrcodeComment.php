@@ -24,6 +24,7 @@ class TeaQrcodeComment extends Controller
         return $this->renderSuccess(compact('list'));
     }
     /**
+     * @param $tea_qrcode_id
      * @return array
      * @throws \Exception
      * @throws \app\common\exception\BaseException
