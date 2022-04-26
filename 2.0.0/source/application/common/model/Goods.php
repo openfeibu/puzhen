@@ -188,7 +188,7 @@ class Goods extends BaseModel
      * @param callable $callback
      * @return mixed
      */
-    protected function setGoodsListData($data, $isMultiple = true, callable $callback = null)
+    public function setGoodsListData($data, $isMultiple = true, callable $callback = null)
     {
         if (!$isMultiple) $dataSource = [&$data]; else $dataSource = &$data;
         // 整理商品列表数据

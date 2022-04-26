@@ -134,7 +134,7 @@ class Goods extends GoodsModel
      * @param array $param
      * @return mixed
      */
-    private function setGoodsListDataFromApi(&$data, $isMultiple, $param)
+    public function setGoodsListDataFromApi(&$data, $isMultiple, $param)
     {
         return parent::setGoodsListData($data, $isMultiple, function ($goods) use ($param) {
             // 计算并设置商品会员价
@@ -149,7 +149,7 @@ class Goods extends GoodsModel
      * @param $user
      * @param $goods
      */
-    private function setGoodsGradeMoney($user, &$goods)
+    public function setGoodsGradeMoney($user, &$goods)
     {
         // 会员等级状态
         $gradeStatus = (!empty($user) && $user['grade_id'] > 0 && !empty($user['grade']))
