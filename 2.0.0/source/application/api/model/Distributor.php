@@ -33,8 +33,8 @@ class Distributor extends DistributorModel
         $filter = [];
         !empty($params['search']) && $filter['distributor_name'] = ['like', '%' . trim($params['search']) . '%'];
 
-        $longitude = intval($params['longitude']);
-        $latitude = intval($params['latitude']);
+        $longitude = $params['longitude'] ? $params['longitude'] : 0 ;
+        $latitude = $params['latitude'] ? $params['latitude'] : 0;
         $list =  $this->with(['image'])
             ->field("*,ROUND(  
                     6371.393 * 2 * ASIN(  
