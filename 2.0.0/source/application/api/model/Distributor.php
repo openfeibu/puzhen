@@ -4,7 +4,7 @@ namespace app\api\model;
 
 use app\common\exception\BaseException;
 use app\common\model\Distributor as DistributorModel;
-
+use app\api\model\Collection as CollectionModel;
 /**
  * 经销商模型
  * Class Distributor
@@ -70,4 +70,15 @@ class Distributor extends DistributorModel
         return $list;
     }
 
+    public static function detail($distributor_id, $user = false)
+    {
+        $distributor = parent::detail($distributor_id);
+        $distributor->isCollection($user,$distributor);
+        return $distributor;
+    }
+    public function isCollection($user, $distributor)
+    {
+        $collectionModel = new CollectionModel;
+        return $distributor['is_collection'] = !empty($user) && $collectionModel->where('user_id',$user['user_id'])->where('collectionable_type','Distributor')->where('collectionable_id',$distributor['distributor_id'])->value('collection_id') ? 1 : -1;
+    }
 }

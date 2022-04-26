@@ -105,6 +105,7 @@ class WxappPage extends WxappPageModel
                 'selling_point' => $goods['selling_point'],
                 'image' => $goods['image'][0]['file_path'],
                 'goods_image' => $goods['image'][0]['file_path'],
+                'ref_price' => $goods['sku'][0]['ref_price'],
                 'goods_price' => $goods['sku'][0]['goods_price'],
                 'line_price' => $goods['sku'][0]['line_price'],
                 'goods_sales' => $goods['goods_sales'],

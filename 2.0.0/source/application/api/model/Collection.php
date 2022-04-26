@@ -38,6 +38,7 @@ class Collection extends CollectionModel
             ->find();
         if($model)
         {
+            $model->collectionable->collection_count > 0 && $model->collectionable->setDec('collection_count');
             $model->delete();
             return -1;
         }else
@@ -48,6 +49,7 @@ class Collection extends CollectionModel
                 'collectionable_type' => $type,
                 'wxapp_id' => self::$wxapp_id
             ]);
+            $this->collectionable->setInc('collection_count');
             return 1;
         }
     }
@@ -93,7 +95,7 @@ class Collection extends CollectionModel
                     ]
                 ])
                     ->order(['create_time' => 'desc'])
-                    ->paginate(20, false, [
+                    ->paginate(15, false, [
                         'query' => request()->request()
                     ]);
                 break;

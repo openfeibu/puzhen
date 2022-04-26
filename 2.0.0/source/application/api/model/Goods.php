@@ -4,6 +4,7 @@ namespace app\api\model;
 
 use app\common\library\helper;
 use app\common\model\Goods as GoodsModel;
+use app\api\model\Collection as CollectionModel;
 use app\api\service\Goods as GoodsService;
 
 /**
@@ -138,6 +139,8 @@ class Goods extends GoodsModel
         return parent::setGoodsListData($data, $isMultiple, function ($goods) use ($param) {
             // 计算并设置商品会员价
             $this->setGoodsGradeMoney($param['userInfo'], $goods);
+            //是否已经被收藏
+            $this->isCollection($param['userInfo'], $goods);
         });
     }
 
@@ -172,6 +175,11 @@ class Goods extends GoodsModel
                 $skuItem['goods_price'] = helper::number2(helper::bcmul($skuItem['goods_price'], $discountRatio), true);
             }
         }
+    }
+    public function isCollection($user, &$goods)
+    {
+        $collectionModel = new CollectionModel;
+        return $goods['is_collection'] = !empty($user) && $collectionModel->where('user_id',$user['user_id'])->where('collectionable_type','Goods')->where('collectionable_id',$goods['goods_id'])->value('collection_id') ? 1 : -1;
     }
 
 }

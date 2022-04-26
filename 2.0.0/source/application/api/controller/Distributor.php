@@ -26,15 +26,15 @@ class Distributor extends Controller
 
     /**
      * 经销商详情
-     * @param $article_id
+     * @param $distributor_id
      * @return array
      * @throws \app\common\exception\BaseException
      * @throws \think\Exception
      * @throws \think\exception\DbException
      */
-    public function detail($article_id)
+    public function detail($distributor_id)
     {
-        $detail = DistributorModel::detail($article_id);
+        $detail = DistributorModel::detail($distributor_id,$this->getUser(false));
         return $this->renderSuccess(compact('detail'));
     }
 
