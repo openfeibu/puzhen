@@ -66,8 +66,6 @@ class Collection extends CollectionModel
      */
     public function getList($type, $user)
     {
-
-
         switch ($type)
         {
             case 'Goods':

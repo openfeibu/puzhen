@@ -1,0 +1,93 @@
+<?php
+
+namespace app\api\model;
+
+use app\common\model\Region;
+use app\common\model\UserEquipment as UserEquipmentModel;
+
+/**
+ * 用户设备模型
+ * Class UserEquipment
+ * @package app\common\model
+ */
+class UserEquipment extends UserEquipmentModel
+{
+    /**
+     * 隐藏字段
+     * @var array
+     */
+    protected $hidden = [
+        'wxapp_id',
+        'create_time',
+        'update_time'
+    ];
+
+    /**
+     * @param $user_id
+     * @return false|static[]
+     * @throws \think\exception\DbException
+     */
+    public function getList($user_id)
+    {
+        $list = $this->where('user_id',$user_id)
+            ->with(['equipment' => ['image']])
+            ->order(['create_time' => 'desc'])
+            ->paginate(15, false, [
+            'query' => \request()->request()
+        ]);
+        foreach ($list as &$data)
+        {
+            $data->status_text = $data->status_text;
+        }
+        return $list;
+    }
+
+    /**
+     * 新增
+     * @param User $user
+     * @param $data
+     * @return mixed
+     */
+    public function add($user, $data)
+    {
+        return $this->transaction(function () use ($user, $data) {
+            $this->allowField(true)->save([
+                'equipment_id' => $data['equipment_id'],
+                'linkname' => $data['linkname'],
+                'phone' => $data['phone'],
+                'buy_date' => $data['buy_date'],
+                'equipment_sn' => $data['equipment_sn'],
+                'user_id' => $user['user_id'],
+                'wxapp_id' => self::$wxapp_id
+            ]);
+            // 记录凭证图片关系
+            if (isset($data['images']) && !empty($data['images'])) {
+                $this->saveImages($this['user_equipment_id'], $data['images']);
+            }
+            return true;
+        });
+    }
+    /**
+     * 记录用户设备凭证
+     * @param $user_equipment_id
+     * @param $images
+     * @return bool
+     * @throws \Exception
+     */
+    private function saveImages($user_equipment_id, $images)
+    {
+        // 生成评价图片数据
+        $data = [];
+        foreach (explode(',', $images) as $image_id) {
+            $data[] = [
+                'order_refund_id' => $user_equipment_id,
+                'image_id' => $image_id,
+                'wxapp_id' => self::$wxapp_id
+            ];
+        }
+        return !empty($data) && (new OrderRefundImage)->saveAll($data);
+    }
+
+
+
+}
