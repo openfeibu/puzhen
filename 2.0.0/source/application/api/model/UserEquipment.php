@@ -80,12 +80,12 @@ class UserEquipment extends UserEquipmentModel
         $data = [];
         foreach (explode(',', $images) as $image_id) {
             $data[] = [
-                'order_refund_id' => $user_equipment_id,
+                'user_equipment_id' => $user_equipment_id,
                 'image_id' => $image_id,
                 'wxapp_id' => self::$wxapp_id
             ];
         }
-        return !empty($data) && (new OrderRefundImage)->saveAll($data);
+        return !empty($data) && (new UserEquipmentImage)->saveAll($data);
     }
 
 
