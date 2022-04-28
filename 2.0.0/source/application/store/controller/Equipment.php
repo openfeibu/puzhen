@@ -3,6 +3,7 @@
 namespace app\store\controller;
 
 use app\store\model\Equipment as EquipmentModel;
+use app\store\model\dealer\Setting as SettingModel;
 
 /**
  * 设备管理
@@ -76,5 +77,6 @@ class Equipment extends Controller
         }
         return $this->renderSuccess('删除成功');
     }
+
 
 }

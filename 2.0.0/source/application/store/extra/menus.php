@@ -675,6 +675,10 @@ return [
                 'index' => 'setting/store',
             ],
             [
+                'name' => '保修包换设置',
+                'index' => 'setting/warranty',
+            ],
+            [
                 'name' => '交易设置',
                 'index' => 'setting/trade',
             ],

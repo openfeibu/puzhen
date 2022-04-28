@@ -110,6 +110,16 @@ class Setting extends Controller
     }
 
     /**
+     * 保修设置
+     * @return mixed
+     * @throws \think\exception\DbException
+     */
+    public function warranty()
+    {
+        return $this->updateEvent('warranty');
+    }
+
+    /**
      * 更新商城设置事件
      * @param $key
      * @param $vars

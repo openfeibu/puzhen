@@ -316,14 +316,14 @@ class Setting extends BaseModel
                 ],
             ],
 
-            // 保修换设置
+            // 保修包换设置
             'warranty' => [
                 'key' => 'trade',
                 'describe' => '保修设置',
                 'values' => [
                     'warranty_days' => '366',
                     'basic_change_days' => '15',
-                    'change_days' => '15',
+                    'change_days' => '100',
                 ]
             ],
         ];
