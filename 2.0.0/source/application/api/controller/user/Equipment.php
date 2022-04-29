@@ -88,7 +88,7 @@ class Equipment extends Controller
             'user_id' => $this->user['user_id'],
             'user_equipment_id' => $user_equipment_id
         ]);
-        if ($model->delete()) {
+        if ($model->remove()) {
             return $this->renderSuccess([], '删除成功');
         }
         return $this->renderError($model->getError() ?: '删除失败');

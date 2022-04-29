@@ -67,6 +67,17 @@ class UserEquipment extends UserEquipmentModel
             return true;
         });
     }
+    public function remove()
+    {
+        if($this->status == 20)
+        {
+            $this->error = '已通过审核，不可删除';
+            return false;
+        }
+        $this->delete();
+        return true;
+
+    }
     /**
      * 记录用户设备凭证
      * @param $user_equipment_id
