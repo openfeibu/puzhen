@@ -46,6 +46,7 @@
                             <tr>
                                 <th>茶艺机ID</th>
                                 <th>茶艺机名称</th>
+                                <th>茶艺机型号</th>
                                 <th>茶艺机图片</th>
                                 <th>创建时间</th>
                                 <th>操作</th>
@@ -56,6 +57,7 @@
                                 <tr>
                                     <td class="am-text-middle"><?= $item['equipment_id'] ?></td>
                                     <td class="am-text-middle"><?= $item['equipment_name'] ?></td>
+                                    <td class="am-text-middle"><?= $item['model'] ?></td>
                                     <td class="am-text-middle">
                                         <a href="<?= $item['image']['file_path'] ?>" title="点击查看大图" target="_blank">
                                             <img src="<?= $item['image']['file_path'] ?>" width="72" height="72" alt="">

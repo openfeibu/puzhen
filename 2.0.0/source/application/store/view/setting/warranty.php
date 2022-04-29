@@ -13,8 +13,11 @@
                                     保修日期
                                 </label>
                                 <div class="am-u-sm-9">
-                                    <input type="text" class="tpl-form-input" name="warranty[warranty_days]"
-                                           value="<?= $values['warranty_days'] ?>" required>
+                                    <div class="am-u-sm-6">
+                                        <input type="number" class="am-form-field" name="warranty[warranty_days]"
+                                               value="<?= $values['warranty_days'] ?>" required>
+                                    </div>
+                                    <label class="am-u-sm-6 am-form-label am-text-left">天</label>
                                 </div>
                             </div>
                             <div class="am-form-group">
@@ -22,8 +25,11 @@
                                     基础包换日期
                                 </label>
                                 <div class="am-u-sm-9">
-                                    <input type="text" class="tpl-form-input" name="warranty[basic_change_days]"
-                                           value="<?= $values['basic_change_days'] ?>" required>
+                                    <div class="am-u-sm-6">
+                                        <input type="text" class="tpl-form-input" name="warranty[basic_change_days]"
+                                               value="<?= $values['basic_change_days'] ?>" required>
+                                    </div>
+                                    <label class="am-u-sm-6 am-form-label am-text-left">天</label>
                                 </div>
                             </div>
                             <div class="am-form-group">
@@ -31,8 +37,11 @@
                                     赠送包换日期
                                 </label>
                                 <div class="am-u-sm-9">
-                                    <input type="text" class="tpl-form-input" name="warranty[change_days]"
-                                           value="<?= $values['change_days'] ?>" required>
+                                    <div class="am-u-sm-6">
+                                        <input type="text" class="tpl-form-input" name="warranty[change_days]"
+                                               value="<?= $values['change_days'] ?>" required>
+                                    </div>
+                                    <label class="am-u-sm-6 am-form-label am-text-left">天</label>
                                 </div>
                             </div>
                             <div class="am-form-group">

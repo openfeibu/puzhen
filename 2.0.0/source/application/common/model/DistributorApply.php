@@ -7,18 +7,12 @@ use app\common\model\Region as RegionModel;
 
 /**
  * 经销商模型
- * Class Distributor
+ * Class DistributorApply
  * @package app\common\model
  */
-class Distributor extends BaseModel
+class DistributorApply extends BaseModel
 {
-    protected $name = 'distributor';
-
-    /**
-     * 追加字段
-     * @var array
-     */
-    protected $append = ['region'];
+    protected $name = 'distributor_apply';
 
     /**
      * 关联封面图
@@ -29,16 +23,6 @@ class Distributor extends BaseModel
         $module = self::getCalledModule() ?: 'common';
         return $this->hasOne("app\\{$module}\\model\\UploadFile", 'file_id', 'image_id');
     }
-
-    /**
-     * 关联商品表
-     * @return \think\model\relation\HasMany
-     */
-    public function goods()
-    {
-        $module = self::getCalledModule() ?: 'common';
-        return $this->hasMany("app\\{$module}\\model\\distributor\\Goods")->order(['goods_id' => 'desc']);
-    }
     /**
      * 关联用户表
      * @return \think\model\relation\BelongsTo
@@ -47,6 +31,12 @@ class Distributor extends BaseModel
     {
         $module = self::getCalledModule() ?: 'common';
         return $this->belongsTo("app\\{$module}\\model\\User");
+    }
+
+
+    public static function detail($where)
+    {
+        return static::get($where, ['image']);
     }
 
     /**
@@ -64,9 +54,4 @@ class Distributor extends BaseModel
         ];
     }
 
-
-    public static function detail($distributor_id)
-    {
-        return static::get($distributor_id, ['image']);
-    }
 }
