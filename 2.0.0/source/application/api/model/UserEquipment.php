@@ -69,9 +69,9 @@ class UserEquipment extends UserEquipmentModel
     }
     public function remove()
     {
-        if($this->status == 20)
+        if($this->status != 30)
         {
-            $this->error = '已通过审核，不可删除';
+            $this->error = '审核中或已通过审核，不可删除';
             return false;
         }
         $this->delete();
