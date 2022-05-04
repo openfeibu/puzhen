@@ -6,7 +6,7 @@ use app\api\controller\Controller;
 use app\api\model\distributor\Goods as DistributorGoodsModel;
 
 /**
- * 经销商-商品管理
+ * 服务网点-商品管理
  * Class Goods
  * @package app\api\controller\sharp
  */

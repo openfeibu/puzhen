@@ -6,7 +6,7 @@ use app\common\exception\BaseException;
 use app\common\model\Equipment as EquipmentModel;
 
 /**
- * 经销商模型
+ * 服务网点模型
  * Class Equipment
  * @package app\api\model
  */

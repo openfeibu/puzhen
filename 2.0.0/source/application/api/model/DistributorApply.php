@@ -8,7 +8,7 @@ use Lvht\GeoHash;
 use app\common\model\Region;
 
 /**
- * 经销商模型
+ * 服务网点模型
  * Class DistributorApply
  * @package app\api\model
  */

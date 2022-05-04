@@ -5,7 +5,7 @@ namespace app\api\controller;
 use app\api\model\DistributorApply as DistributorApplyModel;
 
 /**
- * 经销商控制器
+ * 服务网点控制器
  * Class DistributorApply
  * @package app\api\controller
  */

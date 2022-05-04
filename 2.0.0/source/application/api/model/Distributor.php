@@ -6,7 +6,7 @@ use app\common\exception\BaseException;
 use app\common\model\Distributor as DistributorModel;
 use app\api\model\Collection as CollectionModel;
 /**
- * 经销商模型
+ * 服务网点模型
  * Class Distributor
  * @package app\api\model
  */

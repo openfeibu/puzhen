@@ -5,14 +5,14 @@ namespace app\api\controller;
 use app\api\model\Distributor as DistributorModel;
 
 /**
- * 经销商控制器
+ * 服务网点控制器
  * Class Distributor
  * @package app\api\controller
  */
 class Distributor extends Controller
 {
     /**
-     * 经销商列表
+     * 服务网点列表
      * @return array
      * @throws \think\exception\DbException
      */
@@ -25,7 +25,7 @@ class Distributor extends Controller
     }
 
     /**
-     * 经销商详情
+     * 服务网点详情
      * @param $distributor_id
      * @return array
      * @throws \app\common\exception\BaseException

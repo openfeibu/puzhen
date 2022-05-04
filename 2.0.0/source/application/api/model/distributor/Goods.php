@@ -8,7 +8,7 @@ use app\api\model\Category;
 use app\common\library\helper;
 
 /**
- * 经销商-商品模型
+ * 服务网点-商品模型
  * Class Goods
  * @package app\store\model\sharp
  */
