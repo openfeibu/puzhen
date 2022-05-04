@@ -7,7 +7,7 @@ use app\common\model\DistributorApply as DistributorApplyModel;
 use Lvht\GeoHash;
 
 /**
- * 经销商申请模型
+ * 服务网点申请模型
  * Class DistributorApply
  * @package app\store\model
  */

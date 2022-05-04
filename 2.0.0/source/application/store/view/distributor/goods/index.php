@@ -3,7 +3,7 @@
         <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
             <div class="widget am-cf">
                 <div class="widget-head am-cf">
-                    <div class="widget-title am-cf">经销商关联商品</div>
+                    <div class="widget-title am-cf">服务网点关联商品</div>
                 </div>
                 <div class="widget-body am-fr">
                     <!-- 工具栏 -->
@@ -26,8 +26,8 @@
                                 <div class="am fr">
                                     <div class="am-form-group am-fl">
                                         <select name="distributor_id"
-                                                data-am-selected="{searchBox: 1, btnSize: 'sm', placeholder: '经销商', maxHeight: 400}">
-                                            <option value="0">全部经销商</option>
+                                                data-am-selected="{searchBox: 1, btnSize: 'sm', placeholder: '服务网点', maxHeight: 400}">
+                                            <option value="0">全部服务网点</option>
                                             <?php if (isset($distributorList)): foreach ($distributorList as $distributor): ?>
                                                 <option value="<?= $distributor['distributor_id'] ?>"
                                                     <?= $request->get('distributor_id') == $distributor['distributor_id'] ? 'selected' : '' ?>>
@@ -112,7 +112,7 @@
                                 <th>商品名称</th>
                                 <th>商品分类</th>
                                 <th>工厂</th>
-                                <th>经销商</th>
+                                <th>服务网点</th>
                                 <th>商品状态</th>
                                 <th>关联时间</th>
                                 <th>操作</th>
@@ -207,7 +207,7 @@
 
         // 删除元素
         var url = "<?= url('distributor.goods/delete') ?>";
-        $('.item-delete').delete('id', url,"确定要取消关联吗？(放心，只删除经销商与产品关联，不会删除原产品)");
+        $('.item-delete').delete('id', url,"确定要取消关联吗？(放心，只删除服务网点与产品关联，不会删除原产品)");
 
     });
 </script>

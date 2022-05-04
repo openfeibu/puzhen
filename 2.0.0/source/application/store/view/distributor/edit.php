@@ -6,17 +6,17 @@
                     <div class="widget-body">
                         <fieldset>
                             <div class="widget-head am-cf">
-                                <div class="widget-title am-fl">编辑经销商</div>
+                                <div class="widget-title am-fl">编辑服务网点</div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 经销商名称 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 服务网点名称 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <input type="text" class="tpl-form-input" name="distributor[distributor_name]"
-                                           placeholder="请输入经销商名称" value="<?= $model['distributor_name'] ?>" required>
+                                           placeholder="请输入服务网点名称" value="<?= $model['distributor_name'] ?>" required>
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 经销商图片 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 服务网点图片 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <div class="am-form-file">
                                         <div class="am-form-file">
@@ -43,18 +43,18 @@
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 联系人 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <input type="text" class="tpl-form-input" name="distributor[linkman]"
-                                           placeholder="请输入经销商联系人" value="<?= $model['linkman'] ?>" required>
+                                           placeholder="请输入服务网点联系人" value="<?= $model['linkman'] ?>" required>
                                 </div>
                             </div>
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 联系电话 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <input type="text" class="tpl-form-input" name="distributor[phone]"
-                                           placeholder="请输入经销商联系电话" value="<?= $model['phone'] ?>" required>
+                                           placeholder="请输入服务网点联系电话" value="<?= $model['phone'] ?>" required>
                                 </div>
                             </div>
                             <div class="am-form-group am-padding-top">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 经销商区域 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 服务网点区域 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <div class="x-region-select" data-region-selected>
                                         <select name="distributor[province_id]"
@@ -86,12 +86,12 @@
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 经销商坐标 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 服务网点坐标 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <div class="am-block">
                                         <input type="text" style="background: none !important;" id="coordinate"
                                                class="tpl-form-input" name="distributor[coordinate]"
-                                               placeholder="请选择经销商坐标"
+                                               placeholder="请选择服务网点坐标"
                                                value="<?= $model['latitude'] ?>,<?= $model['longitude'] ?>"
                                                readonly=""
                                                required>
@@ -104,14 +104,14 @@
                                 </div>
                             </div>
                             <div class="am-form-group am-padding-top">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label"> 经销商简介 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label"> 服务网点简介 </label>
                                 <div class="am-u-sm-9 am-u-end">
-                                    <textarea class="am-field-valid" rows="5" placeholder="请输入经销商简介"
+                                    <textarea class="am-field-valid" rows="5" placeholder="请输入服务网点简介"
                                               name="distributor[summary]"><?= $model['summary'] ?></textarea>
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">经销商排序 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">服务网点排序 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <input type="number" class="tpl-form-input" name="distributor[sort]"
                                            value="<?= $model['sort'] ?>" required>
@@ -119,7 +119,7 @@
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 经销商状态 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 服务网点状态 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <label class="am-radio-inline">
                                         <input type="radio" name="distributor[status]" value="1" data-am-ucheck

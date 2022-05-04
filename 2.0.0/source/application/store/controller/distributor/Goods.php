@@ -11,7 +11,7 @@ use app\store\model\Category as CategoryModel;
 use app\store\model\Distributor as DistributorModel;
 
 /**
- * 经销商商品管理
+ * 服务网点商品管理
  * Class Goods
  * @package app\store\controller\distributor
  */

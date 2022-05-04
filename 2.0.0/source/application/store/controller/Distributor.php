@@ -5,14 +5,14 @@ namespace app\store\controller;
 use app\store\model\Distributor as DistributorModel;
 
 /**
- * 经销商管理
+ * 服务网点管理
  * Class Distributor
  * @package app\store\controller
  */
 class Distributor extends Controller
 {
     /**
-     * 经销商列表
+     * 服务网点列表
      * @return mixed
      * @throws \think\exception\DbException
      */
@@ -34,7 +34,7 @@ class Distributor extends Controller
     }
 
     /**
-     * 添加经销商
+     * 添加服务网点
      * @return array|bool|mixed
      * @throws \Exception
      */
@@ -52,14 +52,14 @@ class Distributor extends Controller
     }
 
     /**
-     * 编辑经销商
+     * 编辑服务网点
      * @param $distributor_id
      * @return array|bool|mixed
      * @throws \think\exception\DbException
      */
     public function edit($distributor_id)
     {
-        // 经销商详情
+        // 服务网点详情
         $model = DistributorModel::detail($distributor_id);
         if (!$this->request->isAjax()) {
             return $this->fetch('edit', compact('model'));
@@ -72,14 +72,14 @@ class Distributor extends Controller
     }
 
     /**
-     * 删除经销商
+     * 删除服务网点
      * @param $distributor_id
      * @return array
      * @throws \think\exception\DbException
      */
     public function delete($distributor_id)
     {
-        // 经销商详情
+        // 服务网点详情
         $model = DistributorModel::detail($distributor_id);
         if (!$model->setDelete()) {
             return $this->renderError($model->getError() ?: '删除失败');

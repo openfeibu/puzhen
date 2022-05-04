@@ -3,7 +3,7 @@
         <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
             <div class="widget am-cf">
                 <div class="widget-head am-cf">
-                    <div class="widget-title a m-cf">经销商列表</div>
+                    <div class="widget-title a m-cf">服务网点列表</div>
                 </div>
                 <div class="widget-body am-fr">
                     <!-- 工具栏 -->
@@ -27,7 +27,7 @@
                                     <div class="am-form-group am-fl">
                                         <div class="am-input-group am-input-group-sm tpl-form-border-form">
                                             <input type="text" class="am-form-field" name="search"
-                                                   placeholder="请输入经销商名称/联系人/电话"
+                                                   placeholder="请输入服务网点名称/联系人/电话"
                                                    value="<?= $request->get('search') ?>">
                                             <div class="am-input-group-btn">
                                                 <button class="am-btn am-btn-default am-icon-search"
@@ -44,12 +44,12 @@
                          tpl-table-black am-text-nowrap">
                             <thead>
                             <tr>
-                                <th>经销商ID</th>
-                                <th>经销商名称</th>
-                                <th>经销商图片</th>
+                                <th>服务网点ID</th>
+                                <th>服务网点名称</th>
+                                <th>服务网点图片</th>
                                 <th>联系人</th>
                                 <th>联系电话</th>
-                                <th>经销商状态</th>
+                                <th>服务网点状态</th>
                                 <th>创建时间</th>
                                 <th>操作</th>
                             </tr>

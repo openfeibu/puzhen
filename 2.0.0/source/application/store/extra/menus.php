@@ -204,17 +204,17 @@ return [
         ]
     ],
     'distributor' => [
-        'name' => '经销商管理',
+        'name' => '服务网点管理',
         'icon' => 'icon-shop',
         'index' => 'distributor/index',
         'submenu' => [
             [
-                'name' => '经销商管理',
+                'name' => '服务网点管理',
                 'active' => true,
                 'index' => 'distributor/index',
                 'submenu' => [
                     [
-                        'name' => '经销商列表',
+                        'name' => '服务网点列表',
                         'index' => 'distributor/index',
                         'uris' => [
                             'distributor/index',

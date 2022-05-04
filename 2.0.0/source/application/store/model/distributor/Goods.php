@@ -7,7 +7,7 @@ use app\store\service\Goods as GoodsService;
 use app\store\model\Category;
 
 /**
- * 经销商-商品模型
+ * 服务网点-商品模型
  * Class Goods
  * @package app\store\model\sharp
  */

@@ -7,7 +7,7 @@ use app\common\model\Distributor as DistributorModel;
 use Lvht\GeoHash;
 
 /**
- * 经销商模型
+ * 服务网点模型
  * Class Distributor
  * @package app\store\model
  */
@@ -29,7 +29,7 @@ class Distributor extends DistributorModel
     }
 
     /**
-     * 获取所有经销商列表
+     * 获取所有服务网点列表
      * @param array $param
      * @return false|\PDOStatement|string|\think\Collection
      */
@@ -114,7 +114,7 @@ class Distributor extends DistributorModel
     private function validateForm($data)
     {
         if (!isset($data['image_id']) || empty($data['image_id'])) {
-            $this->error = '请选择经销商图片';
+            $this->error = '请选择服务网点图片';
             return false;
         }
         return true;

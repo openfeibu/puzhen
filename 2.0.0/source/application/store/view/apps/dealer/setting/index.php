@@ -377,7 +377,7 @@
                                     </div>
                                     <div class="am-form-group">
                                         <label class="am-u-sm-3 am-form-label form-require">
-                                            申请成为经销商
+                                            申请成为分销商
                                         </label>
                                         <div class="am-u-sm-9">
                                             <input type="text" class="tpl-form-input"
