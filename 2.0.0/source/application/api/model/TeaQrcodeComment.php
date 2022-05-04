@@ -74,7 +74,7 @@ class TeaQrcodeComment extends TeaQrcodeCommentModel
         }
 
         return $this->transaction(function () use ($user,$tea_qrcode_id,$post) {
-            if($post['comment_tea_qrcode_id'])
+            if(isset($post['comment_tea_qrcode_id']) && $post['comment_tea_qrcode_id'])
             {
                 $tea_qrcode = TeaQrcodeModel::detail($post['comment_tea_qrcode_id']);
 
