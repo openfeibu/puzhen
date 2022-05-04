@@ -27,10 +27,22 @@ class TeaQrcodeComment extends BaseModel
      * 我的冲泡码
      * @return \think\model\relation\BelongsTo
      */
+    /*
     public function commentTeaQrcode()
     {
         return $this->belongsTo('TeaQrcodeCommentTeaQrcode','comment_tea_qrcode_id','comment_tea_qrcode_id');
     }
+    */
+
+    /**
+     * 我的冲泡码
+     * @return \think\model\relation\BelongsTo
+     */
+    public function commentTeaQrcode()
+    {
+        return $this->belongsTo('TeaQrcode','comment_tea_qrcode_id','tea_qrcode_id');
+    }
+
 
     /**
      * 关联用户表

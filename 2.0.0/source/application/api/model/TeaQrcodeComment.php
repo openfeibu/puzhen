@@ -77,7 +77,14 @@ class TeaQrcodeComment extends TeaQrcodeCommentModel
             if($post['comment_tea_qrcode_id'])
             {
                 $tea_qrcode = TeaQrcodeModel::detail($post['comment_tea_qrcode_id']);
-                $comment_tea_qrcode = TeaQrcodeCommentTeaQrcodeModel::create($tea_qrcode->getData());
+
+                $comment_tea_qrcode = TeaQrcodeModel::create([
+                    'wxapp_id' => $tea_qrcode->wxapp_id,
+                    'name' => $tea_qrcode->name,
+                    'data' => $tea_qrcode->getData('data'),
+                    'image' => $tea_qrcode->image,
+                    'detail_image' => $tea_qrcode->detail_image,
+                ]);
             }
             $this->allowField(true)->save([
                 'content' => $post['content'],
@@ -85,7 +92,7 @@ class TeaQrcodeComment extends TeaQrcodeCommentModel
                 'status' => 1,
                 'user_id' => $user['user_id'],
                 'tea_qrcode_id' => $tea_qrcode_id,
-                'comment_tea_qrcode_id' => isset($comment_tea_qrcode) && $comment_tea_qrcode  ? $comment_tea_qrcode->comment_tea_qrcode_id : 0,
+                'comment_tea_qrcode_id' => isset($comment_tea_qrcode) && $comment_tea_qrcode  ? $comment_tea_qrcode->tea_qrcode_id : 0,
                 'wxapp_id' => self::$wxapp_id
             ]);
             return true;
