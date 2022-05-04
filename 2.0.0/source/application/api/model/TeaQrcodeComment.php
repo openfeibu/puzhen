@@ -120,8 +120,8 @@ class TeaQrcodeComment extends TeaQrcodeCommentModel
         return $this->transaction(function () {
             if($this->comment_tea_qrcode_id)
             {
-                $comment_tea_qrcode = TeaQrcodeCommentTeaQrcodeModel::get($this->comment_tea_qrcode_id);
-                $comment_tea_qrcode->delete();
+                $tea_qrcode = TeaQrcodeModel::get($this->comment_tea_qrcode_id);
+                $tea_qrcode->delete();
             }
             return $this->delete();
         });
