@@ -38,4 +38,22 @@ class TeaQrcodeComment extends Controller
         }
         return $this->renderError($model->getError() ?: '评价发表失败');
     }
+
+    /**
+     * 删除
+     * @param $comment_id
+     * @return array
+     * @throws \app\common\exception\BaseException
+     * @throws \think\exception\DbException
+     */
+    public function delete($comment_id)
+    {
+        $user = $this->getUser();
+        $model = TeaQrcodeCommentModel::detail($user['user_id'], $comment_id);
+        if ($model->remove()) {
+            return $this->renderSuccess([], '删除成功');
+        }
+        return $this->renderError($model->getError() ?: '删除失败');
+    }
+
 }

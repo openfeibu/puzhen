@@ -65,7 +65,7 @@ class UserEquipment extends BaseModel
 
             $change_days = $warranty_setting['basic_change_days'] + $warranty_setting['change_days'] -  $diff_days;
             $data['change_days'] = $change_days > 0 ? $change_days : 0;
-            $data['change_days_text'] = $diff_days > $warranty_setting['basic_change_days'] ? '0+'.$change_days : ($warranty_setting['basic_change_days'] - $diff_days) .'+'.$warranty_setting['change_days'];
+            $data['change_days_text'] = $change_days > 0 ? ($diff_days > $warranty_setting['basic_change_days'] ? '0+'.$change_days : ($warranty_setting['basic_change_days'] - $diff_days) .'+'.$warranty_setting['change_days']) : 0 ;
 
         }
         return $data;

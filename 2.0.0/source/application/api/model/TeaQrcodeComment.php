@@ -4,6 +4,8 @@ namespace app\api\model;
 
 use app\common\exception\BaseException;
 use app\common\model\TeaQrcodeComment as TeaQrcodeCommentModel;
+use app\api\model\TeaQrcodeCommentTeaQrcode as TeaQrcodeCommentTeaQrcodeModel;
+use app\api\model\TeaQrcode as TeaQrcodeModel;
 use app\common\library\helper;
 
 /**
@@ -70,21 +72,51 @@ class TeaQrcodeComment extends TeaQrcodeCommentModel
             $this->error = '没有输入评价内容';
             return false;
         }
+
         return $this->transaction(function () use ($user,$tea_qrcode_id,$post) {
+            if($post['comment_tea_qrcode_id'])
+            {
+                $tea_qrcode = TeaQrcodeModel::detail($post['comment_tea_qrcode_id']);
+                $comment_tea_qrcode = TeaQrcodeCommentTeaQrcodeModel::create($tea_qrcode->getData());
+            }
             $this->allowField(true)->save([
                 'content' => $post['content'],
                 'sort' => 100,
                 'status' => 1,
                 'user_id' => $user['user_id'],
                 'tea_qrcode_id' => $tea_qrcode_id,
-                'comment_tea_qrcode_id' => $post['comment_tea_qrcode_id'] ?? 0,
+                'comment_tea_qrcode_id' => isset($comment_tea_qrcode) && $comment_tea_qrcode  ? $comment_tea_qrcode->comment_tea_qrcode_id : 0,
                 'wxapp_id' => self::$wxapp_id
             ]);
             return true;
         });
     }
 
+    /**
+     * 评价详情
+     * @param $user_id
+     * @param $comment_id
+     * @return TeaQrcodeComment|null
+     * @throws \think\exception\DbException
+     */
+    public static function detail($user_id, $comment_id)
+    {
+        return self::get(compact('user_id', 'comment_id'), ['user','tea_qrcode', 'comment_tea_qrcode']);
+    }
 
-
-
+    /**
+     * 删除
+     * @return int
+     */
+    public function remove()
+    {
+        return $this->transaction(function () {
+            if($this->comment_tea_qrcode_id)
+            {
+                $comment_tea_qrcode = TeaQrcodeCommentTeaQrcodeModel::get($this->comment_tea_qrcode_id);
+                $comment_tea_qrcode->delete();
+            }
+            return $this->delete();
+        });
+    }
 }

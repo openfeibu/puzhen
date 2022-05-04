@@ -29,7 +29,7 @@ class TeaQrcodeComment extends BaseModel
      */
     public function commentTeaQrcode()
     {
-        return $this->belongsTo('TeaQrcode','comment_tea_qrcode_id','tea_qrcode_id');
+        return $this->belongsTo('TeaQrcodeCommentTeaQrcode','comment_tea_qrcode_id','comment_tea_qrcode_id');
     }
 
     /**
@@ -41,29 +41,7 @@ class TeaQrcodeComment extends BaseModel
         return $this->belongsTo('User');
     }
 
-    /**
-     * 评价详情
-     * @param $comment_id
-     * @return Comment|null
-     * @throws \think\exception\DbException
-     */
-    public static function detail($comment_id)
-    {
-        return self::get($comment_id, ['user','tea_qrcode', 'my_tea_qrcode']);
-    }
 
-    /**
-     * 更新记录
-     * @param $data
-     * @return bool
-     */
-    public function edit($data)
-    {
-        return $this->transaction(function () use ($data) {
-            // 更新评论记录
-            return $this->allowField(true)->save($data);
-        });
-    }
 
     /**
      * 获取评价列表
