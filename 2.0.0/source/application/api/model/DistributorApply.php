@@ -66,11 +66,26 @@ class DistributorApply extends DistributorApplyModel
             $data['wxapp_id'] = self::$wxapp_id;
 
             $this->allowField(true)->save($data);
-
+            // 记录凭证图片关系
+            if (isset($data['images']) && !empty($data['images'])) {
+                $this->saveImages($this['apply_id'], $data['images']);
+            }
             return true;
         });
     }
-
+    private function saveImages($apply_id, $images)
+    {
+        // 生成评价图片数据
+        $data = [];
+        foreach (explode(',', $images) as $image_id) {
+            $data[] = [
+                'apply_id' => $apply_id,
+                'image_id' => $image_id,
+                'wxapp_id' => self::$wxapp_id
+            ];
+        }
+        return !empty($data) && (new DistributorApplyImage)->saveAll($data);
+    }
 
     /**
      * 表单验证
