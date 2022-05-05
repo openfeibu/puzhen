@@ -46,6 +46,7 @@ class DistributorApply extends DistributorApplyModel
 
         return $this->transaction(function () use ($user, $data) {
             // 整理地区信息
+            /*
             $region = explode(',', $data['region']);
             $data['province_id'] = $provinceId = Region::getIdByName($region[0], 1);
             $data['city_id'] = $cityId = Region::getIdByName($region[1], 2, $provinceId);
@@ -60,6 +61,7 @@ class DistributorApply extends DistributorApplyModel
             // 生成geohash
             $Geohash = new Geohash;
             $data['geohash'] = $Geohash->encode($data['longitude'], $data['latitude']);
+            */
             $data['user_id'] = $user['user_id'];
             $data['wxapp_id'] = self::$wxapp_id;
 
