@@ -45,6 +45,9 @@ class DistributorApply extends DistributorApplyModel
     {
 
         return $this->transaction(function () use ($user, $data) {
+            if (!$this->validateForm($data)) {
+                return false;
+            }
             // 整理地区信息
             /*
             $region = explode(',', $data['region']);
@@ -94,6 +97,11 @@ class DistributorApply extends DistributorApplyModel
      */
     private function validateForm($data)
     {
+        if (!isset($data['distributor_name']) || empty($data['distributor_name'])) {
+            $this->error = '服务网点名称不能为空';
+            return false;
+        }
+        /*
         if (!isset($data['image_id']) || empty($data['image_id'])) {
             $this->error = '请选择图片';
             return false;
@@ -106,7 +114,9 @@ class DistributorApply extends DistributorApplyModel
             $this->error = '很抱歉，您选择的城市不存在';
             return false;
         }
+        */
         return true;
+
     }
 
 }
