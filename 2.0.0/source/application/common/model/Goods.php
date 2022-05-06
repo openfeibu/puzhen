@@ -154,11 +154,11 @@ class Goods extends BaseModel
         } elseif ($params['sortType'] === 'sales') {
             $sort = ['goods_sales' => 'desc'];
         } elseif ($params['sortType'] === 'price') {
-            $sort = $params['sort'] ? ['goods_max_price' => 'desc'] : ['goods_min_price' => 'asc'];
+            $sort = $params['sort'] == 'desc' ? ['goods_max_price' => 'desc'] : ['goods_min_price' => 'asc'];
         }elseif ($params['sortType'] === 'ref_price') {
-            $sort = $params['sort'] ? ['goods_max_ref_price' => 'desc'] : ['goods_min_ref_price' => 'asc'];
+            $sort = $params['sort'] == 'desc' ? ['goods_max_ref_price' => 'desc'] : ['goods_min_ref_price' => 'asc'];
         }elseif ($params['sortType'] === 'collection_count') {
-            $sort = $params['sort'] ? ['collection_count' => 'desc'] : ['collection_count' => 'asc'];
+            $sort = $params['sort'] == 'desc' ? ['collection_count' => 'desc'] : ['collection_count' => 'asc'];
         }
         // 商品表名称
         $tableName = $this->getTable();
