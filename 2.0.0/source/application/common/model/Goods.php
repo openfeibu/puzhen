@@ -155,6 +155,8 @@ class Goods extends BaseModel
             $sort = ['goods_sales' => 'desc'];
         } elseif ($params['sortType'] === 'price') {
             $sort = $params['sortPrice'] ? ['goods_max_price' => 'desc'] : ['goods_min_price' => 'asc'];
+        }elseif ($params['sortType'] === 'collection_count') {
+            $sort = $params['sortCollectionCount'] ? ['collection_count' => 'desc'] : ['collection_count' => 'asc'];
         }
         // 商品表名称
         $tableName = $this->getTable();
