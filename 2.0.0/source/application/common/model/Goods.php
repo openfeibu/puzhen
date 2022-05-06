@@ -137,7 +137,7 @@ class Goods extends BaseModel
             'factory_id' => 0,     // 工厂id
             'search' => '',         // 搜索关键词
             'sortType' => 'all',    // 排序类型
-            'sortPrice' => false,   // 价格排序 高低
+            'sort' => false,   // 价格/收藏量 排序 高低
             'listRows' => 15,       // 每页数量
         ], $param);
         // 筛选条件
@@ -154,11 +154,11 @@ class Goods extends BaseModel
         } elseif ($params['sortType'] === 'sales') {
             $sort = ['goods_sales' => 'desc'];
         } elseif ($params['sortType'] === 'price') {
-            $sort = $params['sortPrice'] ? ['goods_max_price' => 'desc'] : ['goods_min_price' => 'asc'];
+            $sort = $params['sort'] ? ['goods_max_price' => 'desc'] : ['goods_min_price' => 'asc'];
         }elseif ($params['sortType'] === 'ref_price') {
-            $sort = $params['sortRefPrice'] ? ['goods_max_ref_price' => 'desc'] : ['goods_min_ref_price' => 'asc'];
+            $sort = $params['sort'] ? ['goods_max_ref_price' => 'desc'] : ['goods_min_ref_price' => 'asc'];
         }elseif ($params['sortType'] === 'collection_count') {
-            $sort = $params['sortCollectionCount'] ? ['collection_count' => 'desc'] : ['collection_count' => 'asc'];
+            $sort = $params['sort'] ? ['collection_count' => 'desc'] : ['collection_count' => 'asc'];
         }
         // 商品表名称
         $tableName = $this->getTable();
