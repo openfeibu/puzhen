@@ -155,6 +155,8 @@ class Goods extends BaseModel
             $sort = ['goods_sales' => 'desc'];
         } elseif ($params['sortType'] === 'price') {
             $sort = $params['sortPrice'] ? ['goods_max_price' => 'desc'] : ['goods_min_price' => 'asc'];
+        }elseif ($params['sortType'] === 'ref_price') {
+            $sort = $params['sortRefPrice'] ? ['goods_max_ref_price' => 'desc'] : ['goods_min_ref_price' => 'asc'];
         }elseif ($params['sortType'] === 'collection_count') {
             $sort = $params['sortCollectionCount'] ? ['collection_count' => 'desc'] : ['collection_count' => 'asc'];
         }
@@ -166,11 +168,19 @@ class Goods extends BaseModel
             ->where('goods_id', 'EXP', "= `$tableName`.`goods_id`")->buildSql();
         $maxPriceSql = $GoodsSku->field(['MAX(goods_price)'])
             ->where('goods_id', 'EXP', "= `$tableName`.`goods_id`")->buildSql();
+
+        $minRefPriceSql = $GoodsSku->field(['MIN(ref_price)'])
+            ->where('goods_id', 'EXP', "= `$tableName`.`goods_id`")->buildSql();
+        $maxRefPriceSql = $GoodsSku->field(['MAX(ref_price)'])
+            ->where('goods_id', 'EXP', "= `$tableName`.`goods_id`")->buildSql();
+
         // 执行查询
         $list = $this
             ->field(['*', '(sales_initial + sales_actual) as goods_sales',
                 "$minPriceSql AS goods_min_price",
-                "$maxPriceSql AS goods_max_price"
+                "$maxPriceSql AS goods_max_price",
+                "$minRefPriceSql AS goods_min_ref_price",
+                "$maxRefPriceSql AS goods_max_ref_price"
             ])
             ->with(['category', 'image.file', 'sku'])
             ->where('is_delete', '=', 0)
