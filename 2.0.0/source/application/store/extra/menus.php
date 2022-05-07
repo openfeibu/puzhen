@@ -428,6 +428,15 @@ return [
                 'active' => true,
                 'submenu' => [
                     [
+                        'name' => '轮播图',
+                        'index' => 'wxapp.banner/index',
+                        'uris' => [
+                            'wxapp.banner/index',
+                            'wxapp.banner/add',
+                            'wxapp.banner/edit',
+                        ]
+                    ],
+                    [
                         'name' => '页面设计',
                         'index' => 'wxapp.page/index',
                         'uris' => [
