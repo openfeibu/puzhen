@@ -34,10 +34,12 @@ class Article extends ArticleModel
      */
     public function add($data)
     {
+        /*
         if (empty($data['image_id'])) {
             $this->error = '请上传封面图';
             return false;
         }
+        */
         if (empty($data['article_content'])) {
             $this->error = '请输入文章内容';
             return false;
@@ -53,10 +55,12 @@ class Article extends ArticleModel
      */
     public function edit($data)
     {
+        /*
         if (empty($data['image_id'])) {
             $this->error = '请上传封面图';
             return false;
         }
+        */
         if (empty($data['article_content'])) {
             $this->error = '请输入文章内容';
             return false;

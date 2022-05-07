@@ -33,7 +33,7 @@
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-2 am-form-label form-require"> 列表显示方式 </label>
+                                <label class="am-u-sm-2 am-form-label"> 列表显示方式 </label>
                                 <div class="am-u-sm-10">
                                     <label class="am-radio-inline">
                                         <input type="radio" name="article[show_type]"
@@ -51,7 +51,7 @@
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">文章封面图 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">文章封面图 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <div class="am-form-file">
                                         <div class="am-form-file">
