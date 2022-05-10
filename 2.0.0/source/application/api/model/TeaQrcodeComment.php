@@ -82,8 +82,8 @@ class TeaQrcodeComment extends TeaQrcodeCommentModel
                     'wxapp_id' => $tea_qrcode->wxapp_id,
                     'name' => $tea_qrcode->name,
                     'data' => $tea_qrcode->getData('data'),
-                    'image' => $tea_qrcode->image,
-                    'detail_image' => $tea_qrcode->detail_image,
+                    'image' => $tea_qrcode->getData('image'),
+                    'detail_image' => $tea_qrcode->getData('detail_image'),
                 ]);
             }
             $this->allowField(true)->save([
