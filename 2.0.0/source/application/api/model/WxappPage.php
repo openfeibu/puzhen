@@ -109,6 +109,7 @@ class WxappPage extends WxappPageModel
                 'goods_price' => $goods['sku'][0]['goods_price'],
                 'line_price' => $goods['sku'][0]['line_price'],
                 'goods_sales' => $goods['goods_sales'],
+                'collection_count' => $goods['collection_count'],
             ];
         }
         return $data;

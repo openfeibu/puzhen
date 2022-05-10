@@ -64,7 +64,9 @@ class Distributor extends BaseModel
         ];
     }
 
-
+    /**
+     * @return \app\common\model\Distributor
+     */
     public static function detail($distributor_id)
     {
         return static::get($distributor_id, ['image']);
