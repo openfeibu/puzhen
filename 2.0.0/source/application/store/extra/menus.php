@@ -158,20 +158,20 @@ return [
     'equipment' => [
         'name' => '茶艺机管理',
         'icon' => 'icon-shop',
-        'index' => 'equipment/index',
+        'index' => 'equipment.equipment/index',
         'submenu' => [
             [
                 'name' => '茶艺机管理',
                 'active' => true,
-                'index' => 'equipment/index',
+                'index' => 'equipment.equipment/index',
                 'submenu' => [
                     [
                         'name' => '茶艺机列表',
-                        'index' => 'equipment/index',
+                        'index' => 'equipment.equipment/index',
                         'uris' => [
-                            'equipment/index',
-                            'equipment/add',
-                            'equipment/edit',
+                            'equipment.equipment/index',
+                            'equipment.equipment/add',
+                            'equipment.equipment/edit',
                         ]
                     ],
                 ]
