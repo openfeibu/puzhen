@@ -45,6 +45,7 @@
                             <thead>
                             <tr>
                                 <th>申请ID</th>
+                                <th class="am-text-middle">用户</th>
                                 <th>联系人</th>
                                 <th>手机号</th>
                                 <th>购买日期</th>
@@ -65,6 +66,10 @@
                             <?php if (!$list->isEmpty()): foreach ($list as $item): ?>
                                 <tr>
                                     <td class="am-text-middle"><?= $item['user_equipment_id'] ?></td>
+                                    <td class="am-text-middle">
+                                        <p class=""><?= $item['user']['nickName'] ?></p>
+                                        <p class="am-link-muted">(用户id：<?= $item['user']['user_id'] ?>)</p>
+                                    </td>
                                     <td class="am-text-middle"><?= $item['linkname'] ?></td>
                                     <td class="am-text-middle"><?= $item['phone'] ?></td>
                                     <td class="am-text-middle"><?= $item['buy_date'] ?></td>
