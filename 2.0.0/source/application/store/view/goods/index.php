@@ -102,6 +102,7 @@
                                 <th>实际销量</th>
                                 <th>商品排序</th>
                                 <th>商品状态</th>
+                                <th>冲泡码</th>
                                 <th>添加时间</th>
                                 <th>操作</th>
                             </tr>
@@ -131,6 +132,20 @@
                                                  data-state="<?= $item['goods_status']['value'] ?>">
                                                <?= $item['goods_status']['text'] ?>
                                            </span>
+                                    </td>
+                                    <td class="am-text-middle">
+                                        <?php if (isset($item['goods_tea_qrcode']) && $item['goods_tea_qrcode']): ?>
+                                            <a href="<?= url('tea_qrcode/edit',
+                                                ['tea_qrcode_id' => $item['goods_tea_qrcode']['tea_qrcode_id']]) ?>">
+                                                查看
+                                            </a>
+                                        <?php else: ?>
+                                            <a href="<?= url('tea_qrcode/add',
+                                                ['goods_id' => $item['goods_id']]) ?>">
+                                                添加
+                                            </a>
+                                        <?php endif; ?>
+
                                     </td>
                                     <td class="am-text-middle"><?= $item['create_time'] ?></td>
                                     <td class="am-text-middle">

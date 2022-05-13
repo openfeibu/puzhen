@@ -176,6 +176,31 @@ return [
                     ],
                 ]
             ],
+            [
+                'name' => '用户茶艺机',
+                'active' => true,
+                'index' => 'equipment.user_equipment/audited_list',
+                'uris' => [
+                    'equipment.user_equipment/edit',
+
+                ],
+                'submenu' => [
+                    [
+                        'name' => '审核通过',
+                        'index' => 'equipment.user_equipment/audited_list',
+                    ],
+                    [
+                        'name' => '待审核',
+                        'index' => 'equipment.user_equipment/apply_list',
+
+                    ],
+                    [
+                        'name' => '已驳回',
+                        'index' => 'equipment.user_equipment/rejected_list',
+                    ],
+                ],
+
+            ],
 
         ]
     ],

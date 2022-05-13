@@ -76,4 +76,6 @@ class Equipment extends EquipmentModel
         return $this->save(['is_delete' => 1]);
     }
 
+
+
 }

@@ -55,19 +55,21 @@ class UserEquipment extends BaseModel
      */
     public static function detail($where)
     {
-        $data =  static::get($where, ['image.file','equipment' => ['image']]);
+        $data =  static::get($where, ['image.file','equipment' => ['image'],'user']);
         if($data)
         {
-            $diff_days  = diffBetweenTwoDays(date('Y-m-d'),$data['buy_date']);
-
-            $warranty_days = $data['setting_warranty_days'] - $diff_days;
-            $data['warranty_days_text'] = $warranty_days > 0 ? $warranty_days : 0;
-            $change_days = $data['setting_basic_change_days'] + $data['setting_change_days'] -  $diff_days;
-            $data['change_days'] = $change_days > 0 ? $change_days : 0;
-            $data['change_days_text'] = $change_days > 0 ? ($diff_days > $data['setting_basic_change_days'] ? '0+'.$change_days : ($data['setting_basic_change_days'] - $diff_days) .'+'.$data['change_days']) : 0 ;
-
+            $data->setWarranty();
         }
         return $data;
     }
-
+    public function setWarranty()
+    {
+        $diff_days  = diffBetweenTwoDays(date('Y-m-d'),$this['buy_date']);
+        $warranty_days = $this['setting_warranty_days'] - $diff_days;
+        $this['warranty_days_text'] = $warranty_days > 0 ? $warranty_days : 0;
+        $change_days = $this['setting_basic_change_days'] + $this['setting_change_days'] -  $diff_days;
+        $this['change_days'] = $change_days > 0 ? $change_days : 0;
+        $this['change_days_text'] = $change_days > 0 ? ($diff_days > $this['setting_basic_change_days'] ? '0+'.$change_days : ($this['setting_basic_change_days'] - $diff_days) .'+'.$this['change_days']) : 0 ;
+        return $this;
+    }
 }

@@ -26,7 +26,7 @@ class TeaQrcode extends Controller
 
     /**
      * 添加冲泡二维码
-     * @param $factory_id
+     * @param $goods_id
      * @return array|bool|mixed
      * @throws \Exception
      */
@@ -46,14 +46,14 @@ class TeaQrcode extends Controller
 
     /**
      * 编辑冲泡二维码
-     * @param $factory_id
+     * @param $goods_id
      * @return array|bool|mixed
      * @throws \think\exception\DbException
      */
-    public function edit($factory_id)
+    public function edit($goods_id)
     {
         // 冲泡二维码详情
-        $model = TeaQrcodeModel::detail($factory_id);
+        $model = TeaQrcodeModel::detail($goods_id);
         if (!$this->request->isAjax()) {
             return $this->fetch('edit', compact('model'));
         }
