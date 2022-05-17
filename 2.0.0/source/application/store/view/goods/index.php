@@ -135,12 +135,12 @@
                                     </td>
                                     <td class="am-text-middle">
                                         <?php if (isset($item['goods_tea_qrcode']) && $item['goods_tea_qrcode']): ?>
-                                            <a href="<?= url('tea_qrcode/edit',
+                                            <a href="<?= url('tea_qrcode.factory_tea_qrcode/edit',
                                                 ['tea_qrcode_id' => $item['goods_tea_qrcode']['tea_qrcode_id']]) ?>">
                                                 查看
                                             </a>
                                         <?php else: ?>
-                                            <a href="<?= url('tea_qrcode/add',
+                                            <a href="<?= url('tea_qrcode.factory_tea_qrcode/add',
                                                 ['goods_id' => $item['goods_id']]) ?>">
                                                 添加
                                             </a>

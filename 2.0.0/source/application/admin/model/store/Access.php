@@ -129,5 +129,20 @@ class Access extends AccessModel
         }
         return $prefix;
     }
+    /**
+     * 修改状态
+     * @param $state
+     * @return false|int
+     */
+    public function setStatus($state)
+    {
+        if($state == 0){
+            $child_ids = $this->where('parent_id',$this->access_id)->column('access_id');
+            array_push($child_ids,$this->access_id);
+            return $this->allowField(true)->whereIn('access_id',$child_ids)->update(['status' => $state ? 1 : 0]) !== false;
+        }else{
+            return $this->allowField(true)->save(['status' => $state ? 1 : 0]) !== false;
+        }
 
+    }
 }

@@ -91,4 +91,19 @@ class Access extends Controller
         return $this->renderSuccess('删除成功');
     }
 
+    /**
+     * 修改商品状态
+     * @param $access_id
+     * @param boolean $state
+     * @return array
+     */
+    public function state($access_id, $state)
+    {
+        // 商品详情
+        $model = AccesscModel::detail($access_id);
+        if (!$model->setStatus($state)) {
+            return $this->renderError('操作失败');
+        }
+        return $this->renderSuccess('操作成功');
+    }
 }

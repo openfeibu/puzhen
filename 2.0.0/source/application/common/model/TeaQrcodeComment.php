@@ -63,11 +63,35 @@ class TeaQrcodeComment extends BaseModel
     public function getList()
     {
         return $this->with(['user', 'tea_qrcode'])
-            ->where('is_delete', '=', 0)
-            ->order(['sort' => 'asc', 'create_time' => 'desc'])
+            ->alias('comment')
+            ->field('comment.*')
+            ->join('tea_qrcode', 'comment.tea_qrcode_id = tea_qrcode.tea_qrcode_id')
+            ->order(['comment.sort' => 'asc', 'comment.create_time' => 'desc'])
             ->paginate(15, false, [
                 'query' => request()->request()
             ]);
+    }
+    /**
+     * 评价详情
+     * @param $comment_id
+     * @return TeaQrcodeComment|null
+     * @throws \think\exception\DbException
+     */
+    public static function detail($comment_id)
+    {
+        return self::get($comment_id, ['user','tea_qrcode','comment_tea_qrcode']);
+    }
+    /**
+     * 更新记录
+     * @param $data
+     * @return bool
+     */
+    public function edit($data)
+    {
+        return $this->transaction(function () use ($data) {
+            // 更新评论记录
+            return $this->allowField(true)->save($data);
+        });
     }
 
 }

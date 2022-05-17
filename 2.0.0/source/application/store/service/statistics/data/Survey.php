@@ -8,6 +8,10 @@ use app\store\model\User as UserModel;
 use app\store\model\Order as OrderModel;
 use app\store\model\Goods as GoodsModel;
 use app\store\model\recharge\Order as RechargeOrderModel;
+use app\store\model\Factory as FactoryModel;
+use app\store\model\Distributor as DistributorModel;
+use app\store\model\Equipment as EquipmentModel;
+use app\store\model\UserEquipment as UserEquipmentModel;
 use app\common\enum\order\Status as OrderStatusEnum;
 use app\common\enum\order\PayStatus as PayStatusEnum;
 use app\common\enum\recharge\order\PayStatus as RechargePayStatusEnum;
@@ -41,6 +45,14 @@ class Survey extends BasicsService
             'goods_total' => $this->getGoodsTotal($startDate, $endDate),
             // 用户充值总额
             'recharge_total' => $this->getRechargeTotal($startDate, $endDate),
+            //厂家数量
+            'factory_total' => $this->getFactoryTotal($startDate, $endDate),
+            //服务网点数量
+            'distributor_total' => $this->getDistributorTotal($startDate, $endDate),
+            //茶艺机数量
+            'equipment_total' => $this->getEquipmentTotal($startDate, $endDate),
+            //茶艺机延保数量
+            'user_equipment_total' => $this->getUserEquipmentTotal($startDate, $endDate),
         ];
     }
 
@@ -143,5 +155,72 @@ class Survey extends BasicsService
             ->sum('actual_money');
         return helper::number2($value);
     }
-
+    /**
+     * 获取工厂总量
+     * @param null $startDate
+     * @param null $endDate
+     * @return string
+     * @throws \think\Exception
+     */
+    private function getFactoryTotal($startDate = null, $endDate = null)
+    {
+        $model = new FactoryModel;
+        if (!is_null($startDate) && !is_null($endDate)) {
+            $model->where('create_time', '>=', strtotime($startDate))
+                ->where('create_time', '<', strtotime($endDate) + 86400);
+        }
+        $value = $model->where('is_delete', '=', '0')->count();
+        return number_format($value);
+    }
+    /**
+     * 获取服务网点总量
+     * @param null $startDate
+     * @param null $endDate
+     * @return string
+     * @throws \think\Exception
+     */
+    private function getDistributorTotal($startDate = null, $endDate = null)
+    {
+        $model = new DistributorModel;
+        if (!is_null($startDate) && !is_null($endDate)) {
+            $model->where('create_time', '>=', strtotime($startDate))
+                ->where('create_time', '<', strtotime($endDate) + 86400);
+        }
+        $value = $model->where('is_delete', '=', '0')->count();
+        return number_format($value);
+    }
+    /**
+     * 获取茶艺机总量
+     * @param null $startDate
+     * @param null $endDate
+     * @return string
+     * @throws \think\Exception
+     */
+    private function getEquipmentTotal($startDate = null, $endDate = null)
+    {
+        $model = new EquipmentModel;
+        if (!is_null($startDate) && !is_null($endDate)) {
+            $model->where('create_time', '>=', strtotime($startDate))
+                ->where('create_time', '<', strtotime($endDate) + 86400);
+        }
+        $value = $model->where('is_delete', '=', '0')->count();
+        return number_format($value);
+    }
+    /**
+     * 获取茶艺机总量
+     * @param null $startDate
+     * @param null $endDate
+     * @return string
+     * @throws \think\Exception
+     */
+    private function getUserEquipmentTotal($startDate = null, $endDate = null)
+    {
+        $model = new UserEquipmentModel;
+        if (!is_null($startDate) && !is_null($endDate)) {
+            $model->where('create_time', '>=', strtotime($startDate))
+                ->where('create_time', '<', strtotime($endDate) + 86400);
+        }
+        $value = $model->where('status', '=', '20')->count();
+        return number_format($value);
+    }
 }

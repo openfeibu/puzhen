@@ -33,6 +33,20 @@
                     <?php endforeach; endif; ?>
                 </select>
             </div>
+            <!--
+            <div class="am-form-group am-fl">
+                <select name="factory_id"
+                        data-am-selected="{searchBox: 1, btnSize: 'sm', placeholder: '工厂', maxHeight: 400, btnWidth:150}">
+                    <option value="0">全部工厂</option>
+                    <?php if (isset($factoryList)): foreach ($factoryList as $factory): ?>
+                        <option value="<?= $factory['factory_id'] ?>"
+                            <?= $request->get('factory_id') == $factory['factory_id'] ? 'selected' : '' ?>>
+                            <?= $factory['factory_name'] ?>
+                        </option>
+                    <?php endforeach; endif; ?>
+                </select>
+            </div>
+            -->
             <div class="am-form-group am-fl">
                 <?php $status = $request->get('status') ?: null; ?>
                 <select name="status"
@@ -70,6 +84,7 @@
                 </label>
             </th>
             <th>商品ID</th>
+            <th>工厂</th>
             <th>商品图片</th>
             <th>商品名称</th>
             <th>商品分类</th>
@@ -94,6 +109,7 @@
                     </label>
                 </td>
                 <td class="am-text-middle"><?= $item['goods_id'] ?></td>
+                <td class="am-text-middle"><?= $item['factory']['factory_name'] ?></td>
                 <td class="am-text-middle">
                     <a href="<?= $item['image'][0]['file_path'] ?>"
                        title="点击查看大图" target="_blank">

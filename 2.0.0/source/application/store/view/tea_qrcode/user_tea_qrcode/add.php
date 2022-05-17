@@ -15,6 +15,7 @@
                                            placeholder="请输入冲泡码方案名称" required>
                                 </div>
                             </div>
+                            <?php if($goods):?>
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 商品 </label>
                                 <div class="am-u-sm-9 am-u-md-6 am-u-lg-5 am-u-end">
@@ -31,6 +32,24 @@
                                 </div>
 
                             </div>
+                            <?php else:?>
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 工厂 </label>
+                                <div class="am-u-sm-9 am-u-end">
+                                    <select name="tea_qrcode[factory_id]" require
+                                            data-am-selected="{searchBox: 1, btnSize: 'sm', placeholder:'请选择', maxHeight: 400}"
+                                    >
+                                        <option value=""></option>
+                                        <?php if (isset($factoryList) && !$factoryList->isEmpty()):
+                                            foreach ($factoryList as $item): ?>
+                                                <option value="<?= $item['factory_id'] ?>">
+                                                    <?= $item['factory_name'] ?></option>
+                                            <?php endforeach; endif; ?>
+                                    </select>
+                                </div>
+                            </div>
+                            <?php endif;?>
+
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">茶类 </label>
                                 <div class="am-u-sm-9 am-u-end">
@@ -38,7 +57,7 @@
                                             data-am-selected="{searchBox: 1, btnSize: 'sm',
                                              placeholder:'请选择', maxHeight: 400}">
                                         <option value=""></option>
-                                        <?php if (isset($tea_list)): foreach ($tea_list as $item): ?>
+                                        <?php if (isset($teaList)): foreach ($teaList as $item): ?>
                                             <option value="<?= $item['code'] ?>" ><?= $item['name'] ?></option>
                                         <?php endforeach; endif; ?>
                                     </select>

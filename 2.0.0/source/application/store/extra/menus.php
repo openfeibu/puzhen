@@ -74,6 +74,7 @@ return [
             ]
         ],
     ],
+    /*
     'order' => [
         'name' => '订单管理',
         'icon' => 'icon-order',
@@ -114,6 +115,7 @@ return [
             ],
         ]
     ],
+    */
     'user' => [
         'name' => '用户管理',
         'icon' => 'icon-user',
@@ -204,6 +206,55 @@ return [
 
         ]
     ],
+    'tea_qrcode' => [
+        'name' => '冲泡码管理',
+        'icon' => 'icon-shop',
+        'index' => 'tea_qrcode.factory_tea_qrcode/index',
+        'submenu' => [
+            [
+                'name' => '工厂冲泡码',
+                'active' => true,
+                'index' => 'tea_qrcode.factory_tea_qrcode/index',
+                'submenu' => [
+                    [
+                        'name' => '冲泡码列表',
+                        'index' => 'tea_qrcode.factory_tea_qrcode/index',
+                        'uris' => [
+                            'tea_qrcode.factory_tea_qrcode/index',
+                            'tea_qrcode.factory_tea_qrcode/add',
+                            'tea_qrcode.factory_tea_qrcode/edit',
+                        ]
+                    ],
+                    [
+                        'name' => '冲泡码评价',
+                        'index' => 'tea_qrcode.tea_qrcode_comment/index',
+                        'uris' => [
+                            'tea_qrcode.tea_qrcode_comment/index',
+                            'tea_qrcode.tea_qrcode_comment/edit',
+                        ]
+
+                    ],
+                ]
+            ],
+            [
+                'name' => '用户冲泡码',
+                'active' => true,
+                'index' => 'tea_qrcode.user_tea_qrcode/index',
+                'submenu' => [
+                    [
+                        'name' => '冲泡码列表',
+                        'index' => 'tea_qrcode.user_tea_qrcode/index',
+                        'uris' => [
+                            'tea_qrcode.user_tea_qrcode/index',
+                            'tea_qrcode.user_tea_qrcode/add',
+                            'tea_qrcode.user_tea_qrcode/edit',
+                        ]
+                    ],
+                ]
+            ],
+
+        ]
+    ],
     'factory' => [
         'name' => '工厂管理',
         'icon' => 'icon-shop',
@@ -265,7 +316,7 @@ return [
             ],
         ]
     ],
-
+    /*
     'shop' => [
         'name' => '门店管理',
         'icon' => 'icon-shop',
@@ -433,6 +484,7 @@ return [
             ],
         ],
     ],
+    */
     'statistics' => [
         'name' => '数据统计',
         'icon' => 'icon-qushitu',
@@ -498,6 +550,7 @@ return [
             ],
         ],
     ],
+    /*
     'apps' => [
         'name' => '应用中心',
         'icon' => 'icon-application',
@@ -699,6 +752,7 @@ return [
             ],
         ]
     ],
+    */
     'setting' => [
         'name' => '设置',
         'icon' => 'icon-setting',

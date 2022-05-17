@@ -33,6 +33,7 @@
                                 <th>权限名称</th>
                                 <th>权限url</th>
                                 <th>排序</th>
+                                <th>状态</th>
                                 <th>添加时间</th>
                                 <th>操作</th>
                             </tr>
@@ -44,6 +45,14 @@
                                     <td class="am-text-middle"><?= $item['name_h1'] ?></td>
                                     <td class="am-text-middle"><?= $item['url'] ?></td>
                                     <td class="am-text-middle"><?= $item['sort'] ?></td>
+                                    <td class="am-text-middle">
+                                           <span class="j-state am-badge x-cur-p
+                                           am-badge-<?= $item['status']['value'] == 1 ? 'success' : 'warning' ?>"
+                                                 data-id="<?= $item['access_id'] ?>"
+                                                 data-state="<?= $item['status']['value'] ?>">
+                                               <?= $item['status']['text'] ?>
+                                           </span>
+                                    </td>
                                     <td class="am-text-middle"><?= $item['create_time'] ?></td>
                                     <td class="am-text-middle">
                                         <div class="tpl-table-black-operation">
@@ -78,6 +87,24 @@
         var url = "<?= url('store.access/delete') ?>";
         $('.item-delete').delete('access_id', url, '删除后不可恢复，确定要删除吗？');
 
+        // 商品状态
+        $('.j-state').click(function () {
+            var data = $(this).data();
+            layer.confirm('确定要' + (parseInt(data.state) === 1 ? '隐藏' : '显示') + '该权限吗？'
+                , {title: '友情提示'}
+                , function (index) {
+                    $.post("<?= url('store.access/state') ?>"
+                        , {
+                            access_id: data.id,
+                            state: Number(!(parseInt(data.state) === 1))
+                        }
+                        , function (result) {
+                            result.code === 1 ? $.show_success(result.msg, result.url)
+                                : $.show_error(result.msg);
+                        });
+                    layer.close(index);
+                });
+        });
     });
 </script>
 

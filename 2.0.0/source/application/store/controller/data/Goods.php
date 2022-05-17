@@ -5,7 +5,7 @@ namespace app\store\controller\data;
 use app\store\controller\Controller;
 use app\store\model\Goods as GoodsModel;
 use app\store\model\Category as CategoryModel;
-
+use app\store\model\Factory as FactoryModel;
 /**
  * 商品数据控制器
  * Class Goods
@@ -41,7 +41,8 @@ class Goods extends Controller
         $catgory = CategoryModel::getCacheTree();
         // 商品列表
         $list = $this->model->getList($this->request->param());
-        return $this->fetch('list', compact('list', 'catgory'));
+        $factoryList = FactoryModel::getAllList();
+        return $this->fetch('list', compact('list', 'catgory','factoryList'));
     }
 
 }

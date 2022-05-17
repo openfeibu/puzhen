@@ -15,14 +15,16 @@ class Access extends BaseModel
 
     /**
      * 获取所有权限
+     * @param $where
      * @return array
      * @throws \think\db\exception\DataNotFoundException
      * @throws \think\db\exception\ModelNotFoundException
      * @throws \think\exception\DbException
      */
-    protected static function getAll()
+    protected static function getAll($where=[])
     {
-        $data = static::useGlobalScope(false)->order(['sort' => 'asc', 'create_time' => 'asc'])->select();
+        //->where('status',1)
+        $data = static::useGlobalScope(false)->where($where)->order(['sort' => 'asc', 'create_time' => 'asc'])->select();
         return $data ? $data->toArray() : [];
     }
 
@@ -57,5 +59,16 @@ class Access extends BaseModel
         }
         return $urls;
     }
+
+    /**
+     * @param $value
+     * @return mixed
+     */
+    public function getStatusAttr($value)
+    {
+        $status = [1 => '显示', 0 => '隐藏'];
+        return ['text' => $status[$value], 'value' => $value];
+    }
+
 
 }

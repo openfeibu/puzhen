@@ -23,7 +23,7 @@ class Access extends AccessModel
     {
         $accessIds = is_null($role_id) ? [] : RoleAccess::getAccessIds($role_id);
         $jsTree = [];
-        foreach ($this->getAll() as $item) {
+        foreach ($this->getAll(['status' => 1]) as $item) {
             $jsTree[] = [
                 'id' => $item['access_id'],
                 'parent' => $item['parent_id'] > 0 ? $item['parent_id'] : '#',

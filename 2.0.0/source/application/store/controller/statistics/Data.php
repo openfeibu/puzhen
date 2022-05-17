@@ -39,11 +39,11 @@ class Data extends Controller
             // 数据概况
             'survey' => $this->statisticsDataService->getSurveyData(),
             // 近七日交易走势
-            'echarts7days' => $this->statisticsDataService->getTransactionTrend(),
+            //'echarts7days' => $this->statisticsDataService->getTransactionTrend(),
             // 商品销售榜
-            'goodsRanking' => $this->statisticsDataService->getGoodsRanking(),
+            //'goodsRanking' => $this->statisticsDataService->getGoodsRanking(),
             // 用户消费榜
-            'userExpendRanking' => $this->statisticsDataService->geUserExpendRanking(),
+            //'userExpendRanking' => $this->statisticsDataService->geUserExpendRanking(),
         ]);
     }
 

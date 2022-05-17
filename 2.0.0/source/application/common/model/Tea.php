@@ -18,4 +18,8 @@ class Tea extends BaseModel
     {
         return self::where('code',$tea)->value('name','未知');
     }
+    public static function getAll()
+    {
+        return self::order('code','asc')->select();
+    }
 }
