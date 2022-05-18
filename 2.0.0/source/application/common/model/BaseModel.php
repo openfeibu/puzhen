@@ -14,6 +14,7 @@ use think\Session;
 class BaseModel extends Model
 {
     public static $wxapp_id;
+    public static $factory_id;
     public static $base_url;
 
     protected $alias = '';
@@ -28,6 +29,8 @@ class BaseModel extends Model
         self::$base_url = base_url();
         // 后期静态绑定wxapp_id
         self::bindWxappId();
+        // 后期静态绑定factory_id
+        self::bindFactoryId();
     }
 
     /**
@@ -59,12 +62,35 @@ class BaseModel extends Model
     }
 
     /**
+     * 后期静态绑定类名称
+     * 用于定义全局查询范围的factory条件
+     * 子类调用方式:
+     *   非静态方法:  self::$wxapp_id
+     *   静态方法中:  $self = new static();   $self::$wxapp_id
+     */
+    private static function bindFactoryId()
+    {
+        if ($module = self::getCalledModule()) {
+            $callfunc = 'set' . ucfirst($module) . 'Id';
+            method_exists(new self, $callfunc) && self::$callfunc();
+        }
+    }
+
+    /**
      * 设置wxapp_id (store模块)
      */
     protected static function setStoreWxappId()
     {
-        $session = Session::get('yoshop_store');
+        $session = Session::get('fbshop_store');
         !empty($session) && self::$wxapp_id = $session['wxapp']['wxapp_id'];
+    }
+    /**
+     * 设置wxapp_id (factory模块)
+     */
+    protected static function setFactoryWxappId()
+    {
+        $session = Session::get('fbshop_factory');
+        !empty($session) && self::$wxapp_id = $session['factory']['wxapp_id'];
     }
 
     /**
@@ -77,6 +103,15 @@ class BaseModel extends Model
     }
 
     /**
+     * 设置wxapp_id (factory模块)
+     */
+    protected static function setFactoryId()
+    {
+        $session = Session::get('fbshop_factory');
+        !empty($session) && self::$wxapp_id = $session['factory']['factory_id'];
+    }
+
+    /**
      * 定义全局的查询范围
      * @param \think\db\Query $query
      */
@@ -84,6 +119,9 @@ class BaseModel extends Model
     {
         if (self::$wxapp_id > 0) {
             $query->where($query->getTable() . '.wxapp_id', self::$wxapp_id);
+        }
+        if (self::$factory_id > 0) {
+            $query->where($query->getTable() . '.factory_id', self::$factory_id);
         }
     }
 

@@ -30,7 +30,7 @@ class User extends BaseModel
      */
     public function role()
     {
-        return $this->belongsToMany('Role', 'StoreUserRole');
+        return $this->belongsToMany('Role', 'FactoryUserRole');
     }
 
     /**
@@ -69,7 +69,7 @@ class User extends BaseModel
         /** @var \app\common\model\Factory $factory */
         $factory = $user['factory'];
         // 保存登录状态
-        Session::set('yoshop_factory', [
+        Session::set('fbshop_factory', [
             'user' => [
                 'factory_user_id' => $user['factory_user_id'],
                 'user_name' => $user['user_name'],

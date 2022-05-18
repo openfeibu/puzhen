@@ -3,7 +3,7 @@
 namespace app\admin\controller\store;
 
 use app\admin\controller\Controller;
-use app\admin\model\store\Access as AccesscModel;
+use app\admin\model\store\Access as AccessModel;
 
 /**
  * 商家用户权限控制器
@@ -22,7 +22,7 @@ class Access extends Controller
      */
     public function index()
     {
-        $model = new AccesscModel;
+        $model = new AccessModel;
         $list = $model->getList();
         return $this->fetch('index', compact('list'));
     }
@@ -37,7 +37,7 @@ class Access extends Controller
      */
     public function add()
     {
-        $model = new AccesscModel;
+        $model = new AccessModel;
         if (!$this->request->isAjax()) {
             // 权限列表
             $accessList = $model->getList();
@@ -62,7 +62,7 @@ class Access extends Controller
     public function edit($access_id)
     {
         // 权限详情
-        $model = AccesscModel::detail($access_id);
+        $model = AccessModel::detail($access_id);
         if (!$this->request->isAjax()) {
             // 权限列表
             $accessList = $model->getList();
@@ -84,7 +84,7 @@ class Access extends Controller
     public function delete($access_id)
     {
         // 权限详情
-        $model = AccesscModel::detail($access_id);
+        $model = AccessModel::detail($access_id);
         if (!$model->remove()) {
             return $this->renderError($model->getError() ?: '删除失败');
         }
@@ -100,7 +100,7 @@ class Access extends Controller
     public function state($access_id, $state)
     {
         // 商品详情
-        $model = AccesscModel::detail($access_id);
+        $model = AccessModel::detail($access_id);
         if (!$model->setStatus($state)) {
             return $this->renderError('操作失败');
         }

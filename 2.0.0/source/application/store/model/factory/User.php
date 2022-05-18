@@ -22,7 +22,7 @@ class User extends FactoryUserModel
     {
         return $this->save([
             'user_name' => $data['user_name'],
-            'password' => yoshop_hash($data['password']),
+            'password' => fbshop_hash($data['password']),
             'is_super' => 1,
             'factory_id' => $factory_id,
             'wxapp_id' => self::$wxapp_id,

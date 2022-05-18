@@ -78,7 +78,7 @@ class Auth
     private function __construct()
     {
         // 商家登录信息
-        $this->store = Session::get('yoshop_store');
+        $this->store = Session::get('fbshop_store');
         // 当前用户信息
         if (!empty($this->store)) {
             $this->user = User::detail($this->store['user']['store_user_id']);

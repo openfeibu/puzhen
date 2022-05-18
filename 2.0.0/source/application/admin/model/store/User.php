@@ -22,7 +22,7 @@ class User extends StoreUserModel
     {
         return $this->save([
             'user_name' => $data['user_name'],
-            'password' => yoshop_hash($data['password']),
+            'password' => fbshop_hash($data['password']),
             'is_super' => 1,
             'wxapp_id' => $wxappId,
         ]);

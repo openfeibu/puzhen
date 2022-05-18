@@ -25,8 +25,12 @@ return [
                 'index' => 'store/recycle'
             ],
             [
-                'name' => '权限管理',
+                'name' => '商店权限管理',
                 'index' => 'store.access/index'
+            ],
+            [
+                'name' => '工厂权限管理',
+                'index' => 'factory.access/index'
             ]
         ],
     ],

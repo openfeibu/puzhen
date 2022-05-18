@@ -35,9 +35,9 @@ function toUnderScore($str)
  * @param $password
  * @return string
  */
-function yoshop_hash($password)
+function fbshop_hash($password)
 {
-    return md5(md5($password) . 'yoshop_salt_SmTRx');
+    return md5(md5($password) . 'fbshop_salt_SmTRx');
 }
 
 /**

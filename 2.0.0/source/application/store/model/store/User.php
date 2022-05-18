@@ -54,7 +54,7 @@ class User extends StoreUserModel
     {
         return self::useGlobalScope(false)->with(['wxapp'])->where([
             'user_name' => $user_name,
-            'password' => yoshop_hash($password),
+            'password' => fbshop_hash($password),
             'is_delete' => 0
         ])->find();
     }
@@ -96,7 +96,7 @@ class User extends StoreUserModel
         $this->startTrans();
         try {
             // 新增管理员记录
-            $data['password'] = yoshop_hash($data['password']);
+            $data['password'] = fbshop_hash($data['password']);
             $data['wxapp_id'] = self::$wxapp_id;
             $data['is_super'] = 0;
             $this->allowField(true)->save($data);
@@ -133,7 +133,7 @@ class User extends StoreUserModel
             return false;
         }
         if (!empty($data['password'])) {
-            $data['password'] = yoshop_hash($data['password']);
+            $data['password'] = fbshop_hash($data['password']);
         } else {
             unset($data['password']);
         }
@@ -186,12 +186,12 @@ class User extends StoreUserModel
         // 更新管理员信息
         if ($this->save([
                 'user_name' => $data['user_name'],
-                'password' => yoshop_hash($data['password']),
+                'password' => fbshop_hash($data['password']),
             ]) === false) {
             return false;
         }
         // 更新session
-        Session::set('yoshop_store.user', [
+        Session::set('fbshop_store.user', [
             'store_user_id' => $this['store_user_id'],
             'user_name' => $data['user_name'],
         ]);

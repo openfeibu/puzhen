@@ -49,7 +49,7 @@ class Controller extends \think\Controller
     public function _initialize()
     {
         // 商家登录信息
-        $this->admin = Session::get('yoshop_admin');
+        $this->admin = Session::get('fbshop_admin');
         // 当前路由信息
         $this->getRouteinfo();
         // 验证登录

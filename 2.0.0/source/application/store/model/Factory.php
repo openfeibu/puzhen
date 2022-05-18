@@ -4,6 +4,7 @@ namespace app\store\model;
 
 use app\common\library\helper;
 use app\common\model\Factory as FactoryModel;
+use app\store\model\factory\User as FactoryUser;
 
 /**
  * 工厂模型
@@ -70,16 +71,9 @@ class Factory extends FactoryModel
         return $this->transaction(function () use ($data) {
             // 添加小程序记录
             $this->allowField(true)->save($this->createData($data));
-            // 商城默认设置
-            (new Setting)->insertDefault($this['wxapp_id'], $data['store_name']);
-            // 新增商家用户信息
-            (new StoreUser)->add($this['wxapp_id'], $data);
-            // 新增小程序默认帮助
-            (new WxappHelp)->insertDefault($this['wxapp_id']);
-            // 新增小程序diy配置
-            (new WxappPage)->insertDefault($this['wxapp_id']);
-            // 新增小程序分类页模板
-            (new WxappCategory)->insertDefault($this['wxapp_id']);
+            // 新增工厂用户信息
+            (new FactoryUser)->add($this['factory_id'], $data);
+
             return true;
         });
 

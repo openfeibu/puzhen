@@ -37,7 +37,7 @@ class Passport extends Controller
      */
     public function logout()
     {
-        Session::clear('yoshop_admin');
+        Session::clear('fbshop_admin');
         $this->redirect('passport/login');
     }
 
