@@ -54,6 +54,29 @@
                                     </label>
                                 </div>
                             </div>
+                            <div class="am-form-group am-padding-top-sm">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 工厂账户名 </label>
+                                <div class="am-u-sm-9 am-u-end">
+                                    <input type="text" class="tpl-form-input" name="factory[user_name]" value=""
+                                           required>
+                                    <small>商家后台用户名</small>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 工厂账户密码 </label>
+                                <div class="am-u-sm-9 am-u-end">
+                                    <input type="password" class="tpl-form-input" name="factory[password]" value=""
+                                           required>
+                                    <small>商家后台用户密码</small>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 确认密码 </label>
+                                <div class="am-u-sm-9 am-u-end">
+                                    <input type="password" class="tpl-form-input" name="factory[password_confirm]" value=""
+                                           required>
+                                </div>
+                            </div>
                             <div class="am-form-group">
                                 <div class="am-u-sm-9 am-u-sm-push-3 am-margin-top-lg">
                                     <button type="submit" class="j-submit am-btn am-btn-secondary">提交

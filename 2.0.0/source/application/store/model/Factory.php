@@ -59,10 +59,30 @@ class Factory extends FactoryModel
      */
     public function add($data)
     {
-        if (!$this->validateForm($data)) {
+        if ($data['password'] !== $data['password_confirm']) {
+            $this->error = '确认密码不正确';
             return false;
         }
-        return $this->allowField(true)->save($this->createData($data));
+        if (FactoryUser::checkExist($data['user_name'])) {
+            $this->error = '商家用户名已存在';
+            return false;
+        }
+        return $this->transaction(function () use ($data) {
+            // 添加小程序记录
+            $this->allowField(true)->save($this->createData($data));
+            // 商城默认设置
+            (new Setting)->insertDefault($this['wxapp_id'], $data['store_name']);
+            // 新增商家用户信息
+            (new StoreUser)->add($this['wxapp_id'], $data);
+            // 新增小程序默认帮助
+            (new WxappHelp)->insertDefault($this['wxapp_id']);
+            // 新增小程序diy配置
+            (new WxappPage)->insertDefault($this['wxapp_id']);
+            // 新增小程序分类页模板
+            (new WxappCategory)->insertDefault($this['wxapp_id']);
+            return true;
+        });
+
     }
 
     /**
