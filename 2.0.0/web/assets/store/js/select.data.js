@@ -93,6 +93,7 @@
             }
             var newData = [];
             selectedData.forEach(function (item) {
+                console.log(item[_this.options.dataIndex])
                 if (existData.indexOf(item[_this.options.dataIndex]) === -1) {
                     newData.push(item);
                     existData.push(item[_this.options.dataIndex]);

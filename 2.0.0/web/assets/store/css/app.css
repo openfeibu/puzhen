@@ -2243,3 +2243,7 @@ body.select-data {
     display: inline-block; }
 
 /*# sourceMappingURL=app.css.map */
+.tea_qrcode_image{
+  width: 300px;
+  height: 300px !important;
+}
