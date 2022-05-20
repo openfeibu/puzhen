@@ -16,6 +16,7 @@ class BaseModel extends Model
     public static $wxapp_id;
     public static $factory_id;
     public static $base_url;
+    public static $is_factory = 1;
 
     protected $alias = '';
 
@@ -31,6 +32,7 @@ class BaseModel extends Model
         self::bindWxappId();
         // 后期静态绑定factory_id
         self::bindFactoryId();
+
     }
 
     /**
@@ -91,6 +93,7 @@ class BaseModel extends Model
     {
         $session = Session::get('fbshop_factory');
         !empty($session) && self::$wxapp_id = $session['factory']['wxapp_id'];
+        !empty($session) && self::$factory_id = $session['factory']['factory_id'];
     }
 
     /**
@@ -102,14 +105,6 @@ class BaseModel extends Model
         self::$wxapp_id = $request->param('wxapp_id');
     }
 
-    /**
-     * 设置wxapp_id (factory模块)
-     */
-    protected static function setFactoryId()
-    {
-        $session = Session::get('fbshop_factory');
-        !empty($session) && self::$wxapp_id = $session['factory']['factory_id'];
-    }
 
     /**
      * 定义全局的查询范围
@@ -120,7 +115,7 @@ class BaseModel extends Model
         if (self::$wxapp_id > 0) {
             $query->where($query->getTable() . '.wxapp_id', self::$wxapp_id);
         }
-        if (self::$factory_id > 0) {
+        if (self::$factory_id > 0 && self::$is_factory) {
             $query->where($query->getTable() . '.factory_id', self::$factory_id);
         }
     }

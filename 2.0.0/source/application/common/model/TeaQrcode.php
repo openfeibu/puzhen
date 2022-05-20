@@ -15,7 +15,7 @@ class TeaQrcode extends BaseModel
 
     public function goodsTeaQrcode()
     {
-        return $this->hasOne('goods_tea_qrcode');
+        return $this->hasMany('goods_tea_qrcode');
     }
     public function factory()
     {
@@ -24,6 +24,10 @@ class TeaQrcode extends BaseModel
     public function user()
     {
         return $this->belongsTo('user');
+    }
+    public function comment()
+    {
+        return $this->hasMany('tea_qrcode_comment');
     }
     public function getDataAttr($value, $data)
     {
@@ -38,9 +42,19 @@ class TeaQrcode extends BaseModel
     }
     public function remove()
     {
-        $this->goodsTeaQrcode()->delete();
-        $this->delete();
-        return true;
+        $this->startTrans();
+        try{
+            $this->goodsTeaQrcode()->delete();
+            $this->comment()->delete();
+            $this->delete();
+            $this->commit();
+            return true;
+        }catch (\Exception $e) {
+            $this->error = $e->getMessage();
+            $this->rollback();
+            return false;
+        }
+
     }
     public function edit($post)
     {

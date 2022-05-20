@@ -33,7 +33,7 @@ class TeaQrcodeComment extends Controller
     public function detail($comment_id)
     {
         // 评价详情
-        $model = TeaQrcodeCommentModel::detail($comment_id);
+        $model = TeaQrcodeCommentModel::detail(['comment_id' => $comment_id]);
         if (!$this->request->isAjax()) {
             return $this->fetch('detail', compact('model'));
         }
@@ -52,7 +52,7 @@ class TeaQrcodeComment extends Controller
      */
     public function delete($comment_id)
     {
-        $model = TeaQrcodeCommentModel::get($comment_id);
+        $model = TeaQrcodeCommentModel::get(['comment_id' => $comment_id]);
         if (!$model->delete()) {
             return $this->renderError('删除失败');
         }

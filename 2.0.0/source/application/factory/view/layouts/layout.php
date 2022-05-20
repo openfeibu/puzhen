@@ -17,6 +17,7 @@
     <script src="//at.alicdn.com/t/font_783249_e5yrsf08rap.js"></script>
     <script>
         BASE_URL = '<?= isset($base_url) ? $base_url : '' ?>';
+        STORE_URL = '<?= isset($factory_url) ? $factory_url : '' ?>';
         FACTORY_URL = '<?= isset($factory_url) ? $factory_url : '' ?>';
     </script>
 </head>
@@ -60,7 +61,7 @@
         <div class="sidebar-scroll">
             <!-- 一级菜单 -->
             <ul class="sidebar-nav">
-                <li class="sidebar-nav-heading"><?= $factory['factory_name'] ?></li>
+                <li class="sidebar-nav-heading"><?= $factory['factory']['factory_name'] ?></li>
                 <?php foreach ($menus as $key => $item): ?>
                     <li class="sidebar-nav-link">
                         <a href="<?= isset($item['index']) ? url($item['index']) : 'javascript:void(0);' ?>"

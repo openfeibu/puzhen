@@ -64,6 +64,7 @@ return [
                     'goods.category/edit',
                 ],
             ],
+            /*
             [
                 'name' => '商品评价',
                 'index' => 'goods.comment/index',
@@ -72,6 +73,7 @@ return [
                     'goods.comment/detail',
                 ],
             ]
+            */
         ],
     ],
     /*
@@ -159,7 +161,7 @@ return [
     ],
     'equipment' => [
         'name' => '茶艺机管理',
-        'icon' => 'icon-shop',
+        'icon' => 'am-icon-coffee',
         'index' => 'equipment.equipment/index',
         'submenu' => [
             [
@@ -208,7 +210,7 @@ return [
     ],
     'tea_qrcode' => [
         'name' => '冲泡码管理',
-        'icon' => 'icon-shop',
+        'icon' => 'am-icon-qrcode',
         'index' => 'tea_qrcode.factory_tea_qrcode/index',
         'submenu' => [
             [
@@ -257,7 +259,7 @@ return [
     ],
     'factory' => [
         'name' => '工厂管理',
-        'icon' => 'icon-shop',
+        'icon' => 'am-icon-building',
         'index' => 'factory/index',
         'submenu' => [
             [
@@ -353,6 +355,7 @@ return [
             ]
         ]
     ],
+    */
     'content' => [
         'name' => '内容管理',
         'icon' => 'icon-wenzhang',
@@ -406,6 +409,7 @@ return [
             ],
         ]
     ],
+    /*
     'market' => [
         'name' => '营销管理',
         'icon' => 'icon-marketing',

@@ -26,6 +26,7 @@ class UserRole extends UserRoleModel
                 'factory_user_id' => $factory_user_id,
                 'role_id' => $role_id,
                 'wxapp_id' => self::$wxapp_id,
+                'factory_id' => self::$factory_id,
             ];
         }
         return $this->saveAll($data);

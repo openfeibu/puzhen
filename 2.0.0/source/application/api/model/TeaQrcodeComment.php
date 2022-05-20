@@ -101,14 +101,13 @@ class TeaQrcodeComment extends TeaQrcodeCommentModel
 
     /**
      * 评价详情
-     * @param $user_id
-     * @param $comment_id
+     * @param $where
      * @return TeaQrcodeComment|null
      * @throws \think\exception\DbException
      */
-    public static function detail($user_id, $comment_id)
+    public static function detail($where)
     {
-        return self::get(compact('user_id', 'comment_id'), ['user','tea_qrcode', 'comment_tea_qrcode']);
+        return self::get($where, ['user','tea_qrcode', 'comment_tea_qrcode']);
     }
 
     /**

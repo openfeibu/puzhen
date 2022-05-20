@@ -12,6 +12,7 @@ use app\common\model\factory\User as FactoryUserModel;
  */
 class User extends FactoryUserModel
 {
+
     /**
      * 商家用户登录
      * @param $data
@@ -52,7 +53,7 @@ class User extends FactoryUserModel
      */
     private function getLoginUser($user_name, $password)
     {
-        return self::useGlobalScope(false)->with(['wxapp'])->where([
+        return self::useGlobalScope(false)->with(['wxapp','factory'])->where([
             'user_name' => $user_name,
             'password' => fbshop_hash($password),
             'is_delete' => 0
@@ -98,6 +99,7 @@ class User extends FactoryUserModel
             // 新增管理员记录
             $data['password'] = fbshop_hash($data['password']);
             $data['wxapp_id'] = self::$wxapp_id;
+            $data['factory_id'] = self::$factory_id;
             $data['is_super'] = 0;
             $this->allowField(true)->save($data);
             // 新增角色关系记录

@@ -20,13 +20,15 @@ class Goods extends GoodsModel
      */
     public function add(array $data)
     {
+        self::$factory_id = self::$factory_id ?? $data['factory_id'];
         if (!isset($data['images']) || empty($data['images'])) {
             $this->error = '请上传商品图片';
             return false;
         }
         $data['content'] = isset($data['content']) ? $data['content'] : '';
+        $data['spec_type'] = isset($data['spec_type']) ? $data['spec_type'] : '10';
         $data['wxapp_id'] = $data['sku']['wxapp_id'] = self::$wxapp_id;
-
+        $data['factory_id'] = $data['sku']['factory_id'] = self::$factory_id;
         // 开启事务
         $this->startTrans();
         try {
@@ -58,7 +60,8 @@ class Goods extends GoodsModel
         $data = array_map(function ($image_id) {
             return [
                 'image_id' => $image_id,
-                'wxapp_id' => self::$wxapp_id
+                'wxapp_id' => self::$wxapp_id,
+                'factory_id' => self::$factory_id
             ];
         }, $images);
         return $this->image()->saveAll($data);
@@ -75,9 +78,11 @@ class Goods extends GoodsModel
             $this->error = '请上传商品图片';
             return false;
         }
+        self::$factory_id = isset($data['factory_id']) ? $data['factory_id'] : $this['factory_id'];
         $data['spec_type'] = isset($data['spec_type']) ? $data['spec_type'] : $this['spec_type'];
         $data['content'] = isset($data['content']) ? $data['content'] : '';
         $data['wxapp_id'] = $data['sku']['wxapp_id'] = self::$wxapp_id;
+        $data['factory_id'] = $data['sku']['factory_id'] = self::$factory_id;
         return $this->transaction(function () use ($data) {
             // 保存商品
             $this->allowField(true)->save($data);
@@ -99,6 +104,7 @@ class Goods extends GoodsModel
     {
         // 更新模式: 先删除所有规格
         $model = new GoodsSku;
+        $model::$factory_id = $data['factory_id'];
         $isUpdate && $model->removeAll($this['goods_id']);
         // 添加规格数据
         if ($data['spec_type'] == '10') {

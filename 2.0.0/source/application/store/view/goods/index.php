@@ -139,10 +139,18 @@
                                                 ['tea_qrcode_id' => $item['goods_tea_qrcode']['tea_qrcode_id']]) ?>">
                                                 查看
                                             </a>
+                                            <a href="<?= url('goods/bind_tea_qrcode',
+                                                ['goods_id' => $item['goods_id']]) ?>">
+                                                换绑
+                                            </a>
                                         <?php else: ?>
                                             <a href="<?= url('tea_qrcode.factory_tea_qrcode/add',
                                                 ['goods_id' => $item['goods_id']]) ?>">
                                                 添加
+                                            </a>
+                                            <a href="<?= url('goods/bind_tea_qrcode',
+                                                ['goods_id' => $item['goods_id']]) ?>">
+                                                绑定
                                             </a>
                                         <?php endif; ?>
 

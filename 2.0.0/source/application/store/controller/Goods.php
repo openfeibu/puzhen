@@ -6,6 +6,8 @@ use app\store\model\Factory as FactoryModel;
 use app\store\model\Goods as GoodsModel;
 use app\store\model\Category as CategoryModel;
 use app\store\service\Goods as GoodsService;
+use app\store\model\TeaQrcode as TeaQrcodeModel;
+use app\store\model\Tea;
 
 /**
  * 商品管理控制器
@@ -128,5 +130,23 @@ class Goods extends Controller
         }
         return $this->renderSuccess('删除成功');
     }
-
+    /**
+     * 添加冲泡二维码
+     * @param $goods_id
+     * @return array|bool|mixed
+     * @throws \Exception
+     */
+    public function bind_tea_qrcode($goods_id)
+    {
+        $model = new TeaQrcodeModel;
+        $goods = GoodsModel::detail($goods_id);
+        if (!$this->request->isAjax()) {
+            return $this->fetch('bind_tea_qrcode',compact('goods','teaList'));
+        }
+        // 新增记录
+        if ($model->bindTeaQrcode($this->postData('tea_qrcode'))) {
+            return $this->renderSuccess('添加成功', url('index'));
+        }
+        return $this->renderError($model->getError() ?: '添加失败');
+    }
 }

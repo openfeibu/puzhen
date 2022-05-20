@@ -69,6 +69,12 @@
                                     <td class="am-text-middle">
                                         <div class="tpl-table-black-operation">
                                             <?php if (checkPrivilege('factory/edit')): ?>
+                                                <a href="<?= url('factory/enter', ['factory_id' => $item['factory_id']]) ?>"
+                                                   class="j-move" data-id="<?= $item['factory_id'] ?>" target="_blank">
+                                                    <i class="am-icon-arrow-right"></i> 进入工厂
+                                                </a>
+                                            <?php endif; ?>
+                                            <?php if (checkPrivilege('factory/edit')): ?>
                                                 <a href="<?= url('factory/edit', ['factory_id' => $item['factory_id']]) ?>">
                                                     <i class="am-icon-pencil"></i> 编辑
                                                 </a>

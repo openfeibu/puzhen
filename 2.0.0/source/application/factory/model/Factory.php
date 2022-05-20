@@ -8,7 +8,7 @@ use app\common\model\Factory as FactoryModel;
 /**
  * 商城模型
  * Class Store
- * @package app\store\model
+ * @package app\factory\model
  */
 class Factory extends FactoryModel
 {

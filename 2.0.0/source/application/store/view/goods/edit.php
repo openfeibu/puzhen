@@ -99,6 +99,7 @@
                             <div class="widget-head am-cf">
                                 <div class="widget-title am-fl">规格/库存</div>
                             </div>
+                            <!--
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">商品规格 </label>
                                 <div class="am-u-sm-9 am-u-end">
@@ -119,7 +120,7 @@
                                     <?php endif; ?>
                                 </div>
                             </div>
-
+                            -->
                             <!-- 商品多规格 -->
                             <div id="many-app" v-cloak class="goods-spec-many am-form-group"
                                  v-bind:style="{display: '<?= $model['spec_type'] == 20 ? 'block' : 'none' ?>'}">

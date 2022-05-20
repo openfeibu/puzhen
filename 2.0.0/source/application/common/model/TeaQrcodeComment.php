@@ -53,8 +53,6 @@ class TeaQrcodeComment extends BaseModel
         return $this->belongsTo('User');
     }
 
-
-
     /**
      * 获取评价列表
      * @return \think\Paginator
@@ -73,13 +71,13 @@ class TeaQrcodeComment extends BaseModel
     }
     /**
      * 评价详情
-     * @param $comment_id
+     * @param $where
      * @return TeaQrcodeComment|null
      * @throws \think\exception\DbException
      */
-    public static function detail($comment_id)
+    public static function detail($where)
     {
-        return self::get($comment_id, ['user','tea_qrcode','comment_tea_qrcode']);
+        return self::get($where, ['user','tea_qrcode','comment_tea_qrcode']);
     }
     /**
      * 更新记录

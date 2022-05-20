@@ -2,7 +2,6 @@
 
 namespace app\common\traits\model\admin;
 
-
 /**
  * 用户权限模型
  * Trait Access
@@ -20,7 +19,7 @@ trait Access
      */
     public function getJsTree($role_id = null)
     {
-        $accessIds = is_null($role_id) ? [] : RoleAccess::getAccessIds($role_id);
+        $accessIds = is_null($role_id) ? [] : self::getAccessIds($role_id);
         $jsTree = [];
         foreach ($this->getAll(['status' => 1]) as $item) {
             $jsTree[] = [

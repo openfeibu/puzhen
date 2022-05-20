@@ -3,6 +3,7 @@
 namespace app\store\controller;
 
 use app\store\model\Factory as FactoryModel;
+use app\store\model\factory\User as FactoryUserModel;
 
 /**
  * 工厂管理
@@ -76,5 +77,16 @@ class Factory extends Controller
         }
         return $this->renderSuccess('删除成功');
     }
-
+    /**
+     * 进入工厂
+     * @param $factory_id
+     * @throws \think\Exception
+     * @throws \think\exception\DbException
+     */
+    public function enter($factory_id)
+    {
+        $model = new FactoryUserModel;
+        $model->login($factory_id);
+        $this->redirect('factory/index/index');
+    }
 }

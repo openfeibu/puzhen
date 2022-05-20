@@ -13,6 +13,7 @@ use app\common\traits\model\admin\Role as RoleTrait;
 class Role extends RoleModel
 {
     use RoleTrait;
+
     /**
      * 新增记录
      * @param $data
@@ -22,6 +23,7 @@ class Role extends RoleModel
     public function add($data)
     {
         $data['wxapp_id'] = self::$wxapp_id;
+        $data['factory_id'] = self::$factory_id;
         if (empty($data['access'])) {
             $this->error = '请选择权限';
             return false;

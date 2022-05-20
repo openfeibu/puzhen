@@ -14,6 +14,11 @@ class Tea extends BaseModel
     protected $name = 'tea';
     protected $updateTime = false;
 
+    public static function init()
+    {
+        parent::init();
+        parent::$is_factory = 0;
+    }
     public static function getTeaName($tea)
     {
         return self::where('code',$tea)->value('name','未知');

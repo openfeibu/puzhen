@@ -49,7 +49,7 @@ class TeaQrcodeComment extends Controller
     public function delete($comment_id)
     {
         $user = $this->getUser();
-        $model = TeaQrcodeCommentModel::detail($user['user_id'], $comment_id);
+        $model = TeaQrcodeCommentModel::detail(['user_id' => $user['user_id'], 'comment_id' => $comment_id]);
         if ($model->remove()) {
             return $this->renderSuccess([], '删除成功');
         }

@@ -16,4 +16,5 @@ class RoleAccess extends BaseModel
     protected $name = 'store_role_access';
     protected $updateTime = false;
 
+
 }

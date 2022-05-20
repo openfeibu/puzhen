@@ -25,6 +25,15 @@ class User extends BaseModel
     }
 
     /**
+     * 关联微信小程序表
+     * @return \think\model\relation\BelongsTo
+     */
+    public function wxapp()
+    {
+        $module = self::getCalledModule() ?: 'common';
+        return $this->belongsTo("app\\{$module}\\model\\Wxapp");
+    }
+    /**
      * 关联用户角色表表
      * @return \think\model\relation\BelongsToMany
      */
@@ -68,6 +77,7 @@ class User extends BaseModel
     {
         /** @var \app\common\model\Factory $factory */
         $factory = $user['factory'];
+        $wxapp = $user['wxapp'];
         // 保存登录状态
         Session::set('fbshop_factory', [
             'user' => [
@@ -75,6 +85,7 @@ class User extends BaseModel
                 'user_name' => $user['user_name'],
             ],
             'factory' => $factory->toArray(),
+            'wxapp' => $wxapp->toArray(),
             'is_login' => true,
         ]);
     }

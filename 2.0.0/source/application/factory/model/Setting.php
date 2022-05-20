@@ -9,7 +9,7 @@ use app\common\enum\Setting as SettingEnum;
 /**
  * 系统设置模型
  * Class Setting
- * @package app\store\model
+ * @package app\factory\model
  */
 class Setting extends SettingModel
 {

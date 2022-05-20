@@ -11,6 +11,7 @@ use app\common\model\GoodsSku as GoodsSkuModel;
  */
 class GoodsSku extends GoodsSkuModel
 {
+    public static $factory_id;
     /**
      * 批量添加商品sku记录
      * @param $goods_id
@@ -26,6 +27,7 @@ class GoodsSku extends GoodsSkuModel
                 'spec_sku_id' => $item['spec_sku_id'],
                 'goods_id' => $goods_id,
                 'wxapp_id' => self::$wxapp_id,
+                'factory_id' => self::$factory_id
             ]);
         }
         return $this->allowField(true)->saveAll($data);
@@ -48,6 +50,7 @@ class GoodsSku extends GoodsSkuModel
                     'spec_id' => $val['group_id'],
                     'spec_value_id' => $item['item_id'],
                     'wxapp_id' => self::$wxapp_id,
+                    'factory_id' => self::$factory_id,
                 ];
             }, $val['spec_items']);
         }, $spec_attr);

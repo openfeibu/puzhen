@@ -13,5 +13,13 @@ use app\common\traits\model\admin\Access as AccessTrait;
 class Access extends AccessModel
 {
     use AccessTrait;
-
+    /**
+     * 获取指定角色的所有权限id
+     * @param int|array $role_id 角色id (支持数组)
+     * @return array
+     */
+    public static function getAccessIds($role_id)
+    {
+        return RoleAccess::getAccessIds($role_id);
+    }
 }

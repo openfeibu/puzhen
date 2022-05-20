@@ -2,7 +2,7 @@
 
 namespace app\factory\controller;
 
-use app\store\model\factory\User as FactoryUser;
+use app\factory\model\factory\User as FactoryUser;
 use think\Session;
 
 /**

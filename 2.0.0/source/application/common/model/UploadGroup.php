@@ -11,6 +11,11 @@ class UploadGroup extends BaseModel
 {
     protected $name = 'upload_group';
 
+    public static function init()
+    {
+        parent::init();
+        parent::$is_factory = 0;
+    }
     /**
      * 分组详情
      * @param $group_id
