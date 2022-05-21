@@ -206,7 +206,7 @@ class Goods extends BaseModel
         // 整理商品列表数据
         foreach ($dataSource as &$goods) {
             // 商品主图
-            $goods['goods_image'] = $goods['image'][0]['file_path'];
+            $goods['goods_image'] = $goods['image'][0]['file_path'] ?? '';
             // 商品默认规格
             $goods['goods_sku'] = $goods['sku'][0];
             // 回调函数
