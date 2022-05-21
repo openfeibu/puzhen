@@ -13,7 +13,7 @@
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 工厂 </label>
                                 <div class="am-u-sm-9 am-u-end">
-                                    <select name="goods[factory_id]" require
+                                    <select name="goods[factory_id]" required
                                             data-am-selected="{searchBox: 1, btnSize: 'sm', placeholder:'请选择', maxHeight: 400}"
                                     >
                                         <option value=""></option>
@@ -85,6 +85,7 @@
                             <div class="widget-head am-cf">
                                 <div class="widget-title am-fl">规格/库存</div>
                             </div>
+                            <!--
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">商品规格 </label>
                                 <div class="am-u-sm-9 am-u-end">
@@ -98,7 +99,7 @@
                                     </label>
                                 </div>
                             </div>
-
+                            -->
                             <!-- 商品多规格 -->
                             <div id="many-app" v-cloak class="goods-spec-many am-form-group">
                                 <div class="goods-spec-box am-u-sm-9 am-u-sm-push-2 am-u-end">

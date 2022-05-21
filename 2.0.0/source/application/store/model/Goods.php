@@ -21,10 +21,12 @@ class Goods extends GoodsModel
     public function add(array $data)
     {
         self::$factory_id = self::$factory_id ?? $data['factory_id'];
+        /*
         if (!isset($data['images']) || empty($data['images'])) {
             $this->error = '请上传商品图片';
             return false;
         }
+        */
         $data['content'] = isset($data['content']) ? $data['content'] : '';
         $data['spec_type'] = isset($data['spec_type']) ? $data['spec_type'] : '10';
         $data['wxapp_id'] = $data['sku']['wxapp_id'] = self::$wxapp_id;
@@ -36,8 +38,10 @@ class Goods extends GoodsModel
             $this->allowField(true)->save($data);
             // 商品规格
             $this->addGoodsSpec($data);
-            // 商品图片
-            $this->addGoodsImages($data['images']);
+            if (isset($data['images']) && !empty($data['images'])) {
+                // 商品图片
+                $this->addGoodsImages($data['images']);
+            }
             $this->commit();
             return true;
         } catch (\Exception $e) {

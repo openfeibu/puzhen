@@ -13,7 +13,7 @@
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 工厂 </label>
                                 <div class="am-u-sm-9 am-u-end">
-                                    <select name="goods[factory_id]" require
+                                    <select name="goods[factory_id]" required
                                             data-am-selected="{searchBox: 1, btnSize: 'sm', placeholder:'请选择', maxHeight: 400}"
                                     >
                                         <option value=""></option>

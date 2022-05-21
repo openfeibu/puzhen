@@ -8,6 +8,7 @@ use app\store\model\Category as CategoryModel;
 use app\store\service\Goods as GoodsService;
 use app\store\model\TeaQrcode as TeaQrcodeModel;
 use app\store\model\Tea;
+use app\store\service\goods\Import as GoodsImport;
 
 /**
  * 商品管理控制器
@@ -131,7 +132,7 @@ class Goods extends Controller
         return $this->renderSuccess('删除成功');
     }
     /**
-     * 添加冲泡二维码
+     * 绑定冲泡二维码
      * @param $goods_id
      * @return array|bool|mixed
      * @throws \Exception
@@ -148,5 +149,23 @@ class Goods extends Controller
             return $this->renderSuccess('添加成功', url('index'));
         }
         return $this->renderError($model->getError() ?: '添加失败');
+    }
+
+    /**
+     * 导入商品
+     */
+    public function import()
+    {
+        $import = new GoodsImport;
+        if ($this->request->isGet()) {
+            $factoryList = FactoryModel::getAllList();
+            return $this->fetch('import',
+                array_merge(GoodsService::getEditData(null, 'add'), compact('factoryList'))
+            );
+        }
+        if ($import->goodsList()) {
+            return $this->renderSuccess('添加成功', url('index'));
+        }
+        return $this->renderError($import->getError() ?: '添加失败');
     }
 }

@@ -19,6 +19,12 @@
                                                 <span class="am-icon-plus"></span> 新增
                                             </a>
                                         </div>
+                                        <div class="am-btn-group am-btn-group-xs">
+                                            <a class="am-btn am-btn-default am-btn-success"
+                                               href="<?= url('goods/import') ?>">
+                                                <span class="am-icon-plus"></span> 导入
+                                            </a>
+                                        </div>
                                     <?php endif; ?>
                                 </div>
                             </div>
