@@ -7,10 +7,7 @@
                 </div>
                 <div class="widget-body am-fr">
                     <!-- 工具栏 -->
-                    <div class="page_toolbar am-margin-bottom-xs am-cf">
-                        <form class="toolbar-form" action="">
-                            <input type="hidden" name="s" value="/<?= $request->pathinfo() ?>">
-                            <div class="am-u-sm-12 am-u-md-3">
+					  <div class="am-u-sm-12 am-u-md-12">
                                 <div class="am-form-group">
                                     <?php if (checkPrivilege('goods/add')): ?>
                                         <div class="am-btn-group am-btn-group-xs">
@@ -27,8 +24,12 @@
                                         </div>
                                     <?php endif; ?>
                                 </div>
-                            </div>
-                            <div class="am-u-sm-12 am-u-md-9">
+						</div>
+                    <div class="page_toolbar am-margin-bottom-xs am-cf">
+                        <form class="toolbar-form" action="">
+                            <input type="hidden" name="s" value="/<?= $request->pathinfo() ?>">
+                          
+                            <div class="am-u-sm-12 am-u-md-12">
                                 <div class="am fr">
                                     <div class="am-form-group am-fl">
                                         <select name="factory_id"
