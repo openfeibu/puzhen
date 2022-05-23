@@ -8,8 +8,7 @@
                 <div class="widget-body am-fr">
                     <div class="tips am-margin-bottom-sm am-u-sm-12">
                         <div class="pre">
-                            <p> 注：商品分类最多添加2级，分类图片可参考
-                                <a href="<?= url('wxapp.page/category') ?>" target="_blank">分类页模板</a> 上传</p>
+                            <p> 注：商品分类最多添加2级</p>
                         </div>
                     </div>
                     <div class="am-u-sm-12 am-u-md-6 am-u-lg-6">
