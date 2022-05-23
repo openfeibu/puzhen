@@ -26,6 +26,7 @@
                                            value="<?= $model['app_secret'] ?>" required>
                                 </div>
                             </div>
+                            <!--
                             <div class="widget-head am-cf">
                                 <div class="widget-title am-fl">微信支付设置</div>
                             </div>
@@ -73,6 +74,7 @@
                                     </button>
                                 </div>
                             </div>
+                            -->
                         </fieldset>
                     </div>
                 </form>

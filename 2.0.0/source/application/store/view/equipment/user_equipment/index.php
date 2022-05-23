@@ -89,8 +89,8 @@
                                     -->
                                     <td class="am-text-middle"><?= $item['equipment_sn'] ?></td>
                                     <?php if ($status == 20): ?>
-                                        <td class="am-text-middle"><?= $item['warranty_days_text'] ?></td>
                                         <td class="am-text-middle"><?= $item['change_days_text'] ?></td>
+                                        <td class="am-text-middle"><?= $item['warranty_days_text'] ?></td>
                                     <?php elseif ($status == 30): ?>
                                         <td class="am-text-middle"><?= $item['reject_reason'] ?></td>
                                     <?php endif; ?>

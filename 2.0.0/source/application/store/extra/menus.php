@@ -52,7 +52,8 @@ return [
                     'goods/index',
                     'goods/add',
                     'goods/edit',
-                    'goods/copy'
+                    'goods/copy',
+                    'goods/import'
                 ],
             ],
             [
@@ -127,6 +128,7 @@ return [
                 'name' => '用户列表',
                 'index' => 'user/index',
             ],
+            /*
             [
                 'name' => '会员等级',
                 'active' => true,
@@ -157,6 +159,7 @@ return [
                     ],
                 ]
             ],
+            */
         ]
     ],
     'equipment' => [
@@ -517,6 +520,7 @@ return [
                             'wxapp.banner/edit',
                         ]
                     ],
+                    /*
                     [
                         'name' => '页面设计',
                         'index' => 'wxapp.page/index',
@@ -534,8 +538,10 @@ return [
                         'name' => '页面链接',
                         'index' => 'wxapp.page/links'
                     ]
+                    */
                 ]
             ],
+            /*
             [
                 'name' => '订阅消息',
                 'index' => 'wxapp.submsg/index',
@@ -552,6 +558,7 @@ return [
                     'wxapp.help/edit'
                 ]
             ],
+            */
         ],
     ],
     /*
@@ -770,6 +777,7 @@ return [
                 'name' => '保修包换设置',
                 'index' => 'setting/warranty',
             ],
+            /*
             [
                 'name' => '交易设置',
                 'index' => 'setting/trade',
@@ -796,6 +804,7 @@ return [
                 'name' => '短信通知',
                 'index' => 'setting/sms'
             ],
+            */
             //    [
             //        'name' => '模板消息',
             //        'index' => 'setting/tplmsg',
@@ -805,6 +814,7 @@ return [
             //
             //        ],
             //    ],
+            /*
             [
                 'name' => '退货地址',
                 'index' => 'setting.address/index',
@@ -836,6 +846,7 @@ return [
                     ]
                 ]
             ],
+            */
             [
                 'name' => '其他',
                 'submenu' => [

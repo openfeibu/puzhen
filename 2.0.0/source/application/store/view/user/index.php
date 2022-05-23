@@ -13,18 +13,6 @@
                             <div class="am-u-sm-12 am-u-md-9 am-u-sm-push-3">
                                 <div class="am fr">
                                     <div class="am-form-group am-fl">
-                                        <?php $grade = $request->get('grade'); ?>
-                                        <select name="grade"
-                                                data-am-selected="{btnSize: 'sm', placeholder: '请选择会员等级'}">
-                                            <option value=""></option>
-                                            <?php foreach ($gradeList as $item): ?>
-                                                <option value="<?= $item['grade_id'] ?>"
-                                                    <?= $grade == $item['grade_id'] ? 'selected' : '' ?>><?= $item['name'] ?>
-                                                </option>
-                                            <?php endforeach; ?>
-                                        </select>
-                                    </div>
-                                    <div class="am-form-group am-fl">
                                         <?php $gender = $request->get('gender'); ?>
                                         <select name="gender"
                                                 data-am-selected="{btnSize: 'sm', placeholder: '请选择性别'}">
@@ -66,10 +54,6 @@
                                 <th>用户ID</th>
                                 <th>微信头像</th>
                                 <th>微信昵称</th>
-                                <th>用户余额</th>
-                                <th>可用积分</th>
-                                <th>会员等级</th>
-                                <th>实际消费金额</th>
                                 <th>性别</th>
                                 <th>国家</th>
                                 <th>省份</th>
@@ -88,12 +72,6 @@
                                         </a>
                                     </td>
                                     <td class="am-text-middle"><?= $item['nickName'] ?></td>
-                                    <td class="am-text-middle"><?= $item['balance'] ?></td>
-                                    <td class="am-text-middle"><?= $item['points'] ?></td>
-                                    <td class="am-text-middle">
-                                        <?= !empty($item['grade']) ? $item['grade']['name'] : '--' ?>
-                                    </td>
-                                    <td class="am-text-middle"><?= $item['expend_money'] ?></td>
                                     <td class="am-text-middle"><?= $item['gender'] ?></td>
                                     <td class="am-text-middle"><?= $item['country'] ?: '--' ?></td>
                                     <td class="am-text-middle"><?= $item['province'] ?: '--' ?></td>
@@ -101,27 +79,7 @@
                                     <td class="am-text-middle"><?= $item['create_time'] ?></td>
                                     <td class="am-text-middle">
                                         <div class="tpl-table-black-operation">
-                                            <?php if (checkPrivilege('user/recharge')): ?>
-                                                <a class="j-recharge tpl-table-black-operation-default"
-                                                   href="javascript:void(0);"
-                                                   title="用户充值"
-                                                   data-id="<?= $item['user_id'] ?>"
-                                                   data-balance="<?= $item['balance'] ?>"
-                                                   data-points="<?= $item['points'] ?>"
-                                                >
-                                                    <i class="iconfont icon-qiandai"></i>
-                                                    充值
-                                                </a>
-                                            <?php endif; ?>
-                                            <?php if (checkPrivilege('user/grade')): ?>
-                                                <a class="j-grade tpl-table-black-operation-default"
-                                                   href="javascript:void(0);"
-                                                   data-id="<?= $item['user_id'] ?>"
-                                                   title="修改会员等级">
-                                                    <i class="iconfont icon-grade-o"></i>
-                                                    会员等级
-                                                </a>
-                                            <?php endif; ?>
+
                                             <?php if (checkPrivilege('user/delete')): ?>
                                                 <a class="j-delete tpl-table-black-operation-default"
                                                    href="javascript:void(0);"
@@ -129,33 +87,6 @@
                                                     <i class="am-icon-trash"></i> 删除
                                                 </a>
                                             <?php endif; ?>
-                                            <div class="j-opSelect operation-select am-dropdown">
-                                                <button type="button"
-                                                        class="am-dropdown-toggle am-btn am-btn-sm am-btn-secondary">
-                                                    <span>更多</span>
-                                                    <span class="am-icon-caret-down"></span>
-                                                </button>
-                                                <ul class="am-dropdown-content" data-id="<?= $item['user_id'] ?>">
-                                                    <?php if (checkPrivilege('order/all_list')): ?>
-                                                        <li>
-                                                            <a class="am-dropdown-item" target="_blank"
-                                                               href="<?= url('order/all_list', ['user_id' => $item['user_id']]) ?>">用户订单</a>
-                                                        </li>
-                                                    <?php endif; ?>
-                                                    <?php if (checkPrivilege('user.recharge/order')): ?>
-                                                        <li>
-                                                            <a class="am-dropdown-item" target="_blank"
-                                                               href="<?= url('user.recharge/order', ['user_id' => $item['user_id']]) ?>">充值记录</a>
-                                                        </li>
-                                                    <?php endif; ?>
-                                                    <?php if (checkPrivilege('user.balance/log')): ?>
-                                                        <li>
-                                                            <a class="am-dropdown-item" target="_blank"
-                                                               href="<?= url('user.balance/log', ['user_id' => $item['user_id']]) ?>">余额明细</a>
-                                                        </li>
-                                                    <?php endif; ?>
-                                                </ul>
-                                            </div>
                                         </div>
                                     </td>
                                 </tr>

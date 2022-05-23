@@ -51,6 +51,7 @@ class Cache extends Controller
                 'key' => 'wxapp_' . $wxapp_id,
                 'name' => '小程序设置'
             ],
+            /*
             'dealer' => [
                 'type' => 'cache',
                 'key' => 'dealer_setting_' . $wxapp_id,
@@ -61,6 +62,7 @@ class Cache extends Controller
                 'key' => 'sharing_setting_' . $wxapp_id,
                 'name' => '拼团设置'
             ],
+            */
             'temp' => [
                 'type' => 'file',
                 'name' => '临时图片',
