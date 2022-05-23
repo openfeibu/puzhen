@@ -76,6 +76,14 @@
                         </fieldset>
                     </div>
                 </form>
+                <!-- 提示 -->
+                <div class="tips am-margin-top-lg am-margin-bottom-sm">
+                    <div class="pre">
+                        <p>1. 点击下载模板-><a href="<?= base_url().'uploads/import_template/goods.xlsx' ?>" target="_blank">"批量上传商品模板"</a>。</p>
+                        <p>2. 请勿修改第一行字段，并按照对应字段填写表格。</p>
+                        <p>3. 工厂名称、商品分类请严格按照系统数据填写。商品名称、参考零售价、商品重量(Kg)不能为空。</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

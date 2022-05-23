@@ -17,7 +17,7 @@ class Import
      * @var array
      */
     public $title_arr = [
-        'factory_name' => '工厂名称','category_name' => '商品分类','goods_name' => '商品名称','goods_no' => "商品编码",'ref_price' => "参考零售价",'weight' => '商品重量(Kg)'
+        'factory_name' => '工厂名称','category_name' => '商品分类','goods_name' => '商品名称','selling_point' => '商品卖点','goods_no' => "商品编码",'ref_price' => "参考零售价",'weight' => '商品重量(Kg)'
     ];
 
     public $column_key = [
@@ -107,7 +107,7 @@ class Import
                         }
                         $data[$j-2]['category_id'] = $category_list[$value];
                     }else{
-                        $data[$j-2][$key] = $value;
+                        $data[$j-2][$key] = $value ?? '';
                     }
                 }
             }

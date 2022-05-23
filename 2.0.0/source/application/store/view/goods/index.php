@@ -105,7 +105,7 @@
                                 <th>商品名称</th>
                                 <th>商品分类</th>
                                 <th>工厂</th>
-                                <th>实际销量</th>
+                                <!--<th>实际销量</th>-->
                                 <th>商品排序</th>
                                 <th>商品状态</th>
                                 <th>冲泡码</th>
@@ -129,7 +129,7 @@
                                     </td>
                                     <td class="am-text-middle"><?= $item['category']['name'] ?></td>
                                     <td class="am-text-middle"><?= $item['factory']['factory_name'] ?></td>
-                                    <td class="am-text-middle"><?= $item['sales_actual'] ?></td>
+                                    <!--<td class="am-text-middle"><?= $item['sales_actual'] ?></td>-->
                                     <td class="am-text-middle"><?= $item['goods_sort'] ?></td>
                                     <td class="am-text-middle">
                                            <span class="j-state am-badge x-cur-p
