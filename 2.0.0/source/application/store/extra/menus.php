@@ -536,11 +536,12 @@ return [
                         'name' => '分类模板',
                         'index' => 'wxapp.page/category'
                     ],
+                    */
                     [
                         'name' => '页面链接',
                         'index' => 'wxapp.page/links'
                     ]
-                    */
+
                 ]
             ],
             /*

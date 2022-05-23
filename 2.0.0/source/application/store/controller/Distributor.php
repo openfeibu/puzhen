@@ -81,7 +81,7 @@ class Distributor extends Controller
     {
         // 服务网点详情
         $model = DistributorModel::detail($distributor_id);
-        if (!$model->setDelete()) {
+        if (!$model->remove()) {
             return $this->renderError($model->getError() ?: '删除失败');
         }
         return $this->renderSuccess('删除成功');

@@ -88,6 +88,13 @@ class Distributor extends DistributorModel
         return $this->save(['is_delete' => 1]);
     }
 
+    public function remove()
+    {
+        $this->goods()->delete();
+        $this->delete();
+        return true;
+
+    }
     /**
      * 创建数据
      * @param array $data

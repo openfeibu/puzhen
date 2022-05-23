@@ -10,19 +10,7 @@
                     <div class="page_toolbar am-margin-bottom-xs am-cf">
                         <form class="toolbar-form" action="">
                             <input type="hidden" name="s" value="/<?= $request->pathinfo() ?>">
-                            <div class="am-u-sm-12 am-u-md-3">
-                                <div class="am-form-group">
-                                    <?php if (checkPrivilege('goods/add')): ?>
-                                        <div class="am-btn-group am-btn-group-xs">
-                                            <a class="am-btn am-btn-default am-btn-success"
-                                               href="<?= url('goods/add') ?>">
-                                                <span class="am-icon-plus"></span> 新增
-                                            </a>
-                                        </div>
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-                            <div class="am-u-sm-12 am-u-md-9">
+                            <div class="am-u-sm-12 am-u-md-12">
                                 <div class="am fr">
                                     <div class="am-form-group am-fl">
                                         <select name="distributor_id"
@@ -113,7 +101,7 @@
                                 <th>商品分类</th>
                                 <th>工厂</th>
                                 <th>服务网点</th>
-                                <th>商品状态</th>
+                                <!--<th>商品状态</th>-->
                                 <th>关联时间</th>
                                 <th>操作</th>
                             </tr>
@@ -135,6 +123,7 @@
                                     <td class="am-text-middle"><?= $item['goods']['category']['name'] ?></td>
                                     <td class="am-text-middle"><?= $item['goods']['factory']['factory_name'] ?></td>
                                     <td class="am-text-middle"><?= $item['distributor']['distributor_name'] ?></td>
+                                    <!--
                                     <td class="am-text-middle">
                                            <span class="j-state am-badge x-cur-p
                                            am-badge-<?= $item['goods']['goods_status']['value'] == 10 ? 'success' : 'warning' ?>"
@@ -143,15 +132,16 @@
                                                <?= $item['goods']['goods_status']['text'] ?>
                                            </span>
                                     </td>
+                                    -->
                                     <td class="am-text-middle"><?= $item['create_time'] ?></td>
                                     <td class="am-text-middle">
                                         <div class="tpl-table-black-operation">
-                                            <?php if (checkPrivilege('goods/edit')): ?>
+                                            <?php if (checkPrivilege('goods/index')): ?>
                                                 <a href="<?= url('goods/index&goods_id='.$item['goods']['goods_id']) ?>" target="_blank">
-                                                    <i class="am-icon-pencil"></i> 前往管理
+                                                    <i class="am-icon-pencil"></i> 管理商品
                                                 </a>
                                             <?php endif; ?>
-                                            <?php if (checkPrivilege('goods/delete')): ?>
+                                            <?php if (checkPrivilege('distributor.goods/delete')): ?>
                                                 <a href="javascript:;" class="item-delete tpl-table-black-operation-del"
                                                    data-id="<?= $item['id'] ?>">
                                                     <i class="am-icon-trash"></i> 取消关联

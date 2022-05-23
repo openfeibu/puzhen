@@ -72,7 +72,7 @@
                                                     <i class="am-icon-pencil"></i> 编辑
                                                 </a>
                                             <?php endif; ?>
-                                            <?php if (checkPrivilege('equipment/delete')): ?>
+                                            <?php if (checkPrivilege('equipment.equipment/delete')): ?>
                                                 <a href="javascript:void(0);"
                                                    class="item-delete tpl-table-black-operation-del"
                                                    data-id="<?= $item['equipment_id'] ?>">

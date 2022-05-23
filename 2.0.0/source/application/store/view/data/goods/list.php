@@ -100,8 +100,8 @@
                             'goods_id' => (string)$item['goods_id'],
                             'goods_name' => $item['goods_name'],
                             'selling_point' => $item['selling_point'],
-                            'image' => $item['image'][0]['file_path'],
-                            'goods_image' => $item['image'][0]['file_path'],
+                            'image' => $item['goods_image'],
+                            'goods_image' => $item['goods_image'],
                             'goods_price' => $item['sku'][0]['goods_price'],
                             'line_price' => $item['sku'][0]['line_price'],
                             'goods_sales' => $item['goods_sales'],
@@ -111,9 +111,9 @@
                 <td class="am-text-middle"><?= $item['goods_id'] ?></td>
                 <td class="am-text-middle"><?= $item['factory']['factory_name'] ?></td>
                 <td class="am-text-middle">
-                    <a href="<?= $item['image'][0]['file_path'] ?>"
+                    <a href="<?= $item['goods_image'] ?>"
                        title="点击查看大图" target="_blank">
-                        <img src="<?= $item['image'][0]['file_path'] ?>"
+                        <img src="<?= $item['goods_image'] ?>"
                              width="50" height="50" alt="商品图片">
                     </a>
                 </td>

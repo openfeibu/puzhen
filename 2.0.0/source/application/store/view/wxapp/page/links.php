@@ -101,6 +101,7 @@
                                     </div>
                                 </div>
                             </li>
+                            <!--
                             <li class="link-item">
                                 <div class="row page-name">商品搜索页</div>
                                 <div class="row am-cf">
@@ -119,6 +120,7 @@
                                     </div>
                                 </div>
                             </li>
+                            -->
                             <li class="link-item">
                                 <div class="row page-name">个人中心页</div>
                                 <div class="row am-cf">
@@ -128,6 +130,7 @@
                                     </div>
                                 </div>
                             </li>
+                            <!--
                             <li class="link-item">
                                 <div class="row page-name">订单列表页</div>
                                 <div class="row am-cf">
@@ -428,6 +431,7 @@
                                     </div>
                                 </div>
                             </li>
+                            -->
                         </ul>
                     </div>
                 </div>

@@ -97,7 +97,7 @@ class Goods extends BaseModel
         foreach ($dataSource as $key => &$item) {
             //var_dump($item['goods']['sku'][0]);exit;
             // 商品图片
-            $item['goods_image'] = $item['goods']['image'][0]['file_path'];
+            $item['goods_image'] = $item['goods']['image'][0]['file_path'] ?? '';
             // 秒杀商品sku信息
             $item['goods_sku'] =  $item['goods']['sku'][0];
             // 回调函数
