@@ -83,7 +83,7 @@ class Import
             $categoryModel = new CategoryModel;
             $factoryModel = new FactoryModel;
             $category_list = $categoryModel->column('category_id','name');
-            $factory_list = $factoryModel->column('factory_id','factory_name');
+            $factory_list = $factoryModel->where('is_delete',0)->column('factory_id','factory_name');
 
             //循环读取excel表格，整合成数组。如果是不指定key的二维，就用$data[i][j]表示。
             for ($j = 2; $j <= $highestRow; $j++) {
