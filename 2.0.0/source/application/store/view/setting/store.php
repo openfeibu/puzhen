@@ -20,6 +20,7 @@ use app\common\enum\DeliveryType as DeliveryTypeEnum;
                                            value="<?= $values['name'] ?>" required>
                                 </div>
                             </div>
+                            <!--
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-form-label form-require"> 配送方式 </label>
                                 <div class="am-u-sm-9">
@@ -61,6 +62,7 @@ use app\common\enum\DeliveryType as DeliveryTypeEnum;
                                     </button>
                                 </div>
                             </div>
+                            -->
                         </fieldset>
                     </div>
                 </form>
