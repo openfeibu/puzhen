@@ -12,6 +12,7 @@ use app\store\model\Factory as FactoryModel;
 use app\store\model\Distributor as DistributorModel;
 use app\store\model\Equipment as EquipmentModel;
 use app\store\model\UserEquipment as UserEquipmentModel;
+use app\store\model\TeaQrcode as TeaQrcodeModel;
 use app\common\enum\order\Status as OrderStatusEnum;
 use app\common\enum\order\PayStatus as PayStatusEnum;
 use app\common\enum\recharge\order\PayStatus as RechargePayStatusEnum;
@@ -36,15 +37,15 @@ class Survey extends BasicsService
             // 用户数量
             'user_total' => $this->getUserTotal($startDate, $endDate),
             // 消费人数
-            'consume_users' => $this->getConsumeUsers($startDate, $endDate),
+            //'consume_users' => $this->getConsumeUsers($startDate, $endDate),
             // 付款订单数
-            'order_total' => $this->getOrderTotal($startDate, $endDate),
+            //'order_total' => $this->getOrderTotal($startDate, $endDate),
             // 付款订单总额
-            'order_total_money' => $this->getOrderTotalMoney($startDate, $endDate),
+            //'order_total_money' => $this->getOrderTotalMoney($startDate, $endDate),
             // 商品总量
             'goods_total' => $this->getGoodsTotal($startDate, $endDate),
             // 用户充值总额
-            'recharge_total' => $this->getRechargeTotal($startDate, $endDate),
+            //'recharge_total' => $this->getRechargeTotal($startDate, $endDate),
             //厂家数量
             'factory_total' => $this->getFactoryTotal($startDate, $endDate),
             //服务网点数量
@@ -53,6 +54,7 @@ class Survey extends BasicsService
             'equipment_total' => $this->getEquipmentTotal($startDate, $endDate),
             //茶艺机延保数量
             'user_equipment_total' => $this->getUserEquipmentTotal($startDate, $endDate),
+            'user_tea_qrcode_total' => $this->getUserTeaQrcodeTotal($startDate, $endDate),
         ];
     }
 
@@ -223,4 +225,22 @@ class Survey extends BasicsService
         $value = $model->where('status', '=', '20')->count();
         return number_format($value);
     }
+    /**
+     * 获取茶艺机总量
+     * @param null $startDate
+     * @param null $endDate
+     * @return string
+     * @throws \think\Exception
+     */
+    private function getUserTeaQrcodeTotal($startDate = null, $endDate = null)
+    {
+        $model = new TeaQrcodeModel;
+        if (!is_null($startDate) && !is_null($endDate)) {
+            $model->where('create_time', '>=', strtotime($startDate))
+                ->where('create_time', '<', strtotime($endDate) + 86400);
+        }
+        $value = $model->where('user_id','<>','0')->count();
+        return number_format($value);
+    }
+
 }

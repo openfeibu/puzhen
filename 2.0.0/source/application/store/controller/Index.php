@@ -11,6 +11,9 @@ use app\store\service\statistics\Data as StatisticsDataService;
  */
 class Index extends Controller
 {
+    /* @var $statisticsDataService StatisticsDataService 数据概况服务类 */
+    private $statisticsDataService;
+
     public function _initialize()
     {
         parent::_initialize();

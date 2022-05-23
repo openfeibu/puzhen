@@ -492,11 +492,13 @@ return [
         ],
     ],
     */
+    /*
     'statistics' => [
         'name' => '数据统计',
         'icon' => 'icon-qushitu',
         'index' => 'statistics.data/index',
     ],
+    */
     'wxapp' => [
         'name' => '小程序',
         'icon' => 'icon-wxapp',

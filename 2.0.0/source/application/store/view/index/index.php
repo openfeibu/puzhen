@@ -88,8 +88,8 @@
                                     <img src="assets/store/img/statistics/survey/03.png" alt="">
                                 </div>
                                 <div class="outline-right dis-flex flex-dir-column flex-x-center">
-                                    <div class="item-name">茶艺机数量</div>
-                                    <div class="item-value">{{ survey.values.equipment_total }}</div>
+                                    <div class="item-name">用户冲泡码数量</div>
+                                    <div class="item-value">{{ survey.values.user_tea_qrcode_total }}</div>
                                 </div>
                             </div>
                         </div>
