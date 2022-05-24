@@ -21,7 +21,7 @@
                                             </a>
                                         </div>
                                     <?php endif; ?>
-
+                                    <?php if ($status == 20): ?>
                                     <?php if (checkPrivilege('equipment.user_equipment/export')): ?>
                                         <div class="am-btn-group am-btn-group-xs">
                                             <a class="j-export am-btn  am-btn-default am-btn-success am-radius"
@@ -29,6 +29,7 @@
                                                 <span class="iconfont icon-daochu am-margin-right-xs"></span>导出
                                             </a>
                                         </div>
+                                    <?php endif; ?>
                                     <?php endif; ?>
                                 </div>
                             </div>
