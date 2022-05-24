@@ -11,13 +11,13 @@
                                 <div class="am-form-group">
                                     <?php if (checkPrivilege('goods/add')): ?>
                                         <div class="am-btn-group am-btn-group-xs">
-                                            <a class="am-btn am-btn-default am-btn-secondary"
+                                            <a class="am-btn am-btn-default am-btn-success"
                                                href="<?= url('goods/add') ?>">
                                                 <span class="am-icon-plus"></span> 新增产品
                                             </a>
                                         </div>
                                         <div class="am-btn-group am-btn-group-xs">
-                                            <a class="am-btn am-btn-default am-btn-secondary"
+                                            <a class="am-btn am-btn-default am-btn-success"
                                                href="<?= url('goods/import') ?>">
                                                 <span class="am-icon-plus"></span> 批量导入
                                             </a>
