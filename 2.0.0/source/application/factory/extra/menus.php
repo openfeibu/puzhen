@@ -55,6 +55,13 @@ return [
                     'goods/copy'
                 ],
             ],
+            [
+                'name' => '产品分类',
+                'index' => 'goods.category/index',
+                'uris' => [
+                    'goods.category/index',
+                ],
+            ],
         ],
     ],
     'tea_qrcode' => [
