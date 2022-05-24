@@ -20,7 +20,7 @@ class Factory extends Basics
     ];
 
     /**
-     * 根据订单来源获取商品库存类
+     * 根据订单来源获取产品库存类
      * @param $user
      * @param $goodsList
      * @param int $orderSource

@@ -45,7 +45,7 @@ class Task extends TaskModel
             ->paginate(5, false, [
                 'query' => \request()->request()
             ]);
-        // 设置商品数据
+        // 设置产品数据
         $list = GoodsService::setGoodsData($list);
         return $list;
     }
@@ -67,9 +67,9 @@ class Task extends TaskModel
         }
         // 砍价活动详情
         $active = ActiveModel::detail($task['active_id']);
-        // 砍价商品详情
+        // 砍价产品详情
         $goods = GoodsModel::detail($task['goods_id']);
-        // 商品sku信息
+        // 产品sku信息
         $goods['goods_sku'] = GoodsModel::getGoodsSku($goods, $task['spec_sku_id']);
         // 好友助力榜
         $help_list = TaskHelpModel::getListByTaskId($taskId);
@@ -81,7 +81,7 @@ class Task extends TaskModel
     }
 
     /**
-     * 获取砍价任务的商品列表（用于订单结算）
+     * 获取砍价任务的产品列表（用于订单结算）
      * @param $taskId
      * @return array|bool
      * @throws \think\Exception
@@ -96,22 +96,22 @@ class Task extends TaskModel
             return false;
         }
         if ($task['is_buy'] == true) {
-            $this->error = '该砍价商品已购买';
+            $this->error = '该砍价产品已购买';
             return false;
         }
-        // 砍价商品详情
+        // 砍价产品详情
         $goods = GoodsModel::detail($task['goods_id']);
-        // 商品sku信息
+        // 产品sku信息
         $goods['goods_sku'] = GoodsModel::getGoodsSku($goods, $task['spec_sku_id']);
-        // 商品列表
+        // 产品列表
         $goodsList = [$goods->hidden(['category', 'content', 'image', 'sku'])];
         foreach ($goodsList as &$item) {
-            // 商品单价
+            // 产品单价
             $item['goods_price'] = $task['actual_price'];
-            // 商品购买数量
+            // 产品购买数量
             $item['total_num'] = 1;
             $item['spec_sku_id'] = $item['goods_sku']['spec_sku_id'];
-            // 商品购买总金额
+            // 产品购买总金额
             $item['total_price'] = $task['actual_price'];
         }
         return $goodsList;
@@ -162,9 +162,9 @@ class Task extends TaskModel
         if (!$this->onVerify($active, $userId)) {
             return false;
         }
-        // 获取商品详情
+        // 获取产品详情
         $goods = GoodsModel::detail($active['goods_id']);
-        // 商品sku信息
+        // 产品sku信息
         $goods['goods_sku'] = GoodsModel::getGoodsSku($goods, $goodsSkuId);
         // 事务处理
         return $this->transaction(function () use ($userId, $active, $goodsSkuId, $goods) {

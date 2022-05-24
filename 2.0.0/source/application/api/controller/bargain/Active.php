@@ -49,7 +49,7 @@ class Active extends Controller
         // 标记当前用户是否正在参与
         $task_id = $model->getWhetherPartake($active_id, $this->getUser(false));
         $is_partake = $task_id > 0;
-        // 获取商品详情
+        // 获取产品详情
         $goods = GoodsModel::detail($active['goods_id']);
         // 砍价规则
         $setting = SettingModel::getBasic();
@@ -57,7 +57,7 @@ class Active extends Controller
     }
 
     /**
-     * 生成商品海报
+     * 生成产品海报
      * @param $active_id
      * @return array
      * @throws \app\common\exception\BaseException
@@ -72,9 +72,9 @@ class Active extends Controller
         if ($active === false) {
             return $this->renderError($model->getError());
         }
-        // 获取商品详情
+        // 获取产品详情
         $goods = GoodsModel::detail($active['goods_id']);
-        // 生成商品海报图
+        // 生成产品海报图
         $Qrcode = new GoodsPoster($active, $goods, $this->getUser(false));
         return $this->renderSuccess([
             'qrcode' => $Qrcode->getImage(),

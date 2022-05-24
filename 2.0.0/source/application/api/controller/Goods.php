@@ -7,14 +7,14 @@ use app\api\model\Cart as CartModel;
 use app\common\service\qrcode\Goods as GoodsPoster;
 
 /**
- * 商品控制器
+ * 产品控制器
  * Class Goods
  * @package app\api\controller
  */
 class Goods extends Controller
 {
     /**
-     * 商品列表
+     * 产品列表
      * @return array
      * @throws \app\common\exception\BaseException
      * @throws \think\exception\DbException
@@ -32,7 +32,7 @@ class Goods extends Controller
     }
 
     /**
-     * 获取商品详情
+     * 获取产品详情
      * @param $goods_id
      * @return array
      * @throws \app\common\exception\BaseException
@@ -42,22 +42,22 @@ class Goods extends Controller
     {
         // 用户信息
         $user = $this->getUser(false);
-        // 商品详情
+        // 产品详情
         $model = new GoodsModel;
         $goods = $model->getDetails($goods_id, $this->getUser(false));
         if ($goods === false) {
-            return $this->renderError($model->getError() ?: '商品信息不存在');
+            return $this->renderError($model->getError() ?: '产品信息不存在');
         }
         return $this->renderSuccess([
-            // 商品详情
+            // 产品详情
             'detail' => $goods,
-            // 购物车商品总数量
+            // 购物车产品总数量
             'cart_total_num' => $user ? (new CartModel($user))->getTotalNum() : 0,
         ]);
     }
 
     /**
-     * 生成商品海报
+     * 生成产品海报
      * @param $goods_id
      * @return array
      * @throws \app\common\exception\BaseException
@@ -66,7 +66,7 @@ class Goods extends Controller
      */
     public function poster($goods_id)
     {
-        // 商品详情
+        // 产品详情
         $detail = GoodsModel::detail($goods_id);
         $Qrcode = new GoodsPoster($detail, $this->getUser(false));
         return $this->renderSuccess([

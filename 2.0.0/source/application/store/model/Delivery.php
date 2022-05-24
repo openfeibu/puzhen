@@ -136,7 +136,7 @@ class Delivery extends DeliveryModel
      */
     public function remove()
     {
-        // 验证运费模板是否被商品使用
+        // 验证运费模板是否被产品使用
         if (!$this->checkIsUseGoods($this['delivery_id'])) {
             return false;
         }
@@ -146,19 +146,19 @@ class Delivery extends DeliveryModel
     }
 
     /**
-     * 验证运费模板是否被商品使用
+     * 验证运费模板是否被产品使用
      * @param int $deliveryId
      * @return bool
      * @throws \think\Exception
      */
     private function checkIsUseGoods($deliveryId)
     {
-        // 判断是否存在商品
+        // 判断是否存在产品
         $goodsCount = (new GoodsModel)->where('delivery_id', '=', $deliveryId)
             ->where('is_delete', '=', 0)
             ->count();
         if ($goodsCount > 0) {
-            $this->error = '该模板被' . $goodsCount . '个商品使用，不允许删除';
+            $this->error = '该模板被' . $goodsCount . '个产品使用，不允许删除';
             return false;
         }
         return true;

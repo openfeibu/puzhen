@@ -40,7 +40,7 @@ class Auth
         'upload/image',
         // 数据选择
         'data/*',
-        // 添加商品规格
+        // 添加产品规格
         'goods.spec/*',
         // 订单批量发货模板
         'order.operate/deliverytpl',

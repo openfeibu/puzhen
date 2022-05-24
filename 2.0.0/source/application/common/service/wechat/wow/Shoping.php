@@ -9,7 +9,7 @@ use app\common\library\wechat\wow\Shoping as WowShoping;
 use app\common\library\helper;
 
 /**
- * 好物圈-商品收藏 服务类
+ * 好物圈-产品收藏 服务类
  * Class Shoping
  * @package app\common\service\wechat\wow
  */
@@ -37,9 +37,9 @@ class Shoping
     }
 
     /**
-     * 添加好物圈商品收藏
+     * 添加好物圈产品收藏
      * @param \think\Collection $user 用户信息
-     * @param array $goodsList 商品列表
+     * @param array $goodsList 产品列表
      * @return bool
      * @throws \app\common\exception\BaseException
      * @throws \think\exception\DbException
@@ -52,7 +52,7 @@ class Shoping
         if ($setting['is_shopping'] == false) {
             return false;
         }
-        // 整理商品列表
+        // 整理产品列表
         $productList = $this->getProductListToAdd($goodsList);
         // 执行api请求
         $status = $this->ApiDriver->addList($user['open_id'], $productList);
@@ -60,14 +60,14 @@ class Shoping
             $this->error = $this->ApiDriver->getError();
             return $status;
         }
-        // 写入商品收藏记录
+        // 写入产品收藏记录
         $goodsIds = helper::getArrayColumn($goodsList, 'goods_id');
         $this->model()->add($user['user_id'], $goodsIds);
         return $status;
     }
 
     /**
-     * 删除好物圈商品收藏
+     * 删除好物圈产品收藏
      * @param $id
      * @return bool
      * @throws \app\common\exception\BaseException
@@ -85,7 +85,7 @@ class Shoping
         if ($status == false) {
             $this->error = $this->ApiDriver->getError();
         }
-        // 删除商品收藏记录
+        // 删除产品收藏记录
         $model->setDelete();
         return true;
     }
@@ -127,7 +127,7 @@ class Shoping
     }
 
     /**
-     * 整理商品列表 (用于添加收藏接口)
+     * 整理产品列表 (用于添加收藏接口)
      * @param $goodsList
      * @return array
      */
@@ -136,7 +136,7 @@ class Shoping
         // 整理api参数
         $productList = [];
         foreach ($goodsList as $goods) {
-            $imageList = [];    // 商品图片
+            $imageList = [];    // 产品图片
             foreach ($goods['image'] as $image) {
                 $imageList[] = $image['file_path'];
             }
@@ -147,8 +147,8 @@ class Shoping
                 'title' => $goods['goods_name'],
                 'category_list' => [$goods['category']['name']],
                 'image_list' => $imageList,
-                'src_wxapp_path' => "/pages/goods/index?goods_id={$goods['goods_id']}", // 商品页面路径
-                'sku_info' => [     // 商品sku
+                'src_wxapp_path' => "/pages/goods/index?goods_id={$goods['goods_id']}", // 产品页面路径
+                'sku_info' => [     // 产品sku
 //                    'sku_id' => "{$goods['goods_id']}_{$skuInfo['spec_sku_id']}",
                     'sku_id' => $goods['goods_id'],
                     'price' => $skuInfo['goods_price'] * 100,

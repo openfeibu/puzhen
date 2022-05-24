@@ -56,7 +56,7 @@ class Active extends Controller
         // 砍价活动详情
         $model = ActiveModel::detail($active_id);
         if (!$this->request->isAjax()) {
-            // 获取商品详情
+            // 获取产品详情
             $goods = GoodsModel::detail($model['goods_id']);
             return $this->fetch('edit', compact('model', 'goods'));
         }

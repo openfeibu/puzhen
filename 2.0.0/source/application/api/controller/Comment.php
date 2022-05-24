@@ -5,14 +5,14 @@ namespace app\api\controller;
 use app\api\model\Comment as CommentModel;
 
 /**
- * 商品评价控制器
+ * 产品评价控制器
  * Class Comment
  * @package app\api\controller
  */
 class Comment extends Controller
 {
     /**
-     * 商品评价列表
+     * 产品评价列表
      * @param $goods_id
      * @param int $scoreType
      * @return array

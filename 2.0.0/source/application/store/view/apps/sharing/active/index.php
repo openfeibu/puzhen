@@ -13,8 +13,8 @@
                                 <thead>
                                 <tr>
                                     <th>拼单ID</th>
-                                    <th>商品图片</th>
-                                    <th>商品名称</th>
+                                    <th>产品图片</th>
+                                    <th>产品名称</th>
                                     <th>成团人数</th>
                                     <th>已拼人员</th>
                                     <th>发起人（团长）</th>
@@ -32,7 +32,7 @@
                                             <a href="<?= $item['goods']['image'][0]['file_path'] ?>"
                                                title="点击查看大图" target="_blank">
                                                 <img src="<?= $item['goods']['image'][0]['file_path'] ?>"
-                                                     width="50" height="50" alt="商品图片">
+                                                     width="50" height="50" alt="产品图片">
                                             </a>
                                         </td>
                                         <td class="am-text-middle">

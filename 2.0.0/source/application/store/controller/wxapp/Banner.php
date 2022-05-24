@@ -5,7 +5,7 @@ namespace app\store\controller\wxapp;
 use app\store\controller\Controller;
 use app\store\model\Banner as BannerModel;
 /**
- * 商品管理控制器
+ * 产品管理控制器
  * Class Goods
  * @package app\store\controller
  */
@@ -13,10 +13,10 @@ class Banner extends Controller
 {
     public function index()
     {
-        // 获取全部商品列表
+        // 获取全部产品列表
         $model = new BannerModel;
         $list = $model->getList($this->request->param());
-        // 商品分类
+        // 产品分类
         return $this->fetch('index', compact('list'));
     }
     public function add()

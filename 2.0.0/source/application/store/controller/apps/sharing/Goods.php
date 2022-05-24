@@ -9,36 +9,36 @@ use app\store\model\sharing\Goods as GoodsModel;
 use app\store\model\sharing\Category as CategoryModel;
 
 /**
- * 拼团商品管理控制器
+ * 拼团产品管理控制器
  * Class Goods
  * @package app\store\controller\apps\sharing
  */
 class Goods extends Controller
 {
     /**
-     * 商品列表(出售中)
+     * 产品列表(出售中)
      * @return mixed
      * @throws \think\exception\DbException
      */
     public function index()
     {
-        // 获取全部商品列表
+        // 获取全部产品列表
         $model = new GoodsModel;
         $list = $model->getList(array_merge(['status' => -1], $this->request->param()));
-        // 商品分类
+        // 产品分类
         $catgory = CategoryModel::getCacheTree();
         return $this->fetch('index', compact('list', 'catgory'));
     }
 
     /**
-     * 添加商品
+     * 添加产品
      * @return array|mixed
      * @throws \think\exception\PDOException
      */
     public function add()
     {
         if (!$this->request->isAjax()) {
-            // 商品分类
+            // 产品分类
             $catgory = CategoryModel::getCacheTree();
             // 配送模板
             $delivery = DeliveryModel::getAll();
@@ -54,24 +54,24 @@ class Goods extends Controller
     }
 
     /**
-     * 复制主商城商品
+     * 复制主商城产品
      * @param $goods_id
      * @return array|mixed
      * @throws \think\exception\PDOException
      */
     public function copy_master($goods_id)
     {
-        // 商品详情
+        // 产品详情
         $model = \app\store\model\Goods::detail($goods_id);
         if (!$model || $model['is_delete']) {
-            return $this->renderError('商品信息不存在');
+            return $this->renderError('产品信息不存在');
         }
         if (!$this->request->isAjax()) {
-            // 商品分类
+            // 产品分类
             $catgory = CategoryModel::getCacheTree();
             // 配送模板
             $delivery = DeliveryModel::getAll();
-            // 商品sku数据
+            // 产品sku数据
             $specData = 'null';
             if ($model['spec_type'] == 20) {
                 $specData = json_encode($model->getManySpecData($model['spec_rel'], $model['sku']), JSON_UNESCAPED_SLASHES);
@@ -80,7 +80,7 @@ class Goods extends Controller
             $gradeList = GradeModel::getUsableList();
             return $this->fetch('copy_master', compact('model', 'catgory', 'delivery', 'specData', 'gradeList'));
         }
-        // 新增拼团商品
+        // 新增拼团产品
         $model = new GoodsModel;
         if ($model->add($this->postData('goods'))) {
             return $this->renderSuccess('添加成功', url('apps.sharing.goods/index'));
@@ -96,14 +96,14 @@ class Goods extends Controller
      */
     public function copy($goods_id)
     {
-        // 商品详情
+        // 产品详情
         $model = GoodsModel::detail($goods_id);
         if (!$this->request->isAjax()) {
-            // 商品分类
+            // 产品分类
             $catgory = CategoryModel::getCacheTree();
             // 配送模板
             $delivery = DeliveryModel::getAll();
-            // 商品sku数据
+            // 产品sku数据
             $specData = 'null';
             if ($model['spec_type'] == 20) {
                 $specData = json_encode($model->getManySpecData($model['spec_rel'], $model['sku']), JSON_UNESCAPED_SLASHES);
@@ -120,21 +120,21 @@ class Goods extends Controller
     }
 
     /**
-     * 商品编辑
+     * 产品编辑
      * @param $goods_id
      * @return array|mixed
      * @throws \think\exception\PDOException
      */
     public function edit($goods_id)
     {
-        // 商品详情
+        // 产品详情
         $model = GoodsModel::detail($goods_id);
         if (!$this->request->isAjax()) {
-            // 商品分类
+            // 产品分类
             $catgory = CategoryModel::getCacheTree();
             // 配送模板
             $delivery = DeliveryModel::getAll();
-            // 商品sku数据
+            // 产品sku数据
             $specData = 'null';
             if ($model['spec_type'] == 20) {
                 $specData = json_encode($model->getManySpecData($model['spec_rel'], $model['sku']), JSON_UNESCAPED_SLASHES);
@@ -151,14 +151,14 @@ class Goods extends Controller
     }
 
     /**
-     * 修改商品状态
+     * 修改产品状态
      * @param $goods_id
      * @param boolean $state
      * @return array
      */
     public function state($goods_id, $state)
     {
-        // 商品详情
+        // 产品详情
         $model = GoodsModel::detail($goods_id);
         if (!$model->setStatus($state)) {
             return $this->renderError('操作失败');
@@ -167,13 +167,13 @@ class Goods extends Controller
     }
 
     /**
-     * 删除商品
+     * 删除产品
      * @param $goods_id
      * @return array
      */
     public function delete($goods_id)
     {
-        // 商品详情
+        // 产品详情
         $model = GoodsModel::detail($goods_id);
         if (!$model->setDelete()) {
             return $this->renderError('删除失败');

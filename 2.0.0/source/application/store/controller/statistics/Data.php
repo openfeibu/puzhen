@@ -40,7 +40,7 @@ class Data extends Controller
             'survey' => $this->statisticsDataService->getSurveyData(),
             // 近七日交易走势
             //'echarts7days' => $this->statisticsDataService->getTransactionTrend(),
-            // 商品销售榜
+            // 产品销售榜
             //'goodsRanking' => $this->statisticsDataService->getGoodsRanking(),
             // 用户消费榜
             //'userExpendRanking' => $this->statisticsDataService->geUserExpendRanking(),

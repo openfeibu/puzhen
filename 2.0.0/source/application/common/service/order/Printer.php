@@ -77,13 +77,13 @@ class Printer
             $content .= "联系电话：{$order['extract']['phone']}<BR>";
             $content .= "自提门店：{$order['extract_shop']['shop_name']}<BR>";
         }
-        // 商品信息
-        $content .= '=========== 商品信息 ===========<BR>';
+        // 产品信息
+        $content .= '=========== 产品信息 ===========<BR>';
         foreach ($order['goods'] as $key => $goods) {
-            $content .= ($key + 1) . ".商品名称：{$goods['goods_name']}<BR>";
-            !empty($goods['goods_attr']) && $content .= "　商品规格：{$goods['goods_attr']}<BR>";
+            $content .= ($key + 1) . ".产品名称：{$goods['goods_name']}<BR>";
+            !empty($goods['goods_attr']) && $content .= "　产品规格：{$goods['goods_attr']}<BR>";
             $content .= "　购买数量：{$goods['total_num']}<BR>";
-            $content .= "　商品总价：{$goods['total_price']}元<BR>";
+            $content .= "　产品总价：{$goods['total_price']}元<BR>";
             $content .= '--------------------------------<BR>';
         }
         // 买家备注

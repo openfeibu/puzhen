@@ -62,7 +62,7 @@ class ActiveStatus extends Basics
                 'template_id' => $template['template_id'],
                 'page' => "pages/sharing/active/index?active_id={$activeInfo['active_id']}",
                 'data' => [
-                    // 拼团商品
+                    // 拼团产品
                     $template['keywords'][0] => ['value' => str_substr($activeInfo['goods']['goods_name'], 20)],
                     // 拼团价格
                     $template['keywords'][1] => ['value' => $item['sharing_order']['pay_price']],

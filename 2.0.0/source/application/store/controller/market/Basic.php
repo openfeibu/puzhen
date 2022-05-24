@@ -25,7 +25,7 @@ class Basic extends Controller
             // 满额包邮设置
             $values = SettingModel::getItem('full_free');
             return $this->fetch('full_free', [
-                // 不参与包邮的商品列表
+                // 不参与包邮的产品列表
                 'goodsList' => (new GoodsModel)->getListByIds($values['notin_goods']),
                 // 获取所有地区(树状结构)
                 'regionData' => RegionModel::getCacheTree(),

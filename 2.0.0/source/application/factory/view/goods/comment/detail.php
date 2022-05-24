@@ -6,7 +6,7 @@
                     <div class="widget-body">
                         <fieldset>
                             <div class="widget-head am-cf">
-                                <div class="widget-title am-fl">商品评价详情</div>
+                                <div class="widget-title am-fl">产品评价详情</div>
                             </div>
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label">用户 </label>
@@ -16,17 +16,17 @@
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">商品图片 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">产品图片 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <a href="<?= $model['order_goods']['image']['file_path'] ?>"
                                        title="点击查看大图" target="_blank">
-                                        <img src="<?= $model['order_goods']['image']['file_path'] ?>" alt="商品图片"
+                                        <img src="<?= $model['order_goods']['image']['file_path'] ?>" alt="产品图片"
                                              width="80" height="80">
                                     </a>
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">商品名称 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">产品名称 </label>
                                 <div class="am-u-sm-9 am-u-end am-padding-top-xs">
                                     <small class="am-text-sm"><?= $model['order_goods']['goods_name'] ?></small>
                                 </div>

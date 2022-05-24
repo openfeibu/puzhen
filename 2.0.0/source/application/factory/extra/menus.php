@@ -41,12 +41,12 @@ return [
         ]
     ],
     'goods' => [
-        'name' => '商品管理',
+        'name' => '产品管理',
         'icon' => 'icon-goods',
         'index' => 'goods/index',
         'submenu' => [
             [
-                'name' => '商品列表',
+                'name' => '产品列表',
                 'index' => 'goods/index',
                 'uris' => [
                     'goods/index',

@@ -88,21 +88,21 @@
                                                data-am-ucheck
                                                data-switch-box="switch-apply_range"
                                                data-switch-item="apply_range__10" checked>
-                                        全部商品
+                                        全部产品
                                     </label>
                                     <label class="am-radio-inline">
                                         <input type="radio" name="coupon[apply_range]" value="20"
                                                data-am-ucheck
                                                data-switch-box="switch-apply_range"
                                                data-switch-item="apply_range__20">
-                                        指定商品
+                                        指定产品
                                     </label>
                                     <label class="am-radio-inline">
                                         <input type="radio" name="coupon[apply_range]" value="30"
                                                data-am-ucheck
                                                data-switch-box="switch-apply_range"
                                                data-switch-item="apply_range__30">
-                                        排除商品
+                                        排除产品
                                     </label>
                                 </div>
                             </div>
@@ -112,7 +112,7 @@
                                     <div class="widget-become-goods am-form-file am-margin-top-xs">
                                         <button type="button" @click.stop="onSelectGoods"
                                                 class="j-selectGoods upload-file am-btn am-btn-secondary am-radius">
-                                            <i class="am-icon-cloud-upload"></i> 选择商品
+                                            <i class="am-icon-cloud-upload"></i> 选择产品
                                         </button>
                                         <div class="widget-goods-list uploader-list am-cf">
                                         </div>
@@ -125,7 +125,7 @@
                                     <div class="widget-become-goods am-form-file am-margin-top-xs">
                                         <button type="button" @click.stop="onSelectGoods"
                                                 class="j-selectGoods2 upload-file am-btn am-btn-secondary am-radius">
-                                            <i class="am-icon-cloud-upload"></i> 选择商品
+                                            <i class="am-icon-cloud-upload"></i> 选择产品
                                         </button>
                                         <div class="widget-goods-list2 uploader-list am-cf">
                                         </div>
@@ -200,7 +200,7 @@
 <!-- 文件库弹窗 -->
 {{include file="layouts/_template/file_library" /}}
 
-<!-- 指定的 商品列表 -->
+<!-- 指定的 产品列表 -->
 <script id="tpl-goods-list-item" type="text/template">
     {{ each $data }}
     <div class="file-item">
@@ -208,12 +208,12 @@
             <img src="{{ $value.image }}">
         </a>
         <input type="hidden" name="coupon[apply_range_config][applyGoodsIds][]" value="{{ $value.goods_id }}">
-        <i class="iconfont icon-shanchu file-item-delete" data-name="商品"></i>
+        <i class="iconfont icon-shanchu file-item-delete" data-name="产品"></i>
     </div>
     {{ /each }}
 </script>
 
-<!-- 排除的 商品列表 -->
+<!-- 排除的 产品列表 -->
 <script id="tpl-goods-list-item2" type="text/template">
     {{ each $data }}
     <div class="file-item">
@@ -221,7 +221,7 @@
             <img src="{{ $value.image }}">
         </a>
         <input type="hidden" name="coupon[apply_range_config][excludedGoodsIds][]" value="{{ $value.goods_id }}">
-        <i class="iconfont icon-shanchu file-item-delete" data-name="商品"></i>
+        <i class="iconfont icon-shanchu file-item-delete" data-name="产品"></i>
     </div>
     {{ /each }}
 </script>
@@ -302,10 +302,10 @@
             $mySwitchBox.hide().filter('.' + $(this).data('switch-item')).show();
         });
 
-        // 选择商品
+        // 选择产品
         var $goodsList = $('.widget-goods-list');
         $('.j-selectGoods').selectData({
-            title: '选择商品',
+            title: '选择产品',
             uri: 'goods/lists',
             dataIndex: 'goods_id',
             done: function (data) {
@@ -318,10 +318,10 @@
             }
         });
 
-        // 选择商品
+        // 选择产品
         var $goodsList2 = $('.widget-goods-list2');
         $('.j-selectGoods2').selectData({
-            title: '选择商品',
+            title: '选择产品',
             uri: 'goods/lists',
             dataIndex: 'goods_id',
             done: function (data) {

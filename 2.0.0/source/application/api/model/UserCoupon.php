@@ -153,7 +153,7 @@ class UserCoupon extends UserCouponModel
     /**
      * 订单结算优惠券列表
      * @param int $userId 用户id
-     * @param double $orderPayPrice 订单商品总金额
+     * @param double $orderPayPrice 订单产品总金额
      * @return mixed
      * @throws \think\db\exception\DataNotFoundException
      * @throws \think\db\exception\ModelNotFoundException
@@ -206,18 +206,18 @@ class UserCoupon extends UserCouponModel
         // 名词解释(is_apply)：允许用于抵扣当前订单
         foreach ($couponList as &$item) {
             if ($item['apply_range'] == 10) {
-                // 1. 全部商品
+                // 1. 全部产品
                 $item['is_apply'] = true;
             } elseif ($item['apply_range'] == 20) {
-                // 2. 指定商品, 判断订单商品是否存在可用
+                // 2. 指定产品, 判断订单产品是否存在可用
                 $applyGoodsIds = array_intersect($item['apply_range_config']['applyGoodsIds'], $orderGoodsIds);
                 $item['is_apply'] = !empty($applyGoodsIds);
             } elseif ($item['apply_range'] == 30) {
-                // 2. 排除商品, 判断订单商品是否全部都在排除行列
+                // 2. 排除产品, 判断订单产品是否全部都在排除行列
                 $excludedGoodsIds = array_intersect($item['apply_range_config']['excludedGoodsIds'], $orderGoodsIds);
                 $item['is_apply'] = count($excludedGoodsIds) != count($orderGoodsIds);
             }
-            !$item['is_apply'] && $item['not_apply_info'] = '该优惠券不支持当前商品';
+            !$item['is_apply'] && $item['not_apply_info'] = '该优惠券不支持当前产品';
 
         }
         return $couponList;

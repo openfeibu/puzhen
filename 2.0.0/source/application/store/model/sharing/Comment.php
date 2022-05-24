@@ -5,7 +5,7 @@ namespace app\store\model\sharing;
 use app\common\model\sharing\Comment as CommentModel;
 
 /**
- * 商品评价模型
+ * 产品评价模型
  * Class Comment
  * @package app\store\model\sharing
  */

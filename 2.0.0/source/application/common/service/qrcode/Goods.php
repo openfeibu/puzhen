@@ -7,13 +7,13 @@ use Grafika\Grafika;
 
 class Goods extends Base
 {
-    /* @var \app\common\model\Goods $goods 商品信息 */
+    /* @var \app\common\model\Goods $goods 产品信息 */
     private $goods;
 
     /* @var int $user_id 用户id */
     private $user_id;
 
-    /* @var int $goodsType 商品类型：10商城商品 20拼团商品 */
+    /* @var int $goodsType 产品类型：10商城产品 20拼团产品 */
     private $goodsType;
 
     /* @var array $pages 小程序码链接 */
@@ -32,11 +32,11 @@ class Goods extends Base
     public function __construct($goods, $user, $goodsType = 10)
     {
         parent::__construct();
-        // 商品信息
+        // 产品信息
         $this->goods = $goods;
         // 当前用户id
         $this->user_id = $user ? $user['user_id'] : 0;
-        // 商品类型：10商城商品 20拼团商品
+        // 产品类型：10商城产品 20拼团产品
         $this->goodsType = $goodsType;
     }
 
@@ -54,9 +54,9 @@ class Goods extends Base
         }
         // 小程序id
         $wxappId = $this->goods['wxapp_id'];
-        // 商品海报背景图
+        // 产品海报背景图
         $backdrop = __DIR__ . '/resource/goods_bg.png';
-        // 下载商品首图
+        // 下载产品首图
         $goodsUrl = $this->saveTempImage($wxappId, $this->goods['image'][0]['file_path'], 'goods');
         // 小程序码参数
         $scene = "gid:{$this->goods['goods_id']},uid:" . ($this->user_id ?: '');
@@ -82,18 +82,18 @@ class Goods extends Base
         $fontPath = Grafika::fontsDir() . '/' . 'st-heiti-light.ttc';
         // 打开海报背景图
         $editor->open($backdropImage, $backdrop);
-        // 打开商品图片
+        // 打开产品图片
         $editor->open($goodsImage, $goodsUrl);
-        // 重设商品图片宽高
+        // 重设产品图片宽高
         $editor->resizeExact($goodsImage, 690, 690);
-        // 商品图片添加到背景图
+        // 产品图片添加到背景图
         $editor->blend($backdropImage, $goodsImage, 'normal', 1.0, 'top-left', 30, 30);
-        // 商品名称处理换行
+        // 产品名称处理换行
         $fontSize = 30;
         $goodsName = $this->wrapText($fontSize, 0, $fontPath, $this->goods['goods_name'], 680, 2);
-        // 写入商品名称
+        // 写入产品名称
         $editor->text($backdropImage, $goodsName, $fontSize, 30, 750, new Color('#333333'), $fontPath);
-        // 写入商品价格
+        // 写入产品价格
         $priceType = [10 => 'goods_price', 20 => 'sharing_price'];
         $editor->text($backdropImage, $this->goods['sku'][0][$priceType[$this->goodsType]], 38, 62, 964, new Color('#ff4444'));
         // 打开小程序码

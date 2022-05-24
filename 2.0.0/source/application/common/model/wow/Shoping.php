@@ -5,7 +5,7 @@ namespace app\common\model\wow;
 use app\common\model\BaseModel;
 
 /**
- * 好物圈商品收藏记录模型
+ * 好物圈产品收藏记录模型
  * Class Shoping
  * @package app\common\model\wow
  */
@@ -16,7 +16,7 @@ class Shoping extends BaseModel
     protected $alias = 'shoping';
 
     /**
-     * 关联商品表
+     * 关联产品表
      * @return \think\model\relation\BelongsTo
      */
     public function goods()
@@ -48,15 +48,15 @@ class Shoping extends BaseModel
     }
 
     /**
-     * 新增好物圈商品收藏记录
+     * 新增好物圈产品收藏记录
      * @param int $userId 用户id
-     * @param array $goodsIds 商品id
+     * @param array $goodsIds 产品id
      * @return array|false
      * @throws \Exception
      */
     public function add($userId, $goodsIds)
     {
-        // 过滤该用户已收藏的商品id
+        // 过滤该用户已收藏的产品id
         $newGoodsIds = $this->getFilterGoodsIds($userId, $goodsIds);
         if (empty($newGoodsIds)) {
             return false;
@@ -82,7 +82,7 @@ class Shoping extends BaseModel
     }
 
     /**
-     * 过滤指定用户已收藏的商品id
+     * 过滤指定用户已收藏的产品id
      * @param $userId
      * @param $newGoodsIds
      * @return array

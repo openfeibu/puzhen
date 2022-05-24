@@ -104,7 +104,7 @@ class OrderRefund extends OrderRefundModel
         // 订单详情
         $order = Order::detail($this['order_id']);
         if ($data['refund_money'] > min($order['pay_price'], $this['order_goods']['total_pay_price'])) {
-            $this->error = '退款金额不能大于商品实付款金额';
+            $this->error = '退款金额不能大于产品实付款金额';
             return false;
         }
         $this->transaction(function () use ($order, $data) {

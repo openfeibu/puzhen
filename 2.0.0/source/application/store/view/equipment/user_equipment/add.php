@@ -6,7 +6,7 @@
                     <div class="widget-body">
                         <fieldset>
                             <div class="widget-head am-cf">
-                                <div class="widget-title am-fl">添加用户茶艺机</div>
+                                <div class="widget-title am-fl">添加用户茶电器</div>
                             </div>
                             <div class="am-form-group">
                                 <label class="am-u-sm-3  am-u-lg-2 am-form-label form-require"> 选择用户 </label>

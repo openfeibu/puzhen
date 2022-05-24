@@ -24,7 +24,7 @@ class Sharp extends Basics
         if (!$this->checkOrderStatusOnPayCommon($order)) {
             return false;
         }
-        // 判断商品状态、库存
+        // 判断产品状态、库存
         if (!$this->checkGoodsStatusOnPay($order['goods'])) {
             return false;
         }
@@ -32,7 +32,7 @@ class Sharp extends Basics
     }
 
     /**
-     * 判断商品状态、库存 (未付款订单)
+     * 判断产品状态、库存 (未付款订单)
      * @param $goodsList
      * @return bool
      * @throws \think\exception\DbException
@@ -40,22 +40,22 @@ class Sharp extends Basics
     protected function checkGoodsStatusOnPay($goodsList)
     {
         foreach ($goodsList as $goods) {
-            // 秒杀商品信息
+            // 秒杀产品信息
             $sharpGoods = SharpGoodsModel::detail($goods['goods_source_id'], ['sku']);
-            // 判断商品是否下架
+            // 判断产品是否下架
             if (empty($sharpGoods) || $sharpGoods['is_delete'] || !$sharpGoods['status']) {
-                $this->error = "很抱歉，商品 [{$goods['goods_name']}] 不存在或已下架";
+                $this->error = "很抱歉，产品 [{$goods['goods_name']}] 不存在或已下架";
                 return false;
             }
-            // 获取秒杀商品的sku信息
+            // 获取秒杀产品的sku信息
             $goodsSku = $this->getOrderGoodsSku($sharpGoods, $goods['spec_sku_id']);
             if (empty($goodsSku)) {
-                $this->error = "很抱歉，商品 [{$goods['goods_name']}] sku已不存在，请重新下单";
+                $this->error = "很抱歉，产品 [{$goods['goods_name']}] sku已不存在，请重新下单";
                 return false;
             }
             // 付款减库存
             if ($goods['deduct_stock_type'] == 20 && $goods['total_num'] > $goodsSku['seckill_stock']) {
-                $this->error = "很抱歉，商品 [{$goods['goods_name']}] 库存不足";
+                $this->error = "很抱歉，产品 [{$goods['goods_name']}] 库存不足";
                 return false;
             }
         }
@@ -63,7 +63,7 @@ class Sharp extends Basics
     }
 
     /**
-     * 获取指定的商品sku信息
+     * 获取指定的产品sku信息
      * @param $sharpGoods
      * @param $specSkuId
      * @return bool

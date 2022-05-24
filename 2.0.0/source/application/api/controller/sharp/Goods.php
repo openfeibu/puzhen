@@ -7,14 +7,14 @@ use app\api\service\sharp\Active as ActiveService;
 use app\common\service\qrcode\sharp\Goods as GoodsPoster;
 
 /**
- * 整点秒杀-商品管理
+ * 整点秒杀-产品管理
  * Class Goods
  * @package app\api\controller\sharp
  */
 class Goods extends Controller
 {
     /**
-     * 秒杀活动商品列表
+     * 秒杀活动产品列表
      * @param $active_time_id
      * @return array
      */
@@ -27,7 +27,7 @@ class Goods extends Controller
     }
 
     /**
-     * 获取活动商品详情
+     * 获取活动产品详情
      * @param $active_time_id
      * @param $sharp_goods_id
      * @return array
@@ -35,7 +35,7 @@ class Goods extends Controller
      */
     public function detail($active_time_id, $sharp_goods_id)
     {
-        // 获取秒杀活动商品详情
+        // 获取秒杀活动产品详情
         $service = new ActiveService;
         $data = $service->getActiveGoodsDetail($active_time_id, $sharp_goods_id);
         if ($data === false) {
@@ -45,7 +45,7 @@ class Goods extends Controller
     }
 
     /**
-     * 生成商品海报
+     * 生成产品海报
      * @param $active_time_id
      * @param $sharp_goods_id
      * @return array
@@ -54,13 +54,13 @@ class Goods extends Controller
      */
     public function poster($active_time_id, $sharp_goods_id)
     {
-        // 获取秒杀活动商品详情
+        // 获取秒杀活动产品详情
         $service = new ActiveService;
         $data = $service->getActiveGoodsDetail($active_time_id, $sharp_goods_id);
         if ($data === false) {
             return $this->renderError($service->getError());
         }
-        // 生成商品海报图
+        // 生成产品海报图
         $Qrcode = new GoodsPoster($data['active'], $data['goods'], $this->getUser(false));
         return $this->renderSuccess([
             'qrcode' => $Qrcode->getImage(),

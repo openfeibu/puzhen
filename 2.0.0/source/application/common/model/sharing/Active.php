@@ -59,7 +59,7 @@ class Active extends BaseModel
     }
 
     /**
-     * 关联拼团商品表
+     * 关联拼团产品表
      * @return \think\model\relation\BelongsTo
      */
     public function goods()

@@ -25,7 +25,7 @@ class Setting extends Controller
     {
         if (!$this->request->isAjax()) {
             $data = SettingModel::getAll();
-            // 购买指定商品成为分销商：商品列表
+            // 购买指定产品成为分销商：产品列表
             $goodsList = (new GoodsModel)->getListByIds($data['condition']['values']['become__buy_goods_ids']);
             return $this->fetch('index', compact('data', 'goodsList'));
         }

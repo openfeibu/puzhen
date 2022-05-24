@@ -36,7 +36,7 @@ class Active extends ActiveModel
                 'query' => \request()->request()
             ]);
         if (!$list->isEmpty()) {
-            // 设置商品数据
+            // 设置产品数据
             $list = GoodsService::setGoodsData($list);
         }
         return $list;
@@ -88,7 +88,7 @@ class Active extends ActiveModel
     {
         if ($scene === 'add') {
             if (!isset($data['goods_id']) || empty($data['goods_id'])) {
-                $this->error = '请选择商品';
+                $this->error = '请选择产品';
                 return false;
             }
         }
@@ -116,7 +116,7 @@ class Active extends ActiveModel
     }
 
     /**
-     * 商品ID是否存在
+     * 产品ID是否存在
      * @param $goodsId
      * @return bool
      */

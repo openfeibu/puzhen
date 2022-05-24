@@ -215,21 +215,21 @@ $detail = isset($detail) ? $detail : null;
                         </table>
                     </div>
 
-                    <!-- 商品信息 -->
+                    <!-- 产品信息 -->
                     <div class="widget-head am-cf">
-                        <div class="widget-title am-fl">商品信息</div>
+                        <div class="widget-title am-fl">产品信息</div>
                     </div>
                     <div class="am-scrollable-horizontal">
                         <table class="regional-table am-table am-table-bordered am-table-centered
                             am-text-nowrap am-margin-bottom-xs">
                             <tbody>
                             <tr>
-                                <th>商品名称</th>
-                                <th>商品编码</th>
+                                <th>产品名称</th>
+                                <th>产品编码</th>
                                 <th>重量(Kg)</th>
                                 <th>单价</th>
                                 <th>购买数量</th>
-                                <th>商品总价</th>
+                                <th>产品总价</th>
                             </tr>
                             <?php foreach ($detail['goods'] as $goods): ?>
                                 <tr>

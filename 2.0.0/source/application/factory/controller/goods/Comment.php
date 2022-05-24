@@ -6,7 +6,7 @@ use app\factory\controller\Controller;
 use app\factory\model\Comment as CommentModel;
 
 /**
- * 商品评价管理
+ * 产品评价管理
  * Class Comment
  * @package app\factory\controller\goods
  */

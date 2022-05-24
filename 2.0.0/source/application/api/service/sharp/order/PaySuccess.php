@@ -19,13 +19,13 @@ class PaySuccess extends Basics
      */
     public function onPaySuccess($order)
     {
-        // 更新活动会场的商品实际销量
+        // 更新活动会场的产品实际销量
         $activeTimeId = $order['order_source_id'];
         return $this->updateActiveGoodsAales($activeTimeId, $order['goods']);
     }
 
     /**
-     * 更新活动会场的商品实际销量
+     * 更新活动会场的产品实际销量
      * @param $activeTimeId
      * @param $goodsList
      * @return bool

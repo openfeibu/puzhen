@@ -3,7 +3,7 @@
 namespace app\common\model;
 
 /**
- * 商品规格关系模型
+ * 产品规格关系模型
  * Class GoodsSpecRel
  * @package app\common\model
  */

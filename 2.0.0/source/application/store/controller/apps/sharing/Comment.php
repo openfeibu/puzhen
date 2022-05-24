@@ -6,7 +6,7 @@ use app\store\controller\Controller;
 use app\store\model\sharing\Comment as CommentModel;
 
 /**
- * 商品评价管理
+ * 产品评价管理
  * Class Comment
  * @package app\store\controller\apps\sharing
  */

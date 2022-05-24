@@ -91,7 +91,7 @@ class PaySuccess extends Basics
             }
         }
         $this->model->transaction(function () use ($payType, $payData) {
-            // 更新商品库存、销量
+            // 更新产品库存、销量
             (new GoodsModel)->updateStockSales($this->model['goods']);
             // 更新拼单记录
             $this->saveSharingActive($this->model['goods'][0]);

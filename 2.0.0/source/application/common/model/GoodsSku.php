@@ -3,7 +3,7 @@
 namespace app\common\model;
 
 /**
- * 商品SKU模型
+ * 产品SKU模型
  * Class GoodsSku
  * @package app\common\model
  */

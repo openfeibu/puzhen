@@ -21,20 +21,20 @@ class PaySuccess extends Basics
      */
     public function onPaySuccess($order)
     {
-        // 购买指定商品成为分销商
+        // 购买指定产品成为分销商
         $this->becomeDealerUser($order);
         return true;
     }
 
     /**
-     * 购买指定商品成为分销商
+     * 购买指定产品成为分销商
      * @param $order
      * @return bool
      * @throws \think\exception\DbException
      */
     private function becomeDealerUser($order)
     {
-        // 整理商品id集
+        // 整理产品id集
         $goodsIds = helper::getArrayColumn($order['goods'], 'goods_id');
         $model = new DealerApplyModel;
         return $model->becomeDealerUser($order['user_id'], $goodsIds, $order['wxapp_id']);

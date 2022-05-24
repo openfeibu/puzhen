@@ -16,7 +16,7 @@ class Export
      * @var array
      */
     private $tileArray = [
-        '订单号', '商品信息', '订单总额', '优惠券抵扣', '积分抵扣', '运费金额', '后台改价', '实付款金额', '支付方式', '下单时间',
+        '订单号', '产品信息', '订单总额', '优惠券抵扣', '积分抵扣', '运费金额', '后台改价', '实付款金额', '支付方式', '下单时间',
         '买家', '买家留言', '配送方式', '自提门店名称', '自提联系人', '自提联系电话', '收货人姓名', '联系电话', '收货人地址',
         '物流公司', '物流单号', '付款状态', '付款时间', '发货状态', '发货时间', '收货状态', '收货时间', '订单状态', '微信支付交易号', '是否已评价'
     ];
@@ -34,7 +34,7 @@ class Export
             $address = $order['address'];
             $dataArray[] = [
                 '订单号' => $this->filterValue($order['order_no']),
-                '商品信息' => $this->filterGoodsInfo($order),
+                '产品信息' => $this->filterGoodsInfo($order),
                 '订单总额' => $this->filterValue($order['total_price']),
                 '优惠券抵扣' => $this->filterValue($order['coupon_money']),
                 '积分抵扣' => $this->filterValue($order['points_money']),
@@ -81,7 +81,7 @@ class Export
     }
 
     /**
-     * 格式化商品信息
+     * 格式化产品信息
      * @param $order
      * @return string
      */
@@ -89,10 +89,10 @@ class Export
     {
         $content = '';
         foreach ($order['goods'] as $key => $goods) {
-            $content .= ($key + 1) . ".商品名称：{$goods['goods_name']}\n";
-            !empty($goods['goods_attr']) && $content .= "　商品规格：{$goods['goods_attr']}\n";
+            $content .= ($key + 1) . ".产品名称：{$goods['goods_name']}\n";
+            !empty($goods['goods_attr']) && $content .= "　产品规格：{$goods['goods_attr']}\n";
             $content .= "　购买数量：{$goods['total_num']}\n";
-            $content .= "　商品总价：{$goods['total_price']}元\n\n";
+            $content .= "　产品总价：{$goods['total_price']}元\n\n";
         }
         return $content;
     }

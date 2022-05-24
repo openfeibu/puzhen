@@ -10,7 +10,7 @@
                             </div>
 
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 商品信息 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 产品信息 </label>
                                 <div class="am-u-sm-9 am-u-md-6 am-u-lg-5 am-u-end">
                                     <div class="goods-detail">
                                         <div class="goods-image">
@@ -58,7 +58,7 @@
                                 <div class="am-u-sm-9 am-u-md-6 am-u-lg-5 am-u-end">
                                     <input type="number" min="0.01" class="tpl-form-input" name="active[floor_price]"
                                            value="<?= $model['floor_price'] ?>" placeholder="" required>
-                                    <small>砍价商品的最低价格，单位：元</small>
+                                    <small>砍价产品的最低价格，单位：元</small>
                                 </div>
                             </div>
 

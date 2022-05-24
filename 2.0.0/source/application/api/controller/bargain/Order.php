@@ -45,7 +45,7 @@ class Order extends Controller
         ]));
         // 获取砍价任务详情
         $task = TaskModel::detail($params['task_id']);
-        // 获取砍价商品信息
+        // 获取砍价产品信息
         $goodsList = $task->getTaskGoods($params['task_id']);
         if ($goodsList === false) {
             return $this->renderError($task->getError());
@@ -55,7 +55,7 @@ class Order extends Controller
             'source' => OrderSourceEnum::BARGAIN,
             'source_id' => $params['task_id'],
         ]);
-        // 砍价商品不参与 等级折扣和优惠券折扣
+        // 砍价产品不参与 等级折扣和优惠券折扣
         $Checkout->setCheckoutRule([
             'is_user_grade' => false,
             'is_coupon' => false,

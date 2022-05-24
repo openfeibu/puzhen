@@ -33,7 +33,7 @@ class Active extends ActiveModel
     }
 
     /**
-     * 根据商品id获取进行中的拼单列表
+     * 根据产品id获取进行中的拼单列表
      * @param $goods_id
      * @param int $limit
      * @return false|\PDOStatement|string|\think\Collection

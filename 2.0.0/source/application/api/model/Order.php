@@ -105,7 +105,7 @@ class Order extends OrderModel
     }
 
     /**
-     * 立即购买：获取订单商品列表
+     * 立即购买：获取订单产品列表
      * @param $goodsId
      * @param $goodsSkuId
      * @param $goodsNum
@@ -113,20 +113,20 @@ class Order extends OrderModel
      */
     public function getOrderGoodsListByNow($goodsId, $goodsSkuId, $goodsNum)
     {
-        // 商品详情
+        // 产品详情
         /* @var GoodsModel $goods */
         $goods = GoodsModel::detail($goodsId);
-        // 商品sku信息
+        // 产品sku信息
         $goods['goods_sku'] = GoodsModel::getGoodsSku($goods, $goodsSkuId);
-        // 商品列表
+        // 产品列表
         $goodsList = [$goods->hidden(['category', 'content', 'image', 'sku'])];
         foreach ($goodsList as &$item) {
-            // 商品单价
+            // 产品单价
             $item['goods_price'] = $item['goods_sku']['goods_price'];
-            // 商品购买数量
+            // 产品购买数量
             $item['total_num'] = $goodsNum;
             $item['spec_sku_id'] = $item['goods_sku']['spec_sku_id'];
-            // 商品购买总金额
+            // 产品购买总金额
             $item['total_price'] = helper::bcmul($item['goods_price'], $goodsNum);
         }
         return $goodsList;
@@ -212,7 +212,7 @@ class Order extends OrderModel
             $isPay = $this['pay_status']['value'] == PayStatusEnum::SUCCESS;
             // 未付款的订单
             if ($isPay == false) {
-                // 回退商品库存
+                // 回退产品库存
                 FactoryStock::getFactory($this['order_source'])->backGoodsStock($this['goods'], $isPay);
                 // 回退用户优惠券
                 $this['coupon_id'] > 0 && UserCouponModel::setIsUse($this['coupon_id'], false);

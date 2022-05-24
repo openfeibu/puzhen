@@ -3,7 +3,7 @@
         <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
             <div class="widget am-cf">
                 <div class="widget-head am-cf">
-                    <div class="widget-title am-cf"> 秒杀商品列表</div>
+                    <div class="widget-title am-cf"> 秒杀产品列表</div>
                 </div>
                 <div class="widget-body am-fr">
                     <!-- 工具栏 -->
@@ -29,7 +29,7 @@
                                     <div class="am-form-group am-fl">
                                         <div class="am-input-group am-input-group-sm tpl-form-border-form">
                                             <input type="text" class="am-form-field" name="search"
-                                                   placeholder="请输入商品名称"
+                                                   placeholder="请输入产品名称"
                                                    value="<?= $request->get('search') ?>">
                                             <div class="am-input-group-btn">
                                                 <button class="am-btn am-btn-default am-icon-search"
@@ -46,8 +46,8 @@
                          tpl-table-black am-text-nowrap">
                             <thead>
                             <tr>
-                                <th>秒杀商品ID</th>
-                                <th width="20%">商品信息</th>
+                                <th>秒杀产品ID</th>
+                                <th width="20%">产品信息</th>
                                 <th>限购数量</th>
                                 <th>累积销量</th>
                                 <th>库存总量</th>

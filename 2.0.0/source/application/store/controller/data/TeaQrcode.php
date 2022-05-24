@@ -26,7 +26,7 @@ class TeaQrcode extends Controller
     }
 
     /**
-     * 商品列表
+     * 产品列表
      * @return mixed
      * @throws \think\exception\DbException
      */

@@ -5,7 +5,7 @@ namespace app\task\model\sharing;
 use app\common\model\sharing\Goods as GoodsModel;
 
 /**
- * 拼团商品模型
+ * 拼团产品模型
  * Class Goods
  * @package app\task\model
  */

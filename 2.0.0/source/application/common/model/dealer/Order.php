@@ -165,13 +165,13 @@ class Order extends BaseModel
         ];
         // 计算分销佣金
         foreach ($order['goods'] as $goods) {
-            // 判断商品存在售后退款则不计算佣金
+            // 判断产品存在售后退款则不计算佣金
             if ($this->checkGoodsRefund($goods)) {
                 continue;
             }
-            // 商品实付款金额
+            // 产品实付款金额
             $goodsPrice = min($capital['orderPrice'], $goods['total_pay_price']);
-            // 计算商品实际佣金
+            // 计算产品实际佣金
             $goodsCapital = $this->calculateGoodsCapital($setting, $goods, $goodsPrice);
             // 累积分销佣金
             $level >= 1 && $capital['first_money'] += $goodsCapital['first_money'];
@@ -182,7 +182,7 @@ class Order extends BaseModel
     }
 
     /**
-     * 计算商品实际佣金
+     * 计算产品实际佣金
      * @param $setting
      * @param $goods
      * @param $goodsPrice
@@ -190,7 +190,7 @@ class Order extends BaseModel
      */
     private function calculateGoodsCapital($setting, $goods, $goodsPrice)
     {
-        // 判断是否开启商品单独分销
+        // 判断是否开启产品单独分销
         if ($goods['is_ind_dealer'] == false) {
             // 全局分销比例
             return [
@@ -199,7 +199,7 @@ class Order extends BaseModel
                 'third_money' => $goodsPrice * ($setting['third_money'] * 0.01)
             ];
         }
-        // 商品单独分销
+        // 产品单独分销
         if ($goods['dealer_money_type'] == 10) {
             // 分销佣金类型：百分比
             return [
@@ -217,7 +217,7 @@ class Order extends BaseModel
     }
 
     /**
-     * 验证商品是否存在售后
+     * 验证产品是否存在售后
      * @param $goods
      * @return bool
      */

@@ -77,15 +77,15 @@
                     </div>
 
                     <div class="widget-head am-cf">
-                        <div class="widget-title am-fl">售后商品信息</div>
+                        <div class="widget-title am-fl">售后产品信息</div>
                     </div>
                     <div class="am-scrollable-horizontal">
                         <table class="regional-table am-table am-table-bordered am-table-centered
                             am-text-nowrap am-margin-bottom-xs">
                             <tbody>
                             <tr>
-                                <th width="25%">商品名称</th>
-                                <th>商品编码</th>
+                                <th width="25%">产品名称</th>
+                                <th>产品编码</th>
                                 <th>重量(Kg)</th>
                                 <th>单价</th>
                                 <th>购买数量</th>

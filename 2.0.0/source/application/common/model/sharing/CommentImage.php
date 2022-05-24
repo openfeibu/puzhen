@@ -5,7 +5,7 @@ namespace app\common\model\sharing;
 use app\common\model\BaseModel;
 
 /**
- * 拼团商品评价图片模型
+ * 拼团产品评价图片模型
  * Class CommentImage
  * @package app\common\model\sharing
  */

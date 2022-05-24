@@ -42,7 +42,7 @@ class Survey extends BasicsService
             //'order_total' => $this->getOrderTotal($startDate, $endDate),
             // 付款订单总额
             //'order_total_money' => $this->getOrderTotalMoney($startDate, $endDate),
-            // 商品总量
+            // 产品总量
             'goods_total' => $this->getGoodsTotal($startDate, $endDate),
             // 用户充值总额
             //'recharge_total' => $this->getRechargeTotal($startDate, $endDate),
@@ -50,9 +50,9 @@ class Survey extends BasicsService
             'factory_total' => $this->getFactoryTotal($startDate, $endDate),
             //服务网点数量
             'distributor_total' => $this->getDistributorTotal($startDate, $endDate),
-            //茶艺机数量
+            //茶电器数量
             'equipment_total' => $this->getEquipmentTotal($startDate, $endDate),
-            //茶艺机延保数量
+            //茶电器延保数量
             'user_equipment_total' => $this->getUserEquipmentTotal($startDate, $endDate),
             'user_tea_qrcode_total' => $this->getUserTeaQrcodeTotal($startDate, $endDate),
         ];
@@ -123,7 +123,7 @@ class Survey extends BasicsService
     }
 
     /**
-     * 获取商品总量
+     * 获取产品总量
      * @param null $startDate
      * @param null $endDate
      * @return int|string
@@ -192,7 +192,7 @@ class Survey extends BasicsService
         return number_format($value);
     }
     /**
-     * 获取茶艺机总量
+     * 获取茶电器总量
      * @param null $startDate
      * @param null $endDate
      * @return string
@@ -209,7 +209,7 @@ class Survey extends BasicsService
         return number_format($value);
     }
     /**
-     * 获取茶艺机总量
+     * 获取茶电器总量
      * @param null $startDate
      * @param null $endDate
      * @return string
@@ -226,7 +226,7 @@ class Survey extends BasicsService
         return number_format($value);
     }
     /**
-     * 获取茶艺机总量
+     * 获取茶电器总量
      * @param null $startDate
      * @param null $endDate
      * @return string

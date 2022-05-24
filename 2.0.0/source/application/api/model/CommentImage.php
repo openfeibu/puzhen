@@ -5,7 +5,7 @@ namespace app\api\model;
 use app\common\model\CommentImage as CommentImageModel;
 
 /**
- * 商品图片模型
+ * 产品图片模型
  * Class GoodsImage
  * @package app\api\model
  */

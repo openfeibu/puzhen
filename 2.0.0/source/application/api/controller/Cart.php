@@ -43,7 +43,7 @@ class Cart extends Controller
         // 请求参数
         $param = $this->request->param();
         $cartIds = isset($param['cart_ids']) ? $param['cart_ids'] : '';
-        // 购物车商品列表
+        // 购物车产品列表
         $goodsList = $this->model->getList($cartIds);
         // 获取订单结算信息
         $Checkout = new CheckoutModel;
@@ -53,9 +53,9 @@ class Cart extends Controller
 
     /**
      * 加入购物车
-     * @param int $goods_id 商品id
-     * @param int $goods_num 商品数量
-     * @param string $goods_sku_id 商品sku索引
+     * @param int $goods_id 产品id
+     * @param int $goods_num 产品数量
+     * @param string $goods_sku_id 产品sku索引
      * @return array
      * @throws \app\common\exception\BaseException
      * @throws \think\exception\DbException
@@ -65,13 +65,13 @@ class Cart extends Controller
         if (!$this->model->add($goods_id, $goods_num, $goods_sku_id)) {
             return $this->renderError($this->model->getError() ?: '加入购物车失败');
         }
-        // 购物车商品总数量
+        // 购物车产品总数量
         $totalNum = $this->model->getTotalNum();
         return $this->renderSuccess(['cart_total_num' => $totalNum], '加入购物车成功');
     }
 
     /**
-     * 减少购物车商品数量
+     * 减少购物车产品数量
      * @param $goods_id
      * @param $goods_sku_id
      * @return array
@@ -83,7 +83,7 @@ class Cart extends Controller
     }
 
     /**
-     * 删除购物车中指定商品
+     * 删除购物车中指定产品
      * @param $goods_sku_id (支持字符串ID集)
      * @return array
      */

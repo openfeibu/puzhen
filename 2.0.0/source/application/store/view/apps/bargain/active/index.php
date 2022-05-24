@@ -29,7 +29,7 @@
                                     <div class="am-form-group am-fl">
                                         <div class="am-input-group am-input-group-sm tpl-form-border-form">
                                             <input type="text" class="am-form-field" name="search"
-                                                   placeholder="请输入商品名称"
+                                                   placeholder="请输入产品名称"
                                                    value="<?= $request->get('search') ?>">
                                             <div class="am-input-group-btn">
                                                 <button class="am-btn am-btn-default am-icon-search"
@@ -47,7 +47,7 @@
                             <thead>
                             <tr>
                                 <th>活动ID</th>
-                                <th width="20%">商品信息</th>
+                                <th width="20%">产品信息</th>
                                 <th>活动时间</th>
                                 <th>砍价底价</th>
                                 <th>帮砍人数</th>

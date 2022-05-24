@@ -41,12 +41,12 @@ return [
         ]
     ],
     'goods' => [
-        'name' => '商品管理',
+        'name' => '产品管理',
         'icon' => 'icon-goods',
         'index' => 'goods/index',
         'submenu' => [
             [
-                'name' => '商品列表',
+                'name' => '产品列表',
                 'index' => 'goods/index',
                 'uris' => [
                     'goods/index',
@@ -57,7 +57,7 @@ return [
                 ],
             ],
             [
-                'name' => '商品分类',
+                'name' => '产品分类',
                 'index' => 'goods.category/index',
                 'uris' => [
                     'goods.category/index',
@@ -67,7 +67,7 @@ return [
             ],
             /*
             [
-                'name' => '商品评价',
+                'name' => '产品评价',
                 'index' => 'goods.comment/index',
                 'uris' => [
                     'goods.comment/index',
@@ -163,17 +163,17 @@ return [
         ]
     ],
     'equipment' => [
-        'name' => '茶艺机管理',
+        'name' => '茶电器管理',
         'icon' => 'am-icon-coffee',
         'index' => 'equipment.equipment/index',
         'submenu' => [
             [
-                'name' => '茶艺机管理',
+                'name' => '茶电器管理',
                 'active' => true,
                 'index' => 'equipment.equipment/index',
                 'submenu' => [
                     [
-                        'name' => '茶艺机列表',
+                        'name' => '茶电器列表',
                         'index' => 'equipment.equipment/index',
                         'uris' => [
                             'equipment.equipment/index',
@@ -184,7 +184,7 @@ return [
                 ]
             ],
             [
-                'name' => '用户茶艺机',
+                'name' => '用户茶电器',
                 'active' => true,
                 'index' => 'equipment.user_equipment/audited_list',
                 'uris' => [
@@ -306,12 +306,12 @@ return [
                 ]
             ],
             [
-                'name' => '关联商品管理',
+                'name' => '关联产品管理',
                 'active' => true,
                 'index' => 'distributor.goods/index',
                 'submenu' => [
                     [
-                        'name' => '商品列表',
+                        'name' => '产品列表',
                         'index' => 'distributor.goods/index',
                         'uris' => [
                             'distributor.goods/index',
@@ -609,7 +609,7 @@ return [
                 'name' => '拼团管理',
                 'submenu' => [
                     [
-                        'name' => '商品分类',
+                        'name' => '产品分类',
                         'index' => 'apps.sharing.category/index',
                         'uris' => [
                             'apps.sharing.category/index',
@@ -618,7 +618,7 @@ return [
                         ]
                     ],
                     [
-                        'name' => '商品列表',
+                        'name' => '产品列表',
                         'index' => 'apps.sharing.goods/index',
                         'uris' => [
                             'apps.sharing.goods/index',
@@ -654,7 +654,7 @@ return [
                         ]
                     ],
                     [
-                        'name' => '商品评价',
+                        'name' => '产品评价',
                         'index' => 'apps.sharing.comment/index',
                         'uris' => [
                             'apps.sharing.comment/index',
@@ -703,7 +703,7 @@ return [
                 'index' => 'apps.sharp.goods/index',
                 'submenu' => [
                     [
-                        'name' => '秒杀商品',
+                        'name' => '秒杀产品',
                         'index' => 'apps.sharp.goods/index',
                         'uris' => [
                             'apps.sharp.goods/index',
@@ -741,7 +741,7 @@ return [
                 'index' => 'apps.wow.shoping/index',
                 'submenu' => [
                     [
-                        'name' => '商品收藏',
+                        'name' => '产品收藏',
                         'index' => 'apps.wow.shoping/index',
                     ],
                     [

@@ -6,14 +6,14 @@ use app\api\controller\Controller;
 use app\api\model\distributor\Goods as DistributorGoodsModel;
 
 /**
- * 服务网点-商品管理
+ * 服务网点-产品管理
  * Class Goods
  * @package app\api\controller\sharp
  */
 class Goods extends Controller
 {
     /**
-     * 商品列表
+     * 产品列表
      * @return array
      */
     public function lists()

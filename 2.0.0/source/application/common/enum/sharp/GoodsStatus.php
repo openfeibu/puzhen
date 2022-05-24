@@ -5,7 +5,7 @@ namespace app\common\enum\sharp;
 use app\common\enum\EnumBasics;
 
 /**
- * 整点秒杀-活动商品状态
+ * 整点秒杀-活动产品状态
  * Class GoodsStatus
  * @package app\common\enum\sharp
  */

@@ -6,7 +6,7 @@ use app\common\library\helper;
 use app\common\service\Goods as GoodsService;
 
 /**
- * 商品模型
+ * 产品模型
  * Class Goods
  * @package app\common\model
  */
@@ -47,7 +47,7 @@ class Goods extends BaseModel
     }
 
     /**
-     * 关联商品分类表
+     * 关联产品分类表
      * @return \think\model\relation\BelongsTo
      */
     public function category()
@@ -66,7 +66,7 @@ class Goods extends BaseModel
     }
 
     /**
-     * 关联商品规格表
+     * 关联产品规格表
      * @return \think\model\relation\HasMany
      */
     public function sku()
@@ -75,7 +75,7 @@ class Goods extends BaseModel
     }
 
     /**
-     * 关联商品规格关系表
+     * 关联产品规格关系表
      * @return \think\model\relation\BelongsToMany
      */
     public function specRel()
@@ -84,7 +84,7 @@ class Goods extends BaseModel
     }
 
     /**
-     * 关联商品图片表
+     * 关联产品图片表
      * @return \think\model\relation\HasMany
      */
     public function image()
@@ -122,17 +122,17 @@ class Goods extends BaseModel
     }
 
     /**
-     * 获取商品列表
+     * 获取产品列表
      * @param $param
      * @return mixed
      * @throws \think\exception\DbException
      */
     public function getList($param)
     {
-        // 商品列表获取条件
+        // 产品列表获取条件
         $params = array_merge([
             'goods_id' => 0,
-            'status' => 10,         // 商品状态
+            'status' => 10,         // 产品状态
             'category_id' => 0,     // 分类id
             'factory_id' => 0,     // 工厂id
             'search' => '',         // 搜索关键词
@@ -160,9 +160,9 @@ class Goods extends BaseModel
         }elseif ($params['sortType'] === 'collection_count') {
             $sort = $params['sort'] == 'desc' ? ['collection_count' => 'desc'] : ['collection_count' => 'asc'];
         }
-        // 商品表名称
+        // 产品表名称
         $tableName = $this->getTable();
-        // 多规格商品 最高价与最低价
+        // 多规格产品 最高价与最低价
         $GoodsSku = new GoodsSku;
         $minPriceSql = $GoodsSku->field(['MIN(goods_price)'])
             ->where('goods_id', 'EXP', "= `$tableName`.`goods_id`")->buildSql();
@@ -194,7 +194,7 @@ class Goods extends BaseModel
     }
 
     /**
-     * 设置商品展示的数据
+     * 设置产品展示的数据
      * @param $data
      * @param bool $isMultiple
      * @param callable $callback
@@ -203,11 +203,11 @@ class Goods extends BaseModel
     public function setGoodsListData($data, $isMultiple = true, callable $callback = null)
     {
         if (!$isMultiple) $dataSource = [&$data]; else $dataSource = &$data;
-        // 整理商品列表数据
+        // 整理产品列表数据
         foreach ($dataSource as &$goods) {
-            // 商品主图
+            // 产品主图
             $goods['goods_image'] = $goods['image'][0]['file_path'] ?? '';
-            // 商品默认规格
+            // 产品默认规格
             $goods['goods_sku'] = $goods['sku'][0];
             // 回调函数
             is_callable($callback) && call_user_func($callback, $goods);
@@ -216,7 +216,7 @@ class Goods extends BaseModel
     }
 
     /**
-     * 根据商品id集获取商品列表
+     * 根据产品id集获取产品列表
      * @param array $goodsIds
      * @param null $status
      * @return false|\PDOStatement|string|\think\Collection
@@ -232,7 +232,7 @@ class Goods extends BaseModel
         if (!empty($goodsIds)) {
             $this->orderRaw('field(goods_id, ' . implode(',', $goodsIds) . ')');
         }
-        // 获取商品列表数据
+        // 获取产品列表数据
 //        ['category', 'image.file', 'sku', 'spec_rel.spec', 'delivery.rule']
         $data = $this->field(['content'], true)
             ->with(['category', 'image.file', 'sku'])
@@ -243,7 +243,7 @@ class Goods extends BaseModel
     }
 
     /**
-     * 商品多规格信息
+     * 产品多规格信息
      * @param \think\Collection $specRel
      * @param \think\Collection $skuData
      * @return array
@@ -320,7 +320,7 @@ class Goods extends BaseModel
     }
 
     /**
-     * 获取商品详情
+     * 获取产品详情
      * @param $goodsId
      * @return static
      */
@@ -337,13 +337,13 @@ class Goods extends BaseModel
         if (empty($model)) {
             return $model;
         }
-        // 整理商品数据并返回
+        // 整理产品数据并返回
         return $model->setGoodsListData($model, false);
     }
 
     /**
-     * 指定的商品规格信息
-     * @param static $goods 商品详情
+     * 指定的产品规格信息
+     * @param static $goods 产品详情
      * @param int $specSkuId
      * @return array|bool
      */

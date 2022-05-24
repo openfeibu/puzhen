@@ -72,7 +72,7 @@ class Delivery extends Basics
             'data' => [
                 // 订单号
                 $template['keywords'][0] => ['value' => $orderInfo['order_no']],
-                // 商品名称
+                // 产品名称
                 $template['keywords'][1] => ['value' => $this->getFormatGoodsName($orderInfo['goods'])],
                 // 收货人
                 $template['keywords'][2] => ['value' => $orderInfo['address']['name']],
@@ -106,7 +106,7 @@ class Delivery extends Basics
     }
 
     /**
-     * 格式化商品名称
+     * 格式化产品名称
      * @param $goodsData
      * @return string
      */

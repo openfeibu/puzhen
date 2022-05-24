@@ -6,7 +6,7 @@ use think\Cache;
 use app\common\model\BaseModel;
 
 /**
- * 拼团商品分类模型
+ * 拼团产品分类模型
  * Class Category
  * @package app\common\model\sharing
  */

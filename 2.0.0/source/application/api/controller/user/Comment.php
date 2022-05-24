@@ -16,7 +16,7 @@ use app\api\model\TeaQrcodeComment as TeaQrcodeCommentModel;
 class Comment extends Controller
 {
     /**
- * 待评价订单商品列表
+ * 待评价订单产品列表
  * @param $order_id
  * @return array
  * @throws \Exception
@@ -34,13 +34,13 @@ class Comment extends Controller
         if (!$model->checkOrderAllowComment($order)) {
             return $this->renderError($model->getError());
         }
-        // 待评价商品列表
+        // 待评价产品列表
         /* @var \think\Collection $goodsList */
         $goodsList = OrderGoodsModel::getNotCommentGoodsList($order_id);
         if ($goodsList->isEmpty()) {
-            return $this->renderError('该订单没有可评价的商品');
+            return $this->renderError('该订单没有可评价的产品');
         }
-        // 提交商品评价
+        // 提交产品评价
         if ($this->request->isPost()) {
             $post = $this->request->post('formData');
             if ($model->addForOrder($order, $goodsList, $post)) {

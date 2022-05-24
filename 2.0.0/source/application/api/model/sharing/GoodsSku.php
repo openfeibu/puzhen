@@ -5,7 +5,7 @@ namespace app\api\model\sharing;
 use app\common\model\sharing\GoodsSku as GoodsSkuModel;
 
 /**
- * 拼团商品规格模型
+ * 拼团产品规格模型
  * Class GoodsSku
  * @package app\api\model\sharing
  */

@@ -6,7 +6,7 @@ use app\common\exception\BaseException;
 use app\common\model\sharing\Comment as CommentModel;
 
 /**
- * 拼团商品评价模型
+ * 拼团产品评价模型
  * Class Comment
  * @package app\api\model\sharing
  */
@@ -38,7 +38,7 @@ class Comment extends CommentModel
     }
 
     /**
-     * 获取指定商品评价列表
+     * 获取指定产品评价列表
      * @param $goods_id
      * @param int $scoreType
      * @return \think\Paginator
@@ -105,7 +105,7 @@ class Comment extends CommentModel
     }
 
     /**
-     * 根据已完成订单商品 添加评价
+     * 根据已完成订单产品 添加评价
      * @param Order $order
      * @param \think\Collection|OrderGoods $goodsList
      * @param $formJsonData
@@ -144,7 +144,7 @@ class Comment extends CommentModel
      */
     private function updateOrderIsComment($order, $isComment, &$commentList)
     {
-        // 更新订单商品
+        // 更新订单产品
         $orderGoodsData = [];
         foreach ($commentList as $comment) {
             $orderGoodsData[] = [

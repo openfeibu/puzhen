@@ -3,12 +3,12 @@
         <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
             <div class="widget am-cf">
                 <div class="widget-head am-cf">
-                    <div class="widget-title am-cf"> 商品收藏记录</div>
+                    <div class="widget-title am-cf"> 产品收藏记录</div>
                 </div>
                 <div class="widget-body am-fr">
                     <div class="tips am-margin-bottom am-u-sm-12">
                         <div class="pre">
-                            <p> 注：用户将商品加入购物车时，自动同步到微信好物圈商品收藏。</p>
+                            <p> 注：用户将产品加入购物车时，自动同步到微信好物圈产品收藏。</p>
                         </div>
                     </div>
                     <!-- 工具栏 -->
@@ -20,7 +20,7 @@
                                     <div class="am-form-group am-fl">
                                         <div class="am-input-group am-input-group-sm tpl-form-border-form">
                                             <input type="text" class="am-form-field" name="search"
-                                                   placeholder="请输入商品名称/用户昵称"
+                                                   placeholder="请输入产品名称/用户昵称"
                                                    value="<?= $request->get('search') ?>">
                                             <div class="am-input-group-btn">
                                                 <button class="am-btn am-btn-default am-icon-search"
@@ -40,8 +40,8 @@
                                 <th>ID</th>
                                 <th>用户头像</th>
                                 <th>用户昵称</th>
-                                <th>商品图片</th>
-                                <th>商品名称</th>
+                                <th>产品图片</th>
+                                <th>产品名称</th>
                                 <th>收藏时间</th>
                                 <th>操作</th>
                             </tr>
@@ -64,7 +64,7 @@
                                         <a href="<?= $item['goods']['image'][0]['file_path'] ?>"
                                            title="点击查看大图" target="_blank">
                                             <img src="<?= $item['goods']['image'][0]['file_path'] ?>"
-                                                 width="70" height="70" alt="商品图片">
+                                                 width="70" height="70" alt="产品图片">
                                         </a>
                                     </td>
                                     <td class="am-text-middle">
@@ -107,7 +107,7 @@
 
         // 删除元素
         var url = "<?= url('apps.wow.shoping/delete') ?>";
-        $('.item-delete').delete('id', url, '取消后，用户好物圈中将不再显示该商品，确定吗？');
+        $('.item-delete').delete('id', url, '取消后，用户好物圈中将不再显示该产品，确定吗？');
 
     });
 </script>

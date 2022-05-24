@@ -69,7 +69,7 @@ class ActiveTime extends Controller
     {
         // 场次详情
         $model = ActiveTimeModel::detail($id, ['active']);
-        // 当前场次关联的商品
+        // 当前场次关联的产品
         $goodsList = $model->getGoodsListByActiveTimeId($id);
         if (!$this->request->isAjax()) {
             return $this->fetch('edit', compact('model', 'goodsList'));

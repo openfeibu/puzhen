@@ -21,7 +21,7 @@ class Banner extends BannerModel
         // 开启事务
         $this->startTrans();
         try {
-            // 添加商品
+            // 添加产品
             $this->allowField(true)->save($data);
             $this->commit();
             return true;

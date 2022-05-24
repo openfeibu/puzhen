@@ -15,7 +15,7 @@ use app\common\enum\order\OrderSource as OrderSourceEnum;
 class Order extends Basics
 {
     /**
-     * 获取某商品的购买件数
+     * 获取某产品的购买件数
      * @param $userId
      * @param $goodsId
      * @return float|int

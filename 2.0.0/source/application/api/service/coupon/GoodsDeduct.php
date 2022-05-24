@@ -10,7 +10,7 @@ class GoodsDeduct
 
     public function setGoodsCouponMoney($goodsList, $reducedMoney)
     {
-        // 统计订单商品总金额,(单位分)
+        // 统计订单产品总金额,(单位分)
         $orderTotalPrice = 0;
         foreach ($goodsList as &$goods) {
             $goods['total_price'] *= 100;
@@ -20,9 +20,9 @@ class GoodsDeduct
         $this->setActualReducedMoney($reducedMoney, $orderTotalPrice);
         // 实际抵扣金额为0，
         if ($this->actualReducedMoney > 0) {
-            // 计算商品的价格权重
+            // 计算产品的价格权重
             $goodsList = $this->getGoodsListWeight($goodsList, $orderTotalPrice);
-            // 计算商品优惠券抵扣金额
+            // 计算产品优惠券抵扣金额
             $this->setGoodsListCouponMoney($goodsList);
             // 总抵扣金额
             $totalCouponMoney = helper::getArrayColumnSum($goodsList, 'coupon_money');

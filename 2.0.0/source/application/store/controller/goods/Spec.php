@@ -7,7 +7,7 @@ use app\store\model\Spec as SpecModel;
 use app\store\model\SpecValue as SpecValueModel;
 
 /**
- * 商品规格控制器
+ * 产品规格控制器
  * Class Spec
  * @package app\store\controller
  */

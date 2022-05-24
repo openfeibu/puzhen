@@ -6,14 +6,14 @@ use app\factory\controller\Controller;
 use app\factory\model\Category as CategoryModel;
 
 /**
- * 商品分类
+ * 产品分类
  * Class Category
  * @package app\factory\controller\goods
  */
 class Category extends Controller
 {
     /**
-     * 商品分类列表
+     * 产品分类列表
      * @return mixed
      */
     public function index()
@@ -24,7 +24,7 @@ class Category extends Controller
     }
 
     /**
-     * 删除商品分类
+     * 删除产品分类
      * @param $category_id
      * @return array|bool
      * @throws \think\Exception
@@ -40,7 +40,7 @@ class Category extends Controller
     }
 
     /**
-     * 添加商品分类
+     * 添加产品分类
      * @return array|mixed
      */
     public function add()
@@ -59,7 +59,7 @@ class Category extends Controller
     }
 
     /**
-     * 编辑商品分类
+     * 编辑产品分类
      * @param $category_id
      * @return array|mixed
      * @throws \think\exception\DbException

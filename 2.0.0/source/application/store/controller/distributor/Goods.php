@@ -11,14 +11,14 @@ use app\store\model\Category as CategoryModel;
 use app\store\model\Distributor as DistributorModel;
 
 /**
- * 服务网点商品管理
+ * 服务网点产品管理
  * Class Goods
  * @package app\store\controller\distributor
  */
 class Goods extends Controller
 {
     /**
-     * 商品列表
+     * 产品列表
      * @param string $search
      * @return mixed
      * @throws \think\db\exception\DataNotFoundException
@@ -29,7 +29,7 @@ class Goods extends Controller
     {
         $model = new DistributorGoodsModel;
         $list = $model->getList(array_merge(['status' => -1], $this->request->param()));
-        // 商品分类
+        // 产品分类
         $catgory = CategoryModel::getCacheTree();
         $factoryList = FactoryModel::getAllList();
         $distributorList = DistributorModel::getAllList();
@@ -52,14 +52,14 @@ class Goods extends Controller
 
 
     /**
-     * 删除商品
+     * 删除产品
      * @param $id
      * @return array
      * @throws \think\exception\DbException
      */
     public function delete($id)
     {
-        // 商品详情
+        // 产品详情
         $model = DistributorGoodsModel::detail($id);
 
         if (!$model->delete()) {

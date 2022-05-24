@@ -3,7 +3,7 @@
         <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
             <div class="widget am-cf">
                 <div class="widget-head am-cf">
-                    <div class="widget-title a m-cf">茶艺机列表</div>
+                    <div class="widget-title a m-cf">茶电器列表</div>
                 </div>
                 <div class="widget-body am-fr">
                     <!-- 工具栏 -->
@@ -27,7 +27,7 @@
                                     <div class="am-form-group am-fl">
                                         <div class="am-input-group am-input-group-sm tpl-form-border-form">
                                             <input type="text" class="am-form-field" name="search"
-                                                   placeholder="请输入茶艺机名称/型号"
+                                                   placeholder="请输入茶电器名称/型号"
                                                    value="<?= $request->get('search') ?>">
                                             <div class="am-input-group-btn">
                                                 <button class="am-btn am-btn-default am-icon-search"
@@ -44,10 +44,10 @@
                          tpl-table-black am-text-nowrap">
                             <thead>
                             <tr>
-                                <th>茶艺机ID</th>
-                                <th>茶艺机名称</th>
-                                <th>茶艺机型号</th>
-                                <th>茶艺机图片</th>
+                                <th>茶电器ID</th>
+                                <th>茶电器名称</th>
+                                <th>茶电器型号</th>
+                                <th>茶电器图片</th>
                                 <th>创建时间</th>
                                 <th>操作</th>
                             </tr>

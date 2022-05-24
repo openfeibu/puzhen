@@ -101,9 +101,9 @@ class Collection extends CollectionModel
                     ]);
                 foreach ($list as &$collection)
                 {
-                    // 商品主图
+                    // 产品主图
                     $collection['collectionable']['goods_image'] = $collection['collectionable']['image'][0]['file_path'];
-                    // 商品默认规格
+                    // 产品默认规格
                     $collection['collectionable']['goods_sku'] = $collection['collectionable']['sku'][0];
                     $collection['collectionable']->hidden(['category', 'content', 'image', 'sku']);
                 }

@@ -12,7 +12,7 @@ class Goods extends Base
     // 砍价活动信息
     private $active;
 
-    // 商品信息
+    // 产品信息
     private $goods;
 
     // 用户id
@@ -30,7 +30,7 @@ class Goods extends Base
         parent::__construct();
         // 砍价活动信息
         $this->active = $active;
-        // 商品信息
+        // 产品信息
         $this->goods = $goods;
         // 当前用户id
         $this->user_id = $user ? $user['user_id'] : 0;
@@ -50,9 +50,9 @@ class Goods extends Base
         }
         // 小程序id
         $wxappId = $this->active['wxapp_id'];
-        // 商品海报背景图
+        // 产品海报背景图
         $backdrop = __DIR__ . '/../resource/goods_bg.png';
-        // 下载商品首图
+        // 下载产品首图
         $goodsUrl = $this->saveTempImage($wxappId, $this->goods['goods_image'], 'goods');
         // 小程序码参数
         $scene = "aid:{$this->active['active_id']},uid:" . ($this->user_id ?: '');
@@ -78,18 +78,18 @@ class Goods extends Base
         $fontPath = Grafika::fontsDir() . '/' . 'st-heiti-light.ttc';
         // 打开海报背景图
         $editor->open($backdropImage, $backdrop);
-        // 打开商品图片
+        // 打开产品图片
         $editor->open($goodsImage, $goodsUrl);
-        // 重设商品图片宽高
+        // 重设产品图片宽高
         $editor->resizeExact($goodsImage, 690, 690);
-        // 商品图片添加到背景图
+        // 产品图片添加到背景图
         $editor->blend($backdropImage, $goodsImage, 'normal', 1.0, 'top-left', 30, 30);
-        // 商品名称处理换行
+        // 产品名称处理换行
         $fontSize = 30;
         $goodsName = $this->wrapText($fontSize, 0, $fontPath, $this->goods['goods_name'], 680, 2);
-        // 写入商品名称
+        // 写入产品名称
         $editor->text($backdropImage, $goodsName, $fontSize, 30, 750, new Color('#333333'), $fontPath);
-        // 写入商品价格
+        // 写入产品价格
         $editor->text($backdropImage, $this->active['floor_price'], 38, 62, 964, new Color('#ff4444'));
         // 打开小程序码
         $editor->open($qrcodeImage, $qrcode);

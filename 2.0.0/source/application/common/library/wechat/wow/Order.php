@@ -85,7 +85,7 @@ class Order extends WxBase
     }
 
     /**
-     * 删除商品收藏
+     * 删除产品收藏
      * @param string $openId
      * @param string $orderId
      * @return bool

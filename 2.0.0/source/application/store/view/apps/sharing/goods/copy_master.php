@@ -11,18 +11,18 @@
                                 <div class="widget-title am-fl">基本信息</div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">商品名称 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">产品名称 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <input type="text" class="tpl-form-input" name="goods[goods_name]"
                                            value="<?= $model['goods_name'] ?>" required>
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">商品分类 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">产品分类 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <select name="goods[category_id]" required
                                             data-am-selected="{searchBox: 1, btnSize: 'sm',
-                                             placeholder:'请选择商品分类', maxHeight: 400}">
+                                             placeholder:'请选择产品分类', maxHeight: 400}">
                                         <option value=""></option>
                                         <?php if (isset($catgory)): foreach ($catgory as $first): ?>
                                             <option value="<?= $first['category_id'] ?>"><?= $first['name'] ?></option>
@@ -36,7 +36,7 @@
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">商品图片 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">产品图片 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <div class="am-form-file">
                                         <button type="button"
@@ -62,11 +62,11 @@
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">商品卖点 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">产品卖点 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <input type="text" class="tpl-form-input" name="goods[selling_point]"
                                            value="<?= $model['selling_point'] ?>">
-                                    <small>选填，商品卖点简述，例如：此款商品美观大方 性价比较高 不容错过</small>
+                                    <small>选填，产品卖点简述，例如：此款产品美观大方 性价比较高 不容错过</small>
                                 </div>
                             </div>
 
@@ -110,7 +110,7 @@
                                 <div class="widget-title am-fl">规格/库存</div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">商品规格 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">产品规格 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <label class="am-radio-inline">
                                         <input type="radio" name="goods[spec_type]" value="10" data-am-ucheck
@@ -125,7 +125,7 @@
                                 </div>
                             </div>
 
-                            <!-- 商品多规格 -->
+                            <!-- 产品多规格 -->
                             <div id="many-app" v-cloak class="goods-spec-many am-form-group"
                                  v-bind:style="{display: '<?= $model['spec_type'] == 20 ? 'block' : 'none' ?>'}">
                                 <div class="goods-spec-box am-u-sm-9 am-u-sm-push-2 am-u-end">
@@ -185,7 +185,7 @@
                                         </div>
                                     </div>
 
-                                    <!-- 商品多规格sku信息 -->
+                                    <!-- 产品多规格sku信息 -->
                                     <div v-if="spec_list.length > 0" class="goods-sku am-scrollable-horizontal">
                                         <!-- 分割线 -->
                                         <div class="goods-spec-line am-margin-top-lg am-margin-bottom-lg"></div>
@@ -296,11 +296,11 @@
                                 </div>
                             </div>
 
-                            <!-- 商品单规格 -->
+                            <!-- 产品单规格 -->
                             <div class="goods-spec-single"
                                  style="display: <?= $model['spec_type'] == 10 ? 'block' : 'none' ?>;">
                                 <div class="am-form-group">
-                                    <label class="am-u-sm-3 am-u-lg-2 am-form-label">商品编码 </label>
+                                    <label class="am-u-sm-3 am-u-lg-2 am-form-label">产品编码 </label>
                                     <div class="am-u-sm-9 am-u-end">
                                         <input type="text" class="tpl-form-input" name="goods[sku][goods_no]"
                                                value="<?= $model['sku'][0]['goods_no'] ?>">
@@ -322,7 +322,7 @@
                                     </div>
                                 </div>
                                 <div class="am-form-group">
-                                    <label class="am-u-sm-3 am-u-lg-2 am-form-label">商品划线价 </label>
+                                    <label class="am-u-sm-3 am-u-lg-2 am-form-label">产品划线价 </label>
                                     <div class="am-u-sm-9 am-u-end">
                                         <input type="number" min="0" class="tpl-form-input"
                                                name="goods[sku][line_price]"
@@ -337,7 +337,7 @@
                                     </div>
                                 </div>
                                 <div class="am-form-group">
-                                    <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">商品重量(Kg) </label>
+                                    <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">产品重量(Kg) </label>
                                     <div class="am-u-sm-9 am-u-end">
                                         <input type="number" class="tpl-form-input" name="goods[sku][goods_weight]"
                                                value="<?= $model['sku'][0]['goods_weight'] ?>" required>
@@ -362,10 +362,10 @@
                             </div>
 
                             <div class="widget-head am-cf">
-                                <div class="widget-title am-fl">商品详情</div>
+                                <div class="widget-title am-fl">产品详情</div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">商品详情 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">产品详情 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <!-- 加载编辑器的容器 -->
                                     <textarea id="container" name="goods[content]"><?= $model['content'] ?></textarea>
@@ -393,7 +393,7 @@
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">商品状态 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">产品状态 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <label class="am-radio-inline">
                                         <input type="radio" name="goods[goods_status]" value="10" data-am-ucheck
@@ -415,7 +415,7 @@
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">商品排序 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">产品排序 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <input type="number" class="tpl-form-input" name="goods[goods_sort]"
                                            value="<?= $model['goods_sort'] ?>" required>
@@ -423,7 +423,7 @@
                                 </div>
                             </div>
 
-                            <!-- 商品积分设置 -->
+                            <!-- 产品积分设置 -->
                             <div class="widget-head am-cf">
                                 <div class="widget-title am-fl">积分设置</div>
                             </div>
@@ -484,7 +484,7 @@
                                         关闭
                                     </label>
                                     <div class="help-block">
-                                        <small>如果不开启会员折扣，该商品则不享受会员等级折扣价</small>
+                                        <small>如果不开启会员折扣，该产品则不享受会员等级折扣价</small>
                                     </div>
                                 </div>
                             </div>
@@ -678,7 +678,7 @@
             }
         });
 
-        // 注册商品多规格组件
+        // 注册产品多规格组件
         var specMany = new GoodsSpec({
             el: '#many-app',
             baseData: <?= $specData ?>
@@ -706,7 +706,7 @@
                 var specType = $('input:radio[name="goods[spec_type]"]:checked').val();
                 if (specType === '20') {
                     var isEmpty = specMany.appVue.isEmptySkuList();
-                    isEmpty === true && layer.msg('商品规格不能为空');
+                    isEmpty === true && layer.msg('产品规格不能为空');
                     return !isEmpty;
                 }
                 return true;

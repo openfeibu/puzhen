@@ -33,12 +33,12 @@
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3  am-u-lg-2 am-form-label"> 不参与包邮的商品 </label>
+                                <label class="am-u-sm-3  am-u-lg-2 am-form-label"> 不参与包邮的产品 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <div class="widget-become-goods am-form-file am-margin-top-xs">
                                         <button type="button" @click.stop="onSelectGoods"
                                                 class="j-selectGoods upload-file am-btn am-btn-secondary am-radius">
-                                            <i class="am-icon-cloud-upload"></i> 选择商品
+                                            <i class="am-icon-cloud-upload"></i> 选择产品
                                         </button>
                                         <div class="widget-goods-list uploader-list am-cf">
                                             <div v-for="(item, index) in goodsList" class="file-item">
@@ -145,7 +145,7 @@
         var app = new Vue({
             el: '#app',
             data: {
-                // 商品列表
+                // 产品列表
                 goodsList: <?= json_encode($goodsList) ?>,
                 // 所有地区
                 regions: <?= json_encode($regionData) ?>,
@@ -184,11 +184,11 @@
                     });
                 },
 
-                // 选择商品
+                // 选择产品
                 onSelectGoods: function () {
                     var app = this;
                     $.selectData({
-                        title: '选择商品',
+                        title: '选择产品',
                         uri: 'goods/lists&status=10',
                         duplicate: false,
                         dataIndex: 'goods_id',
@@ -207,7 +207,7 @@
                     });
                 },
 
-                // 删除商品
+                // 删除产品
                 onDeleteGoods: function (index) {
                     var app = this;
                     return app.goodsList.splice(index, 1);

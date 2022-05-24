@@ -120,7 +120,7 @@ class Shop extends ShopModel
         if (!empty($shopIds)) {
             $this->orderRaw('field(shop_id, ' . implode(',', $shopIds) . ')');
         }
-        // 获取商品列表数据
+        // 获取产品列表数据
         return $this->with(['logo'])
             ->where('is_delete', '=', '0')
             ->where('status', '=', '1')

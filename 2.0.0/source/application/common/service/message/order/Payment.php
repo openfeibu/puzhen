@@ -89,14 +89,14 @@ class Payment extends Basics
                 $template['keywords'][1] => ['value' => format_time($orderInfo['pay_time'])],
                 // 订单金额
                 $template['keywords'][2] => ['value' => $orderInfo['pay_price']],
-                // 商品名称
+                // 产品名称
                 $template['keywords'][3] => ['value' => $this->getFormatGoodsName($orderInfo['goods'])],
             ]
         ]);
     }
 
     /**
-     * 格式化商品名称
+     * 格式化产品名称
      * @param $goodsData
      * @return string
      */

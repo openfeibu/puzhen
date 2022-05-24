@@ -83,7 +83,7 @@ class Order
         if (!empty($orderIds)) {
             $OrderGoodsModel = new OrderGoodsModel;
             foreach ($list as &$order) {
-                // 回退商品库存
+                // 回退产品库存
                 $OrderGoodsModel->backGoodsStock($order['goods'], false);
                 // 回退用户优惠券
                 $order['coupon_id'] > 0 && UserCouponModel::setIsUse($order['coupon_id'], false);

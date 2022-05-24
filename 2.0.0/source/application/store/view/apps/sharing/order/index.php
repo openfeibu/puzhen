@@ -133,7 +133,7 @@ use app\common\enum\DeliveryType as DeliveryTypeEnum;
                         am-text-nowrap am-margin-bottom-xs">
                             <thead>
                             <tr>
-                                <th width="20%" class="goods-detail">商品信息</th>
+                                <th width="20%" class="goods-detail">产品信息</th>
                                 <th>订单类型</th>
                                 <th width="10%">单价/数量</th>
                                 <th width="10%">实付款</th>

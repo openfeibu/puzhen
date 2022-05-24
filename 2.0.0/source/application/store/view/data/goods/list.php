@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/common/css/amazeui.min.css"/>
     <link rel="stylesheet" href="assets/store/css/app.css?v=<?= $version ?>"/>
     <script src="assets/common/js/jquery.min.js"></script>
-    <title>商品列表</title>
+    <title>产品列表</title>
 </head>
 <body class="select-data">
 <!-- 工具栏 -->
@@ -19,7 +19,7 @@
             <div class="am-form-group am-fl">
                 <?php $categoryId = $request->get('category_id') ?: null; ?>
                 <select name="category_id"
-                        data-am-selected="{searchBox: 1, btnSize: 'sm',  placeholder: '商品分类', maxHeight: 400}">
+                        data-am-selected="{searchBox: 1, btnSize: 'sm',  placeholder: '产品分类', maxHeight: 400}">
                     <option value=""></option>
                     <?php if (isset($catgory)): foreach ($catgory as $first): ?>
                         <option value="<?= $first['category_id'] ?>"
@@ -50,7 +50,7 @@
             <div class="am-form-group am-fl">
                 <?php $status = $request->get('status') ?: null; ?>
                 <select name="status"
-                        data-am-selected="{btnSize: 'sm', placeholder: '商品状态'}">
+                        data-am-selected="{btnSize: 'sm', placeholder: '产品状态'}">
                     <option value=""></option>
                     <option value="10"
                         <?= $status == 10 ? 'selected' : '' ?>>上架
@@ -63,7 +63,7 @@
             <div class="am-form-group am-fl">
                 <div class="am-input-group am-input-group-sm tpl-form-border-form">
                     <input type="text" class="am-form-field" name="search"
-                           placeholder="请输入商品名称"
+                           placeholder="请输入产品名称"
                            value="<?= $request->get('search') ?>">
                     <div class="am-input-group-btn">
                         <button class="am-btn am-btn-default am-icon-search"
@@ -83,11 +83,11 @@
                     <input data-am-ucheck data-check="all" type="checkbox">
                 </label>
             </th>
-            <th>商品ID</th>
+            <th>产品ID</th>
             <th>工厂</th>
-            <th>商品图片</th>
-            <th>商品名称</th>
-            <th>商品分类</th>
+            <th>产品图片</th>
+            <th>产品名称</th>
+            <th>产品分类</th>
             <th>添加时间</th>
         </tr>
         </thead>
@@ -114,7 +114,7 @@
                     <a href="<?= $item['goods_image'] ?>"
                        title="点击查看大图" target="_blank">
                         <img src="<?= $item['goods_image'] ?>"
-                             width="50" height="50" alt="商品图片">
+                             width="50" height="50" alt="产品图片">
                     </a>
                 </td>
                 <td class="am-text-middle">

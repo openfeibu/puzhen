@@ -399,7 +399,7 @@ class Order extends OrderModel
             if ($data['is_cancel'] == true) {
                 // 执行退款操作
                 (new RefundService)->execute($this);
-                // 回退商品库存
+                // 回退产品库存
                 (new OrderGoods)->backGoodsStock($this['goods'], true);
                 // 回退用户优惠券
                 $this['coupon_id'] > 0 && UserCouponModel::setIsUse($this['coupon_id'], false);

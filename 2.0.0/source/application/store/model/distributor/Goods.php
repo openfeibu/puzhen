@@ -7,7 +7,7 @@ use app\store\service\Goods as GoodsService;
 use app\store\model\Category;
 
 /**
- * 服务网点-商品模型
+ * 服务网点-产品模型
  * Class Goods
  * @package app\store\model\sharp
  */
@@ -52,7 +52,7 @@ class Goods extends GoodsModel
     {
         if ($scene === 'add') {
             if (!isset($data['goods_id']) || empty($data['goods_id'])) {
-                $this->error = '请选择商品';
+                $this->error = '请选择产品';
                 return false;
             }
         }

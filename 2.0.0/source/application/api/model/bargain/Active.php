@@ -91,9 +91,9 @@ class Active extends ActiveModel
      */
     private function getList($param)
     {
-        // 商品列表获取条件
+        // 产品列表获取条件
         $params = array_merge([
-            'status' => 1,         // 商品状态
+            'status' => 1,         // 产品状态
             'sortType' => 'all',    // 排序类型
             'sortPrice' => false,   // 价格排序 高低
             'listRows' => 15,       // 每页数量
@@ -116,7 +116,7 @@ class Active extends ActiveModel
             ->paginate($params['listRows'], false, [
                 'query' => \request()->request()
             ]);
-        // 设置商品数据
+        // 设置产品数据
         $list = GoodsService::setGoodsData($list);
         // 整理正在砍价的助力信息
         $list = $this->setHelpsData($list);
@@ -152,7 +152,7 @@ class Active extends ActiveModel
     {
         $model = static::detail($activeId);
         if (empty($model) || $model['is_delete'] == true || $model['status'] == false) {
-            $this->error = '很抱歉，该砍价商品不存在或已下架';
+            $this->error = '很抱歉，该砍价产品不存在或已下架';
             return false;
         }
         return $model;

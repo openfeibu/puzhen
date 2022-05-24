@@ -269,7 +269,7 @@ class WxappPage extends BaseModel
                 'dataNum' => 4
             ],
             'goods' => [
-                'name' => '商品组',
+                'name' => '产品组',
                 'type' => 'goods',
                 'params' => [
                     'source' => 'auto', // choice; auto
@@ -294,55 +294,55 @@ class WxappPage extends BaseModel
                 // '自动获取' => 默认数据
                 'defaultData' => [
                     [
-                        'goods_name' => '此处显示商品名称',
+                        'goods_name' => '此处显示产品名称',
                         'image' => self::$base_url . 'assets/store/img/diy/goods/01.png',
                         'goods_price' => '99.00',
                         'line_price' => '139.00',
-                        'selling_point' => '此款商品美观大方 不容错过',
+                        'selling_point' => '此款产品美观大方 不容错过',
                         'goods_sales' => '100',
                     ],
                     [
-                        'goods_name' => '此处显示商品名称',
+                        'goods_name' => '此处显示产品名称',
                         'image' => self::$base_url . 'assets/store/img/diy/goods/01.png',
                         'goods_price' => '99.00',
                         'line_price' => '139.00',
-                        'selling_point' => '此款商品美观大方 不容错过',
+                        'selling_point' => '此款产品美观大方 不容错过',
                         'goods_sales' => '100',
                     ],
                     [
-                        'goods_name' => '此处显示商品名称',
+                        'goods_name' => '此处显示产品名称',
                         'image' => self::$base_url . 'assets/store/img/diy/goods/01.png',
                         'goods_price' => '99.00',
                         'line_price' => '139.00',
-                        'selling_point' => '此款商品美观大方 不容错过',
+                        'selling_point' => '此款产品美观大方 不容错过',
                         'goods_sales' => '100',
                     ],
                     [
-                        'goods_name' => '此处显示商品名称',
+                        'goods_name' => '此处显示产品名称',
                         'image' => self::$base_url . 'assets/store/img/diy/goods/01.png',
                         'goods_price' => '99.00',
                         'line_price' => '139.00',
-                        'selling_point' => '此款商品美观大方 不容错过',
+                        'selling_point' => '此款产品美观大方 不容错过',
                         'goods_sales' => '100',
                     ]
                 ],
                 // '手动选择' => 默认数据
                 'data' => [
                     [
-                        'goods_name' => '此处显示商品名称',
+                        'goods_name' => '此处显示产品名称',
                         'image' => self::$base_url . 'assets/store/img/diy/goods/01.png',
                         'goods_price' => '99.00',
                         'line_price' => '139.00',
-                        'selling_point' => '此款商品美观大方 不容错过',
+                        'selling_point' => '此款产品美观大方 不容错过',
                         'goods_sales' => '100',
                         'is_default' => true
                     ],
                     [
-                        'goods_name' => '此处显示商品名称',
+                        'goods_name' => '此处显示产品名称',
                         'image' => self::$base_url . 'assets/store/img/diy/goods/01.png',
                         'goods_price' => '99.00',
                         'line_price' => '139.00',
-                        'selling_point' => '此款商品美观大方 不容错过',
+                        'selling_point' => '此款产品美观大方 不容错过',
                         'goods_sales' => '100',
                         'is_default' => true
                     ]
@@ -372,7 +372,7 @@ class WxappPage extends BaseModel
                 ]
             ],
             'sharingGoods' => [
-                'name' => '拼团商品组',
+                'name' => '拼团产品组',
                 'type' => 'sharingGoods',
                 'params' => [
                     'source' => 'auto', // choice; auto
@@ -394,30 +394,30 @@ class WxappPage extends BaseModel
                 // '自动获取' => 默认数据
                 'defaultData' => [
                     [
-                        'goods_name' => '此处是拼团商品',
+                        'goods_name' => '此处是拼团产品',
                         'image' => self::$base_url . 'assets/store/img/diy/goods/01.png',
-                        'selling_point' => '此款商品美观大方 性价比较高 不容错过',
+                        'selling_point' => '此款产品美观大方 性价比较高 不容错过',
                         'sharing_price' => '99.00',
                         'line_price' => '139.00',
                     ],
                     [
-                        'goods_name' => '此处是拼团商品',
+                        'goods_name' => '此处是拼团产品',
                         'image' => self::$base_url . 'assets/store/img/diy/goods/01.png',
-                        'selling_point' => '此款商品美观大方 性价比较高 不容错过',
+                        'selling_point' => '此款产品美观大方 性价比较高 不容错过',
                         'goods_price' => '99.00',
                         'line_price' => '139.00',
                     ],
                     [
-                        'goods_name' => '此处是拼团商品',
+                        'goods_name' => '此处是拼团产品',
                         'image' => self::$base_url . 'assets/store/img/diy/goods/01.png',
-                        'selling_point' => '此款商品美观大方 性价比较高 不容错过',
+                        'selling_point' => '此款产品美观大方 性价比较高 不容错过',
                         'sharing_price' => '99.00',
                         'line_price' => '139.00',
                     ],
                     [
-                        'goods_name' => '此处是拼团商品',
+                        'goods_name' => '此处是拼团产品',
                         'image' => self::$base_url . 'assets/store/img/diy/goods/01.png',
-                        'selling_point' => '此款商品美观大方 性价比较高 不容错过',
+                        'selling_point' => '此款产品美观大方 性价比较高 不容错过',
                         'sharing_price' => '99.00',
                         'line_price' => '139.00',
                     ]
@@ -425,17 +425,17 @@ class WxappPage extends BaseModel
                 // '手动选择' => 默认数据
                 'data' => [
                     [
-                        'goods_name' => '此处是拼团商品',
+                        'goods_name' => '此处是拼团产品',
                         'image' => self::$base_url . 'assets/store/img/diy/goods/01.png',
-                        'selling_point' => '此款商品美观大方 性价比较高 不容错过',
+                        'selling_point' => '此款产品美观大方 性价比较高 不容错过',
                         'sharing_price' => '99.00',
                         'line_price' => '139.00',
                         'is_default' => true
                     ],
                     [
-                        'goods_name' => '此处是拼团商品',
+                        'goods_name' => '此处是拼团产品',
                         'image' => self::$base_url . 'assets/store/img/diy/goods/01.png',
-                        'selling_point' => '此款商品美观大方 性价比较高 不容错过',
+                        'selling_point' => '此款产品美观大方 性价比较高 不容错过',
                         'sharing_price' => '99.00',
                         'line_price' => '139.00',
                         'is_default' => true
@@ -443,7 +443,7 @@ class WxappPage extends BaseModel
                 ]
             ],
             'bargainGoods' => [
-                'name' => '砍价商品组',
+                'name' => '砍价产品组',
                 'type' => 'bargainGoods',
                 'params' => [
                     'source' => 'auto', // choice; auto
@@ -472,13 +472,13 @@ class WxappPage extends BaseModel
                 // '自动获取' => 默认数据
                 'defaultData' => [
                     [
-                        'goods_name' => '此处是砍价商品',
+                        'goods_name' => '此处是砍价产品',
                         'goods_image' => self::$base_url . 'assets/store/img/diy/goods/01.png',
                         'floor_price' => '0.01',
                         'original_price' => '139.00',
                     ],
                     [
-                        'goods_name' => '此处是砍价商品',
+                        'goods_name' => '此处是砍价产品',
                         'goods_image' => self::$base_url . 'assets/store/img/diy/goods/01.png',
                         'floor_price' => '0.01',
                         'original_price' => '139.00',
@@ -487,13 +487,13 @@ class WxappPage extends BaseModel
                 // '手动选择' => 默认数据
                 'data' => [
                     [
-                        'goods_name' => '此处是砍价商品',
+                        'goods_name' => '此处是砍价产品',
                         'goods_image' => self::$base_url . 'assets/store/img/diy/goods/01.png',
                         'floor_price' => '0.01',
                         'original_price' => '139.00',
                     ],
                     [
-                        'goods_name' => '此处是砍价商品',
+                        'goods_name' => '此处是砍价产品',
                         'goods_image' => self::$base_url . 'assets/store/img/diy/goods/01.png',
                         'floor_price' => '0.01',
                         'original_price' => '139.00',
@@ -501,7 +501,7 @@ class WxappPage extends BaseModel
                 ]
             ],
             'sharpGoods' => [
-                'name' => '秒杀商品组',
+                'name' => '秒杀产品组',
                 'type' => 'sharpGoods',
                 'params' => [
                     'showNum' => 6
@@ -518,19 +518,19 @@ class WxappPage extends BaseModel
                 // '手动选择' => 默认数据
                 'data' => [
                     [
-                        'goods_name' => '此处是秒杀商品',
+                        'goods_name' => '此处是秒杀产品',
                         'goods_image' => self::$base_url . 'assets/store/img/diy/goods/01.png',
                         'seckill_price' => '69.00',
                         'original_price' => '139.00',
                     ],
                     [
-                        'goods_name' => '此处是秒杀商品',
+                        'goods_name' => '此处是秒杀产品',
                         'goods_image' => self::$base_url . 'assets/store/img/diy/goods/01.png',
                         'seckill_price' => '69.00',
                         'original_price' => '139.00',
                     ],
                     [
-                        'goods_name' => '此处是秒杀商品',
+                        'goods_name' => '此处是秒杀产品',
                         'goods_image' => self::$base_url . 'assets/store/img/diy/goods/01.png',
                         'seckill_price' => '69.00',
                         'original_price' => '139.00',

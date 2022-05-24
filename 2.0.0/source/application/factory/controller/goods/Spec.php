@@ -7,7 +7,7 @@ use app\factory\model\Spec as SpecModel;
 use app\factory\model\SpecValue as SpecValueModel;
 
 /**
- * 商品规格控制器
+ * 产品规格控制器
  * Class Spec
  * @package app\factory\controller
  */

@@ -13,7 +13,7 @@ use app\common\library\wechat\WxBase;
 class Shoping extends WxBase
 {
     /**
-     * 导入商品收藏
+     * 导入产品收藏
      * @param string $openId
      * @param array $productList
      * @return bool
@@ -32,7 +32,7 @@ class Shoping extends WxBase
         // 执行请求
         $result = $this->post($url, $params);
         // 记录日志
-        $this->doLogs(['describe' => '新增好物圈商品收藏', 'url' => $url, 'params' => $params, 'result' => $result]);
+        $this->doLogs(['describe' => '新增好物圈产品收藏', 'url' => $url, 'params' => $params, 'result' => $result]);
         // 返回结果
         $response = $this->jsonDecode($result);
         if (!isset($response['errcode'])) {
@@ -47,7 +47,7 @@ class Shoping extends WxBase
     }
 
     /**
-     * 删除商品收藏
+     * 删除产品收藏
      * @param $openId
      * @param $productList
      * @return bool
@@ -66,7 +66,7 @@ class Shoping extends WxBase
         // 执行请求
         $result = $this->post($url, $this->jsonEncode($params));
         // 记录日志
-        $this->doLogs(['describe' => '删除好物圈商品收藏', 'url' => $url, 'params' => $params, 'result' => $result]);
+        $this->doLogs(['describe' => '删除好物圈产品收藏', 'url' => $url, 'params' => $params, 'result' => $result]);
         // 返回结果
         $response = $this->jsonDecode($result);
         if (!isset($response['errcode'])) {

@@ -10,18 +10,18 @@
                             </div>
 
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 选择商品 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 选择产品 </label>
                                 <div class="am-u-sm-9 am-u-md-6 am-u-lg-5 am-u-end">
                                     <div class="am-form-file am-margin-top-xs">
                                         <button type="button"
                                                 class="j-selectGoods upload-file am-btn am-btn-secondary am-radius">
-                                            <i class="am-icon-cloud-upload"></i> 选择商品
+                                            <i class="am-icon-cloud-upload"></i> 选择产品
                                         </button>
                                         <div class="widget-goods-list uploader-list am-cf">
                                         </div>
                                     </div>
                                     <div class="help-block">
-                                        <small>注：砍价活动仅支持单规格商品 或 同价的多规格商品</small>
+                                        <small>注：砍价活动仅支持单规格产品 或 同价的多规格产品</small>
                                     </div>
                                 </div>
                             </div>
@@ -59,7 +59,7 @@
                                 <div class="am-u-sm-9 am-u-md-6 am-u-lg-5 am-u-end">
                                     <input type="number" min="0.01" class="tpl-form-input" name="active[floor_price]"
                                            placeholder="" required>
-                                    <small>砍价商品的最低价格，单位：元</small>
+                                    <small>砍价产品的最低价格，单位：元</small>
                                 </div>
                             </div>
 
@@ -170,7 +170,7 @@
     </div>
 </div>
 
-<!-- 商品列表 -->
+<!-- 产品列表 -->
 <script id="tpl-goods-list-item" type="text/template">
     {{ each $data }}
     <div class="file-item">
@@ -187,10 +187,10 @@
 <script>
     $(function () {
 
-        // 选择商品
+        // 选择产品
         var $goodsList = $('.widget-goods-list');
         $('.j-selectGoods').selectData({
-            title: '选择商品',
+            title: '选择产品',
             uri: 'goods/lists',
             dataIndex: 'goods_id',
             done: function (data) {

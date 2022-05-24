@@ -81,7 +81,7 @@
                                             <?php endif; ?>
                                             <?php if (checkPrivilege('distributor.goods/add')): ?>
                                                 <a href="<?= url('distributor.goods/add', ['distributor_id' => $item['distributor_id']]) ?>">
-                                                    <i class="am-icon-pencil"></i> 关联商品
+                                                    <i class="am-icon-pencil"></i> 关联产品
                                                 </a>
                                             <?php endif; ?>
                                             <?php if (checkPrivilege('distributor/delete')): ?>

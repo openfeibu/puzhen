@@ -87,9 +87,9 @@ class Active extends ActiveModel
             $this->error = '该活动日期已存在';
             return false;
         }
-//        // 验证是否选择商品
+//        // 验证是否选择产品
 //        if (!isset($data['sharp_goods']) || empty($data['sharp_goods'])) {
-//            $this->error = '您还没有选择秒杀商品';
+//            $this->error = '您还没有选择秒杀产品';
 //            return false;
 //        }
         return true;
@@ -108,7 +108,7 @@ class Active extends ActiveModel
     }
 
     /**
-     * 修改商品状态
+     * 修改产品状态
      * @param $state
      * @return false|int
      */
@@ -123,7 +123,7 @@ class Active extends ActiveModel
      */
     public function setDelete()
     {
-        // 同步删除场次和商品关联
+        // 同步删除场次和产品关联
         (new ActiveTimeModel)->onDeleteByActiveId($this['active_id']);
         // 将该活动设置为已删除
         return $this->allowField(true)->save(['is_delete' => 1]);

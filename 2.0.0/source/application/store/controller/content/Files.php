@@ -60,7 +60,7 @@ class Files extends Controller
      */
     public function restore($file_id)
     {
-        // 商品详情
+        // 产品详情
         $model = UploadFileModel::detail($file_id);
         if (!$model->setRecycle(false)) {
             return $this->renderError('操作失败');
@@ -77,7 +77,7 @@ class Files extends Controller
      */
     public function delete($file_id)
     {
-        // 商品详情
+        // 产品详情
         $model = UploadFileModel::detail($file_id);
         if (!$model->setDelete()) {
             return $this->renderError($model->getError() ?: '操作失败');

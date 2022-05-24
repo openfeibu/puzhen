@@ -7,7 +7,7 @@ use app\store\model\sharing\Goods as GoodsModel;
 use app\store\model\sharing\Category as CategoryModel;
 
 /**
- * 商品数据控制器
+ * 产品数据控制器
  * Class Goods
  * @package app\store\controller\data
  */
@@ -31,15 +31,15 @@ class Goods extends Controller
     }
 
     /**
-     * 商品列表
+     * 产品列表
      * @return mixed
      * @throws \think\exception\DbException
      */
     public function lists()
     {
-        // 商品分类
+        // 产品分类
         $catgory = CategoryModel::getCacheTree();
-        // 商品列表
+        // 产品列表
         $list = $this->model->getList($this->request->param());
         return $this->fetch('list', compact('list', 'catgory'));
     }

@@ -7,14 +7,14 @@ use app\store\model\wow\Shoping as ShopingModel;
 use app\common\service\wechat\wow\Shoping as WowService;
 
 /**
- * 好物圈-商品收藏
+ * 好物圈-产品收藏
  * Class Shoping
  * @package app\store\controller\apps\wow
  */
 class Shoping extends Controller
 {
     /**
-     * 商品收藏记录
+     * 产品收藏记录
      * @param string $search
      * @return mixed
      * @throws \think\exception\DbException

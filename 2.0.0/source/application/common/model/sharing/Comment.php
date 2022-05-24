@@ -5,7 +5,7 @@ namespace app\common\model\sharing;
 use app\common\model\BaseModel;
 
 /**
- * 拼团商品评价模型
+ * 拼团产品评价模型
  * Class Comment
  * @package app\common\model\sharing
  */
@@ -23,7 +23,7 @@ class Comment extends BaseModel
     }
 
     /**
-     * 订单商品
+     * 订单产品
      * @return \think\model\relation\BelongsTo
      */
     public function OrderGoods()

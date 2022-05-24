@@ -71,7 +71,7 @@
                         am-text-nowrap am-margin-bottom-xs">
                             <thead>
                             <tr>
-                                <th width="24%" class="goods-detail">商品信息</th>
+                                <th width="24%" class="goods-detail">产品信息</th>
                                 <th width="10%">单价/数量</th>
                                 <th width="15%">付款价</th>
                                 <th>买家</th>

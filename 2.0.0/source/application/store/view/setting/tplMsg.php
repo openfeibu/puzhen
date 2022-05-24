@@ -45,7 +45,7 @@
                                     <input type="text" class="tpl-form-input" name="tplMsg[payment][template_id]"
                                            value="<?= $values['payment']['template_id'] ?>">
                                     <div class="help-block am-margin-top-xs">
-                                        <small>模板编号AT0009，关键词 (订单编号、支付时间、订单金额、商品名称)</small>
+                                        <small>模板编号AT0009，关键词 (订单编号、支付时间、订单金额、产品名称)</small>
                                     </div>
                                 </div>
                             </div>
@@ -81,7 +81,7 @@
                                 <div class="am-u-sm-9">
                                     <input type="text" class="tpl-form-input" name="tplMsg[delivery][template_id]"
                                            value="<?= $values['delivery']['template_id'] ?>">
-                                    <small>模板编号AT0007，关键词 (订单编号、商品信息、收货人、收货地址、物流公司、物流单号)</small>
+                                    <small>模板编号AT0007，关键词 (订单编号、产品信息、收货人、收货地址、物流公司、物流单号)</small>
                                 </div>
                             </div>
 
@@ -116,7 +116,7 @@
                                 <div class="am-u-sm-9">
                                     <input type="text" class="tpl-form-input" name="tplMsg[refund][template_id]"
                                            value="<?= $values['refund']['template_id'] ?>">
-                                    <small>模板编号AT0553，关键词 (售后类型、状态、订单号、商品名称、申请时间、申请原因)</small>
+                                    <small>模板编号AT0553，关键词 (售后类型、状态、订单号、产品名称、申请时间、申请原因)</small>
                                 </div>
                             </div>
                             <div class="am-form-group">

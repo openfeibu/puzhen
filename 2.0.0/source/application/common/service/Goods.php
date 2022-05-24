@@ -6,14 +6,14 @@ use app\common\library\helper;
 use app\common\model\Goods as GoodsModel;
 
 /**
- * 商品服务类
+ * 产品服务类
  * Class Goods
  * @package app\store\service
  */
 class Goods
 {
     /**
-     * 设置商品数据
+     * 设置产品数据
      * @param $data
      * @param bool $isMultiple
      * @param string $goodsIndex
@@ -25,7 +25,7 @@ class Goods
     public static function setGoodsData($data, $isMultiple = true, $goodsIndex = 'goods_id')
     {
         if (!$isMultiple) $dataSource = [&$data]; else $dataSource = &$data;
-        // 获取商品列表
+        // 获取产品列表
         $model = new GoodsModel;
         $goodsData = $model->getListByIds(helper::getArrayColumn($dataSource, $goodsIndex));
         $goodsList = helper::arrayColumn2Key($goodsData, 'goods_id');
@@ -37,13 +37,13 @@ class Goods
     }
 
     /**
-     * 商品多规格信息
+     * 产品多规格信息
      * @param GoodsModel|null $model
      * @return null|array
      */
     public static function getSpecData($model = null)
     {
-        // 商品sku数据
+        // 产品sku数据
         if (!is_null($model) && $model['spec_type'] == 20) {
             return $model->getManySpecData($model['spec_rel'], $model['sku']);
         }

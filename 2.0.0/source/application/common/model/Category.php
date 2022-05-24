@@ -6,7 +6,7 @@ use app\common\library\helper;
 use think\Cache;
 
 /**
- * 拼团商品分类模型
+ * 拼团产品分类模型
  * Class Category
  * @package app\common\model
  */

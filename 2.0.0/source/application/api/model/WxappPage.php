@@ -72,7 +72,7 @@ class WxappPage extends WxappPageModel
     }
 
     /**
-     * 商品组件：获取商品列表
+     * 产品组件：获取产品列表
      * @param $user
      * @param $item
      * @return array
@@ -80,7 +80,7 @@ class WxappPage extends WxappPageModel
      */
     private function getGoodsList($user, $item)
     {
-        // 获取商品数据
+        // 获取产品数据
         $model = new GoodsModel;
         if ($item['params']['source'] === 'choice') {
             // 数据来源：手动
@@ -96,7 +96,7 @@ class WxappPage extends WxappPageModel
             ], $user);
         }
         if ($goodsList->isEmpty()) return [];
-        // 格式化商品列表
+        // 格式化产品列表
         $data = [];
         foreach ($goodsList as $goods) {
             $data[] = [
@@ -116,7 +116,7 @@ class WxappPage extends WxappPageModel
     }
 
     /**
-     * 商品组件：获取拼团商品列表
+     * 产品组件：获取拼团产品列表
      * @param $user
      * @param $item
      * @return array
@@ -126,7 +126,7 @@ class WxappPage extends WxappPageModel
      */
     private function getSharingGoodsList($user, $item)
     {
-        // 获取商品数据
+        // 获取产品数据
         $model = new SharingGoodsModel;
         if ($item['params']['source'] === 'choice') {
             // 数据来源：手动
@@ -142,7 +142,7 @@ class WxappPage extends WxappPageModel
             ], $user);
         }
         if ($goodsList->isEmpty()) return [];
-        // 格式化商品列表
+        // 格式化产品列表
         $data = [];
         foreach ($goodsList as $goods) {
             $data[] = [
@@ -162,7 +162,7 @@ class WxappPage extends WxappPageModel
     }
 
     /**
-     * 商品组件：获取拼团商品列表
+     * 产品组件：获取拼团产品列表
      * @param $item
      * @return array
      * @throws \think\Exception
@@ -172,7 +172,7 @@ class WxappPage extends WxappPageModel
      */
     private function getBargainGoodsList($item)
     {
-        // 获取商品数据
+        // 获取产品数据
         $model = new BargainActiveModel;
         if ($item['params']['source'] === 'choice') {
             // 数据来源：手动
@@ -186,7 +186,7 @@ class WxappPage extends WxappPageModel
             ]);
         }
         if ($activeList->isEmpty()) return [];
-        // 格式化商品列表
+        // 格式化产品列表
         $data = [];
         foreach ($activeList as $item) {
             $data[] = [
@@ -204,7 +204,7 @@ class WxappPage extends WxappPageModel
     }
 
     /**
-     * 秒杀商品组件：获取秒杀活动
+     * 秒杀产品组件：获取秒杀活动
      * @param $item
      * @return array
      * @throws \think\db\exception\DataNotFoundException
@@ -213,9 +213,9 @@ class WxappPage extends WxappPageModel
      */
     private function getSharpGoodsList($item)
     {
-        // 获取商品数据
+        // 获取产品数据
         $service = new SharpActiveService;
-        // 获取秒杀活动及商品列表
+        // 获取秒杀活动及产品列表
         return $service->getSharpModular(['limit' => $item['params']['showNum']]);
     }
 
@@ -272,7 +272,7 @@ class WxappPage extends WxappPageModel
      */
     private function getShopList($item)
     {
-        // 获取商品数据
+        // 获取产品数据
         $model = new ShopModel;
         if ($item['params']['source'] === 'choice') {
             // 数据来源：手动
@@ -283,7 +283,7 @@ class WxappPage extends WxappPageModel
             $shopList = $model->getList(null, false, false, $item['params']['auto']['showNum']);
         }
         if ($shopList->isEmpty()) return [];
-        // 格式化商品列表
+        // 格式化产品列表
         $data = [];
         foreach ($shopList as $shop) {
             $data[] = [

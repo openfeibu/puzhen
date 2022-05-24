@@ -25,7 +25,7 @@
                                     <input type="text" class="tpl-form-input" name="submsg[order][payment][template_id]"
                                            value="<?= $values['order']['payment']['template_id'] ?>">
                                     <div class="help-block">
-                                        <small>关键词：[订单编号、下单时间、订单金额、商品名称]</small>
+                                        <small>关键词：[订单编号、下单时间、订单金额、产品名称]</small>
                                     </div>
                                 </div>
                             </div>
@@ -36,7 +36,7 @@
                                            name="submsg[order][delivery][template_id]"
                                            value="<?= $values['order']['delivery']['template_id'] ?>">
                                     <div class="help-block">
-                                        <small>关键词：[订单号、商品名称、收货人、收货地址、物流公司]</small>
+                                        <small>关键词：[订单号、产品名称、收货人、收货地址、物流公司]</small>
                                     </div>
                                 </div>
                             </div>
@@ -61,7 +61,7 @@
                                            name="submsg[sharing][active_status][template_id]"
                                            value="<?= $values['sharing']['active_status']['template_id'] ?>">
                                     <div class="help-block">
-                                        <small>关键词：[拼团商品、拼团价格、成团人数、拼团进度、温馨提示]</small>
+                                        <small>关键词：[拼团产品、拼团价格、成团人数、拼团进度、温馨提示]</small>
                                     </div>
                                 </div>
                             </div>

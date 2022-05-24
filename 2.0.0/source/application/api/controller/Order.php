@@ -55,7 +55,7 @@ class Order extends Controller
         if (!$this->validate->scene('buyNow')->check($params)) {
             return $this->renderError($this->validate->getError());
         }
-        // 立即购买：获取订单商品列表
+        // 立即购买：获取订单产品列表
         $model = new OrderModel;
         $goodsList = $model->getOrderGoodsListByNow(
             $params['goods_id'],
@@ -103,9 +103,9 @@ class Order extends Controller
         $params = $Checkout->setParam($this->getParam([
             'cart_ids' => '',
         ]));
-        // 商品结算信息
+        // 产品结算信息
         $CartModel = new CartModel($this->user);
-        // 购物车商品列表
+        // 购物车产品列表
         $goodsList = $CartModel->getList($params['cart_ids']);
         // 获取订单结算信息
         $orderInfo = $Checkout->onCheckout($this->user, $goodsList);
@@ -116,7 +116,7 @@ class Order extends Controller
         if (!$Checkout->createOrder($orderInfo)) {
             return $this->renderError($Checkout->getError() ?: '订单创建失败');
         }
-        // 移出购物车中已下单的商品
+        // 移出购物车中已下单的产品
         $CartModel->clearAll($params['cart_ids']);
         // 构建微信支付请求
         $payment = $Checkout->onOrderPayment();

@@ -5,7 +5,7 @@ namespace app\common\model\sharing;
 use app\common\model\BaseModel;
 
 /**
- * 拼团商品规格关系模型
+ * 拼团产品规格关系模型
  * Class GoodsSpecRel
  * @package app\common\model\sharing
  */

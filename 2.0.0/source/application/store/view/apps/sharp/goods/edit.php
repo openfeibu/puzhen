@@ -7,10 +7,10 @@
                     <div class="widget-body">
                         <fieldset>
                             <div class="widget-head am-cf">
-                                <div class="widget-title am-fl">编辑秒杀商品</div>
+                                <div class="widget-title am-fl">编辑秒杀产品</div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 商品信息 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 产品信息 </label>
                                 <div class="am-u-sm-9 am-u-md-6 am-u-lg-5 am-u-end">
                                     <div class="goods-detail">
                                         <div class="goods-image">
@@ -24,18 +24,18 @@
                                 </div>
                             </div>
 
-                            <!-- 商品单规格 -->
+                            <!-- 产品单规格 -->
                             <?php if ($goods['spec_type'] == 10): ?>
                                 <div class="goods-spec-single"
                                      style="display: <?= $goods['spec_type'] == 10 ? 'block' : 'none' ?>;">
                                     <div class="am-form-group">
-                                        <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 商品编码 </label>
+                                        <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 产品编码 </label>
                                         <div class="am-u-sm-9 am-u-md-6 am-u-lg-5 am-u-end">
                                             <div class="am-form--static"><?= $goods['goods_sku']['goods_no'] ?: '--' ?></div>
                                         </div>
                                     </div>
                                     <div class="am-form-group">
-                                        <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 商品售价 </label>
+                                        <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 产品售价 </label>
                                         <div class="am-u-sm-9 am-u-md-6 am-u-lg-5 am-u-end">
                                             <div class="am-form--static"><?= $goods['goods_sku']['goods_price'] ?></div>
                                         </div>
@@ -55,21 +55,21 @@
                                                    name="goods[sku][seckill_stock]"
                                                    value="<?= $model['goods_sku']['seckill_stock'] ?>" required>
                                             <div class="help-block">
-                                                <small>注：秒杀库存为独立库存，与主商品库存不同步</small>
+                                                <small>注：秒杀库存为独立库存，与主产品库存不同步</small>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             <?php endif; ?>
 
-                            <!-- 商品多规格 -->
+                            <!-- 产品多规格 -->
                             <?php if ($goods['spec_type'] == 20): ?>
                                 <div class="am-form-group am-padding-top">
-                                    <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">商品规格 </label>
+                                    <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">产品规格 </label>
                                     <div id="many-app" v-cloak class="goods-spec-many am-u-sm-9 am-u-end"
                                          style="display: block">
                                         <div class="goods-spec-box style-simplify">
-                                            <!-- 商品多规格sku信息 -->
+                                            <!-- 产品多规格sku信息 -->
                                             <div v-if="spec_list.length > 0" class="goods-sku am-scrollable-horizontal">
                                                 <!-- sku 批量设置 -->
                                                 <div class="spec-batch am-form-inline">
@@ -94,8 +94,8 @@
                                                     <tr>
                                                         <th v-for="item in spec_attr">{{ item.group_name }}</th>
                                                         <th>商家编码</th>
-                                                        <th>商品售价</th>
-                                                        <th>商品库存</th>
+                                                        <th>产品售价</th>
+                                                        <th>产品库存</th>
                                                         <th class="form-require">
                                                             秒杀价格
                                                         </th>
@@ -125,7 +125,7 @@
                                                     </tbody>
                                                 </table>
                                                 <div class="help-block">
-                                                    <small>注：秒杀库存为独立库存，与主商品库存不同步</small>
+                                                    <small>注：秒杀库存为独立库存，与主产品库存不同步</small>
                                                 </div>
                                             </div>
                                         </div>
@@ -148,7 +148,7 @@
                                     <!--                                        付款减库存-->
                                     <!--                                    </label>-->
                                     <div class="help-block">
-                                        <small>注：秒杀商品默认为下单减库存，可在 <a
+                                        <small>注：秒杀产品默认为下单减库存，可在 <a
                                                     href="<?= url('apps.sharp.setting/index') ?>">基础设置</a>
                                             中配置未支付订单自动关闭释放库存
                                         </small>
@@ -166,7 +166,7 @@
                                 </div>
                             </div>
                             <div class="am-form-group am-padding-top">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 商品状态 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 产品状态 </label>
                                 <div class="am-u-sm-9 am-u-md-6 am-u-lg-5 am-u-end">
                                     <label class="am-radio-inline">
                                         <input type="radio" name="goods[status]" value="1" data-am-ucheck
@@ -202,7 +202,7 @@
     </div>
 </div>
 
-<!-- 商品列表 -->
+<!-- 产品列表 -->
 <script id="tpl-goods-list-item" type="text/template">
     {{ each $data }}
     <div class="file-item">
@@ -219,7 +219,7 @@
 <script>
     $(function () {
 
-        // 注册商品多规格组件
+        // 注册产品多规格组件
         var specMany = new GoodsSpec({
             el: '#many-app',
             baseData: <?= \app\common\library\helper::jsonEncode($specData) ?>

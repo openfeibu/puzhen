@@ -23,7 +23,7 @@ class ActiveTime extends BaseModel
     }
 
     /**
-     * 当前场次下秒杀商品的数量
+     * 当前场次下秒杀产品的数量
      * @return \think\model\relation\HasMany
      */
     public function goods()

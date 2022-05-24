@@ -68,11 +68,11 @@ class Coupon extends Controller
         // 优惠券详情
         $model = CouponModel::detail($coupon_id);
         if (!$this->request->isAjax()) {
-            // 适用范围商品列表
+            // 适用范围产品列表
             $goodsModel = new GoodsModel;
-            // 指定的商品列表
+            // 指定的产品列表
             $applyGoodsList = $goodsModel->getListByIds($model['apply_range_config']['applyGoodsIds']);
-            // 指定的商品列表
+            // 指定的产品列表
             $excludedGoodsList = $goodsModel->getListByIds($model['apply_range_config']['excludedGoodsIds']);
             // 加载模板输出
             return $this->fetch('edit', compact('model', 'applyGoodsList', 'excludedGoodsList'));

@@ -196,7 +196,7 @@ class Order
         // 整理api参数
         $data = [];
         foreach ($orderList as $order) {
-            // 商品列表
+            // 产品列表
             $goodsList = $this->getProductList($order['goods']);
             // 订单记录
             $item = [
@@ -245,7 +245,7 @@ class Order
                 $item['fee'] = $order['pay_price'] * 100;
                 // 订单支付方式，0：未知方式 1：微信支付 2：其他支付方式
                 $item['ext_info']['payment_method'] = $order['pay_type']['value'] == PayTypeEnum::WECHAT ? 1 : 2;
-                // 商品列表
+                // 产品列表
                 $item['ext_info']['product_info'] = ['item_list' => $goodsList];
                 // 收件人信息
                 $item['ext_info']['express_info'] = array_merge(
@@ -313,7 +313,7 @@ class Order
     }
 
     /**
-     * 整理商品列表
+     * 整理产品列表
      * @param array $goodsList
      * @return array
      */
@@ -327,10 +327,10 @@ class Order
                 'amount' => $goods['total_num'],                  // 物品数量
                 'total_fee' => $goods['total_price'] * 100,       // 物品总价，单位：分
                 'thumb_url' => $goods['image']['file_path'],
-                'title' => $goods['goods_name'],            // 商品名称
+                'title' => $goods['goods_name'],            // 产品名称
                 'unit_price' => $goods['goods_price'] * 100,          // 物品单价（实际售价）
                 'original_price' => $goods['line_price'] * 100,     // 物品原价
-                'category_list' => ['商品分类'],    // todo: 商品分类
+                'category_list' => ['产品分类'],    // todo: 产品分类
                 'item_detail_page' => ['path' => "pages/goods/index?goods_id={$goods['goods_id']}"],
             ];
         }

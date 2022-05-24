@@ -109,7 +109,7 @@ class PaySuccess extends Basics
      */
     private function updateOrderInfo($payType, $payData)
     {
-        // 更新商品库存、销量
+        // 更新产品库存、销量
         StockFactory::getFactory($this->model['order_source'])->updateStockSales($this->model['goods']);
         // 整理订单信息
         $order = [

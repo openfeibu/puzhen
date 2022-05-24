@@ -38,7 +38,7 @@ class Factory extends FactoryModel
         $lately7days = $this->getLately7days();
         $data = [
             'widget-card' => [
-                // 商品总量
+                // 产品总量
                 'goods_total' => $this->getGoodsTotal(),
 
             ],
@@ -62,7 +62,7 @@ class Factory extends FactoryModel
     }
 
     /**
-     * 获取商品总量
+     * 获取产品总量
      * @return string
      * @throws \think\Exception
      */

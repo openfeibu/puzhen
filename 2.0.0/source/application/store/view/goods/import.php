@@ -28,11 +28,11 @@
                             </div>
 
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">商品分类 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">产品分类 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <select name="goods[category_id]" required
                                             data-am-selected="{searchBox: 1, btnSize: 'sm',
-                                             placeholder:'请选择商品分类', maxHeight: 400}">
+                                             placeholder:'请选择产品分类', maxHeight: 400}">
                                         <option value=""></option>
                                         <?php if (isset($catgory)): foreach ($catgory as $first): ?>
                                             <option value="<?= $first['category_id'] ?>"><?= $first['name'] ?></option>
@@ -79,9 +79,9 @@
                 <!-- 提示 -->
                 <div class="tips am-margin-top-lg am-margin-bottom-sm">
                     <div class="pre">
-                        <p>1. 点击下载模板-><a href="<?= base_url().'uploads/import_template/goods.xlsx' ?>" target="_blank">"批量上传商品模板"</a>。</p>
+                        <p>1. 点击下载模板-><a href="<?= base_url().'uploads/import_template/goods.xlsx' ?>" target="_blank">"批量上传产品模板"</a>。</p>
                         <p>2. 请勿修改第一行字段，并按照对应字段填写表格。</p>
-                        <p>3. 工厂名称、商品分类请严格按照系统数据填写。商品名称、参考零售价、商品重量(Kg)不能为空。</p>
+                        <p>3. 工厂名称、产品分类请严格按照系统数据填写。产品名称、参考零售价、产品重量(Kg)不能为空。</p>
                     </div>
                 </div>
             </div>

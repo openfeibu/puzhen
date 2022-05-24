@@ -8,7 +8,7 @@ use app\store\model\sharp\ActiveGoods as ActiveGoodsModel;
 use app\store\service\Goods as GoodsService;
 
 /**
- * 整点秒杀-商品模型
+ * 整点秒杀-产品模型
  * Class Goods
  * @package app\store\model\sharp
  */
@@ -37,12 +37,12 @@ class Goods extends GoodsModel
             ->paginate(15, false, [
                 'query' => \request()->request()
             ]);
-        // 设置商品数据
+        // 设置产品数据
         return $this->setGoodsListData($list, true);
     }
 
     /**
-     * 根据商品id集获取商品列表
+     * 根据产品id集获取产品列表
      * @param array $goodsIds
      * @param array $param
      * @return false|\PDOStatement|string|\think\Collection
@@ -52,14 +52,14 @@ class Goods extends GoodsModel
      */
     public function getListByIds($goodsIds, $param = [])
     {
-        // 获取商品列表数据
+        // 获取产品列表数据
         $list = parent::getListByIds($goodsIds, $param);
         // 整理列表数据并返回
         return $this->setGoodsListData($list, true);
     }
 
     /**
-     * 添加商品
+     * 添加产品
      * @param $goods
      * @param $data
      * @return bool
@@ -67,19 +67,19 @@ class Goods extends GoodsModel
      */
     public function add($goods, $data)
     {
-        // 添加商品
+        // 添加产品
         $this->allowField(true)->save(array_merge($data, [
             'goods_id' => $goods['goods_id'],
             'seckill_stock' => $this->getSeckillStock($goods, $data),
             'wxapp_id' => self::$wxapp_id,
         ]));
-        // 商品规格
+        // 产品规格
         $this->addGoodsSpec($goods, $data);
         return true;
     }
 
     /**
-     * 编辑商品
+     * 编辑产品
      * @param $goods
      * @param $data
      * @return bool
@@ -87,11 +87,11 @@ class Goods extends GoodsModel
      */
     public function edit($goods, $data)
     {
-        // 更新商品
+        // 更新产品
         $this->allowField(true)->save(array_merge($data, [
             'seckill_stock' => $this->getSeckillStock($goods, $data),
         ]));
-        // 商品规格
+        // 产品规格
         $this->addGoodsSpec($goods, $data, true);
         return true;
     }
@@ -115,26 +115,26 @@ class Goods extends GoodsModel
     }
 
     /**
-     * 验证商品ID能否被添加
+     * 验证产品ID能否被添加
      * @param $goodsId
      * @return bool
      */
     public function validateGoodsId($goodsId)
     {
         if ($goodsId <= 0) {
-            $this->error = '很抱歉，您还没有选择商品';
+            $this->error = '很抱歉，您还没有选择产品';
             return false;
         }
-        // 验证是否存在秒杀商品
+        // 验证是否存在秒杀产品
         if ($this->isExistGoodsId($goodsId)) {
-            $this->error = '很抱歉，该商品已存在，无需重复添加';
+            $this->error = '很抱歉，该产品已存在，无需重复添加';
             return false;
         }
         return true;
     }
 
     /**
-     * 添加商品规格
+     * 添加产品规格
      * @param $goods
      * @param $data
      * @param bool $isUpdate
@@ -157,7 +157,7 @@ class Goods extends GoodsModel
     }
 
     /**
-     * 商品ID是否存在
+     * 产品ID是否存在
      * @param $goodsId
      * @return bool
      */
@@ -174,7 +174,7 @@ class Goods extends GoodsModel
      */
     public function setDelete()
     {
-        // 同步删除活动会场与商品关联记录
+        // 同步删除活动会场与产品关联记录
         $model = new ActiveGoodsModel;
         $model->onDeleteSharpGoods($this['sharp_goods_id']);
         return $this->allowField(true)->save(['is_delete' => 1]);

@@ -31,7 +31,7 @@ class OrderRefund extends BaseModel
     }
 
     /**
-     * 关联订单商品表
+     * 关联订单产品表
      * @return \think\model\relation\BelongsTo
      */
     public function orderGoods()

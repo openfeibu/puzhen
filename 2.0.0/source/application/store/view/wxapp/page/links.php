@@ -43,7 +43,7 @@
                                 </div>
                             </li>
                             <li class="link-item">
-                                <div class="row page-name">商品分类页</div>
+                                <div class="row page-name">产品分类页</div>
                                 <div class="row am-cf">
                                     <div class="am-fl">地址：</div>
                                     <div class="am-fl">
@@ -52,7 +52,7 @@
                                 </div>
                             </li>
                             <li class="link-item">
-                                <div class="row page-name">商品列表页</div>
+                                <div class="row page-name">产品列表页</div>
                                 <div class="row am-cf">
                                     <div class="am-fl">地址：</div>
                                     <div class="am-fl">
@@ -64,7 +64,7 @@
                                     <div class="am-fl">
                                         <p class="param">
                                             <span class="x-color-green">category_id</span>
-                                            <span>商品分类ID</span>
+                                            <span>产品分类ID</span>
                                             <span class="">　--选填</span>
                                         </p>
                                     </div>
@@ -77,7 +77,7 @@
                                 </div>
                             </li>
                             <li class="link-item">
-                                <div class="row page-name">商品详情页</div>
+                                <div class="row page-name">产品详情页</div>
                                 <div class="row am-cf">
                                     <div class="am-fl">地址：</div>
                                     <div class="am-fl">
@@ -89,7 +89,7 @@
                                     <div class="am-fl">
                                         <p class="param">
                                             <span class="x-color-green">goods_id</span>
-                                            <span>商品ID</span>
+                                            <span>产品ID</span>
                                             <span class="x-color-red">　--必填</span>
                                         </p>
                                     </div>
@@ -103,7 +103,7 @@
                             </li>
                             <!--
                             <li class="link-item">
-                                <div class="row page-name">商品搜索页</div>
+                                <div class="row page-name">产品搜索页</div>
                                 <div class="row am-cf">
                                     <div class="am-fl">地址：</div>
                                     <div class="am-fl">
@@ -202,7 +202,7 @@
                                 </div>
                             </li>
                             <li class="link-item">
-                                <div class="row page-name">拼团 - 商品详情页</div>
+                                <div class="row page-name">拼团 - 产品详情页</div>
                                 <div class="row am-cf">
                                     <div class="am-fl">地址：</div>
                                     <div class="am-fl">
@@ -214,7 +214,7 @@
                                     <div class="am-fl">
                                         <p class="param">
                                             <span class="x-color-green">goods_id</span>
-                                            <span>拼团商品ID</span>
+                                            <span>拼团产品ID</span>
                                             <span class="x-color-red">　--必填</span>
                                         </p>
                                     </div>
@@ -329,7 +329,7 @@
                                 </div>
                             </li>
                             <li class="link-item">
-                                <div class="row page-name">砍价活动 - 活动商品页</div>
+                                <div class="row page-name">砍价活动 - 活动产品页</div>
                                 <div class="row am-cf">
                                     <div class="am-fl">地址：</div>
                                     <div class="am-fl">
@@ -388,7 +388,7 @@
                                 </div>
                             </li>
                             <li class="link-item">
-                                <div class="row page-name">整点秒杀 - 商品详情页</div>
+                                <div class="row page-name">整点秒杀 - 产品详情页</div>
                                 <div class="row am-cf">
                                     <div class="am-fl">地址：</div>
                                     <div class="am-fl">
@@ -410,7 +410,7 @@
                                     <div class="am-fl">
                                         <p class="param">
                                             <span class="x-color-green">sharp_goods_id</span>
-                                            <span>秒杀商品ID</span>
+                                            <span>秒杀产品ID</span>
                                             <span class="x-color-red">　--必填</span>
                                         </p>
                                     </div>

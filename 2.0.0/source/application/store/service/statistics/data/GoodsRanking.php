@@ -8,14 +8,14 @@ use app\common\enum\order\Status as OrderStatusEnum;
 use app\common\enum\order\PayStatus as OrderPayStatusEnum;
 
 /**
- * 数据统计-商品销售榜
+ * 数据统计-产品销售榜
  * Class GoodsRanking
  * @package app\store\service\statistics\data
  */
 class GoodsRanking extends BasicsService
 {
     /**
-     * 商品销售榜
+     * 产品销售榜
      * @throws \think\db\exception\DataNotFoundException
      * @throws \think\db\exception\ModelNotFoundException
      * @throws \think\exception\DbException

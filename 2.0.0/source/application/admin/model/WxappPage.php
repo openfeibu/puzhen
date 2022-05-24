@@ -39,7 +39,7 @@ class WxappPage extends WxappPageModel
                     [
                         'type' => 'search',
                         'name' => '搜索框',
-                        'params' => ['placeholder' => '搜索商品'],
+                        'params' => ['placeholder' => '搜索产品'],
                         'style' => [
                             'textAlign' => 'center',
                             'searchStyle' => 'radius',

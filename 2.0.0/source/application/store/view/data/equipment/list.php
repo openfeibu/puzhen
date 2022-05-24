@@ -40,10 +40,10 @@
                     <input data-am-ucheck data-check="all" type="checkbox">
                 </label>
             </th>
-            <th>茶艺机ID</th>
-            <th>茶艺机名称</th>
-            <th>茶艺机型号</th>
-            <th>茶艺机图片</th>
+            <th>茶电器ID</th>
+            <th>茶电器名称</th>
+            <th>茶电器型号</th>
+            <th>茶电器图片</th>
             <th>添加时间</th>
         </tr>
         </thead>

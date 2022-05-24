@@ -6,7 +6,7 @@ use think\Cache;
 use app\common\model\sharing\Category as CategoryModel;
 
 /**
- * 拼团商品分类模型
+ * 拼团产品分类模型
  * Class Category
  * @package app\store\model
  */
@@ -47,15 +47,15 @@ class Category extends CategoryModel
     }
 
     /**
-     * 删除商品分类
+     * 删除产品分类
      * @param $category_id
      * @return bool|int
      */
     public function remove($category_id)
     {
-        // 判断是否存在商品
+        // 判断是否存在产品
         if ($goodsCount = (new Goods)->getGoodsTotal(['category_id' => $category_id])) {
-            $this->error = '该分类下存在' . $goodsCount . '个商品，不允许删除';
+            $this->error = '该分类下存在' . $goodsCount . '个产品，不允许删除';
             return false;
         }
         // 判断是否存在子分类

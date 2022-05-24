@@ -50,7 +50,7 @@ class Order extends Controller
         // 设置并发锁
         $lockId = "sharp_order_{$params['active_time_id']}_{$params['sharp_goods_id']}";
         Lock::lockUp($lockId);
-        // 获取秒杀商品信息
+        // 获取秒杀产品信息
         $service = new ActiveService;
         $goodsList = $service->getCheckoutGoodsList(
             $params['active_time_id'],
@@ -67,7 +67,7 @@ class Order extends Controller
             'source' => OrderSourceEnum::SHARP,
             'source_id' => $params['active_time_id'],
         ])
-            // 秒杀商品不参与 等级折扣和优惠券折扣
+            // 秒杀产品不参与 等级折扣和优惠券折扣
             ->setCheckoutRule([
                 'is_user_grade' => false,
                 'is_coupon' => false,

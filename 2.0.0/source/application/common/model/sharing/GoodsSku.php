@@ -6,7 +6,7 @@ use app\common\library\helper;
 use app\common\model\BaseModel;
 
 /**
- * 拼团商品SKU模型
+ * 拼团产品SKU模型
  * Class GoodsSku
  * @package app\common\model\sharing
  */

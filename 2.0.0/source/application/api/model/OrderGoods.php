@@ -5,7 +5,7 @@ namespace app\api\model;
 use app\common\model\OrderGoods as OrderGoodsModel;
 
 /**
- * 订单商品模型
+ * 订单产品模型
  * Class OrderGoods
  * @package app\api\model
  */
@@ -22,7 +22,7 @@ class OrderGoods extends OrderGoodsModel
     ];
 
     /**
-     * 获取未评价的商品
+     * 获取未评价的产品
      * @param $order_id
      * @return OrderGoods[]|false
      * @throws \think\exception\DbException

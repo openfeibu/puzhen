@@ -5,7 +5,7 @@ namespace app\common\model;
 use think\Db;
 
 /**
- * 商品评价模型
+ * 产品评价模型
  * Class Comment
  * @package app\common\model
  */

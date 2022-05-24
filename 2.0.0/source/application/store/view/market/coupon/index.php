@@ -8,7 +8,7 @@
                 <div class="widget-body am-fr">
                     <div class="tips am-margin-bottom-sm am-u-sm-12">
                         <div class="pre">
-                            <p> 注：优惠券只能抵扣商品金额，最多优惠到0.01元，不能抵扣运费</p>
+                            <p> 注：优惠券只能抵扣产品金额，最多优惠到0.01元，不能抵扣运费</p>
                         </div>
                     </div>
                     <div class="am-u-sm-12 am-u-md-6 am-u-lg-6">

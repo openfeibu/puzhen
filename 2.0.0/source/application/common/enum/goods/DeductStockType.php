@@ -6,7 +6,7 @@ namespace app\common\enum\goods;
 use app\common\enum\EnumBasics;
 
 /**
- * 枚举类：商品库存计算方式
+ * 枚举类：产品库存计算方式
  * Class DeductStockType
  * @package app\common\enum\goods
  */

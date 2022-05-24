@@ -72,7 +72,7 @@
                                                 关闭
                                             </label>
                                             <div class="help-block">
-                                                <small>如开启，分销商自己购买商品，获得一级佣金</small>
+                                                <small>如开启，分销商自己购买产品，获得一级佣金</small>
                                             </div>
                                         </div>
                                     </div>
@@ -96,7 +96,7 @@
                                         </div>
                                     </div>
                                     <div class="am-form-group">
-                                        <label class="am-u-sm-3 am-form-label form-require"> 购买指定商品成为分销商 </label>
+                                        <label class="am-u-sm-3 am-form-label form-require"> 购买指定产品成为分销商 </label>
                                         <div class="am-u-sm-9">
                                             <label class="am-radio-inline">
                                                 <input type="radio" name="setting[condition][become__buy_goods]"
@@ -111,13 +111,13 @@
                                                 开启
                                             </label>
                                             <div class="help-block">
-                                                <small>购买指定商品付款后自动成为分销商，无需后台审核</small>
+                                                <small>购买指定产品付款后自动成为分销商，无需后台审核</small>
                                             </div>
                                             <div class="widget-become-goods am-form-file am-margin-top-xs
                                                 <?= $data['condition']['values']['become__buy_goods'] == '0' ? 'hide' : '' ?>">
                                                 <button type="button"
                                                         class="j-selectGoods upload-file am-btn am-btn-secondary am-radius">
-                                                    <i class="am-icon-cloud-upload"></i> 选择商品
+                                                    <i class="am-icon-cloud-upload"></i> 选择产品
                                                 </button>
                                                 <div class="widget-goods-list uploader-list am-cf">
                                                     <?php if (!$goodsList->isEmpty()): foreach ($goodsList as $goods): ?>
@@ -130,7 +130,7 @@
                                                                    name="setting[condition][become__buy_goods_ids][]"
                                                                    value="<?= $goods['goods_id'] ?>">
                                                             <i class="iconfont icon-shanchu file-item-delete"
-                                                               data-name="商品"></i>
+                                                               data-name="产品"></i>
                                                         </div>
                                                     <?php endforeach; endif; ?>
                                                 </div>
@@ -808,7 +808,7 @@
             <img src="{{ $value.file_path }}">
         </a>
         <input type="hidden" name="{{ name }}" value="{{ $value.file_path }}">
-        <i class="iconfont icon-shanchu file-item-delete" data-name="商品"></i>
+        <i class="iconfont icon-shanchu file-item-delete" data-name="产品"></i>
     </div>
     {{ /each }}
 </script>
@@ -816,7 +816,7 @@
 <!-- 文件库弹窗 -->
 {{include file="layouts/_template/file_library" /}}
 
-<!-- 商品列表 -->
+<!-- 产品列表 -->
 <script id="tpl-goods-list-item" type="text/template">
     {{ each $data }}
     <div class="file-item">
@@ -824,7 +824,7 @@
             <img src="{{ $value.image }}">
         </a>
         <input type="hidden" name="setting[condition][become__buy_goods_ids][]" value="{{ $value.goods_id }}">
-        <i class="iconfont icon-shanchu file-item-delete" data-name="商品"></i>
+        <i class="iconfont icon-shanchu file-item-delete" data-name="产品"></i>
     </div>
     {{ /each }}
 </script>
@@ -852,16 +852,16 @@
             , multiple: false
         });
 
-        // 购买指定商品成为分销商：选择商品
+        // 购买指定产品成为分销商：选择产品
         var $goodsList = $('.widget-goods-list');
         $('.j-selectGoods').selectData({
-            title: '选择商品',
+            title: '选择产品',
             uri: 'goods/lists&status=10',
             duplicate: false,
             dataIndex: 'goods_id',
             done: function (data) {
                 if (this.getExistData().length + data.length > 5) {
-                    layer.msg('选择商品的数量不能超过5个', {anim: 6});
+                    layer.msg('选择产品的数量不能超过5个', {anim: 6});
                     return;
                 }
                 var $html = $(template('tpl-goods-list-item', data));
@@ -887,7 +887,7 @@
          */
         $('#my-form').superForm();
 
-        // 购买指定商品成为分销商  是否开启
+        // 购买指定产品成为分销商  是否开启
         $("input:radio[name='setting[condition][become__buy_goods]']").change(function(e) {
             var $content = $('.widget-become-goods');
             e.currentTarget.value == '0' ? $content.hide() : $content.show();

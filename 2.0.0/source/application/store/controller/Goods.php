@@ -11,30 +11,30 @@ use app\store\model\Tea;
 use app\store\service\goods\Import as GoodsImport;
 
 /**
- * 商品管理控制器
+ * 产品管理控制器
  * Class Goods
  * @package app\store\controller
  */
 class Goods extends Controller
 {
     /**
-     * 商品列表(出售中)
+     * 产品列表(出售中)
      * @return mixed
      * @throws \think\exception\DbException
      */
     public function index()
     {
-        // 获取全部商品列表
+        // 获取全部产品列表
         $model = new GoodsModel;
         $list = $model->getList(array_merge(['status' => -1], $this->request->param()));
-        // 商品分类
+        // 产品分类
         $catgory = CategoryModel::getCacheTree();
         $factoryList = FactoryModel::getAllList();
         return $this->fetch('index', compact('list', 'catgory','factoryList'));
     }
 
     /**
-     * 添加商品
+     * 添加产品
      * @return array|mixed
      * @throws \think\exception\PDOException
      */
@@ -62,7 +62,7 @@ class Goods extends Controller
      */
     public function copy($goods_id)
     {
-        // 商品详情
+        // 产品详情
         $model = GoodsModel::detail($goods_id);
         if (!$this->request->isAjax()) {
             $factoryList = FactoryModel::getAllList();
@@ -79,13 +79,13 @@ class Goods extends Controller
     }
 
     /**
-     * 商品编辑
+     * 产品编辑
      * @param $goods_id
      * @return array|bool|mixed
      */
     public function edit($goods_id)
     {
-        // 商品详情
+        // 产品详情
         $model = GoodsModel::detail($goods_id);
         if (!$this->request->isAjax()) {
             $factoryList = FactoryModel::getAllList();
@@ -102,14 +102,14 @@ class Goods extends Controller
     }
 
     /**
-     * 修改商品状态
+     * 修改产品状态
      * @param $goods_id
      * @param boolean $state
      * @return array
      */
     public function state($goods_id, $state)
     {
-        // 商品详情
+        // 产品详情
         $model = GoodsModel::detail($goods_id);
         if (!$model->setStatus($state)) {
             return $this->renderError('操作失败');
@@ -118,13 +118,13 @@ class Goods extends Controller
     }
 
     /**
-     * 删除商品
+     * 删除产品
      * @param $goods_id
      * @return array
      */
     public function delete($goods_id)
     {
-        // 商品详情
+        // 产品详情
         $model = GoodsModel::detail($goods_id);
         if (!$model->setDelete()) {
             return $this->renderError($model->getError() ?: '删除失败');
@@ -152,7 +152,7 @@ class Goods extends Controller
     }
 
     /**
-     * 导入商品
+     * 导入产品
      */
     public function import()
     {

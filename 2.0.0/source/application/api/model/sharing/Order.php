@@ -64,28 +64,28 @@ class Order extends OrderModel
     }
 
     /**
-     * 获取订单商品列表
+     * 获取订单产品列表
      * @param $params
      * @return array
      */
     public function getOrderGoodsListByNow($params)
     {
-        // 商品详情
+        // 产品详情
         /* @var GoodsModel $goods */
         $goods = GoodsModel::detail($params['goods_id']);
-        // 商品sku信息
+        // 产品sku信息
         $goods['goods_sku'] = GoodsModel::getGoodsSku($goods, $params['goods_sku_id']);
-        // 商品列表
+        // 产品列表
         $goodsList = [$goods->hidden(['category', 'content', 'image', 'sku'])];
         foreach ($goodsList as &$item) {
-            // 商品单价(根据order_type判断单买还是拼单)
+            // 产品单价(根据order_type判断单买还是拼单)
             // order_type：下单类型 10 => 单独购买，20 => 拼团
             $item['goods_price'] = $params['order_type'] == 10 ? $item['goods_sku']['goods_price']
                 : $item['goods_sku']['sharing_price'];
-            // 商品购买数量
+            // 产品购买数量
             $item['total_num'] = $params['goods_num'];
             $item['spec_sku_id'] = $item['goods_sku']['spec_sku_id'];
-            // 商品购买总金额
+            // 产品购买总金额
             $item['total_price'] = helper::bcmul($item['goods_price'], $params['goods_num']);
         }
         return $goodsList;
@@ -99,7 +99,7 @@ class Order extends OrderModel
      */
     public function onPay($payType = PayTypeEnum::WECHAT)
     {
-        // 判断商品状态、库存
+        // 判断产品状态、库存
         if (!$this->checkGoodsStatusFromOrder($this['goods'])) {
             return false;
         }
@@ -278,7 +278,7 @@ class Order extends OrderModel
         $this->transaction(function () use ($user, $isPay) {
             // 未付款的订单
             if ($isPay == false) {
-                // 回退商品库存
+                // 回退产品库存
                 (new OrderGoodsModel)->backGoodsStock($this['goods'], $isPay);
                 // 回退用户优惠券
                 $this['coupon_id'] > 0 && UserCouponModel::setIsUse($this['coupon_id'], false);
@@ -378,7 +378,7 @@ class Order extends OrderModel
     }
 
     /**
-     * 判断商品库存不足 (未付款订单)
+     * 判断产品库存不足 (未付款订单)
      * @param $goodsList
      * @return bool
      * @throws \think\exception\DbException
@@ -386,24 +386,24 @@ class Order extends OrderModel
     private function checkGoodsStatusFromOrder($goodsList)
     {
         foreach ($goodsList as $goods) {
-            // 判断商品是否下架
+            // 判断产品是否下架
             if (
                 empty($goods['goods'])
                 || $goods['goods']['goods_status']['value'] != 10
             ) {
-                $this->error = "很抱歉，商品 [{$goods['goods_name']}] 已下架";
+                $this->error = "很抱歉，产品 [{$goods['goods_name']}] 已下架";
                 return false;
             }
-            // 获取商品的sku信息
+            // 获取产品的sku信息
             $goodsSku = GoodsSkuModel::detail($goods['goods_id'], $goods['spec_sku_id']);
             // sku已不存在
             if (empty($goodsSku)) {
-                $this->error = "很抱歉，商品 [{$goods['goods_name']}] sku已不存在，请重新下单";
+                $this->error = "很抱歉，产品 [{$goods['goods_name']}] sku已不存在，请重新下单";
                 return false;
             }
             // 付款减库存
             if ($goods['deduct_stock_type'] == 20 && $goods['total_num'] > $goodsSku['stock_num']) {
-                $this->error = "很抱歉，商品 [{$goods['goods_name']}] 库存不足";
+                $this->error = "很抱歉，产品 [{$goods['goods_name']}] 库存不足";
                 return false;
             }
         }

@@ -63,7 +63,7 @@ class Order extends Controller
         if (!$this->validate->scene('buyNow')->check($params)) {
             return $this->renderError($this->validate->getError());
         }
-        // 立即购买：获取订单商品列表
+        // 立即购买：获取订单产品列表
         $model = new OrderModel;
         $goodsList = $model->getOrderGoodsListByNow($params);
         // 获取订单确认信息

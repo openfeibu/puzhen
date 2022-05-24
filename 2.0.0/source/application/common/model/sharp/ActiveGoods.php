@@ -7,7 +7,7 @@ use app\common\model\BaseModel;
 use app\common\model\sharp\Goods as GoodsModel;
 
 /**
- * 整点秒杀-活动会场与商品关联模型
+ * 整点秒杀-活动会场与产品关联模型
  * Class ActiveGoods
  * @package app\common\model\sharp
  */
@@ -34,25 +34,25 @@ class ActiveGoods extends BaseModel
     }
 
     /**
-     * 根据活动场次ID获取商品列表
+     * 根据活动场次ID获取产品列表
      * @param int $activeTimeId
      * @param array $goodsParam
      * @return false|\PDOStatement|string|\think\Collection
      */
     public static function getGoodsListByActiveTimeId($activeTimeId, $goodsParam = [])
     {
-        // 商品关联列表
+        // 产品关联列表
         $model = new static;
         $activeGoodsList = $model->getSharpGoodsByActiveTimeId($activeTimeId);
-        // 将列表的索引值设置为商品ID
+        // 将列表的索引值设置为产品ID
         $activeGoodsList = helper::arrayColumn2Key($activeGoodsList, 'sharp_goods_id');
-        // 获取商品列表
+        // 获取产品列表
         $sharpGoodsList = $model->getGoodsListByIds(array_keys($activeGoodsList), $goodsParam);
-        // 整理活动商品信息
+        // 整理活动产品信息
         foreach ($sharpGoodsList as &$item) {
-            // 活动商品的销量
+            // 活动产品的销量
             $item['sales_actual'] = $activeGoodsList[$item['sharp_goods_id']]['sales_actual'];
-            // 商品销售进度
+            // 产品销售进度
             $item['progress'] = $model->getProgress($item['sales_actual'], $item['seckill_stock']);
         }
         /* @var $sharpGoodsList \think\model\Collection */
@@ -60,7 +60,7 @@ class ActiveGoods extends BaseModel
     }
 
     /**
-     * 计算商品销售进度
+     * 计算产品销售进度
      * @param $value1
      * @param $value2
      * @return mixed
@@ -73,7 +73,7 @@ class ActiveGoods extends BaseModel
     }
 
     /**
-     * 获取秒杀商品模型
+     * 获取秒杀产品模型
      * @return Goods
      */
     protected function getGoodsModel()
@@ -82,7 +82,7 @@ class ActiveGoods extends BaseModel
     }
 
     /**
-     * 根据活动场次ID获取商品集
+     * 根据活动场次ID获取产品集
      * @param $activeTimeId
      * @return false|\PDOStatement|string|\think\Collection
      * @throws \think\db\exception\DataNotFoundException
@@ -95,7 +95,7 @@ class ActiveGoods extends BaseModel
     }
 
     /**
-     * 根据商品ID集获取商品列表
+     * 根据产品ID集获取产品列表
      * @param array $sharpGoodsIds
      * @param array $param
      * @return false|\PDOStatement|string|\think\Collection

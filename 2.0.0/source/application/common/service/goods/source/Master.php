@@ -7,14 +7,14 @@ use app\common\model\GoodsSku as GoodsSkuModel;
 use app\common\enum\goods\DeductStockType as DeductStockTypeEnum;
 
 /**
- * 商品来源-普通商品扩展类
+ * 产品来源-普通产品扩展类
  * Class Master
  * @package app\common\service\stock
  */
 class Master extends Basics
 {
     /**
-     * 更新商品库存 (针对下单减库存的商品)
+     * 更新产品库存 (针对下单减库存的产品)
      * @param $goodsList
      * @return bool
      */
@@ -37,7 +37,7 @@ class Master extends Basics
     }
 
     /**
-     * 更新商品库存销量（订单付款后）
+     * 更新产品库存销量（订单付款后）
      * @param $goodsList
      * @return bool
      * @throws \Exception
@@ -47,7 +47,7 @@ class Master extends Basics
         $goodsData = [];
         $goodsSkuData = [];
         foreach ($goodsList as $goods) {
-            // 记录商品的销量
+            // 记录产品的销量
             $goodsData[] = [
                 'goods_id' => $goods['goods_id'],
                 'sales_actual' => ['inc', $goods['total_num']]
@@ -63,15 +63,15 @@ class Master extends Basics
                 ];
             }
         }
-        // 更新商品销量
+        // 更新产品销量
         !empty($goodsData) && $this->updateGoods($goodsData);
-        // 更新商品sku库存
+        // 更新产品sku库存
         !empty($goodsSkuData) && $this->updateGoodsSku($goodsSkuData);
         return true;
     }
 
     /**
-     * 回退商品库存
+     * 回退产品库存
      * @param $goodsList
      * @param $isPayOrder
      * @return array|false
@@ -96,12 +96,12 @@ class Master extends Basics
                 $goods['deduct_stock_type'] == DeductStockTypeEnum::CREATE && $goodsSkuData[] = $item;
             }
         }
-        // 更新商品sku库存
+        // 更新产品sku库存
         return !empty($goodsSkuData) && $this->updateGoodsSku($goodsSkuData);
     }
 
     /**
-     * 更新商品信息
+     * 更新产品信息
      * @param $data
      * @return array|false
      * @throws \Exception
@@ -112,7 +112,7 @@ class Master extends Basics
     }
 
     /**
-     * 更新商品sku信息
+     * 更新产品sku信息
      * @param $data
      * @return \think\Collection
      */

@@ -6,7 +6,7 @@ use app\store\controller\Controller;
 use app\store\model\sharp\Goods as GoodsModel;
 
 /**
- * 秒杀商品数据控制器
+ * 秒杀产品数据控制器
  * Class Goods
  * @package app\store\controller\data\sharp
  */
@@ -26,7 +26,7 @@ class Goods extends Controller
     }
 
     /**
-     * 商品列表
+     * 产品列表
      * @param string $search
      * @return mixed
      * @throws \think\db\exception\DataNotFoundException

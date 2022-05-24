@@ -15,9 +15,9 @@ use app\common\enum\OrderType as OrderTypeEnum;
 class Express
 {
     private $cityId;     // 用户收货城市id
-    private $goodsList;  // 订单商品列表
+    private $goodsList;  // 订单产品列表
     private $orderType;  // 订单类型 (主商城、拼团)
-    private $notInRuleGoodsId;  // 不在配送范围的商品ID
+    private $notInRuleGoodsId;  // 不在配送范围的产品ID
 
     // 运费模板数据集
     private $data = [];
@@ -63,7 +63,7 @@ class Express
     }
 
     /**
-     * 获取不在配送范围的商品名称
+     * 获取不在配送范围的产品名称
      * @return null
      */
     public function getNotInRuleGoodsName()
@@ -81,7 +81,7 @@ class Express
         if (empty($this->cityId) || empty($this->goodsList) || $this->notInRuleGoodsId > 0) {
             return helper::number2(0.00);
         }
-        // 处理商品包邮
+        // 处理产品包邮
         $this->freeshipping();
         // 计算配送金额
         foreach ($this->data as &$item) {
@@ -118,12 +118,12 @@ class Express
     }
 
     /**
-     * 处理商品包邮
+     * 处理产品包邮
      * @return bool
      */
     private function freeshipping()
     {
-        // 订单商品总金额
+        // 订单产品总金额
         $orderTotalPrice = helper::getArrayColumnSum($this->goodsList, 'total_price');
         // 获取满额包邮设置
         $options = SettingModel::getItem('full_free');
@@ -151,7 +151,7 @@ class Express
      */
     private function calcDeliveryAmount($item)
     {
-        // 获取运费模板下商品总数量or总重量
+        // 获取运费模板下产品总数量or总重量
         if (!$totality = $this->getItemGoodsTotal($item)) {
             return 0.00;
         }
@@ -176,7 +176,7 @@ class Express
     }
 
     /**
-     * 获取运费模板下商品总数量or总重量
+     * 获取运费模板下产品总数量or总重量
      * @param $item
      * @return int|string
      */
@@ -185,7 +185,7 @@ class Express
         $totalWeight = 0;   // 总重量
         $totalNum = 0;      // 总数量
         foreach ($item['goodsList'] as $goodsItem) {
-            // 如果商品为包邮，则不计算总量中
+            // 如果产品为包邮，则不计算总量中
             if (!in_array($goodsItem['goods_id'], $item['free_goods_list'])) {
                 $goodsWeight = helper::bcmul($goodsItem['goods_sku']['goods_weight'], $goodsItem['total_num']);
                 $totalWeight = helper::bcadd($totalWeight, $goodsWeight);
@@ -232,7 +232,7 @@ class Express
     }
 
     /**
-     * 根据运费模板id整理商品集
+     * 根据运费模板id整理产品集
      * @param $deliveryId
      * @return array
      */

@@ -8,14 +8,14 @@ use app\store\service\Goods as GoodsService;
 use app\store\model\sharp\Goods as SharpGoodsModel;
 
 /**
- * 秒杀商品管理
+ * 秒杀产品管理
  * Class Goods
  * @package app\store\controller\apps\sharp
  */
 class Goods extends Controller
 {
     /**
-     * 秒杀商品列表
+     * 秒杀产品列表
      * @param string $search
      * @return mixed
      * @throws \think\db\exception\DataNotFoundException
@@ -30,7 +30,7 @@ class Goods extends Controller
     }
 
     /**
-     * 添加秒杀商品
+     * 添加秒杀产品
      * @param int $step
      * @param null $goods_id
      * @return array|bool|mixed
@@ -45,7 +45,7 @@ class Goods extends Controller
     }
 
     /**
-     * 添加秒杀商品：步骤1
+     * 添加秒杀产品：步骤1
      * @return mixed
      */
     private function step1()
@@ -54,7 +54,7 @@ class Goods extends Controller
     }
 
     /**
-     * 添加秒杀商品：步骤2
+     * 添加秒杀产品：步骤2
      * @param $goodsId
      * @return array|bool|mixed
      * @throws \Exception
@@ -62,14 +62,14 @@ class Goods extends Controller
     private function step2($goodsId)
     {
         $model = new SharpGoodsModel;
-        // 验证商品ID能否被添加
+        // 验证产品ID能否被添加
         if (!$model->validateGoodsId($goodsId)) {
             $this->renderError($model->getError());
         }
-        // 商品信息
+        // 产品信息
         $goods = GoodsModel::detail($goodsId);
         $specData = GoodsService::getSpecData($goods);
-        // 填写商品信息页面
+        // 填写产品信息页面
         if (!$this->request->isAjax()) {
             return $this->fetch('step2', compact('goods', 'specData'));
         }
@@ -81,7 +81,7 @@ class Goods extends Controller
     }
 
     /**
-     * 编辑秒杀商品
+     * 编辑秒杀产品
      * @param $sharp_goods_id
      * @return array|bool|mixed
      * @throws \think\exception\DbException
@@ -89,11 +89,11 @@ class Goods extends Controller
      */
     public function edit($sharp_goods_id)
     {
-        // 秒杀商品详情
+        // 秒杀产品详情
         $model = SharpGoodsModel::detail($sharp_goods_id, ['sku']);
-        // 商品信息
+        // 产品信息
         $goods = GoodsModel::detail($model['goods_id']);
-        // 商品多规格信息
+        // 产品多规格信息
         $specData = $model->getSpecData($goods, $model['sku']);
         if (!$this->request->isAjax()) {
             return $this->fetch('edit', compact('model', 'goods', 'specData'));
@@ -106,14 +106,14 @@ class Goods extends Controller
     }
 
     /**
-     * 删除秒杀商品
+     * 删除秒杀产品
      * @param $sharp_goods_id
      * @return array
      * @throws \think\exception\DbException
      */
     public function delete($sharp_goods_id)
     {
-        // 秒杀商品详情
+        // 秒杀产品详情
         $model = SharpGoodsModel::detail($sharp_goods_id);
         if (!$model->setDelete()) {
             return $this->renderError($model->getError() ?: '删除失败');

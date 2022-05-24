@@ -87,7 +87,7 @@
         var url = "<?= url('factory.access/delete') ?>";
         $('.item-delete').delete('access_id', url, '删除后不可恢复，确定要删除吗？');
 
-        // 商品状态
+        // 产品状态
         $('.j-state').click(function () {
             var data = $(this).data();
             layer.confirm('确定要' + (parseInt(data.state) === 1 ? '隐藏' : '显示') + '该权限吗？'

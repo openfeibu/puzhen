@@ -65,7 +65,7 @@ class Apply extends BaseModel
     }
 
     /**
-     * 购买指定商品成为分销商
+     * 购买指定产品成为分销商
      * @param $userId
      * @param $goodsIds
      * @param $wxappId
@@ -79,7 +79,7 @@ class Apply extends BaseModel
         if ($config['become__buy_goods'] != '1' || empty($config['become__buy_goods_ids'])) {
             return false;
         }
-        // 判断商品是否在设置范围内
+        // 判断产品是否在设置范围内
         $intersect = array_intersect($goodsIds, $config['become__buy_goods_ids']);
         if (empty($intersect)) {
             return false;

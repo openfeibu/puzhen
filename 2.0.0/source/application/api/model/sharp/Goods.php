@@ -5,7 +5,7 @@ namespace app\api\model\sharp;
 use app\common\model\sharp\Goods as GoodsModel;
 
 /**
- * 整点秒杀-商品模型
+ * 整点秒杀-产品模型
  * Class Goods
  * @package app\api\model\sharp
  */

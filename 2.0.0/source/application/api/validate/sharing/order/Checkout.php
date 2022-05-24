@@ -12,7 +12,7 @@ class Checkout extends Validate
      */
     protected $rule = [
 
-        // 商品id
+        // 产品id
         'goods_id' => [
             'require',
             'number',
@@ -26,7 +26,7 @@ class Checkout extends Validate
             'gt' => 0
         ],
 
-        // 商品sku_id
+        // 产品sku_id
         'goods_sku_id' => [
             'require',
         ],

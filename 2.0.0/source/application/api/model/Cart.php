@@ -47,7 +47,7 @@ class Cart
     }
 
     /**
-     * 购物车列表 (含商品信息)
+     * 购物车列表 (含产品信息)
      * @return array
      * @param string $cartIds 请求参数
      * @throws \think\Exception
@@ -57,7 +57,7 @@ class Cart
      */
     public function getList($cartIds)
     {
-        // 获取购物车商品列表
+        // 获取购物车产品列表
         return $this->getOrderGoodsList($cartIds);
     }
 
@@ -78,7 +78,7 @@ class Cart
     }
 
     /**
-     * 获取购物车中的商品列表
+     * 获取购物车中的产品列表
      * @param $cartIds
      * @return array|bool
      * @throws \think\Exception
@@ -88,47 +88,47 @@ class Cart
      */
     private function getOrderGoodsList($cartIds)
     {
-        // 购物车商品列表
+        // 购物车产品列表
         $goodsList = [];
         // 获取购物车列表
         $cartList = $this->getCartList($cartIds);
         if (empty($cartList)) {
-            $this->setError('当前购物车没有商品');
+            $this->setError('当前购物车没有产品');
             return $goodsList;
         }
-        // 购物车中所有商品id集
+        // 购物车中所有产品id集
         $goodsIds = array_unique(helper::getArrayColumn($cartList, 'goods_id'));
-        // 获取并格式化商品数据
+        // 获取并格式化产品数据
         $sourceData = (new GoodsModel)->getListByIds($goodsIds);
         $sourceData = helper::arrayColumn2Key($sourceData, 'goods_id');
         // 格式化购物车数据列表
         foreach ($cartList as $key => $item) {
-            // 判断商品不存在则自动删除
+            // 判断产品不存在则自动删除
             if (!isset($sourceData[$item['goods_id']])) {
                 $this->delete($key);
                 continue;
             }
-            /* @var GoodsModel $goods 商品信息 */
+            /* @var GoodsModel $goods 产品信息 */
             $goods = clone $sourceData[$item['goods_id']];
-            // 判断商品是否已删除
+            // 判断产品是否已删除
             if ($goods['is_delete']) {
                 $this->delete($key);
                 continue;
             }
-            // 商品sku信息
+            // 产品sku信息
             $goods['goods_sku'] = GoodsModel::getGoodsSku($goods, $item['goods_sku_id']);
             $goods['goods_sku_id'] = $item['goods_sku_id'];
             $goods['spec_sku_id'] = $goods['goods_sku']['spec_sku_id'];
-            // 商品sku不存在则自动删除
+            // 产品sku不存在则自动删除
             if (empty($goods['goods_sku'])) {
                 $this->delete($key);
                 continue;
             }
-            // 商品单价
+            // 产品单价
             $goods['goods_price'] = $goods['goods_sku']['goods_price'];
             // 购买数量
             $goods['total_num'] = $item['goods_num'];
-            // 商品总价
+            // 产品总价
             $goods['total_price'] = bcmul($goods['goods_price'], $item['goods_num'], 2);
             $goodsList[] = $goods->hidden(['category', 'content', 'image', 'sku']);
         }
@@ -137,26 +137,26 @@ class Cart
 
     /**
      * 加入购物车
-     * @param int $goodsId 商品id
+     * @param int $goodsId 产品id
      * @param int $goodsNum 加入购物车的数量
-     * @param string $goodsSkuId 商品sku索引
+     * @param string $goodsSkuId 产品sku索引
      * @return bool
      * @throws \app\common\exception\BaseException
      * @throws \think\exception\DbException
      */
     public function add($goodsId, $goodsNum, $goodsSkuId)
     {
-        // 购物车商品索引
+        // 购物车产品索引
         $index = "{$goodsId}_{$goodsSkuId}";
-        // 加入购物车后的商品数量
+        // 加入购物车后的产品数量
         $cartGoodsNum = $goodsNum + (isset($this->cart[$index]) ? $this->cart[$index]['goods_num'] : 0);
-        // 获取商品信息
+        // 获取产品信息
         $goods = GoodsModel::detail($goodsId);
-        // 验证商品能否加入
+        // 验证产品能否加入
         if (!$this->checkGoods($goods, $goodsSkuId, $cartGoodsNum)) {
             return false;
         }
-        // 将商品同步到好物圈
+        // 将产品同步到好物圈
         if (!$this->isExistGoodsId($goodsId)) {
             (new WowService($this->wxapp_id))->add($this->user, [$goods]);
         }
@@ -171,7 +171,7 @@ class Cart
     }
 
     /**
-     * 验证购物车中是否存在某商品
+     * 验证购物车中是否存在某产品
      * @param $goodsId
      * @return bool
      */
@@ -184,31 +184,31 @@ class Cart
     }
 
     /**
-     * 验证商品是否可以购买
-     * @param GoodsModel $goods 商品信息
-     * @param string $goodsSkuId 商品sku索引
+     * 验证产品是否可以购买
+     * @param GoodsModel $goods 产品信息
+     * @param string $goodsSkuId 产品sku索引
      * @param $cartGoodsNum
      * @return bool
      */
     private function checkGoods($goods, $goodsSkuId, $cartGoodsNum)
     {
-        // 判断商品是否下架
+        // 判断产品是否下架
         if (!$goods || $goods['is_delete'] || $goods['goods_status']['value'] != 10) {
-            $this->setError('很抱歉，商品信息不存在或已下架');
+            $this->setError('很抱歉，产品信息不存在或已下架');
             return false;
         }
-        // 商品sku信息
+        // 产品sku信息
         $goods['goods_sku'] = GoodsModel::getGoodsSku($goods, $goodsSkuId);
-        // 判断商品库存
+        // 判断产品库存
         if ($cartGoodsNum > $goods['goods_sku']['stock_num']) {
-            $this->setError('很抱歉，商品库存不足');
+            $this->setError('很抱歉，产品库存不足');
             return false;
         }
         return true;
     }
 
     /**
-     * 减少购物车中某商品数量
+     * 减少购物车中某产品数量
      * @param int $goodsId
      * @param string $goodsSkuId
      */
@@ -219,7 +219,7 @@ class Cart
     }
 
     /**
-     * 删除购物车中指定商品
+     * 删除购物车中指定产品
      * @param string $cartIds (支持字符串ID集)
      */
     public function delete($cartIds)
@@ -231,7 +231,7 @@ class Cart
     }
 
     /**
-     * 获取当前用户购物车商品总数量(含件数)
+     * 获取当前用户购物车产品总数量(含件数)
      * @return int
      */
     public function getTotalNum()
@@ -240,7 +240,7 @@ class Cart
     }
 
     /**
-     * 获取当前用户购物车商品总数量(不含件数)
+     * 获取当前用户购物车产品总数量(不含件数)
      * @return int
      */
     public function getGoodsNum()

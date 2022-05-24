@@ -5,7 +5,7 @@ namespace app\common\model;
 use think\Db;
 
 /**
- * 商品评价模型
+ * 产品评价模型
  * Class Comment
  * @package app\common\model
  */
@@ -23,7 +23,7 @@ class Comment extends BaseModel
     }
 
     /**
-     * 订单商品
+     * 订单产品
      * @return \think\model\relation\BelongsTo
      */
     public function OrderGoods()

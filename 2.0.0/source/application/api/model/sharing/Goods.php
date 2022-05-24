@@ -7,7 +7,7 @@ use app\common\library\helper;
 use app\common\exception\BaseException;
 
 /**
- * 拼团商品模型
+ * 拼团产品模型
  * Class Goods
  * @package app\api\model\sharing
  */
@@ -29,7 +29,7 @@ class Goods extends GoodsModel
     ];
 
     /**
-     * 商品详情：HTML实体转换回普通字符
+     * 产品详情：HTML实体转换回普通字符
      * @param $value
      * @return string
      */
@@ -39,7 +39,7 @@ class Goods extends GoodsModel
     }
 
     /**
-     * 获取商品列表
+     * 获取产品列表
      * @param $param
      * @param bool $userInfo
      * @return mixed
@@ -47,22 +47,22 @@ class Goods extends GoodsModel
      */
     public function getList($param, $userInfo = false)
     {
-        // 获取商品列表
+        // 获取产品列表
         $data = parent::getList($param)->hidden(['category', 'content', 'image', 'sku']);
         // 整理列表数据并返回
         return $this->setGoodsListDataFromApi($data, true, ['userInfo' => $userInfo]);
     }
 
     /**
-     * 获取商品详情信息
-     * @param int $goodsId 商品id
+     * 获取产品详情信息
+     * @param int $goodsId 产品id
      * @param array|bool $userInfo 用户信息
      * @return array|false|\PDOStatement|string|\think\Model|static
      * @throws BaseException
      */
     public function getDetails($goodsId, $userInfo = false)
     {
-        // 获取商品详情
+        // 获取产品详情
         $model = new static;
         $goods = $model->with([
             'category',
@@ -78,19 +78,19 @@ class Goods extends GoodsModel
         }])
             ->where('goods_id', '=', $goodsId)
             ->find();
-        // 判断商品的状态
+        // 判断产品的状态
         if (!$goods || $goods['is_delete'] || $goods['goods_status']['value'] != 10) {
-            throw new BaseException(['msg' => '很抱歉，商品信息不存在或已下架']);
+            throw new BaseException(['msg' => '很抱歉，产品信息不存在或已下架']);
         }
-        // 设置商品展示的数据
+        // 设置产品展示的数据
         $goods = $model->setGoodsListDataFromApi($goods, false, ['userInfo' => $userInfo]);
-        // 多规格商品sku信息
+        // 多规格产品sku信息
         $goods['goods_multi_spec'] = $goods['spec_type'] == 20 ? $model->getManySpecData($goods['spec_rel'], $goods['sku']) : null;
         return $goods;
     }
 
     /**
-     * 根据商品id集获取商品列表
+     * 根据产品id集获取产品列表
      * @param $goodsIds
      * @param bool $userInfo
      * @return mixed
@@ -100,7 +100,7 @@ class Goods extends GoodsModel
      */
     public function getListByIdsFromApi($goodsIds, $userInfo = false)
     {
-        // 获取商品列表
+        // 获取产品列表
         $data = parent::getListByIds($goodsIds, 10);
         // 整理列表数据并返回
         return $this->setGoodsListDataFromApi($data, true, ['userInfo' => $userInfo]);
@@ -108,7 +108,7 @@ class Goods extends GoodsModel
 
 
     /**
-     * 设置商品展示的数据 api模块
+     * 设置产品展示的数据 api模块
      * @param $data
      * @param bool $isMultiple
      * @param array $param
@@ -117,13 +117,13 @@ class Goods extends GoodsModel
     private function setGoodsListDataFromApi(&$data, $isMultiple, $param)
     {
         return parent::setGoodsListData($data, $isMultiple, function ($goods) use ($param) {
-            // 计算并设置商品会员价
+            // 计算并设置产品会员价
             $this->setGoodsGradeMoney($param['userInfo'], $goods);
         });
     }
 
     /**
-     * 设置商品的会员价
+     * 设置产品的会员价
      * @param $user
      * @param $goods
      */
@@ -132,12 +132,12 @@ class Goods extends GoodsModel
         // 会员等级状态
         $gradeStatus = (!empty($user) && $user['grade_id'] > 0 && !empty($user['grade']))
             && (!$user['grade']['is_delete'] && $user['grade']['status']);
-        // 判断商品是否参与会员折扣
+        // 判断产品是否参与会员折扣
         if (!$gradeStatus || !$goods['is_enable_grade']) {
             $goods['is_user_grade'] = false;
             return;
         }
-        // 商品单独设置了会员折扣
+        // 产品单独设置了会员折扣
         if ($goods['is_alone_grade'] && isset($goods['alone_grade_equity'][$user['grade_id']])) {
             // 折扣比例
             $discountRatio = helper::bcdiv($goods['alone_grade_equity'][$user['grade_id']], 10);

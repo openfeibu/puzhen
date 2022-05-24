@@ -41,7 +41,7 @@ class Task extends TaskModel
                 'query' => \request()->request()
             ]);
         if (!$list->isEmpty()) {
-            // 设置商品数据
+            // 设置产品数据
             $list = GoodsService::setGoodsData($list);
         }
         return $list;

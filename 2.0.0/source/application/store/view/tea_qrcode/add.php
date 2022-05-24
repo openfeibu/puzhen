@@ -16,7 +16,7 @@
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 商品 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 产品 </label>
                                 <div class="am-u-sm-9 am-u-md-6 am-u-lg-5 am-u-end">
                                     <div class="am-form-file am-margin-top-xs">
                                         <div class="widget-goods-list uploader-list am-cf">

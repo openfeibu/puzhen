@@ -1,4 +1,4 @@
-<!-- 商品规格属性模板 -->
+<!-- 产品规格属性模板 -->
 <script id="tpl_spec_attr" type="text/template">
     {{ each spec_attr }}
     <div class="spec-group-item" data-index="{{ $index }}" data-group-id="{{ $value.group_id }}">
@@ -22,7 +22,7 @@
     {{ /each }}
 </script>
 
-<!-- 商品规格table模板 -->
+<!-- 产品规格table模板 -->
 <script id="tpl_spec_table" type="text/template">
     <tbody>
     <tr>

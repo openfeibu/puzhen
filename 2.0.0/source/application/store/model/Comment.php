@@ -5,7 +5,7 @@ namespace app\store\model;
 use app\common\model\Comment as CommentModel;
 
 /**
- * 商品评价模型
+ * 产品评价模型
  * Class Comment
  * @package app\store\model
  */

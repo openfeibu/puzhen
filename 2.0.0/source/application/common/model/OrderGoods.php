@@ -3,7 +3,7 @@
 namespace app\common\model;
 
 /**
- * 订单商品模型
+ * 订单产品模型
  * Class OrderGoods
  * @package app\common\model
  */
@@ -13,7 +13,7 @@ class OrderGoods extends BaseModel
     protected $updateTime = false;
 
     /**
-     * 订单商品列表
+     * 订单产品列表
      * @return \think\model\relation\BelongsTo
      */
     public function image()
@@ -23,7 +23,7 @@ class OrderGoods extends BaseModel
     }
 
     /**
-     * 关联商品表
+     * 关联产品表
      * @return \think\model\relation\BelongsTo
      */
     public function goods()
@@ -32,7 +32,7 @@ class OrderGoods extends BaseModel
     }
 
     /**
-     * 关联商品sku表
+     * 关联产品sku表
      * @return \think\model\relation\BelongsTo
      */
 //    public function sku()
@@ -59,7 +59,7 @@ class OrderGoods extends BaseModel
     }
 
     /**
-     * 订单商品详情
+     * 订单产品详情
      * @param $where
      * @return OrderGoods|null
      * @throws \think\exception\DbException

@@ -60,7 +60,7 @@
                                                 <?= $values['freight_rule'] == '10' ? 'checked' : '' ?> required> 叠加
                                         </label>
                                         <div class="help-block">
-                                            <small>订单中的商品有多个运费模板时，将每个商品的运费之和订为订单总运费</small>
+                                            <small>订单中的产品有多个运费模板时，将每个产品的运费之和订为订单总运费</small>
                                         </div>
                                     </div>
                                     <div class="am-u-sm-12 am-margin-top-sm">
@@ -70,7 +70,7 @@
                                             以最低运费结算
                                         </label>
                                         <div class="help-block">
-                                            <small>订单中的商品有多个运费模板时，取订单中运费最少的商品的运费计为订单总运费</small>
+                                            <small>订单中的产品有多个运费模板时，取订单中运费最少的产品的运费计为订单总运费</small>
                                         </div>
                                     </div>
                                     <div class="am-u-sm-12 am-margin-top-sm">
@@ -80,7 +80,7 @@
                                             以最高运费结算
                                         </label>
                                         <div class="help-block">
-                                            <small>订单中的商品有多个运费模板时，取订单中运费最多的商品的运费计为订单总运费</small>
+                                            <small>订单中的产品有多个运费模板时，取订单中运费最多的产品的运费计为订单总运费</small>
                                         </div>
                                     </div>
                                 </div>

@@ -92,14 +92,14 @@ class Access extends Controller
     }
 
     /**
-     * 修改商品状态
+     * 修改产品状态
      * @param $access_id
      * @param boolean $state
      * @return array
      */
     public function state($access_id, $state)
     {
-        // 商品详情
+        // 产品详情
         $model = AccessModel::detail($access_id);
         if (!$model->setStatus($state)) {
             return $this->renderError('操作失败');

@@ -39,7 +39,7 @@ class Cache extends Controller
             'category' => [
                 'type' => 'cache',
                 'key' => 'category_' . $wxapp_id,
-                'name' => '商品分类'
+                'name' => '产品分类'
             ],
             'setting' => [
                 'type' => 'cache',

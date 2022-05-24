@@ -9,7 +9,7 @@ use app\api\model\TeaQrcode as TeaQrcodeModel;
 use app\common\library\helper;
 
 /**
- * 商品评价模型
+ * 产品评价模型
  * Class Comment
  * @package app\api\model
  */
@@ -36,7 +36,7 @@ class TeaQrcodeComment extends TeaQrcodeCommentModel
     }
 
     /**
-     * 获取指定商品评价列表
+     * 获取指定产品评价列表
      * @param $tea_qrcode_id
      * @return \think\Paginator
      * @throws \think\exception\DbException

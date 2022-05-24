@@ -6,14 +6,14 @@ use app\store\model\Goods as GoodsModel;
 use app\store\service\Goods as GoodsService;
 
 /**
- * 商品模型
+ * 产品模型
  * Class Goods
  * @package app\factory\model
  */
 class Goods extends GoodsModel
 {
     /**
-     * 添加商品
+     * 添加产品
      * @param array $data
      * @return bool
      * @throws \think\exception\PDOException

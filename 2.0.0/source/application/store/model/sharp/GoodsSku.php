@@ -5,14 +5,14 @@ namespace app\store\model\sharp;
 use app\common\model\sharp\GoodsSku as GoodsSkuModel;
 
 /**
- * 整点秒杀-秒杀商品sku模型
+ * 整点秒杀-秒杀产品sku模型
  * Class Goods
  * @package app\store\model\sharp
  */
 class GoodsSku extends GoodsSkuModel
 {
     /**
-     * 批量添加商品sku记录
+     * 批量添加产品sku记录
      * @param $sharpGoodsId
      * @param $specList
      * @return array|false
@@ -32,7 +32,7 @@ class GoodsSku extends GoodsSkuModel
     }
 
     /**
-     * 移除指定商品的所有sku
+     * 移除指定产品的所有sku
      * @param $sharpGoodsId
      * @return int
      */

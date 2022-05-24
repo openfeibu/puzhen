@@ -86,7 +86,7 @@ class Setting extends BaseModel
                 'key' => 'basic',
                 'describe' => '基础设置',
                 'values' => [
-                    // 是否同步购物车 (商品收藏)
+                    // 是否同步购物车 (产品收藏)
                     'is_shopping' => '0',
                     // 是否同步订单
                     'is_order' => '0',

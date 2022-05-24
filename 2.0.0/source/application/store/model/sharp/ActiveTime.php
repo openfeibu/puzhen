@@ -31,7 +31,7 @@ class ActiveTime extends ActiveTimeModel
     }
 
     /**
-     * 修改商品状态
+     * 修改产品状态
      * @param $state
      * @return false|int
      */
@@ -51,7 +51,7 @@ class ActiveTime extends ActiveTimeModel
     }
 
     /**
-     * 根据活动场次ID获取商品列表 (格式化后用于编辑页)
+     * 根据活动场次ID获取产品列表 (格式化后用于编辑页)
      * @param $activeTimeId
      * @return array
      */
@@ -98,7 +98,7 @@ class ActiveTime extends ActiveTimeModel
      */
     public function edit($data)
     {
-        // 验证是否选择商品
+        // 验证是否选择产品
         if (!$this->onValidateSharpGoods($data)) {
             return false;
         }
@@ -106,14 +106,14 @@ class ActiveTime extends ActiveTimeModel
         return $this->transaction(function () use ($data) {
             // 更新活动场次
             $this->allowField(true)->save($data);
-            // 更新场次的商品关联记录
+            // 更新场次的产品关联记录
             $this->onUpdateActiveGoodsRec($data['sharp_goods']);
             return true;
         });
     }
 
     /**
-     * 更新当前场次的商品关联记录
+     * 更新当前场次的产品关联记录
      * @param $sharpGoodsIds
      * @return array|false
      * @throws \think\Exception
@@ -146,7 +146,7 @@ class ActiveTime extends ActiveTimeModel
             $this->error = '您还没有选择活动场次';
             return false;
         }
-        // 验证是否选择商品
+        // 验证是否选择产品
         if (!$this->onValidateSharpGoods($data)) {
             return false;
         }
@@ -154,15 +154,15 @@ class ActiveTime extends ActiveTimeModel
     }
 
     /**
-     * 验证是否选择商品
+     * 验证是否选择产品
      * @param $data
      * @return bool
      */
     private function onValidateSharpGoods($data)
     {
-        // 验证是否选择商品
+        // 验证是否选择产品
         if (!isset($data['sharp_goods']) || empty($data['sharp_goods'])) {
-            $this->error = '您还没有选择秒杀商品';
+            $this->error = '您还没有选择秒杀产品';
             return false;
         }
         return true;
@@ -190,7 +190,7 @@ class ActiveTime extends ActiveTimeModel
         }
         // 批量更新
         $activeTimes = $this->isUpdate(false)->saveAll($saveData);
-        // 新增活动场次与商品关联关系记录
+        // 新增活动场次与产品关联关系记录
         if (!empty($sharpGoodsIds)) {
             $this->onBatchAddActiveGoodsRec($activeTimes, $sharpGoodsIds);
         }
@@ -198,7 +198,7 @@ class ActiveTime extends ActiveTimeModel
     }
 
     /**
-     * 新增活动场次与商品关联记录
+     * 新增活动场次与产品关联记录
      * @param $activeTimes
      * @param $sharpGoodsIds
      * @return array|false
@@ -221,7 +221,7 @@ class ActiveTime extends ActiveTimeModel
     }
 
     /**
-     * 根据活动ID删除全部场次和商品关系
+     * 根据活动ID删除全部场次和产品关系
      * @param $activeId
      * @return bool
      */

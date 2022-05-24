@@ -129,7 +129,7 @@ use app\common\enum\live\LiveStatus as LiveStatusEnum;
             });
         });
 
-        // 商品状态
+        // 产品状态
         $('.j-setTop').click(function () {
             var data = $(this).data();
             layer.confirm('确定要' + (parseInt(data['istop']) === 1 ? '取消' : '') + '置顶该房间吗？'

@@ -7,7 +7,7 @@ use app\common\model\sharing\GoodsSku as GoodsSkuModel;
 use app\common\enum\goods\DeductStockType as DeductStockTypeEnum;
 
 /**
- * 拼团订单商品模型
+ * 拼团订单产品模型
  * Class OrderGoods
  * @package app\common\model\sharing
  */
@@ -17,7 +17,7 @@ class OrderGoods extends BaseModel
     protected $updateTime = false;
 
     /**
-     * 关联拼团商品表
+     * 关联拼团产品表
      * @return \think\model\relation\BelongsTo
      */
     public function goods()
@@ -26,7 +26,7 @@ class OrderGoods extends BaseModel
     }
 
     /**
-     * 订单拼团商品图
+     * 订单拼团产品图
      * @return \think\model\relation\BelongsTo
      */
     public function image()
@@ -36,7 +36,7 @@ class OrderGoods extends BaseModel
     }
 
     /**
-     * 关联拼团商品sku表
+     * 关联拼团产品sku表
      * @return \think\model\relation\BelongsTo
      */
     public function sku()
@@ -63,7 +63,7 @@ class OrderGoods extends BaseModel
     }
 
     /**
-     * 拼团订单商品详情
+     * 拼团订单产品详情
      * @param $where
      * @return OrderGoods|null
      * @throws \think\exception\DbException
@@ -74,7 +74,7 @@ class OrderGoods extends BaseModel
     }
 
     /**
-     * 回退商品库存
+     * 回退产品库存
      * @param $goodsList
      * @param $isPayOrder
      * @return array|false
@@ -99,7 +99,7 @@ class OrderGoods extends BaseModel
                 $goods['deduct_stock_type'] == DeductStockTypeEnum::CREATE && $goodsSkuData[] = $item;
             }
         }
-        // 更新商品sku库存
+        // 更新产品sku库存
         return !empty($goodsSkuData) && (new GoodsSkuModel)->updateAll($goodsSkuData);
     }
 

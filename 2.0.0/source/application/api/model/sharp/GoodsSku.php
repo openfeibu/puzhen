@@ -5,7 +5,7 @@ namespace app\api\model\sharp;
 use app\common\model\sharp\GoodsSku as GoodsSkuModel;
 
 /**
- * 整点秒杀-秒杀商品sku模型
+ * 整点秒杀-秒杀产品sku模型
  * Class Goods
  * @package app\api\model\sharp
  */

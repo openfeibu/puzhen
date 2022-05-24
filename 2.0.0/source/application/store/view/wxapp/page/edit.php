@@ -53,7 +53,7 @@
                                 </nav>
                                 <nav class="special" @click="onAddItem('goods')">
                                     <p class="item-icon"><i class="iconfont icon-shangpin5"></i></p>
-                                    <p>商品组</p>
+                                    <p>产品组</p>
                                 </nav>
                                 <nav class="special" @click="onAddItem('coupon')">
                                     <p class="item-icon"><i class="iconfont icon-youhuiquan2"></i></p>
@@ -61,15 +61,15 @@
                                 </nav>
                                 <nav class="special" @click="onAddItem('sharingGoods')">
                                     <p class="item-icon"><i class="iconfont icon-shangpin5"></i></p>
-                                    <p>拼团商品</p>
+                                    <p>拼团产品</p>
                                 </nav>
                                 <nav class="special" @click="onAddItem('bargainGoods')">
                                     <p class="item-icon"><i class="iconfont icon-kanjia"></i></p>
-                                    <p>砍价商品</p>
+                                    <p>砍价产品</p>
                                 </nav>
                                 <nav class="special" @click="onAddItem('sharpGoods')">
                                     <p class="item-icon"><i class="iconfont icon-miaosha"></i></p>
-                                    <p>秒杀商品</p>
+                                    <p>秒杀产品</p>
                                 </nav>
                                 <nav class="special" @click="onAddItem('shop')">
                                     <p class="item-icon"><i class="iconfont icon-mendian"></i></p>
@@ -363,7 +363,7 @@
                                     </div>
                                 </template>
 
-                                <!-- diy元素: 商品组 -->
+                                <!-- diy元素: 产品组 -->
                                 <template v-else-if="item.type == 'goods'">
                                     <div @click.stop="onEditer(index)">
                                         <div class="drag optional" :class="{selected: index === selectedIndex}">
@@ -375,31 +375,31 @@
                                                     <li class="goods-item"
                                                         v-for="goods in (item.params.source == 'choice' ? item.data : item.defaultData)">
 
-                                                        <!-- 单列商品 -->
+                                                        <!-- 单列产品 -->
                                                         <template v-if="item.style.column == 1">
                                                             <div class="dis-flex">
-                                                                <!-- 商品图片 -->
+                                                                <!-- 产品图片 -->
                                                                 <div class="goods-item_left">
                                                                     <img :src="goods.image">
                                                                 </div>
                                                                 <div class="goods-item_right">
-                                                                    <!-- 商品名称 -->
+                                                                    <!-- 产品名称 -->
                                                                     <div v-if="item.style.show.goodsName"
                                                                          class="goods-item_title twolist-hidden">
                                                                         <span>{{ goods.goods_name }}</span>
                                                                     </div>
                                                                     <div class="goods-item_desc">
-                                                                        <!-- 商品卖点 -->
+                                                                        <!-- 产品卖点 -->
                                                                         <div v-if="item.style.show.sellingPoint"
                                                                              class="desc-selling_point am-text-truncate">
                                                                             <span>{{ goods.selling_point }}</span>
                                                                         </div>
-                                                                        <!-- 商品销量 -->
+                                                                        <!-- 产品销量 -->
                                                                         <div v-if="item.style.show.goodsSales"
                                                                              class="desc-goods_sales am-text-truncate">
                                                                             <span>已售{{ goods.goods_sales }}件</span>
                                                                         </div>
-                                                                        <!-- 商品价格 -->
+                                                                        <!-- 产品价格 -->
                                                                         <div class="desc_footer">
                                                                             <span v-if="item.style.show.goodsPrice"
                                                                                   class="price_x">¥{{ goods.goods_price }}</span>
@@ -472,24 +472,24 @@
                                     </div>
                                 </template>
 
-                                <!-- diy元素: 拼团商品组 -->
+                                <!-- diy元素: 拼团产品组 -->
                                 <template v-else-if="item.type == 'sharingGoods'">
                                     <div @click.stop="onEditer(index)">
                                         <div class="drag optional" :class="{selected:index === selectedIndex}">
                                             <div class="diy-sharingGoods" :style="{background: item.style.background }">
                                                 <div class="goods-item dis-flex" v-for="(goods, index) in item.data">
-                                                    <!-- 商品图片 -->
+                                                    <!-- 产品图片 -->
                                                     <div class="goods-item_left">
                                                         <img :src="goods.image">
                                                     </div>
                                                     <div class="goods-item_right">
-                                                        <!-- 商品名称 -->
+                                                        <!-- 产品名称 -->
                                                         <div v-if="item.style.show.goodsName"
                                                              class="goods-item_title twolist-hidden">
                                                             <span>{{ goods.goods_name }}</span>
                                                         </div>
                                                         <div class="goods-item_desc">
-                                                            <!-- 商品卖点 -->
+                                                            <!-- 产品卖点 -->
                                                             <div v-if="item.style.show.sellingPoint"
                                                                  class="desc-selling_point am-text-truncate">
                                                                 <span>{{ goods.selling_point }}</span>
@@ -500,7 +500,7 @@
                                                                 <span class="people">2人团</span>
                                                                 <span class="x-color-999">已有43人进行拼团</span>
                                                             </div>
-                                                            <!-- 商品价格 -->
+                                                            <!-- 产品价格 -->
                                                             <div class="desc_footer">
                                                                 <span class="price_x"
                                                                       v-if="item.style.show.sharingPrice">¥{{ goods.sharing_price }}</span>
@@ -519,18 +519,18 @@
                                     </div>
                                 </template>
 
-                                <!-- diy元素: 砍价商品组 -->
+                                <!-- diy元素: 砍价产品组 -->
                                 <template v-else-if="item.type == 'bargainGoods'">
                                     <div @click.stop="onEditer(index)">
                                         <div class="drag optional" :class="{selected:index === selectedIndex}">
                                             <div class="diy-bargainGoods" :style="{background: item.style.background }">
                                                 <div class="goods-item dis-flex" v-for="(goods, index) in item.data">
-                                                    <!-- 商品图片 -->
+                                                    <!-- 产品图片 -->
                                                     <div class="goods-image">
                                                         <img :src="goods.goods_image">
                                                     </div>
                                                     <div class="goods-info">
-                                                        <!-- 商品名称 -->
+                                                        <!-- 产品名称 -->
                                                         <div v-if="item.style.show.goodsName" class="goods-name">
                                                             <span class="twolist-hidden">{{ goods.goods_name }}</span>
                                                         </div>
@@ -547,7 +547,7 @@
                                                                 <span>{{ item.demo.helps_count }}人正在砍价</span>
                                                             </div>
                                                         </div>
-                                                        <!-- 商品原价 -->
+                                                        <!-- 产品原价 -->
                                                         <div v-if="item.style.show.originalPrice" class="goods-price">
                                                             <span>￥{{ goods.original_price }}</span>
                                                         </div>
@@ -571,7 +571,7 @@
                                     </div>
                                 </template>
 
-                                <!-- diy元素: 秒杀商品组 -->
+                                <!-- diy元素: 秒杀产品组 -->
                                 <template v-else-if="item.type == 'sharpGoods'">
                                     <div @click.stop="onEditer(index)">
                                         <div class="drag optional" :class="{selected: index === selectedIndex}">
@@ -619,7 +619,7 @@
                                                         :class="['column__' + item.style.column]">
                                                         <li class="goods-item"
                                                             v-for="goods in item.data">
-                                                            <!-- 单列商品 -->
+                                                            <!-- 单列产品 -->
                                                             <template v-if="item.style.column == 1">
                                                             </template>
                                                             <!-- 两列三列 -->
@@ -1506,14 +1506,14 @@
                             </form>
                         </div>
 
-                        <!--编辑器: 商品组-->
+                        <!--编辑器: 产品组-->
                         <div id="tpl_editor_goods" v-if="curItem.type == 'goods'">
                             <div class="editor-title"><span>{{ curItem.name }}</span></div>
                             <form class="am-form tpl-form-line-form">
-                                <!--商品数据-->
+                                <!--产品数据-->
                                 <div class="j-switch-box" data-item-class="switch-source">
                                     <div class="am-form-group">
-                                        <label class="am-u-sm-3 am-form-label am-text-xs">商品来源 </label>
+                                        <label class="am-u-sm-3 am-form-label am-text-xs">产品来源 </label>
                                         <div class="am-u-sm-8 am-u-end">
                                             <label class="am-radio-inline">
                                                 <input type="radio" value="auto"
@@ -1544,14 +1544,14 @@
                                             </draggable>
                                         </div>
                                         <div class="j-selectGoods form-item-add" @click.stop="onSelectGoods(curItem)">
-                                            <i class="fa fa-plus"></i> 选择商品
+                                            <i class="fa fa-plus"></i> 选择产品
                                         </div>
                                     </div>
                                     <!-- 自动获取 -->
                                     <div class="switch-source"
                                          v-show="curItem.params.source == 'auto'">
                                         <div class="am-form-group">
-                                            <label class="am-u-sm-3 am-form-label am-text-xs">商品分类 </label>
+                                            <label class="am-u-sm-3 am-form-label am-text-xs">产品分类 </label>
                                             <div class="am-u-sm-8 am-u-end">
                                                 <select v-model="curItem.params.auto.category"
                                                         data-am-selected="{btnSize: 'sm',  placeholder:'全部分类', maxHeight: 400}">
@@ -1568,7 +1568,7 @@
                                             </div>
                                         </div>
                                         <div class="am-form-group">
-                                            <label class="am-u-sm-3 am-form-label am-text-xs"> 商品排序 </label>
+                                            <label class="am-u-sm-3 am-form-label am-text-xs"> 产品排序 </label>
                                             <div class="am-u-sm-8 am-u-end">
                                                 <label class="am-radio-inline">
                                                     <input type="radio" value="all"
@@ -1645,11 +1645,11 @@
                                     <div class="am-u-sm-8 am-u-end">
                                         <label class="am-checkbox-inline">
                                             <input type="checkbox"
-                                                   v-model="curItem.style.show.goodsName"> 商品名称
+                                                   v-model="curItem.style.show.goodsName"> 产品名称
                                         </label>
                                         <label class="am-checkbox-inline">
                                             <input type="checkbox"
-                                                   v-model="curItem.style.show.goodsPrice"> 商品价格
+                                                   v-model="curItem.style.show.goodsPrice"> 产品价格
                                         </label>
                                         <label class="am-checkbox-inline">
                                             <input type="checkbox"
@@ -1657,11 +1657,11 @@
                                         </label>
                                         <label class="am-checkbox-inline" v-show="curItem.style.column == 1">
                                             <input type="checkbox"
-                                                   v-model="curItem.style.show.sellingPoint"> 商品卖点
+                                                   v-model="curItem.style.show.sellingPoint"> 产品卖点
                                         </label>
                                         <label class="am-checkbox-inline" v-show="curItem.style.column == 1">
                                             <input type="checkbox"
-                                                   v-model="curItem.style.show.goodsSales"> 商品销量
+                                                   v-model="curItem.style.show.goodsSales"> 产品销量
                                         </label>
                                     </div>
                                 </div>
@@ -1706,14 +1706,14 @@
                             </form>
                         </div>
 
-                        <!-- 编辑器: 拼团商品组 -->
+                        <!-- 编辑器: 拼团产品组 -->
                         <div id="tpl_editor_sharingGoods" v-if="curItem.type == 'sharingGoods'">
                             <div class="editor-title"><span>{{ curItem.name }}</span></div>
                             <form class="am-form tpl-form-line-form">
-                                <!--商品数据-->
+                                <!--产品数据-->
                                 <div class="j-switch-box" data-item-class="switch-source">
                                     <div class="am-form-group">
-                                        <label class="am-u-sm-3 am-form-label am-text-xs">商品来源 </label>
+                                        <label class="am-u-sm-3 am-form-label am-text-xs">产品来源 </label>
                                         <div class="am-u-sm-8 am-u-end">
                                             <label class="am-radio-inline">
                                                 <input type="radio" value="auto"
@@ -1743,13 +1743,13 @@
                                             </draggable>
                                         </div>
                                         <div class="j-selectGoods form-item-add" @click.stop="onSelectGoods(curItem)">
-                                            <i class="fa fa-plus"></i> 选择商品
+                                            <i class="fa fa-plus"></i> 选择产品
                                         </div>
                                     </div>
                                     <!--自动获取-->
                                     <div class="switch-source __auto" v-show="curItem.params.source !== 'choice'">
                                         <div class="am-form-group">
-                                            <label class="am-u-sm-3 am-form-label am-text-xs">商品分类 </label>
+                                            <label class="am-u-sm-3 am-form-label am-text-xs">产品分类 </label>
                                             <div class="am-u-sm-8 am-u-end">
                                                 <select v-model="curItem.params.auto.category"
                                                         data-am-selected="{btnSize: 'sm',  placeholder:'全部分类', maxHeight: 400}">
@@ -1766,7 +1766,7 @@
                                             </div>
                                         </div>
                                         <div class="am-form-group">
-                                            <label class="am-u-sm-3 am-form-label am-text-xs">商品排序 </label>
+                                            <label class="am-u-sm-3 am-form-label am-text-xs">产品排序 </label>
                                             <div class="am-u-sm-8 am-u-end">
                                                 <label class="am-radio-inline">
                                                     <input type="radio" value="all"
@@ -1813,7 +1813,7 @@
                                     <div class="am-u-sm-8 am-u-end">
                                         <label class="am-checkbox-inline">
                                             <input type="checkbox" value="1"
-                                                   v-model="curItem.style.show.sellingPoint"> 商品卖点
+                                                   v-model="curItem.style.show.sellingPoint"> 产品卖点
                                         </label>
                                         <label class="am-checkbox-inline">
                                             <input type="checkbox" value="1"
@@ -1828,14 +1828,14 @@
                             </form>
                         </div>
 
-                        <!-- 编辑器: 砍价商品组 -->
+                        <!-- 编辑器: 砍价产品组 -->
                         <div id="tpl_editor_bargainGoods" v-if="curItem.type == 'bargainGoods'">
                             <div class="editor-title"><span>{{ curItem.name }}</span></div>
                             <form class="am-form tpl-form-line-form">
-                                <!--商品数据-->
+                                <!--产品数据-->
                                 <div class="j-switch-box" data-item-class="switch-source">
                                     <div class="am-form-group">
-                                        <label class="am-u-sm-3 am-form-label am-text-xs">商品来源 </label>
+                                        <label class="am-u-sm-3 am-form-label am-text-xs">产品来源 </label>
                                         <div class="am-u-sm-8 am-u-end">
                                             <label class="am-radio-inline">
                                                 <input type="radio" value="auto"
@@ -1865,13 +1865,13 @@
                                             </draggable>
                                         </div>
                                         <div class="j-selectGoods form-item-add" @click.stop="onSelectGoods(curItem)">
-                                            <i class="fa fa-plus"></i> 选择商品
+                                            <i class="fa fa-plus"></i> 选择产品
                                         </div>
                                     </div>
                                     <!--自动获取-->
                                     <div class="switch-source __auto" v-show="curItem.params.source !== 'choice'">
                                         <div class="am-form-group">
-                                            <label class="am-u-sm-3 am-form-label am-text-xs">商品排序 </label>
+                                            <label class="am-u-sm-3 am-form-label am-text-xs">产品排序 </label>
                                             <div class="am-u-sm-8 am-u-end">
                                                 <label class="am-radio-inline">
                                                     <input type="radio" value="all"
@@ -1918,7 +1918,7 @@
                                     <div class="am-u-sm-8 am-u-end">
                                         <label class="am-checkbox-inline">
                                             <input type="checkbox" value="1"
-                                                   v-model="curItem.style.show.goodsName"> 商品名称
+                                                   v-model="curItem.style.show.goodsName"> 产品名称
                                         </label>
                                         <label class="am-checkbox-inline">
                                             <input type="checkbox" value="1"
@@ -1930,23 +1930,23 @@
                                         </label>
                                         <label class="am-checkbox-inline">
                                             <input type="checkbox"
-                                                   v-model="curItem.style.show.originalPrice"> 商品原价
+                                                   v-model="curItem.style.show.originalPrice"> 产品原价
                                         </label>
                                     </div>
                                 </div>
                             </form>
                         </div>
 
-                        <!-- 编辑器: 秒杀商品组 -->
+                        <!-- 编辑器: 秒杀产品组 -->
                         <div id="tpl_editor_sharpGoods" v-if="curItem.type == 'sharpGoods'">
                             <div class="editor-title"><span>{{ curItem.name }}</span></div>
                             <form class="am-form tpl-form-line-form">
-                                <!-- 商品数据 -->
+                                <!-- 产品数据 -->
                                 <div class="j-switch-box" data-item-class="switch-source">
                                     <!--自动获取-->
                                     <div class="switch-source __auto" v-show="curItem.params.source !== 'choice'">
                                         <div class="am-form-group">
-                                            <label class="am-u-sm-3 am-form-label am-text-xs">商品数量 </label>
+                                            <label class="am-u-sm-3 am-form-label am-text-xs">产品数量 </label>
                                             <div class="am-u-sm-8 am-u-end">
                                                 <input class="tpl-form-input" type="number" min="1"
                                                        v-model="curItem.params.showNum">
@@ -1991,7 +1991,7 @@
                                     <div class="am-u-sm-8 am-u-end">
                                         <label class="am-checkbox-inline">
                                             <input type="checkbox" value="1"
-                                                   v-model="curItem.style.show.goodsName"> 商品名称
+                                                   v-model="curItem.style.show.goodsName"> 产品名称
                                         </label>
                                         <label class="am-checkbox-inline">
                                             <input type="checkbox"
@@ -1999,7 +1999,7 @@
                                         </label>
                                         <label class="am-checkbox-inline">
                                             <input type="checkbox"
-                                                   v-model="curItem.style.show.originalPrice"> 商品原价
+                                                   v-model="curItem.style.show.originalPrice"> 产品原价
                                         </label>
                                     </div>
                                 </div>
@@ -2150,10 +2150,10 @@
                         <div id="tpl_editor_shop" v-if="curItem.type == 'shop'">
                             <div class="editor-title"><span>{{ curItem.name }}</span></div>
                             <form class="am-form tpl-form-line-form">
-                                <!--商品数据-->
+                                <!--产品数据-->
                                 <div class="j-switch-box" data-item-class="switch-source">
                                     <div class="am-form-group">
-                                        <label class="am-u-sm-3 am-form-label am-text-xs">商品来源 </label>
+                                        <label class="am-u-sm-3 am-form-label am-text-xs">产品来源 </label>
                                         <div class="am-u-sm-8 am-u-end">
                                             <label class="am-radio-inline">
                                                 <input type="radio" value="auto"

@@ -3,7 +3,7 @@
 namespace app\common\model;
 
 /**
- * 商品图片模型
+ * 产品图片模型
  * Class GoodsImage
  * @package app\common\model
  */

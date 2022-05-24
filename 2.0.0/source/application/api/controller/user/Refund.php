@@ -50,10 +50,10 @@ class Refund extends Controller
      */
     public function apply($order_goods_id)
     {
-        // 订单商品详情
+        // 订单产品详情
         $goods = OrderGoodsModel::detail($order_goods_id);
         if (isset($goods['refund']) && !empty($goods['refund'])) {
-            return $this->renderError('当前商品已申请售后');
+            return $this->renderError('当前产品已申请售后');
         }
         if (!$this->request->isPost()) {
             return $this->renderSuccess(['detail' => $goods]);

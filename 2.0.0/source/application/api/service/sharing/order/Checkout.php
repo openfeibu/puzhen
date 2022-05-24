@@ -43,7 +43,7 @@ class Checkout
     /* @var UserModel $user 当前用户信息 */
     private $user;
 
-    // 订单结算商品列表
+    // 订单结算产品列表
     private $goodsList = [];
 
     // 错误信息
@@ -172,13 +172,13 @@ class Checkout
     {
         // 整理订单数据
         $this->orderData = $this->getOrderData();
-        // 验证商品状态, 是否允许购买
+        // 验证产品状态, 是否允许购买
         $this->validateGoodsList();
-        // 订单商品总数量
+        // 订单产品总数量
         $orderTotalNum = helper::getArrayColumnSum($this->goodsList, 'total_num');
-        // 设置订单商品会员折扣价
+        // 设置订单产品会员折扣价
         $this->setOrderGoodsGradeMoney();
-        // 设置订单商品总金额(不含优惠折扣)
+        // 设置订单产品总金额(不含优惠折扣)
         $this->setOrderTotalPrice();
         // 当前用户可用的优惠券列表
         $couponList = $this->getUserCouponList($this->orderData['order_total_price']);
@@ -186,7 +186,7 @@ class Checkout
         $this->setOrderCouponMoney($couponList, $this->param['coupon_id']);
         // 计算可用积分抵扣
         $this->setOrderPoints();
-        // 计算订单商品的实际付款金额
+        // 计算订单产品的实际付款金额
         $this->setOrderGoodsPayPrice();
         // 设置默认配送方式
         !$this->param['delivery'] && $this->param['delivery'] = current(SettingModel::getItem('store')['delivery_type']);
@@ -202,8 +202,8 @@ class Checkout
         $this->setOrderPointsBonus();
         // 返回订单数据
         return array_merge([
-            'goods_list' => array_values($this->goodsList),   // 商品信息
-            'order_total_num' => $orderTotalNum,        // 商品总数量
+            'goods_list' => array_values($this->goodsList),   // 产品信息
+            'order_total_num' => $orderTotalNum,        // 产品总数量
             'coupon_list' => array_values($couponList), // 优惠券列表
             'has_error' => $this->hasError(),
             'error_msg' => $this->getError(),
@@ -216,7 +216,7 @@ class Checkout
      */
     private function setOrderPoints()
     {
-        // 设置默认的商品积分抵扣信息
+        // 设置默认的产品积分抵扣信息
         $this->setDefaultGoodsPoints();
         // 积分设置
         $setting = SettingModel::getItem('points');
@@ -228,7 +228,7 @@ class Checkout
         if (helper::bccomp($setting['discount']['full_order_price'], $this->orderData['order_total_price']) === 1) {
             return false;
         }
-        // 计算订单商品最多可抵扣的积分数量
+        // 计算订单产品最多可抵扣的积分数量
         $this->setOrderGoodsMaxPointsNum();
         // 订单最多可抵扣的积分总数量
         $maxPointsNumCount = helper::getArrayColumnSum($this->goodsList, 'max_points_num');
@@ -237,7 +237,7 @@ class Checkout
         if ($actualPointsNum < 1) {
             return false;
         }
-        // 计算订单商品实际抵扣的积分数量和金额
+        // 计算订单产品实际抵扣的积分数量和金额
         $GoodsDeduct = new PointsDeductService($this->goodsList);
         $GoodsDeduct->setGoodsPoints($maxPointsNumCount, $actualPointsNum);
         // 积分抵扣总金额
@@ -251,7 +251,7 @@ class Checkout
     }
 
     /**
-     * 计算订单商品最多可抵扣的积分数量
+     * 计算订单产品最多可抵扣的积分数量
      * @return bool
      */
     private function setOrderGoodsMaxPointsNum()
@@ -259,7 +259,7 @@ class Checkout
         // 积分设置
         $setting = SettingModel::getItem('points');
         foreach ($this->goodsList as &$goods) {
-            // 商品不允许积分抵扣
+            // 产品不允许积分抵扣
             if (!$goods['is_points_discount']) continue;
             // 积分抵扣比例
             $deductionRatio = helper::bcdiv($setting['discount']['max_money_ratio'], 100);
@@ -275,7 +275,7 @@ class Checkout
     }
 
     /**
-     * 设置默认的商品积分抵扣信息
+     * 设置默认的产品积分抵扣信息
      * @return bool
      */
     private function setDefaultGoodsPoints()
@@ -374,28 +374,28 @@ class Checkout
     }
 
     /**
-     * 验证订单商品的状态
+     * 验证订单产品的状态
      */
     private function validateGoodsList()
     {
         foreach ($this->goodsList as $goods) {
-            // 判断商品是否下架
+            // 判断产品是否下架
             if ($goods['goods_status']['value'] != 10) {
-                $this->setError("很抱歉，商品 [{$goods['goods_name']}] 已下架");
+                $this->setError("很抱歉，产品 [{$goods['goods_name']}] 已下架");
             }
-            // 判断商品库存
+            // 判断产品库存
             if ($goods['total_num'] > $goods['goods_sku']['stock_num']) {
-                $this->setError("很抱歉，商品 [{$goods['goods_name']}] 库存不足");
+                $this->setError("很抱歉，产品 [{$goods['goods_name']}] 库存不足");
             }
         }
     }
 
     /**
-     * 设置订单的商品总金额(不含优惠折扣)
+     * 设置订单的产品总金额(不含优惠折扣)
      */
     private function setOrderTotalPrice()
     {
-        // 订单商品的总金额(不含优惠券折扣)
+        // 订单产品的总金额(不含优惠券折扣)
         $this->orderData['order_total_price'] = helper::number2(helper::getArrayColumnSum($this->goodsList, 'total_price'));
     }
 
@@ -416,7 +416,7 @@ class Checkout
      */
     private function setOrderPointsBonus()
     {
-        // 初始化商品积分赠送数量
+        // 初始化产品积分赠送数量
         foreach ($this->goodsList as &$goods) {
             $goods['points_bonus'] = 0;
         }
@@ -426,7 +426,7 @@ class Checkout
         if (!$setting['is_shopping_gift']) {
             return false;
         }
-        // 设置商品积分赠送数量
+        // 设置产品积分赠送数量
         foreach ($this->goodsList as &$goods) {
             // 积分赠送比例
             $ratio = $setting['gift_ratio'] / 100;
@@ -439,12 +439,12 @@ class Checkout
     }
 
     /**
-     * 计算订单商品的实际付款金额
+     * 计算订单产品的实际付款金额
      * @return bool
      */
     private function setOrderGoodsPayPrice()
     {
-        // 商品总价 - 优惠抵扣
+        // 产品总价 - 优惠抵扣
         foreach ($this->goodsList as &$goods) {
             // 减去优惠券抵扣金额
             $value = helper::bcsub($goods['total_price'], $goods['coupon_money']);
@@ -458,7 +458,7 @@ class Checkout
     }
 
     /**
-     * 设置订单商品会员折扣价
+     * 设置订单产品会员折扣价
      * @return bool
      */
     private function setOrderGoodsGradeMoney()
@@ -469,7 +469,7 @@ class Checkout
             'is_user_grade' => false,
             // 会员等级抵扣的金额
             'grade_ratio' => 0,
-            // 会员折扣的商品单价
+            // 会员折扣的产品单价
             'grade_goods_price' => 0.00,
             // 会员折扣的总额差
             'grade_total_money' => 0.00,
@@ -488,11 +488,11 @@ class Checkout
         }
         // 计算抵扣金额
         foreach ($this->goodsList as &$goods) {
-            // 判断商品是否参与会员折扣
+            // 判断产品是否参与会员折扣
             if (!$goods['is_enable_grade']) {
                 continue;
             }
-            // 商品单独设置了会员折扣
+            // 产品单独设置了会员折扣
             if ($goods['is_alone_grade'] && isset($goods['alone_grade_equity'][$this->user['grade_id']])) {
                 // 折扣比例
                 $discountRatio = helper::bcdiv($goods['alone_grade_equity'][$this->user['grade_id']], 10);
@@ -501,7 +501,7 @@ class Checkout
                 $discountRatio = helper::bcdiv($this->user['grade']['equity']['discount'], 10);
             }
             if ($discountRatio > 0) {
-                // 会员折扣后的商品总金额
+                // 会员折扣后的产品总金额
                 $gradeTotalPrice = max(0.01, helper::bcmul($goods['total_price'], $discountRatio));
                 helper::setDataAttribute($goods, [
                     'is_user_grade' => true,
@@ -529,7 +529,7 @@ class Checkout
             'coupon_id' => 0,       // 用户优惠券id
             'coupon_money' => 0,    // 优惠券抵扣金额
         ], false);
-        // 设置默认数据：订单商品列表
+        // 设置默认数据：订单产品列表
         helper::setDataAttribute($this->goodsList, [
             'coupon_money' => 0,    // 优惠券抵扣金额
         ], true);
@@ -546,11 +546,11 @@ class Checkout
         if ($couponInfo == false) {
             throw new BaseException(['msg' => '未找到优惠券信息']);
         }
-        // 计算订单商品优惠券抵扣金额
+        // 计算订单产品优惠券抵扣金额
         $goodsListTemp = helper::getArrayColumns($this->goodsList, ['total_price']);
         $CouponMoney = new GoodsDeductService;
         $completed = $CouponMoney->setGoodsCouponMoney($goodsListTemp, $couponInfo['reduced_price']);
-        // 分配订单商品优惠券抵扣金额
+        // 分配订单产品优惠券抵扣金额
         foreach ($this->goodsList as $key => &$goods) {
             $goods['coupon_money'] = $completed[$key]['coupon_money'] / 100;
         }
@@ -577,11 +577,11 @@ class Checkout
         $cityId = $this->user['address_default'] ? $this->user['address_default']['city_id'] : null;
         // 初始化配送服务类
         $ExpressService = new ExpressService($cityId, $this->goodsList, OrderTypeEnum::SHARING);
-        // 验证商品是否在配送范围
+        // 验证产品是否在配送范围
         $isIntraRegion = $ExpressService->isIntraRegion();
         if ($cityId > 0 && $isIntraRegion == false) {
             $notInRuleGoodsName = $ExpressService->getNotInRuleGoodsName();
-            $this->setError("很抱歉，您的收货地址不在商品 [{$notInRuleGoodsName}] 的配送范围内");
+            $this->setError("很抱歉，您的收货地址不在产品 [{$notInRuleGoodsName}] 的配送范围内");
         }
         // 订单总运费金额
         $this->orderData['intra_region'] = $isIntraRegion;
@@ -634,9 +634,9 @@ class Checkout
             // 记录自提信息
             $this->saveOrderExtract($this->param['linkman'], $this->param['phone']);
         }
-        // 保存订单商品信息
+        // 保存订单产品信息
         $this->saveOrderGoods($order);
-        // 更新商品库存 (针对下单减库存的商品)
+        // 更新产品库存 (针对下单减库存的产品)
         $this->updateGoodsStockNum($order['goods_list']);
         // 设置优惠券使用状态
         UserCouponModel::setIsUse($this->param['coupon_id']);
@@ -766,7 +766,7 @@ class Checkout
     }
 
     /**
-     * 保存订单商品信息
+     * 保存订单产品信息
      * @param $order
      * @return int
      */
@@ -774,7 +774,7 @@ class Checkout
     {
         // 当前订单是否存在和使用积分抵扣
         $isExistPointsDeduction = $this->isExistPointsDeduction($order);
-        // 订单商品列表
+        // 订单产品列表
         $goodsList = [];
         foreach ($order['goods_list'] as $goods) {
             /* @var GoodsModel $goods */
@@ -819,7 +819,7 @@ class Checkout
     }
 
     /**
-     * 更新商品库存 (针对下单减库存的商品)
+     * 更新产品库存 (针对下单减库存的产品)
      * @param $goods_list
      * @throws \Exception
      */

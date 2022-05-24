@@ -44,7 +44,7 @@ class Active extends Basics
         // 获取秒杀首页顶部菜单
         $tabbar = $this->getActiveTabbar();
         if (empty($tabbar)) return ['tabbar' => [], 'goodsList' => []];
-        // 获取活动商品
+        // 获取活动产品
         $goodsList = $this->getGoodsListByActiveTimeId($tabbar[0]['active_time_id']);
         return compact('tabbar', 'goodsList');
     }
@@ -65,13 +65,13 @@ class Active extends Basics
         return [
             // 秒杀活动
             'active' => $tabbar[0],
-            // 活动商品列表
+            // 活动产品列表
             'goodsList' => $this->getGoodsListByActiveTimeId($tabbar[0]['active_time_id'], $goodsParm),
         ];
     }
 
     /**
-     * 根据活动场次ID获取商品列表
+     * 根据活动场次ID获取产品列表
      * @param int $activeTimeId
      * @param array $goodsParm
      * @return false|\PDOStatement|string|\think\Collection
@@ -82,7 +82,7 @@ class Active extends Basics
     }
 
     /**
-     * 获取活动商品详情
+     * 获取活动产品详情
      * @param $activeTimeId
      * @param $sharpGoodsId
      * @return array|bool
@@ -93,20 +93,20 @@ class Active extends Basics
         // 活动详情
         $active = $this->getGoodsActive($activeTimeId, $sharpGoodsId);
         if (empty($active)) return false;
-        // 商品详情
+        // 产品详情
         $model = new ActiveGoodsModel;
         $goods = $model->getGoodsActiveDetail($active, $sharpGoodsId, true);
         if (empty($goods)) {
             $this->error = $model->getError();
             return false;
         }
-        // 商品多规格信息
+        // 产品多规格信息
         $goods['goods_multi_spec'] = (new SharpGoodsModel)->getSpecData($goods, $goods['sku']);
         return compact('active', 'goods');
     }
 
     /**
-     * 获取订单提交的商品列表
+     * 获取订单提交的产品列表
      * @param $activeTimeId
      * @param $sharpGoodsId
      * @param $goodsSkuId
@@ -119,24 +119,24 @@ class Active extends Basics
         // 活动详情
         $active = $this->getGoodsActive($activeTimeId, $sharpGoodsId);
         if (empty($active)) return false;
-        // 商品详情
+        // 产品详情
         $model = new ActiveGoodsModel;
         $goods = $model->getGoodsActiveDetail($active, $sharpGoodsId, false);
         if (empty($goods)) return false;
-        // 商品sku信息
+        // 产品sku信息
         $goods['goods_sku'] = GoodsModel::getGoodsSku($goods, $goodsSkuId);
-        // 商品列表
+        // 产品列表
         $goodsList = [$goods->hidden(['category', 'content', 'image', 'sku'])];
         foreach ($goodsList as &$item) {
-            // 商品价格
+            // 产品价格
             $item['goods_price'] = $item['goods_sku']['seckill_price'];
             $item['line_price'] = $item['goods_sku']['original_price'];
-            // 商品id
+            // 产品id
             $item['spec_sku_id'] = $item['goods_sku']['spec_sku_id'];
             $item['goods_source_id'] = $item['sharp_goods_id'];
-            // 商品购买数量
+            // 产品购买数量
             $item['total_num'] = $goodsNum;
-            // 商品购买总金额
+            // 产品购买总金额
             $item['total_price'] = helper::bcmul($item['goods_price'], $goodsNum);
         }
         return $goodsList;
@@ -150,7 +150,7 @@ class Active extends Basics
      */
     private function getGoodsActive($activeTimeId, $sharpGoodsId)
     {
-        // 获取活动商品的关联信息
+        // 获取活动产品的关联信息
         $model = $this->getActiveGoods($activeTimeId, $sharpGoodsId);
         if (empty($model) || !($model['active']['status'] && $model['active_time']['status'])) {
             $this->error = '很抱歉，该活动不存在或已结束';
@@ -174,7 +174,7 @@ class Active extends Basics
     }
 
     /**
-     * 获取活动商品的关联信息
+     * 获取活动产品的关联信息
      * @param $activeTimeId
      * @param $sharpGoodsId
      * @return mixed
@@ -190,7 +190,7 @@ class Active extends Basics
     }
 
     /**
-     * 活动商品倒计时
+     * 活动产品倒计时
      * @param $activeStatus
      * @param $startTime
      * @param $endTime
@@ -208,7 +208,7 @@ class Active extends Basics
     }
 
     /**
-     * 活动商品状态
+     * 活动产品状态
      * @param $startTime
      * @param $endTime
      * @return int

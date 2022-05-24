@@ -23,7 +23,7 @@ class Bargain extends Basics
         if (!$this->checkOrderStatusOnPayCommon($order)) {
             return false;
         }
-        // 判断商品状态、库存
+        // 判断产品状态、库存
         if (!$this->checkGoodsStatusOnPay($order['goods'])) {
             return false;
         }
@@ -31,7 +31,7 @@ class Bargain extends Basics
     }
 
     /**
-     * 判断商品状态、库存 (未付款订单)
+     * 判断产品状态、库存 (未付款订单)
      * @param $goodsList
      * @return bool
      * @throws \think\exception\DbException
@@ -39,16 +39,16 @@ class Bargain extends Basics
     protected function checkGoodsStatusOnPay($goodsList)
     {
         foreach ($goodsList as $goods) {
-            // 获取商品的sku信息
+            // 获取产品的sku信息
             $goodsSku = $this->getOrderGoodsSku($goods['goods_id'], $goods['spec_sku_id']);
             // sku已不存在
             if (empty($goodsSku)) {
-                $this->error = "很抱歉，商品 [{$goods['goods_name']}] sku已不存在，请重新下单";
+                $this->error = "很抱歉，产品 [{$goods['goods_name']}] sku已不存在，请重新下单";
                 return false;
             }
             // 付款减库存
             if ($goods['deduct_stock_type'] == 20 && $goods['total_num'] > $goodsSku['stock_num']) {
-                $this->error = "很抱歉，商品 [{$goods['goods_name']}] 库存不足";
+                $this->error = "很抱歉，产品 [{$goods['goods_name']}] 库存不足";
                 return false;
             }
         }
@@ -56,7 +56,7 @@ class Bargain extends Basics
     }
 
     /**
-     * 获取指定的商品sku信息
+     * 获取指定的产品sku信息
      * @param $goodsId
      * @param $specSkuId
      * @return \app\common\model\GoodsSku|null

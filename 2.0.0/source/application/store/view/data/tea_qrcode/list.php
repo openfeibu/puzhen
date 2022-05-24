@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/common/css/amazeui.min.css"/>
     <link rel="stylesheet" href="assets/store/css/app.css?v=<?= $version ?>"/>
     <script src="assets/common/js/jquery.min.js"></script>
-    <title>商品列表</title>
+    <title>产品列表</title>
 </head>
 <body class="select-data">
 <!-- 工具栏 -->

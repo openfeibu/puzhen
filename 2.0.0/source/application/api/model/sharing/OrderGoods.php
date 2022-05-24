@@ -5,7 +5,7 @@ namespace app\api\model\sharing;
 use app\common\model\sharing\OrderGoods as OrderGoodsModel;
 
 /**
- * 拼团订单商品模型
+ * 拼团订单产品模型
  * Class OrderGoods
  * @package app\api\model
  */
@@ -22,7 +22,7 @@ class OrderGoods extends OrderGoodsModel
     ];
 
     /**
-     * 获取未评价的商品
+     * 获取未评价的产品
      * @param $order_id
      * @return OrderGoods[]|false
      * @throws \think\exception\DbException

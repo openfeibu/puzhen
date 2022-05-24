@@ -31,7 +31,7 @@ class Distributor extends BaseModel
     }
 
     /**
-     * 关联商品表
+     * 关联产品表
      * @return \think\model\relation\HasMany
      */
     public function goods()

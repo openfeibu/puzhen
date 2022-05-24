@@ -77,12 +77,12 @@
                             </div>
                             <!--
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 选择商品 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 选择产品 </label>
                                 <div class="am-u-sm-9 am-u-md-6 am-u-lg-5 am-u-end">
                                     <div class="am-form-file am-margin-top-xs">
                                         <button type="button"
                                                 class="j-selectGoods upload-file am-btn am-btn-secondary am-radius">
-                                            <i class="am-icon-cloud-upload"></i> 选择商品
+                                            <i class="am-icon-cloud-upload"></i> 选择产品
                                         </button>
                                         <div class="widget-goods-list uploader-list am-cf">
                                             <?php if(isset($model['goods_tea_qrcode']['goods'])):?>
@@ -112,7 +112,7 @@
     </div>
 </div>
 
-<!-- 商品列表 -->
+<!-- 产品列表 -->
 <script id="tpl-goods-list-item" type="text/template">
     {{ each $data }}
     <div class="file-item">
@@ -130,10 +130,10 @@
 <script>
     $(function () {
 
-        // 选择商品
+        // 选择产品
         var $goodsList = $('.widget-goods-list');
         $('.j-selectGoods').selectData({
-            title: '选择商品',
+            title: '选择产品',
             uri: 'goods/lists&factory_id=<?= $model['factory_id'] ?>',
             dataIndex: 'goods_id',
             done: function (data) {

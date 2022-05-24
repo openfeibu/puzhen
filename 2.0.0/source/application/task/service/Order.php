@@ -49,7 +49,7 @@ class Order extends Basics
         // 取消订单事件
         if (!empty($this->closeOrderIds)) {
             foreach ($list as &$order) {
-                // 回退商品库存
+                // 回退产品库存
                 FactoryStock::getFactory($order['order_source'])->backGoodsStock($order['goods'], false);
                 // 回退用户优惠券
                 $order['coupon_id'] > 0 && UserCouponModel::setIsUse($order['coupon_id'], false);

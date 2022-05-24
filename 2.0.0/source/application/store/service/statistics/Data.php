@@ -38,7 +38,7 @@ class Data extends Basics
     }
 
     /**
-     * 商品销售榜
+     * 产品销售榜
      * @return string
      * @throws \think\db\exception\DataNotFoundException
      * @throws \think\db\exception\ModelNotFoundException

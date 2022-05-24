@@ -15,7 +15,7 @@ abstract class Basics extends \app\api\service\Basics
     abstract public function checkOrderStatusOnPay($order);
 
     /**
-     * 判断商品状态、库存 (未付款订单)
+     * 判断产品状态、库存 (未付款订单)
      * @param $goodsList
      * @return mixed
      */

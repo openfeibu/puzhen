@@ -81,7 +81,7 @@
 
                                 </div>
                                 <div class="outline-right dis-flex flex-dir-column flex-x-center">
-                                    <div class="item-name">商品数量</div>
+                                    <div class="item-name">产品数量</div>
                                     <div class="item-value">{{ survey.values.goods_total }}</div>
                                 </div>
                             </div>
@@ -104,7 +104,7 @@
                                     <span class="iconfont am-icon-coffee"> </span>
                                 </div>
                                 <div class="outline-right dis-flex flex-dir-column flex-x-center">
-                                    <div class="item-name">茶艺机延保信息数量</div>
+                                    <div class="item-name">茶电器延保信息数量</div>
                                     <div class="item-value">{{ survey.values.user_equipment_total }}</div>
                                 </div>
                             </div>
@@ -138,7 +138,7 @@
                 dateValue: [],
                 values: <?= \app\common\library\helper::jsonEncode($survey) ?>
             },
-            // 商品销售榜
+            // 产品销售榜
 
             // 用户消费榜
 

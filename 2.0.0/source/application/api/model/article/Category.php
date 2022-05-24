@@ -48,7 +48,7 @@ class Category extends CategoryModel
     }
 
     /**
-     * 删除商品分类
+     * 删除产品分类
      * @param $category_id
      * @return bool|int
      */

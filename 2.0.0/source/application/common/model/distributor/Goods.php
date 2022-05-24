@@ -7,7 +7,7 @@ use app\common\model\BaseModel;
 use app\common\service\Goods as GoodsService;
 
 /**
- * 经销商-商品模型
+ * 经销商-产品模型
  * Class Goods
  * @package app\common\model\distributor
  */
@@ -18,10 +18,10 @@ class Goods extends BaseModel
 
     public function getList($param)
     {
-        // 商品列表获取条件
+        // 产品列表获取条件
         $params = array_merge([
             'goods_id' => 0,
-            'status' => 10,         // 商品状态
+            'status' => 10,         // 产品状态
             'category_id' => 0,     // 分类id
             'distributor_id' => 0,     // 经销商id
             'factory_id' => 0,     // 工厂id
@@ -59,12 +59,12 @@ class Goods extends BaseModel
             ->paginate(15, false, [
                 'query' => \request()->request()
             ]);
-        // 设置商品数据
+        // 设置产品数据
         return $this->setGoodsListData($list, true);
     }
 
     /**
-     * 关联商品表
+     * 关联产品表
      * @return \think\model\relation\BelongsTo
      */
     public function goods()
@@ -79,7 +79,7 @@ class Goods extends BaseModel
         return $this->belongsTo("app\\{$module}\\model\\Distributor");
     }
     /**
-     * 设置商品展示的数据
+     * 设置产品展示的数据
      * @param $data
      * @param bool $isMultiple
      * @param callable|null $callback
@@ -90,15 +90,15 @@ class Goods extends BaseModel
      */
     protected function setGoodsListData($data, $isMultiple = true, callable $callback = null)
     {
-        // 设置原商品数据
+        // 设置原产品数据
         //$data = GoodsService::setGoodsData($data, $isMultiple);
         if (!$isMultiple) $dataSource = [&$data]; else $dataSource = &$data;
-        // 整理商品数据
+        // 整理产品数据
         foreach ($dataSource as $key => &$item) {
             //var_dump($item['goods']['sku'][0]);exit;
-            // 商品图片
+            // 产品图片
             $item['goods_image'] = $item['goods']['image'][0]['file_path'] ?? '';
-            // 秒杀商品sku信息
+            // 秒杀产品sku信息
             $item['goods_sku'] =  $item['goods']['sku'][0];
             // 回调函数
             is_callable($callback) && call_user_func($callback, $item);

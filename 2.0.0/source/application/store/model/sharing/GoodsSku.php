@@ -5,14 +5,14 @@ namespace app\store\model\sharing;
 use app\common\model\sharing\GoodsSku as GoodsSkuModel;
 
 /**
- * 商品规格模型
+ * 产品规格模型
  * Class GoodsSku
  * @package app\store\model\sharing
  */
 class GoodsSku extends GoodsSkuModel
 {
     /**
-     * 批量添加商品sku记录
+     * 批量添加产品sku记录
      * @param $goods_id
      * @param $spec_list
      * @return array|false
@@ -32,7 +32,7 @@ class GoodsSku extends GoodsSkuModel
     }
 
     /**
-     * 添加商品规格关系记录
+     * 添加产品规格关系记录
      * @param $goods_id
      * @param $spec_attr
      * @return array|false
@@ -56,7 +56,7 @@ class GoodsSku extends GoodsSkuModel
     }
 
     /**
-     * 移除指定商品的所有sku
+     * 移除指定产品的所有sku
      * @param $goods_id
      * @return int
      */

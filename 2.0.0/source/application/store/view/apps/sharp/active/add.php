@@ -34,22 +34,22 @@
                                 </div>
                             </div>
                             <div class="am-form-group am-padding-top">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 选择商品 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 选择产品 </label>
                                 <div class="am-u-sm-9 am-u-md-6 am-u-lg-8 am-u-end">
                                     <div class="am-form-file am-margin-top-xs">
                                         <button type="button"
                                                 class="upload-file am-btn am-btn-secondary am-radius"
                                                 @click.stop="onSelectGoods">
-                                            <i class="am-icon-cloud-upload"></i> 选择秒杀商品
+                                            <i class="am-icon-cloud-upload"></i> 选择秒杀产品
                                         </button>
                                         <div v-if="goodsList.length > 0" class="widget-goods-list am-padding-top">
                                             <table width="100%"
                                                    class="am-table am-table-compact tpl-table-black am-text-nowrap">
                                                 <thead>
                                                 <tr>
-                                                    <th>商品ID</th>
-                                                    <th>商品图片</th>
-                                                    <th>商品名称</th>
+                                                    <th>产品ID</th>
+                                                    <th>产品图片</th>
+                                                    <th>产品名称</th>
                                                     <th>操作</th>
                                                 </tr>
                                                 </thead>
@@ -64,7 +64,7 @@
                                                         <a :href="item.goods_image"
                                                            title="点击查看大图" target="_blank">
                                                             <img :src="item.goods_image"
-                                                                 width="50" height="50" alt="商品图片">
+                                                                 width="50" height="50" alt="产品图片">
                                                         </a>
                                                     </td>
                                                     <td class="am-text-middle">
@@ -80,7 +80,7 @@
                                         </div>
                                     </div>
                                     <div class="help-block">
-                                        <small>注：每个活动场次中出售的秒杀商品，此处非必填，可在场次管理中单独设置</small>
+                                        <small>注：每个活动场次中出售的秒杀产品，此处非必填，可在场次管理中单独设置</small>
                                     </div>
                                 </div>
                             </div>
@@ -121,16 +121,16 @@
         new Vue({
             el: '#app',
             data: {
-                // 商品列表
+                // 产品列表
                 goodsList: []
             },
 
             methods: {
-                // 选择商品
+                // 选择产品
                 onSelectGoods: function () {
                     var app = this;
                     $.selectData({
-                        title: '选择商品',
+                        title: '选择产品',
                         uri: 'sharp.goods/lists&status=10',
                         duplicate: false,
                         dataIndex: 'goods_id',
@@ -148,7 +148,7 @@
                         }
                     });
                 },
-                // 删除商品
+                // 删除产品
                 onDeleteGoods: function (index) {
                     var app = this;
                     return app.goodsList.splice(index, 1);

@@ -5,7 +5,7 @@ namespace app\api\model;
 use app\common\model\GoodsSku as GoodsSkuModel;
 
 /**
- * 商品规格模型
+ * 产品规格模型
  * Class GoodsSku
  * @package app\api\model
  */

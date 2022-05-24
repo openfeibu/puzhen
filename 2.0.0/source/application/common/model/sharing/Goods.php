@@ -6,7 +6,7 @@ use app\common\model\BaseModel;
 use app\common\library\helper;
 
 /**
- * 拼团商品模型
+ * 拼团产品模型
  * Class Goods
  * @package app\common\model\sharing
  */
@@ -47,7 +47,7 @@ class Goods extends BaseModel
     }
 
     /**
-     * 关联商品分类表
+     * 关联产品分类表
      * @return \think\model\relation\BelongsTo
      */
     public function category()
@@ -56,7 +56,7 @@ class Goods extends BaseModel
     }
 
     /**
-     * 关联商品规格表
+     * 关联产品规格表
      * @return \think\model\relation\HasMany
      */
     public function sku()
@@ -65,7 +65,7 @@ class Goods extends BaseModel
     }
 
     /**
-     * 关联商品规格关系表
+     * 关联产品规格关系表
      * @return \think\model\relation\BelongsToMany
      */
     public function specRel()
@@ -80,7 +80,7 @@ class Goods extends BaseModel
     }
 
     /**
-     * 关联商品图片表
+     * 关联产品图片表
      * @return \think\model\relation\HasMany
      */
     public function image()
@@ -121,16 +121,16 @@ class Goods extends BaseModel
     }
 
     /**
-     * 获取商品列表
+     * 获取产品列表
      * @param $param
      * @return mixed
      * @throws \think\exception\DbException
      */
     public function getList($param)
     {
-        // 商品列表获取条件
+        // 产品列表获取条件
         $params = array_merge([
-            'status' => 10,         // 商品状态
+            'status' => 10,         // 产品状态
             'category_id' => 0,     // 分类id
             'search' => '',         // 搜索关键词
             'sortType' => 'all',    // 排序类型
@@ -151,9 +151,9 @@ class Goods extends BaseModel
         } elseif ($params['sortType'] === 'price') {
             $sort = $params['sortPrice'] ? ['goods_max_price' => 'desc'] : ['goods_min_price'];
         }
-        // 商品表名称
+        // 产品表名称
         $tableName = $this->getTable();
-        // 多规格商品 最高价与最低价
+        // 多规格产品 最高价与最低价
         $GoodsSku = new GoodsSku;
         $minPriceSql = $GoodsSku->field(['MIN(sharing_price)'])
             ->where('goods_id', 'EXP', "= `$tableName`.`goods_id`")->buildSql();
@@ -177,7 +177,7 @@ class Goods extends BaseModel
     }
 
     /**
-     * 设置商品展示的数据
+     * 设置产品展示的数据
      * @param $data
      * @param bool $isMultiple
      * @param callable $callback
@@ -186,11 +186,11 @@ class Goods extends BaseModel
     protected function setGoodsListData(&$data, $isMultiple = true, callable $callback = null)
     {
         if (!$isMultiple) $dataSource = [&$data]; else $dataSource = &$data;
-        // 整理商品列表数据
+        // 整理产品列表数据
         foreach ($dataSource as &$goods) {
-            // 商品默认规格
+            // 产品默认规格
             $goodsSku = $goods['sku'][0];
-            // 商品默认数据
+            // 产品默认数据
             $goods['goods_image'] = $goods['image'][0]['file_path'];
             $goods['goods_sku'] = $goodsSku;
             // 回调函数
@@ -200,7 +200,7 @@ class Goods extends BaseModel
     }
 
     /**
-     * 根据商品id集获取商品列表
+     * 根据产品id集获取产品列表
      * @param array $goodsIds
      * @param null $status
      * @return false|\PDOStatement|string|\think\Collection
@@ -216,7 +216,7 @@ class Goods extends BaseModel
         if (!empty($goodsIds)) {
             $this->orderRaw('field(goods_id, ' . implode(',', $goodsIds) . ')');
         }
-        // 获取商品列表数据
+        // 获取产品列表数据
         $data = $this->with(['category', 'image.file', 'sku', 'spec_rel.spec', 'delivery.rule'])
             ->where($filter)
             ->select();
@@ -229,7 +229,7 @@ class Goods extends BaseModel
     }
 
     /**
-     * 商品多规格信息
+     * 产品多规格信息
      * @param \think\Collection $spec_rel
      * @param \think\Collection $skuData
      * @return array
@@ -305,7 +305,7 @@ class Goods extends BaseModel
     }
 
     /**
-     * 获取商品详情
+     * 获取产品详情
      * @param $goodsId
      * @return static
      */
@@ -324,8 +324,8 @@ class Goods extends BaseModel
     }
 
     /**
-     * 指定的商品规格信息
-     * @param static $goods 商品详情
+     * 指定的产品规格信息
+     * @param static $goods 产品详情
      * @param int $specSkuId
      * @return array|bool
      */
@@ -356,15 +356,15 @@ class Goods extends BaseModel
     }
 
     /**
-     * 更新商品库存销量
+     * 更新产品库存销量
      * @param $goodsList
      * @throws \Exception
      */
     public function updateStockSales($goodsList)
     {
-        // 整理批量更新商品销量
+        // 整理批量更新产品销量
         $goodsSave = [];
-        // 批量更新商品规格：sku销量、库存
+        // 批量更新产品规格：sku销量、库存
         $goodsSpecSave = [];
         foreach ($goodsList as $goods) {
             $goodsSave[] = [
@@ -382,9 +382,9 @@ class Goods extends BaseModel
                 ];
             }
         }
-        // 更新商品总销量
+        // 更新产品总销量
         $this->allowField(true)->isUpdate()->saveAll($goodsSave);
-        // 更新商品规格库存
+        // 更新产品规格库存
         !empty($goodsSpecSave) && (new GoodsSku)->updateAll($goodsSpecSave);
     }
 

@@ -49,9 +49,9 @@ class UserEquipment extends UserEquipmentModel
         // 开启事务
         $this->startTrans();
         try {
-            // 添加商品
+            // 添加产品
             $this->allowField(true)->save($data);
-            // 用户设备茶艺机凭证
+            // 用户设备茶电器凭证
             if(isset($data['images']) && !empty($data['images']))
             {
                 $this->addUserEquipmentImages($data['images']);
@@ -65,7 +65,7 @@ class UserEquipment extends UserEquipmentModel
         }
     }
     /**
-     * 添加用户设备茶艺机凭证
+     * 添加用户设备茶电器凭证
      * @param $images
      * @return int
      * @throws \think\Exception

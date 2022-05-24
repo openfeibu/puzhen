@@ -14,7 +14,7 @@ abstract class Basics extends \app\api\service\Basics
     /* @var UserModel $user 当前用户信息 */
     protected $user;
 
-    // 订单结算商品列表
+    // 订单结算产品列表
     protected $goodsList = [];
 
     /**
@@ -30,7 +30,7 @@ abstract class Basics extends \app\api\service\Basics
     }
 
     /**
-     * 验证商品列表
+     * 验证产品列表
      * @return mixed
      */
     abstract public function validateGoodsList();

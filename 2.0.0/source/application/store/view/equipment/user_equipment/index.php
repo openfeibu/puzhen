@@ -16,7 +16,7 @@
                                         <div class="am-btn-group am-btn-group-xs">
                                             <a class="am-btn am-btn-default am-btn-success"
                                                href="<?= url('equipment.user_equipment/add') ?>">
-                                                <span class="am-icon-plus"></span> 新增用户茶艺机
+                                                <span class="am-icon-plus"></span> 新增用户茶电器
                                             </a>
                                         </div>
                                     <?php endif; ?>
@@ -49,8 +49,8 @@
                                 <th>联系人</th>
                                 <th>手机号</th>
                                 <th>购买日期</th>
-                                <th>茶艺机</th>
-                                <!--<th>茶艺机图片</th>-->
+                                <th>茶电器</th>
+                                <!--<th>茶电器图片</th>-->
                                 <th>序列号</th>
                                 <?php if ($status == 20): ?>
                                     <th>只换不修剩余时间</th>

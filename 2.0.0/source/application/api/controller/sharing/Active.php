@@ -27,10 +27,10 @@ class Active extends Controller
         if (!$detail) {
             return $this->renderError('很抱歉，拼单不存在');
         }
-        // 拼团商品详情
+        // 拼团产品详情
         $model = new GoodsModel;
         $goods = $model->getDetails($detail['goods_id'], $this->getUser(false));
-        // 更多拼团商品
+        // 更多拼团产品
         $goodsList = $model->getList([], $this->getUser(false));
         return $this->renderSuccess(compact('detail', 'goods', 'goodsList'));
     }

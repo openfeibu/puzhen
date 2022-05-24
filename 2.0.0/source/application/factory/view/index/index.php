@@ -10,10 +10,10 @@
                 <div class="widget-body am-cf">
                     <div class="am-u-sm-12 am-u-md-6 am-u-lg-3">
                         <div class="widget-card card__blue am-cf">
-                            <div class="card-header">商品总量</div>
+                            <div class="card-header">产品总量</div>
                             <div class="card-body">
                                 <div class="card-value"><?= $data['widget-card']['goods_total'] ?></div>
-                                <div class="card-description">当前商品总数量</div>
+                                <div class="card-description">当前产品总数量</div>
                                 <span class="card-icon iconfont icon-goods"></span>
                             </div>
                         </div>

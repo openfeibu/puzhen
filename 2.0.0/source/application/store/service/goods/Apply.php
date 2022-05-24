@@ -9,7 +9,7 @@ use app\store\model\bargain\Active as BargainGoodsModel;
 class Apply extends GoodsService
 {
     /**
-     * 验证商品规格属性是否锁定
+     * 验证产品规格属性是否锁定
      * @param $goodsId
      * @return bool
      */
@@ -20,7 +20,7 @@ class Apply extends GoodsService
     }
 
     /**
-     * 验证商品是否允许删除
+     * 验证产品是否允许删除
      * @param $goodsId
      * @return bool
      */
@@ -33,7 +33,7 @@ class Apply extends GoodsService
     }
 
     /**
-     * 验证商品是否参与了秒杀商品
+     * 验证产品是否参与了秒杀产品
      * @param $goodsId
      * @return bool
      */
@@ -43,7 +43,7 @@ class Apply extends GoodsService
     }
 
     /**
-     * 验证商品是否参与了砍价商品
+     * 验证产品是否参与了砍价产品
      * @param $goodsId
      * @return bool
      */

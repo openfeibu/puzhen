@@ -42,7 +42,7 @@ class Order extends BaseModel
     }
 
     /**
-     * 订单商品列表
+     * 订单产品列表
      * @return \think\model\relation\HasMany
      */
     public function goods()

@@ -3,7 +3,7 @@
         <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
             <div class="widget am-cf">
                 <div class="widget-head am-cf">
-                    <div class="widget-title am-cf">出售中的商品</div>
+                    <div class="widget-title am-cf">出售中的产品</div>
                 </div>
                 <div class="widget-body am-fr">
                     <!-- 工具栏 -->
@@ -27,7 +27,7 @@
                                     <div class="am-form-group am-fl">
                                         <?php $category_id = $request->get('category_id') ?: null; ?>
                                         <select name="category_id"
-                                                data-am-selected="{searchBox: 1, btnSize: 'sm',  placeholder: '商品分类', maxHeight: 400}">
+                                                data-am-selected="{searchBox: 1, btnSize: 'sm',  placeholder: '产品分类', maxHeight: 400}">
                                             <option value=""></option>
                                             <?php if (isset($catgory)): foreach ($catgory as $first): ?>
                                                 <option value="<?= $first['category_id'] ?>"
@@ -44,7 +44,7 @@
                                     <div class="am-form-group am-fl">
                                         <?php $status = $request->get('status') ?: null; ?>
                                         <select name="status"
-                                                data-am-selected="{btnSize: 'sm', placeholder: '商品状态'}">
+                                                data-am-selected="{btnSize: 'sm', placeholder: '产品状态'}">
                                             <option value=""></option>
                                             <option value="10"
                                                 <?= $status == 10 ? 'selected' : '' ?>>上架
@@ -57,14 +57,14 @@
                                     <div class="am-form-group am-fl">
                                         <div class="am-input-group am-input-group-sm tpl-form-border-form">
                                             <input type="text" class="am-form-field" name="goods_id"
-                                                   placeholder="请输入商品ID"
+                                                   placeholder="请输入产品ID"
                                                    value="<?= $request->get('goods_id') ?>">
                                         </div>
                                     </div>
                                     <div class="am-form-group am-fl">
                                         <div class="am-input-group am-input-group-sm tpl-form-border-form">
                                             <input type="text" class="am-form-field" name="search"
-                                                   placeholder="请输入商品名称"
+                                                   placeholder="请输入产品名称"
                                                    value="<?= $request->get('search') ?>">
                                             <div class="am-input-group-btn">
                                                 <button class="am-btn am-btn-default am-icon-search"
@@ -82,13 +82,13 @@
                          tpl-table-black am-text-nowrap">
                             <thead>
                             <tr>
-                                <th>商品ID</th>
-                                <th>商品图片</th>
-                                <th>商品名称</th>
-                                <th>商品分类</th>
+                                <th>产品ID</th>
+                                <th>产品图片</th>
+                                <th>产品名称</th>
+                                <th>产品分类</th>
                                 <!--<th>实际销量</th>-->
-                                <th>商品排序</th>
-                                <th>商品状态</th>
+                                <th>产品排序</th>
+                                <th>产品状态</th>
                                 <th>冲泡码</th>
                                 <th>添加时间</th>
                                 <th>操作</th>
@@ -102,7 +102,7 @@
                                         <a href="<?= $item['goods_image'] ?>"
                                            title="点击查看大图" target="_blank">
                                             <img src="<?= $item['goods_image'] ?>"
-                                                 width="50" height="50" alt="商品图片">
+                                                 width="50" height="50" alt="产品图片">
                                         </a>
                                     </td>
                                     <td class="am-text-middle">
@@ -187,14 +187,14 @@
 <script>
     $(function () {
 
-        // 商品状态
+        // 产品状态
         $('.j-state').click(function () {
             // 验证权限
             if (!"<?= checkPrivilege('goods/state')?>") {
                 return false;
             }
             var data = $(this).data();
-            layer.confirm('确定要' + (parseInt(data.state) === 10 ? '下架' : '上架') + '该商品吗？'
+            layer.confirm('确定要' + (parseInt(data.state) === 10 ? '下架' : '上架') + '该产品吗？'
                 , {title: '友情提示'}
                 , function (index) {
                     $.post("<?= url('goods/state') ?>"

@@ -6,17 +6,17 @@
                     <div class="widget-body">
                         <fieldset>
                             <div class="widget-head am-cf">
-                                <div class="widget-title am-fl">编辑茶艺机</div>
+                                <div class="widget-title am-fl">编辑茶电器</div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 茶艺机名称 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 茶电器名称 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <input type="text" class="tpl-form-input" name="equipment[equipment_name]"
-                                           placeholder="请输入茶艺机名称" value="<?= $model['equipment_name'] ?>" required>
+                                           placeholder="请输入茶电器名称" value="<?= $model['equipment_name'] ?>" required>
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 茶艺机图片 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 茶电器图片 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <div class="am-form-file">
                                         <div class="am-form-file">
@@ -40,14 +40,14 @@
                                 </div>
                             </div>
                             <div class="am-form-group am-padding-top">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 茶艺机型号 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 茶电器型号 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <input type="text" class="tpl-form-input" name="equipment[model]"
-                                           placeholder="请输入茶艺机型号" value="<?= $model['model'] ?>" required>
+                                           placeholder="请输入茶电器型号" value="<?= $model['model'] ?>" required>
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">茶艺机排序 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">茶电器排序 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <input type="number" class="tpl-form-input" name="equipment[sort]"
                                            value="<?= $model['sort'] ?>" required>

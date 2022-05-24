@@ -6,7 +6,7 @@
                     <div class="widget-body">
                         <fieldset>
                             <div class="widget-head am-cf">
-                                <div class="widget-title am-fl">用户茶艺机详情</div>
+                                <div class="widget-title am-fl">用户茶电器详情</div>
                             </div>
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label"> 用户 </label>
@@ -15,13 +15,13 @@
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label"> 茶艺机 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label"> 茶电器 </label>
                                 <div class="am-u-sm-9 am-u-end am-padding-top-xs">
                                     <?= $model['equipment']['equipment_name'] ?> <?= $model['equipment']['model'] ?>
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label"> 茶艺机图片 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label"> 茶电器图片 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <div class="am-form-file">
                                         <div class="am-form-file">

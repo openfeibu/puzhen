@@ -7,7 +7,7 @@ use app\common\model\sharp\ActiveGoods as ActiveGoodsModel;
 use app\api\model\Goods as GoodsModel;
 
 /**
- * 整点秒杀-活动会场与商品关联模型
+ * 整点秒杀-活动会场与产品关联模型
  * Class ActiveGoods
  * @package app\api\model\sharp
  */
@@ -24,7 +24,7 @@ class ActiveGoods extends ActiveGoodsModel
     ];
 
     /**
-     * 获取指定商品的活动详情
+     * 获取指定产品的活动详情
      * @param $activeTimeId
      * @param $sharpGoodsId
      * @return array|false|\PDOStatement|string|\think\Model
@@ -38,7 +38,7 @@ class ActiveGoods extends ActiveGoodsModel
     }
 
     /**
-     * 获取活动商品详情
+     * 获取活动产品详情
      * @param $active
      * @param $sharpGoodsId
      * @param $isCheckStatus
@@ -47,40 +47,40 @@ class ActiveGoods extends ActiveGoodsModel
      */
     public function getGoodsActiveDetail($active, $sharpGoodsId, $isCheckStatus = true)
     {
-        // 获取商品详情
+        // 获取产品详情
         $goods = $this->getGoodsDetail($sharpGoodsId);
         if (empty($goods)) return false;
         if ($isCheckStatus == true && ($goods['is_delete'] || !$goods['status'])) {
-            $this->error = '很抱歉，秒杀商品不存在或已下架';
+            $this->error = '很抱歉，秒杀产品不存在或已下架';
             return false;
         }
-        // 活动商品的销量
+        // 活动产品的销量
         $goods['sales_actual'] = $active['sales_actual'];
-        // 商品销售进度
+        // 产品销售进度
         $goods['progress'] = $this->getProgress($active['sales_actual'], $goods['seckill_stock']);
         /* @var $goods \think\model\Collection */
         return $goods;
     }
 
     /**
-     * 获取商品详情
+     * 获取产品详情
      * @param $sharpGoodsId
      * @return GoodsModel|bool
      * @throws \think\exception\DbException
      */
     private function getGoodsDetail($sharpGoodsId)
     {
-        // 获取秒杀商品详情
+        // 获取秒杀产品详情
         $model = $this->getGoodsModel();
         $sharpGoods = $model::detail($sharpGoodsId, ['sku']);
         if (empty($sharpGoods)) {
-            $this->error = '秒杀商品信息不存在';
+            $this->error = '秒杀产品信息不存在';
             return false;
         }
-        // 获取主商品详情
+        // 获取主产品详情
         $goods = GoodsModel::detail($sharpGoods['goods_id']);
         if (empty($goods)) return false;
-        // 整理商品信息
+        // 整理产品信息
         $goods['sharp_goods_id'] = $sharpGoods['sharp_goods_id'];
         $goods['deduct_stock_type'] = $sharpGoods['deduct_stock_type'];
         $goods['limit_num'] = $sharpGoods['limit_num'];
@@ -88,14 +88,14 @@ class ActiveGoods extends ActiveGoodsModel
         $goods['total_sales'] = $sharpGoods['total_sales'];
         $goods['status'] = $sharpGoods['status'];
         $goods['is_delete'] = $sharpGoods['is_delete'];
-        // 商品sku信息
+        // 产品sku信息
         $goods['sku'] = $this->getSharpSku($sharpGoods['sku'], $goods['sku']);
         /* @var \think\Collection $goods */
         return $goods->hidden(['category', 'sku']);
     }
 
     /**
-     * 获取秒杀商品的sku信息
+     * 获取秒杀产品的sku信息
      * @param $sharpSku
      * @param $goodsSku
      * @return array

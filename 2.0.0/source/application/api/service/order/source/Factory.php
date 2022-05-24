@@ -6,7 +6,7 @@ use app\common\service\Basics;
 use app\common\enum\order\OrderSource as OrderSourceEnum;
 
 /**
- * 商品库存工厂类
+ * 产品库存工厂类
  * Class Factory
  * @package app\common\service\stock
  */
@@ -20,7 +20,7 @@ class Factory extends Basics
     ];
 
     /**
-     * 根据订单来源获取商品库存类
+     * 根据订单来源获取产品库存类
      * @param int $orderSource
      * @return mixed
      */
