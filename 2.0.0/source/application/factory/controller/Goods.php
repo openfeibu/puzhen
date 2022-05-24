@@ -7,6 +7,7 @@ use app\factory\model\Goods as GoodsModel;
 use app\factory\model\Category as CategoryModel;
 use app\store\service\Goods as GoodsService;
 use app\factory\model\TeaQrcode as TeaQrcodeModel;
+use app\factory\service\goods\Import as GoodsImport;
 
 /**
  * 产品管理控制器
@@ -143,5 +144,22 @@ class Goods extends Controller
             return $this->renderSuccess('添加成功', url('index'));
         }
         return $this->renderError($model->getError() ?: '添加失败');
+    }
+
+    /**
+     * 导入产品
+     */
+    public function import()
+    {
+        $import = new GoodsImport;
+        if ($this->request->isGet()) {
+            return $this->fetch('import',
+                array_merge(GoodsService::getEditData(null, 'add'))
+            );
+        }
+        if ($import->goodsList($this->factory['factory']['factory_id'])) {
+            return $this->renderSuccess('添加成功', url('index'));
+        }
+        return $this->renderError($import->getError() ?: '添加失败');
     }
 }

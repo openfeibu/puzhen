@@ -16,6 +16,8 @@
                                                 <span class="am-icon-plus"></span> 新增产品
                                             </a>
                                         </div>
+                                    <?php endif; ?>
+                                    <?php if (checkPrivilege('goods/import')): ?>
                                         <div class="am-btn-group am-btn-group-xs">
                                             <a class="am-btn am-btn-default am-btn-success"
                                                href="<?= url('goods/import') ?>">

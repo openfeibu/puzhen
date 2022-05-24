@@ -20,6 +20,14 @@
                                             </a>
                                         </div>
                                     <?php endif; ?>
+                                    <?php if (checkPrivilege('goods/import')): ?>
+                                    <div class="am-btn-group am-btn-group-xs">
+                                        <a class="am-btn am-btn-default am-btn-success"
+                                           href="<?= url('goods/import') ?>">
+                                            <span class="am-icon-plus"></span> 批量导入
+                                        </a>
+                                    </div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="am-u-sm-12 am-u-md-9">
