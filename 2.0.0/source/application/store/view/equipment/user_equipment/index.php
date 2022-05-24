@@ -12,7 +12,7 @@
                             <input type="hidden" name="s" value="/<?= $request->pathinfo() ?>">
                             <div class="am-u-sm-12 am-u-md-3">
                                 <div class="am-form-group">
-                                    <?php if ($status == 20): ?>
+
                                     <?php if (checkPrivilege('equipment.user_equipment/add')): ?>
                                         <div class="am-btn-group am-btn-group-xs">
                                             <a class="am-btn am-btn-default am-btn-success"
@@ -21,7 +21,7 @@
                                             </a>
                                         </div>
                                     <?php endif; ?>
-
+                                    <?php if ($status == 20): ?>
                                     <?php if (checkPrivilege('equipment.user_equipment/export')): ?>
                                         <div class="am-btn-group am-btn-group-xs">
                                             <a class="j-export am-btn  am-btn-default am-btn-success am-radius"
