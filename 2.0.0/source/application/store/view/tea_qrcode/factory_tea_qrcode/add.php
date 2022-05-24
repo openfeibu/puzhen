@@ -188,7 +188,7 @@
 
                             <div class="am-form-group">
                                 <div class="am-u-sm-12 am-u-sm-push-1 am-margin-top-lg">
-                                    <button type="submit" class="j-submit  am-btn-lg am-btn am-btn-secondary ">生成冲泡码
+                                    <button type="submit" class="j-submit   am-btn am-btn-secondary ">生成冲泡码
                                     </button>
                                 </div>
                             </div>
