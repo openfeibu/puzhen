@@ -5,7 +5,7 @@ namespace app\store\model;
 use app\common\model\Order as OrderModel;
 use app\store\model\User as UserModel;
 use app\store\model\UserCoupon as UserCouponModel;
-use app\store\service\order\Export as Exportservice;
+use app\store\service\order\Export as ExportService;
 use app\common\library\helper;
 use app\common\enum\OrderType as OrderTypeEnum;
 use app\common\enum\DeliveryType as DeliveryTypeEnum;
@@ -84,7 +84,7 @@ class Order extends OrderModel
         // 获取订单列表
         $list = $this->getListAll($dataType, $query);
         // 导出csv文件
-        return (new Exportservice)->orderList($list);
+        return (new ExportService)->orderList($list);
     }
 
     /**
@@ -92,7 +92,7 @@ class Order extends OrderModel
      */
     public function deliveryTpl()
     {
-        return (new Exportservice)->deliveryTpl();
+        return (new ExportService)->deliveryTpl();
     }
 
     /**

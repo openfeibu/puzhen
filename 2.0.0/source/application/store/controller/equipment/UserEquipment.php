@@ -6,6 +6,7 @@ use app\store\controller\Controller;
 use app\store\model\Equipment as EquipmentModel;
 use app\store\model\UserEquipment as UserEquipmentModel;
 use app\store\model\Setting as SettingModel;
+
 /**
  * 用户设备管理
  * Class Equipment
@@ -30,6 +31,15 @@ class UserEquipment extends Controller
     public function audited_list()
     {
         return $this->getList('已通过列表','20');
+    }
+    /**
+     * 订单导出
+     * @throws \think\exception\DbException
+     */
+    public function export()
+    {
+        $model = new UserEquipmentModel;
+        return $model->exportList('20');
     }
     /**
      * 拒绝列表

@@ -3,6 +3,7 @@
 namespace app\store\model;
 
 use app\common\model\UserEquipment as UserEquipmentModel;
+use app\store\service\user_equipment\Export as ExportService;
 
 /**
  * 用户设备模型
@@ -34,6 +35,50 @@ class UserEquipment extends UserEquipmentModel
             ->paginate(15, false, [
                 'query' => \request()->request()
             ]);
+        foreach ($list as $item)
+        {
+            $item->setWarranty();
+        }
+        return $list;
+
+    }
+
+    /**
+     * 导出
+     * @param $status
+     * @param $query
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
+     */
+    public function exportList($status, $query = [])
+    {
+        // 获取订单列表
+        $list = $this->getListAll($status, $query);
+        // 导出csv文件
+        return (new ExportService)->userEquipmentList($list);
+    }
+
+    /**
+     * 列表
+     * @param string $status
+     * @param array $query
+     * @return \think\Paginator
+     * @throws \think\exception\DbException
+     */
+    public function getListAll($status, $query = [])
+    {
+        // 检索查询条件
+        !empty($query) && $this->setWhere($query);
+        // 获取数据列表
+        $list =  $this->with(['equipment', 'user'])
+            ->alias('user_equipment')
+            ->field('user_equipment.*')
+            ->join('user', 'user.user_id = user_equipment.user_id')
+            ->join('equipment', 'equipment.equipment_id = user_equipment.equipment_id')
+            ->where('status',$status)
+            ->order(['user_equipment.create_time' => 'desc'])
+            ->select();
         foreach ($list as $item)
         {
             $item->setWarranty();

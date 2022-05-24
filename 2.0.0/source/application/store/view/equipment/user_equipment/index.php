@@ -12,11 +12,21 @@
                             <input type="hidden" name="s" value="/<?= $request->pathinfo() ?>">
                             <div class="am-u-sm-12 am-u-md-3">
                                 <div class="am-form-group">
+
                                     <?php if (checkPrivilege('equipment.user_equipment/add')): ?>
                                         <div class="am-btn-group am-btn-group-xs">
                                             <a class="am-btn am-btn-default am-btn-success"
                                                href="<?= url('equipment.user_equipment/add') ?>">
                                                 <span class="am-icon-plus"></span> 新增用户茶电器
+                                            </a>
+                                        </div>
+                                    <?php endif; ?>
+
+                                    <?php if (checkPrivilege('equipment.user_equipment/export')): ?>
+                                        <div class="am-btn-group am-btn-group-xs">
+                                            <a class="j-export am-btn  am-btn-default am-btn-success am-radius"
+                                               href="javascript:void(0);">
+                                                <span class="iconfont icon-daochu am-margin-right-xs"></span>导出
                                             </a>
                                         </div>
                                     <?php endif; ?>
@@ -142,6 +152,18 @@
         // 删除元素
         var url = "<?= url('equipment.user_equipment/delete') ?>";
         $('.item-delete').delete('user_equipment_id', url, '删除后不可恢复，确定要删除吗？');
+
+        /**
+         * 订单导出
+         */
+        $('.j-export').click(function () {
+            var data = {};
+            var formData = $('#form-search').serializeArray();
+            $.each(formData, function () {
+                this.name !== 's' && (data[this.name] = this.value);
+            });
+            window.location = "<?= url('equipment.user_equipment/export') ?>" + '&' + $.urlEncode(data);
+        });
 
     });
 </script>
