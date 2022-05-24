@@ -13,6 +13,7 @@
                             <div class="am-u-sm-12 am-u-md-9 am-u-sm-push-3">
                                 <div class="am fr">
                                     <div class="am-form-group am-fl">
+                                        <!--
                                         <?php $gender = $request->get('gender'); ?>
                                         <select name="gender"
                                                 data-am-selected="{btnSize: 'sm', placeholder: '请选择性别'}">
@@ -30,6 +31,7 @@
                                                 <?= $gender === '0' ? 'selected' : '' ?>>未知
                                             </option>
                                         </select>
+                                        -->
                                     </div>
                                     <div class="am-form-group am-fl">
                                         <div class="am-input-group am-input-group-sm tpl-form-border-form">
@@ -54,10 +56,12 @@
                                 <th>用户ID</th>
                                 <th>微信头像</th>
                                 <th>微信昵称</th>
+                                <!--
                                 <th>性别</th>
                                 <th>国家</th>
                                 <th>省份</th>
                                 <th>城市</th>
+                                -->
                                 <th>注册时间</th>
                                 <th>操作</th>
                             </tr>
@@ -72,10 +76,12 @@
                                         </a>
                                     </td>
                                     <td class="am-text-middle"><?= $item['nickName'] ?></td>
+                                    <!--
                                     <td class="am-text-middle"><?= $item['gender'] ?></td>
                                     <td class="am-text-middle"><?= $item['country'] ?: '--' ?></td>
                                     <td class="am-text-middle"><?= $item['province'] ?: '--' ?></td>
                                     <td class="am-text-middle"><?= $item['city'] ?: '--' ?></td>
+                                    -->
                                     <td class="am-text-middle"><?= $item['create_time'] ?></td>
                                     <td class="am-text-middle">
                                         <div class="tpl-table-black-operation">
