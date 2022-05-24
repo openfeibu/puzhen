@@ -2247,3 +2247,7 @@ body.select-data {
   width: 300px;
   height: 300px !important;
 }
+.survey .iconfont{
+  color: #67abff;
+  font-size:36px;
+}
