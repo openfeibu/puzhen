@@ -1,66 +1,156 @@
-<div class="page-home row-content am-cf">
-
-    <!-- 商城统计 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<div id="app" v-cloak class="page-statistics-data row-content am-cf">
+    <!-- 数据概况 -->
     <div class="row">
-        <div class="am-u-sm-12 am-u-md-12 am-u-lg-12 am-margin-bottom">
-            <div class="widget am-cf">
-                <div class="widget-head">
-                    <div class="widget-title">商城统计</div>
+        <div class="am-u-sm-12 am-margin-bottom">
+            <div class="widget widget-survey am-cf survey" v-loading="survey.loading">
+                <div class="widget-head am-cf">
+                    <div class="widget-title">数据概况</div>
+                    <div class="widget-screen am-cf">
+                        <!-- 日期选择器 -->
+                        <div class="yxs-date-editor am-fl">
+                            <el-date-picker
+                                v-model="survey.dateValue"
+                                type="daterange"
+                                size="small"
+                                @change="onChangeDate"
+                                value-format="yyyy-MM-dd"
+                                range-separator="至"
+                                start-placeholder="开始日期"
+                                end-placeholder="结束日期">
+                            </el-date-picker>
+                        </div>
+                        <!-- 快捷选项 -->
+                        <div class="widget-screen_shortcut am-fl">
+                            <div class="shortcut-days am-cf">
+                                <div class="shortcut-days_item am-fl">
+                                    <a href="javascript:void(0);" @click="onFastDate(7)">7天</a>
+                                </div>
+                                <div class="shortcut-days_item am-fl">
+                                    <a href="javascript:void(0);" @click="onFastDate(30)">30天</a>
+                                </div>
+                                <div class="shortcut-days_item item-clear am-fl">
+                                    <a href="javascript:void(0);" @click="onFastDate(0)">清空</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="widget-body am-cf">
-                    <div class="am-u-sm-12 am-u-md-6 am-u-lg-3">
-                        <div class="widget-card card__blue am-cf">
-                            <div class="card-header">产品总量</div>
-                            <div class="card-body">
-                                <div class="card-value"><?= $data['widget-card']['goods_total'] ?></div>
-                                <div class="card-description">当前产品总数量</div>
-                                <span class="card-icon iconfont icon-goods"></span>
+                <div class="widget-body">
+                    <div class="widget-body-center am-cf">
+
+                        <div class="am-u-sm-6 am-u-md-6 am-u-lg-4">
+                            <div class="widget-outline dis-flex flex-y-center">
+                                <div class="outline-left">
+                                    <!--                                    <img src="assets/store/img/statistics/survey/05.png" alt="">-->
+                                    <span class="iconfont icon-goods"> </span>
+
+                                </div>
+                                <div class="outline-right dis-flex flex-dir-column flex-x-center">
+                                    <div class="item-name">产品数量</div>
+                                    <div class="item-value">{{ survey.values.goods_total }}</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="am-u-sm-12 am-u-md-6 am-u-lg-3">
-                        <div class="widget-card card__red am-cf">
-                            <div class="card-header">用户总量</div>
-                            <div class="card-body">
-                                <div class="card-value"></div>
-                                <div class="card-description">当前用户总数量</div>
-                                <span class="card-icon iconfont icon-user"></span>
+                        <div class="am-u-sm-6 am-u-md-6 am-u-lg-4">
+                            <div class="widget-outline dis-flex flex-y-center">
+                                <div class="outline-left">
+                                    <span class="iconfont icon-qrcode"> </span>
+                                    <!--                                    <img src="assets/store/img/statistics/survey/03.png" alt="">-->
+                                </div>
+                                <div class="outline-right dis-flex flex-dir-column flex-x-center">
+                                    <div class="item-name">冲泡码数量</div>
+                                    <div class="item-value">{{ survey.values.factory_tea_qrcode_total }}</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="am-u-sm-12 am-u-md-6 am-u-lg-3">
-                        <div class="widget-card card__violet am-cf">
-                            <div class="card-header">订单总量</div>
-                            <div class="card-body">
-                                <div class="card-value"></div>
-                                <div class="card-description">已付款订单总数量</div>
-                                <span class="card-icon iconfont icon-order"></span>
-                            </div>
+                        <div class="am-u-sm-6 am-u-md-6 am-u-lg-4">
                         </div>
                     </div>
-
-                    <div class="am-u-sm-12 am-u-md-6 am-u-lg-3">
-                        <div class="widget-card card__primary am-cf">
-                            <div class="card-header">评价总量</div>
-                            <div class="card-body">
-                                <div class="card-value"></div>
-                                <div class="card-description">订单评价总数量</div>
-                                <span class="card-icon iconfont icon-haoping2"></span>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- 近七日交易走势 -->
+
+    <!-- 排行榜 -->
 
 </div>
 
+<script src="assets/common/js/echarts.min.js"></script>
+<script src="assets/common/js/echarts-walden.js"></script>
+<script src="assets/common/js/vue.min.js?v=1.1.35"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+
 <script type="text/javascript">
 
+    new Vue({
+        el: '#app',
+        data: {
+            // 数据概况
+            survey: {
+                loading: false,
+                dateValue: [],
+                values: <?= \app\common\library\helper::jsonEncode($survey) ?>
+            },
+            // 产品销售榜
+
+            // 用户消费榜
+
+        },
+
+        mounted() {
+            // 近七日交易走势
+
+        },
+
+        methods: {
+
+            // 监听事件：日期选择快捷导航
+            onFastDate: function (days) {
+                var startDate, endDate;
+                // 清空日期
+                if (days === 0) {
+                    this.survey.dateValue = [];
+                } else {
+                    startDate = $.getDay(-days);
+                    endDate = $.getDay(0);
+                    this.survey.dateValue = [startDate, endDate];
+                }
+                // api: 获取数据概况
+                this.__getApiData__survey(startDate, endDate);
+            },
+
+            // 监听事件：日期选择框改变
+            onChangeDate: function (e) {
+                // api: 获取数据概况
+                this.__getApiData__survey(e[0], e[1]);
+            },
+
+            // 获取数据概况
+            __getApiData__survey: function (startDate, endDate) {
+                var app = this;
+                // 请求api数据
+                app.survey.loading = true;
+                // api地址
+                var url = '<?= url('statistics.data/survey') ?>';
+                $.post(url, {
+                    startDate: startDate,
+                    endDate: endDate
+                }, function (result) {
+                    app.survey.values = result.data;
+                    app.survey.loading = false;
+                });
+            },
+
+            /**
+             * 近七日交易走势
+             * @type {HTMLElement}
+             */
+
+        }
+
+    });
 
 </script>

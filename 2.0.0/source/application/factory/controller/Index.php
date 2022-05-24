@@ -3,7 +3,7 @@
 namespace app\factory\controller;
 
 use app\factory\model\Factory as FactoryModel;
-
+use app\factory\service\statistics\Data as StatisticsDataService;
 /**
  * 后台首页
  * Class Index
@@ -11,6 +11,14 @@ use app\factory\model\Factory as FactoryModel;
  */
 class Index extends Controller
 {
+    /* @var $statisticsDataService StatisticsDataService 数据概况服务类 */
+    private $statisticsDataService;
+
+    public function _initialize()
+    {
+        parent::_initialize();
+        $this->statisticsDataService = new StatisticsDataService;
+    }
     /**
      * 后台首页
      * @return mixed
@@ -25,8 +33,17 @@ class Index extends Controller
         if ($url !== 'index/index') {
             $this->redirect($url);
         }
-        $model = new FactoryModel;
-        return $this->fetch('index', ['data' => $model->getHomeData()]);
+        return $this->fetch('index', [
+            // 数据概况
+            'survey' => $this->statisticsDataService->getSurveyData(),
+            // 近七日交易走势
+            //'echarts7days' => $this->statisticsDataService->getTransactionTrend(),
+            // 产品销售榜
+            //'goodsRanking' => $this->statisticsDataService->getGoodsRanking(),
+            // 用户消费榜
+            //'userExpendRanking' => $this->statisticsDataService->geUserExpendRanking(),
+        ]);
+        //return $this->fetch('index', ['data' => $model->getHomeData()]);
     }
 
 }
