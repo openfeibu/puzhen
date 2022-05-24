@@ -139,17 +139,18 @@ html, body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+	box-shadow: 0 5px 20px #999;
 }
 
 .login-content {
 }
 
 .login-content .brand .brand-img {
-    width: 50px;
+    width: 100px;
 }
 
 .login-content .brand .brand-text {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 11px;
     font-size: 20px !important;
     font-family: "Microsoft YaHei";
