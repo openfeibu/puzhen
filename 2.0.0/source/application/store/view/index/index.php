@@ -3,7 +3,7 @@
     <!-- 数据概况 -->
     <div class="row">
         <div class="am-u-sm-12 am-margin-bottom">
-            <div class="widget widget-survey am-cf" v-loading="survey.loading">
+            <div class="widget widget-survey am-cf survey" v-loading="survey.loading">
                 <div class="widget-head am-cf">
                     <div class="widget-title">数据概况</div>
                     <div class="widget-screen am-cf">
@@ -41,7 +41,8 @@
                         <div class="am-u-sm-6 am-u-md-6 am-u-lg-4">
                             <div class="widget-outline dis-flex flex-y-center">
                                 <div class="outline-left">
-                                    <img src="assets/store/img/statistics/survey/03.png" alt="">
+                                    <span class="iconfont icon-user"> </span>
+<!--                                    <img src="assets/store/img/statistics/survey/03.png" alt="">-->
                                 </div>
                                 <div class="outline-right dis-flex flex-dir-column flex-x-center">
                                     <div class="item-name">用户数量</div>
@@ -52,7 +53,7 @@
                         <div class="am-u-sm-6 am-u-md-6 am-u-lg-4">
                             <div class="widget-outline dis-flex flex-y-center">
                                 <div class="outline-left">
-                                    <img src="assets/store/img/statistics/survey/04.png" alt="">
+                                    <span class="iconfont am-icon-building"> </span>
                                 </div>
                                 <div class="outline-right dis-flex flex-dir-column flex-x-center">
                                     <div class="item-name">厂家数量</div>
@@ -63,7 +64,8 @@
                         <div class="am-u-sm-6 am-u-md-6 am-u-lg-4">
                             <div class="widget-outline dis-flex flex-y-center">
                                 <div class="outline-left">
-                                    <img src="assets/store/img/statistics/survey/05.png" alt="">
+                                    <!--<span class="am-icon-weixin  am-icon-lg" style="color: #67abff"> </span>-->
+                                    <span class="iconfont icon-shop"> </span>
                                 </div>
                                 <div class="outline-right dis-flex flex-dir-column flex-x-center">
                                     <div class="item-name">服务网点数量</div>
@@ -74,7 +76,9 @@
                         <div class="am-u-sm-6 am-u-md-6 am-u-lg-4">
                             <div class="widget-outline dis-flex flex-y-center">
                                 <div class="outline-left">
-                                    <img src="assets/store/img/statistics/survey/02.png" alt="">
+<!--                                    <img src="assets/store/img/statistics/survey/05.png" alt="">-->
+                                    <span class="iconfont icon-goods"> </span>
+
                                 </div>
                                 <div class="outline-right dis-flex flex-dir-column flex-x-center">
                                     <div class="item-name">商品数量</div>
@@ -85,7 +89,8 @@
                         <div class="am-u-sm-6 am-u-md-6 am-u-lg-4">
                             <div class="widget-outline dis-flex flex-y-center">
                                 <div class="outline-left">
-                                    <img src="assets/store/img/statistics/survey/03.png" alt="">
+                                    <span class="iconfont am-icon-qrcode"> </span>
+
                                 </div>
                                 <div class="outline-right dis-flex flex-dir-column flex-x-center">
                                     <div class="item-name">用户冲泡码数量</div>
@@ -96,7 +101,7 @@
                         <div class="am-u-sm-6 am-u-md-6 am-u-lg-4">
                             <div class="widget-outline dis-flex flex-y-center">
                                 <div class="outline-left">
-                                    <img src="assets/store/img/statistics/survey/02.png" alt="">
+                                    <span class="iconfont am-icon-coffee"> </span>
                                 </div>
                                 <div class="outline-right dis-flex flex-dir-column flex-x-center">
                                     <div class="item-name">茶艺机延保信息数量</div>
