@@ -3,7 +3,7 @@
 namespace app\factory\controller\statistics;
 
 use app\factory\controller\Controller;
-use app\store\service\statistics\Data as StatisticsDataService;
+use app\factory\service\statistics\Data as StatisticsDataService;
 
 /**
  * 数据概况
