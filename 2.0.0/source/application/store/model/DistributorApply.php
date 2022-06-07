@@ -22,8 +22,8 @@ class DistributorApply extends DistributorApplyModel
     public function getList($param = [])
     {
         // 查询列表数据
-        return $this->with(['image'])
-            ->setListQueryWhere($param)
+        return $this->setListQueryWhere($param)
+            ->with(['image'])
             ->paginate(15, false, [
                 'query' => \request()->request()
             ]);

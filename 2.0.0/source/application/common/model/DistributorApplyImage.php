@@ -4,7 +4,7 @@ namespace app\common\model;
 
 /**
  * 图片模型
- * Class CommentImage
+ * Class DistributorApplyImage
  * @package app\common\model
  */
 class DistributorApplyImage extends BaseModel

@@ -28,7 +28,7 @@
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">权限列表 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">访问权限 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <div id="jstree"></div>
                                 </div>

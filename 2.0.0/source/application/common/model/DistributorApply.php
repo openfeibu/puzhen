@@ -16,12 +16,13 @@ class DistributorApply extends BaseModel
 
     /**
      * 关联封面图
-     * @return \think\model\relation\HasOne
+     * @return \think\model\relation\hasMany
      */
     public function image()
     {
-        $module = self::getCalledModule() ?: 'common';
-        return $this->hasOne("app\\{$module}\\model\\UploadFile", 'file_id', 'image_id');
+        //$module = self::getCalledModule() ?: 'common';
+        //return $this->hasOne("app\\{$module}\\model\\UploadFile", 'file_id', 'image_id');
+      return $this->hasMany('DistributorApplyImage','apply_id','apply_id');
     }
     /**
      * 关联用户表
@@ -36,7 +37,7 @@ class DistributorApply extends BaseModel
 
     public static function detail($where)
     {
-        return static::get($where, ['image']);
+        return static::get($where, ['image.file']);
     }
 
     /**
