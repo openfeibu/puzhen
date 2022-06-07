@@ -200,7 +200,7 @@
             var _this = this;
             var loadIndex = null;
             // 文件大小
-            var maxSize = 2;
+            var maxSize = 10;
             // 初始化Web Uploader
             var uploader = WebUploader.create({
                 // 选完文件后，是否自动上传。

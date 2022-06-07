@@ -226,7 +226,7 @@
          */
         uploadImage: function (option) {
             // 文件大小
-            var maxSize = option.maxSize !== undefined ? option.maxSize : 2
+            var maxSize = option.maxSize !== undefined ? option.maxSize : 10
                 // 初始化Web Uploader
                 , uploader = WebUploader.create({
                     // 选完文件后，是否自动上传。
