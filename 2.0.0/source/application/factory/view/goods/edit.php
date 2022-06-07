@@ -291,14 +291,6 @@
                                     </label>
                                 </div>
                             </div>
-                            <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">产品排序 </label>
-                                <div class="am-u-sm-9 am-u-end">
-                                    <input type="number" class="tpl-form-input" name="goods[goods_sort]"
-                                           value="<?= $model['goods_sort'] ?>" required>
-                                    <small>数字越小越靠前</small>
-                                </div>
-                            </div>
 
                             <!-- 表单提交按钮 -->
                             <div class="am-form-group">

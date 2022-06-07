@@ -7,26 +7,26 @@
                 </div>
                 <div class="widget-body am-fr">
                     <!-- 工具栏 -->
-					  <div class="am-u-sm-12 am-u-md-12">
-                                <div class="am-form-group">
-                                    <?php if (checkPrivilege('goods/add')): ?>
-                                        <div class="am-btn-group am-btn-group-xs">
-                                            <a class="am-btn am-btn-default am-btn-success"
-                                               href="<?= url('goods/add') ?>">
-                                                <span class="am-icon-plus"></span> 新增产品
-                                            </a>
-                                        </div>
-                                    <?php endif; ?>
-                                    <?php if (checkPrivilege('goods/import')): ?>
-                                        <div class="am-btn-group am-btn-group-xs">
-                                            <a class="am-btn am-btn-default am-btn-success"
-                                               href="<?= url('goods/import') ?>">
-                                                <span class="am-icon-plus"></span> 批量导入
-                                            </a>
-                                        </div>
-                                    <?php endif; ?>
+                    <div class="am-u-sm-12 am-u-md-12">
+                        <div class="am-form-group">
+                            <?php if (checkPrivilege('goods/add')): ?>
+                                <div class="am-btn-group am-btn-group-xs">
+                                    <a class="am-btn am-btn-default am-btn-success"
+                                       href="<?= url('goods/add') ?>">
+                                        <span class="am-icon-plus"></span> 新增产品
+                                    </a>
                                 </div>
-						</div>
+                            <?php endif; ?>
+                            <?php if (checkPrivilege('goods/import')): ?>
+                                <div class="am-btn-group am-btn-group-xs">
+                                    <a class="am-btn am-btn-default am-btn-success"
+                                       href="<?= url('goods/import') ?>">
+                                        <span class="am-icon-plus"></span> 批量导入
+                                    </a>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
                     <div class="page_toolbar am-margin-bottom-xs am-cf">
                         <form class="toolbar-form" action="">
                             <input type="hidden" name="s" value="/<?= $request->pathinfo() ?>">
@@ -97,7 +97,7 @@
                             </div>
                         </form>
                     </div>
-
+    
                     <div class="am-scrollable-horizontal am-u-sm-12">
                         <table width="100%" class="am-table am-table-compact am-table-striped
                          tpl-table-black am-text-nowrap">
@@ -109,6 +109,7 @@
                                 <th>产品分类</th>
                                 <th>工厂</th>
                                 <!--<th>实际销量</th>-->
+                                <th>收藏量</th>
                                 <th>产品排序</th>
                                 <th>产品状态</th>
                                 <th>冲泡码</th>
@@ -133,6 +134,7 @@
                                     <td class="am-text-middle"><?= $item['category']['name'] ?></td>
                                     <td class="am-text-middle"><?= $item['factory']['factory_name'] ?></td>
                                     <!--<td class="am-text-middle"><?= $item['sales_actual'] ?></td>-->
+                                    <td class="am-text-middle"><?= $item['collection_count'] ?>
                                     <td class="am-text-middle"><?= $item['goods_sort'] ?></td>
                                     <td class="am-text-middle">
                                            <span class="j-state am-badge x-cur-p
@@ -162,7 +164,7 @@
                                                 绑定
                                             </a>
                                         <?php endif; ?>
-
+    
                                     </td>
                                     <td class="am-text-middle"><?= $item['create_time'] ?></td>
                                     <td class="am-text-middle">
