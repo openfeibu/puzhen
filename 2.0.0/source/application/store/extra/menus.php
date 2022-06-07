@@ -303,6 +303,14 @@ return [
                             'distributor/edit',
                         ]
                     ],
+                    [
+                        'name' => '加盟申请',
+                        'index' => 'distributor_apply/index',
+                        'uris' => [
+                            'distributor_apply/index',
+                            'distributor_apply/edit',
+                      ]
+                    ],
                 ]
             ],
             [
