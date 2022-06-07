@@ -68,13 +68,14 @@
                                     <small>使用文本编辑器打开apiclient_key.pem文件，将文件的全部内容复制进来</small>
                                 </div>
                             </div>
+                            -->
                             <div class="am-form-group">
                                 <div class="am-u-sm-9 am-u-sm-push-3 am-margin-top-lg">
                                     <button type="submit" class="j-submit am-btn am-btn-secondary">提交
                                     </button>
                                 </div>
                             </div>
-                            -->
+                            
                         </fieldset>
                     </div>
                 </form>
