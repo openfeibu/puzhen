@@ -34,7 +34,7 @@
                             </div>
                             
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">图片 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">企业照片 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <div class="am-form-file">
                                         <div class="uploader-list am-cf">
