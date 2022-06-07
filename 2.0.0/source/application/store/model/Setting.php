@@ -64,10 +64,12 @@ class Setting extends SettingModel
      */
     private function validStore($values)
     {
+      /*
         if (!isset($values['delivery_type']) || empty($values['delivery_type'])) {
             $this->error = '配送方式至少选择一个';
             return false;
         }
+      */
         return true;
     }
 

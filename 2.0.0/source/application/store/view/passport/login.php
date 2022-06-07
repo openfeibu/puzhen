@@ -31,7 +31,7 @@
         <div class="login-content">
             <div class="brand">
                 <img alt="logo" class="brand-img" src="assets/store/img/login/logo.png?v=<?= $version ?>">
-                <h2 class="brand-text">朴真管理系统</h2>
+                <h2 class="brand-text">泡臣管理系统</h2>
             </div>
             <form id="login-form" class="login-form">
                 <div class="form-group">

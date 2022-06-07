@@ -89,8 +89,8 @@ class DistributorApply extends DistributorApplyModel
                 $mail->CharSet = 'utf-8';                             //要发送的内容格式
 
                 //Recipients
-                $mail->setFrom('B18029210246@163.com', '朴真服务'); //发邮件人
-                $mail->addAddress('1270864834@qq.com', '朴真服务');    //收件人，可以设置好几个
+                $mail->setFrom('B18029210246@163.com', '泡臣服务'); //发邮件人
+                $mail->addAddress('1270864834@qq.com', '泡臣服务');    //收件人，可以设置好几个
 
                 $mail->isHTML(true);                                  // 设置电子邮件格式为HTML
                 $mail->Subject = "服务网点申请";

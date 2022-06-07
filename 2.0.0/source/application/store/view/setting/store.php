@@ -56,13 +56,14 @@ use app\common\enum\DeliveryType as DeliveryTypeEnum;
                                            value="<?= $values['kuaidi100']['key'] ?>">
                                 </div>
                             </div>
+                            -->
                             <div class="am-form-group">
                                 <div class="am-u-sm-9 am-u-sm-push-3 am-margin-top-lg">
                                     <button type="submit" class="j-submit am-btn am-btn-secondary">提交
                                     </button>
                                 </div>
                             </div>
-                            -->
+                            
                         </fieldset>
                     </div>
                 </form>

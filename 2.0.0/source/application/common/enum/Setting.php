@@ -11,7 +11,10 @@ class Setting extends EnumBasics
 {
     // 商城设置
     const STORE = 'store';
-
+  
+    // 保修包换设置
+    const WARRANTY = 'warranty';
+  
     // 交易设置
     const TRADE = 'trade';
 
@@ -49,6 +52,10 @@ class Setting extends EnumBasics
             self::STORE => [
                 'value' => self::STORE,
                 'describe' => '商城设置',
+            ],
+            self::WARRANTY => [
+              'value' => self::WARRANTY,
+              'describe' => '保修包换设置',
             ],
             self::TRADE => [
                 'value' => self::TRADE,
