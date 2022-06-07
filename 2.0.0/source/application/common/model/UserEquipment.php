@@ -69,7 +69,7 @@ class UserEquipment extends BaseModel
         $this['warranty_days_text'] = $warranty_days > 0 ? $warranty_days : 0;
         $change_days = $this['setting_basic_change_days'] + $this['setting_change_days'] -  $diff_days;
         $this['change_days'] = $change_days > 0 ? $change_days : 0;
-        $this['change_days_text'] = $change_days > 0 ? ($diff_days > $this['setting_basic_change_days'] ? '0+'.$change_days : ($this['setting_basic_change_days'] - $diff_days) .'+'.$this['change_days']) : 0 ;
+        $this['change_days_text'] = $change_days > 0 ? ($diff_days > $this['setting_basic_change_days'] ? '0+'.$change_days : ($this['setting_basic_change_days'] - $diff_days) .'+'.($this['change_days'] - $this['setting_basic_change_days'])) : 0 ;
         return $this;
     }
 }
