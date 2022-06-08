@@ -49,6 +49,7 @@ class Goods extends GoodsModel
     public function getList($param, $userInfo = false)
     {
         // 获取产品列表
+        $param['factory.status'] = 1;
         $data = parent::getList($param);
         // 隐藏api属性
         !$data->isEmpty() && $data->hidden(['category', 'content', 'image', 'sku']);

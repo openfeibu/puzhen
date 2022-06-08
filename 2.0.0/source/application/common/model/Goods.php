@@ -133,6 +133,7 @@ class Goods extends BaseModel
         $params = array_merge([
             'goods_id' => 0,
             'status' => 10,         // 产品状态
+            'factory.status' => -1, //工厂状态
             'category_id' => 0,     // 分类id
             'factory_id' => 0,     // 工厂id
             'search' => '',         // 搜索关键词
@@ -142,48 +143,52 @@ class Goods extends BaseModel
         ], $param);
         // 筛选条件
         $filter = [];
-        $params['category_id'] > 0 && $filter['category_id'] = ['IN', Category::getSubCategoryId($params['category_id'])];
-        $params['status'] > 0 && $filter['goods_status'] = $params['status'];
-        $params['goods_id'] > 0 && $filter['goods_id'] = $params['goods_id'];
-        $params['factory_id'] > 0 && $filter['factory_id'] = $params['factory_id'];
-        !empty($params['search']) && $filter['goods_name'] = ['like', '%' . trim($params['search']) . '%'];
+        $params['category_id'] > 0 && $filter['goods.category_id'] = ['IN', Category::getSubCategoryId($params['category_id'])];
+        $params['status'] > 0 && $filter['goods.goods_status'] = $params['status'];
+        $params['goods_id'] > 0 && $filter['goods.goods_id'] = $params['goods_id'];
+        $params['factory_id'] > 0 && $filter['goods.factory_id'] = $params['factory_id'];
+        !empty($params['search']) && $filter['goods.goods_name'] = ['like', '%' . trim($params['search']) . '%'];
+        $params['factory.status'] > -1 && $filter['factory.status'] = $params['factory.status'];
         // 排序规则
         $sort = [];
         if ($params['sortType'] === 'all') {
-            $sort = ['goods_sort', 'goods_id' => 'desc'];
+            $sort = ['goods.goods_sort', 'goods.goods_id' => 'desc'];
         } elseif ($params['sortType'] === 'sales') {
-            $sort = ['goods_sales' => 'desc'];
+            $sort = ['goods.goods_sales' => 'desc'];
         } elseif ($params['sortType'] === 'price') {
-            $sort = $params['sort'] == 'desc' ? ['goods_max_price' => 'desc'] : ['goods_min_price' => 'asc'];
+            $sort = $params['sort'] == 'desc' ? ['goods.goods_max_price' => 'desc'] : ['goods.goods_min_price' => 'asc'];
         }elseif ($params['sortType'] === 'ref_price') {
-            $sort = $params['sort'] == 'desc' ? ['goods_max_ref_price' => 'desc'] : ['goods_min_ref_price' => 'asc'];
+            $sort = $params['sort'] == 'desc' ? ['goods.goods_max_ref_price' => 'desc'] : ['goods.goods_min_ref_price' => 'asc'];
         }elseif ($params['sortType'] === 'collection_count') {
-            $sort = $params['sort'] == 'desc' ? ['collection_count' => 'desc'] : ['collection_count' => 'asc'];
+            $sort = $params['sort'] == 'desc' ? ['goods.collection_count' => 'desc'] : ['goods.collection_count' => 'asc'];
         }
         // 产品表名称
-        $tableName = $this->getTable();
+        //$tableName = $this->getTable();
         // 多规格产品 最高价与最低价
         $GoodsSku = new GoodsSku;
         $minPriceSql = $GoodsSku->field(['MIN(goods_price)'])
-            ->where('goods_id', 'EXP', "= `$tableName`.`goods_id`")->buildSql();
+            ->where('goods_id', 'EXP', "= `goods`.`goods_id`")->buildSql();
         $maxPriceSql = $GoodsSku->field(['MAX(goods_price)'])
-            ->where('goods_id', 'EXP', "= `$tableName`.`goods_id`")->buildSql();
+            ->where('goods_id', 'EXP', "= `goods`.`goods_id`")->buildSql();
 
         $minRefPriceSql = $GoodsSku->field(['MIN(ref_price)'])
-            ->where('goods_id', 'EXP', "= `$tableName`.`goods_id`")->buildSql();
+            ->where('goods_id', 'EXP', "= `goods`.`goods_id`")->buildSql();
         $maxRefPriceSql = $GoodsSku->field(['MAX(ref_price)'])
-            ->where('goods_id', 'EXP', "= `$tableName`.`goods_id`")->buildSql();
+            ->where('goods_id', 'EXP', "= `goods`.`goods_id`")->buildSql();
 
         // 执行查询
         $list = $this
-            ->field(['*', '(sales_initial + sales_actual) as goods_sales',
+            ->join('factory', 'factory.factory_id = goods.factory_id')
+            ->alias('goods')
+            ->field(['goods.*', '(goods.sales_initial + goods.sales_actual) as goods_sales',
                 "$minPriceSql AS goods_min_price",
                 "$maxPriceSql AS goods_max_price",
                 "$minRefPriceSql AS goods_min_ref_price",
                 "$maxRefPriceSql AS goods_max_ref_price"
             ])
             ->with(['category', 'image.file', 'sku'])
-            ->where('is_delete', '=', 0)
+            ->where('factory.is_delete', '=', 0)
+            ->where('goods.is_delete', '=', 0)
             ->where($filter)
             ->order($sort)
             ->paginate($params['listRows'], false, [
