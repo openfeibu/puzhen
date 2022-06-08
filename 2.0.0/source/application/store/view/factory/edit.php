@@ -12,7 +12,7 @@
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 工厂名称 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <input type="text" class="tpl-form-input" name="factory[factory_name]"
-                                           placeholder="请输入工厂名称" value="<?= $model['factory_name'] ?>" required>
+                                           placeholder="请输入工厂名称" value="<?= $model->getData('factory_name') ?>" required>
                                 </div>
                             </div>
 

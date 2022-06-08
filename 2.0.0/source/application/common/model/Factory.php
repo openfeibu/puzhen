@@ -15,4 +15,12 @@ class Factory extends BaseModel
     {
         return static::get($factory_id);
     }
+    public function getFactoryNameAttr($value, $data)
+    {
+        if($data['status'] == 0)
+        {
+            return $value."(禁用)";
+        }
+        return $value;
+    }
 }
