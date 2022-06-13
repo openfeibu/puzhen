@@ -98,20 +98,9 @@
     $(function () {
 
         // 删除元素
-        var url = "<?= url('distributor_apply/delete') ?>";
+        var url = "<?= url('distributor.distributor_apply/delete') ?>";
         $('.item-delete').delete('apply_id', url, '删除后不可恢复，确定要删除吗？');
-
-        /**
-         * 订单导出
-         */
-        $('.j-export').click(function () {
-            var data = {};
-            var formData = $('#form-search').serializeArray();
-            $.each(formData, function () {
-                this.name !== 's' && (data[this.name] = this.value);
-            });
-            window.location = "<?= url('distributor_apply/export') ?>" + '&' + $.urlEncode(data);
-        });
+        
 
     });
 </script>

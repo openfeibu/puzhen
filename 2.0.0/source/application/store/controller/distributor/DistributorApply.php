@@ -1,7 +1,8 @@
 <?php
 
-namespace app\store\controller;
+namespace app\store\controller\Distributor;
 
+use app\store\controller\Controller;
 use app\store\model\DistributorApply as DistributorApplyModel;
 
 /**
@@ -32,7 +33,7 @@ class DistributorApply extends Controller
         }
         // 新增记录
         if ($model->edit($this->postData('distributor'))) {
-            return $this->renderSuccess('更新成功', url('distributor/index'));
+            return $this->renderSuccess('更新成功', url('distributor.distributor_apply/index'));
         }
         return $this->renderError($model->getError() ?: '更新失败');
     }

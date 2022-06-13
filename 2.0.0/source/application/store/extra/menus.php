@@ -303,16 +303,36 @@ return [
                             'distributor/edit',
                         ]
                     ],
+                  
                     [
                         'name' => '加盟申请',
-                        'index' => 'distributor_apply/index',
+                        'active' => true,
+                        'index' => 'distributor.distributor_apply/index',
                         'uris' => [
-                            'distributor_apply/index',
-                            'distributor_apply/edit',
+                            'distributor.distributor_apply/index',
+                            'distributor.distributor_apply/edit',
                       ]
                     ],
+                  
                 ]
             ],
+          /*
+            [
+              'name' => '加盟申请',
+              'active' => true,
+              'index' => 'distributor.distributor_apply/index',
+              'submenu' => [
+                [
+                  'name' => '加盟申请列表',
+                  'index' => 'distributor.distributor_apply/index',
+                  'uris' => [
+                    'distributor.distributor_apply/index',
+                    'distributor.distributor_apply/edit',
+                  ]
+                ],
+              ]
+            ],
+          */
             [
                 'name' => '关联产品管理',
                 'active' => true,
