@@ -54,7 +54,7 @@
 
                                 <div class="am-u-sm-6 am-u-end">
                                     <div class="am-u-sm-6">
-                                    <input type="text" class="tpl-form-input" name="tea_qrcode[weight]"
+                                    <input type="text" class="tpl-form-input" 
                                            placeholder="请输入茶量" required>
                                     </div>
                                     <label class="am-u-sm-6 am-form-label am-text-left">克</label>
@@ -64,7 +64,7 @@
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 泡数 </label>
                                 <div class="am-u-sm-9 am-u-end">
-                                    <input type="text" class="tpl-form-input" name="tea_qrcode[number]"
+                                    <input type="text" class="tpl-form-input" 
                                            placeholder="请输入泡数" required value="8">
                                 </div>
                             </div>

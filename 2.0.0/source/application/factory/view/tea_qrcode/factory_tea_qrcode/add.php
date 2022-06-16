@@ -133,7 +133,7 @@
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 批量填写温度 </label>
                                 <div class="am-u-sm-3">
                                     <div class="am-u-sm-8">
-                                        <input type="text" class="tpl-form-input temperature-pl" name="tea_qrcode[temperature][]"
+                                        <input type="text" class="tpl-form-input temperature-pl"
                                                placeholder="70°C-100°C"  value="">
                                     </div>
                                     <label class="am-u-sm-4 am-form-label am-text-left">°C</label>
@@ -143,7 +143,7 @@
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 批量填写秒数 </label>
                                 <div class="am-u-sm-3 am-u-end">
                                     <div class="am-u-sm-8">
-                                        <input type="text" class="tpl-form-input seconds-pl" name="tea_qrcode[seconds][]"
+                                        <input type="text" class="tpl-form-input seconds-pl" 
                                                placeholder="1秒-99秒"  value="">
                                     </div>
                                     <label class="am-u-sm-4 am-form-label am-text-left">秒</label>
