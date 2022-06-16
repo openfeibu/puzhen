@@ -44,6 +44,7 @@ class TeaQrcode extends TeaQrcodeModel
     {
         try {
             $post['url'] = 'https://api.fspuzhen.cn?type=weapp&factory_id='.$factory['factory_id'] ;
+          var_dump($post);exit;
             $teaQrCodeService = new TeaQrCodeService($post);
             $teaQrCodeService->factory = $factory;
             $teaQrCodeService->generate();
