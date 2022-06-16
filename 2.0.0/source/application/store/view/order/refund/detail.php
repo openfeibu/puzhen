@@ -86,7 +86,7 @@
                             <tr>
                                 <th width="25%">产品名称</th>
                                 <th>产品编码</th>
-                                <th>重量(Kg)</th>
+                                <th>重量(g)</th>
                                 <th>单价</th>
                                 <th>购买数量</th>
                                 <th>付款价</th>

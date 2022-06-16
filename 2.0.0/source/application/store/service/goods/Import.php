@@ -17,7 +17,7 @@ class Import
      * @var array
      */
     public $title_arr = [
-        'factory_name' => '工厂名称','category_name' => '产品分类','goods_name' => '产品名称','selling_point' => '产品卖点','goods_no' => "产品编码",'ref_price' => "参考零售价",'goods_weight' => '产品重量(Kg)'
+        'factory_name' => '工厂名称','category_name' => '产品分类','goods_name' => '产品名称','selling_point' => '产品卖点','goods_no' => "产品编码",'ref_price' => "参考零售价",'goods_weight' => '产品重量(g)'
     ];
 
     public $column_key = [

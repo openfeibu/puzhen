@@ -81,7 +81,7 @@
                     <div class="pre">
                         <p>1. 点击下载模板-><a href="<?= base_url().'uploads/import_template/factory_goods.xlsx' ?>" target="_blank">"批量上传产品模板"</a>。</p>
                         <p>2. 请勿修改第一行字段，并按照对应字段填写表格。</p>
-                        <p>3. 工厂名称、产品分类请严格按照系统数据填写。产品名称、参考零售价、产品重量(Kg)不能为空。</p>
+                        <p>3. 工厂名称、产品分类请严格按照系统数据填写。产品名称、参考零售价、产品重量(g)不能为空。</p>
                     </div>
                 </div>
             </div>
