@@ -18,11 +18,15 @@
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">所属角色 </label>
                                 <div class="am-u-sm-9 am-u-end">
+                                    <?php if (isset($roleList) && count($roleList)):?>
                                     <select name="user[role_id][]" multiple data-am-selected="{btnSize: 'sm'}">
-                                        <?php if (isset($roleList)): foreach ($roleList as $role): ?>
+                                        <?php foreach ($roleList as $role): ?>
                                             <option value="<?= $role['role_id'] ?>"> <?= $role['role_name_h1'] ?></option>
-                                        <?php endforeach; endif; ?>
+                                        <?php endforeach; ?>
                                     </select>
+                                    <?php else: ?>
+                                    <a href="<?= url('factory.role/add') ?>">请先点击添加角色</a>
+                                    <?php endif?>
                                     <div class="help-block">
                                         <small>注：支持多选</small>
                                     </div>
