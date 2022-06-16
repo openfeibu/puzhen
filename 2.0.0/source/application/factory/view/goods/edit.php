@@ -198,7 +198,7 @@
                                                 <th>规格图片</th>
                                                 <th>商家编码</th>
                                                 <th>参考零售价</th>
-                                                <th>重量(kg)</th>
+                                                <th>重量(g)</th>
                                             </tr>
                                             <tr v-for="(item, index) in spec_list">
                                                 <td v-for="td in item.rows" class="td-spec-value am-text-middle"

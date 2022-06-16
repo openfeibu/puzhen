@@ -230,7 +230,7 @@
                                                     库存
                                                 </th>
                                                 <th class="form-require">
-                                                    重量(kg)
+                                                    重量(g)
                                                 </th>
                                             </tr>
                                             <tr v-for="(item, index) in spec_list">

@@ -34,7 +34,7 @@
         <th>销售价</th>
         <th>划线价</th>
         <th>库存</th>
-        <th>重量(kg)</th>
+        <th>重量(g)</th>
     </tr>
     {{ each spec_list item }}
     <tr data-index="{{ $index }}" data-sku-id="{{ item.spec_sku_id }}">
