@@ -16,7 +16,7 @@ class Access extends AccessModel
     public static function init()
     {
         parent::init();
-        parent::$is_factory = 0;
+        //parent::$is_factory = 0;
     }
     /**
      * 获取指定角色的所有权限id
