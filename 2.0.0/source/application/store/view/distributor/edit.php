@@ -50,7 +50,7 @@
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 联系电话 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <input type="text" class="tpl-form-input" name="distributor[phone]"
-                                           placeholder="请输入服务网点联系电话" value="<?= $model['phone'] ?>" required>
+                                           placeholder="请输入服务网点联系电话" value="<?= $model['phone'] ?>" >
                                 </div>
                             </div>
                             <div class="am-form-group am-padding-top">
