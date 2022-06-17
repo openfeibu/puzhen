@@ -20,6 +20,7 @@ class TeaQrCode
     public $text;
     public $detail_image;
     public $detail_image_name;
+    public $qrcode_url;
     /**
      * 构造方法
      *
@@ -52,7 +53,7 @@ class TeaQrCode
 
     public function generateQrCode()
     {
-        if(!file_exists($this->file)) {
+        //if(!file_exists($this->file)) {
             if (!is_dir(WEB_PATH . 'uploads' . DIRECTORY_SEPARATOR . $this->directory)) {
                 mkdir(WEB_PATH . 'uploads' . DIRECTORY_SEPARATOR . $this->directory, 0755, true);
             }
@@ -60,14 +61,14 @@ class TeaQrCode
             $qrCode->setWriterByName('png');
             $qrCode->setSize($this->size);
             $qrCode->setMargin(1);
-            $qrCode->setLogoPath(WEB_PATH . 'assets/common/i/codelogo.jpg');
-            $qrCode->setLogoSize(100, 100);
+            $qrCode->setLogoPath(WEB_PATH . 'assets/common/i/codelogo_20220617.jpg');
+            $qrCode->setLogoSize(150, 150);
             $qrCode->setEncoding('UTF-8');
             $qrCode->setRoundBlockSize(true);
             $qrCode->setValidateResult(false);
             //$qrCode->setLabel('Scan the code', 16, WEB_PATH.'/assets/common/fonts/simsun.ttc', LabelAlignment::CENTER);
             $qrCode->writeFile($this->file);
-        }
+       // }
     }
     public function generateDetailQrCode()
     {

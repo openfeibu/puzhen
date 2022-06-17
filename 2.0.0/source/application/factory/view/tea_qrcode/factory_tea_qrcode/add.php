@@ -213,14 +213,14 @@
                         '<label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 第'+(i+nowNumber)+'泡温度 </label>'+
                         '<div class="am-u-sm-3">'+
                         '<div class="am-u-sm-8">'+
-                        '<input class="temperatureVal" type="number" max="100" min="70" class="tpl-form-input" name="tea_qrcode[temperature][]" placeholder="请输入温度" required value="90">'+
+                        '<input class="temperatureVal" type="number" max="100" min="70" class="tpl-form-input" name="tea_qrcode[temperature][]" placeholder="请输入温度" required value="90" data-validationMessage="请输入70-100">'+
                         '</div>'+
                         '<label class="am-u-sm-4 am-form-label am-text-left">°C</label>'+
                         '</div>'+
                         '<label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 第'+(i+nowNumber)+'泡秒数 </label>'+
                         '<div class="am-u-sm-3 am-u-end">'+
                         '<div class="am-u-sm-8">'+
-                        '<input type="number"   max="99" min="1" class="tpl-form-input secondsVal" name="tea_qrcode[seconds][]" placeholder="请输入秒数" required value="3">'+
+                        '<input type="number"   max="99" min="1" class="tpl-form-input secondsVal" name="tea_qrcode[seconds][]" placeholder="请输入秒数" required value="3" data-validationMessage="请输入1-99">'+
                         '</div>'+
                         '<label class="am-u-sm-4 am-form-label am-text-left">秒</label>'+
                         '</div>'+

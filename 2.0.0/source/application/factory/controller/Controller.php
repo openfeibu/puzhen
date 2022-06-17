@@ -79,7 +79,7 @@ class Controller extends \think\Controller
         if(!$store)
         {
             if ($this->factory && Factory::detail($this->factory['factory']['factory_id'])->value('status') == 0) {
-              throw new BaseException(['msg' => '很抱歉，账号被禁止，没有访问权限']);
+                throw new BaseException(['msg' => '很抱歉，账号被禁止，没有访问权限']);
             }
         }
        
