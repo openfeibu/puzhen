@@ -11,7 +11,7 @@ class SpecValue extends BaseModel
 {
     protected $name = 'spec_value';
     protected $updateTime = false;
-
+    protected static $is_factory = 0;
     /**
      * 关联规格组表
      * @return $this|\think\model\relation\BelongsTo

@@ -11,5 +11,5 @@ class Spec extends BaseModel
 {
     protected $name = 'spec';
     protected $updateTime = false;
-
+    protected static $is_factory = 0;
 }
