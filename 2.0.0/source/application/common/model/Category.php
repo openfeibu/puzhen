@@ -13,12 +13,8 @@ use think\Cache;
 class Category extends BaseModel
 {
     protected $name = 'category';
+    protected static $is_factory = 0;
 
-    public static function init()
-    {
-        parent::init();
-        parent::$is_factory = 0;
-    }
     /**
      * 分类图片
      * @return \think\model\relation\HasOne

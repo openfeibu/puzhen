@@ -13,12 +13,8 @@ use app\common\exception\BaseException;
 class Wxapp extends BaseModel
 {
     protected $name = 'wxapp';
-
-    public static function init()
-    {
-        parent::init();
-        parent::$is_factory = 0;
-    }
+  protected static $is_factory = 0;
+   
     /**
      * 小程序页面
      * @return \think\model\relation\HasOne

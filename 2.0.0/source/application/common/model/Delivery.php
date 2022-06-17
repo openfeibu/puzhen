@@ -12,7 +12,7 @@ use think\Request;
 class Delivery extends BaseModel
 {
     protected $name = 'delivery';
-
+    protected static $is_factory = 0;
     /**
      * 关联配送模板区域及运费
      * @return \think\model\relation\HasMany

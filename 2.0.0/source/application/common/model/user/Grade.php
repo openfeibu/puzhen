@@ -13,7 +13,7 @@ use app\common\model\BaseModel;
 class Grade extends BaseModel
 {
     protected $name = 'user_grade';
-
+    protected static $is_factory = 0;
     /**
      * 订单模型初始化
      */

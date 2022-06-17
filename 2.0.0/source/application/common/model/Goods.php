@@ -178,8 +178,9 @@ class Goods extends BaseModel
 
         // 执行查询
         $list = $this
-            ->join('factory', 'factory.factory_id = goods.factory_id')
-            ->alias('goods')
+            ->setBaseQuery('goods', [
+              ['factory', 'factory_id'],
+            ])
             ->field(['goods.*', '(goods.sales_initial + goods.sales_actual) as goods_sales',
                 "$minPriceSql AS goods_min_price",
                 "$maxPriceSql AS goods_max_price",

@@ -14,7 +14,7 @@ class GradeLog extends BaseModel
 {
     protected $name = 'user_grade_log';
     protected $updateTime = false;
-
+    protected static $is_factory = 0;
     /**
      * 新增变更记录 (批量)
      * @param $data
