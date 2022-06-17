@@ -28,9 +28,10 @@
                     var $field = $(validity.field)
                         , $group = $field.parent()
                         , $alert = $group.find('.am-alert');
-                    if ($field.data('validationMessage') !== undefined) {
+                    //console.log($field.attr('data-validationMessage'));
+                    if ($field.attr('data-validationMessage') !== undefined) {
                         // 使用自定义的提示信息 或 插件内置的提示信息
-                        var msg = $field.data('validationMessage') || this.getValidationMessage(validity);
+                        var msg = $field.attr('data-validationMessage') || this.getValidationMessage(validity);
                         if (!$alert.length) {
                             $alert = $('<div class="am-alert am-alert-danger"></div>').hide().appendTo($group);
                         }
