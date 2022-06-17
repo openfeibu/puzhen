@@ -15,13 +15,14 @@ use app\common\library\storage\Driver as StorageDriver;
  */
 class UploadFile extends UploadFileModel
 {
+    protected static $is_factory = 1;
     public static function init()
     {
         parent::init();
         $factory = Session::get('fbshop_factory');
         if($factory && $factory['factory']['is_self'] == 1)
         {
-            parent::$is_factory = 0;
+            static::$is_factory = 0;
         }
     }
 

@@ -81,6 +81,7 @@ class Upload extends Controller
             'file_size' => $fileInfo['size'],
             'file_type' => $fileType,
             'extension' => pathinfo($fileInfo['name'], PATHINFO_EXTENSION),
+            'factory_id' => $this->factory['factory']['factory_id']
         ]);
         return $model;
     }
