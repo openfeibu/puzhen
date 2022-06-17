@@ -74,9 +74,14 @@ class Controller extends \think\Controller
      */
     private function checkPrivilege()
     {
-        if ($this->factory['factory']['status'] == 0) {
-          throw new BaseException(['msg' => '很抱歉，账号被禁止，没有访问权限']);
+        $store = Session::get('fbshop_store');
+        if(!$store)
+        {
+            if ($this->factory && $this->factory['factory']['status'] == 0) {
+              throw new BaseException(['msg' => '很抱歉，账号被禁止，没有访问权限']);
+            }
         }
+       
         if ($this->routeUri === 'index/index') {
             return true;
         }

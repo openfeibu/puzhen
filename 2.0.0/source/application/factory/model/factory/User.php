@@ -37,6 +37,10 @@ class User extends FactoryUserModel
             $this->error = '登录失败, 当前小程序商城已删除';
             return false;
         }
+        if ($user['factory']['status'] == 0) {
+            $this->error = '很抱歉，账号被禁止，没有访问权限';
+            return false;
+        }
         // 保存登录状态
         $this->loginState($user);
         return true;
