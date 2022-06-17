@@ -2,6 +2,7 @@
 
 namespace app\factory\controller;
 
+use app\factory\model\Factory;
 use app\factory\service\Auth;
 use app\factory\service\Menus;
 use app\factory\model\Setting;
@@ -77,7 +78,7 @@ class Controller extends \think\Controller
         $store = Session::get('fbshop_store');
         if(!$store)
         {
-            if ($this->factory && $this->factory['factory']['status'] == 0) {
+            if ($this->factory && Factory::detail($this->factory['factory']['factory_id'])->value('status') == 0) {
               throw new BaseException(['msg' => '很抱歉，账号被禁止，没有访问权限']);
             }
         }
