@@ -59,13 +59,13 @@
                                     <td class="am-text-middle"><?= $item['create_time'] ?></td>
                                     <td class="am-text-middle">
                                         <div class="tpl-table-black-operation">
-                                            <?php if (checkPrivilege('distributor_apply/edit')): ?>
+                                            <?php if (checkPrivilege('distributor.distributor_apply/edit')): ?>
                                               
-                                                <a href="<?= url('distributor_apply/edit',
+                                                <a href="<?= url('distributor.distributor_apply/edit',
                                                            ['apply_id' => $item['apply_id']]) ?>">详情</a>
 
                                             <?php endif; ?>
-                                            <?php if (checkPrivilege('distributor_apply/delete')): ?>
+                                            <?php if (checkPrivilege('distributor.distributor_apply/delete')): ?>
                                                 <a href="javascript:void(0);"
                                                    class="item-delete tpl-table-black-operation-del"
                                                    data-id="<?= $item['apply_id'] ?>">

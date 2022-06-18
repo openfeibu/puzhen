@@ -11,7 +11,7 @@ class TeaQrCode
     public $user;
     public $factory;
     private $post;
-    private $size = 600;
+    private $size = 400;
     public $data;
     public $file;
     public $directory;
@@ -62,7 +62,7 @@ class TeaQrCode
             $qrCode->setSize($this->size);
             $qrCode->setMargin(1);
             $qrCode->setLogoPath(WEB_PATH . 'assets/common/i/codelogo_20220617.jpg');
-            $qrCode->setLogoSize(100, 100);
+            $qrCode->setLogoSize(60, 60);
             $qrCode->setEncoding('UTF-8');
             $qrCode->setRoundBlockSize(true);
             $qrCode->setValidateResult(false);
@@ -75,12 +75,12 @@ class TeaQrCode
         //背景图片
         $source = WEB_PATH.'assets/common/i/bg_code.jpg';
         $codeImg = new QrCodeService();
-        $codeImg->generateImg($source,$this->detail_image, $this->file, $source_width = 150, $source_height= 50, $code_width = 300, $code_height = 300);
+        $codeImg->generateImg($source,$this->detail_image, $this->file, $source_width = 200, $source_height= 100, $code_width = 200, $code_height = 200);
         //新文件
         $text_file = WEB_PATH.'uploads/'.$this->directory.DIRECTORY_SEPARATOR.$this->detail_image_name;
         $font = WEB_PATH.'/assets/common/fonts/simsun.ttc';
-        $codeImg->generateFont($text_file,$this->detail_image, $this->post['name'], $text_width=200, $text_height=450,$font_size = 40, $cate1 = 0, $cate2 = 0, $cate3 = 0,$font);
-        $codeImg->generateFont($text_file,$this->detail_image,$this->text, $text_width=200, $text_height=500,$font_size = 20, $cate1 = 0, $cate2 = 0, $cate3 = 0,$font);
+        $codeImg->generateFont($text_file,$this->detail_image, $this->post['name'], $text_width=200, $text_height=400,$font_size = 40, $cate1 = 0, $cate2 = 0, $cate3 = 0,$font);
+        $codeImg->generateFont($text_file,$this->detail_image,$this->text, $text_width=200, $text_height=450,$font_size = 20, $cate1 = 0, $cate2 = 0, $cate3 = 0,$font);
 
     }
 
