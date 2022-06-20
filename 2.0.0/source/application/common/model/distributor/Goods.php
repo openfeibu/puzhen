@@ -5,6 +5,7 @@ namespace app\common\model\distributor;
 use app\common\library\helper;
 use app\common\model\BaseModel;
 use app\common\service\Goods as GoodsService;
+use app\common\model\Category;
 
 /**
  * 经销商-产品模型

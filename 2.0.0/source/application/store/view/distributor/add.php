@@ -31,14 +31,14 @@
                                 </div>
                             </div>
                             <div class="am-form-group am-padding-top">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label "> 联系人 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 联系人 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <input type="text" class="tpl-form-input" name="distributor[linkman]"
                                            placeholder="请输入服务网点联系人" required>
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 联系电话 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label"> 联系电话 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <input type="text" class="tpl-form-input" name="distributor[phone]"
                                            placeholder="请输入服务网点联系电话" >
