@@ -119,47 +119,54 @@ return [
         ]
     ],
     */
-    'user' => [
-        'name' => '用户管理',
-        'icon' => 'icon-user',
-        'index' => 'user/index',
+    
+    'tea_qrcode' => [
+        'name' => '冲泡码管理',
+        'icon' => 'am-icon-qrcode',
+        'index' => 'tea_qrcode.factory_tea_qrcode/index',
         'submenu' => [
             [
-                'name' => '用户列表',
-                'index' => 'user/index',
-            ],
-            /*
-            [
-                'name' => '会员等级',
+                'name' => '工厂冲泡码',
                 'active' => true,
+                'index' => 'tea_qrcode.factory_tea_qrcode/index',
                 'submenu' => [
                     [
-                        'name' => '等级管理',
-                        'index' => 'user.grade/index',
+                        'name' => '冲泡码列表',
+                        'index' => 'tea_qrcode.factory_tea_qrcode/index',
                         'uris' => [
-                            'user.grade/index',
-                            'user.grade/add',
-                            'user.grade/edit',
-                            'user.grade/delete',
+                            'tea_qrcode.factory_tea_qrcode/index',
+                            'tea_qrcode.factory_tea_qrcode/add',
+                            'tea_qrcode.factory_tea_qrcode/edit',
+                        ]
+                    ],
+                    [
+                        'name' => '冲泡码评价',
+                        'index' => 'tea_qrcode.tea_qrcode_comment/index',
+                        'uris' => [
+                            'tea_qrcode.tea_qrcode_comment/index',
+                            'tea_qrcode.tea_qrcode_comment/edit',
+                        ]
+                    
+                    ],
+                ]
+            ],
+            [
+                'name' => '用户冲泡码',
+                'active' => true,
+                'index' => 'tea_qrcode.user_tea_qrcode/index',
+                'submenu' => [
+                    [
+                        'name' => '冲泡码列表',
+                        'index' => 'tea_qrcode.user_tea_qrcode/index',
+                        'uris' => [
+                            'tea_qrcode.user_tea_qrcode/index',
+                            'tea_qrcode.user_tea_qrcode/add',
+                            'tea_qrcode.user_tea_qrcode/edit',
                         ]
                     ],
                 ]
             ],
-            [
-                'name' => '余额记录',
-                'active' => true,
-                'submenu' => [
-                    [
-                        'name' => '充值记录',
-                        'index' => 'user.recharge/order',
-                    ],
-                    [
-                        'name' => '余额明细',
-                        'index' => 'user.balance/log',
-                    ],
-                ]
-            ],
-            */
+        
         ]
     ],
     'equipment' => [
@@ -211,55 +218,7 @@ return [
 
         ]
     ],
-    'tea_qrcode' => [
-        'name' => '冲泡码管理',
-        'icon' => 'am-icon-qrcode',
-        'index' => 'tea_qrcode.factory_tea_qrcode/index',
-        'submenu' => [
-            [
-                'name' => '工厂冲泡码',
-                'active' => true,
-                'index' => 'tea_qrcode.factory_tea_qrcode/index',
-                'submenu' => [
-                    [
-                        'name' => '冲泡码列表',
-                        'index' => 'tea_qrcode.factory_tea_qrcode/index',
-                        'uris' => [
-                            'tea_qrcode.factory_tea_qrcode/index',
-                            'tea_qrcode.factory_tea_qrcode/add',
-                            'tea_qrcode.factory_tea_qrcode/edit',
-                        ]
-                    ],
-                    [
-                        'name' => '冲泡码评价',
-                        'index' => 'tea_qrcode.tea_qrcode_comment/index',
-                        'uris' => [
-                            'tea_qrcode.tea_qrcode_comment/index',
-                            'tea_qrcode.tea_qrcode_comment/edit',
-                        ]
-
-                    ],
-                ]
-            ],
-            [
-                'name' => '用户冲泡码',
-                'active' => true,
-                'index' => 'tea_qrcode.user_tea_qrcode/index',
-                'submenu' => [
-                    [
-                        'name' => '冲泡码列表',
-                        'index' => 'tea_qrcode.user_tea_qrcode/index',
-                        'uris' => [
-                            'tea_qrcode.user_tea_qrcode/index',
-                            'tea_qrcode.user_tea_qrcode/add',
-                            'tea_qrcode.user_tea_qrcode/edit',
-                        ]
-                    ],
-                ]
-            ],
-
-        ]
-    ],
+    
     'factory' => [
         'name' => '工厂管理',
         'icon' => 'am-icon-building',
@@ -347,6 +306,49 @@ return [
                     ],
                 ]
             ],
+        ]
+    ],
+    'user' => [
+        'name' => '用户管理',
+        'icon' => 'icon-user',
+        'index' => 'user/index',
+        'submenu' => [
+            [
+                'name' => '用户列表',
+                'index' => 'user/index',
+            ],
+            /*
+            [
+                'name' => '会员等级',
+                'active' => true,
+                'submenu' => [
+                    [
+                        'name' => '等级管理',
+                        'index' => 'user.grade/index',
+                        'uris' => [
+                            'user.grade/index',
+                            'user.grade/add',
+                            'user.grade/edit',
+                            'user.grade/delete',
+                        ]
+                    ],
+                ]
+            ],
+            [
+                'name' => '余额记录',
+                'active' => true,
+                'submenu' => [
+                    [
+                        'name' => '充值记录',
+                        'index' => 'user.recharge/order',
+                    ],
+                    [
+                        'name' => '余额明细',
+                        'index' => 'user.balance/log',
+                    ],
+                ]
+            ],
+            */
         ]
     ],
     /*
