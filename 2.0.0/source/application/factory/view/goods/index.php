@@ -129,23 +129,31 @@
                                     </td>
                                     <td class="am-text-middle">
                                         <?php if (isset($item['goods_tea_qrcode']) && $item['goods_tea_qrcode']): ?>
+                                            <?php if (checkPrivilege('tea_qrcode.factory_tea_qrcode/edit')): ?>
                                             <a href="<?= url('tea_qrcode.factory_tea_qrcode/edit',
                                                 ['tea_qrcode_id' => $item['goods_tea_qrcode']['tea_qrcode_id']]) ?>">
                                                 查看
                                             </a>
+                                            <?php endif; ?>
+                                            <?php if (checkPrivilege('goods/bind_tea_qrcode')): ?>
                                             <a href="<?= url('goods/bind_tea_qrcode',
                                                 ['goods_id' => $item['goods_id']]) ?>">
                                                 换绑
                                             </a>
+                                            <?php endif; ?>
                                         <?php else: ?>
+                                            <?php if (checkPrivilege('tea_qrcode.factory_tea_qrcode/add')): ?>
                                             <a href="<?= url('tea_qrcode.factory_tea_qrcode/add',
                                                 ['goods_id' => $item['goods_id']]) ?>">
                                                 添加
                                             </a>
+                                            <?php endif; ?>
+                                            <?php if (checkPrivilege('goods/bind_tea_qrcode')): ?>
                                             <a href="<?= url('goods/bind_tea_qrcode',
                                                 ['goods_id' => $item['goods_id']]) ?>">
                                                 绑定
                                             </a>
+                                            <?php endif; ?>
                                         <?php endif; ?>
 
                                     </td>

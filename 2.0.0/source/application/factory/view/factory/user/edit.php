@@ -18,16 +18,16 @@
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">所属角色 </label>
                                 <div class="am-u-sm-9 am-u-end">
-                                    <select name="user[role_id][]" multiple data-am-selected="{btnSize: 'sm'}">
+                                    <select name="user[role_id][]" data-am-selected="{btnSize: 'sm'}">
                                         <?php if (isset($roleList)): foreach ($roleList as $role): ?>
                                             <option value="<?= $role['role_id'] ?>"
                                                 <?= in_array($role['role_id'], $model['roleIds']) ? 'selected' : '' ?>>
                                                 <?= $role['role_name_h1'] ?></option>
                                         <?php endforeach; endif; ?>
                                     </select>
-                                    <div class="help-block">
+                                    <!--<div class="help-block">
                                         <small>注：支持多选</small>
-                                    </div>
+                                    </div>-->
                                 </div>
                             </div>
                             <div class="am-form-group">

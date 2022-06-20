@@ -35,7 +35,7 @@
                                 <div class="am fr">
                                     <div class="am-form-group am-fl">
                                         <select name="factory_id"
-                                                data-am-selected="{searchBox: 1, btnSize: 'sm', placeholder: '工厂', maxHeight: 400, btnWidth:150}">
+                                                data-am-selected="{searchBox: 1, btnSize: 'sm', placeholder: '工厂', maxHeight: 400, btnWidth:150}" class="form_change">
                                             <option value="0">全部工厂</option>
                                             <?php if (isset($factoryList)): foreach ($factoryList as $factory): ?>
                                                 <option value="<?= $factory['factory_id'] ?>"

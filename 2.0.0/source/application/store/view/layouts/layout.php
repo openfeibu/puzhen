@@ -133,6 +133,11 @@
 <script src="assets/common/js/art-template.js"></script>
 <script src="assets/store/js/app.js?v=<?= $version ?>"></script>
 <script src="assets/store/js/file.library.js?v=<?= $version ?>"></script>
+<script>
+    $(function () {
+        
+    });
+</script>
 </body>
 
 </html>
