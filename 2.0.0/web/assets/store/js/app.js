@@ -464,5 +464,30 @@ $(function () {
             layer.close(index);
         });
     });
+    $('body').on('change','.toolbar-form select',function () {
+        load = layer.load();
+        var $form = $(this).parents("form");
+        $form.submit();
+        /*
+         $.ajax({
+         url:$form.attr('action'),
+         type:"POST",
+         data:$form.serialize(),
+         success: function(data,status){
+         var query = location.href.split("?")[1];
+         if (!query) {
+         // 如果没有查询条件，则显示默认第1个章节
+         history.pushState(null, "",
+         location.href + "?" + $form.serialize());
+         } else {
+         history.pushState(null, "",
+         location.href.split("?")[0] + "?" + $form.serialize());
+         }
+         if(typeof load!="undefined"){layer.close(load);}
+         $("#ajax-data").html(data);
 
+         }
+         });
+         */
+    });
 });
