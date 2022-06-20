@@ -36,7 +36,7 @@
                                         <?php $category_id = $request->get('category_id') ?: null; ?>
                                         <select name="category_id"
                                                 data-am-selected="{searchBox: 1, btnSize: 'sm',  placeholder: '产品分类', maxHeight: 400}">
-                                            <option value=""></option>
+                                            <option value="0">全部分类</option>
                                             <?php if (isset($catgory)): foreach ($catgory as $first): ?>
                                                 <option value="<?= $first['category_id'] ?>"
                                                     <?= $category_id == $first['category_id'] ? 'selected' : '' ?>>
@@ -53,7 +53,7 @@
                                         <?php $status = $request->get('status') ?: null; ?>
                                         <select name="status"
                                                 data-am-selected="{btnSize: 'sm', placeholder: '产品状态'}">
-                                            <option value=""></option>
+                                            <option value="0">全部状态</option>
                                             <option value="10"
                                                 <?= $status == 10 ? 'selected' : '' ?>>上架
                                             </option>
