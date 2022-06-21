@@ -1,6 +1,19 @@
 /**
  * jquery全局函数封装
  */
+
+/**
+ * 获取已选择的数据
+ * @returns {Array}
+ */
+function getSelectedData() {
+    var data = [];
+    $('input[data-check=item]:checked').each(function () {
+        data.push($(this).data('params'));
+    });
+    return data;
+}
+
 (function ($) {
     /**
      * Jquery类方法
@@ -489,5 +502,25 @@ $(function () {
          }
          });
          */
+    });
+
+    // 全选框元素
+    var $checkAll = $('input[data-check=all]')
+      , $checkItem = $('input[data-check=item]')
+      , itemCount = $checkItem.length;
+
+    // 复选框: 全选和反选
+    $checkAll.change(function () {
+        $checkItem.prop('checked', this.checked);
+    });
+
+    // 复选框: 子元素
+    $checkItem.change(function () {
+        if (!this.checked) {
+            $checkAll.prop('checked', false);
+        } else {
+            var checkedItemNum = $checkItem.filter(':checked').length;
+            checkedItemNum === itemCount && $checkAll.prop('checked', true);
+        }
     });
 });
