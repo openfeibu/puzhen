@@ -146,20 +146,20 @@
                                     </td>
                                     <td class="am-text-middle">
                                         <?php if (isset($item['goods_tea_qrcode']) && $item['goods_tea_qrcode']): ?>
-                                            <a href="<?= url('tea_qrcode.factory_tea_qrcode/edit',
+                                            <a class="am-btn am-btn-xs am-round am-btn-secondary" href="<?= url('tea_qrcode.factory_tea_qrcode/edit',
                                                 ['tea_qrcode_id' => $item['goods_tea_qrcode']['tea_qrcode_id']]) ?>">
                                                 查看
                                             </a>
-                                            <a href="<?= url('goods/bind_tea_qrcode',
+                                            <a class="am-btn am-btn-xs am-round am-btn-danger" href="<?= url('goods/bind_tea_qrcode',
                                                 ['goods_id' => $item['goods_id']]) ?>">
                                                 换绑
                                             </a>
                                         <?php else: ?>
-                                            <a href="<?= url('tea_qrcode.factory_tea_qrcode/add',
+                                            <a class="am-btn am-btn-xs am-round am-btn-secondary" href="<?= url('tea_qrcode.factory_tea_qrcode/add',
                                                 ['goods_id' => $item['goods_id']]) ?>">
                                                 添加
                                             </a>
-                                            <a href="<?= url('goods/bind_tea_qrcode',
+                                            <a class="am-btn am-btn-xs am-round am-btn-danger" href="<?= url('goods/bind_tea_qrcode',
                                                 ['goods_id' => $item['goods_id']]) ?>">
                                                 绑定
                                             </a>
