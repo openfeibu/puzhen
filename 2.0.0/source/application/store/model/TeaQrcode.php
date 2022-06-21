@@ -62,7 +62,7 @@ class TeaQrcode extends TeaQrcodeModel
         } catch (\Exception $e) {
             $this->error = $e->getMessage();
             $this->rollback();
-            return false
+            return false;
         }
     }
     public function bindTeaQrcode($post)

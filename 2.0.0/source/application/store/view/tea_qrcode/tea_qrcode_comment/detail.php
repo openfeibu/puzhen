@@ -16,6 +16,19 @@
                                 </div>
                             </div>
                             <div class="am-form-group">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">产品 </label>
+                                <div class="am-u-sm-9 am-u-end am-padding-top-xs">
+                                    <?php if (isset($model['goods']['image'][0]['file_path'])) : ?>
+                                    <a href="<?= $model['goods']['image'][0]['file_path'] ?>"
+                                       title="点击查看大图" target="_blank">
+                                        <img src="<?= $model['goods']['image'][0]['file_path'] ?>" alt="产品图片"
+                                             width="80" height="80">
+                                    </a>
+                                    <?php endif; ?>
+                                    <small class="">(产品id：<?= $model['goods_id'] ?>)</small>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label">冲泡码 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <a href="<?= $model['tea_qrcode']['detail_image_url'] ?>"

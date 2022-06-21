@@ -84,7 +84,7 @@ class TeaQrcodeComment extends BaseModel
      */
     public static function detail($where)
     {
-        return self::get($where, ['user','tea_qrcode','comment_tea_qrcode']);
+        return self::get($where, ['user','tea_qrcode','comment_tea_qrcode','goods.image.file']);
     }
     /**
      * 更新记录
