@@ -22,7 +22,7 @@
                                     <a href="<?= $model['goods']['image'][0]['file_path'] ?>"
                                        title="点击查看大图" target="_blank">
                                         <img src="<?= $model['goods']['image'][0]['file_path'] ?>" alt="产品图片"
-                                             width="80" height="80">
+                                             width="80" >
                                     </a>
                                     <?php endif; ?>
                                     <small class="">(产品id：<?= $model['goods_id'] ?>)</small>
@@ -41,7 +41,7 @@
                                     <a href="<?= $model['tea_qrcode']['detail_image_url'] ?>"
                                        title="点击查看大图" target="_blank">
                                         <img src="<?= $model['tea_qrcode']['detail_image_url'] ?>" alt="冲泡码"
-                                             width="80" height="80">
+                                             width="80" >
                                     </a>
                                 </div>
                             </div>

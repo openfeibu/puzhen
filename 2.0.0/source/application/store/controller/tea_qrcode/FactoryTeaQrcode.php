@@ -86,5 +86,18 @@ class FactoryTeaQrcode extends Controller
         }
         return $this->renderSuccess('删除成功');
     }
-
+    /**
+     * 批量删除冲泡二维码
+     * @param $ids
+     * @return array
+     * @throws \think\exception\DbException
+     */
+    public function batchDelete($ids)
+    {
+        $model = new TeaQrcodeModel;
+        if (!$model->batchRemove($ids)) {
+            return $this->renderError($model->getError() ?: '删除失败');
+        }
+        return $this->renderSuccess('删除成功');
+    }
 }

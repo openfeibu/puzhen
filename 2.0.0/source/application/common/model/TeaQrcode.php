@@ -56,6 +56,39 @@ class TeaQrcode extends BaseModel
         }
 
     }
+    public function batchRemove($ids)
+    {
+        $success_count = 0;
+        $error_count = 0;
+        $message = '';
+        foreach ($ids as $id)
+        {
+            $this->startTrans();
+            try{
+                $detail = self::detail($id);
+                $detail->goodsTeaQrcode()->delete();
+                $detail->comment()->delete();
+                $detail->delete();
+                $this->commit();
+                $success_count++;
+            }catch (\Exception $e) {
+                $error_count++;
+                $this->rollback();
+            }
+        }
+        if($success_count > 0)
+        {
+            $message.= "删除成功：".$success_count." 行；";
+        }
+        if($error_count > 0)
+        {
+            $message.= "删除失败：".$error_count." 行；";
+        }
+        return [
+            'status' => true,
+            'message' => $message
+        ];
+    }
     public function edit($post)
     {
         if($post['name']) {

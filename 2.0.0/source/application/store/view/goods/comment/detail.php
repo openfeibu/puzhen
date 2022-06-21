@@ -21,7 +21,7 @@
                                     <a href="<?= $model['order_goods']['image']['file_path'] ?>"
                                        title="点击查看大图" target="_blank">
                                         <img src="<?= $model['order_goods']['image']['file_path'] ?>" alt="产品图片"
-                                             width="80" height="80">
+                                             width="80" >
                                     </a>
                                 </div>
                             </div>

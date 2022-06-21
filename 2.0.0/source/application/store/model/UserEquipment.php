@@ -4,7 +4,7 @@ namespace app\store\model;
 
 use app\common\model\UserEquipment as UserEquipmentModel;
 use app\store\service\user_equipment\Export as ExportService;
-
+use app\store\model\Setting as SettingModel;
 /**
  * 用户设备模型
  * Class UserEquipment
@@ -134,11 +134,15 @@ class UserEquipment extends UserEquipmentModel
             return false;
         }
         if ($data['status'] == 20) {
-            if(empty($data['setting_warranty_days'])||empty($data['setting_basic_change_days'])||empty($data['setting_change_days']))
+            $warranty_setting = SettingModel::getItem('warranty');
+            if(empty($warranty_setting['warranty_days'])||empty($warranty_setting['basic_change_days'])||empty($warranty_setting['change_days']))
             {
-                $this->error = '保修包换信息不足';
+                $this->error = '请先配置保修包换信息';
                 return false;
             }
+            $data['setting_warranty_days'] = $warranty_setting['warranty_days'];
+            $data['setting_basic_change_days'] = $warranty_setting['basic_change_days'];
+            $data['setting_change_days'] = $warranty_setting['change_days'];
         }
 
         $this->transaction(function () use ($data) {
