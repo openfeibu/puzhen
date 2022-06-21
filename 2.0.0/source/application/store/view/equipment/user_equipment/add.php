@@ -91,30 +91,45 @@
                             </div>
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">保修日期 </label>
+                                <div class="am-u-sm-9 am-u-end am-padding-top-xs">
+                                    <?= $warranty_setting['warranty_days'] ?>天
+                                </div>
+                                <!--
                                 <div class="am-u-sm-9 am-u-end">
                                     <div class="am-u-sm-6">
                                         <input type="number" class="tpl-form-input" name="user_equipment[setting_warranty_days]" value="<?= $warranty_setting['warranty_days'] ?>" required>
                                     </div>
                                     <label class="am-u-sm-6 am-form-label am-text-left">天</label>
                                 </div>
+                                -->
                             </div>
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">基础包换日期 </label>
+                                <div class="am-u-sm-9 am-u-end am-padding-top-xs">
+                                    <?= $warranty_setting['basic_change_days'] ?>天
+                                </div>
+                                <!--
                                 <div class="am-u-sm-9 am-u-end">
                                     <div class="am-u-sm-6">
                                         <input type="number" class="tpl-form-input" name="user_equipment[setting_basic_change_days]" value="<?= $warranty_setting['basic_change_days'] ?>" required>
                                     </div>
                                     <label class="am-u-sm-6 am-form-label am-text-left">天</label>
                                 </div>
+                                -->
                             </div>
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">赠送包换日期 </label>
+                                <div class="am-u-sm-9 am-u-end am-padding-top-xs">
+                                    <?= $warranty_setting['change_days'] ?>天
+                                </div>
+                                <!--
                                 <div class="am-u-sm-9 am-u-end">
                                     <div class="am-u-sm-6">
                                         <input type="number" class="tpl-form-input" name="user_equipment[setting_change_days]" value="<?= $warranty_setting['change_days'] ?>" required>
                                     </div>
                                     <label class="am-u-sm-6 am-form-label am-text-left">天</label>
                                 </div>
+                                -->
                             </div>
 
                             <div class="am-form-group">
