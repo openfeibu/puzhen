@@ -35,7 +35,11 @@ class TeaQrcode extends BaseModel
         $tea_qrcode_data['tea_name'] = Tea::getTeaName($tea_qrcode_data['tea']);
         return $tea_qrcode_data;
     }
-
+    
+    /**
+     * @param $tea_qrcode_id
+     * @return \app\common\model\TeaQrcode
+     * */
     public static function detail($tea_qrcode_id)
     {
         return self::get(compact('tea_qrcode_id'));
@@ -82,10 +86,10 @@ class TeaQrcode extends BaseModel
         }
         if($error_count > 0)
         {
-            $message.= "删除失败：".$error_count." 行；";
+            $message.= "删除失败：".$error_count." 行；请刷新后重试或联系技术人员";
         }
         return [
-            'status' => true,
+            'status' => $error_count ? false : true,
             'message' => $message
         ];
     }

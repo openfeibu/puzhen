@@ -73,7 +73,7 @@ class TeaQrCode
     public function generateDetailQrCode()
     {
         //背景图片
-        $source = WEB_PATH.'assets/common/i/bg_code.jpg';
+        $source = WEB_PATH.'assets/common/i/bg_code_style_1_600.jpg';
         $codeImg = new QrCodeService();
         $codeImg->generateImg($source,$this->detail_image, $this->file, $source_width = 200, $source_height= 100, $code_width = 200, $code_height = 200);
         //新文件
