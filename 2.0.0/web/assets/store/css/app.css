@@ -1527,7 +1527,8 @@ input[type=range]::-webkit-slider-thumb {
     border: 1px solid #ddd;
     background: #fff; }
     .uploader-list .file-item img {
-      height: 100px; }
+      /*height: 100px;*/
+    }
     .uploader-list .file-item .error {
       position: absolute;
       top: 4px;
