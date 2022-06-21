@@ -29,6 +29,13 @@
                                 </div>
                             </div>
                             <div class="am-form-group">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">冲泡码名称 </label>
+                                <div class="am-u-sm-9 am-u-end am-padding-top-xs">
+                                    <small class="am-text-sm"><?= $model['tea_qrcode']['name'] ?></small>
+                                </div>
+                            </div>
+                            
+                            <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label">冲泡码 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <a href="<?= $model['tea_qrcode']['detail_image_url'] ?>"
@@ -38,12 +45,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">冲泡码名称 </label>
-                                <div class="am-u-sm-9 am-u-end am-padding-top-xs">
-                                    <small class="am-text-sm"><?= $model['tea_qrcode']['name'] ?></small>
-                                </div>
-                            </div>
+                           
 
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">评价内容 </label>
