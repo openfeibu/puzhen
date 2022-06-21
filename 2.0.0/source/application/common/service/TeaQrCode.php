@@ -91,7 +91,6 @@ class TeaQrCode
 
         $temperature = implode(' ',$this->post['temperature_arr']);
         $second = implode(' ',$this->post['seconds_arr']);
-
         $this->qrcode_url = $this->post['url'].'&PZ '.$this->post['tea'].' '.$this->post['weight'].' '.$this->post['number'].' '.$temperature.' '.$second.' O';
     }
 

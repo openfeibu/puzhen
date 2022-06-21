@@ -12,6 +12,7 @@
                             <thead>
                             <tr>
                                 <th>ID</th>
+                                <th>产品</th>
                                 <th>冲泡码方案名称</th>
                                 <th>冲泡码</th>
                                 <th class="am-text-middle">用户</th>
@@ -26,6 +27,16 @@
                             <?php if (!$list->isEmpty()): foreach ($list as $item): ?>
                                 <tr>
                                     <td class="am-text-middle"><?= $item['comment_id'] ?></td>
+                                    <td class="am-text-middle">
+                                        <?php if (isset($item['goods']['image'][0]['file_path'])) : ?>
+                                        <a href="<?= $item['goods']['image'][0]['file_path'] ?>"
+                                           title="点击查看大图" target="_blank">
+                                            <img src="<?= $item['goods']['image'][0]['file_path'] ?>"
+                                                 width="50" height="50" alt="产品图片">
+                                        </a>
+                                        <?php endif; ?>
+                                        <p class="am-link-muted">(产品ID：<?= $item['goods_id'] ?>)</p>
+                                    </td>
                                     <td class="am-text-middle">
                                         <p class="item-title"><?= $item['tea_qrcode']['name'] ?></p>
                                     </td>

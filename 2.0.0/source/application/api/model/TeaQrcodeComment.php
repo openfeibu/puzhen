@@ -38,14 +38,16 @@ class TeaQrcodeComment extends TeaQrcodeCommentModel
     /**
      * 获取指定产品评价列表
      * @param $tea_qrcode_id
+     * @param $goods_id
      * @return \think\Paginator
      * @throws \think\exception\DbException
      */
-    public function getCommentList($tea_qrcode_id)
+    public function getCommentList($tea_qrcode_id, $goods_id)
     {
         // 筛选条件
         $filter = [
             'tea_qrcode_id' => $tea_qrcode_id,
+            'goods_id' => $goods_id,
             'status' => 1,
         ];
         // 评分
@@ -62,18 +64,19 @@ class TeaQrcodeComment extends TeaQrcodeCommentModel
      * 添加评价
      * @param $user
      * @param $tea_qrcode_id
+     * @param $goods_id
      * @param $post
      * @return boolean
      * @throws \Exception
      */
-    public function add($user, $tea_qrcode_id, $post)
+    public function add($user, $tea_qrcode_id,$goods_id, $post)
     {
         if (empty($post['content'])) {
             $this->error = '没有输入评价内容';
             return false;
         }
 
-        return $this->transaction(function () use ($user,$tea_qrcode_id,$post) {
+        return $this->transaction(function () use ($user,$tea_qrcode_id,$goods_id,$post) {
             if(isset($post['comment_tea_qrcode_id']) && $post['comment_tea_qrcode_id'])
             {
                 $tea_qrcode = TeaQrcodeModel::detail($post['comment_tea_qrcode_id']);
@@ -92,6 +95,7 @@ class TeaQrcodeComment extends TeaQrcodeCommentModel
                 'status' => 1,
                 'user_id' => $user['user_id'],
                 'tea_qrcode_id' => $tea_qrcode_id,
+                'goods_id' => $goods_id,
                 'comment_tea_qrcode_id' => isset($comment_tea_qrcode) && $comment_tea_qrcode  ? $comment_tea_qrcode->tea_qrcode_id : 0,
                 'wxapp_id' => self::$wxapp_id
             ]);

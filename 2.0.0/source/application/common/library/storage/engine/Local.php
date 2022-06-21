@@ -35,7 +35,7 @@ class Local extends Server
         $uplodDir = WEB_PATH . 'uploads';
         // 验证文件并上传
         $info = $this->file->validate([
-            'size' => 10 * 1024 * 1024,
+            'size' => 2 * 1024 * 1024,
             'ext' => 'jpg,jpeg,png,gif'
         ])->move($uplodDir, $this->fileName);
         if (empty($info)) {

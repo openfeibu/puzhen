@@ -22,7 +22,14 @@ class TeaQrcodeComment extends BaseModel
     {
         return $this->belongsTo('TeaQrcode');
     }
-
+    /**
+     * 评论的冲泡码
+     * @return \think\model\relation\BelongsTo
+     */
+    public function goods()
+    {
+        return $this->belongsTo('Goods');
+    }
     /**
      * 我的冲泡码
      * @return \think\model\relation\BelongsTo
@@ -60,7 +67,7 @@ class TeaQrcodeComment extends BaseModel
      */
     public function getList()
     {
-        return $this->with(['user', 'tea_qrcode'])
+        return $this->with(['user', 'tea_qrcode','goods.image.file'])
             ->alias('comment')
             ->field('comment.*')
             ->join('tea_qrcode', 'comment.tea_qrcode_id = tea_qrcode.tea_qrcode_id')
