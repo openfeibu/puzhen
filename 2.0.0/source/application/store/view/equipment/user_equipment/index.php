@@ -94,7 +94,7 @@
                                     <!--
                                     <td class="am-text-middle">
                                         <a href="<?= $item['equipment']['image']['file_path'] ?>" title="点击查看大图" target="_blank">
-                                            <img src="<?= $item['equipment']['image']['file_path'] ?>" width="72" height="72" alt="">
+                                            <img src="<?= $item['equipment']['image']['file_path'] ?>" width="72"  alt="">
                                         </a>
                                     </td>
                                     -->

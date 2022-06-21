@@ -60,7 +60,7 @@ use app\common\service\wechat\wow\Order as WowOrderService;
                                     <td class="am-text-middle">
                                         <a href="<?= $item['user']['avatarUrl'] ?>" target="_blank">
                                             <img src="<?= $item['user']['avatarUrl'] ?>"
-                                                 width="70" height="70" alt="用户头像">
+                                                 width="70"  alt="用户头像">
                                         </a>
                                     </td>
                                     <td class="am-text-middle">

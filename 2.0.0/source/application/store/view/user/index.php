@@ -72,7 +72,7 @@
                                     <td class="am-text-middle"><?= $item['user_id'] ?></td>
                                     <td class="am-text-middle">
                                         <a href="<?= $item['avatarUrl'] ?>" title="点击查看大图" target="_blank">
-                                            <img src="<?= $item['avatarUrl'] ?>" width="72" height="72" alt="">
+                                            <img src="<?= $item['avatarUrl'] ?>" width="72"  alt="">
                                         </a>
                                     </td>
                                     <td class="am-text-middle"><?= $item['nickName'] ?></td>

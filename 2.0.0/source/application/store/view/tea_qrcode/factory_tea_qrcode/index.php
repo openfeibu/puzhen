@@ -76,7 +76,7 @@
                                         <a href="<?= $item['detail_image_url'] ?>"
                                            title="点击查看大图" target="_blank">
                                             <img src="<?= $item['detail_image_url'] ?>"
-                                                 width="50" height="50" alt="冲泡码">
+                                                 width="50"  alt="冲泡码">
                                         </a>
                                     </td>
                                     <!--
@@ -86,7 +86,7 @@
                                            title="点击查看" target="_blank">
                                             <?php if(isset($item['goods_tea_qrcode']['goods']['image'][0]['file']['file_path'])):?>
                                             <img src="<?= $item['goods_tea_qrcode']['goods']['image'][0]['file']['file_path'] ?>"
-                                                 width="50" height="50" alt="<?= $item['goods_tea_qrcode']['goods']['goods_name'] ?>">
+                                                 width="50"  alt="<?= $item['goods_tea_qrcode']['goods']['goods_name'] ?>">
                                             <?php endif;?>
                                         </a>
                                         <?php else: ?>

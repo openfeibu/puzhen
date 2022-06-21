@@ -89,7 +89,7 @@
                 <td class="am-text-middle"><?= $item['shop_id'] ?></td>
                 <td class="am-text-middle">
                     <a href="<?= $item['logo']['file_path'] ?>" title="点击查看大图" target="_blank">
-                        <img src="<?= $item['logo']['file_path'] ?>" width="72" height="72" alt="">
+                        <img src="<?= $item['logo']['file_path'] ?>" width="72"  alt="">
                     </a>
                 </td>
                 <td class="am-text-middle"><?= $item['shop_name'] ?></td>

@@ -53,7 +53,7 @@
                                     <td class="am-text-middle">
                                         <a href="<?= $item['user']['avatarUrl'] ?>" target="_blank">
                                             <img src="<?= $item['user']['avatarUrl'] ?>"
-                                                 width="70" height="70" alt="用户头像">
+                                                 width="70"  alt="用户头像">
                                         </a>
                                     </td>
                                     <td class="am-text-middle">
@@ -64,7 +64,7 @@
                                         <a href="<?= $item['goods']['image'][0]['file_path'] ?>"
                                            title="点击查看大图" target="_blank">
                                             <img src="<?= $item['goods']['image'][0]['file_path'] ?>"
-                                                 width="70" height="70" alt="产品图片">
+                                                 width="70"  alt="产品图片">
                                         </a>
                                     </td>
                                     <td class="am-text-middle">

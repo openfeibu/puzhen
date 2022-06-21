@@ -60,7 +60,7 @@
                                     <td class="am-text-middle"><?= $item['model'] ?></td>
                                     <td class="am-text-middle">
                                         <a href="<?= $item['image']['file_path'] ?>" title="点击查看大图" target="_blank">
-                                            <img src="<?= $item['image']['file_path'] ?>" width="72" height="72" alt="">
+                                            <img src="<?= $item['image']['file_path'] ?>" width="72"  alt="">
                                         </a>
                                     </td>
                                     <td class="am-text-middle"><?= $item['model'] ?></td>

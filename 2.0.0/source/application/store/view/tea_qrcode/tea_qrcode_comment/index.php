@@ -32,7 +32,7 @@
                                         <a href="<?= $item['goods']['image'][0]['file_path'] ?>"
                                            title="点击查看大图" target="_blank">
                                             <img src="<?= $item['goods']['image'][0]['file_path'] ?>"
-                                                 width="50" height="50" alt="产品图片">
+                                                 width="50"  alt="产品图片">
                                         </a>
                                         <?php endif; ?>
                                         <p class="am-link-muted">(产品ID：<?= $item['goods_id'] ?>)</p>
@@ -44,7 +44,7 @@
                                         <a href="<?= $item['tea_qrcode']['detail_image_url'] ?>"
                                            title="点击查看大图" target="_blank">
                                             <img src="<?= $item['tea_qrcode']['detail_image_url'] ?>"
-                                                 width="50" height="50" alt="冲泡码">
+                                                 width="50"  alt="冲泡码">
                                         </a>
                                     </td>
                                     <td class="am-text-middle">

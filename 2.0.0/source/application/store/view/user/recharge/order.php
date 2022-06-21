@@ -91,7 +91,7 @@
                                     <td class="am-text-middle"><?= $item['order_id'] ?></td>
                                     <td class="am-text-middle">
                                         <a href="<?= $item['user']['avatarUrl'] ?>" title="点击查看大图" target="_blank">
-                                            <img src="<?= $item['user']['avatarUrl'] ?>" width="72" height="72" alt="">
+                                            <img src="<?= $item['user']['avatarUrl'] ?>" width="72"  alt="">
                                         </a>
                                     </td>
                                     <td class="am-text-middle">

@@ -56,7 +56,7 @@
                                     <td class="am-text-middle">
                                         <a href="<?= $item['avatarUrl'] ?>" title="点击查看大图" target="_blank">
                                             <img src="<?= $item['avatarUrl'] ?>"
-                                                 width="50" height="50" alt="">
+                                                 width="50"  alt="">
                                         </a>
                                     </td>
                                     <td class="am-text-middle">

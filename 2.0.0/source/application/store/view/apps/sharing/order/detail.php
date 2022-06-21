@@ -330,7 +330,7 @@ $detail = isset($detail) ? $detail : null;
                                     <td>
                                         <a href="<?= $detail['extract_shop']['logo']['file_path'] ?>" title="点击查看大图"
                                            target="_blank">
-                                            <img src="<?= $detail['extract_shop']['logo']['file_path'] ?>" height="72"
+                                            <img src="<?= $detail['extract_shop']['logo']['file_path'] ?>" width="72"
                                                  alt="">
                                         </a>
                                     </td>

@@ -62,7 +62,7 @@
                                         <a href="<?= $item['detail_image_url'] ?>"
                                            title="点击查看大图" target="_blank">
                                             <img src="<?= $item['detail_image_url'] ?>"
-                                                 width="50" height="50" alt="冲泡码">
+                                                 width="50"  alt="冲泡码">
                                         </a>
                                     </td>
                                     <td class="am-text-middle"><?= $item['create_time'] ?></td>

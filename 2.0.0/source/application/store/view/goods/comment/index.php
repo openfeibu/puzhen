@@ -32,7 +32,7 @@
                                         <a href="<?= $item['order_goods']['image']['file_path'] ?>"
                                            title="点击查看大图" target="_blank">
                                             <img src="<?= $item['order_goods']['image']['file_path'] ?>"
-                                                 width="50" height="50" alt="产品图片">
+                                                 width="50"  alt="产品图片">
                                         </a>
                                     </td>
                                     <td class="am-text-middle">
