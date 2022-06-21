@@ -21,7 +21,7 @@
                                     <a href="<?= $model['tea_qrcode']['detail_image_url'] ?>"
                                        title="点击查看大图" target="_blank">
                                         <img src="<?= $model['tea_qrcode']['detail_image_url'] ?>" alt="冲泡码"
-                                             width="80" height="80">
+                                             width="80" >
                                     </a>
                                 </div>
                             </div>

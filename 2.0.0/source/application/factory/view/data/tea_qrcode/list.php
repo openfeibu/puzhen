@@ -63,7 +63,7 @@
                     <a href="<?= $item['detail_image_url'] ?>"
                        title="点击查看大图" target="_blank">
                         <img src="<?= $item['detail_image_url'] ?>"
-                             width="50" height="50" alt="name">
+                             width="50"  alt="name">
                     </a>
                 </td>
                 <td class="am-text-middle"><?= $item['create_time'] ?></td>
