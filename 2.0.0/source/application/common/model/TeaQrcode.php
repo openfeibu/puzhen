@@ -12,7 +12,7 @@ use app\common\service\TeaQrCode as TeaQrCodeService;
 class TeaQrcode extends BaseModel
 {
     protected $name = 'tea_qrcode';
-
+    
     public function goodsTeaQrcode()
     {
         return $this->hasMany('goods_tea_qrcode');

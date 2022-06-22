@@ -67,7 +67,7 @@ class FactoryTeaQrcode extends Controller
         }
         return $this->renderError($model->getError() ?: '更新失败');
     }
-
+    
     /**
      * 删除冲泡二维码
      * @param $tea_qrcode_id
@@ -76,12 +76,23 @@ class FactoryTeaQrcode extends Controller
      */
     public function delete($tea_qrcode_id)
     {
-        // 冲泡二维码详情
-        $model = TeaQrcodeModel::detail($tea_qrcode_id);
-        if (!$model->remove()) {
-            return $this->renderError($model->getError() ?: '删除失败');
+        if(is_array($tea_qrcode_id))
+        {
+            
+            $model = new TeaQrcodeModel;
+            $rst = $model->batchRemove($tea_qrcode_id);
+            if (!$rst['status']) {
+                return $this->renderError($rst['message'] ?: '删除失败');
+            }
+            return $this->renderSuccess($rst['message'] ?: '删除成功');
+        }else{
+            // 冲泡二维码详情
+            $model = TeaQrcodeModel::detail($tea_qrcode_id);
+            if (!$model->remove()) {
+                return $this->renderError($model->getError() ?: '删除失败');
+            }
+            return $this->renderSuccess('删除成功');
         }
-        return $this->renderSuccess('删除成功');
     }
 
 }

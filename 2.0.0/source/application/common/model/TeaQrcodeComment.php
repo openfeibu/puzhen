@@ -12,8 +12,8 @@ use think\Db;
 class TeaQrcodeComment extends BaseModel
 {
     protected $name = 'tea_qrcode_comment';
-
-
+    protected static $is_factory = 0;
+    
     /**
      * 评论的冲泡码
      * @return \think\model\relation\BelongsTo
