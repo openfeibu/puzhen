@@ -36,7 +36,7 @@
                                         <div class="widget-goods-list uploader-list am-cf">
                                             <div class="file-item">
                                                 <a href="<?= $goods['goods_image'] ?>" title="<?= $goods['goods_name'] ?>" target="_blank">
-                                                    <img src="<?= $goods['goods_image'] ?>">
+                                                    <img src="<?= $goods['goods_image'] ?>" width="100">
                                                 </a>
                                                 <input type="hidden" name="tea_qrcode[goods_id]" value="<?= $goods['goods_id'] ?>">
                                             </div>
