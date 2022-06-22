@@ -12,6 +12,16 @@
                             <input type="hidden" name="s" value="/<?= $request->pathinfo() ?>">
                             <div class="am-u-sm-12 am-u-md-3">
                                 <div class="am-form-group">
+                                    <div class="am-form-group">
+                                        <?php if (checkPrivilege('distributor.distributor_apply/delete')): ?>
+                                            <div class="am-btn-group am-btn-group-xs">
+                                                <a class="am-btn am-btn-default am-btn-danger batch-delete"
+                                                   href="javascript:; ">
+                                                    <span class="am-icon-trash"></span> 删除
+                                                </a>
+                                            </div>
+                                        <?php endif; ?>
+                                    </div>
                                 </div>
                             </div>
                             <div class="am-u-sm-12 am-u-md-9">
@@ -36,6 +46,11 @@
                          tpl-table-black am-text-nowrap">
                             <thead>
                             <tr>
+                                <th>
+                                    <label class="am-checkbox">
+                                        <input data-am-ucheck data-check="all" type="checkbox">
+                                    </label>
+                                </th>
                                 <th>申请ID</th>
                                 <th class="am-text-middle">用户</th>
                                 <th>企业名称</th>
@@ -48,6 +63,11 @@
                             <tbody>
                             <?php if (!$list->isEmpty()): foreach ($list as $item): ?>
                                 <tr>
+                                    <td class="am-text-middle">
+                                        <label class="am-checkbox">
+                                            <input data-am-ucheck data-check="item" data-id='<?= $item['apply_id'] ?>' type="checkbox">
+                                        </label>
+                                    </td>
                                     <td class="am-text-middle"><?= $item['apply_id'] ?></td>
                                     <td class="am-text-middle">
                                         <p class=""><?= $item['user']['nickName'] ?></p>
@@ -100,7 +120,7 @@
         // 删除元素
         var url = "<?= url('distributor.distributor_apply/delete') ?>";
         $('.item-delete').delete('apply_id', url, '删除后不可恢复，确定要删除吗？');
-        
+        $('.batch-delete').batch_delete('apply_id', url, '删除后不可恢复，确定要删除吗？');
 
     });
 </script>

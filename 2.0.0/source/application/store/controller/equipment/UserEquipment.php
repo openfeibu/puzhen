@@ -125,12 +125,22 @@ class UserEquipment extends Controller
      */
     public function delete($user_equipment_id)
     {
-        // 设备详情
-        $model = UserEquipmentModel::detail(['user_equipment_id' => $user_equipment_id]);
-        if (!$model->delete()) {
-            return $this->renderError($model->getError() ?: '删除失败');
+        if(is_array($user_equipment_id))
+        {
+            $model = new UserEquipmentModel;
+            $rst = $model->batchRemove($user_equipment_id);
+            if (!$rst['status']) {
+                return $this->renderError($rst['message'] ?: '删除失败');
+            }
+            return $this->renderSuccess($rst['message'] ?: '删除成功');
+        }else {
+            // 设备详情
+            $model = UserEquipmentModel::detail(['user_equipment_id' => $user_equipment_id]);
+            if (!$model->delete()) {
+                return $this->renderError($model->getError() ?: '删除失败');
+            }
+            return $this->renderSuccess('删除成功');
         }
-        return $this->renderSuccess('删除成功');
     }
 
 

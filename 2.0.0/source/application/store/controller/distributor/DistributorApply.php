@@ -27,7 +27,7 @@ class DistributorApply extends Controller
     public function edit($apply_id)
     {
         // 服务网点申请详情
-        $model = DistributorApplyModel::detail($apply_id);
+        $model = DistributorApplyModel::detail(['apply_id' => $apply_id]);
         if (!$this->request->isAjax()) {
             return $this->fetch('edit', compact('model'));
         }
@@ -46,12 +46,22 @@ class DistributorApply extends Controller
      */
     public function delete($apply_id)
     {
-        // 服务网点申请详情
-        $model = DistributorApplyModel::detail($apply_id);
-        if (!$model->delete()) {
-            return $this->renderError($model->getError() ?: '删除失败');
+        if(is_array($apply_id))
+        {
+            $model = new DistributorApplyModel;
+            $rst = $model->batchRemove($apply_id);
+            if (!$rst['status']) {
+                return $this->renderError($rst['message'] ?: '删除失败');
+            }
+            return $this->renderSuccess($rst['message'] ?: '删除成功');
+        }else{
+            // 服务网点申请详情
+            $model = DistributorApplyModel::detail(['apply_id' => $apply_id]);
+            if (!$model->delete()) {
+                return $this->renderError($model->getError() ?: '删除失败');
+            }
+            return $this->renderSuccess('删除成功');
         }
-        return $this->renderSuccess('删除成功');
     }
 
 }

@@ -177,4 +177,36 @@ class UserEquipment extends UserEquipmentModel
             $this->where('user_equipment.user_id', '=', (int)$query['user_id']);
         }
     }
+    
+    public function batchRemove($ids)
+    {
+        $success_count = 0;
+        $error_count = 0;
+        $message = '';
+        foreach ($ids as $id)
+        {
+            $this->startTrans();
+            try{
+                $detail = self::detail(['user_equipment_id' => $id]);
+                $detail->delete();
+                $this->commit();
+                $success_count++;
+            }catch (\Exception $e) {
+                $error_count++;
+                $this->rollback();
+            }
+        }
+        if($success_count > 0)
+        {
+            $message.= "删除成功：".$success_count." 行；";
+        }
+        if($error_count > 0)
+        {
+            $message.= "删除失败：".$error_count." 行；请刷新后重试或联系技术人员";
+        }
+        return [
+            'status' => $error_count ? false : true,
+            'message' => $message
+        ];
+    }
 }
