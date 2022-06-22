@@ -1515,6 +1515,9 @@ input[type=range]::-webkit-slider-thumb {
   color: #838fa1;
   font-size: 1.2rem; }
 
+.uploader-list .file-item img {
+    width: 110px; }
+
 /* 图片上传*/
 .uploader-list {
   user-select: none; }
