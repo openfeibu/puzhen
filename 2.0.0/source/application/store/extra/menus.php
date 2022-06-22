@@ -170,7 +170,7 @@ return [
         ]
     ],
     'equipment' => [
-        'name' => '茶电器管理',
+        'name' => '售后服务管理',
         'icon' => 'am-icon-coffee',
         'index' => 'equipment.equipment/index',
         'submenu' => [
