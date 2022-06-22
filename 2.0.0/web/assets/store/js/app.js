@@ -13,6 +13,17 @@ function getSelectedData() {
     });
     return data;
 }
+/**
+ * 表格获取已选择的数据
+ * @returns {Array}
+ */
+function getTableSelectedData() {
+    var data = [];
+    $('input[data-check=item]:checked').each(function () {
+        data.push($(this).data('id'));
+    });
+    return data;
+}
 
 (function ($) {
     /**
@@ -98,7 +109,27 @@ function getSelectedData() {
                 );
             });
         },
-
+        batch_delete: function (index, url, msg) {
+            $(this).click(function () {
+                var param = {};
+                var data = getTableSelectedData();
+                if(data.length<=0)
+                {
+                    layer.msg('请选择数据', {anim: 6});
+                    return false;
+                }
+                param[index] = data;
+                layer.confirm(msg ? msg : '确定要删除吗？', {title: '友情提示'}
+                  , function (index) {
+                      $.post(url, param, function (result) {
+                          result.code === 1 ? $.show_success(result.msg, result.url)
+                            : $.show_error(result.msg);
+                      });
+                      layer.close(index);
+                  }
+                );
+            });
+        },
         /**
          * 选择图片文件
          * @param option
