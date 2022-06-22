@@ -94,6 +94,16 @@ class UserEquipment extends UserEquipmentModel
         // 开启事务
         $this->startTrans();
         try {
+            $warranty_setting = SettingModel::getItem('warranty');
+            if(empty($warranty_setting['warranty_days'])||empty($warranty_setting['basic_change_days'])||empty($warranty_setting['change_days']))
+            {
+                $this->error = '请先配置保修包换信息';
+                return false;
+            }
+            $data['setting_warranty_days'] = $warranty_setting['warranty_days'];
+            $data['setting_basic_change_days'] = $warranty_setting['basic_change_days'];
+            $data['setting_change_days'] = $warranty_setting['change_days'];
+            
             // 添加产品
             $this->allowField(true)->save($data);
             // 用户设备茶电器凭证

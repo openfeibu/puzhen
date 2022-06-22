@@ -21,6 +21,14 @@
                                             </a>
                                         </div>
                                     <?php endif; ?>
+                                    <?php if (checkPrivilege('tea_qrcode.factory_tea_qrcode/delete')): ?>
+                                        <div class="am-btn-group am-btn-group-xs">
+                                            <a class="am-btn am-btn-default am-btn-danger batch-delete"
+                                               href="javascript:; ">
+                                                <span class="am-icon-trash"></span> 删除
+                                            </a>
+                                        </div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="am-u-sm-12 am-u-md-9">
@@ -57,6 +65,11 @@
                          tpl-table-black am-text-nowrap">
                             <thead>
                             <tr>
+                                <th>
+                                    <label class="am-checkbox">
+                                        <input data-am-ucheck data-check="all" type="checkbox">
+                                    </label>
+                                </th>
                                 <th>冲泡码ID</th>
                                 <th>工厂</th>
                                 <th>方案名称</th>
@@ -69,6 +82,11 @@
                             <tbody>
                             <?php if (!$list->isEmpty()): foreach ($list as $item): ?>
                                 <tr>
+                                    <td class="am-text-middle">
+                                        <label class="am-checkbox">
+                                            <input data-am-ucheck data-check="item" data-id='<?= $item['tea_qrcode_id'] ?>' type="checkbox">
+                                        </label>
+                                    </td>
                                     <td class="am-text-middle"><?= $item['tea_qrcode_id'] ?></td>
                                     <td class="am-text-middle"><?= $item['factory']['factory_name'] ?></td>
                                     <td class="am-text-middle"><?= $item['name'] ?></td>
@@ -139,7 +157,7 @@
         // 删除元素
         var url = "<?= url('tea_qrcode.factory_tea_qrcode/delete') ?>";
         $('.item-delete').delete('tea_qrcode_id', url, '删除后不可恢复，确定要删除吗？');
-
+        $('.batch-delete').batch_delete('tea_qrcode_id', url, '删除后不可恢复，确定要删除吗？');
     });
 </script>
 
