@@ -65,7 +65,7 @@ class Distributor extends DistributorModel
             ]);
         foreach ($list as &$distributor)
         {
-            $distributor->distance = $latitude ? to_km($distributor['distance']) : '未知';
+            $distributor->distance = $latitude ? to_km($distributor['distance']) : '定位未开启';
         }
         return $list;
     }
