@@ -16,7 +16,7 @@
                                                 class="j-selectGoods upload-file am-btn am-btn-secondary am-radius">
                                             <i class="am-icon-cloud-upload"></i> 选择冲泡码
                                         </button>
-                                        <div class="widget-tea_qrcode-list uploader-list am-cf">
+                                        <div class="widget-tea_qrcode-list am-cf">
                                             <?php if(isset($goods['goods_tea_qrcode']['tea_qrcode'])):?>
                                             <div class="file-item">
                                                 <a href="<?= $goods['goods_tea_qrcode']['tea_qrcode']['detail_image_url'] ?>" title="<?= $goods['goods_tea_qrcode']['tea_qrcode']['name'] ?>" target="_blank">
