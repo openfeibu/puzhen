@@ -11,5 +11,5 @@ use app\common\model\GoodsTeaQrcode as GoodsTeaQrcodeModel;
  */
 class GoodsTeaQrcode extends GoodsTeaQrcodeModel
 {
-
+		protected static $is_factory = 0;
 }

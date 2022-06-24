@@ -54,6 +54,21 @@
                                     </div>
                                 </div>
                             <?php endforeach;?>
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 冲泡码 </label>
+                                <div class="am-u-sm-9 am-u-md-6 am-u-lg-5 am-u-end">
+                                    <div class="am-form-file am-margin-top-xs">
+                                        <div class="widget-goods-list am-cf">
+                                            <div class="file-item">
+                                                <a href="<?= $model['detail_image_url'] ?>"
+                                                   title="点击查看大图" target="_blank">
+                                                    <img src="<?= $model['detail_image_url'] ?>" class="tea_qrcode_image">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <!--
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 选择产品 </label>

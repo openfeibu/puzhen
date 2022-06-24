@@ -23,6 +23,9 @@ class Goods extends GoodsModel
         $data['factory_id'] = $data['sku']['factory_id'] = self::$factory_id;
         return parent::add($data);
     }
-
+		public function goodsTeaQrcode()
+		{
+				return $this->hasOne('goods_tea_qrcode');
+		}
 
 }
