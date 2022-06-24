@@ -123,7 +123,7 @@ class TeaQrCode
     {
         if(isset($this->factory) && $this->factory)
         {
-            $this->directory = '/factory_qrcode/'.$this->goods['factory_id'];
+            $this->directory = '/factory_qrcode/'.$this->factory['factory_id'];
         }elseif(isset($this->user) && $this->user){
             $this->directory = '/qrcode/'.$this->user['user_id'];
         }
