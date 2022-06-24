@@ -105,7 +105,7 @@ class Setting extends BaseModel
                 'describe' => '商城设置',
                 'values' => [
                     // 商城名称
-                    'name' => $storeName ?: '泡臣小程序商城',
+                    'name' => $storeName ?: '泡臣小程序',
                     // 配送方式
                     'delivery_type' => array_keys(DeliveryTypeEnum::data()),
                     // 快递100
