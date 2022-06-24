@@ -121,7 +121,7 @@ class TeaQrCode
 
     public function getDirectory()
     {
-        if(isset($this->goods) && $this->goods)
+        if(isset($this->factory) && $this->factory)
         {
             $this->directory = '/factory_qrcode/'.$this->goods['factory_id'];
         }elseif(isset($this->user) && $this->user){
