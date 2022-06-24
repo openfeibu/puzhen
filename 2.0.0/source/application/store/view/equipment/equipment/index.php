@@ -63,7 +63,6 @@
                                             <img src="<?= $item['image']['file_path'] ?>" width="72"  alt="">
                                         </a>
                                     </td>
-                                    <td class="am-text-middle"><?= $item['model'] ?></td>
                                     <td class="am-text-middle"><?= $item['create_time'] ?></td>
                                     <td class="am-text-middle">
                                         <div class="tpl-table-black-operation">
