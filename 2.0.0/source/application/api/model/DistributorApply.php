@@ -74,7 +74,7 @@ class DistributorApply extends DistributorApplyModel
             if (isset($data['images']) && !empty($data['images'])) {
                 $this->saveImages($this['apply_id'], $data['images']);
             }
-            /*
+            
             $mail = new PHPMailer(true); //实例化加载这个类，如果说邮件发送失败了，可以抛出异常
             //开发环境下，是需要打开异常抛出的，实际情况下可以false关闭
             try {
@@ -101,7 +101,7 @@ class DistributorApply extends DistributorApplyModel
             }catch (Exception $e) {
                 //exception($mail->ErrorInfo(), 1001);
             }
-            */
+            
             return true;
         });
     }
