@@ -53,6 +53,7 @@ class TeaQrcode extends TeaQrcodeModel
             $this->data($data)->save() ;
             if(isset($post['goods_id'])){
                 $this->goodsTeaQrcode()->save([
+	                  'factory_id' => $factory['factory_id'],
                     'goods_id' => $post['goods_id'],
                     'wxapp_id' => self::$wxapp_id
                 ]);
@@ -65,13 +66,14 @@ class TeaQrcode extends TeaQrcodeModel
             return false;
         }
     }
-    public function bindTeaQrcode($post)
+    public function bindTeaQrcode($post,$factory_id)
     {
         try {
             $tea_qrcode = self::detail($post['tea_qrcode_id']);
             $goods = Goods::detail($post['goods_id']);
             $goods->goodsTeaQrcode()->delete();
             $tea_qrcode->goodsTeaQrcode()->save([
+	              'factory_id' => $factory_id,
                 'goods_id' => $post['goods_id'],
                 'wxapp_id' => self::$wxapp_id
             ]);

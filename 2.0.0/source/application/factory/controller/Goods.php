@@ -140,7 +140,7 @@ class Goods extends Controller
             return $this->fetch('bind_tea_qrcode',compact('goods','teaList'));
         }
         // 新增记录
-        if ($model->bindTeaQrcode($this->postData('tea_qrcode'))) {
+        if ($model->bindTeaQrcode($this->postData('tea_qrcode'),$goods['factory_id'])) {
             return $this->renderSuccess('添加成功', url('index'));
         }
         return $this->renderError($model->getError() ?: '添加失败');
