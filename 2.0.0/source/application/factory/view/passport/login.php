@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <title>泡臣工厂系统登录</title>
+    <title>泡臣服务工厂系统登录</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="renderer" content="webkit"/>
     <meta http-equiv="Cache-Control" content="no-siteapp"/>
@@ -31,7 +31,7 @@
         <div class="login-content">
             <div class="brand">
                 <img alt="logo" class="brand-img" src="assets/store/img/login/logo.png?v=<?= $version ?>">
-                <h2 class="brand-text">泡臣工厂系统</h2>
+                <h2 class="brand-text">泡臣服务工厂系统</h2>
             </div>
             <form id="login-form" class="login-form">
                 <div class="form-group">
