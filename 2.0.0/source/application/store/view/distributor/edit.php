@@ -53,6 +53,13 @@
                                            placeholder="请输入服务网点联系电话" value="<?= $model['phone'] ?>" >
                                 </div>
                             </div>
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label"> 营业时间 </label>
+                                <div class="am-u-sm-9 am-u-end">
+                                    <input type="text" class="tpl-form-input" name="distributor[distributor_hours]"
+                                           placeholder="请输入营业时间" id="time_range">
+                                </div>
+                            </div>
                             <div class="am-form-group am-padding-top">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 服务网点区域 </label>
                                 <div class="am-u-sm-9 am-u-end">
@@ -164,6 +171,7 @@
 {{include file="layouts/_template/file_library" /}}
 
 <script src="assets/store/js/select.region.js?v=1.2"></script>
+<script src="assets/common/plugins/laydate/laydate.js"></script>
 <script>
     /**
      * 设置坐标
@@ -188,5 +196,13 @@
          * @type {*}
          */
         $('#my-form').superForm();
+    
+        laydate.render({
+            elem: '#time_range'
+            ,type: 'time'
+            ,format: 'HH:mm'
+            ,range: '~'
+            ,value: '<?= $model['distributor_hours'] ?>'
+        });
     });
 </script>
