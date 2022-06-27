@@ -181,6 +181,7 @@
             ,type: 'time'
             ,range: '~'
             ,format: 'HH:mm'
+            ,trigger:'click'
         });
        
     });

@@ -49,14 +49,14 @@
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label"> 联系电话 </label>
                                 <div class="am-u-sm-9 am-u-end">
-                                    <input type="text" class="tpl-form-input" name="distributor[phone]"
+                                    <input type="text" class="tpl-form-input " name="distributor[phone]"
                                            placeholder="请输入服务网点联系电话" value="<?= $model['phone'] ?>" >
                                 </div>
                             </div>
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label"> 营业时间 </label>
                                 <div class="am-u-sm-9 am-u-end">
-                                    <input type="text" class="tpl-form-input" name="distributor[distributor_hours]"
+                                    <input type="text" class="tpl-form-input  test-item" name="distributor[distributor_hours]"
                                            placeholder="请输入营业时间" id="time_range">
                                 </div>
                             </div>
@@ -203,6 +203,7 @@
             ,format: 'HH:mm'
             ,range: '~'
             ,value: '<?= $model['distributor_hours'] ?>'
+            ,trigger:'click'
         });
     });
 </script>
