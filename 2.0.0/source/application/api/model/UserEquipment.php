@@ -51,6 +51,11 @@ class UserEquipment extends UserEquipmentModel
     public function add($user, $data)
     {
         return $this->transaction(function () use ($user, $data) {
+		        if($data['buy_date'] > date('Y-m-d'))
+		        {
+			          $this->error = '购买日期不能大于今天';
+			          return false;
+		        }
             $this->allowField(true)->save([
                 'equipment_id' => $data['equipment_id'],
                 'linkname' => $data['linkname'],

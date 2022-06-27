@@ -243,6 +243,8 @@
         laydate.render({
             elem: '.j-laydate-start'
             , type: 'date'
+            ,max:' <?= date('Y-m-d') ?>'
+            ,trigger:'click'
         });
         /**
          * 表单验证提交

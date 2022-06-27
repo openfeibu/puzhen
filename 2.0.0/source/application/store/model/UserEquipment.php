@@ -95,6 +95,11 @@ class UserEquipment extends UserEquipmentModel
         $this->startTrans();
         try {
             $warranty_setting = SettingModel::getItem('warranty');
+		        if($data['buy_date'] > date('Y-m-d'))
+		        {
+			          $this->error = '购买日期不能大于今天';
+			          return false;
+		        }
             if(empty($warranty_setting['warranty_days'])||empty($warranty_setting['basic_change_days'])||empty($warranty_setting['change_days']))
             {
                 $this->error = '请先配置保修包换信息';
@@ -144,6 +149,11 @@ class UserEquipment extends UserEquipmentModel
             return false;
         }
         if ($data['status'] == 20) {
+        	  if($this['buy_date'] > date('Y-m-d'))
+	          {
+		            $this->error = '购买日期不能大于今天';
+		            return false;
+	          }
             $warranty_setting = SettingModel::getItem('warranty');
             if(empty($warranty_setting['warranty_days'])||empty($warranty_setting['basic_change_days'])||empty($warranty_setting['change_days']))
             {
