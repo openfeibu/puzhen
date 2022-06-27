@@ -68,7 +68,7 @@
                                     <td class="am-text-middle"><?= $item['create_time'] ?></td>
                                     <td class="am-text-middle">
                                         <div class="tpl-table-black-operation">
-                                            <?php if (checkPrivilege('factory/edit')): ?>
+                                            <?php if (checkPrivilege('factory/enter')): ?>
                                                 <a href="<?= url('factory/enter', ['factory_id' => $item['factory_id']]) ?>"
                                                    class="j-move" data-id="<?= $item['factory_id'] ?>" target="_blank">
                                                     <i class="am-icon-arrow-right"></i> 进入工厂
