@@ -38,11 +38,17 @@ class Goods extends Controller
     public function add($distributor_id)
     {
         $distributor = DistributorModel::detail($distributor_id);
+	      $model = new DistributorGoodsModel;
         if (!$this->request->isAjax()) {
+	          $list = $model->getList(array_merge(['status' => -1], $this->request->param()));
+	          // 产品分类
+	          $catgory = CategoryModel::getCacheTree();
+	          $factoryList = FactoryModel::getAllList();
+	          $distributorList = DistributorModel::getAllList();
             $goods_ids = $distributor->goods()->column('goods_id');
-            return $this->fetch('add',compact('distributor','goods_ids'));
+            return $this->fetch('add',compact('distributor','goods_ids','list', 'catgory','factoryList','distributorList','distributor_id'));
         }
-        $model = new DistributorGoodsModel;
+        
         // 新增记录
         if ($model->add($distributor,$this->postData('distributor_goods'))) {
             return $this->renderSuccess('添加成功', url('distributor/index'));

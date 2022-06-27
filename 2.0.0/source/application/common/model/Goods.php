@@ -131,6 +131,7 @@ class Goods extends BaseModel
     {
         // 产品列表获取条件
         $params = array_merge([
+        	  'no_goods_id' => [],
             'goods_id' => 0,
             'status' => 10,         // 产品状态
             'factory.status' => -1, //工厂状态
@@ -145,7 +146,9 @@ class Goods extends BaseModel
         $filter = [];
         $params['category_id'] > 0 && $filter['goods.category_id'] = ['IN', Category::getSubCategoryId($params['category_id'])];
         $params['status'] > 0 && $filter['goods.goods_status'] = $params['status'];
+	      
         $params['goods_id'] > 0 && $filter['goods.goods_id'] = $params['goods_id'];
+	      !empty($params['no_goods_id']) && $filter['goods.goods_id'] = ['NOT IN', $params['no_goods_id']];
         $params['factory_id'] > 0 && $filter['goods.factory_id'] = $params['factory_id'];
         !empty($params['search']) && $filter['goods.goods_name'] = ['like', '%' . trim($params['search']) . '%'];
         $params['factory.status'] > -1 && $filter['factory.status'] = $params['factory.status'];

@@ -12,6 +12,11 @@
                             <input type="hidden" name="s" value="/<?= $request->pathinfo() ?>">
                             <div class="am-u-sm-12 am-u-md-12">
                                 <div class="am fr">
+                                    <?php
+                                        if(isset($distributor_id) && !empty($distributor_id)):
+                                    ?>
+                                    
+                                    <?php else: ?>
                                     <div class="am-form-group am-fl">
                                         <select name="distributor_id"
                                                 data-am-selected="{searchBox: 1, btnSize: 'sm', placeholder: '服务网点', maxHeight: 400}">
@@ -24,7 +29,7 @@
                                             <?php endforeach; endif; ?>
                                         </select>
                                     </div>
-
+                                    <?php endif; ?>
                                     <div class="am-form-group am-fl">
                                         <select name="factory_id"
                                                 data-am-selected="{searchBox: 1, btnSize: 'sm', placeholder: '工厂', maxHeight: 400}">

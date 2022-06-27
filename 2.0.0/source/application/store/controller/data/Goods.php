@@ -6,6 +6,7 @@ use app\store\controller\Controller;
 use app\store\model\Goods as GoodsModel;
 use app\store\model\Category as CategoryModel;
 use app\store\model\Factory as FactoryModel;
+use app\store\model\Distributor as DistributorModel;
 /**
  * 产品数据控制器
  * Class Goods
@@ -44,5 +45,21 @@ class Goods extends Controller
         $factoryList = FactoryModel::getAllList();
         return $this->fetch('list', compact('list', 'catgory','factoryList'));
     }
-
+		/**
+		 * 产品列表
+		 * @param $distributor_id
+		 * @return mixed
+		 * @throws \think\exception\DbException
+		 */
+		public function distributor_goods_lists($distributor_id)
+		{
+				$distributor = DistributorModel::detail($distributor_id);
+				$no_goods_ids = $distributor->goods()->column('goods_id');
+				// 产品分类
+				$catgory = CategoryModel::getCacheTree();
+				// 产品列表
+				$list = $this->model->getList(array_merge(['no_goods_id' => $no_goods_ids], $this->request->param()));
+				$factoryList = FactoryModel::getAllList();
+				return $this->fetch('list', compact('list', 'catgory','factoryList'));
+		}
 }

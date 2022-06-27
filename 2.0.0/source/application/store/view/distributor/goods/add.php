@@ -37,6 +37,8 @@
     </div>
 </div>
 
+<!-- 文件库弹窗 -->
+{{include file="distributor/goods/index" /}}
 <!-- 产品列表 -->
 <script id="tpl-goods-list-item" type="text/template">
     {{ each $data }}
@@ -58,13 +60,13 @@
         var $goodsList = $('.widget-goods-list');
         $('.j-selectGoods').selectData({
             title: '选择产品',
-            uri: 'goods/lists',
-            //duplicate: false,        // 是否允许重复数据
+            uri: 'goods/distributor_goods_lists&distributor_id=<?= $distributor['distributor_id'] ?>',
+            duplicate: false,        // 是否允许重复数据
             dataIndex: 'goods_id',
-//            getExistData:function () {
-//                var data = <?php //echo json_encode($goods_ids)?>//;
-//                return data;
-//            },
+            getExistData:function () {
+                var data = <?php echo json_encode($goods_ids)?>;
+                return data;
+            },
             done: function (data) {
                // data = [data[0]];
                 var $html = $(template('tpl-goods-list-item', data));

@@ -60,7 +60,7 @@ class Distributor extends DistributorModel
             ->where('is_delete', '=', 0)
             ->where($filter)
             ->order(['distance' => 'asc','sort' => 'asc', 'create_time' => 'desc'])
-            ->paginate(15, false, [
+            ->paginate(6, false, [
                 'query' => \request()->request()
             ]);
         foreach ($list as &$distributor)
