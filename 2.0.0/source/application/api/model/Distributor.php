@@ -23,7 +23,7 @@ class Distributor extends DistributorModel
         'update_time'
     ];
 
-    public function getList($param)
+    public function getList($param,$paginate = 6)
     {
         $params = array_merge([
             'longitude' => 0,
@@ -59,10 +59,16 @@ class Distributor extends DistributorModel
                 ) AS distance")
             ->where('is_delete', '=', 0)
             ->where($filter)
-            ->order(['distance' => 'asc','sort' => 'asc', 'create_time' => 'desc'])
-            ->paginate(6, false, [
-                'query' => \request()->request()
-            ]);
+            ->order(['distance' => 'asc','sort' => 'asc', 'create_time' => 'desc']);
+	      if($paginate)
+	      {
+		       $list = $list->paginate(6, false, [
+			       'query' => \request()->request()
+		       ]);
+	      }else{
+		        $list = $list->select();
+	      }
+           
         foreach ($list as &$distributor)
         {
             $distributor->distance = $latitude ? to_km($distributor['distance']) : '定位未开启';
