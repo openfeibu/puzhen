@@ -14,19 +14,20 @@ class Goods extends GoodsModel
 {
     /**
      * 添加产品
+     * @param $is_import
      * @param array $data
      * @return bool
      * @throws \think\exception\PDOException
      */
-    public function add(array $data)
+    public function add(array $data, $is_import = 0)
     {
         self::$factory_id = self::$factory_id ?? $data['factory_id'];
-        /*
-        if (!isset($data['images']) || empty($data['images'])) {
+
+        if ((!isset($data['images']) || empty($data['images'])) && !$is_import ) {
             $this->error = '请上传产品图片';
             return false;
         }
-        */
+   
         $data['content'] = isset($data['content']) ? $data['content'] : '';
         $data['spec_type'] = isset($data['spec_type']) ? $data['spec_type'] : '10';
         $data['wxapp_id'] = $data['sku']['wxapp_id'] = self::$wxapp_id;

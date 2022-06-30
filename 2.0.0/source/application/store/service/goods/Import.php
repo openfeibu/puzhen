@@ -121,7 +121,7 @@ class Import
                     'goods_weight' => $item['goods_weight'],
                 ];
 	              $item['goods_status'] = '20';
-                if(!$goodsModel->add($item))
+                if(!$goodsModel->add($item,1))
                 {
                     $this->error = '上传成功'.($key).'行。第'.($key+2).'行错误：'.$goodsModel->getError();
                     return false;
