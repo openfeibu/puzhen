@@ -84,7 +84,7 @@
                                             </div>
                                         </div>
                                         <div class="help-block am-margin-top-sm">
-                                            <small>大小10M以下 (可拖拽图片调整显示顺序 )</small>
+                                            <small>大小2M以下 (可拖拽图片调整显示顺序 )</small>
                                         </div>
                                     </div>
                                 </div>
