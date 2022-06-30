@@ -120,6 +120,7 @@ class Import
                     'ref_price' => $item['ref_price'],
                     'goods_weight' => $item['goods_weight'],
                 ];
+	              $item['goods_status'] = '20';
                 if(!$goodsModel->add($item))
                 {
                     $this->error = '上传成功'.($key).'行。第'.($key+2).'行错误：'.$goodsModel->getError();
