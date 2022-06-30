@@ -36,6 +36,9 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="help-block am-margin-top-sm">
+                                            <small>尺寸750x538像素以上，大小2M以下 (可拖拽图片调整显示顺序 )</small>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
