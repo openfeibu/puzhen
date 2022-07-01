@@ -63,7 +63,7 @@ class QrCodeService
 
      */
 
-    public function generateFont($source, $save_path, $text1,  $text_width,  $text_height, $font_size = 50, $cate1 = 255, $cate2 = 250, $cate3 = 250, $font = '/font/fangsong_GB2312.ttf')
+    public function generateFont($source, $save_path, $text1,  $text_width,  $text_height, $font_size = 50, $cate1 = 255, $cate2 = 250, $cate3 = 250, $font = '/assets/common/fonts/SourceHanSerif-Medium.ttc')
     {
         $this->constr($source, $save_path);
 
