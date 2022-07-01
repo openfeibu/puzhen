@@ -82,15 +82,15 @@ class DistributorApply extends DistributorApplyModel
                 $mail->isSMTP();                     // 设置邮件使用SMTP
                 $mail->Host = 'smtp.163.com';        // 指定主和备份SMTP服务器
                 $mail->SMTPAuth = true;                               // 使SMTP认证
-                $mail->Username = 'B18029210246@163.com';             // SMTP用户名
-                $mail->Password = 'HFLUCCHERIOBJJOB';                 // SMTP 密码,
+                $mail->Username = 'fspuzhen666@163.com';             // SMTP用户名
+                $mail->Password = 'SCAILUVNVWDTAJDV';                 // SMTP 密码,
                 $mail->SMTPSecure = 'ssl';                            // 启用TLS加密，也接受“ssl”
                 $mail->Port = 465;                                    // 要连接的TCP端口
                 $mail->CharSet = 'utf-8';                             //要发送的内容格式
 
                 //Recipients
-                $mail->setFrom('B18029210246@163.com', '泡臣服务'); //发邮件人
-                $mail->addAddress('1270864834@qq.com', '泡臣服务');    //收件人，可以设置好几个
+                $mail->setFrom('fspuzhen666@163.com', '泡臣服务'); //发邮件人
+                $mail->addAddress('fspuzhen666@163.com', '泡臣服务');    //收件人，可以设置好几个
 
                 $mail->isHTML(true);                                  // 设置电子邮件格式为HTML
                 $mail->Subject = "服务网点申请";
