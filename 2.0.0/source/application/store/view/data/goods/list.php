@@ -15,6 +15,9 @@
 <div class="page_toolbar am-u-sm-12 am-margin-bottom-xs am-cf">
     <form class="toolbar-form" action="">
         <input type="hidden" name="s" value="/<?= $request->pathinfo() ?>">
+        <?php if (isset($catgory)): ?>
+        <input type="hidden" name="distributor_id" value="<?= $distributor_id ?>">
+        <?php endif; ?>
         <div class="am fr">
             <div class="am-form-group am-fl">
                 <?php $categoryId = $request->get('category_id') ?: null; ?>

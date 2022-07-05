@@ -60,6 +60,6 @@ class Goods extends Controller
 				// 产品列表
 				$list = $this->model->getList(array_merge(['no_goods_id' => $no_goods_ids], $this->request->param()));
 				$factoryList = FactoryModel::getAllList();
-				return $this->fetch('list', compact('list', 'catgory','factoryList'));
+				return $this->fetch('list', compact('distributor_id','list', 'catgory','factoryList'));
 		}
 }
