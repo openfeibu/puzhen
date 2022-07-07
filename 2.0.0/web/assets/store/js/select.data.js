@@ -47,7 +47,7 @@
                 , id: _this.options.layerId
                 , title: _this.options.title
                 , skin: 'modal-select-data'
-                , area: ['840px', '520px']
+                , area: ['100%', '520px']
                 , offset: 'auto'
                 , anim: 1
                 , closeBtn: 1

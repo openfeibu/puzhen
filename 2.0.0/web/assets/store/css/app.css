@@ -2255,3 +2255,21 @@ body.select-data {
   color: #67abff;
   font-size:36px;
 }
+
+/* 0707 */
+.layui-layer-iframe{max-width:800px}
+@media screen and (max-width: 750px) {
+.widget{padding:0}
+.row-content{padding:5px}
+fieldset{padding-left:0;padding-right:0}
+.mb2{margin-bottom:0.5rem}
+.codedata-item{
+	padding:5px 0;
+	background:#eee;
+}
+.tpl-g{overflow-x:hidden;}
+.tea_qrcode_image{width:100%;height:auto !important}
+.page-statistics-data .widget-survey .widget-head{margin-bottom:0;}
+.page-statistics-data .widget-survey .widget-screen{width:100%;margin-top:30px}
+
+	}
