@@ -9,44 +9,44 @@
                                 <div class="widget-title am-fl">编辑冲泡码</div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 冲泡码方案名称 </label>
-                                <div class="am-u-sm-9 am-u-end">
+                                <label class="am-u-sm-4 am-u-md-3  am-u-lg-2 am-form-label form-require"> 冲泡码名称 </label>
+                                <div class="am-u-sm-8 am-u-md-9 am-u-end">
                                     <input type="text" class="tpl-form-input" name="tea_qrcode[name]"
                                            placeholder="请输入门店名称" value="<?= $model['name'] ?>" required>
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">茶类 </label>
-                                <div class="am-u-sm-9 am-u-end am-padding-top-xs">
+                                <label class="am-u-sm-3 am-u-md-3 am-u-lg-2 am-form-label ">茶类 </label>
+                                <div class="am-u-sm-9 am-u-md-9 am-u-end am-padding-top-xs">
                                     <?= $model['data']['tea_name'] ?>
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 茶量 </label>
+                                <label class="am-u-sm-3 am-u-md-3 am-u-lg-2 am-form-label "> 茶量 </label>
 
-                                <div class="am-u-sm-9 am-u-end am-padding-top-xs">
+                                <div class="am-u-sm-9 am-u-md-9 am-u-end am-padding-top-xs">
                                     <?= $model['data']['weight'] ?>克
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 泡数 </label>
-                                <div class="am-u-sm-9 am-u-end am-padding-top-xs">
+                                <label class="am-u-sm-3 am-u-md-3 am-u-lg-2 am-form-label"> 泡数 </label>
+                                <div class="am-u-sm-9 am-u-md-9 am-u-end am-padding-top-xs">
                                     <?= $model['data']['number'] ?>克
                                 </div>
                             </div>
                             <?php foreach($model['data']['temperature_arr'] as $k => $temperature): ?>
                                 <div class="am-form-group">
 
-                                    <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">第<?= $k+1; ?>泡 温度 </label>
+                                    <label class="am-u-sm-3 am-u-md-3 am-u-lg-2 am-form-label ">第<?= $k+1; ?>泡 温度 </label>
                                     <div class="am-u-sm-3">
-                                        <div class="am-u-sm-9 am-u-end am-padding-top-xs">
+                                        <div class="am-u-sm-12 am-u-md-9 am-u-end am-padding-top-xs">
                                             <?= $temperature ?>°C
                                         </div>
                                     </div>
 
-                                    <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 秒数 </label>
+                                    <label class="am-u-sm-3 am-u-lg-2 am-form-label "> 秒数 </label>
                                     <div class="am-u-sm-3 am-u-end">
-                                        <div class="am-u-sm-9 am-u-end am-padding-top-xs">
+                                        <div class="am-u-sm-12 am-u-end am-padding-top-xs">
                                             <?php if(isset($model['data']['seconds_arr'][$k])):?>
                                             <?= $model['data']['seconds_arr'][$k] ?>秒
                                             <?php endif;?>
@@ -55,7 +55,7 @@
                                 </div>
                             <?php endforeach;?>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 冲泡码 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label "> 冲泡码预览 </label>
                                 <div class="am-u-sm-9 am-u-md-6 am-u-lg-5 am-u-end">
                                     <div class="am-form-file am-margin-top-xs">
                                         <div class="widget-goods-list am-cf">

@@ -9,8 +9,8 @@
                                 <div class="widget-title am-fl">添加冲泡码</div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 冲泡码方案名称 </label>
-                                <div class="am-u-sm-9 am-u-end">
+                                <label class="am-u-sm-4 am-u-md-3 am-u-lg-2 am-form-label form-require"> 冲泡码名称 </label>
+                                <div class="am-u-sm-8 am-u-md-9 am-u-end">
                                     <input type="text" class="tpl-form-input" name="tea_qrcode[name]"
                                            placeholder="请输入冲泡码方案名称" required>
                                 </div>
@@ -37,8 +37,8 @@
                             <?php endif;?>
 
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">茶类 </label>
-                                <div class="am-u-sm-9 am-u-end">
+                                <label class="am-u-sm-3 am-u-md-3 am-u-lg-2 am-form-label form-require">茶类 </label>
+                                <div class="am-u-sm-9 am-u-md-9 am-u-end">
                                     <select name="tea_qrcode[tea]" required
                                             data-am-selected="{searchBox: 1, btnSize: 'sm',
                                              placeholder:'请选择', maxHeight: 400}">
@@ -55,35 +55,35 @@
                                 </div>
                             </div>
                             <div class="am-form-group am-padding-top">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 茶量 </label>
+                                <label class="am-u-sm-3 am-u-md-3 am-u-lg-2 am-form-label form-require"> 茶量 </label>
 
-                                <div class="am-u-sm-6 am-u-end">
-                                    <div class="am-u-sm-6" style="padding-left:0">
+                                <div class="am-u-sm-9 am-u-md-9 am-u-end">
+                                    <div class="am-u-sm-12 am-u-md-6" style="padding-left:0">
                                         <select name="tea_qrcode[weight]"
                                                 data-am-selected="{searchBox: 0, btnSize: 'sm',
 												 placeholder:'请选择', maxHeight: 400}">
+                                            <option value="2">2</option>
                                             <option value="3">3</option>
-                                            <option value="3.5">3.5</option>
                                             <option value="4">4</option>
-                                            <option value="4.5">4.5</option>
+                                           
                                             <option value="5" selected >5</option>
-                                            <option value="5.5">5.5</option>
+                                         
                                             <option value="6">6</option>
-                                            <option value="6.5">6.5</option>
+                                         
                                             <option value="7">7</option>
-                                            <option value="7.5">7.5</option>
+                                           
                                             <option value="8">8</option>
-                                            <option value="8.5">8.5</option>
+                                          
                                             <option value="9">9</option>
-                                            <option value="10.5">10.5</option>
+                                           
                                             <option value="11">11</option>
-                                            <option value="11.5">11.5</option>
+                                           
                                             <option value="12">12</option>
-                                            <option value="12.5">12.5</option>
+                                            
                                             <option value="13">13</option>
-                                            <option value="13.5">13.5</option>
+                                     
                                             <option value="14">14</option>
-                                            <option value="14.5">14.5</option>
+                                           
                                             <option value="15">15</option>
 
                                         </select>
@@ -94,9 +94,9 @@
 
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 泡数 </label>
-                                <div class="am-u-sm-9 am-u-end">
-                                    <div class="am-u-sm-6" style="padding-left:0">
+                                <label class="am-u-sm-3 am-u-md-3 am-u-lg-2 am-form-label form-require"> 泡数 </label>
+                                <div class="am-u-sm-9 am-u-md-9 am-u-end">
+                                    <div class="am-u-sm-12 am-u-md-6" style="padding-left:0">
                                         <select id="changeNumber" name="tea_qrcode[number]"
                                                 data-am-selected="{searchBox: 0, btnSize: 'sm',
 												 placeholder:'请选择', maxHeight: 400}">
@@ -130,23 +130,23 @@
                             </div>
 
                             <div class="am-form-group " style="background: #cae5ff;padding:10px 0">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 批量填写温度 </label>
-                                <div class="am-u-sm-3">
-                                    <div class="am-u-sm-8">
+                                <label class="am-u-sm-4 am-u-md-3 am-u-lg-2 am-form-label form-require mb2"> 批量填写温度 </label>
+                                <div class="am-u-sm-8 am-u-md-3 mb2">
+                                    <div class="am-u-sm-10 am-u-md-8">
                                         <input type="text" class="tpl-form-input temperature-pl"
                                                placeholder="70°C-100°C"  value="">
                                     </div>
-                                    <label class="am-u-sm-4 am-form-label am-text-left">°C</label>
+                                    <label class="am-u-sm-2 am-u-md-4 am-form-label am-text-left">°C</label>
 
                                 </div>
 
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 批量填写秒数 </label>
-                                <div class="am-u-sm-3 am-u-end">
-                                    <div class="am-u-sm-8">
+                                <label class="am-u-sm-4 am-u-md-3 am-u-lg-2 am-form-label form-require mb2"> 批量填写秒数 </label>
+                                <div class="am-u-sm-8 am-u-md-3 am-u-end mb2">
+                                    <div class="am-u-sm-10 am-u-md-8">
                                         <input type="text" class="tpl-form-input seconds-pl" 
                                                placeholder="1秒-99秒"  value="">
                                     </div>
-                                    <label class="am-u-sm-4 am-form-label am-text-left">秒</label>
+                                    <label class="am-u-sm-2 am-u-md-4 am-form-label am-text-left">秒</label>
                                 </div>
                             </div>
 
@@ -209,20 +209,20 @@
                 var j = number - nowNumber;
                 for(var i=1;i<=j;i++){
 
-                    html += ' <div class="am-form-group form-line-item">'+
-                        '<label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 第'+(i+nowNumber)+'泡温度 </label>'+
-                        '<div class="am-u-sm-3">'+
-                        '<div class="am-u-sm-8">'+
+                    html += ' <div class="am-form-group form-line-item codedata-item">'+
+                        '<label class="am-u-sm-4 am-u-md-3 am-u-lg-2 am-form-label form-require mb2"> 第'+(i+nowNumber)+'泡温度 </label>'+
+                        '<div class="am-u-sm-8 am-u-md-3 mb2">'+
+                        '<div class="am-u-sm-10 am-u-md-8">'+
                         '<input class="temperatureVal" type="number" max="100" min="70" class="tpl-form-input" name="tea_qrcode[temperature][]" placeholder="请输入温度" required value="90" data-validationMessage="请输入70-100">'+
                         '</div>'+
-                        '<label class="am-u-sm-4 am-form-label am-text-left">°C</label>'+
+                        '<label class="am-u-sm-2 am-u-md-4 am-form-label am-text-left">°C</label>'+
                         '</div>'+
-                        '<label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 第'+(i+nowNumber)+'泡秒数 </label>'+
-                        '<div class="am-u-sm-3 am-u-end">'+
-                        '<div class="am-u-sm-8">'+
+                        '<label class="am-u-sm-4 am-u-md-3 am-form-label form-require mb2"> 第'+(i+nowNumber)+'泡秒数 </label>'+
+                        '<div class="am-u-sm-8 am-u-md-3 mb2 am-u-end">'+
+                        '<div class="am-u-sm-10 am-u-md-8">'+
                         '<input type="number"   max="99" min="1" class="tpl-form-input secondsVal" name="tea_qrcode[seconds][]" placeholder="请输入秒数" required value="3" data-validationMessage="请输入1-99">'+
                         '</div>'+
-                        '<label class="am-u-sm-4 am-form-label am-text-left">秒</label>'+
+                        '<label class="am-u-sm-2 am-u-md-4 am-form-label am-text-left">秒</label>'+
                         '</div>'+
                         '</div>'
                 }

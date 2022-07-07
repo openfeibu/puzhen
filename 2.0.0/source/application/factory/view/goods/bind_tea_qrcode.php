@@ -10,7 +10,7 @@
                             </div>
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 冲泡码 </label>
-                                <div class="am-u-sm-9 am-u-md-6 am-u-lg-5 am-u-end">
+                                <div class="am-u-sm-9 am-u-md-6 am-u-lg-9 am-u-end">
                                     <div class="am-form-file am-margin-top-xs">
                                         <button type="button"
                                                 class="j-selectGoods upload-file am-btn am-btn-secondary am-radius">
@@ -31,7 +31,7 @@
                             </div>
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 产品 </label>
-                                <div class="am-u-sm-9 am-u-md-6 am-u-lg-5 am-u-end">
+                                <div class="am-u-sm-9 am-u-md-6 am-u-lg-9 am-u-end">
                                     <div class="am-form-file am-margin-top-xs">
                                         <div class="widget-goods-list uploader-list am-cf">
                                             <div class="file-item">
@@ -96,6 +96,7 @@
          * @type {*}
          */
         $('#my-form').superForm();
-
+		
+	
     });
 </script>
