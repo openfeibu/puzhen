@@ -68,7 +68,7 @@
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 序列号 </label>
                                 <div class="am-u-sm-9 am-u-end am-padding-top-xs">
                                     <input type="text" class="tpl-form-input" name="user_equipment[equipment_sn]"
-                                           placeholder="请输入序列号" required>
+                                           placeholder="请输入序列号" required minlength="16" maxlength="16" data-validationMessage="请输入16个字符串">
                                 </div>
                             </div>
                             <div class="am-form-group">
