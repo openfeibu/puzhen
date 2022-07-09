@@ -6,7 +6,7 @@
             <div class="widget am-cf">
                 <form id="my-form" class="am-form tpl-form-line-form" method="post">
                     <div class="widget-body">
-                        <fieldset>
+                        <div>
                             <div class="widget-head am-cf">
                                 <div class="widget-title am-fl">基本信息</div>
                             </div>
@@ -300,7 +300,7 @@
                                 </div>
                             </div>
 
-                        </fieldset>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -324,7 +324,7 @@
 
         // 富文本编辑器
         UM.getEditor('container', {
-            initialFrameWidth: 375 + 15,
+            initialFrameWidth: '100%',
             initialFrameHeight: 600
         });
 

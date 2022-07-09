@@ -6,7 +6,7 @@
             <div class="widget am-cf">
                 <form id="my-form" class="am-form tpl-form-line-form" method="post">
                     <div class="widget-body">
-                        <fieldset>
+                        <div>
                             <div class="widget-head am-cf">
                                 <div class="widget-title am-fl">基本信息</div>
                             </div>
@@ -218,23 +218,23 @@
                             <!-- 产品单规格 -->
                             <div class="goods-spec-single">
                                 <div class="am-form-group">
-                                    <label class="am-u-sm-3 am-u-lg-2 am-form-label">产品编码 </label>
-                                    <div class="am-u-sm-9 am-u-end">
+                                    <label class="am-u-sm-4 am-u-lg-2 am-form-label">产品编码 </label>
+                                    <div class="am-u-sm-8 am-u-end">
                                         <input type="text" class="tpl-form-input" name="goods[sku][goods_no]"
                                                value="">
                                     </div>
                                 </div>
 
                                 <div class="am-form-group">
-                                    <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">参考零售价 </label>
-                                    <div class="am-u-sm-9 am-u-end">
+                                    <label class="am-u-sm-4 am-u-lg-2 am-form-label form-require">参考零售价 </label>
+                                    <div class="am-u-sm-8 am-u-end">
                                         <input type="number" class="tpl-form-input" name="goods[sku][ref_price]"
                                                required>
                                     </div>
                                 </div>
                                 <div class="am-form-group">
-                                    <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">产品重量(g) </label>
-                                    <div class="am-u-sm-9 am-u-end">
+                                    <label class="am-u-sm-4 am-u-lg-2 am-form-label form-require">产品重量(g) </label>
+                                    <div class="am-u-sm-8 am-u-end">
                                         <input type="number" class="tpl-form-input" name="goods[sku][goods_weight]"
                                                required>
                                     </div>
@@ -278,7 +278,7 @@
                                 </div>
                             </div>
 
-                        </fieldset>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -393,6 +393,7 @@
             // e.currentTarget.value !== '0' ? $panelGradeAlone.hide() : $panelGradeAlone.show();
             $panelGradeAlone.toggle();
         });
-
+		
+		
     });
 </script>
