@@ -2271,5 +2271,8 @@ fieldset{padding-left:0;padding-right:0}
 .tea_qrcode_image{width:100%;height:auto !important}
 .page-statistics-data .widget-survey .widget-head{margin-bottom:0;}
 .page-statistics-data .widget-survey .widget-screen{width:100%;margin-top:30px}
-
+.widget-body{padding:0 5px}
+.uploader-list .file-item .file-item-delete{display:block}
+.uploader-list .file-item{margin:10px 10px 0 0}
+.edui-container{width:100% !important;}
 	}

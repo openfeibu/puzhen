@@ -67,7 +67,7 @@
                     , id: _this.options.layerId
                     , title: '图片库'
                     , skin: _this.options.layerSkin
-                    , area: '840px'
+                    , area: ['100%', '520px']
                     , offset: 'auto'
                     , anim: 1
                     , closeBtn: 1
