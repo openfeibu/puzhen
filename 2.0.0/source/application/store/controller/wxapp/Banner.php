@@ -33,7 +33,7 @@ class Banner extends Controller
 
     public function edit($banner_id)
     {
-        // 门店详情
+        // 轮播图详情
         $model = BannerModel::detail($banner_id);
         if (!$this->request->isAjax()) {
             return $this->fetch('edit', compact('model'));
@@ -46,7 +46,7 @@ class Banner extends Controller
     }
     public function delete($banner_id)
     {
-        // 门店详情
+        // 轮播图详情
         $model = BannerModel::detail($banner_id);
         if (!$model->delete()) {
             return $this->renderError($model->getError() ?: '删除失败');

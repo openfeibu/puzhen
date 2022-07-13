@@ -43,6 +43,18 @@
                                 </div>
                             </div>
                             <div class="am-form-group">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">链接类型 </label>
+                                <div class="am-u-sm-9 am-u-end">
+            
+                                    <label class="am-radio-inline">
+                                        <input type="radio" name="banner[link_type]" value="weapp" <?= $model['link_type'] == 'weapp' ? 'checked' : '' ?>>小程序
+                                    </label>
+                                    <label class="am-radio-inline">
+                                        <input type="radio" name="banner[link_type]" value="web" <?= $model['link_type'] == 'web' ? 'checked' : '' ?>>网址
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">轮播图排序 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <input type="number" class="tpl-form-input" name="banner[sort]"
