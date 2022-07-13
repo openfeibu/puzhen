@@ -29,7 +29,7 @@
                                     <?php endif?>
                                     <!--<div class="help-block">
                                         <small>注：支持多选</small>
-                                    </div>->
+                                    </div>-->
                                 </div>
                             </div>
                             <div class="am-form-group">
