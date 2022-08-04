@@ -56,6 +56,11 @@ class UserEquipment extends UserEquipmentModel
 			          $this->error = '购买日期不能大于今天';
 			          return false;
 		        }
+		        if(!isset($data['images']) || empty($data['images']))
+		        {
+				        $this->error = '请上传凭证';
+				        return false;
+		        }
             $this->allowField(true)->save([
                 'equipment_id' => $data['equipment_id'],
                 'linkname' => $data['linkname'],
