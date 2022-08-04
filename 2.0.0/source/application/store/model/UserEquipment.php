@@ -105,11 +105,11 @@ class UserEquipment extends UserEquipmentModel
                 $this->error = '请先配置保修包换信息';
                 return false;
             }
-		        if(!isset($data['images']) || empty($data['images']))
-		        {
-				        $this->error = '请上传凭证';
-				        return false;
-		        }
+//		        if(!isset($data['images']) || empty($data['images']))
+//		        {
+//				        $this->error = '请上传凭证';
+//				        return false;
+//		        }
             $data['setting_warranty_days'] = $warranty_setting['warranty_days'];
             $data['setting_basic_change_days'] = $warranty_setting['basic_change_days'];
             $data['setting_change_days'] = $warranty_setting['change_days'];
