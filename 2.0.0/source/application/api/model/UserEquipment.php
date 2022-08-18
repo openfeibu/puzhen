@@ -30,8 +30,9 @@ class UserEquipment extends UserEquipmentModel
     public function getList($user_id)
     {
         $list = $this->where('user_id',$user_id)
+	          ->alias('user_equipment')
 	          ->field('user_equipment.*')
-	          //->join('equipment', 'equipment.equipment_id = user_equipment.equipment_id')
+	          ->join('equipment', 'equipment.equipment_id = user_equipment.equipment_id')
             ->with(['equipment' => ['image']])
             ->order(['create_time' => 'desc'])
             ->paginate(15, false, [
