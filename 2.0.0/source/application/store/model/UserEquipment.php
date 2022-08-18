@@ -29,7 +29,7 @@ class UserEquipment extends UserEquipmentModel
             ->alias('user_equipment')
             ->field('user_equipment.*')
             ->join('user', 'user.user_id = user_equipment.user_id')
-            ->join('equipment', 'equipment.equipment_id = user_equipment.equipment_id')
+            ->join('equipment', 'equipment.equipment_id = user_equipment.equipment_id','left')
             ->where('status',$status)
             ->order(['user_equipment.create_time' => 'desc'])
             ->paginate(15, false, [
