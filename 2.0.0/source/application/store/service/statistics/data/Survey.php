@@ -222,7 +222,7 @@ class Survey extends BasicsService
             $model->where('create_time', '>=', strtotime($startDate))
                 ->where('create_time', '<', strtotime($endDate) + 86400);
         }
-        $value = $model->where('status', '=', '20')->count();
+        $value = $model->alias('user_equipment')->join('equipment', 'equipment.equipment_id = user_equipment.equipment_id')->where('status', '=', '20')->count();
         return number_format($value);
     }
     /**
