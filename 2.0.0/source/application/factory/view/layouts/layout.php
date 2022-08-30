@@ -41,7 +41,7 @@
                 <ul>
                     <!-- 欢迎语 -->
                     <li class="am-text-sm tpl-header-navbar-welcome">
-                        <a href="<?= url('factory.user/renew') ?>">欢迎你，<span><?= $factory['user']['user_name'] ?></span>
+                        <a href="<?= url('factory.user/renew') ?>"><!--欢迎你，--><span><?= $factory['user']['user_name'] ?></span>
                         </a>
                     </li>
                     <!-- 退出 -->
