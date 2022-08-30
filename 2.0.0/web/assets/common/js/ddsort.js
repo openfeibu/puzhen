@@ -43,14 +43,15 @@
             that.on('mousedown.DDSort touchstart.DDSort', settings.target, function (e) {
 
                 var startTime = new Date().getTime();
-
+				console.log(e.type)
                 // 桌面端只允许鼠标左键拖动
                 if (e.type == 'mousedown' && e.which != 1) return;
 
                 // 防止表单元素，a 链接，可编辑元素失效
                 var tagName = e.target.tagName.toLowerCase();
+				console.log(tagName)
                 if (tagName == 'input' || tagName == 'textarea' || tagName == 'select' ||
-                    tagName == 'a' || $(e.target).prop('contenteditable') == 'true') {
+                    tagName == 'a' || tagName == 'i' || $(e.target).prop('contenteditable') == 'true') {
                     return;
                 }
 

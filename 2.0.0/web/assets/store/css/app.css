@@ -2275,4 +2275,10 @@ fieldset{padding-left:0;padding-right:0}
 .uploader-list .file-item .file-item-delete{display:block}
 .uploader-list .file-item{margin:10px 10px 0 0}
 .edui-container{width:100% !important;}
+.el-range-editor--small.el-input__inner{width:300px !important;}
+.el-picker-panel{left:0 !important;width:100% !important;}
+.el-date-range-picker .el-picker-panel__body{min-width:100% !important;}
+.el-date-range-picker__header div{font-size:12px !important;margin:0 !important;}
 	}
+
+.file-library{max-width:840px}
