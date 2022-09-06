@@ -219,8 +219,8 @@ class Survey extends BasicsService
     {
         $model = new UserEquipmentModel;
         if (!is_null($startDate) && !is_null($endDate)) {
-            $model->where('create_time', '>=', strtotime($startDate))
-                ->where('create_time', '<', strtotime($endDate) + 86400);
+            $model->where('user_equipment.create_time', '>=', strtotime($startDate))
+                ->where('user_equipment.create_time', '<', strtotime($endDate) + 86400);
         }
         $value = $model->alias('user_equipment')->join('equipment', 'equipment.equipment_id = user_equipment.equipment_id')->where('status', '=', '20')->count();
         return number_format($value);
