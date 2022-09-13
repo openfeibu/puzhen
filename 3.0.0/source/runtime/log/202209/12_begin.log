@@ -1,0 +1,76 @@
+---------------------------------------------------------------
+[ 2022-09-12T17:37:17+08:00 ] 47.101.148.46 GET puzhenshop.feibu.infohttp://puzhenshop.feibu.info/
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36',
+)
+[ begin ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2022-09-12T17:37:17+08:00 ] 47.101.148.46 GET puzhenshop.feibu.infohttp://puzhenshop.feibu.info/index.php?s=/store/passport/login
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'passport',
+    2 => 'login',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36',
+)
+[ begin ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2022-09-12T18:42:01+08:00 ] 101.132.111.175 GET puzhenshop.feibu.infohttp://puzhenshop.feibu.info/
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36',
+)
+[ begin ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2022-09-12T18:42:02+08:00 ] 101.132.111.175 GET puzhenshop.feibu.infohttp://puzhenshop.feibu.info/index.php?s=/store/passport/login
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'passport',
+    2 => 'login',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36',
+)
+[ begin ] [ PARAM ] array (
+)

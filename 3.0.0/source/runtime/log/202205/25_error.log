@@ -1,0 +1,48 @@
+---------------------------------------------------------------
+[ 2022-05-25T08:47:53+08:00 ] 116.22.149.205 POST puzhenshop.feibu.info/index.php?s=/factory/statistics.data/survey
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'puzhen_user.factory_id' in 'where clause' [E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\db\Connection.php:385]
+[Error SQL]: SELECT COUNT(*) AS tp_count FROM `puzhen_user` WHERE  `puzhen_user`.`wxapp_id` = 10001  AND `puzhen_user`.`factory_id` = 1  AND `is_delete` = 0 LIMIT 1
+---------------------------------------------------------------
+[ 2022-05-25T08:48:05+08:00 ] 116.22.149.205 POST puzhenshop.feibu.info/index.php?s=/factory/statistics.data/survey
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'puzhen_user.factory_id' in 'where clause' [E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\db\Connection.php:385]
+[Error SQL]: SELECT COUNT(*) AS tp_count FROM `puzhen_user` WHERE  `puzhen_user`.`wxapp_id` = 10001  AND `puzhen_user`.`factory_id` = 1  AND `is_delete` = 0 LIMIT 1
+---------------------------------------------------------------
+[ 2022-05-25T14:59:46+08:00 ] 113.105.219.167 GET puzhenshop.feibu.info/index.php?s=/factory/goods.category/add
+[ error ] [0]方法不存在:app\factory\controller\goods\Category->add() [E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php:606]
+#0 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(456): think\App::module(Array, Array, true)
+#1 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(139): think\App::exec(Array, Array)
+#2 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\start.php(19): think\App::run()
+#3 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web\index.php(12): require('E:\\UPUPW_ANK_W6...')
+#4 {main}
+---------------------------------------------------------------
+[ 2022-05-25T14:59:51+08:00 ] 113.105.219.167 GET puzhenshop.feibu.info/index.php?s=/factory/goods.category/add
+[ error ] [0]方法不存在:app\factory\controller\goods\Category->add() [E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php:606]
+#0 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(456): think\App::module(Array, Array, true)
+#1 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(139): think\App::exec(Array, Array)
+#2 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\start.php(19): think\App::run()
+#3 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web\index.php(12): require('E:\\UPUPW_ANK_W6...')
+#4 {main}
+---------------------------------------------------------------
+[ 2022-05-25T15:50:27+08:00 ] 113.105.219.167 GET puzhenshop.feibu.info/index.php?s=%2Fstore%2Fdistributor.goods%2Findex&distributor_id=0&factory_id=0&category_id=10004&status=&goods_id=&search=
+[ error ] [0]致命错误: Class 'app\common\model\distributor\Category' not found [E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\common\model\distributor\Goods.php:35]
+#0 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\distributor\Goods.php(31): app\common\model\distributor\Goods->getList(Array)
+#1 [internal function]: app\store\controller\distributor\Goods->index()
+#2 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(343): ReflectionMethod->invokeArgs(Object(app\store\controller\distributor\Goods), Array)
+#3 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(611): think\App::invokeMethod(Array, Array)
+#4 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(456): think\App::module(Array, Array, true)
+#5 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(139): think\App::exec(Array, Array)
+#6 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\start.php(19): think\App::run()
+#7 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web\index.php(12): require('E:\\UPUPW_ANK_W6...')
+#8 {main}
+---------------------------------------------------------------
+[ 2022-05-25T16:03:32+08:00 ] 113.105.219.167 GET puzhenshop.feibu.info/index.php?s=%2Fstore%2Fdistributor.goods%2Findex&distributor_id=1&factory_id=8&category_id=10004&status=10&goods_id=&search=
+[ error ] [0]致命错误: Class 'app\common\model\distributor\Category' not found [E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\common\model\distributor\Goods.php:35]
+#0 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\distributor\Goods.php(31): app\common\model\distributor\Goods->getList(Array)
+#1 [internal function]: app\store\controller\distributor\Goods->index()
+#2 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(343): ReflectionMethod->invokeArgs(Object(app\store\controller\distributor\Goods), Array)
+#3 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(611): think\App::invokeMethod(Array, Array)
+#4 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(456): think\App::module(Array, Array, true)
+#5 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(139): think\App::exec(Array, Array)
+#6 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\start.php(19): think\App::run()
+#7 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web\index.php(12): require('E:\\UPUPW_ANK_W6...')
+#8 {main}

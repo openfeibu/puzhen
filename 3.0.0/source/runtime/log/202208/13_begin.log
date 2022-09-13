@@ -1,0 +1,120 @@
+---------------------------------------------------------------
+[ 2022-08-13T19:07:20+08:00 ] 14.17.70.178 GET puzhenshop.feibu.info/
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.85 Safari/537.36',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2022-08-13T19:07:20+08:00 ] 14.17.70.178 GET puzhenshop.feibu.info/index.php?s=/store/passport/login
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'passport',
+    2 => 'login',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.85 Safari/537.36',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2022-08-13T19:07:20+08:00 ] 14.17.70.178 GET puzhenshop.feibu.info/
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.85 Safari/537.36',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2022-08-13T19:07:21+08:00 ] 14.17.70.178 GET puzhenshop.feibu.info/index.php?s=/store/passport/login
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'passport',
+    2 => 'login',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.85 Safari/537.36',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2022-08-13T19:07:21+08:00 ] 14.17.70.178 GET puzhenshop.feibu.info/
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.85 Safari/537.36',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2022-08-13T19:07:21+08:00 ] 14.17.70.178 GET puzhenshop.feibu.info/index.php?s=/store/passport/login
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'passport',
+    2 => 'login',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.2214.85 Safari/537.36',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+)

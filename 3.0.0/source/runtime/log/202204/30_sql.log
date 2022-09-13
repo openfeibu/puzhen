@@ -1,0 +1,50 @@
+---------------------------------------------------------------
+[ 2022-04-30T18:05:00+08:00 ] 113.98.116.106 GET puzhenshop.feibu.info/index.php?s=/api/user.equipment/lists&page=1&wxapp_id=10001&token=459d67677ee9ffee8ad80bc6776c75b2
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009660s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_wxapp` [ RunTime:0.007877s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_wxapp` WHERE  `puzhen_wxapp`.`wxapp_id` = '10001'  AND `wxapp_id` = 10001 LIMIT 1 [ RunTime:0.006054s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_user` [ RunTime:0.007644s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_user_address` [ RunTime:0.007551s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_user_grade` [ RunTime:0.008336s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_user_grade` WHERE  `puzhen_user_grade`.`wxapp_id` = '10001'  AND `status` = 1  AND `is_delete` = 0  AND `wxapp_id` = 10001 ORDER BY `weight` DESC [ RunTime:0.005962s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_user` WHERE  `puzhen_user`.`wxapp_id` = '10001'  AND `is_delete` = 0  AND `open_id` = 'oolAV5CcM0SVmZL3P4d3J4B6WS54' LIMIT 1 [ RunTime:0.006298s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_user_address` WHERE  `puzhen_user_address`.`wxapp_id` = '10001'  AND `user_id` = 10002 [ RunTime:0.006135s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_user_address` WHERE  `puzhen_user_address`.`wxapp_id` = '10001'  AND `address_id` = 0 [ RunTime:0.005972s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_user_grade` WHERE  `puzhen_user_grade`.`wxapp_id` = '10001'  AND `grade_id` = 0 [ RunTime:0.005932s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_equipment` [ RunTime:0.007472s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_user_equipment` [ RunTime:0.008105s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_user_equipment` WHERE  `puzhen_user_equipment`.`wxapp_id` = '10001'  AND `user_id` = 10002 LIMIT 1 [ RunTime:0.005939s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_user_equipment` WHERE  `puzhen_user_equipment`.`wxapp_id` = '10001'  AND `user_id` = 10002 ORDER BY `create_time` DESC LIMIT 0,15 [ RunTime:0.006077s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_equipment` WHERE  `puzhen_equipment`.`wxapp_id` = '10001'  AND `equipment_id` IN (2,1) [ RunTime:0.005937s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_upload_file` [ RunTime:0.007253s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_upload_file` WHERE  `puzhen_upload_file`.`wxapp_id` = '10001'  AND `file_id` IN (10010,10009) [ RunTime:0.005849s ]
+---------------------------------------------------------------
+[ 2022-04-30T18:05:05+08:00 ] 113.98.116.106 GET puzhenshop.feibu.info/index.php?s=/api/distributor/lists&page=1&latitude=&longitude=&wxapp_id=10001&token=459d67677ee9ffee8ad80bc6776c75b2
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011782s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_wxapp` [ RunTime:0.009329s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_wxapp` WHERE  `puzhen_wxapp`.`wxapp_id` = '10001'  AND `wxapp_id` = 10001 LIMIT 1 [ RunTime:0.007744s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_distributor` [ RunTime:0.010146s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_distributor` WHERE  `puzhen_distributor`.`wxapp_id` = '10001'  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.007770s ]
+[ sql ] [ SQL ] SELECT *,ROUND(  
+                    6371.393 * 2 * ASIN(  
+                        SQRT(  
+                            POW(  
+                                SIN(  
+                                    (  
+                                        0 * 3.1415926 / 180 - latitude * PI() / 180  
+                                    ) / 2  
+                                ),  
+                                2  
+                            ) + COS(0 * 3.1415926 / 180) * COS(latitude * PI() / 180) * POW(  
+                                SIN(  
+                                    (  
+                                        0 * 3.1415926 / 180 - longitude * PI() / 180  
+                                    ) / 2  
+                                ),  
+                                2  
+                            )  
+                        )  
+                    ) * 1000  
+                ) AS distance FROM `puzhen_distributor` WHERE  `puzhen_distributor`.`wxapp_id` = '10001'  AND `is_delete` = 0 ORDER BY `distance` ASC,`sort` ASC,`create_time` DESC LIMIT 0,15 [ RunTime:0.008027s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_upload_file` [ RunTime:0.008993s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_upload_file` WHERE  `puzhen_upload_file`.`wxapp_id` = '10001'  AND `file_id` IN (10010) [ RunTime:0.007716s ]

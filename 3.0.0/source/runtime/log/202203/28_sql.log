@@ -1,0 +1,29 @@
+---------------------------------------------------------------
+[ 2022-03-28T00:19:28+08:00 ] 116.22.197.36 GET puzhenshop.feibu.info/index.php?s=/api/category/index&wxapp_id=10001&token=2f70bd77d154adb6da8a5769aee1baba
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013792s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_wxapp` [ RunTime:0.011109s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_wxapp` WHERE  `puzhen_wxapp`.`wxapp_id` = '10001'  AND `wxapp_id` = 10001 LIMIT 1 [ RunTime:0.008912s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_wxapp_category` [ RunTime:0.012355s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_wxapp_category` WHERE  `puzhen_wxapp_category`.`wxapp_id` = '10001' LIMIT 1 [ RunTime:0.008699s ]
+---------------------------------------------------------------
+[ 2022-03-28T00:40:26+08:00 ] 116.22.199.111 GET puzhenshop.feibu.info/index.php?s=/api/user.index/detail&wxapp_id=10001&token=2f70bd77d154adb6da8a5769aee1baba
+[ sql ] [ DB ] CONNECT:[ UseTime:0.019224s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_wxapp` [ RunTime:0.011118s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_wxapp` WHERE  `puzhen_wxapp`.`wxapp_id` = '10001'  AND `wxapp_id` = 10001 LIMIT 1 [ RunTime:0.008537s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_user` [ RunTime:0.010810s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_user_address` [ RunTime:0.010607s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_user_grade` [ RunTime:0.010699s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_user_grade` WHERE  `puzhen_user_grade`.`wxapp_id` = '10001'  AND `status` = 1  AND `is_delete` = 0  AND `wxapp_id` = 10001 ORDER BY `weight` DESC [ RunTime:0.008476s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_user` WHERE  `puzhen_user`.`wxapp_id` = '10001'  AND `is_delete` = 0  AND `open_id` = 'oolAV5CcM0SVmZL3P4d3J4B6WS54' LIMIT 1 [ RunTime:0.008549s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_user_address` WHERE  `puzhen_user_address`.`wxapp_id` = '10001'  AND `user_id` = 10002 [ RunTime:0.008445s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_user_address` WHERE  `puzhen_user_address`.`wxapp_id` = '10001'  AND `address_id` = 0 [ RunTime:0.008509s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_user_grade` WHERE  `puzhen_user_grade`.`wxapp_id` = '10001'  AND `grade_id` = 0 [ RunTime:0.008484s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_sharp_setting` [ RunTime:0.012186s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_sharp_setting` WHERE  `puzhen_sharp_setting`.`wxapp_id` = '10001' [ RunTime:0.008356s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_order` [ RunTime:0.010663s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = '10001'  AND `order_source` = 30  AND `pay_status` = 10  AND `order_status` = 10  AND `create_time` <= 1648398626  AND `is_delete` = 0 [ RunTime:0.008659s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = '10001'  AND `user_id` = 10002  AND `order_status` <> 20  AND `pay_status` = 10  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.008603s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = '10001'  AND `user_id` = 10002  AND `order_status` <> 20  AND `pay_status` = 20  AND `delivery_status` = 20  AND `receipt_status` = 10  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.008419s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_order` WHERE  `puzhen_order`.`wxapp_id` = '10001'  AND `user_id` = 10002  AND ( `order_status` <> 20 AND `order_status` = 30 )  AND `is_comment` = 0  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.008300s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_dealer_setting` [ RunTime:0.010874s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_dealer_setting` WHERE  `puzhen_dealer_setting`.`wxapp_id` = '10001' [ RunTime:0.008334s ]

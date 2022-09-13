@@ -1,0 +1,204 @@
+---------------------------------------------------------------
+[ 2022-06-30T18:19:17+08:00 ] 116.21.15.70 GET puzhenshop.feibu.info/index.php?s=/factory/tea_qrcode.factory_tea_qrcode/index
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'factory',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'index',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'cookie' => '__gads=ID=00d075fa159d8ac8:T=1597915774:S=ALNI_MZogTGW2LAF0H_NTkBymWmUYtnOxQ; __root_domain_v=.feibu.info; _qddaz=QD.932230466496504; PHPSESSID=2m1tmmd8qee5nk9psd85vhlkkk; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1656381744,1656498529; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1656560779',
+  'accept-language' => 'en,zh-CN;q=0.9,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/factory/goods/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'dnt' => '1',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2022-06-30T18:19:17+08:00 ] 116.21.15.70 GET puzhenshop.feibu.info/index.php?s=/factory/passport/login
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'factory',
+    1 => 'passport',
+    2 => 'login',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'cookie' => '__gads=ID=00d075fa159d8ac8:T=1597915774:S=ALNI_MZogTGW2LAF0H_NTkBymWmUYtnOxQ; __root_domain_v=.feibu.info; _qddaz=QD.932230466496504; PHPSESSID=2m1tmmd8qee5nk9psd85vhlkkk; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1656381744,1656498529; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1656560779',
+  'accept-language' => 'en,zh-CN;q=0.9,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/factory/goods/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'dnt' => '1',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2022-06-30T18:19:23+08:00 ] 116.21.15.70 POST puzhenshop.feibu.info/index.php?s=/factory/passport/login
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'factory',
+    1 => 'passport',
+    2 => 'login',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'cookie' => '__gads=ID=00d075fa159d8ac8:T=1597915774:S=ALNI_MZogTGW2LAF0H_NTkBymWmUYtnOxQ; __root_domain_v=.feibu.info; _qddaz=QD.932230466496504; PHPSESSID=2m1tmmd8qee5nk9psd85vhlkkk; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1656381744,1656498529; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1656560779',
+  'accept-language' => 'en,zh-CN;q=0.9,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/factory/passport/login',
+  'origin' => 'http://puzhenshop.feibu.info',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'dnt' => '1',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '51',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'User' => 
+  array (
+    'user_name' => 'admin',
+    'password' => '123456',
+  ),
+)
+---------------------------------------------------------------
+[ 2022-06-30T18:19:25+08:00 ] 116.21.15.70 GET puzhenshop.feibu.info/index.php?s=/factory/index/index
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'factory',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'cookie' => '__gads=ID=00d075fa159d8ac8:T=1597915774:S=ALNI_MZogTGW2LAF0H_NTkBymWmUYtnOxQ; __root_domain_v=.feibu.info; _qddaz=QD.932230466496504; PHPSESSID=2m1tmmd8qee5nk9psd85vhlkkk; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1656381744,1656498529; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1656560779',
+  'accept-language' => 'en,zh-CN;q=0.9,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/factory/passport/login',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
+  'dnt' => '1',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2022-06-30T19:34:18+08:00 ] 123.160.221.24 GET puzhenshop.feibu.info/
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'upgrade-insecure-requests' => '1',
+  'sec-gpc' => '1',
+  'dnt' => '1',
+  'connection' => 'close',
+  'cache-control' => 'max-age=0',
+  'accept-language' => 'en;q=0.9',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2022-06-30T19:34:18+08:00 ] 123.160.221.24 GET puzhenshop.feibu.info/index.php?s=/store/passport/login
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'passport',
+    2 => 'login',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'accept-encoding' => 'gzip',
+  'upgrade-insecure-requests' => '1',
+  'sec-gpc' => '1',
+  'referer' => 'http://puzhenshop.feibu.info',
+  'dnt' => '1',
+  'connection' => 'close',
+  'cache-control' => 'max-age=0',
+  'accept-language' => 'en;q=0.9',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2022-06-30T19:34:19+08:00 ] 123.160.221.28 GET puzhenshop.feibu.info/
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip',
+  'upgrade-insecure-requests' => '1',
+  'accept-language' => 'en',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2022-06-30T19:34:20+08:00 ] 123.160.221.29 GET puzhenshop.feibu.info/index.php?s=/store/passport/login
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'passport',
+    2 => 'login',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept-encoding' => 'gzip',
+  'upgrade-insecure-requests' => '1',
+  'cookie' => 'PHPSESSID=ffue03en14ic9n571bbgutc36u',
+  'accept-language' => 'en',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+)

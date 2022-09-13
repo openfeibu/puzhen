@@ -1,0 +1,814 @@
+---------------------------------------------------------------
+[ 2022-05-30T11:20:01+08:00 ] 183.38.151.97 GET puzhenshop.feibu.info/index.php?s=/api/page/index&page_id=0&wxapp_id=10001&token=4e361d955a8eb8602a55f3c900fde6db
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'page',
+    2 => 'index',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3225 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x280016F2) WeChat/arm64 Weixin NetType/4G Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'page_id' => '0',
+  'wxapp_id' => '10001',
+  'token' => '4e361d955a8eb8602a55f3c900fde6db',
+)
+---------------------------------------------------------------
+[ 2022-05-30T11:20:02+08:00 ] 183.38.151.97 GET puzhenshop.feibu.info/index.php?s=/api/page/banner&wxapp_id=10001&token=4e361d955a8eb8602a55f3c900fde6db
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'page',
+    2 => 'banner',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3225 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x280016F2) WeChat/arm64 Weixin NetType/4G Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+  'token' => '4e361d955a8eb8602a55f3c900fde6db',
+)
+---------------------------------------------------------------
+[ 2022-05-30T11:20:03+08:00 ] 183.38.151.97 GET puzhenshop.feibu.info/index.php?s=/api/category/index&wxapp_id=10001&token=4e361d955a8eb8602a55f3c900fde6db
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3225 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x280016F2) WeChat/arm64 Weixin NetType/4G Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+  'token' => '4e361d955a8eb8602a55f3c900fde6db',
+)
+---------------------------------------------------------------
+[ 2022-05-30T11:20:07+08:00 ] 183.38.151.97 GET puzhenshop.feibu.info/index.php?s=/api/goods/lists&page=1&sortType=all&sort=&category_id=10004&search=&wxapp_id=10001&token=4e361d955a8eb8602a55f3c900fde6db
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'goods',
+    2 => 'lists',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3225 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x280016F2) WeChat/arm64 Weixin NetType/4G Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'page' => '1',
+  'sortType' => 'all',
+  'sort' => '',
+  'category_id' => '10004',
+  'search' => '',
+  'wxapp_id' => '10001',
+  'token' => '4e361d955a8eb8602a55f3c900fde6db',
+)
+---------------------------------------------------------------
+[ 2022-05-30T11:20:15+08:00 ] 183.38.151.97 GET puzhenshop.feibu.info/index.php?s=/api/goods/detail&goods_id=10010&wxapp_id=10001&token=4e361d955a8eb8602a55f3c900fde6db
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'goods',
+    2 => 'detail',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3225 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x280016F2) WeChat/arm64 Weixin NetType/4G Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'goods_id' => '10010',
+  'wxapp_id' => '10001',
+  'token' => '4e361d955a8eb8602a55f3c900fde6db',
+)
+---------------------------------------------------------------
+[ 2022-05-30T11:20:20+08:00 ] 183.38.151.97 GET puzhenshop.feibu.info/index.php?s=/api/goods/detail&goods_id=10008&wxapp_id=10001&token=4e361d955a8eb8602a55f3c900fde6db
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'goods',
+    2 => 'detail',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3225 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x280016F2) WeChat/arm64 Weixin NetType/4G Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'goods_id' => '10008',
+  'wxapp_id' => '10001',
+  'token' => '4e361d955a8eb8602a55f3c900fde6db',
+)
+---------------------------------------------------------------
+[ 2022-05-30T11:20:28+08:00 ] 183.38.151.97 GET puzhenshop.feibu.info/index.php?s=/api/goods/detail&goods_id=10009&wxapp_id=10001&token=4e361d955a8eb8602a55f3c900fde6db
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'goods',
+    2 => 'detail',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3225 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x280016F2) WeChat/arm64 Weixin NetType/4G Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'goods_id' => '10009',
+  'wxapp_id' => '10001',
+  'token' => '4e361d955a8eb8602a55f3c900fde6db',
+)
+---------------------------------------------------------------
+[ 2022-05-30T11:20:31+08:00 ] 183.38.151.97 GET puzhenshop.feibu.info/index.php?s=/api/tea_qrcode/detail&tea_qrcode_id=230&wxapp_id=10001&token=4e361d955a8eb8602a55f3c900fde6db
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'tea_qrcode',
+    2 => 'detail',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3225 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x280016F2) WeChat/arm64 Weixin NetType/4G Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'tea_qrcode_id' => '230',
+  'wxapp_id' => '10001',
+  'token' => '4e361d955a8eb8602a55f3c900fde6db',
+)
+---------------------------------------------------------------
+[ 2022-05-30T11:20:32+08:00 ] 183.38.151.97 GET puzhenshop.feibu.info/index.php?s=/api/tea_qrcode_comment/lists/tea_qrcode_id/230&wxapp_id=10001&token=4e361d955a8eb8602a55f3c900fde6db
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'tea_qrcode_comment',
+    2 => 'lists',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3225 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x280016F2) WeChat/arm64 Weixin NetType/4G Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+  'token' => '4e361d955a8eb8602a55f3c900fde6db',
+  'tea_qrcode_id' => '230',
+)
+---------------------------------------------------------------
+[ 2022-05-30T11:41:35+08:00 ] 14.150.20.196 GET puzhenshop.feibu.info/index.php?s=/api/page/banner&wxapp_id=10001&token=51afff3c1a02b77a464232af5461afdb
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'page',
+    2 => 'banner',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.18(0x1800123f) NetType/4G Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+  'token' => '51afff3c1a02b77a464232af5461afdb',
+)
+---------------------------------------------------------------
+[ 2022-05-30T11:41:36+08:00 ] 14.150.20.196 GET puzhenshop.feibu.info/index.php?s=/api/page/index&page_id=0&wxapp_id=10001&token=51afff3c1a02b77a464232af5461afdb
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'page',
+    2 => 'index',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.18(0x1800123f) NetType/4G Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'page_id' => '0',
+  'wxapp_id' => '10001',
+  'token' => '51afff3c1a02b77a464232af5461afdb',
+)
+---------------------------------------------------------------
+[ 2022-05-30T11:41:37+08:00 ] 14.150.20.196 GET puzhenshop.feibu.info/index.php?s=/api/category/index&wxapp_id=10001&token=51afff3c1a02b77a464232af5461afdb
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.18(0x1800123f) NetType/4G Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+  'token' => '51afff3c1a02b77a464232af5461afdb',
+)
+---------------------------------------------------------------
+[ 2022-05-30T11:41:48+08:00 ] 14.150.20.196 GET puzhenshop.feibu.info/index.php?s=/api/distributor/lists&page=1&latitude=23.16809543185764&longitude=112.88522922092014&wxapp_id=10001&token=51afff3c1a02b77a464232af5461afdb
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor',
+    2 => 'lists',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.18(0x1800123f) NetType/4G Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'page' => '1',
+  'latitude' => '23.16809543185764',
+  'longitude' => '112.88522922092014',
+  'wxapp_id' => '10001',
+  'token' => '51afff3c1a02b77a464232af5461afdb',
+)
+---------------------------------------------------------------
+[ 2022-05-30T11:41:51+08:00 ] 14.150.20.196 GET puzhenshop.feibu.info/index.php?s=/api/distributor/lists&page=1&latitude=23.16809543185764&longitude=112.88522922092014&wxapp_id=10001&token=51afff3c1a02b77a464232af5461afdb
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor',
+    2 => 'lists',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.18(0x1800123f) NetType/4G Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'page' => '1',
+  'latitude' => '23.16809543185764',
+  'longitude' => '112.88522922092014',
+  'wxapp_id' => '10001',
+  'token' => '51afff3c1a02b77a464232af5461afdb',
+)
+---------------------------------------------------------------
+[ 2022-05-30T11:41:51+08:00 ] 14.150.20.196 GET puzhenshop.feibu.info/index.php?s=/api/distributor/lists&target=%7B%22dataset%22%3A%7B%7D%2C%22id%22%3A%22map%22%2C%22offsetTop%22%3A0%2C%22offsetLeft%22%3A0%7D&currentTarget=%7B%22dataset%22%3A%7B%7D%2C%22id%22%3A%22map%22%2C%22offsetTop%22%3A0%2C%22offsetLeft%22%3A0%7D&timeStamp=1653882110959&touches=%5B%5D&detail=%7B%22type%22%3A%22begin%22%7D&type=begin&causedBy=update&page=1&latitude=23.16809543185764&longitude=112.88522922092014&wxapp_id=10001&token=51afff3c1a02b77a464232af5461afdb
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor',
+    2 => 'lists',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.18(0x1800123f) NetType/4G Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'target' => '{&quot;dataset&quot;:{},&quot;id&quot;:&quot;map&quot;,&quot;offsetTop&quot;:0,&quot;offsetLeft&quot;:0}',
+  'currentTarget' => '{&quot;dataset&quot;:{},&quot;id&quot;:&quot;map&quot;,&quot;offsetTop&quot;:0,&quot;offsetLeft&quot;:0}',
+  'timeStamp' => '1653882110959',
+  'touches' => '[]',
+  'detail' => '{&quot;type&quot;:&quot;begin&quot;}',
+  'type' => 'begin',
+  'causedBy' => 'update',
+  'page' => '1',
+  'latitude' => '23.16809543185764',
+  'longitude' => '112.88522922092014',
+  'wxapp_id' => '10001',
+  'token' => '51afff3c1a02b77a464232af5461afdb',
+)
+---------------------------------------------------------------
+[ 2022-05-30T11:41:52+08:00 ] 14.150.20.196 GET puzhenshop.feibu.info/index.php?s=/api/distributor/lists&target=%7B%22dataset%22%3A%7B%7D%2C%22id%22%3A%22map%22%2C%22offsetTop%22%3A0%2C%22offsetLeft%22%3A0%7D&currentTarget=%7B%22dataset%22%3A%7B%7D%2C%22id%22%3A%22map%22%2C%22offsetTop%22%3A0%2C%22offsetLeft%22%3A0%7D&timeStamp=1653882110969&touches=%5B%5D&detail=%7B%22type%22%3A%22end%22%2C%22rotate%22%3A0%2C%22skew%22%3A0%2C%22gesture%22%3Afalse%2C%22scale%22%3A17%2C%22centerLocation%22%3A%7B%22longitude%22%3A112.88522922092015%2C%22latitude%22%3A23.16809543185763%7D%2C%22region%22%3A%7B%22northeast%22%3A%7B%22longitude%22%3A112.88732134477033%2C%22latitude%22%3A23.17180907979517%7D%2C%22southwest%22%3A%7B%22longitude%22%3A112.88313709706998%2C%22latitude%22%3A23.16438178392009%7D%7D%7D&type=end&causedBy=update&page=1&latitude=23.16809543185764&longitude=112.88522922092014&wxapp_id=10001&token=51afff3c1a02b77a464232af5461afdb
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor',
+    2 => 'lists',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.18(0x1800123f) NetType/4G Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'target' => '{&quot;dataset&quot;:{},&quot;id&quot;:&quot;map&quot;,&quot;offsetTop&quot;:0,&quot;offsetLeft&quot;:0}',
+  'currentTarget' => '{&quot;dataset&quot;:{},&quot;id&quot;:&quot;map&quot;,&quot;offsetTop&quot;:0,&quot;offsetLeft&quot;:0}',
+  'timeStamp' => '1653882110969',
+  'touches' => '[]',
+  'detail' => '{&quot;type&quot;:&quot;end&quot;,&quot;rotate&quot;:0,&quot;skew&quot;:0,&quot;gesture&quot;:false,&quot;scale&quot;:17,&quot;centerLocation&quot;:{&quot;longitude&quot;:112.88522922092015,&quot;latitude&quot;:23.16809543185763},&quot;region&quot;:{&quot;northeast&quot;:{&quot;longitude&quot;:112.88732134477033,&quot;latitude&quot;:23.17180907979517},&quot;southwest&quot;:{&quot;longitude&quot;:112.88313709706998,&quot;latitude&quot;:23.16438178392009}}}',
+  'type' => 'end',
+  'causedBy' => 'update',
+  'page' => '1',
+  'latitude' => '23.16809543185764',
+  'longitude' => '112.88522922092014',
+  'wxapp_id' => '10001',
+  'token' => '51afff3c1a02b77a464232af5461afdb',
+)
+---------------------------------------------------------------
+[ 2022-05-30T11:41:52+08:00 ] 14.150.20.196 GET puzhenshop.feibu.info/index.php?s=/api/distributor/lists&target=%7B%22dataset%22%3A%7B%7D%2C%22id%22%3A%22map%22%2C%22offsetTop%22%3A0%2C%22offsetLeft%22%3A0%7D&currentTarget=%7B%22dataset%22%3A%7B%7D%2C%22id%22%3A%22map%22%2C%22offsetTop%22%3A0%2C%22offsetLeft%22%3A0%7D&timeStamp=1653882110982&touches=%5B%5D&detail=%7B%22type%22%3A%22begin%22%7D&type=begin&causedBy=update&page=1&latitude=23.16809543185764&longitude=112.88522922092014&wxapp_id=10001&token=51afff3c1a02b77a464232af5461afdb
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor',
+    2 => 'lists',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.18(0x1800123f) NetType/4G Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'target' => '{&quot;dataset&quot;:{},&quot;id&quot;:&quot;map&quot;,&quot;offsetTop&quot;:0,&quot;offsetLeft&quot;:0}',
+  'currentTarget' => '{&quot;dataset&quot;:{},&quot;id&quot;:&quot;map&quot;,&quot;offsetTop&quot;:0,&quot;offsetLeft&quot;:0}',
+  'timeStamp' => '1653882110982',
+  'touches' => '[]',
+  'detail' => '{&quot;type&quot;:&quot;begin&quot;}',
+  'type' => 'begin',
+  'causedBy' => 'update',
+  'page' => '1',
+  'latitude' => '23.16809543185764',
+  'longitude' => '112.88522922092014',
+  'wxapp_id' => '10001',
+  'token' => '51afff3c1a02b77a464232af5461afdb',
+)
+---------------------------------------------------------------
+[ 2022-05-30T11:41:52+08:00 ] 14.150.20.196 GET puzhenshop.feibu.info/index.php?s=/api/distributor/lists&target=%7B%22dataset%22%3A%7B%7D%2C%22id%22%3A%22map%22%2C%22offsetTop%22%3A0%2C%22offsetLeft%22%3A0%7D&currentTarget=%7B%22dataset%22%3A%7B%7D%2C%22id%22%3A%22map%22%2C%22offsetTop%22%3A0%2C%22offsetLeft%22%3A0%7D&timeStamp=1653882110990&touches=%5B%5D&detail=%7B%22type%22%3A%22end%22%2C%22rotate%22%3A0%2C%22skew%22%3A0%2C%22gesture%22%3Afalse%2C%22scale%22%3A17%2C%22centerLocation%22%3A%7B%22longitude%22%3A112.88522922092015%2C%22latitude%22%3A23.16809543185763%7D%2C%22region%22%3A%7B%22northeast%22%3A%7B%22longitude%22%3A112.88732134477033%2C%22latitude%22%3A23.17180907979517%7D%2C%22southwest%22%3A%7B%22longitude%22%3A112.88313709706998%2C%22latitude%22%3A23.16438178392009%7D%7D%7D&type=end&causedBy=update&page=1&latitude=23.16809543185764&longitude=112.88522922092014&wxapp_id=10001&token=51afff3c1a02b77a464232af5461afdb
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor',
+    2 => 'lists',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.18(0x1800123f) NetType/4G Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'target' => '{&quot;dataset&quot;:{},&quot;id&quot;:&quot;map&quot;,&quot;offsetTop&quot;:0,&quot;offsetLeft&quot;:0}',
+  'currentTarget' => '{&quot;dataset&quot;:{},&quot;id&quot;:&quot;map&quot;,&quot;offsetTop&quot;:0,&quot;offsetLeft&quot;:0}',
+  'timeStamp' => '1653882110990',
+  'touches' => '[]',
+  'detail' => '{&quot;type&quot;:&quot;end&quot;,&quot;rotate&quot;:0,&quot;skew&quot;:0,&quot;gesture&quot;:false,&quot;scale&quot;:17,&quot;centerLocation&quot;:{&quot;longitude&quot;:112.88522922092015,&quot;latitude&quot;:23.16809543185763},&quot;region&quot;:{&quot;northeast&quot;:{&quot;longitude&quot;:112.88732134477033,&quot;latitude&quot;:23.17180907979517},&quot;southwest&quot;:{&quot;longitude&quot;:112.88313709706998,&quot;latitude&quot;:23.16438178392009}}}',
+  'type' => 'end',
+  'causedBy' => 'update',
+  'page' => '1',
+  'latitude' => '23.16809543185764',
+  'longitude' => '112.88522922092014',
+  'wxapp_id' => '10001',
+  'token' => '51afff3c1a02b77a464232af5461afdb',
+)
+---------------------------------------------------------------
+[ 2022-05-30T11:42:15+08:00 ] 14.150.20.196 GET puzhenshop.feibu.info/index.php?s=/api/user.index/detail&wxapp_id=10001&token=51afff3c1a02b77a464232af5461afdb
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user.index',
+    2 => 'detail',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.18(0x1800123f) NetType/4G Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+  'token' => '51afff3c1a02b77a464232af5461afdb',
+)
+---------------------------------------------------------------
+[ 2022-05-30T14:38:35+08:00 ] 14.150.115.10 GET puzhenshop.feibu.info/index.php?s=/api/page/index&page_id=0&wxapp_id=10001&token=
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'page',
+    2 => 'index',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 12; M2012K11AC Build/SKQ1.211006.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3225 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/7767 MicroMessenger/8.0.22.2140(0x280016E6) WeChat/arm64 Weixin NetType/5G Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'page_id' => '0',
+  'wxapp_id' => '10001',
+  'token' => '',
+)
+---------------------------------------------------------------
+[ 2022-05-30T14:38:36+08:00 ] 14.150.115.10 GET puzhenshop.feibu.info/index.php?s=/api/page/banner&wxapp_id=10001&token=
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'page',
+    2 => 'banner',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 12; M2012K11AC Build/SKQ1.211006.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3225 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/7767 MicroMessenger/8.0.22.2140(0x280016E6) WeChat/arm64 Weixin NetType/5G Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+  'token' => '',
+)
+---------------------------------------------------------------
+[ 2022-05-30T14:38:40+08:00 ] 14.150.115.10 GET puzhenshop.feibu.info/index.php?s=/api/distributor/lists&page=1&latitude=23.170553656684028&longitude=112.88827256944444&wxapp_id=10001&token=
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor',
+    2 => 'lists',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 12; M2012K11AC Build/SKQ1.211006.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3225 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/7767 MicroMessenger/8.0.22.2140(0x280016E6) WeChat/arm64 Weixin NetType/5G Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'page' => '1',
+  'latitude' => '23.170553656684028',
+  'longitude' => '112.88827256944444',
+  'wxapp_id' => '10001',
+  'token' => '',
+)
+---------------------------------------------------------------
+[ 2022-05-30T14:38:41+08:00 ] 14.150.115.10 GET puzhenshop.feibu.info/index.php?s=/api/category/index&wxapp_id=10001&token=
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 12; M2012K11AC Build/SKQ1.211006.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3225 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/7767 MicroMessenger/8.0.22.2140(0x280016E6) WeChat/arm64 Weixin NetType/5G Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+  'token' => '',
+)
+---------------------------------------------------------------
+[ 2022-05-30T14:50:49+08:00 ] 14.150.20.196 GET puzhenshop.feibu.info/index.php?s=/api/page/index&page_id=0&wxapp_id=10001&token=51afff3c1a02b77a464232af5461afdb
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'page',
+    2 => 'index',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.18(0x1800123f) NetType/4G Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'page_id' => '0',
+  'wxapp_id' => '10001',
+  'token' => '51afff3c1a02b77a464232af5461afdb',
+)
+---------------------------------------------------------------
+[ 2022-05-30T14:50:50+08:00 ] 14.150.20.196 GET puzhenshop.feibu.info/index.php?s=/api/page/banner&wxapp_id=10001&token=51afff3c1a02b77a464232af5461afdb
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'page',
+    2 => 'banner',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.18(0x1800123f) NetType/4G Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+  'token' => '51afff3c1a02b77a464232af5461afdb',
+)
+---------------------------------------------------------------
+[ 2022-05-30T14:50:51+08:00 ] 14.150.20.196 GET puzhenshop.feibu.info/index.php?s=/api/distributor/lists&page=1&latitude=23.17056125217014&longitude=112.8879456922743&wxapp_id=10001&token=51afff3c1a02b77a464232af5461afdb
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor',
+    2 => 'lists',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.18(0x1800123f) NetType/4G Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'page' => '1',
+  'latitude' => '23.17056125217014',
+  'longitude' => '112.8879456922743',
+  'wxapp_id' => '10001',
+  'token' => '51afff3c1a02b77a464232af5461afdb',
+)
+---------------------------------------------------------------
+[ 2022-05-30T14:50:52+08:00 ] 14.150.20.196 GET puzhenshop.feibu.info/index.php?s=/api/category/index&wxapp_id=10001&token=51afff3c1a02b77a464232af5461afdb
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.18(0x1800123f) NetType/4G Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+  'token' => '51afff3c1a02b77a464232af5461afdb',
+)
+---------------------------------------------------------------
+[ 2022-05-30T14:50:55+08:00 ] 14.150.20.196 GET puzhenshop.feibu.info/index.php?s=/api/user.index/detail&wxapp_id=10001&token=51afff3c1a02b77a464232af5461afdb
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user.index',
+    2 => 'detail',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.18(0x1800123f) NetType/4G Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+  'token' => '51afff3c1a02b77a464232af5461afdb',
+)
+---------------------------------------------------------------
+[ 2022-05-30T14:50:59+08:00 ] 14.150.20.196 GET puzhenshop.feibu.info/index.php?s=/api/user.equipment/lists&page=1&wxapp_id=10001&token=51afff3c1a02b77a464232af5461afdb
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user.equipment',
+    2 => 'lists',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.18(0x1800123f) NetType/4G Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'page' => '1',
+  'wxapp_id' => '10001',
+  'token' => '51afff3c1a02b77a464232af5461afdb',
+)
+---------------------------------------------------------------
+[ 2022-05-30T14:51:04+08:00 ] 14.150.20.196 POST puzhenshop.feibu.info/index.php?s=/api/user/login
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.18(0x1800123f) NetType/4G Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '1058',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'code' => '001TlVFa1cvMgD08ZTGa1XPDga0TlVFz',
+  'user_info' => '{&quot;nickName&quot;:&quot;瑞&quot;,&quot;gender&quot;:0,&quot;language&quot;:&quot;zh_CN&quot;,&quot;city&quot;:&quot;&quot;,&quot;province&quot;:&quot;&quot;,&quot;country&quot;:&quot;&quot;,&quot;avatarUrl&quot;:&quot;https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJds65Dr1TlBLFScVoLDsibrxeBIusk93O8omV0bXxK2Im6gkCnWL5uwPwrcDVD7fny9qKgJakmrHQ/132&quot;}',
+  'encrypted_data' => 'az5+xTSpMpjL22qAKr/Oj3yqz2hB/gu9zuV/k7JKv7kz2jJQGFFovCkSJqZL6A4rMlDtMwy4H1gIvhVDwBbfC7M1dSWWlFGwIlpsMdKmcRpPqi7Pe/FAqfOgWCPltLGUx5bxhs8dlAeusWWHF0WfvtdZaFVEXjwwljlhmTbKyIX1V4WkRnznvUKzKRbhsy2BENRCL4J7bFi7lIW1IZ7GdxzM7vUxleo933fbyO1Lw4TNK2Oqwwh2u9lC8LyyzRb/q+YCyZL/lggikRRu3NAKOO1QKvTyzWuqOS+3WXLGG0uEGwl5uU8CyA2q39vDV2GaRc9Dv+W5eIqVDXg+9WixJ1yr9tL4FDnUDUgCXLJ3DOz+ITR7H2wovITP/FZJuMp5JwgWEPCuytEz5+MQEb9+P76BLWH+ytdVyhaGT+L/w+ggPulQpSoNavOvfn0OL6Y7iYCXOwiSW9vohDqbS7AoMA==',
+  'iv' => 'AiUCSO5XiZ9qVzu4cWUmzg==',
+  'signature' => '8c039c6b0d1d81b09aeef80d0786f9db7426b681',
+  'referee_id' => '',
+  'wxapp_id' => '10001',
+  'token' => '51afff3c1a02b77a464232af5461afdb',
+)
+---------------------------------------------------------------
+[ 2022-05-30T14:51:05+08:00 ] 14.150.20.196 GET puzhenshop.feibu.info/index.php?s=/api/user.equipment/lists&page=1&wxapp_id=10001&token=e6ed35b1b0ae5d1f52b3e882b966ce42
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user.equipment',
+    2 => 'lists',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.18(0x1800123f) NetType/4G Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'page' => '1',
+  'wxapp_id' => '10001',
+  'token' => 'e6ed35b1b0ae5d1f52b3e882b966ce42',
+)
+---------------------------------------------------------------
+[ 2022-05-30T14:51:15+08:00 ] 14.150.20.196 GET puzhenshop.feibu.info/index.php?s=/api/user.index/detail&wxapp_id=10001&token=e6ed35b1b0ae5d1f52b3e882b966ce42
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user.index',
+    2 => 'detail',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.18(0x1800123f) NetType/4G Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+  'token' => 'e6ed35b1b0ae5d1f52b3e882b966ce42',
+)
+---------------------------------------------------------------
+[ 2022-05-30T14:51:37+08:00 ] 14.150.20.196 GET puzhenshop.feibu.info/index.php?s=/api/user.index/detail&wxapp_id=10001&token=e6ed35b1b0ae5d1f52b3e882b966ce42
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user.index',
+    2 => 'detail',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.18(0x1800123f) NetType/4G Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+  'token' => 'e6ed35b1b0ae5d1f52b3e882b966ce42',
+)

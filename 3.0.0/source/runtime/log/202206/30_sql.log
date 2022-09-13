@@ -1,0 +1,21 @@
+---------------------------------------------------------------
+[ 2022-06-30T18:19:23+08:00 ] 116.21.15.70 POST puzhenshop.feibu.info/index.php?s=/factory/passport/login
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012232s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_wxapp` [ RunTime:0.009671s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_factory` [ RunTime:0.008995s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_factory_user` [ RunTime:0.009519s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_factory_user` WHERE  `user_name` = 'admin'  AND `password` = '66c63585eec964e89dedd44e73a11755'  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.007609s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_wxapp` WHERE  `wxapp_id` = 10001 [ RunTime:0.007399s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_factory` WHERE  `factory_id` = 1 [ RunTime:0.007419s ]
+---------------------------------------------------------------
+[ 2022-06-30T18:19:25+08:00 ] 116.21.15.70 GET puzhenshop.feibu.info/index.php?s=/factory/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.020714s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_factory` [ RunTime:0.011884s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_factory` WHERE  `puzhen_factory`.`wxapp_id` = 10001  AND `puzhen_factory`.`factory_id` = 1  AND `factory_id` = 1 LIMIT 1 [ RunTime:0.010193s ]
+[ sql ] [ SQL ] SELECT `status` FROM `puzhen_factory` WHERE  `puzhen_factory`.`wxapp_id` = 10001  AND `puzhen_factory`.`factory_id` = 1 LIMIT 1 [ RunTime:0.009852s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_factory_user` [ RunTime:0.011446s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_factory_user` WHERE  `puzhen_factory_user`.`wxapp_id` = 10001  AND `puzhen_factory_user`.`factory_id` = 1  AND `is_delete` = 0  AND `factory_user_id` = 10001 LIMIT 1 [ RunTime:0.010292s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_goods` [ RunTime:0.013067s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_goods` WHERE  `puzhen_goods`.`wxapp_id` = 10001  AND `puzhen_goods`.`factory_id` = 1  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.010444s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_tea_qrcode` [ RunTime:0.012714s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_tea_qrcode` WHERE  `puzhen_tea_qrcode`.`wxapp_id` = 10001  AND `puzhen_tea_qrcode`.`factory_id` = 1 LIMIT 1 [ RunTime:0.010330s ]

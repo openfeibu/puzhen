@@ -1,0 +1,2719 @@
+---------------------------------------------------------------
+[ 2022-05-16T11:08:39+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/page/banner&wxapp_id=10001&token=
+[运行时间：0.216452s] [吞吐率：4.62req/s] [内存消耗：2,985.70kb] [文件加载：77]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'page',
+    2 => 'banner',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+  'token' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.001283s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Page->banner[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Page.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T11:08:39+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/page/index&page_id=0&wxapp_id=10001&token=
+[运行时间：0.315133s] [吞吐率：3.17req/s] [内存消耗：3,506.88kb] [文件加载：91]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'page',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page_id' => '0',
+  'wxapp_id' => '10001',
+  'token' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.001250s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Page->index[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Page.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T11:08:40+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/distributor/detail&distributor_id=1&wxapp_id=10001&token=
+[运行时间：0.133034s] [吞吐率：7.52req/s] [内存消耗：7,512.71kb] [文件加载：83]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'distributor_id' => '1',
+  'wxapp_id' => '10001',
+  'token' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000183s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Distributor->detail[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Distributor.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T11:08:41+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/distributor.goods/lists&page=1&distributor_id=1&wxapp_id=10001&token=
+[运行时间：0.242765s] [吞吐率：4.12req/s] [内存消耗：3,336.57kb] [文件加载：89]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor.goods',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'distributor_id' => '1',
+  'wxapp_id' => '10001',
+  'token' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000223s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\distributor\Goods->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\distributor\Goods.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T11:08:43+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/page/banner&wxapp_id=10001&token=
+[运行时间：0.106781s] [吞吐率：9.36req/s] [内存消耗：2,984.98kb] [文件加载：77]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'page',
+    2 => 'banner',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+  'token' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000195s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Page->banner[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Page.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T11:08:43+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/page/index&page_id=0&wxapp_id=10001&token=
+[运行时间：0.179383s] [吞吐率：5.57req/s] [内存消耗：3,506.17kb] [文件加载：91]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'page',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page_id' => '0',
+  'wxapp_id' => '10001',
+  'token' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000198s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Page->index[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Page.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T11:08:45+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/tea_qrcode/lists&page=1&wxapp_id=10001&token=
+[运行时间：0.091346s] [吞吐率：10.95req/s] [内存消耗：2,909.10kb] [文件加载：74]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'tea_qrcode',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'wxapp_id' => '10001',
+  'token' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000186s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\TeaQrcode->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\TeaQrcode.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T11:08:52+08:00 ] 218.19.206.239 POST puzhenshop.feibu.info/index.php?s=/api/user/login
+[运行时间：0.727151s] [吞吐率：1.38req/s] [内存消耗：3,121.11kb] [文件加载：83]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'content-length' => '1037',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'code' => '013aAOll2P77c94LP5ll2x03u01aAOlp',
+  'user_info' => '{&quot;nickName&quot;:&quot;🚲Allen(^_^)&quot;,&quot;gender&quot;:0,&quot;language&quot;:&quot;zh_CN&quot;,&quot;city&quot;:&quot;&quot;,&quot;province&quot;:&quot;&quot;,&quot;country&quot;:&quot;&quot;,&quot;avatarUrl&quot;:&quot;https://thirdwx.qlogo.cn/mmopen/vi_32/Mb6hMmpR9Oia0sMJhvRM7FZHXsXdnKia8WQUkN7iccY1glibnwxiby5haLIclAiaCqMJSicDNPEEHdfsOZPahcOa3OLCg/132&quot;}',
+  'encrypted_data' => 'Xa90MUQKHCzZyVLKxyyRkHWuBe1SshjE8c9oJzpa6yh4mKdlCCcLc7PQTd4Bt81zeqQRqzwU9CAkl9S/7lBEfzK085XBhf81f4Qbh0liNfv1hqOTmemIS9ixYBDqtK+O59LTrlTfRGf03Hc1lwC6/t7gP416oqQMHh3dSPTtgF6nnEvkR6RqQWTvkKC6ZKwvuDQ2X6xW8pFojavNMgM6HlXFJ7n/X8QoDxwYRwkCfF8+/TPHyXPEsaRBn1D4Eq3k1EHr+oC159a9a9mCj65UKHZ/TBvcEEClmjK1ZNlO5kvh5rLSVkHIXiBRmuYPZmGMNGRqBHJe2YGnj4JF/qhpuKJjhaP+DIvbjIqp5XWWYcVo/Lv4hs33Pbsj8iZhE7kNrNCNhVInkgbcacpeEinszwUv1SYcmrbpsypcPJDkQ2ni4l39toMF/Rx8dXvS6cEHx22GL1m5vrLd/pURGYWxyg==',
+  'iv' => 'VjB1c4RBzDsKWiz49T3xtQ==',
+  'signature' => 'e433ccd77e4dd7b0ce6f4213614286776d27107f',
+  'referee_id' => '',
+  'wxapp_id' => '10001',
+  'token' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000256s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->login[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\User.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T14:17:16+08:00 ] 220.198.220.251 GET puzhenshop.feibu.info/index.php?s=/api/page/index&page_id=0&wxapp_id=10001&token=
+[运行时间：0.220823s] [吞吐率：4.53req/s] [内存消耗：3,505.66kb] [文件加载：91]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'page',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3211 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x28001651) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page_id' => '0',
+  'wxapp_id' => '10001',
+  'token' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000328s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Page->index[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Page.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T14:17:17+08:00 ] 220.198.220.251 GET puzhenshop.feibu.info/index.php?s=/api/page/banner&wxapp_id=10001&token=
+[运行时间：0.118491s] [吞吐率：8.44req/s] [内存消耗：2,983.77kb] [文件加载：77]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'page',
+    2 => 'banner',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3211 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x28001651) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+  'token' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000206s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Page->banner[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Page.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T14:19:47+08:00 ] 220.198.220.251 GET puzhenshop.feibu.info/index.php?s=/api/category/index&wxapp_id=10001&token=
+[运行时间：0.099608s] [吞吐率：10.04req/s] [内存消耗：2,931.41kb] [文件加载：75]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3211 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x28001651) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+  'token' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000395s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Category->index[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Category.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T14:19:50+08:00 ] 220.198.220.251 GET puzhenshop.feibu.info/index.php?s=/api/goods/lists&page=1&sortType=all&sort=&category_id=10004&search=&wxapp_id=10001&token=
+[运行时间：0.191238s] [吞吐率：5.23req/s] [内存消耗：3,442.16kb] [文件加载：92]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'goods',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3211 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x28001651) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'sortType' => 'all',
+  'sort' => '',
+  'category_id' => '10004',
+  'search' => '',
+  'wxapp_id' => '10001',
+  'token' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000188s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Goods->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Goods.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T14:19:54+08:00 ] 220.198.220.251 GET puzhenshop.feibu.info/index.php?s=/api/goods/detail&goods_id=10010&wxapp_id=10001&token=
+[运行时间：0.328769s] [吞吐率：3.04req/s] [内存消耗：3,805.28kb] [文件加载：109]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'goods',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3211 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x28001651) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'goods_id' => '10010',
+  'wxapp_id' => '10001',
+  'token' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000249s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Goods->detail[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Goods.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T14:20:00+08:00 ] 220.198.220.251 GET puzhenshop.feibu.info/index.php?s=/api/tea_qrcode/detail&tea_qrcode_id=187&wxapp_id=10001&token=
+[运行时间：0.084778s] [吞吐率：11.80req/s] [内存消耗：2,882.04kb] [文件加载：71]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'tea_qrcode',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3211 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x28001651) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'tea_qrcode_id' => '187',
+  'wxapp_id' => '10001',
+  'token' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000181s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\TeaQrcode->detail[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\TeaQrcode.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T14:20:00+08:00 ] 220.198.220.251 GET puzhenshop.feibu.info/index.php?s=/api/tea_qrcode_comment/lists/tea_qrcode_id/187&wxapp_id=10001&token=
+[运行时间：0.162082s] [吞吐率：6.17req/s] [内存消耗：3,143.04kb] [文件加载：82]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'tea_qrcode_comment',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3211 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x28001651) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+  'token' => '',
+  'tea_qrcode_id' => '187',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000206s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\TeaQrcodeComment->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\TeaQrcodeComment.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T14:20:17+08:00 ] 220.198.220.251 GET puzhenshop.feibu.info/index.php?s=/api/goods/detail&goods_id=10010&wxapp_id=10001&token=
+[运行时间：0.333083s] [吞吐率：3.00req/s] [内存消耗：3,805.99kb] [文件加载：109]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'goods',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3211 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x28001651) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'goods_id' => '10010',
+  'wxapp_id' => '10001',
+  'token' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000329s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Goods->detail[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Goods.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T14:20:42+08:00 ] 220.198.220.251 GET puzhenshop.feibu.info/index.php?s=/api/tea_qrcode/lists&page=1&wxapp_id=10001&token=
+[运行时间：0.070588s] [吞吐率：14.17req/s] [内存消耗：2,908.59kb] [文件加载：74]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'tea_qrcode',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3211 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x28001651) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'wxapp_id' => '10001',
+  'token' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000366s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\TeaQrcode->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\TeaQrcode.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T14:20:52+08:00 ] 220.198.220.251 POST puzhenshop.feibu.info/index.php?s=/api/user/login
+[运行时间：0.764069s] [吞吐率：1.31req/s] [内存消耗：3,121.08kb] [文件加载：83]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3211 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x28001651) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'content-length' => '1028',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'code' => '073P5Ukl2OyPa94eEDll2Jm41u1P5UkE',
+  'user_info' => '{&quot;nickName&quot;:&quot;贤&quot;,&quot;gender&quot;:0,&quot;language&quot;:&quot;zh_CN&quot;,&quot;city&quot;:&quot;&quot;,&quot;province&quot;:&quot;&quot;,&quot;country&quot;:&quot;&quot;,&quot;avatarUrl&quot;:&quot;https://thirdwx.qlogo.cn/mmopen/vi_32/6KiaaXvPRNG9hiblw6U5jicpnibA97ejgawGq1CMrzloXB7kgPFv4giahHLdOq5zeFNP1mNvZNwGreW9CqbkvkhTyjQ/132&quot;}',
+  'encrypted_data' => '5QN61ebyMiAvkfsZCUtvQ7xxVVyKpF+2Iq1I+AzSuYwM/pzjZemS9L5v2CyIeKWNv8m5hJdXH789rTh4h11KuCWt48cUdH+hQ5Jcuo+yiXDoKNUIKWamIiI8x2a6OWCs25iAFL3Lug4hdYLWxKSTC/n35CBfJhOWX1GnEmldzWPocFYzVivCg9jvasJrsEK5DejCot8PfyZMr9wqsTJ0b1NjyyuAgCFIUbMvI4LvBCCK5z9Ku0zi73h9Dw+FC94XXQeuV86kfJTym3f7xgH8aWnJXIbrxzF//58LRuYrRjWqAtwO9BayMH64YGrtmGAwTwxKUooQB+PpBzpbsco1Wd2Is4N91iRFURuIQM+JpzGSt0YSEbgq7eVVkeWDwn9j6Z2dy2LZWgT/Htnfiua9TZmTECcINlYd/wbBJ3MyC1drSX62ADsw/s5WbiZvcjX6xR5uq1l+CUK9w/avaQfDlA==',
+  'iv' => 'CWlWFRmG/GmVjZ+45qHzlw==',
+  'signature' => '25d80b4d4a02d67d8fb4738ecf3f0079637b9ce2',
+  'referee_id' => '',
+  'wxapp_id' => '10001',
+  'token' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000236s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\User->login[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\User.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T14:22:14+08:00 ] 220.198.220.251 GET puzhenshop.feibu.info/index.php?s=/api/goods/lists&page=1&sortType=all&sort=&category_id=10004&search=&wxapp_id=10001&token=961caeda4a275cc0734e2ec3b1a74a7a
+[运行时间：0.347955s] [吞吐率：2.87req/s] [内存消耗：3,636.27kb] [文件加载：101]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'goods',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3211 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x28001651) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'sortType' => 'all',
+  'sort' => '',
+  'category_id' => '10004',
+  'search' => '',
+  'wxapp_id' => '10001',
+  'token' => '961caeda4a275cc0734e2ec3b1a74a7a',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000509s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Goods->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Goods.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.022017s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.022035s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T14:27:46+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/store/shop/index
+[运行时间：0.197876s] [吞吐率：5.05req/s] [内存消耗：7,986.84kb] [文件加载：94]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'shop',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1646725906,1648092911; __root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/distributor/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000401s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\Shop->index[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\Shop.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\shop\index.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T14:27:48+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/store/shop.clerk/index
+[运行时间：0.139160s] [吞吐率：7.19req/s] [内存消耗：3,658.61kb] [文件加载：95]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'shop.clerk',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1646725906,1648092911; __root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/shop/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000220s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\shop\Clerk->index[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\shop\Clerk.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\shop\clerk\index.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'list',
+  9 => 'shopList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T14:27:49+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/store/shop.order/index
+[运行时间：0.127671s] [吞吐率：7.83req/s] [内存消耗：3,617.39kb] [文件加载：95]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'shop.order',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1646725906,1648092911; __root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/shop.clerk/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000204s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\shop\Order->index[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\shop\Order.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\shop\order\index.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'list',
+  9 => 'shopList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T14:27:50+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/store/order/all_list
+[运行时间：0.258428s] [吞吐率：3.87req/s] [内存消耗：4,150.14kb] [文件加载：117]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'order',
+    2 => 'all_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1646725906,1648092911; __root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/shop.order/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000190s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\Order->all_list[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\Order.php ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\Order @order [ RunTime:0.000021s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\Order @order [ RunTime:0.003789s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\sharp\Order @order [ RunTime:0.029304s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\Order @order [ RunTime:0.029315s ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\order\index.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'title',
+  9 => 'dataType',
+  10 => 'list',
+  11 => 'shopList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T14:40:59+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/store/order/all_list
+[运行时间：0.275189s] [吞吐率：3.63req/s] [内存消耗：4,101.02kb] [文件加载：114]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'order',
+    2 => 'all_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1646725906,1648092911; __root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/shop.order/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000341s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\Order->all_list[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\Order.php ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\Order @order [ RunTime:0.000239s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\sharp\Order @order [ RunTime:0.058186s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\Order @order [ RunTime:0.058203s ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\order\index.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'title',
+  9 => 'dataType',
+  10 => 'list',
+  11 => 'shopList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T15:52:50+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/admin/passport/login
+[运行时间：0.040664s] [吞吐率：24.59req/s] [内存消耗：1,781.94kb] [文件加载：61]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'passport',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__gads=ID=00d075fa159d8ac8:T=1597915774:S=ALNI_MZogTGW2LAF0H_NTkBymWmUYtnOxQ; __root_domain_v=.feibu.info; _qddaz=QD.932230466496504; PHPSESSID=4ffaifijht021p2df4b5nq4mmq; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652667143; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652667143',
+  'accept-language' => 'en,zh-CN;q=0.9,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'dnt' => '1',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000341s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Passport->login[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\admin\controller\Passport.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/admin\view\passport\login.php [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:02:36+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/distributor/detail&distributor_id=1&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.218538s] [吞吐率：4.58req/s] [内存消耗：7,830.20kb] [文件加载：94]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'distributor_id' => '1',
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000375s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Distributor->detail[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Distributor.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.020758s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.020777s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:02:37+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/distributor.goods/lists&page=1&distributor_id=1&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.346694s] [吞吐率：2.88req/s] [内存消耗：3,645.09kb] [文件加载：100]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor.goods',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'distributor_id' => '1',
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000190s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\distributor\Goods->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\distributor\Goods.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000164s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000176s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:02:47+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/page/index&page_id=0&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.343397s] [吞吐率：2.91req/s] [内存消耗：3,742.70kb] [文件加载：102]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'page',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page_id' => '0',
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000193s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Page->index[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Page.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000166s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000181s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:02:48+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/page/banner&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.096657s] [吞吐率：10.35req/s] [内存消耗：2,985.17kb] [文件加载：77]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'page',
+    2 => 'banner',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000213s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Page->banner[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Page.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:02:50+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/tea_qrcode/lists&page=1&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.378792s] [吞吐率：2.64req/s] [内存消耗：3,396.59kb] [文件加载：91]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'tea_qrcode',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000194s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\TeaQrcode->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\TeaQrcode.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000233s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000247s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:06:23+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/distributor/detail&distributor_id=1&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.207324s] [吞吐率：4.82req/s] [内存消耗：7,808.34kb] [文件加载：93]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'distributor_id' => '1',
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000343s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Distributor->detail[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Distributor.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000279s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000291s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:06:24+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/distributor.goods/lists&page=1&distributor_id=1&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.261538s] [吞吐率：3.82req/s] [内存消耗：3,645.09kb] [文件加载：100]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor.goods',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'distributor_id' => '1',
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000199s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\distributor\Goods->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\distributor\Goods.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000140s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000151s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:09:55+08:00 ] 220.198.220.251 GET puzhenshop.feibu.info/index.php?s=/api/page/index&page_id=0&wxapp_id=10001&token=961caeda4a275cc0734e2ec3b1a74a7a
+[运行时间：0.332344s] [吞吐率：3.01req/s] [内存消耗：3,742.20kb] [文件加载：102]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'page',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3211 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x28001651) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page_id' => '0',
+  'wxapp_id' => '10001',
+  'token' => '961caeda4a275cc0734e2ec3b1a74a7a',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000477s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Page->index[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Page.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000353s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000371s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:09:56+08:00 ] 220.198.220.251 GET puzhenshop.feibu.info/index.php?s=/api/page/banner&wxapp_id=10001&token=961caeda4a275cc0734e2ec3b1a74a7a
+[运行时间：0.103448s] [吞吐率：9.67req/s] [内存消耗：2,983.95kb] [文件加载：77]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'page',
+    2 => 'banner',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3211 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x28001651) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+  'token' => '961caeda4a275cc0734e2ec3b1a74a7a',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000204s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Page->banner[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Page.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:10:02+08:00 ] 220.198.220.251 GET puzhenshop.feibu.info/index.php?s=/api/distributor/lists&page=1&latitude=&longitude=&wxapp_id=10001&token=961caeda4a275cc0734e2ec3b1a74a7a
+[运行时间：0.118775s] [吞吐率：8.42req/s] [内存消耗：7,520.91kb] [文件加载：84]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3211 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x28001651) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'latitude' => '',
+  'longitude' => '',
+  'wxapp_id' => '10001',
+  'token' => '961caeda4a275cc0734e2ec3b1a74a7a',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000220s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Distributor->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Distributor.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:10:10+08:00 ] 220.198.220.251 GET puzhenshop.feibu.info/index.php?s=/api/distributor/lists&page=1&latitude=&longitude=&wxapp_id=10001&token=961caeda4a275cc0734e2ec3b1a74a7a
+[运行时间：0.130486s] [吞吐率：7.66req/s] [内存消耗：7,520.91kb] [文件加载：84]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3211 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x28001651) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'latitude' => '',
+  'longitude' => '',
+  'wxapp_id' => '10001',
+  'token' => '961caeda4a275cc0734e2ec3b1a74a7a',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000194s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Distributor->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Distributor.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:10:17+08:00 ] 220.198.220.251 GET puzhenshop.feibu.info/index.php?s=/api/distributor/lists&page=1&latitude=&longitude=&wxapp_id=10001&token=961caeda4a275cc0734e2ec3b1a74a7a
+[运行时间：0.136985s] [吞吐率：7.30req/s] [内存消耗：7,520.91kb] [文件加载：84]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3211 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x28001651) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'latitude' => '',
+  'longitude' => '',
+  'wxapp_id' => '10001',
+  'token' => '961caeda4a275cc0734e2ec3b1a74a7a',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000185s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Distributor->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Distributor.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:10:26+08:00 ] 220.198.220.251 GET puzhenshop.feibu.info/index.php?s=/api/distributor/lists&page=1&latitude=23.101539171006944&longitude=113.22265733506944&wxapp_id=10001&token=961caeda4a275cc0734e2ec3b1a74a7a
+[运行时间：0.142970s] [吞吐率：6.99req/s] [内存消耗：7,521.75kb] [文件加载：84]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3211 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x28001651) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'latitude' => '23.101539171006944',
+  'longitude' => '113.22265733506944',
+  'wxapp_id' => '10001',
+  'token' => '961caeda4a275cc0734e2ec3b1a74a7a',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000347s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Distributor->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Distributor.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:10:27+08:00 ] 220.198.220.251 GET puzhenshop.feibu.info/index.php?s=/api/distributor/lists&page=1&latitude=23.101539171006944&longitude=113.22265733506944&wxapp_id=10001&token=961caeda4a275cc0734e2ec3b1a74a7a
+[运行时间：0.134792s] [吞吐率：7.42req/s] [内存消耗：7,521.04kb] [文件加载：84]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3211 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x28001651) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'latitude' => '23.101539171006944',
+  'longitude' => '113.22265733506944',
+  'wxapp_id' => '10001',
+  'token' => '961caeda4a275cc0734e2ec3b1a74a7a',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000266s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Distributor->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Distributor.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:10:29+08:00 ] 220.198.220.251 GET puzhenshop.feibu.info/index.php?s=/api/distributor/lists&target=%7B%22dataset%22%3A%7B%7D%2C%22id%22%3A%22map%22%2C%22offsetTop%22%3A0%2C%22offsetLeft%22%3A0%7D&currentTarget=%7B%22dataset%22%3A%7B%7D%2C%22id%22%3A%22map%22%2C%22offsetTop%22%3A0%2C%22offsetLeft%22%3A0%7D&timeStamp=1652688627770&touches=%5B%5D&detail=%7B%22type%22%3A%22begin%22%7D&type=begin&causedBy=update&page=1&latitude=23.101539171006944&longitude=113.22265733506944&wxapp_id=10001&token=961caeda4a275cc0734e2ec3b1a74a7a
+[运行时间：0.126216s] [吞吐率：7.92req/s] [内存消耗：7,524.29kb] [文件加载：84]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3211 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x28001651) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'target' => '{&quot;dataset&quot;:{},&quot;id&quot;:&quot;map&quot;,&quot;offsetTop&quot;:0,&quot;offsetLeft&quot;:0}',
+  'currentTarget' => '{&quot;dataset&quot;:{},&quot;id&quot;:&quot;map&quot;,&quot;offsetTop&quot;:0,&quot;offsetLeft&quot;:0}',
+  'timeStamp' => '1652688627770',
+  'touches' => '[]',
+  'detail' => '{&quot;type&quot;:&quot;begin&quot;}',
+  'type' => 'begin',
+  'causedBy' => 'update',
+  'page' => '1',
+  'latitude' => '23.101539171006944',
+  'longitude' => '113.22265733506944',
+  'wxapp_id' => '10001',
+  'token' => '961caeda4a275cc0734e2ec3b1a74a7a',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000224s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Distributor->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Distributor.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:10:29+08:00 ] 220.198.220.251 GET puzhenshop.feibu.info/index.php?s=/api/distributor/lists&target=%7B%22dataset%22%3A%7B%7D%2C%22id%22%3A%22map%22%2C%22offsetTop%22%3A0%2C%22offsetLeft%22%3A0%7D&currentTarget=%7B%22dataset%22%3A%7B%7D%2C%22id%22%3A%22map%22%2C%22offsetTop%22%3A0%2C%22offsetLeft%22%3A0%7D&timeStamp=1652688627827&touches=%5B%5D&detail=%7B%22type%22%3A%22end%22%2C%22rotate%22%3A0%2C%22skew%22%3A0%2C%22scale%22%3A17%2C%22centerLocation%22%3A%7B%22latitude%22%3A23.101539%2C%22longitude%22%3A113.222656%7D%2C%22region%22%3A%7B%22southwest%22%3A%7B%22latitude%22%3A23.098061%2C%22longitude%22%3A113.220725%7D%2C%22northeast%22%3A%7B%22latitude%22%3A23.105017%2C%22longitude%22%3A113.224586%7D%7D%7D&type=end&causedBy=update&page=1&latitude=23.101539171006944&longitude=113.22265733506944&wxapp_id=10001&token=961caeda4a275cc0734e2ec3b1a74a7a
+[运行时间：0.151602s] [吞吐率：6.60req/s] [内存消耗：7,528.00kb] [文件加载：84]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3211 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x28001651) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'target' => '{&quot;dataset&quot;:{},&quot;id&quot;:&quot;map&quot;,&quot;offsetTop&quot;:0,&quot;offsetLeft&quot;:0}',
+  'currentTarget' => '{&quot;dataset&quot;:{},&quot;id&quot;:&quot;map&quot;,&quot;offsetTop&quot;:0,&quot;offsetLeft&quot;:0}',
+  'timeStamp' => '1652688627827',
+  'touches' => '[]',
+  'detail' => '{&quot;type&quot;:&quot;end&quot;,&quot;rotate&quot;:0,&quot;skew&quot;:0,&quot;scale&quot;:17,&quot;centerLocation&quot;:{&quot;latitude&quot;:23.101539,&quot;longitude&quot;:113.222656},&quot;region&quot;:{&quot;southwest&quot;:{&quot;latitude&quot;:23.098061,&quot;longitude&quot;:113.220725},&quot;northeast&quot;:{&quot;latitude&quot;:23.105017,&quot;longitude&quot;:113.224586}}}',
+  'type' => 'end',
+  'causedBy' => 'update',
+  'page' => '1',
+  'latitude' => '23.101539171006944',
+  'longitude' => '113.22265733506944',
+  'wxapp_id' => '10001',
+  'token' => '961caeda4a275cc0734e2ec3b1a74a7a',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000344s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Distributor->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Distributor.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:10:39+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/page/index&page_id=0&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.292728s] [吞吐率：3.42req/s] [内存消耗：3,743.41kb] [文件加载：102]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'page',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page_id' => '0',
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000367s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Page->index[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Page.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000489s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000511s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:10:40+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/page/banner&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.126223s] [吞吐率：7.92req/s] [内存消耗：2,985.17kb] [文件加载：77]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'page',
+    2 => 'banner',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000262s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Page->banner[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Page.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:10:43+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/tea_qrcode/lists&page=1&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.334298s] [吞吐率：2.99req/s] [内存消耗：3,396.59kb] [文件加载：91]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'tea_qrcode',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000276s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\TeaQrcode->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\TeaQrcode.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000150s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000162s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:10:57+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/distributor/detail&distributor_id=1&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.211867s] [吞吐率：4.72req/s] [内存消耗：7,808.34kb] [文件加载：93]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'distributor_id' => '1',
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000357s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Distributor->detail[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Distributor.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000358s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000371s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:10:58+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/distributor.goods/lists&page=1&distributor_id=1&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.313650s] [吞吐率：3.19req/s] [内存消耗：3,645.09kb] [文件加载：100]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor.goods',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'distributor_id' => '1',
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000209s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\distributor\Goods->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\distributor\Goods.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000163s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000174s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:11:01+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/page/index&page_id=0&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.325708s] [吞吐率：3.07req/s] [内存消耗：3,742.70kb] [文件加载：102]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'page',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page_id' => '0',
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000200s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Page->index[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Page.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000171s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000189s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:11:02+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/page/banner&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.119167s] [吞吐率：8.39req/s] [内存消耗：2,985.17kb] [文件加载：77]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'page',
+    2 => 'banner',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000264s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Page->banner[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Page.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:11:04+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/page/index&page_id=0&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.309649s] [吞吐率：3.23req/s] [内存消耗：3,742.70kb] [文件加载：102]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'page',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page_id' => '0',
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000255s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Page->index[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Page.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000237s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000257s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:11:05+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/page/banner&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.099713s] [吞吐率：10.03req/s] [内存消耗：2,985.17kb] [文件加载：77]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'page',
+    2 => 'banner',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000198s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Page->banner[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Page.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:11:14+08:00 ] 220.198.220.251 GET puzhenshop.feibu.info/index.php?s=/api/category/index&wxapp_id=10001&token=961caeda4a275cc0734e2ec3b1a74a7a
+[运行时间：0.089021s] [吞吐率：11.23req/s] [内存消耗：2,930.89kb] [文件加载：75]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3211 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x28001651) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+  'token' => '961caeda4a275cc0734e2ec3b1a74a7a',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000189s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Category->index[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Category.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:11:16+08:00 ] 220.198.220.251 GET puzhenshop.feibu.info/index.php?s=/api/goods/lists&page=1&sortType=all&sort=&category_id=10004&search=&wxapp_id=10001&token=961caeda4a275cc0734e2ec3b1a74a7a
+[运行时间：0.320710s] [吞吐率：3.12req/s] [内存消耗：3,614.34kb] [文件加载：100]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'goods',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3211 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x28001651) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'sortType' => 'all',
+  'sort' => '',
+  'category_id' => '10004',
+  'search' => '',
+  'wxapp_id' => '10001',
+  'token' => '961caeda4a275cc0734e2ec3b1a74a7a',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000214s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Goods->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Goods.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000221s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000239s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:11:21+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/tea_qrcode/lists&page=1&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.259606s] [吞吐率：3.85req/s] [内存消耗：3,396.59kb] [文件加载：91]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'tea_qrcode',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000227s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\TeaQrcode->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\TeaQrcode.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000155s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000167s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:11:23+08:00 ] 220.198.220.251 GET puzhenshop.feibu.info/index.php?s=/api/goods/lists&page=1&sortType=all&sort=&category_id=10004&search=&wxapp_id=10001&token=961caeda4a275cc0734e2ec3b1a74a7a
+[运行时间：0.263277s] [吞吐率：3.80req/s] [内存消耗：3,614.34kb] [文件加载：100]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'goods',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3211 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x28001651) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'sortType' => 'all',
+  'sort' => '',
+  'category_id' => '10004',
+  'search' => '',
+  'wxapp_id' => '10001',
+  'token' => '961caeda4a275cc0734e2ec3b1a74a7a',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000198s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Goods->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Goods.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000166s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000179s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:11:25+08:00 ] 220.198.220.251 GET puzhenshop.feibu.info/index.php?s=/api/goods/detail&goods_id=10010&wxapp_id=10001&token=961caeda4a275cc0734e2ec3b1a74a7a
+[运行时间：0.421086s] [吞吐率：2.37req/s] [内存消耗：4,029.20kb] [文件加载：119]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'goods',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3211 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x28001651) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'goods_id' => '10010',
+  'wxapp_id' => '10001',
+  'token' => '961caeda4a275cc0734e2ec3b1a74a7a',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000296s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Goods->detail[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Goods.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000212s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000227s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:11:56+08:00 ] 220.198.220.251 GET puzhenshop.feibu.info/index.php?s=/api/distributor/lists&page=1&latitude=23.101539171006944&longitude=113.22265733506944&wxapp_id=10001&token=961caeda4a275cc0734e2ec3b1a74a7a
+[运行时间：0.118337s] [吞吐率：8.45req/s] [内存消耗：7,521.75kb] [文件加载：84]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 11; PCAM00 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/86.0.4240.99 XWEB/3211 MMWEBSDK/20220402 Mobile Safari/537.36 MMWEBID/1497 MicroMessenger/8.0.22.2140(0x28001651) WeChat/arm64 Weixin NetType/WIFI Language/zh_CN ABI/arm64 MiniProgramEnv/android',
+  'charset' => 'utf-8',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'latitude' => '23.101539171006944',
+  'longitude' => '113.22265733506944',
+  'wxapp_id' => '10001',
+  'token' => '961caeda4a275cc0734e2ec3b1a74a7a',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000328s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Distributor->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Distributor.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:12:15+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/page/index&page_id=0&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.284875s] [吞吐率：3.51req/s] [内存消耗：3,743.41kb] [文件加载：102]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'page',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page_id' => '0',
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000317s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Page->index[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Page.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000271s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000283s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:12:15+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/page/banner&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.101636s] [吞吐率：9.84req/s] [内存消耗：2,985.17kb] [文件加载：77]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'page',
+    2 => 'banner',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000184s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Page->banner[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Page.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:12:17+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/tea_qrcode/lists&page=1&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.296344s] [吞吐率：3.37req/s] [内存消耗：3,396.59kb] [文件加载：91]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'tea_qrcode',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000259s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\TeaQrcode->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\TeaQrcode.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000177s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000197s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:13:56+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/tea_qrcode/lists&page=1&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.334274s] [吞吐率：2.99req/s] [内存消耗：3,419.16kb] [文件加载：92]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'tea_qrcode',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000382s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\TeaQrcode->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\TeaQrcode.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.020909s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.020930s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:13:57+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/tea_qrcode/detail&tea_qrcode_id=199&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.097998s] [吞吐率：10.20req/s] [内存消耗：2,883.48kb] [文件加载：71]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'tea_qrcode',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'tea_qrcode_id' => '199',
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000212s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\TeaQrcode->detail[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\TeaQrcode.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:19:02+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/user.equipment/lists&page=1&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.220386s] [吞吐率：4.54req/s] [内存消耗：3,462.46kb] [文件加载：95]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user.equipment',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000327s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000381s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000400s ]
+[ info ] [ RUN ] app\api\controller\user\Equipment->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\user\Equipment.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:19:17+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/user.equipment/detail/equipment&user_equipment_id=32&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.235360s] [吞吐率：4.25req/s] [内存消耗：3,456.66kb] [文件加载：94]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user.equipment',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'user_equipment_id' => '32',
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000424s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000256s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000268s ]
+[ info ] [ RUN ] app\api\controller\user\Equipment->detail[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\user\Equipment.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:19:19+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/user.equipment/lists&page=1&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.201674s] [吞吐率：4.96req/s] [内存消耗：3,461.75kb] [文件加载：95]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user.equipment',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000194s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000150s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000161s ]
+[ info ] [ RUN ] app\api\controller\user\Equipment->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\user\Equipment.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:30:27+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/user.equipment/lists&page=2&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.224650s] [吞吐率：4.45req/s] [内存消耗：3,483.66kb] [文件加载：96]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user.equipment',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '2',
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000352s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.020547s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.020567s ]
+[ info ] [ RUN ] app\api\controller\user\Equipment->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\user\Equipment.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:30:33+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/user.equipment/detail/equipment&user_equipment_id=7&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.206206s] [吞吐率：4.85req/s] [内存消耗：3,454.61kb] [文件加载：94]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user.equipment',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'user_equipment_id' => '7',
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000191s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000161s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000173s ]
+[ info ] [ RUN ] app\api\controller\user\Equipment->detail[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\user\Equipment.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:30:36+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/user.equipment/lists&page=1&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.181775s] [吞吐率：5.50req/s] [内存消耗：3,461.75kb] [文件加载：95]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user.equipment',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000189s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000149s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000161s ]
+[ info ] [ RUN ] app\api\controller\user\Equipment->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\user\Equipment.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:30:38+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/category/index&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.101908s] [吞吐率：9.81req/s] [内存消耗：2,932.11kb] [文件加载：75]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'category',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000261s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Category->index[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Category.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:30:41+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/distributor/lists&page=1&latitude=&longitude=&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.136439s] [吞吐率：7.33req/s] [内存消耗：7,521.88kb] [文件加载：84]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'latitude' => '',
+  'longitude' => '',
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000188s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Distributor->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Distributor.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:30:47+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/distributor/lists&page=1&latitude=23.12908&longitude=113.26436&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.118490s] [吞吐率：8.44req/s] [内存消耗：7,521.88kb] [文件加载：84]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'latitude' => '23.12908',
+  'longitude' => '113.26436',
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000184s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Distributor->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Distributor.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:30:49+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/distributor/lists&page=1&latitude=23.12908&longitude=113.26436&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.138830s] [吞吐率：7.20req/s] [内存消耗：7,521.88kb] [文件加载：84]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'latitude' => '23.12908',
+  'longitude' => '113.26436',
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000192s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Distributor->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Distributor.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:38:11+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/distributor/detail&distributor_id=1&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.236789s] [吞吐率：4.22req/s] [内存消耗：7,808.34kb] [文件加载：93]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'distributor_id' => '1',
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000423s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Distributor->detail[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Distributor.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000249s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000262s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:38:12+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/distributor.goods/lists&page=1&distributor_id=1&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.346134s] [吞吐率：2.89req/s] [内存消耗：3,645.09kb] [文件加载：100]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'distributor.goods',
+    2 => 'lists',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page' => '1',
+  'distributor_id' => '1',
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000206s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\distributor\Goods->lists[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\distributor\Goods.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000144s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000156s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T16:38:18+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/user.index/detail&wxapp_id=10001&token=a984ab294d26360a7aa4b567d9d8e65b
+[运行时间：0.219830s] [吞吐率：4.55req/s] [内存消耗：3,706.31kb] [文件加载：111]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'user.index',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'https://servicewechat.com/wx6433138919cd9715/devtools/page-frame.html',
+  'accept' => '*/*',
+  'content-type' => 'application/json',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1 wechatdevtools/1.05.2109131 MicroMessenger/8.0.5 Language/zh_CN webview/',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+  'token' => 'a984ab294d26360a7aa4b567d9d8e65b',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000184s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\user\Index->detail[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\user\Index.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000160s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000172s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\Order @order [ RunTime:0.000027s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\Order @order [ RunTime:0.003691s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\sharp\Order @order [ RunTime:0.024481s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\Order @order [ RunTime:0.024491s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T17:41:35+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/store/wxapp.banner/index
+[运行时间：0.033402s] [吞吐率：29.94req/s] [内存消耗：1,828.88kb] [文件加载：60]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'wxapp.banner',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__gads=ID=00d075fa159d8ac8:T=1597915774:S=ALNI_MZogTGW2LAF0H_NTkBymWmUYtnOxQ; __root_domain_v=.feibu.info; _qddaz=QD.932230466496504; PHPSESSID=4ffaifijht021p2df4b5nq4mmq; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652667143; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652667143',
+  'accept-language' => 'en,zh-CN;q=0.9,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/wxapp.banner/add',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'dnt' => '1',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000330s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T17:41:35+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/store/passport/login
+[运行时间：0.030031s] [吞吐率：33.30req/s] [内存消耗：1,895.40kb] [文件加载：63]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'passport',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__gads=ID=00d075fa159d8ac8:T=1597915774:S=ALNI_MZogTGW2LAF0H_NTkBymWmUYtnOxQ; __root_domain_v=.feibu.info; _qddaz=QD.932230466496504; PHPSESSID=4ffaifijht021p2df4b5nq4mmq; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652667143; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652667143',
+  'accept-language' => 'en,zh-CN;q=0.9,zh;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/wxapp.banner/add',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'dnt' => '1',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000192s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\store\controller\Passport->login[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\Passport.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\passport\login.php [ array (
+  0 => 'version',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T18:07:02+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/page/index&page_id=0&wxapp_id=10001&token=9e6632971132122fe5a03ab4c069eb6a
+[运行时间：0.317674s] [吞吐率：3.15req/s] [内存消耗：3,762.09kb] [文件加载：103]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'page',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.16(0x18001023) NetType/WIFI Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'page_id' => '0',
+  'wxapp_id' => '10001',
+  'token' => '9e6632971132122fe5a03ab4c069eb6a',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000479s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Page->index[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Page.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.021886s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.021901s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T18:07:03+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/page/banner&wxapp_id=10001&token=9e6632971132122fe5a03ab4c069eb6a
+[运行时间：0.125050s] [吞吐率：8.00req/s] [内存消耗：2,982.66kb] [文件加载：77]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'page',
+    2 => 'banner',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.16(0x18001023) NetType/WIFI Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'wxapp_id' => '10001',
+  'token' => '9e6632971132122fe5a03ab4c069eb6a',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000189s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Page->banner[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Page.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-16T18:07:08+08:00 ] 218.19.206.239 GET puzhenshop.feibu.info/index.php?s=/api/goods/detail&goods_id=10010&wxapp_id=10001&token=9e6632971132122fe5a03ab4c069eb6a
+[运行时间：0.380612s] [吞吐率：2.63req/s] [内存消耗：4,027.84kb] [文件加载：119]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'api',
+    1 => 'goods',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.16(0x18001023) NetType/WIFI Language/zh_CN',
+  'accept-encoding' => 'gzip,compress,br,deflate',
+  'content-type' => 'application/json',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'goods_id' => '10010',
+  'wxapp_id' => '10001',
+  'token' => '9e6632971132122fe5a03ab4c069eb6a',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000225s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\api\controller\Goods->detail[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Goods.php ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000176s ]
+[ info ] [ BEHAVIOR ] Run app\task\behavior\user\Grade @user_grade [ RunTime:0.000188s ]
+[ info ] [ LOG ] INIT File

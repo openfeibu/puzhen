@@ -1,0 +1,22 @@
+---------------------------------------------------------------
+[ 2022-07-05T15:21:39+08:00 ] 59.42.239.69 GET puzhenshop.feibu.info/index.php?s=%2Fstore%2Fdata.goods%2Fdistributor_goods_lists&category_id=&status=&search=
+[ error ] [0]方法参数错误:distributor_id [E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php:431]
+#0 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(385): think\App::getParamValue(Object(ReflectionParameter), Array, 0)
+#1 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(339): think\App::bindParams(Object(ReflectionMethod), Array)
+#2 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(611): think\App::invokeMethod(Array, Array)
+#3 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(456): think\App::module(Array, Array, true)
+#4 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(139): think\App::exec(Array, Array)
+#5 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\start.php(19): think\App::run()
+#6 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web\index.php(12): require('E:\\UPUPW_ANK_W6...')
+#7 {main}
+---------------------------------------------------------------
+[ 2022-07-05T15:21:54+08:00 ] 59.42.239.69 GET puzhenshop.feibu.info/index.php?s=%2Fstore%2Fdata.goods%2Fdistributor_goods_lists&category_id=&status=&search=
+[ error ] [0]方法参数错误:distributor_id [E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php:431]
+#0 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(385): think\App::getParamValue(Object(ReflectionParameter), Array, 0)
+#1 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(339): think\App::bindParams(Object(ReflectionMethod), Array)
+#2 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(611): think\App::invokeMethod(Array, Array)
+#3 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(456): think\App::module(Array, Array, true)
+#4 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(139): think\App::exec(Array, Array)
+#5 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\start.php(19): think\App::run()
+#6 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web\index.php(12): require('E:\\UPUPW_ANK_W6...')
+#7 {main}

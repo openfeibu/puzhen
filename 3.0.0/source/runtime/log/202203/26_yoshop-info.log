@@ -1,0 +1,21 @@
+---------------------------------------------------------------
+[ 2022-03-26T16:48:47+08:00 ] 116.22.236.78 GET puzhenshop.feibu.info/index.php?s=/api/coupon/lists&wxapp_id=10001&token=7fe601ab9e940785a61ae84c668a01ee
+[ yoshop-info ] UserCoupon --setExpired --couponIds []
+---------------------------------------------------------------
+[ 2022-03-26T17:08:18+08:00 ] 116.22.236.78 GET puzhenshop.feibu.info/index.php?s=/api/user.index/detail&wxapp_id=10001&token=7fe601ab9e940785a61ae84c668a01ee
+[ yoshop-info ] behavior Order --close --close_days 3 --deadline_time 1648026498 --orderIds []
+[ yoshop-info ] behavior Order --receive --receive_days 10 --deadline_time 1647421698 --orderIds []
+[ yoshop-info ] behavior Order --settled --refund_days 7 --deadline_time 1647680898 --orderIds []
+[ yoshop-info ] behavior sharp Order --close --close_minute 10 --deadline_time 1648285098 --orderIds []
+---------------------------------------------------------------
+[ 2022-03-26T17:09:57+08:00 ] 116.22.236.78 GET puzhenshop.feibu.info/index.php?s=/api/user.index/detail&wxapp_id=10001&token=7fe601ab9e940785a61ae84c668a01ee
+[ yoshop-info ] behavior sharp Order --close --close_minute 10 --deadline_time 1648285197 --orderIds []
+---------------------------------------------------------------
+[ 2022-03-26T17:10:17+08:00 ] 116.22.236.78 GET puzhenshop.feibu.info/index.php?s=/api/cart/lists&wxapp_id=10001&token=7fe601ab9e940785a61ae84c668a01ee
+[ yoshop-info ] behavior sharp Order --close --close_minute 10 --deadline_time 1648285217 --orderIds []
+---------------------------------------------------------------
+[ 2022-03-26T17:10:41+08:00 ] 116.22.236.78 GET puzhenshop.feibu.info/index.php?s=/api/cart/lists&wxapp_id=10001&token=7fe601ab9e940785a61ae84c668a01ee
+[ yoshop-info ] behavior sharp Order --close --close_minute 10 --deadline_time 1648285241 --orderIds []
+---------------------------------------------------------------
+[ 2022-03-26T17:10:42+08:00 ] 116.22.236.78 GET puzhenshop.feibu.info/index.php?s=/api/user.index/detail&wxapp_id=10001&token=7fe601ab9e940785a61ae84c668a01ee
+[ yoshop-info ] behavior sharp Order --close --close_minute 10 --deadline_time 1648285242 --orderIds []

@@ -1,0 +1,1766 @@
+---------------------------------------------------------------
+[ 2022-05-22T14:40:43+08:00 ] 113.66.255.41 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.350418s] [吞吐率：2.85req/s] [内存消耗：3,647.83kb] [文件加载：146]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.001188s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T15:10:56+08:00 ] 113.98.117.65 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.149637s] [吞吐率：6.68req/s] [内存消耗：3,829.63kb] [文件加载：148]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000496s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T15:18:14+08:00 ] 113.66.255.41 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.135928s] [吞吐率：7.36req/s] [内存消耗：3,835.13kb] [文件加载：148]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000345s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T15:18:27+08:00 ] 113.98.117.65 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.128089s] [吞吐率：7.81req/s] [内存消耗：3,835.13kb] [文件加载：148]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000339s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T15:20:21+08:00 ] 113.66.255.41 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.147549s] [吞吐率：6.78req/s] [内存消耗：3,835.29kb] [文件加载：148]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000341s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T15:20:38+08:00 ] 113.66.255.41 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.131995s] [吞吐率：7.58req/s] [内存消耗：3,835.29kb] [文件加载：148]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000434s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T15:20:49+08:00 ] 113.66.255.41 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.137059s] [吞吐率：7.30req/s] [内存消耗：3,835.29kb] [文件加载：148]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000356s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T15:22:07+08:00 ] 113.66.255.41 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.140454s] [吞吐率：7.12req/s] [内存消耗：3,835.23kb] [文件加载：148]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000347s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T15:22:16+08:00 ] 113.66.255.41 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.131696s] [吞吐率：7.59req/s] [内存消耗：3,835.23kb] [文件加载：148]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000355s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T15:22:28+08:00 ] 113.66.255.41 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.146654s] [吞吐率：6.82req/s] [内存消耗：3,835.13kb] [文件加载：148]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000328s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T15:41:30+08:00 ] 113.66.255.41 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.159704s] [吞吐率：6.26req/s] [内存消耗：3,835.35kb] [文件加载：148]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000552s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T16:39:10+08:00 ] 113.66.255.41 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.158139s] [吞吐率：6.32req/s] [内存消耗：3,816.38kb] [文件加载：148]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000381s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T16:39:11+08:00 ] 113.66.255.41 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.118299s] [吞吐率：8.45req/s] [内存消耗：3,641.87kb] [文件加载：146]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000242s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T16:39:37+08:00 ] 113.98.117.65 POST puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.572437s] [吞吐率：1.75req/s] [内存消耗：4,413.59kb] [文件加载：174]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add',
+  'origin' => 'http://puzhenshop.feibu.info',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'content-length' => '194',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'tea_qrcode' => 
+  array (
+    'name' => '2121',
+    'factory_id' => '1',
+    'tea' => 'A',
+    'weight' => '5',
+    'number' => '8',
+    'temperature' => 
+    array (
+      0 => '8',
+    ),
+    'seconds' => 
+    array (
+      0 => '8',
+    ),
+  ),
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000340s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T16:39:38+08:00 ] 113.98.117.65 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index
+[运行时间：0.266059s] [吞吐率：3.76req/s] [内存消耗：4,087.11kb] [文件加载：160]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000212s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->index[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\index.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'list',
+  9 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T16:39:42+08:00 ] 113.98.117.65 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/edit/tea_qrcode_id/227
+[运行时间：0.207737s] [吞吐率：4.81req/s] [内存消耗：3,781.13kb] [文件加载：152]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+  'tea_qrcode_id' => '227',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000203s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->edit[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\edit.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'model',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T16:41:16+08:00 ] 113.66.255.41 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index
+[运行时间：0.295068s] [吞吐率：3.39req/s] [内存消耗：4,087.99kb] [文件加载：160]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/edit/tea_qrcode_id/227',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000351s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->index[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\index.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'list',
+  9 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T16:41:18+08:00 ] 113.66.255.41 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.114500s] [吞吐率：8.73req/s] [内存消耗：3,641.37kb] [文件加载：146]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000200s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T23:48:01+08:00 ] 113.66.255.41 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.286909s] [吞吐率：3.49req/s] [内存消耗：3,820.38kb] [文件加载：148]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000469s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T23:48:58+08:00 ] 113.66.255.41 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.125171s] [吞吐率：7.99req/s] [内存消耗：3,820.38kb] [文件加载：148]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000370s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T23:49:37+08:00 ] 113.66.255.41 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.125861s] [吞吐率：7.95req/s] [内存消耗：3,820.38kb] [文件加载：148]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000376s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T23:50:09+08:00 ] 113.66.255.41 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.136295s] [吞吐率：7.34req/s] [内存消耗：3,820.38kb] [文件加载：148]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000363s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T23:50:30+08:00 ] 113.66.255.41 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.130989s] [吞吐率：7.63req/s] [内存消耗：3,820.38kb] [文件加载：148]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000368s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T23:50:43+08:00 ] 113.66.255.41 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.155046s] [吞吐率：6.45req/s] [内存消耗：3,820.38kb] [文件加载：148]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000355s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T23:50:51+08:00 ] 113.66.255.41 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.160781s] [吞吐率：6.22req/s] [内存消耗：3,646.58kb] [文件加载：146]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000493s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T23:51:12+08:00 ] 113.66.255.41 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.137760s] [吞吐率：7.26req/s] [内存消耗：3,820.38kb] [文件加载：148]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000366s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T23:51:33+08:00 ] 113.66.255.41 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.134147s] [吞吐率：7.45req/s] [内存消耗：3,824.38kb] [文件加载：148]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000372s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T23:51:42+08:00 ] 113.66.255.41 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.132447s] [吞吐率：7.55req/s] [内存消耗：3,650.58kb] [文件加载：146]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000350s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T23:52:05+08:00 ] 113.66.255.41 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.127555s] [吞吐率：7.84req/s] [内存消耗：3,650.58kb] [文件加载：146]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000323s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T23:52:47+08:00 ] 113.66.255.41 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.123952s] [吞吐率：8.07req/s] [内存消耗：3,650.58kb] [文件加载：146]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000329s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T23:52:55+08:00 ] 113.66.255.41 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.124430s] [吞吐率：8.04req/s] [内存消耗：3,649.87kb] [文件加载：146]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000187s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T23:55:15+08:00 ] 113.66.255.41 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.125069s] [吞吐率：8.00req/s] [内存消耗：3,820.38kb] [文件加载：148]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000341s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T23:55:39+08:00 ] 113.66.255.41 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.150927s] [吞吐率：6.63req/s] [内存消耗：3,820.38kb] [文件加载：148]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000333s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2022-05-22T23:55:46+08:00 ] 113.98.117.65 GET puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/add
+[运行时间：0.119751s] [吞吐率：8.35req/s] [内存消耗：3,819.67kb] [文件加载：148]
+[ info ] [ LANG ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'tea_qrcode.factory_tea_qrcode',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=l0qrvmefbvcn1la764vrmrp1kb; thinkphp_show_page_trace=0|0; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/tea_qrcode.factory_tea_qrcode/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\App @app_begin [ RunTime:0.000223s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => '',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ RUN ] app\store\controller\tea_qrcode\FactoryTeaQrcode->add[ E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\tea_qrcode\FactoryTeaQrcode.php ]
+[ info ] [ VIEW ] E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web/../source/application/store\view\tea_qrcode\factory_tea_qrcode\add.php [ array (
+  0 => 'base_url',
+  1 => 'store_url',
+  2 => 'group',
+  3 => 'menus',
+  4 => 'store',
+  5 => 'setting',
+  6 => 'request',
+  7 => 'version',
+  8 => 'goods',
+  9 => 'teaList',
+  10 => 'factoryList',
+) ]
+[ info ] [ LOG ] INIT File

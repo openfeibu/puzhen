@@ -1,0 +1,24 @@
+---------------------------------------------------------------
+[ 2022-04-28T00:30:04+08:00 ] 113.98.116.106 GET puzhenshop.feibu.info/index.php?s=/api/user.index/detail&wxapp_id=10001&token=459d67677ee9ffee8ad80bc6776c75b2
+[ yoshop-info ] behavior Order --close --close_days 3 --deadline_time 1650817804 --orderIds []
+[ yoshop-info ] behavior Order --receive --receive_days 10 --deadline_time 1650213004 --orderIds []
+[ yoshop-info ] behavior Order --settled --refund_days 7 --deadline_time 1650472204 --orderIds []
+[ yoshop-info ] behavior sharp Order --close --close_minute 10 --deadline_time 1651076404 --orderIds []
+---------------------------------------------------------------
+[ 2022-04-28T11:57:55+08:00 ] 116.22.149.64 GET puzhenshop.feibu.info/index.php?s=/api/coupon/lists&wxapp_id=10001&token=459d67677ee9ffee8ad80bc6776c75b2
+[ yoshop-info ] UserCoupon --setExpired --couponIds []
+---------------------------------------------------------------
+[ 2022-04-28T12:07:57+08:00 ] 113.65.208.212 GET puzhenshop.feibu.info/index.php?s=/store/index/index
+[ yoshop-info ] behavior Order --close --close_days 3 --deadline_time 1650859677 --orderIds []
+[ yoshop-info ] behavior Order --receive --receive_days 10 --deadline_time 1650254877 --orderIds []
+[ yoshop-info ] behavior Order --settled --refund_days 7 --deadline_time 1650514077 --orderIds []
+[ yoshop-info ] behavior sharp Order --close --close_minute 10 --deadline_time 1651118277 --orderIds []
+---------------------------------------------------------------
+[ 2022-04-28T16:10:04+08:00 ] 116.22.149.64 GET puzhenshop.feibu.info/index.php?s=/api/coupon/lists&wxapp_id=10001&token=459d67677ee9ffee8ad80bc6776c75b2
+[ yoshop-info ] UserCoupon --setExpired --couponIds []
+---------------------------------------------------------------
+[ 2022-04-28T18:24:51+08:00 ] 116.22.149.64 POST puzhenshop.feibu.info/index.php?s=/api/user.comment/order
+[ yoshop-info ] behavior Order --close --close_days 3 --deadline_time 1650882291 --orderIds []
+[ yoshop-info ] behavior Order --receive --receive_days 10 --deadline_time 1650277491 --orderIds []
+[ yoshop-info ] behavior Order --settled --refund_days 7 --deadline_time 1650536691 --orderIds []
+[ yoshop-info ] behavior sharp Order --close --close_minute 10 --deadline_time 1651140891 --orderIds []

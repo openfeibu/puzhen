@@ -1,0 +1,56 @@
+---------------------------------------------------------------
+[ 2022-06-07T14:25:37+08:00 ] 125.95.1.33 POST puzhenshop.feibu.info/index.php?s=/store/setting/warranty
+[ error ] [8]未定义数组索引: warranty [E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\model\Setting.php:34]
+#0 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\model\Setting.php(34): think\Error::appError(8, 'Undefined index...', 'E:\\UPUPW_ANK_W6...', 34, Array)
+#1 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\Setting.php(136): app\store\model\Setting->edit('warranty', Array)
+#2 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\Setting.php(119): app\store\controller\Setting->updateEvent('warranty')
+#3 [internal function]: app\store\controller\Setting->warranty()
+#4 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(343): ReflectionMethod->invokeArgs(Object(app\store\controller\Setting), Array)
+#5 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(611): think\App::invokeMethod(Array, Array)
+#6 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(456): think\App::module(Array, Array, true)
+#7 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(139): think\App::exec(Array, Array)
+#8 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\start.php(19): think\App::run()
+#9 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web\index.php(12): require('E:\\UPUPW_ANK_W6...')
+#10 {main}
+---------------------------------------------------------------
+[ 2022-06-07T14:25:59+08:00 ] 125.95.1.33 POST puzhenshop.feibu.info/index.php?s=/store/setting/warranty
+[ error ] [8]未定义数组索引: warranty [E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\model\Setting.php:34]
+#0 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\model\Setting.php(34): think\Error::appError(8, 'Undefined index...', 'E:\\UPUPW_ANK_W6...', 34, Array)
+#1 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\Setting.php(136): app\store\model\Setting->edit('warranty', Array)
+#2 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\Setting.php(119): app\store\controller\Setting->updateEvent('warranty')
+#3 [internal function]: app\store\controller\Setting->warranty()
+#4 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(343): ReflectionMethod->invokeArgs(Object(app\store\controller\Setting), Array)
+#5 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(611): think\App::invokeMethod(Array, Array)
+#6 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(456): think\App::module(Array, Array, true)
+#7 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(139): think\App::exec(Array, Array)
+#8 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\start.php(19): think\App::run()
+#9 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web\index.php(12): require('E:\\UPUPW_ANK_W6...')
+#10 {main}
+---------------------------------------------------------------
+[ 2022-06-07T14:26:09+08:00 ] 125.95.1.33 POST puzhenshop.feibu.info/index.php?s=/store/setting/warranty
+[ error ] [8]未定义数组索引: warranty [E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\model\Setting.php:34]
+#0 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\model\Setting.php(34): think\Error::appError(8, 'Undefined index...', 'E:\\UPUPW_ANK_W6...', 34, Array)
+#1 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\Setting.php(136): app\store\model\Setting->edit('warranty', Array)
+#2 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\Setting.php(119): app\store\controller\Setting->updateEvent('warranty')
+#3 [internal function]: app\store\controller\Setting->warranty()
+#4 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(343): ReflectionMethod->invokeArgs(Object(app\store\controller\Setting), Array)
+#5 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(611): think\App::invokeMethod(Array, Array)
+#6 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(456): think\App::module(Array, Array, true)
+#7 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(139): think\App::exec(Array, Array)
+#8 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\start.php(19): think\App::run()
+#9 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web\index.php(12): require('E:\\UPUPW_ANK_W6...')
+#10 {main}
+---------------------------------------------------------------
+[ 2022-06-07T14:27:15+08:00 ] 125.95.1.33 POST puzhenshop.feibu.info/index.php?s=/store/setting/warranty
+[ error ] [8]未定义数组索引: warranty [E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\model\Setting.php:34]
+#0 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\model\Setting.php(34): think\Error::appError(8, 'Undefined index...', 'E:\\UPUPW_ANK_W6...', 34, Array)
+#1 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\Setting.php(136): app\store\model\Setting->edit('warranty', Array)
+#2 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\store\controller\Setting.php(119): app\store\controller\Setting->updateEvent('warranty')
+#3 [internal function]: app\store\controller\Setting->warranty()
+#4 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(343): ReflectionMethod->invokeArgs(Object(app\store\controller\Setting), Array)
+#5 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(611): think\App::invokeMethod(Array, Array)
+#6 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(456): think\App::module(Array, Array, true)
+#7 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(139): think\App::exec(Array, Array)
+#8 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\start.php(19): think\App::run()
+#9 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web\index.php(12): require('E:\\UPUPW_ANK_W6...')
+#10 {main}

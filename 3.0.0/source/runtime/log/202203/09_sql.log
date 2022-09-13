@@ -1,0 +1,108 @@
+---------------------------------------------------------------
+[ 2022-03-09T17:27:38+08:00 ] 192.168.20.1 POST yoshop1145.g.com/index.php?s=/admin/passport/login
+[ sql ] [ DB ] CONNECT:[ UseTime:0.045830s ] mysql:host=39.108.144.9;port=3306;dbname=yoshop1145;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yoshop_admin_user` [ RunTime:0.026227s ]
+[ sql ] [ SQL ] SELECT * FROM `yoshop_admin_user` WHERE  `user_name` = 'admin'  AND `password` = '9ae7b2e6f25c907a1fc81b503b16e25f' LIMIT 1 [ RunTime:0.026901s ]
+---------------------------------------------------------------
+[ 2022-03-09T17:27:44+08:00 ] 192.168.20.1 GET yoshop1145.g.com/index.php?s=/admin/admin.user/renew
+[ sql ] [ DB ] CONNECT:[ UseTime:0.031071s ] mysql:host=39.108.144.9;port=3306;dbname=yoshop1145;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yoshop_admin_user` [ RunTime:0.021974s ]
+[ sql ] [ SQL ] SELECT * FROM `yoshop_admin_user` WHERE  `admin_user_id` = 10001 LIMIT 1 [ RunTime:0.019405s ]
+---------------------------------------------------------------
+[ 2022-03-09T17:27:50+08:00 ] 192.168.20.1 POST yoshop1145.g.com/index.php?s=/admin/admin.user/renew
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032730s ] mysql:host=39.108.144.9;port=3306;dbname=yoshop1145;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yoshop_admin_user` [ RunTime:0.026477s ]
+[ sql ] [ SQL ] SELECT * FROM `yoshop_admin_user` WHERE  `admin_user_id` = 10001 LIMIT 1 [ RunTime:0.022039s ]
+[ sql ] [ SQL ] UPDATE `yoshop_admin_user`  SET `password`='9c4cb25665cf08667c815420ab383cb5',`update_time`=1646818070  WHERE  `admin_user_id` = 10001 [ RunTime:0.023742s ]
+---------------------------------------------------------------
+[ 2022-03-09T17:27:52+08:00 ] 192.168.20.1 GET yoshop1145.g.com/index.php?s=/admin/admin.user/renew
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032257s ] mysql:host=39.108.144.9;port=3306;dbname=yoshop1145;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yoshop_admin_user` [ RunTime:0.022301s ]
+[ sql ] [ SQL ] SELECT * FROM `yoshop_admin_user` WHERE  `admin_user_id` = 10001 LIMIT 1 [ RunTime:0.021955s ]
+---------------------------------------------------------------
+[ 2022-03-09T17:27:53+08:00 ] 192.168.20.1 GET yoshop1145.g.com/index.php?s=/admin/admin.user/renew
+[ sql ] [ DB ] CONNECT:[ UseTime:0.033028s ] mysql:host=39.108.144.9;port=3306;dbname=yoshop1145;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yoshop_admin_user` [ RunTime:0.025111s ]
+[ sql ] [ SQL ] SELECT * FROM `yoshop_admin_user` WHERE  `admin_user_id` = 10001 LIMIT 1 [ RunTime:0.028462s ]
+---------------------------------------------------------------
+[ 2022-03-09T17:28:03+08:00 ] 192.168.20.1 POST yoshop1145.g.com/index.php?s=/admin/passport/login
+[ sql ] [ DB ] CONNECT:[ UseTime:0.038505s ] mysql:host=39.108.144.9;port=3306;dbname=yoshop1145;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yoshop_admin_user` [ RunTime:0.045967s ]
+[ sql ] [ SQL ] SELECT * FROM `yoshop_admin_user` WHERE  `user_name` = 'admin'  AND `password` = '9c4cb25665cf08667c815420ab383cb5' LIMIT 1 [ RunTime:0.029197s ]
+---------------------------------------------------------------
+[ 2022-03-09T17:28:11+08:00 ] 192.168.20.1 GET yoshop1145.g.com/index.php?s=/admin/store/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.026516s ] mysql:host=39.108.144.9;port=3306;dbname=yoshop1145;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yoshop_wxapp` [ RunTime:0.020825s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yoshop_wxapp` WHERE  `is_recycle` = 0  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.018315s ]
+[ sql ] [ SQL ] SELECT * FROM `yoshop_wxapp` WHERE  `is_recycle` = 0  AND `is_delete` = 0 ORDER BY `create_time` DESC LIMIT 0,15 [ RunTime:0.016533s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yoshop_setting` [ RunTime:0.021760s ]
+[ sql ] [ SQL ] SELECT * FROM `yoshop_setting` WHERE  `wxapp_id` = 10001 [ RunTime:0.017404s ]
+---------------------------------------------------------------
+[ 2022-03-09T17:28:14+08:00 ] 192.168.20.1 GET yoshop1145.g.com/index.php?s=/admin/store/enter/wxapp_id/10001
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029515s ] mysql:host=39.108.144.9;port=3306;dbname=yoshop1145;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yoshop_wxapp` [ RunTime:0.020866s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yoshop_store_user` [ RunTime:0.021243s ]
+[ sql ] [ SQL ] SELECT * FROM `yoshop_store_user` WHERE  `is_delete` = 0  AND `wxapp_id` = 10001  AND `is_super` = 1 LIMIT 1 [ RunTime:0.022774s ]
+[ sql ] [ SQL ] SELECT * FROM `yoshop_wxapp` WHERE  `wxapp_id` = 10001 [ RunTime:0.017860s ]
+---------------------------------------------------------------
+[ 2022-03-09T17:28:15+08:00 ] 192.168.20.1 GET yoshop1145.g.com/index.php?s=/store/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.024575s ] mysql:host=39.108.144.9;port=3306;dbname=yoshop1145;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yoshop_store_user` [ RunTime:0.019301s ]
+[ sql ] [ SQL ] SELECT * FROM `yoshop_store_user` WHERE  `yoshop_store_user`.`wxapp_id` = 10001  AND `is_delete` = 0  AND `store_user_id` = 10001 LIMIT 1 [ RunTime:0.015678s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yoshop_order` [ RunTime:0.018197s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yoshop_user` [ RunTime:0.019198s ]
+[ sql ] [ SQL ] SELECT * FROM `yoshop_order` WHERE  ( `yoshop_order`.`wxapp_id` = 10001 AND `yoshop_order`.`wxapp_id` = 10001 )  AND `pay_status` = 10  AND `order_status` = 10  AND `create_time` <= 1646558894  AND `is_delete` = 0 [ RunTime:0.015854s ]
+[ sql ] [ SQL ] SELECT `order_id` FROM `yoshop_order` WHERE  `yoshop_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `delivery_status` = 20  AND `receipt_status` = 10  AND `delivery_time` <= 1645954094 [ RunTime:0.015106s ]
+[ sql ] [ SQL ] SELECT * FROM `yoshop_order` WHERE  `yoshop_order`.`wxapp_id` = 10001  AND `order_status` = 30  AND `receipt_time` <= 1646213294  AND `is_settled` = 0  AND `is_delete` = 0 [ RunTime:0.017982s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yoshop_sharp_setting` [ RunTime:0.017335s ]
+[ sql ] [ SQL ] SELECT * FROM `yoshop_sharp_setting` WHERE  `yoshop_sharp_setting`.`wxapp_id` = 10001 [ RunTime:0.015023s ]
+[ sql ] [ SQL ] SELECT * FROM `yoshop_order` WHERE  `yoshop_order`.`wxapp_id` = 10001  AND `order_source` = 30  AND `pay_status` = 10  AND `order_status` = 10  AND `create_time` <= 1646817495  AND `is_delete` = 0 [ RunTime:0.018995s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yoshop_goods` [ RunTime:0.017855s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yoshop_goods` WHERE  `yoshop_goods`.`wxapp_id` = 10001  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.015205s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yoshop_user` WHERE  `yoshop_user`.`wxapp_id` = 10001  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.014450s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yoshop_order` WHERE  `yoshop_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.014209s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yoshop_comment` [ RunTime:0.017700s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yoshop_comment` WHERE  `yoshop_comment`.`wxapp_id` = 10001  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.014458s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `yoshop_order` WHERE  ( `yoshop_order`.`wxapp_id` = 10001 AND `yoshop_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1646755200 AND `pay_time` < 1646841600 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.014709s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `yoshop_order` WHERE  ( `yoshop_order`.`wxapp_id` = 10001 AND `yoshop_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1646668800 AND `pay_time` < 1646755200 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.014703s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yoshop_order` WHERE  `yoshop_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1646755200 AND `pay_time` < 1646841600 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.015154s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yoshop_order` WHERE  `yoshop_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1646668800 AND `pay_time` < 1646755200 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.014367s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yoshop_user` WHERE  ( `yoshop_user`.`wxapp_id` = 10001 AND `yoshop_user`.`wxapp_id` = 10001 )  AND ( `create_time` >= 1646755200 AND `create_time` < 1646841600 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.014412s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yoshop_user` WHERE  ( `yoshop_user`.`wxapp_id` = 10001 AND `yoshop_user`.`wxapp_id` = 10001 )  AND ( `create_time` >= 1646668800 AND `create_time` < 1646755200 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.013943s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `user_id` FROM `yoshop_order` WHERE  `yoshop_order`.`wxapp_id` = 10001  AND ( `pay_time` >= 1646755200 AND `pay_time` < 1646841600 )  AND `pay_status` = 20  AND `is_delete` = 0 [ RunTime:0.014571s ]
+[ sql ] [ SQL ] SELECT DISTINCT  `user_id` FROM `yoshop_order` WHERE  `yoshop_order`.`wxapp_id` = 10001  AND ( `pay_time` >= 1646668800 AND `pay_time` < 1646755200 )  AND `pay_status` = 20  AND `is_delete` = 0 [ RunTime:0.014875s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yoshop_order` WHERE  `yoshop_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1646236800 AND `pay_time` < 1646323200 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.014139s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yoshop_order` WHERE  `yoshop_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1646323200 AND `pay_time` < 1646409600 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.014125s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yoshop_order` WHERE  `yoshop_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1646409600 AND `pay_time` < 1646496000 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.014877s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yoshop_order` WHERE  `yoshop_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1646496000 AND `pay_time` < 1646582400 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.014933s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yoshop_order` WHERE  `yoshop_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1646582400 AND `pay_time` < 1646668800 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.014200s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yoshop_order` WHERE  `yoshop_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1646668800 AND `pay_time` < 1646755200 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.014827s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `yoshop_order` WHERE  `yoshop_order`.`wxapp_id` = 10001  AND `pay_status` = 20  AND `order_status` <> 20  AND ( `pay_time` >= 1646755200 AND `pay_time` < 1646841600 )  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.015328s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `yoshop_order` WHERE  ( `yoshop_order`.`wxapp_id` = 10001 AND `yoshop_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1646236800 AND `pay_time` < 1646323200 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.015245s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `yoshop_order` WHERE  ( `yoshop_order`.`wxapp_id` = 10001 AND `yoshop_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1646323200 AND `pay_time` < 1646409600 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.014954s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `yoshop_order` WHERE  ( `yoshop_order`.`wxapp_id` = 10001 AND `yoshop_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1646409600 AND `pay_time` < 1646496000 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.015759s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `yoshop_order` WHERE  ( `yoshop_order`.`wxapp_id` = 10001 AND `yoshop_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1646496000 AND `pay_time` < 1646582400 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.014494s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `yoshop_order` WHERE  ( `yoshop_order`.`wxapp_id` = 10001 AND `yoshop_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1646582400 AND `pay_time` < 1646668800 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.014734s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `yoshop_order` WHERE  ( `yoshop_order`.`wxapp_id` = 10001 AND `yoshop_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1646668800 AND `pay_time` < 1646755200 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.014659s ]
+[ sql ] [ SQL ] SELECT SUM(pay_price) AS tp_sum FROM `yoshop_order` WHERE  ( `yoshop_order`.`wxapp_id` = 10001 AND `yoshop_order`.`wxapp_id` = 10001 )  AND ( `pay_time` >= 1646755200 AND `pay_time` < 1646841600 )  AND `pay_status` = 20  AND `order_status` <> 20  AND `is_delete` = 0 LIMIT 1 [ RunTime:0.015953s ]
+---------------------------------------------------------------
+[ 2022-03-09T17:28:23+08:00 ] 192.168.20.1 GET yoshop1145.g.com/index.php?s=/store/wxapp/setting
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029528s ] mysql:host=39.108.144.9;port=3306;dbname=yoshop1145;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yoshop_store_user` [ RunTime:0.020314s ]
+[ sql ] [ SQL ] SELECT * FROM `yoshop_store_user` WHERE  `yoshop_store_user`.`wxapp_id` = 10001  AND `is_delete` = 0  AND `store_user_id` = 10001 LIMIT 1 [ RunTime:0.020086s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yoshop_wxapp` [ RunTime:0.019989s ]
+[ sql ] [ SQL ] SELECT * FROM `yoshop_wxapp` WHERE  `yoshop_wxapp`.`wxapp_id` = 10001 LIMIT 1 [ RunTime:0.018898s ]
+---------------------------------------------------------------
+[ 2022-03-09T17:50:12+08:00 ] 192.168.20.1 GET yoshop1145.g.com/index.php?s=/store/wxapp/setting
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032730s ] mysql:host=39.108.144.9;port=3306;dbname=yoshop1145;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yoshop_store_user` [ RunTime:0.023937s ]
+[ sql ] [ SQL ] SELECT * FROM `yoshop_store_user` WHERE  `yoshop_store_user`.`wxapp_id` = 10001  AND `is_delete` = 0  AND `store_user_id` = 10001 LIMIT 1 [ RunTime:0.022426s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yoshop_wxapp` [ RunTime:0.023157s ]
+[ sql ] [ SQL ] SELECT * FROM `yoshop_wxapp` WHERE  `yoshop_wxapp`.`wxapp_id` = 10001 LIMIT 1 [ RunTime:0.020654s ]
+---------------------------------------------------------------
+[ 2022-03-09T17:50:14+08:00 ] 192.168.20.1 GET yoshop1145.g.com/index.php?s=/store/wxapp/setting
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030727s ] mysql:host=39.108.144.9;port=3306;dbname=yoshop1145;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yoshop_store_user` [ RunTime:0.023451s ]
+[ sql ] [ SQL ] SELECT * FROM `yoshop_store_user` WHERE  `yoshop_store_user`.`wxapp_id` = 10001  AND `is_delete` = 0  AND `store_user_id` = 10001 LIMIT 1 [ RunTime:0.020871s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `yoshop_wxapp` [ RunTime:0.023293s ]
+[ sql ] [ SQL ] SELECT * FROM `yoshop_wxapp` WHERE  `yoshop_wxapp`.`wxapp_id` = 10001 LIMIT 1 [ RunTime:0.021031s ]

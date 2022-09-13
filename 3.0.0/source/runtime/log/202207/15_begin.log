@@ -1,0 +1,48 @@
+---------------------------------------------------------------
+[ 2022-07-15T15:12:34+08:00 ] 116.21.14.240 GET puzhenshop.feibu.info/index.php?s=/store/factory/index
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'factory',
+    2 => 'index',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=pjtirs3irf63a2p64g4ekae2ae; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1657371380; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1657697483',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/factory/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2022-07-15T15:12:34+08:00 ] 116.21.14.240 GET puzhenshop.feibu.info/index.php?s=/store/passport/login
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'passport',
+    2 => 'login',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; PHPSESSID=pjtirs3irf63a2p64g4ekae2ae; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1657371380; Hm_lpvt_8231d52c4580fdb4fc6a6098e03a174f=1657697483',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://puzhenshop.feibu.info/index.php?s=/store/factory/index',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+)

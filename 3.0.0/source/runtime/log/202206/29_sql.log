@@ -1,0 +1,10 @@
+---------------------------------------------------------------
+[ 2022-06-29T10:11:43+08:00 ] 116.21.15.70 GET puzhenshop.feibu.info/index.php?s=/store/equipment.user_equipment/rejected_list
+[ sql ] [ DB ] CONNECT:[ UseTime:0.019384s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_store_user` [ RunTime:0.011102s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_store_user` WHERE  `puzhen_store_user`.`wxapp_id` = 10001  AND `is_delete` = 0  AND `store_user_id` = 10001 LIMIT 1 [ RunTime:0.008613s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_equipment` [ RunTime:0.010831s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_user` [ RunTime:0.011994s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_user_equipment` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_user_equipment` `user_equipment` INNER JOIN `puzhen_user` `user` ON `user`.`user_id`=`user_equipment`.`user_id` INNER JOIN `puzhen_equipment` `equipment` ON `equipment`.`equipment_id`=`user_equipment`.`equipment_id` WHERE  `user_equipment`.`wxapp_id` = 10001  AND `status` = 30 LIMIT 1 [ RunTime:0.008865s ]
+[ sql ] [ SQL ] SELECT `user_equipment`.* FROM `puzhen_user_equipment` `user_equipment` INNER JOIN `puzhen_user` `user` ON `user`.`user_id`=`user_equipment`.`user_id` INNER JOIN `puzhen_equipment` `equipment` ON `equipment`.`equipment_id`=`user_equipment`.`equipment_id` WHERE  `user_equipment`.`wxapp_id` = 10001  AND `status` = 30 ORDER BY `user_equipment`.`create_time` DESC LIMIT 0,15 [ RunTime:0.009276s ]

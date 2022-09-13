@@ -1,0 +1,21 @@
+---------------------------------------------------------------
+[ 2022-05-26T10:47:57+08:00 ] 183.38.205.134 GET puzhenshop.feibu.info/index.php?s=/api/user.index/detail&wxapp_id=10001&token=4e361d955a8eb8602a55f3c900fde6db
+[ yoshop-info ] behavior Order --close --close_days 3 --deadline_time 1653274077 --orderIds []
+[ yoshop-info ] behavior Order --receive --receive_days 10 --deadline_time 1652669277 --orderIds []
+[ yoshop-info ] behavior Order --settled --refund_days 7 --deadline_time 1652928477 --orderIds []
+[ yoshop-info ] behavior sharp Order --close --close_minute 10 --deadline_time 1653532677 --orderIds []
+---------------------------------------------------------------
+[ 2022-05-26T10:48:00+08:00 ] 183.38.205.134 GET puzhenshop.feibu.info/index.php?s=/api/user.index/detail&wxapp_id=10001&token=4e361d955a8eb8602a55f3c900fde6db
+[ yoshop-info ] behavior sharp Order --close --close_minute 10 --deadline_time 1653532680 --orderIds []
+---------------------------------------------------------------
+[ 2022-05-26T10:48:10+08:00 ] 183.38.205.134 GET puzhenshop.feibu.info/index.php?s=/api/user.index/detail&wxapp_id=10001&token=4e361d955a8eb8602a55f3c900fde6db
+[ yoshop-info ] behavior sharp Order --close --close_minute 10 --deadline_time 1653532690 --orderIds []
+---------------------------------------------------------------
+[ 2022-05-26T10:48:19+08:00 ] 183.38.205.134 GET puzhenshop.feibu.info/index.php?s=/api/user.index/detail&wxapp_id=10001&token=4e361d955a8eb8602a55f3c900fde6db
+[ yoshop-info ] behavior sharp Order --close --close_minute 10 --deadline_time 1653532699 --orderIds []
+---------------------------------------------------------------
+[ 2022-05-26T10:48:21+08:00 ] 183.38.205.134 GET puzhenshop.feibu.info/index.php?s=/api/user.index/detail&wxapp_id=10001&token=4e361d955a8eb8602a55f3c900fde6db
+[ yoshop-info ] behavior sharp Order --close --close_minute 10 --deadline_time 1653532701 --orderIds []
+---------------------------------------------------------------
+[ 2022-05-26T11:11:01+08:00 ] 183.38.205.134 GET puzhenshop.feibu.info/index.php?s=/api/user.index/detail&wxapp_id=10001&token=4e361d955a8eb8602a55f3c900fde6db
+[ yoshop-info ] behavior sharp Order --close --close_minute 10 --deadline_time 1653534061 --orderIds []

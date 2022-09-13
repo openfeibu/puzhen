@@ -1,0 +1,23 @@
+---------------------------------------------------------------
+[ 2022-06-26T19:57:55+08:00 ] 183.33.73.213 GET puzhenshop.feibu.info/index.php?s=/store/index/index
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'store',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'cookie' => '__root_domain_v=.feibu.info; _qddaz=QD.462850277201994; Hm_lvt_8231d52c4580fdb4fc6a6098e03a174f=1652776307; PHPSESSID=lt9cmslct2frlhgtjbi0ejukb1',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+  'user-agent' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'puzhenshop.feibu.info',
+)
+[ begin ] [ PARAM ] array (
+)

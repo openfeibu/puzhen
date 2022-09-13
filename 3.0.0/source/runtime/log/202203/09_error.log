@@ -1,0 +1,60 @@
+---------------------------------------------------------------
+[ 2022-03-09T17:27:16+08:00 ] 192.168.20.1 POST yoshop1145.g.com/index.php?s=/admin/passport/login
+[ error ] [1045]SQLSTATE[HY000] [1045] Access denied for user 'feibukeji'@'localhost' (using password: YES) [/home/vagrant/Code/yoshop1145/source/thinkphp/library/think/db/Connection.php:295]
+#0 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/db/Connection.php(295): PDO->__construct('mysql:host=127....', 'feibukeji', 'ladfjeuwf71741s', Array)
+#1 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/db/Connection.php(995): think\db\Connection->connect()
+#2 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/db/Connection.php(348): think\db\Connection->initConnect(false)
+#3 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/db/connector/Mysql.php(65): think\db\Connection->query('SHOW COLUMNS FR...', Array, false, true)
+#4 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/db/Query.php(1921): think\db\connector\Mysql->getFields('`yoshop_admin_u...')
+#5 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/db/Query.php(1955): think\db\Query->getTableInfo('yoshop_admin_us...', 'pk')
+#6 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/db/Query.php(2639): think\db\Query->getPk(Array)
+#7 /home/vagrant/Code/yoshop1145/source/application/admin/model/admin/User.php(29): think\db\Query->find()
+#8 /home/vagrant/Code/yoshop1145/source/application/admin/controller/Passport.php(26): app\admin\model\admin\User->login(Array)
+#9 [internal function]: app\admin\controller\Passport->login()
+#10 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/App.php(343): ReflectionMethod->invokeArgs(Object(app\admin\controller\Passport), Array)
+#11 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/App.php(611): think\App::invokeMethod(Array, Array)
+#12 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#13 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#14 /home/vagrant/Code/yoshop1145/source/thinkphp/start.php(19): think\App::run()
+#15 /home/vagrant/Code/yoshop1145/web/index.php(12): require('/home/vagrant/C...')
+#16 {main}
+---------------------------------------------------------------
+[ 2022-03-09T17:27:23+08:00 ] 192.168.20.1 POST yoshop1145.g.com/index.php?s=/admin/passport/login
+[ error ] [1045]SQLSTATE[HY000] [1045] Access denied for user 'feibukeji'@'localhost' (using password: YES) [/home/vagrant/Code/yoshop1145/source/thinkphp/library/think/db/Connection.php:295]
+#0 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/db/Connection.php(295): PDO->__construct('mysql:host=127....', 'feibukeji', 'ladfjeuwf71741s', Array)
+#1 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/db/Connection.php(995): think\db\Connection->connect()
+#2 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/db/Connection.php(348): think\db\Connection->initConnect(false)
+#3 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/db/connector/Mysql.php(65): think\db\Connection->query('SHOW COLUMNS FR...', Array, false, true)
+#4 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/db/Query.php(1921): think\db\connector\Mysql->getFields('`yoshop_admin_u...')
+#5 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/db/Query.php(1955): think\db\Query->getTableInfo('yoshop_admin_us...', 'pk')
+#6 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/db/Query.php(2639): think\db\Query->getPk(Array)
+#7 /home/vagrant/Code/yoshop1145/source/application/admin/model/admin/User.php(29): think\db\Query->find()
+#8 /home/vagrant/Code/yoshop1145/source/application/admin/controller/Passport.php(26): app\admin\model\admin\User->login(Array)
+#9 [internal function]: app\admin\controller\Passport->login()
+#10 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/App.php(343): ReflectionMethod->invokeArgs(Object(app\admin\controller\Passport), Array)
+#11 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/App.php(611): think\App::invokeMethod(Array, Array)
+#12 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#13 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#14 /home/vagrant/Code/yoshop1145/source/thinkphp/start.php(19): think\App::run()
+#15 /home/vagrant/Code/yoshop1145/web/index.php(12): require('/home/vagrant/C...')
+#16 {main}
+---------------------------------------------------------------
+[ 2022-03-09T17:27:26+08:00 ] 192.168.20.1 POST yoshop1145.g.com/index.php?s=/admin/passport/login
+[ error ] [1045]SQLSTATE[HY000] [1045] Access denied for user 'feibukeji'@'localhost' (using password: YES) [/home/vagrant/Code/yoshop1145/source/thinkphp/library/think/db/Connection.php:295]
+#0 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/db/Connection.php(295): PDO->__construct('mysql:host=127....', 'feibukeji', 'ladfjeuwf71741s', Array)
+#1 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/db/Connection.php(995): think\db\Connection->connect()
+#2 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/db/Connection.php(348): think\db\Connection->initConnect(false)
+#3 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/db/connector/Mysql.php(65): think\db\Connection->query('SHOW COLUMNS FR...', Array, false, true)
+#4 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/db/Query.php(1921): think\db\connector\Mysql->getFields('`yoshop_admin_u...')
+#5 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/db/Query.php(1955): think\db\Query->getTableInfo('yoshop_admin_us...', 'pk')
+#6 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/db/Query.php(2639): think\db\Query->getPk(Array)
+#7 /home/vagrant/Code/yoshop1145/source/application/admin/model/admin/User.php(29): think\db\Query->find()
+#8 /home/vagrant/Code/yoshop1145/source/application/admin/controller/Passport.php(26): app\admin\model\admin\User->login(Array)
+#9 [internal function]: app\admin\controller\Passport->login()
+#10 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/App.php(343): ReflectionMethod->invokeArgs(Object(app\admin\controller\Passport), Array)
+#11 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/App.php(611): think\App::invokeMethod(Array, Array)
+#12 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/App.php(456): think\App::module(Array, Array, true)
+#13 /home/vagrant/Code/yoshop1145/source/thinkphp/library/think/App.php(139): think\App::exec(Array, Array)
+#14 /home/vagrant/Code/yoshop1145/source/thinkphp/start.php(19): think\App::run()
+#15 /home/vagrant/Code/yoshop1145/web/index.php(12): require('/home/vagrant/C...')
+#16 {main}

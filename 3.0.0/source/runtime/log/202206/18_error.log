@@ -1,0 +1,32 @@
+---------------------------------------------------------------
+[ 2022-06-18T14:27:17+08:00 ] 125.95.3.229 GET puzhenshop.feibu.info/index.php?s=/store/distributor_apply/edit/apply_id/19
+[ error ] [0]控制器不存在:app\store\controller\DistributorApply [E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php:583]
+#0 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(456): think\App::module(Array, Array, true)
+#1 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(139): think\App::exec(Array, Array)
+#2 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\start.php(19): think\App::run()
+#3 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web\index.php(12): require('E:\\UPUPW_ANK_W6...')
+#4 {main}
+---------------------------------------------------------------
+[ 2022-06-18T14:28:43+08:00 ] 125.95.3.229 GET puzhenshop.feibu.info/index.php?s=/store/distributor_apply/edit/apply_id/23
+[ error ] [0]控制器不存在:app\store\controller\DistributorApply [E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php:583]
+#0 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(456): think\App::module(Array, Array, true)
+#1 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(139): think\App::exec(Array, Array)
+#2 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\start.php(19): think\App::run()
+#3 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web\index.php(12): require('E:\\UPUPW_ANK_W6...')
+#4 {main}
+---------------------------------------------------------------
+[ 2022-06-18T14:29:09+08:00 ] 125.95.3.229 GET puzhenshop.feibu.info/index.php?s=/store/distributor_apply/edit/apply_id/21
+[ error ] [0]控制器不存在:app\store\controller\DistributorApply [E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php:583]
+#0 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(456): think\App::module(Array, Array, true)
+#1 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(139): think\App::exec(Array, Array)
+#2 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\start.php(19): think\App::run()
+#3 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web\index.php(12): require('E:\\UPUPW_ANK_W6...')
+#4 {main}
+---------------------------------------------------------------
+[ 2022-06-18T14:33:33+08:00 ] 125.95.3.229 GET puzhenshop.feibu.info/index.php?s=/store/distributor_apply/edit/apply_id/23
+[ error ] [0]控制器不存在:app\store\controller\DistributorApply [E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php:583]
+#0 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(456): think\App::module(Array, Array, true)
+#1 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(139): think\App::exec(Array, Array)
+#2 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\start.php(19): think\App::run()
+#3 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web\index.php(12): require('E:\\UPUPW_ANK_W6...')
+#4 {main}

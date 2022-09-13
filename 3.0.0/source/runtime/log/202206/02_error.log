@@ -1,0 +1,35 @@
+---------------------------------------------------------------
+[ 2022-06-02T18:10:58+08:00 ] 183.38.24.164 GET puzhenshop.feibu.info/index.php?s=/api/page/index&page_id=0&wxapp_id=10001&token=f0dfaa7540e2d060e235655465145087
+[ error ] [2002]SQLSTATE[HY000] [2002] 由于系统缓冲区空间不足或队列已满，不能执行套接字上的操作。
+ [E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\db\Connection.php:295]
+#0 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\db\Connection.php(295): PDO->__construct('mysql:host=39.1...', 'feibukeji', 'ladfjeuwf71741s', Array)
+#1 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\db\Connection.php(995): think\db\Connection->connect()
+#2 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\db\Connection.php(348): think\db\Connection->initConnect(false)
+#3 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\db\connector\Mysql.php(65): think\db\Connection->query('SHOW COLUMNS FR...', Array, false, true)
+#4 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\db\Query.php(1921): think\db\connector\Mysql->getFields('`puzhen_wxapp`')
+#5 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\db\Query.php(1955): think\db\Query->getTableInfo('puzhen_wxapp', 'pk')
+#6 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\db\Query.php(2639): think\db\Query->getPk(Array)
+#7 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\Model.php(1707): think\db\Query->find('10001')
+#8 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\common\model\Wxapp.php(39): think\Model::get('10001')
+#9 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Controller.php(55): app\common\model\Wxapp::detail('10001')
+#10 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\application\api\controller\Controller.php(32): app\api\controller\Controller->checkWxapp()
+#11 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\Controller.php(59): app\api\controller\Controller->_initialize()
+#12 [internal function]: think\Controller->__construct(Object(think\Request))
+#13 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(359): ReflectionClass->newInstanceArgs(Array)
+#14 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\Loader.php(479): think\App::invokeClass('app\\api\\control...')
+#15 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(580): think\Loader::controller('page', 'controller', false, 'Error')
+#16 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(456): think\App::module(Array, Array, true)
+#17 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\App.php(139): think\App::exec(Array, Array)
+#18 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\start.php(19): think\App::run()
+#19 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\web\index.php(12): require('E:\\UPUPW_ANK_W6...')
+#20 {main}
+[ error ] [1]Uncaught InvalidArgumentException: Malformed UTF-8 characters, possibly incorrectly encoded in E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\response\Json.php:39
+Stack trace:
+#0 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\Response.php(309): think\response\Json->output(false)
+#1 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\Response.php(94): think\Response->getContent()
+#2 E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\Error.php(52): think\Response->send()
+#3 [internal function]: think\Error::appException(Object(PDOException))
+#4 {main}
+  thrown [E:\UPUPW_ANK_W64\WebRoot\Vhosts\puzhen\2.0.0\source\thinkphp\library\think\response\Json.php:39]
+#0 [internal function]: think\Error::appShutdown()
+#1 {main}

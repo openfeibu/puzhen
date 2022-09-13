@@ -1,0 +1,19 @@
+---------------------------------------------------------------
+[ 2022-07-14T22:07:37+08:00 ] 171.113.245.61 HEAD puzhenshop.feibu.info/
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'connection' => 'close',
+  'accept' => '*/*',
+  'host' => 'puzhenshop.feibu.info',
+  'user-agent' => 'curl/7.29.0',
+)
+[ begin ] [ PARAM ] array (
+)

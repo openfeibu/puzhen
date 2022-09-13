@@ -1,0 +1,9 @@
+---------------------------------------------------------------
+[ 2022-06-05T13:51:43+08:00 ] 183.38.24.164 GET puzhenshop.feibu.info/index.php?s=/api/user.index/detail&wxapp_id=10001&token=f0dfaa7540e2d060e235655465145087
+[ yoshop-info ] behavior Order --close --close_days 3 --deadline_time 1654149103 --orderIds []
+[ yoshop-info ] behavior Order --receive --receive_days 10 --deadline_time 1653544303 --orderIds []
+[ yoshop-info ] behavior Order --settled --refund_days 7 --deadline_time 1653803503 --orderIds []
+[ yoshop-info ] behavior sharp Order --close --close_minute 10 --deadline_time 1654407703 --orderIds []
+---------------------------------------------------------------
+[ 2022-06-05T13:51:51+08:00 ] 183.38.24.164 GET puzhenshop.feibu.info/index.php?s=/api/user.index/detail&wxapp_id=10001&token=f0dfaa7540e2d060e235655465145087
+[ yoshop-info ] behavior sharp Order --close --close_minute 10 --deadline_time 1654407711 --orderIds []

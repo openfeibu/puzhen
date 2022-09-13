@@ -1,0 +1,6 @@
+---------------------------------------------------------------
+[ 2022-03-21T16:17:09+08:00 ] 116.22.142.85 GET puzhenshop.feibu.info/index.php?s=/api/user.index/detail&wxapp_id=10001&token=
+[ yoshop-info ] behavior Order --close --close_days 3 --deadline_time 1647591429 --orderIds []
+[ yoshop-info ] behavior Order --receive --receive_days 10 --deadline_time 1646986629 --orderIds []
+[ yoshop-info ] behavior Order --settled --refund_days 7 --deadline_time 1647245829 --orderIds []
+[ yoshop-info ] behavior sharp Order --close --close_minute 10 --deadline_time 1647850029 --orderIds []

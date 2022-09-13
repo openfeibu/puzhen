@@ -1,0 +1,8 @@
+---------------------------------------------------------------
+[ 2022-06-27T17:34:34+08:00 ] 116.21.15.70 GET puzhenshop.feibu.info/index.php?s=/factory/tea_qrcode.factory_tea_qrcode/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014197s ] mysql:host=39.108.144.9;port=3306;dbname=puzhen_shop;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_factory_user` [ RunTime:0.010808s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_factory_user` WHERE  `puzhen_factory_user`.`wxapp_id` = 10001  AND `puzhen_factory_user`.`factory_id` = 9  AND `is_delete` = 0  AND `factory_user_id` = 10017 LIMIT 1 [ RunTime:0.009318s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `puzhen_tea_qrcode` [ RunTime:0.009786s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `puzhen_tea_qrcode` WHERE  `puzhen_tea_qrcode`.`wxapp_id` = 10001  AND `puzhen_tea_qrcode`.`factory_id` = 9 LIMIT 1 [ RunTime:0.009280s ]
+[ sql ] [ SQL ] SELECT * FROM `puzhen_tea_qrcode` WHERE  `puzhen_tea_qrcode`.`wxapp_id` = 10001  AND `puzhen_tea_qrcode`.`factory_id` = 9 ORDER BY `tea_qrcode_id` DESC LIMIT 0,15 [ RunTime:0.009506s ]

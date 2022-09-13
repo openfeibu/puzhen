@@ -1,0 +1,19 @@
+---------------------------------------------------------------
+[ 2022-09-08T12:42:53+08:00 ] 47.102.104.161 CONNECT puzhenshop.feibu.info:443puzhenshop.feibu.info:443
+[ begin ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ begin ] [ HEADER ] array (
+  'connection' => 'close',
+  'user-agent' => 'okhttp/3.10.0',
+  'proxy-connection' => 'Keep-Alive',
+  'host' => 'puzhenshop.feibu.info:443',
+)
+[ begin ] [ PARAM ] array (
+)

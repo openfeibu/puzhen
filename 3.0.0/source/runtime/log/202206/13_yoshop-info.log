@@ -1,0 +1,15 @@
+---------------------------------------------------------------
+[ 2022-06-13T09:47:10+08:00 ] 113.105.217.226 GET puzhenshop.feibu.info/index.php?s=/api/user.index/detail&wxapp_id=10001&token=001cfafb08f5ea9e687bc92562de9163
+[ yoshop-info ] behavior Order --close --close_days 3 --deadline_time 1654825630 --orderIds []
+[ yoshop-info ] behavior Order --receive --receive_days 10 --deadline_time 1654220830 --orderIds []
+[ yoshop-info ] behavior Order --settled --refund_days 7 --deadline_time 1654480030 --orderIds []
+[ yoshop-info ] behavior sharp Order --close --close_minute 10 --deadline_time 1655084230 --orderIds []
+---------------------------------------------------------------
+[ 2022-06-13T09:47:11+08:00 ] 113.105.217.226 GET puzhenshop.feibu.info/index.php?s=/api/user.index/detail&wxapp_id=10001&token=001cfafb08f5ea9e687bc92562de9163
+[ yoshop-info ] behavior sharp Order --close --close_minute 10 --deadline_time 1655084231 --orderIds []
+---------------------------------------------------------------
+[ 2022-06-13T22:51:23+08:00 ] 223.104.194.182 GET puzhenshop.feibu.info/index.php?s=/api/user.index/detail&wxapp_id=10001&token=7520979af69a6ba7cc2d6b0ef8503fa3
+[ yoshop-info ] behavior Order --close --close_days 3 --deadline_time 1654872683 --orderIds []
+[ yoshop-info ] behavior Order --receive --receive_days 10 --deadline_time 1654267883 --orderIds []
+[ yoshop-info ] behavior Order --settled --refund_days 7 --deadline_time 1654527083 --orderIds []
+[ yoshop-info ] behavior sharp Order --close --close_minute 10 --deadline_time 1655131283 --orderIds []
