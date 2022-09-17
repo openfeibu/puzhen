@@ -27,7 +27,7 @@ class Upload extends Controller
         // 存储配置信息
         $this->config = SettingModel::getItem('storage');
         // 验证用户
-        //$this->user = $this->getUser();
+        $this->user = $this->getUser();
     }
 
     /**
