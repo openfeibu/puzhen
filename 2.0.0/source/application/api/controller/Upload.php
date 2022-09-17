@@ -43,6 +43,7 @@ class Upload extends Controller
         $StorageDriver->setUploadFile('iFile');
         // 上传图片
         if (!$StorageDriver->upload()) {
+        	  return $this->renderError('图片上传失败' . $StorageDriver->getError());
             return json(['code' => 0, 'msg' => '图片上传失败' . $StorageDriver->getError()]);
         }
         // 图片上传路径
