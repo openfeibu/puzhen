@@ -31,7 +31,7 @@
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-md-3 am-u-lg-2 am-form-label"> 泡数 </label>
                                 <div class="am-u-sm-9 am-u-md-9 am-u-end am-padding-top-xs">
-                                    <?= $model['data']['number'] ?>克
+                                    <?= $model['data']['number'] ?>泡
                                 </div>
                             </div>
                             <?php foreach($model['data']['temperature_arr'] as $k => $temperature): ?>
