@@ -32,10 +32,10 @@ abstract class Basics extends \app\common\service\Basics
      * @return bool
      * @throws \think\Exception
      */
-    protected function sendSms($msgType, $templateParams, $wxappId)
+    protected function sendSms($msgType, $phoneNumbers, $templateParams, $wxappId)
     {
         $smsConfig = SettingModel::getItem('sms', $wxappId);
-        return (new SmsDriver($smsConfig))->sendSms($msgType, $templateParams);
+        return (new SmsDriver($smsConfig))->sendSms($msgType, $phoneNumbers, $templateParams);
     }
 
     /**

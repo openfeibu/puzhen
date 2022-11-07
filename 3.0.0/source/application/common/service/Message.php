@@ -29,6 +29,10 @@ class Message extends Basics
         'dealer.apply' => 'app\common\service\message\dealer\Apply',
         // 分销商提现通知
         'dealer.withdraw' => 'app\common\service\message\dealer\Withdraw',
+
+        'user.register' => 'app\common\service\message\user\Register',
+
+        'user.user' => 'app\common\service\message\user\User',
     ];
 
     /**

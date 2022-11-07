@@ -32,6 +32,7 @@ class WxUser extends WxBase
             $this->error = $result['errmsg'];
             return false;
         }
+	    $result['unionid'] = $result['unionid'] ?? null;
         return $result;
     }
 

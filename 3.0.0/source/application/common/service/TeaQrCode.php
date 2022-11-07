@@ -79,8 +79,8 @@ class TeaQrCode
         //新文件
         $text_file = WEB_PATH.'uploads'.$this->directory.DIRECTORY_SEPARATOR.$this->detail_image_name;
         $font = WEB_PATH.'/assets/common/fonts/SourceHanSerif-Medium.ttc';
-        $codeImg->generateFont($text_file,$this->detail_image, $this->post['name'], $text_width=200, $text_height=400,$font_size = 34, $cate1 = 0, $cate2 = 0, $cate3 = 0,$font);
-        $codeImg->generateFont($text_file,$this->detail_image,$this->text, $text_width=200, $text_height=450,$font_size = 20, $cate1 = 0, $cate2 = 0, $cate3 = 0,$font);
+        $codeImg->generateFont($text_file,$this->detail_image, $this->post['name'], $text_width=200, $text_height=400,$font_size = 34, $cate1 = 0, $cate2 = 0, $cate3 = 0, $font);
+        $codeImg->generateFont($text_file,$this->detail_image,$this->text, $text_width=200, $text_height=450,$font_size = 20, $cate1 = 0, $cate2 = 0, $cate3 = 0, $font);
 
     }
 

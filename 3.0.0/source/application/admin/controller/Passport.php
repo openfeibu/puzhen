@@ -8,7 +8,7 @@ use think\Session;
 /**
  * 超管后台认证
  * Class Passport
- * @package app\store\controller
+ * @package app\admin\controller
  */
 class Passport extends Controller
 {

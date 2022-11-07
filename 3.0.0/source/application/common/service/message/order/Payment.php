@@ -56,7 +56,9 @@ class Payment extends Basics
     {
         $orderInfo = $this->param['order'];
         $wxappId = $orderInfo['wxapp_id'];
-        return $this->sendSms('order_pay', ['order_no' => $orderInfo['order_no']], $wxappId);
+        $smsConfig = SettingModel::getItem('sms', $wxappId);
+
+        return $this->sendSms('order_pay', $smsConfig['order_pay']['accept_phone'], ['order_no' => $orderInfo['order_no']], $wxappId);
     }
 
     /**

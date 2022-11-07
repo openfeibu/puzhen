@@ -106,6 +106,9 @@ class Setting extends BaseModel
                 'values' => [
                     // 商城名称
                     'name' => $storeName ?: '泡臣小程序',
+                    'address' => '',
+                    'tel' => '',
+                    'email' => '',
                     // 配送方式
                     'delivery_type' => array_keys(DeliveryTypeEnum::data()),
                     // 快递100
@@ -114,6 +117,17 @@ class Setting extends BaseModel
                         'key' => '',
                     ]
                 ],
+            ],
+            // 微信开放平台
+            'weixin' => [
+                'key' => 'trade',
+                'describe' => '微信开放平台',
+                'values' => [
+                    'web' => [
+                        'AppID' => 'wx8ce4381ddbb54393',
+                        'AppSecret' => '52035ac6bdbebca4fa8c6e38066bcd6b',
+                    ],
+                ]
             ],
             // 交易设置
             'trade' => [
@@ -168,12 +182,24 @@ class Setting extends BaseModel
                         'aliyun' => [
                             'AccessKeyId' => '',
                             'AccessKeySecret' => '',
-                            'sign' => '泡臣',
+                            'sign' => '朴真平台',
+                            'product' => '泡臣',
+
                             'order_pay' => [
                                 'is_enable' => '0',
                                 'template_code' => '',
                                 'accept_phone' => '',
                             ],
+                            'user_register' => [
+                                'template_code' => '',
+                            ],
+                            'user_forget_pass' => [
+                                'template_code' => '',
+                            ],
+                            'user_reset_pass' => [
+                                'template_code' => '',
+                            ],
+
                         ],
                     ],
                 ],

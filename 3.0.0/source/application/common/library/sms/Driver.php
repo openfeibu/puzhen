@@ -34,17 +34,18 @@ class Driver
     /**
      * 发送短信通知
      * @param $msgType
+     * @param $phoneNumbers
      * @param $templateParams
      * @param bool $isTest
      * @return bool
      */
-    public function sendSms($msgType, $templateParams, $isTest = false)
+    public function sendSms($msgType, $phoneNumbers, $templateParams, bool $isTest = false)
     {
         if ($isTest === false
-            && $this->config['engine'][$this->engineName][$msgType]['is_enable'] == '0') {
+            && isset($this->config['engine'][$this->engineName][$msgType]['is_enable']) && $this->config['engine'][$this->engineName][$msgType]['is_enable'] == '0') {
             return false;
         }
-        return $this->engine->sendSms($msgType, $templateParams);
+        return $this->engine->sendSms($msgType, $phoneNumbers, $templateParams);
     }
 
     /**

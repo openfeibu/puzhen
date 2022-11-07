@@ -4,11 +4,7 @@ namespace app\common\model;
 
 use think\Db;
 
-/**
- * 产品评价模型
- * Class Comment
- * @package app\common\model
- */
+
 class Tea extends BaseModel
 {
     protected $name = 'tea';

@@ -1,11 +1,6 @@
 <?php
 namespace app\common\service;
 
-use Auth;
-use Log;
-use File;
-use Storage;
-use QrCode;
 
 class QrCodeService
 {

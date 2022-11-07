@@ -6,6 +6,7 @@ use think\Log;
 use think\exception\Handle;
 use think\exception\DbException;
 use Exception;
+use think\Request;
 
 /**
  * 重写Handle的render方法，实现自定义异常消息
@@ -24,18 +25,32 @@ class ExceptionHandler extends Handle
      */
     public function render(Exception $e)
     {
-        if ($e instanceof BaseException) {
-            $this->code = $e->code;
-            $this->message = $e->message;
-        } else {
-            if (config('app_debug')) {
-                return parent::render($e);
-            }
-            $this->code = 0;
-            $this->message = $e->getMessage() ?: '很抱歉，服务器内部错误';
-            $this->recordErrorLog($e);
+        switch ($e) {
+            case $e instanceof RequestTooFrequentException:
+                $this->code = $e->code;
+                $this->message = lang('request_too_frequent',['seconds' => $e->message]);
+                break;
+            case $e instanceof BaseException:
+                //必须放到最后
+                $this->code = $e->code;
+                $this->message = $e->message;
+                break;
+            default:
+                if (config('app_debug')) {
+                    return parent::render($e);
+                }
+                $this->code = 0;
+                $this->message = $e->getMessage() ?: lang('server_error');
+                $this->recordErrorLog($e);
+                break;
         }
-        return json(['msg' => $this->message, 'code' => $this->code]);
+
+        if( Request::instance()->isAjax())
+        {
+            return json(['msg' => $this->message, 'code' => $this->code]);
+        }
+
+
     }
 
     /**
