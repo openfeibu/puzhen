@@ -2282,3 +2282,9 @@ fieldset{padding-left:0;padding-right:0}
 	}
 
 .file-library{max-width:840px}
+.border-input {
+  font-size: 1.3rem !important;
+  padding-left: 10px !important;
+  border: 1px solid #e3e2e5 !important;
+}
+#map{height: 500px;}
