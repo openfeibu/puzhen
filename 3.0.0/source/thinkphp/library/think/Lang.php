@@ -188,6 +188,7 @@ class Lang
      * @access public
      * @return string
      */
+    /*
     public static function detect()
     {
         $langSet = '';
@@ -216,6 +217,35 @@ class Lang
             self::$range = $langSet ?: self::$range;
         }
 
+        return self::$range;
+    }*/
+    /**
+     * 自动侦测设置获取语言选择
+     * @return string
+     */
+    public static function detect() {
+        // 自动侦测设置获取语言选择
+        $langSet = Config::get('default_lang');
+        if (isset($_GET[self::$langDetectVar])) {
+            // url中设置了语言变量
+            $langSet = strtolower($_GET[self::$langDetectVar]);
+            Cookie::set(self::$langCookieVar, $langSet, 3600);
+        } elseif (Cookie::get(self::$langCookieVar)) {
+            // 获取上次用户的选择
+            $langSet = strtolower(Cookie::get(self::$langCookieVar));
+        } elseif ($langSet) {
+            // 获取默认语言
+            Cookie::set(self::$langCookieVar, $langSet, 3600);
+        } elseif (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+            // 自动侦测浏览器语言
+            preg_match('/^([a-z\d\-]+)/i', $_SERVER['HTTP_ACCEPT_LANGUAGE'], $matches);
+            $langSet = strtolower($matches[1]);
+            Cookie::set(self::$langCookieVar, $langSet, 3600);
+        }
+        if (empty(self::$allowLangList) || in_array($langSet, self::$allowLangList)) {
+            // 合法的语言
+            self::$range = $langSet;
+        }
         return self::$range;
     }
 
