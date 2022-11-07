@@ -70,6 +70,10 @@ class Banner extends BannerModel
      */
     private function setListQueryWhere($param = [])
     {
+        foreach ($param as $key => $where)
+        {
+            $this->where($key,'=',$where);
+        }
         return $this->order(['sort' => 'asc', 'create_time' => 'asc']);
     }
     /**

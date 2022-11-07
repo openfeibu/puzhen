@@ -31,6 +31,54 @@
                                            value="<?= $values['engine']['aliyun']['sign'] ?>" required>
                                 </div>
                             </div>
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-form-label form-require"> 产品名称 </label>
+                                <div class="am-u-sm-9">
+                                    <input type="text" class="tpl-form-input" name="sms[engine][aliyun][product]"
+                                           value="<?= $values['engine']['aliyun']['product'] ?>" required>
+                                </div>
+                            </div>
+
+
+                            <div class="widget-head am-cf">
+                                <div class="widget-title am-fl">用户</div>
+                            </div>
+
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-form-label form-require">
+                                    注册模板ID <span class="tpl-form-line-small-title">Template Code</span>
+                                </label>
+                                <div class="am-u-sm-9">
+                                    <input type="text" class="tpl-form-input"
+                                           name="sms[engine][aliyun][user_register][template_code]"
+                                           value="<?= $values['engine']['aliyun']['user_register']['template_code'] ?>">
+                                    <small>例如：SMS_10840890</small>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <div class="am-u-sm-9 am-u-sm-push-3">
+                                    <small>模板内容：验证码${code}，您正在注册成为${product}用户，感谢您的支持！</small>
+                                </div>
+                            </div>
+
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-form-label form-require">
+                                    忘记密码模板ID <span class="tpl-form-line-small-title">Template Code</span>
+                                </label>
+                                <div class="am-u-sm-9">
+                                    <input type="text" class="tpl-form-input"
+                                           name="sms[engine][aliyun][user_forget_pass][template_code]"
+                                           value="<?= $values['engine']['aliyun']['user_forget_pass']['template_code'] ?>">
+                                    <small>例如：SMS_10840890</small>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <div class="am-u-sm-9 am-u-sm-push-3">
+                                    <small>模板内容： 验证码${code}，您正在尝试修改${product}登录密码，请妥善保管账户信息。</small>
+                                </div>
+                            </div>
+
+                            <!--
                             <div class="widget-head am-cf">
                                 <div class="widget-title am-fl">新付款订单提醒</div>
                             </div>
@@ -86,6 +134,7 @@
                                     </div>
                                 </div>
                             </div>
+                            --->
                             <div class="am-form-group">
                                 <div class="am-u-sm-9 am-u-sm-push-3 am-margin-top-lg">
                                     <button type="submit" class="j-submit am-btn am-btn-secondary">提交

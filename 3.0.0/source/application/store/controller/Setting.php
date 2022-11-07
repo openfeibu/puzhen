@@ -81,7 +81,9 @@ class Setting extends Controller
         if ($msg_type === 'order_pay') {
             $templateParams = ['order_no' => '2018071200000000'];
         }
-        if ($SmsDriver->sendSms($msg_type, $templateParams, true)) {
+        $smsConfig = SettingModel::getItem('sms', $this->getWxappId());
+
+        if ($SmsDriver->sendSms($msg_type, $smsConfig[$msg_type]['accept_phone'], $templateParams, true)) {
             return $this->renderSuccess('发送成功');
         }
         return $this->renderError('发送失败 ' . $SmsDriver->getError());

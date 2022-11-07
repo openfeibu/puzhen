@@ -166,7 +166,10 @@ return [
                     ],
                 ]
             ],
-        
+            [
+                'name' => '冲泡码配置',
+                'index' => 'tea_qrcode.tea_config/index',
+            ],
         ]
     ],
     'equipment' => [
@@ -594,6 +597,34 @@ return [
             */
         ],
     ],
+    'pc' => [
+        'name' => '网页端',
+        'icon' => 'am-icon-television',
+        'color' => '#36b313',
+        'index' => 'pc.banner/index',
+        'submenu' => [
+            [
+                'name' => '网站设置',
+                'index' => 'pc/setting',
+            ],
+            [
+                'name' => '页面管理',
+                'active' => true,
+                'submenu' => [
+                    [
+                        'name' => '轮播图',
+                        'index' => 'pc.banner/index',
+                        'uris' => [
+                            'pc.banner/index',
+                            'pc.banner/add',
+                            'pc.banner/edit',
+                        ]
+                    ],
+
+                ]
+            ],
+        ],
+    ],
     /*
     'apps' => [
         'name' => '应用中心',
@@ -810,6 +841,10 @@ return [
                 'name' => '保修包换设置',
                 'index' => 'setting/warranty',
             ],
+            [
+                'name' => '短信通知',
+                'index' => 'setting/sms'
+            ],
             /*
             [
                 'name' => '交易设置',
@@ -833,10 +868,7 @@ return [
                     'setting.express/edit',
                 ],
             ],
-            [
-                'name' => '短信通知',
-                'index' => 'setting/sms'
-            ],
+
             */
             //    [
             //        'name' => '模板消息',

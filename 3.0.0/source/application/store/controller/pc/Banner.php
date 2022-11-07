@@ -1,6 +1,6 @@
 <?php
 
-namespace app\store\controller\wxapp;
+namespace app\store\controller\pc;
 
 use app\store\controller\Controller;
 use app\store\model\Banner as BannerModel;
@@ -11,7 +11,7 @@ class Banner extends Controller
     {
         // 获取全部产品列表
         $model = new BannerModel;
-        $param = array_merge($this->request->param(),['type' => 'weapp']);
+        $param = array_merge($this->request->param(),['type' => 'pc']);
         $list = $model->getList($param);
         // 产品分类
         return $this->fetch('index', compact('list'));
@@ -22,8 +22,9 @@ class Banner extends Controller
             return $this->fetch('add');
         }
         $model = new BannerModel;
-        if ($model->add($this->postData('banner'))) {
-            return $this->renderSuccess('添加成功', url('wxapp.banner/index'));
+        $data = array_merge($this->postData('banner'),['type' => 'pc']);
+        if ($model->add($data)) {
+            return $this->renderSuccess('添加成功', url('pc.banner/index'));
         }
         return $this->renderError($model->getError() ?: '添加失败');
     }
@@ -37,7 +38,7 @@ class Banner extends Controller
         }
         // 新增记录
         if ($model->edit($this->postData('banner'))) {
-            return $this->renderSuccess('更新成功', url('wxapp.banner/index'));
+            return $this->renderSuccess('更新成功', url('pc.banner/index'));
         }
         return $this->renderError($model->getError() ?: '更新失败');
     }
