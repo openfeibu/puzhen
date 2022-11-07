@@ -3,6 +3,7 @@ namespace Qiniu\Tests;
 
 use phpDocumentor\Reflection\DocBlock\Tags\Version;
 use Qiniu\Region;
+use Qiniu\Storage\BucketManager;
 use Qiniu\Storage\ResumeUploader;
 use Qiniu\Storage\UploadManager;
 use Qiniu\Http\Client;
@@ -11,6 +12,19 @@ use Qiniu\Zone;
 
 class ResumeUpTest extends \PHPUnit_Framework_TestCase
 {
+    private static $keyToDelete = array();
+
+    public static function tearDownAfterClass()
+    {
+        global $bucketName;
+        global $testAuth;
+
+        $config = new Config();
+        $bucketManager = new BucketManager($testAuth, $config);
+        foreach (self::$keyToDelete as $key) {
+            $bucketManager->delete($bucketName, $key);
+        }
+    }
     protected $bucketName;
     protected $auth;
 
@@ -54,8 +68,7 @@ class ResumeUpTest extends \PHPUnit_Framework_TestCase
     public function test4ML2()
     {
         $key = 'resumePutFile4ML_'.rand();
-        $zone = new Zone(array('upload.fake.qiniu.com'), array('upload.qiniup.com'));
-        $cfg = new Config($zone);
+        $cfg = new Config();
         $upManager = new UploadManager($cfg);
         $token = $this->auth->uploadToken($this->bucketName, $key);
         $tempFile = qiniuTempFile(4 * 1024 * 1024 + 10);
@@ -93,6 +106,43 @@ class ResumeUpTest extends \PHPUnit_Framework_TestCase
     //     unlink($tempFile);
     // }
 
+    public function testFileWithFileType()
+    {
+        $config = new Config();
+        $bucketManager = new BucketManager($this->auth, $config);
+
+        $testCases = array(
+            array(
+                "fileType" => 1,
+                "name" => "IA"
+            ),
+            array(
+                "fileType" => 2,
+                "name" => "Archive"
+            ),
+            array(
+                "fileType" => 3,
+                "name" => "DeepArchive"
+            )
+        );
+
+        foreach ($testCases as $testCase) {
+            $key = 'FileType'.$testCase["name"].rand();
+            $police = array(
+                "fileType" => $testCase["fileType"],
+            );
+            $token = $this->auth->uploadToken($this->bucketName, $key, 3600, $police);
+            $upManager = new UploadManager();
+            list($ret, $error) = $upManager->putFile($token, $key, __file__, null, 'text/plain');
+            $this->assertNull($error);
+            $this->assertNotNull($ret);
+            array_push(self::$keyToDelete, $key);
+            list($ret, $err) = $bucketManager->stat($this->bucketName, $key);
+            $this->assertNull($err);
+            $this->assertEquals($testCase["fileType"], $ret["type"]);
+        }
+    }
+
     public function testResumeUploadWithParams()
     {
         $key = "resumePutFile4ML_".rand();
@@ -129,8 +179,7 @@ class ResumeUpTest extends \PHPUnit_Framework_TestCase
 
     public function testResumeUploadV2()
     {
-        $zone = new Zone(array('up.qiniup.com'));
-        $cfg = new Config($zone);
+        $cfg = new Config();
         $upManager = new UploadManager($cfg);
         $testFileSize = array(
             config::BLOCK_SIZE / 2,
@@ -209,8 +258,7 @@ class ResumeUpTest extends \PHPUnit_Framework_TestCase
     // but not match the test style of this project
     public function testResumeUploadWithInvalidVersion()
     {
-        $zone = new Zone(array('up.qiniup.com'));
-        $cfg = new Config($zone);
+        $cfg = new Config();
         $upManager = new UploadManager($cfg);
         $testFileSize = config::BLOCK_SIZE * 2;
         $partSize = 5 * 1024 * 1024;
