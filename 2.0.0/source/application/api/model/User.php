@@ -139,6 +139,9 @@ class User extends UserModel
                 ]))) {
                     throw new BaseException(['msg' => '用户注册失败']);
                 }
+                $model->allowField(true)->save([
+                    'nickName' => '朴真'.$model['user_id']
+                ]);
                 // 记录推荐人关系
                 if ($refereeId > 0) {
                     RefereeModel::createRelation($model['user_id'], $refereeId);
