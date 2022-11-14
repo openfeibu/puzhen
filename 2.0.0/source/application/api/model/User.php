@@ -131,15 +131,23 @@ class User extends UserModel
         $this->startTrans();
         try {
             // 保存/更新用户记录
-            if (!$model->allowField(true)->save(array_merge($data, [
-                'open_id' => $open_id,
-                'wxapp_id' => self::$wxapp_id
-            ]))) {
-                throw new BaseException(['msg' => '用户注册失败']);
-            }
-            // 记录推荐人关系
-            if (!$user && $refereeId > 0) {
-                RefereeModel::createRelation($model['user_id'], $refereeId);
+            if(!$user)
+            {
+                if (!$model->allowField(true)->save(array_merge($data, [
+                    'open_id' => $open_id,
+                    'wxapp_id' => self::$wxapp_id
+                ]))) {
+                    throw new BaseException(['msg' => '用户注册失败']);
+                }
+                // 记录推荐人关系
+                if ($refereeId > 0) {
+                    RefereeModel::createRelation($model['user_id'], $refereeId);
+                }
+            }else{
+                $model->allowField(true)->save([
+                    'open_id' => $open_id,
+                    'wxapp_id' => self::$wxapp_id
+                ]);
             }
             $this->commit();
         } catch (\Exception $e) {
