@@ -177,11 +177,20 @@ class User extends UserModel
                 }
 
             }
+            if(!$existUser)
+            {
+                $model->allowField(true)->save(array_merge($data, [
+                    'open_id' => $openId,
+                    'wxapp_id' => self::$wxapp_id,
+                    'nickName' => '朴真'.$model['user_id'],
+                ]));
+            }else{
+                $model->allowField(true)->save([
+                    'open_id' => $openId,
+                    'wxapp_id' => self::$wxapp_id
+                ]);
+            }
 
-            $model->allowField(true)->save(array_merge($data, [
-                'open_id' => $openId,
-                'wxapp_id' => self::$wxapp_id
-            ]));
 
             $weappAccountModel->allowField(true)->save(array_merge($data, [
                 'open_id' => $openId,
