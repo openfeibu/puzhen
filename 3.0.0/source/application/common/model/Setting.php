@@ -118,6 +118,17 @@ class Setting extends BaseModel
                     ]
                 ],
             ],
+            // 网站设置
+            'pc' => [
+                'key' => 'pc',
+                'describe' => '网站设置',
+                'values' => [
+                    // 商城名称
+                    'name' => '',
+
+                ],
+            ],
+
             // 微信开放平台
             'weixin' => [
                 'key' => 'trade',
@@ -202,6 +213,33 @@ class Setting extends BaseModel
 
                         ],
                     ],
+                ],
+            ],
+            'email' => [
+                'key' => 'email',
+                'describe' => '邮箱通知',
+                'values' => [
+                    'default' => 'NetEase',
+                    'engine' => [
+                        'NetEase' => [
+                            'username' => '',
+                            'password' => '',
+                            'host' => 'smtp.163.com',
+                            'port' => '465',
+
+                        ],
+                    ],
+                    'template' => [
+                        'distributor_apply' => [
+                            'subject' => '',
+                            'body' => '',
+                        ],
+                        'user_register' => [
+                            'subject' => '',
+                            'body' => '',
+                        ],
+                    ],
+
                 ],
             ],
             // 模板消息

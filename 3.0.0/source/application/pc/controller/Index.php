@@ -4,7 +4,6 @@ namespace app\pc\controller;
 
 class Index extends Controller
 {
-
     public function _initialize()
     {
         parent::_initialize();

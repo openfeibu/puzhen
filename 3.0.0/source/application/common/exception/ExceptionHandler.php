@@ -2,6 +2,7 @@
 
 namespace app\common\exception;
 
+use app\common\traits\exception\ExceptionCustomHandler;
 use think\Log;
 use think\exception\Handle;
 use think\exception\DbException;
@@ -15,8 +16,7 @@ use think\Request;
  */
 class ExceptionHandler extends Handle
 {
-    private $code;
-    private $message;
+    use ExceptionCustomHandler;
 
     /**
      * 输出异常信息
@@ -25,33 +25,41 @@ class ExceptionHandler extends Handle
      */
     public function render(Exception $e)
     {
-        switch ($e) {
-            case $e instanceof RequestTooFrequentException:
-                $this->code = $e->code;
-                $this->message = lang('request_too_frequent',['seconds' => $e->message]);
-                break;
-            case $e instanceof BaseException:
-                //必须放到最后
-                $this->code = $e->code;
-                $this->message = $e->message;
-                break;
-            default:
-                if (config('app_debug')) {
-                    return parent::render($e);
-                }
-                $this->code = 0;
-                $this->message = $e->getMessage() ?: lang('server_error');
-                $this->recordErrorLog($e);
-                break;
+        if(!$this->renderCommon($e))
+        {
+            switch ($e) {
+                case $e instanceof NotAuthException:
+                    $this->code = $e->code;
+                    $this->message = $e->message;
+                    $this->direct_url = url('passport/login');
+                    break;
+                case $e instanceof BaseException:
+                    //必须放到最后
+                    $this->code = $e->code;
+                    $this->message = $e->message;
+                    break;
+                default:
+                    if (config('app_debug')) {
+                        return parent::render($e);
+                    }
+                    $this->code = 0;
+                    $this->message = $e->getMessage() ?: lang('server_error');
+                    $this->recordErrorLog($e);
+                    break;
+            }
+
         }
 
-        if( Request::instance()->isAjax())
+        if(Request::instance()->isAjax() || strpos(Request::instance()->contentType(),'json'))
         {
             return json(['msg' => $this->message, 'code' => $this->code]);
         }
-
+        else{
+            return parent::render($e);
+        }
 
     }
+
 
     /**
      * Report or log an exception.

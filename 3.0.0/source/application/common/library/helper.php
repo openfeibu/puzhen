@@ -159,18 +159,5 @@ class helper
         return json_decode($json, true);
     }
 
-    /**
-     * 中文切割
-    */
-    public static function utf8StrSplit($str, $split_len = 1)
-    {
-        if (!preg_match('/^[0-9]+$/', $split_len) || $split_len < 1)
-            return FALSE;
-        $len = mb_strlen($str, 'UTF-8');
-        if ($len <= $split_len)
-            return array($str);
-        preg_match_all('/.{'.$split_len.'}|[^\x00]{1,'.$split_len.'}$/us', $str, $ar);
-        return $ar[0];
-    }
 
 }

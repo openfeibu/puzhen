@@ -845,6 +845,10 @@ return [
                 'name' => '短信通知',
                 'index' => 'setting/sms'
             ],
+            [
+                'name' => '邮箱通知',
+                'index' => 'setting/email'
+            ],
             /*
             [
                 'name' => '交易设置',

@@ -17,6 +17,16 @@ class User extends BaseModel
     private $gender = ['未知', '男', '女'];
 
     /**
+     * 关联微信小程序表
+     * @return \think\model\relation\BelongsTo
+     */
+    public function wxapp()
+    {
+        $module = self::getCalledModule() ?: 'common';
+        return $this->belongsTo("app\\{$module}\\model\\Wxapp");
+    }
+
+    /**
      * 关联会员等级表
      * @return \think\model\relation\BelongsTo
      */

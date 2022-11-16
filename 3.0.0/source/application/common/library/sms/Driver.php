@@ -39,7 +39,7 @@ class Driver
      * @param bool $isTest
      * @return bool
      */
-    public function sendSms($msgType, $phoneNumbers, $templateParams, bool $isTest = false)
+    public function sendSms($msgType, $phoneNumbers, $templateParams, $isTest = false)
     {
         if ($isTest === false
             && isset($this->config['engine'][$this->engineName][$msgType]['is_enable']) && $this->config['engine'][$this->engineName][$msgType]['is_enable'] == '0') {

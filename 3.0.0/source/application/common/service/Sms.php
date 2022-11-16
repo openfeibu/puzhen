@@ -8,7 +8,7 @@ use app\common\service\Message as MessageService;
 use think\Log;
 use think\Session;
 use app\common\exception\BaseException;
-use app\common\exception\RequestTooFrequentException;
+use app\common\exception\NotAuthException;
 
 use AlibabaCloud\SDK\Dysmsapi\V20170525\Dysmsapi;
 use \Exception;
@@ -38,7 +38,7 @@ class Sms extends Basics
     /**
      * 发送短信验证码到手机号码
      * @param $phone_numbers //逗号分割，目前不支持多手机
-     * @throws RequestTooFrequentException
+     * @throws NotAuthException
      * @throws BaseException
      */
 
@@ -46,7 +46,7 @@ class Sms extends Basics
     {
         $se_time = time() - Session::get($phone_numbers . 'SMSLimit');
         if (Session::get($phone_numbers . 'SMSLimit') and ($se_time <= 60)) {
-            throw new RequestTooFrequentException(['msg' => (60 - $se_time)]);
+            throw new NotAuthException(['msg' => (60 - $se_time)]);
         }
         $verify_code = rand(1000, 9999);
 
@@ -60,7 +60,7 @@ class Sms extends Basics
     /**
      * 发送短信验证码到手机号码
      * @param $phone_numbers //逗号分割，目前不支持多手机
-     * @throws RequestTooFrequentException
+     * @throws NotAuthException
      * @throws BaseException
      */
     /*

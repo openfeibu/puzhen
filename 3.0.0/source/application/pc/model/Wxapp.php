@@ -16,7 +16,6 @@ class Wxapp extends WxappModel
      * @var array
      */
     protected $hidden = [
-        'wxapp_id',
         'app_name',
         'app_id',
         'app_secret',

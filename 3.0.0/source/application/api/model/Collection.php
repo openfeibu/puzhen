@@ -64,7 +64,7 @@ class Collection extends CollectionModel
      * @return \think\Paginator
      * @throws \think\exception\DbException
      */
-    public function getList($type, $user)
+    public function getList($type, $user, $listRows=15)
     {
         switch ($type)
         {
@@ -78,7 +78,7 @@ class Collection extends CollectionModel
                     ->where('goods.is_delete',0)
                     ->where('goods.goods_status',10)
                     ->order(['collection.create_time' => 'desc'])
-                    ->paginate(15, false, [
+                    ->paginate($listRows, false, [
                         'query' => request()->request()
                     ]);
 

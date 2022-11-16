@@ -190,7 +190,7 @@ class Goods extends BaseModel
                 "$minRefPriceSql AS goods_min_ref_price",
                 "$maxRefPriceSql AS goods_max_ref_price"
             ])
-            ->with(['category', 'image.file', 'sku'])
+            ->with(['category', 'image.file', 'sku','goods_tea_qrcode' => ['tea_qrcode']])
             ->where('factory.is_delete', '=', 0)
             ->where('goods.is_delete', '=', 0)
             ->where($filter)

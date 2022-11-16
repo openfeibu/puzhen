@@ -11,6 +11,9 @@ class Setting extends EnumBasics
 {
     // 商城设置
     const STORE = 'store';
+
+    // 网站设置
+    const PC = 'pc';
   
     // 保修包换设置
     const WARRANTY = 'warranty';
@@ -20,6 +23,9 @@ class Setting extends EnumBasics
 
     // 短信通知
     const SMS = 'sms';
+
+    // 邮件通知
+    const EMAIL = 'email';
 
     // // 模板消息
     // const TPL_MSG = 'tplMsg';
@@ -53,6 +59,10 @@ class Setting extends EnumBasics
                 'value' => self::STORE,
                 'describe' => '商城设置',
             ],
+            self::PC => [
+                'value' => self::PC,
+                'describe' => '网站设置',
+            ],
             self::WARRANTY => [
               'value' => self::WARRANTY,
               'describe' => '保修包换设置',
@@ -63,6 +73,10 @@ class Setting extends EnumBasics
             ],
             self::SMS => [
                 'value' => self::SMS,
+                'describe' => '短信通知',
+            ],
+            self::EMAIL => [
+                'value' => self::EMAIL,
                 'describe' => '短信通知',
             ],
             // self::TPL_MSG => [

@@ -44,6 +44,15 @@ class Setting extends Controller
     }
 
     /**
+     * 邮件通知
+     * @return mixed
+     * @throws \think\exception\DbException
+     */
+    public function email()
+    {
+        return $this->updateEvent('email');
+    }
+    /**
      * 发送订阅消息
      * @return mixed
      * @throws \think\exception\DbException

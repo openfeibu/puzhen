@@ -34,4 +34,11 @@ return [
     // 默认跳转页面对应的模板文件
     'dispatch_error_tmpl' => 'layouts/error',
 
+    // 异常处理handle类 留空使用 \think\exception\Handle
+    'exception_handle' => '\\app\\common\\exception\\pc\\ExceptionHandler',
+
+    // 异常页面的模板文件
+   // 'exception_tmpl'         => APP_PATH.'pc/view/layouts/error.php',
+
+    'show_error_msg'         => true,
 ];

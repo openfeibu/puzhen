@@ -407,3 +407,49 @@ function diffBetweenTwoDays($day1, $day2)
     }
     return ($second1 - $second2) / 86400;
 }
+
+/**
+ * 中文切割
+ */
+function utf8_str_split($str, $split_len = 1)
+{
+    if (!preg_match('/^[0-9]+$/', $split_len) || $split_len < 1)
+        return FALSE;
+    $len = mb_strlen($str, 'UTF-8');
+    if ($len <= $split_len)
+        return array($str);
+    preg_match_all('/.{'.$split_len.'}|[^\x00]{1,'.$split_len.'}$/us', $str, $ar);
+    return $ar[0];
+}
+
+/**
+ * 变量替换
+ */
+function str_replace_template($html, $params)
+{
+    foreach ($params as $key => $value)
+    {
+        $html = str_replace('${'.$key.'}',$value,$html);
+    }
+    return $html;
+}
+
+//用户名、邮箱、手机账号中间字符串以*隐藏
+function hide_star($str)
+{
+    if (strpos($str, '@')) {
+        $email_array = explode("@", $str);
+        $prevfix = (strlen($email_array[0]) < 4) ? "" : substr($str, 0, 3); //邮箱前缀
+        $count = 0;
+        $str = preg_replace('/([\d\w+_-]{0,100})@/', '***@', $str, -1, $count);
+        $rs = $prevfix . $str;
+    } else {
+        $pattern = '/(1[3458]{1}[0-9])[0-9]{4}([0-9]{4})/i';
+        if (preg_match($pattern, $str)) {
+            $rs = preg_replace($pattern, '$1****$2', $str);
+        } else {
+            $rs = substr($str, 0, 3) . "***" . substr($str, -1);
+        }
+    }
+    return $rs;
+}

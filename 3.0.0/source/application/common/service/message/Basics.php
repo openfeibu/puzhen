@@ -5,6 +5,7 @@ namespace app\common\service\message;
 use app\common\model\Wxapp as WxappModel;
 use app\common\model\Setting as SettingModel;
 use app\common\library\sms\Driver as SmsDriver;
+use app\common\library\email\Driver as EmailDriver;
 use app\common\library\wechat\WxSubMsg;
 
 /**
@@ -27,6 +28,7 @@ abstract class Basics extends \app\common\service\Basics
     /**
      * 发送短信提醒
      * @param $msgType
+     * @param $phoneNumbers
      * @param $templateParams
      * @param $wxappId
      * @return bool
@@ -34,8 +36,25 @@ abstract class Basics extends \app\common\service\Basics
      */
     protected function sendSms($msgType, $phoneNumbers, $templateParams, $wxappId)
     {
+        return true;
         $smsConfig = SettingModel::getItem('sms', $wxappId);
         return (new SmsDriver($smsConfig))->sendSms($msgType, $phoneNumbers, $templateParams);
+    }
+
+    /**
+     * 发送邮件提醒
+     * @param $msgType
+     * @param $email
+     * @param $templateParams
+     * @param $wxappId
+     * @return bool
+     * @throws \think\Exception
+     */
+    protected function sendEmail($msgType, $email, $templateParams, $wxappId)
+    {
+        return true;
+        $emailConfig = SettingModel::getItem('email', $wxappId);
+        return (new EmailDriver($emailConfig))->sendEmail($msgType, $email, $templateParams);
     }
 
     /**

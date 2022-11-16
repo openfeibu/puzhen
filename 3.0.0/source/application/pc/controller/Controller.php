@@ -4,8 +4,12 @@ namespace app\pc\controller;
 
 
 use app\common\exception\BaseException;
-use app\api\model\Wxapp as WxappModel;
+use app\common\exception\NotAuthException;
+use app\pc\model\Wxapp as WxappModel;
+use app\pc\model\User as UserModel;
+use app\pc\model\Setting;
 use think\Cookie;
+use think\Lang;
 use think\Request;
 use think\Session;
 
@@ -28,6 +32,8 @@ class Controller extends \think\Controller
     /** @var string $route 当前路由uri */
     protected $routeUri = '';
 
+    protected $pc;
+
     /** @var string $route 当前路由：分组名称 */
     protected $group = '';
 
@@ -36,7 +42,13 @@ class Controller extends \think\Controller
         // 登录页面
         'passport/login',
         'passport/register',
-        'passport/send_register_sms'
+        'passport/send_register_sms',
+        'passport/send_register_email',
+        //'passport/register_weixin_web_bind',
+
+    ];
+    protected $checkLoginAction= [
+        'passport/register_weixin_web_bind',
     ];
 
     /* @var array $notLayoutAction 无需全局layout */
@@ -56,8 +68,8 @@ class Controller extends \think\Controller
     {
         // 当前小程序id
         $this->wxapp_id = $this->getWxappId();
-        // 商家登录信息
-        $this->user = Session::get('fbshop_user');
+        // 用户登录信息
+        $this->pc = Session::get('fbshop_pc');
         // 验证当前小程序状态
         $this->checkWxapp();
         // 当前路由信息
@@ -71,7 +83,8 @@ class Controller extends \think\Controller
             $this->lang();
         }
         $this->assign('think_lang',Cookie::get('think_var'));
-
+        $this->assign('wxapp_id', $this->wxapp_id);
+        $this->assign('lang_arr', json_encode(Lang::get()));
     }
 
     /**
@@ -86,10 +99,13 @@ class Controller extends \think\Controller
             // 输出到view
             $this->assign([
                 'base_url' => base_url(),                      // 当前域名
-                'store_url' => url('/pc'),              // 模块url
+                'pc_url' => url('/pc'),              // 模块url
                 'group' => $this->group,                       // 当前控制器分组
                 'request' => Request::instance(),              // Request对象
+                'setting' => Setting::getAll() ?: null,
                 'version' => get_version(),                    // 系统版本号
+                'pc' => $this->pc,
+                'routeUri' => $this->routeUri,
             ]);
         }
     }
@@ -141,21 +157,62 @@ class Controller extends \think\Controller
      * 验证登录状态
      * @return bool
      */
-    private function checkLogin()
+    protected function checkLogin()
     {
         // 验证当前请求是否在白名单
         if (in_array($this->routeUri, $this->allowAllAction)) {
             return true;
         }
-        // 验证登录状态
-        if (empty($this->user)
-            || (int)$this->user['is_login'] !== 1
-        ) {
-            $this->redirect('passport/login');
-            return false;
+
+        if(in_array($this->routeUri, $this->checkLoginAction))
+        {
+            // 验证登录状态
+            if (empty($this->pc)
+                || (int)$this->pc['is_login'] !== 1
+            ) {
+                throw new NotAuthException(['msg' => '未登录']);
+            }
+            return true;
         }
         return true;
     }
+
+    /**
+     * 获取当前用户信息
+     * @param bool $is_force
+     * @return UserModel|bool|null
+     * @throws BaseException
+     * @throws \think\exception\DbException
+     */
+    protected function getUser($is_force = true)
+    {
+        if ($is_force) {
+            // 验证登录状态
+            if (empty($this->pc)
+                || (int)$this->pc['is_login'] !== 1
+            ) {
+                throw new NotAuthException(['msg' => '未登录']);
+            }
+        }
+        if (!$user = UserModel::getUser($this->pc['user']['user_id'])) {
+            if($is_force){
+                throw new NotAuthException(['msg' => '没有找到用户信息']);
+            }
+            return false;
+        }
+        return $user;
+    }
+    /**
+     * 输出错误信息
+     * @param int $code
+     * @param $msg
+     * @throws BaseException
+     */
+    protected function throwError($msg, $code = 0)
+    {
+        throw new BaseException(['code' => $code, 'msg' => $msg]);
+    }
+
     /**
      * 返回封装后的 API 数据到客户端
      * @param int $code
@@ -176,7 +233,7 @@ class Controller extends \think\Controller
      * @param array $data
      * @return array
      */
-    protected function renderSuccess($msg = 'success', $url = '', $data = [])
+    protected function renderSuccess($data = [], $msg = 'success', $url = '')
     {
         return $this->renderJson(1, $msg, $url, $data);
     }
@@ -188,13 +245,9 @@ class Controller extends \think\Controller
      * @param array $data
      * @return array|bool
      */
-    protected function renderError($msg = 'error', $url = '', $data = [])
+    protected function renderError($data = [], $msg = 'error', $url = '')
     {
-        if ($this->request->isAjax()) {
-            return $this->renderJson(0, $msg, $url, $data);
-        }
-        $this->error($msg);
-        return false;
+        return $this->renderJson(0, $msg, $url, $data);
     }
 
     /**

@@ -58,7 +58,7 @@ class User extends UserModel
         // 微信登录 获取session_key
         $session = $this->wxlogin($post['code']);
         // 自动注册用户
-        $refereeId = isset($post['referee_id']) ? $post['referee_id'] : null;
+        $refereeId = $post['referee_id'] ?? null;
         $userInfo = json_decode(htmlspecialchars_decode($post['user_info']), true);
         $user_id = $this->register($session['openid'], $session['unionid'], $userInfo, $refereeId);
         // 生成token (session3rd)
@@ -120,74 +120,132 @@ class User extends UserModel
 
     /**
      * 自动注册用户
-     * @param $open_id
-     * @param $union_id
+     * @param $openId
+     * @param $unionId
      * @param $data
      * @param int $refereeId
      * @return mixed
      * @throws \Exception
      * @throws \think\exception\DbException
      */
-    private function register($open_id, $union_id, $data, $refereeId = null)
+    private function register($openId, $unionId, $data, $refereeId = null)
     {
-        $weapp_account = UserWechatAccountModel::detail(['open_id' => $open_id]);
-        //老系统没有union_id，做兼容更新
-        if($weapp_account && $union_id && !$weapp_account['union_id'])
+        $weappAccount = UserWechatAccountModel::detail(['open_id' => $openId,'type' => 'weapp']);
+        // 老系统没有union_id，做兼容更新
+        // 之前登录但是没有union_id，更新union_id。
+        if($weappAccount && $unionId && !$weappAccount['union_id'])
         {
             // 保存/更新用户记录
-            $weapp_account->allowField(true)->save(array_merge($data, [
-                'open_id' => $open_id,
-                'union_id' => $union_id,
+            $weappAccount->allowField(true)->save(array_merge($data, [
+                'open_id' => $openId,
+                'union_id' => $unionId,
                 'wxapp_id' => self::$wxapp_id,
                 'type' => 'weapp',
             ]));
         }
 
-        // 查询微信用户（包含小程序，网页，公众号h5，移动应用）是否已存在
-        $wechat_account = UserWechatAccountModel::detail(['union_id' => $union_id]);
-
+        $wechatWebAccount = UserWechatAccountModel::detail(['union_id' => $unionId,'type' => 'web']);
+        $fromWechatWebAccount = 0;
 	    $this->startTrans();
 	    try {
+	        //todo 应该先判断是否存在小程序用户
+            //有微信用户直接登录
+            $weappAccountModel = $weappAccount ?: new UserWechatAccountModel;
+            //$from_weapp_account = 0;
+            if($weappAccount)
+            {
+                $user = self::detail(['user_id' => $weappAccount['user_id']]);
+                $model = $user ?: $this;
+                $existUser = $user ? 1 : 0;
+                //$from_weapp_account = 1;
+            }else{
+                //判断是否注册过网页
+                if($wechatWebAccount)
+                {
+                    //主用户
+                    $user = self::detail(['user_id' => $wechatWebAccount['user_id']]);
+                    $model = $user ?: $this;
+                    $existUser = $user ? 1 : 0;
+                    $fromWechatWebAccount = 1;
+                }else{
+                    $model = $this;
+                    $existUser = 0;
+                    $model->allowField(true)->save(array_merge($data, [
+                        'wxapp_id' => self::$wxapp_id
+                    ]));
+
+                }
+
+            }
+
+            $model->allowField(true)->save(array_merge($data, [
+                'open_id' => $openId,
+                'wxapp_id' => self::$wxapp_id
+            ]));
+
+            $weappAccountModel->allowField(true)->save(array_merge($data, [
+                'open_id' => $openId,
+                'union_id' => $unionId,
+                'wxapp_id' => self::$wxapp_id,
+                'user_id' => $model['user_id'],
+                'type' => 'weapp',
+            ]));
+
+            $fromWechatWebAccount ? $wechatWebAccount->allowField(true)->save([
+                'wxapp_id' => self::$wxapp_id,
+                'user_id' => $model['user_id'],
+                'type' => 'web',
+            ]) : '';
+            if (!$existUser && $refereeId > 0) {
+                RefereeModel::createRelation($model['user_id'], $refereeId);
+            }
+
+            /*
+            // 查询微信用户（包含小程序，网页，公众号h5，移动应用）是否已存在
+            $wechat_account = UserWechatAccountModel::detail(['union_id' => $unionId]);
 		    //存在微信用户
 		    if($wechat_account)
 		    {
+		        //主用户
 		        $user = self::detail(['user_id' => $wechat_account['user_id']]);
-			    $exist_user = $user ? 1 : 0;
+			    $existUser = $user ? 1 : 0;
 			    $model = $user ?: $this;
-			    if(!$exist_user)
+
+			    if(!$existUser)
 			    {
+                    //不存在主用户，注册用户
 				    $model->allowField(true)->save(array_merge($data, [
 					    'wxapp_id' => self::$wxapp_id
 				    ]));
+				    //微信用户绑定主用户
                     $wechat_account->allowField(true)->save([
                         'wxapp_id' => self::$wxapp_id,
                         'user_id' => $model['user_id'],
                         'type' => 'weapp',
                     ]);
 			    }
-                $weapp_account_model = $weapp_account ?: new UserWechatAccountModel;
+                $weappAccountModel = $weappAccount ?: new UserWechatAccountModel;
 			    // 保存/更新用户记录
-                $weapp_account_model->allowField(true)->save(array_merge($data, [
-				    'open_id' => $open_id,
-				    'union_id' => $union_id,
+                $weappAccountModel->allowField(true)->save(array_merge($data, [
+				    'open_id' => $openId,
+				    'union_id' => $unionId,
 				    'wxapp_id' => self::$wxapp_id,
 				    'user_id' => $model['user_id'],
 				    'type' => 'weapp',
 			    ]));
 			    // 记录推荐人关系
-			    if (!$exist_user && $refereeId > 0) {
+			    if (!$existUser && $refereeId > 0) {
 				    RefereeModel::createRelation($model['user_id'], $refereeId);
 			    }
-			    $this->commit();
-		    }else{
+            }else{
 			    $model = $this;
 			    $model->allowField(true)->save(array_merge($data, [
 				    'wxapp_id' => self::$wxapp_id
 			    ]));
 			    $wechat_account = new UserWechatAccountModel;
 			    $wechat_account->allowField(true)->save(array_merge($data, [
-				    'open_id' => $open_id,
-				    'union_id' => $union_id,
+				    'open_id' => $openId,
+				    'union_id' => $unionId,
 				    'wxapp_id' => self::$wxapp_id,
 				    'user_id' => $model['user_id'],
 				    'type' => 'weapp',
@@ -196,10 +254,11 @@ class User extends UserModel
 			    if ($refereeId > 0) {
 				    RefereeModel::createRelation($model['user_id'], $refereeId);
 			    }
-			    $this->commit();
-		    }
-		    
-	    } catch (\Exception $e) {
+            }
+            */
+            $this->commit();
+
+        } catch (\Exception $e) {
 		    $this->rollback();
 		    throw new BaseException(['msg' => $e->getMessage()]);
 	    }

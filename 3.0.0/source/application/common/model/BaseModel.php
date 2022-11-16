@@ -78,6 +78,12 @@ class BaseModel extends Model
         }
     }
 
+    protected static function setPcWxappId()
+    {
+        $session = Session::get('fbshop_pc');
+        !empty($session) && self::$wxapp_id = $session['wxapp']['wxapp_id'] ?: '10001';
+    }
+
     /**
      * 设置wxapp_id (store模块)
      */

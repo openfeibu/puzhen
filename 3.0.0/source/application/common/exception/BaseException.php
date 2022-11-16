@@ -28,6 +28,7 @@ class BaseException extends Exception
         if (array_key_exists('msg', $params)) {
             $this->message = $params['msg'];
         }
+
     }
 }
 

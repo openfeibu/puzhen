@@ -4,7 +4,7 @@ namespace app\common\library\sms\engine;
 
 use app\common\library\sms\package\aliyun\SignatureHelper;
 use app\common\exception\BaseException;
-use app\common\exception\RequestTooFrequentException;
+use app\common\exception\NotAuthException;
 use think\Log;
 use AlibabaCloud\SDK\Dysmsapi\V20170525\Dysmsapi;
 use \Exception;

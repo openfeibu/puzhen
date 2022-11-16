@@ -16,7 +16,7 @@ use app\common\service\TeaQrCode as TeaQrCodeService;
  */
 class TeaQrcode extends TeaQrcodeModel
 {
-    public function getList($user_id)
+    public function getList($user_id,$listRows=15)
     {
         $params = request()->param();
         $filter = [];
@@ -25,7 +25,7 @@ class TeaQrcode extends TeaQrcodeModel
         $list =$this->where('user_id',$user_id)
             ->where($filter)
             ->order('tea_qrcode_id desc')
-            ->paginate(15, false, [
+            ->paginate($listRows, false, [
                 'query' => \request()->request()
             ]);
         // 整理列表数据并返回

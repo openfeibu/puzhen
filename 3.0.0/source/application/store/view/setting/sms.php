@@ -31,6 +31,7 @@
                                            value="<?= $values['engine']['aliyun']['sign'] ?>" required>
                                 </div>
                             </div>
+                            <!--
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-form-label form-require"> 产品名称 </label>
                                 <div class="am-u-sm-9">
@@ -38,6 +39,7 @@
                                            value="<?= $values['engine']['aliyun']['product'] ?>" required>
                                 </div>
                             </div>
+                            -->
 
 
                             <div class="widget-head am-cf">
@@ -77,7 +79,22 @@
                                     <small>模板内容： 验证码${code}，您正在尝试修改${product}登录密码，请妥善保管账户信息。</small>
                                 </div>
                             </div>
-
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-form-label form-require">
+                                    绑定手机号码模板ID <span class="tpl-form-line-small-title">Template Code</span>
+                                </label>
+                                <div class="am-u-sm-9">
+                                    <input type="text" class="tpl-form-input"
+                                           name="sms[engine][aliyun][user_bind_phone_number][template_code]"
+                                           value="<?= $values['engine']['aliyun']['user_bind_phone_number']['template_code'] ?? '' ?>">
+                                    <small>例如：SMS_10840894</small>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <div class="am-u-sm-9 am-u-sm-push-3">
+                                    <small>模板内容： 验证码${code}，您正在进行${product}身份验证，打死不要告诉别人哦！</small>
+                                </div>
+                            </div>
                             <!--
                             <div class="widget-head am-cf">
                                 <div class="widget-title am-fl">新付款订单提醒</div>
