@@ -4,6 +4,7 @@
 
 use think\Request;
 use think\Log;
+use think\Validate;
 
 /**
  * 打印调试函数
@@ -452,4 +453,56 @@ function hide_star($str)
         }
     }
     return $rs;
+}
+
+
+function validate_phone($data)
+{
+    $validate = new Validate(
+        [
+            'phone_number' =>  ['require','regex'=>'/^1(3[0-9]|4[01456879]|5[0-35-9]|6[2567]|7[0-8]|8[0-9]|9[0-35-9])\d{8}$/'],
+        ],
+        [
+            'phone_number.require' => lang('phone_number_empty'),
+            'phone_number.regex' => lang('phone_number_error'),
+        ]);
+    if(!$validate->check($data)){
+        throw new \app\common\exception\BaseException(['msg' => $validate->getError()]);
+    }
+}
+
+
+/**
+ * @throws \app\common\exception\BaseException
+ */
+function validate_email($data)
+{
+    $validate = new Validate(
+        [
+            'email' =>  'require|email',
+        ],
+        [
+            'email.require' => lang('email_empty'),
+            'email.email' => lang('email_error'),
+        ]);
+    if(!$validate->check($data)){
+        throw new \app\common\exception\BaseException(['msg' => $validate->getError()]);
+    }
+}
+
+/**
+ * @throws \app\common\exception\BaseException
+ */
+function validate_password($data)
+{
+    $validate = new Validate(
+        [
+            'password' =>  'require',
+        ],
+        [
+            'password.require' => lang('password_empty'),
+        ]);
+    if(!$validate->check($data)){
+        throw new \app\common\exception\BaseException(['msg' => $validate->getError()]);
+    }
 }

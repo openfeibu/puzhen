@@ -38,7 +38,7 @@
         <div class="bagua-test">
             <div class="bagua-diy">
                 <div class="bagua-diy-title pull-left">
-                    <p><a href="#">泡法<br/>DIY</a></p>
+                    <p><a href="<?= url('tea_qrcode/add');?>">泡法<br/>DIY</a></p>
                 </div>
                 <div class="bagua-diy-test pull-left">
                     <p>自定义泡茶程序</p>
@@ -60,7 +60,7 @@
                     </a>
                 </div>
                 <div class="bagua-tuijian-title pull-left">
-                    <p><a href="#">泡法<br/>推荐</a></p>
+                    <p><a href="<?= url('goods/index');?>">泡法<br/>推荐</a></p>
                 </div>
             </div>
         </div>

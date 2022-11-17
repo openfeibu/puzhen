@@ -46,10 +46,10 @@ class User extends Basics
         $pcSetting = Setting::getItem('pc', $wxappId);
         $this->param['product'] = $this->param['product'] ?? $pcSetting['name'];
 
-        if(isset($this->param['phone_numbers']))
+        if(isset($this->param['phone_numbers']) || isset($this->param['phone_number']))
         {
             $fun = "sendSms";
-            $account = $this->param['phone_numbers'];
+            $account = $this->param['phone_numbers'] ?? $this->param['phone_number'];
             $accountType = 'phone_number';
         }else{
             $fun = "sendEmail";

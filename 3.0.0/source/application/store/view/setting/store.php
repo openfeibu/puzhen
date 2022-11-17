@@ -45,6 +45,14 @@ use app\common\enum\DeliveryType as DeliveryTypeEnum;
                                 </div>
                             </div>
                             <div class="am-form-group">
+                                <label class="am-u-sm-3 am-form-label "> 版权 </label>
+                                <div class="am-u-sm-9">
+                                    <input type="text" class="tpl-form-input" name="store[right]"
+                                           value="<?= $values['right'] ?? '' ?>" required>
+                                </div>
+                            </div>
+                            <!--
+                            <div class="am-form-group">
                                 <label class="am-u-sm-3 am-form-label"> 经纬度 </label>
                                 <div class="am-u-sm-9">
                                     <input type="text" class="tpl-form-input" name="store[longitude]"
@@ -68,7 +76,7 @@ use app\common\enum\DeliveryType as DeliveryTypeEnum;
                                     </div>
                                 </div>
                             </div>
-
+                            -->
                             <!--
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-form-label form-require"> 配送方式 </label>

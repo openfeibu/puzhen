@@ -53,4 +53,15 @@ class Article extends BaseModel
         return self::get($article_id, ['image', 'category']);
     }
 
+    /**
+     * 获取文章总数量
+     * @param array $where
+     * @return int|string
+     */
+    public static function getArticleTotal($where = [])
+    {
+        $model = new static;
+        !empty($where) && $model->where($where);
+        return $model->where('is_delete', '=', 0)->count();
+    }
 }

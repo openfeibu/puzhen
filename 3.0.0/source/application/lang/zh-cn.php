@@ -14,10 +14,22 @@ return [
     'password' => '登录密码',
     'confirm' => '确认',
     'cancel' => '取消',
+    'contact_us' => '联系方式',
+    'follow_us' => '关注我们',
+    'search' => '搜索',
+    'search_empty' => '请输入搜索的内容',
+    'email' => '邮箱',
+    'phone_number' => '手机号码',
+    'please_select' => '请选择',
+
+    'phone_number_reg' => '手机号注册',
+    'email_reg' => '邮箱注册',
 
     'wechat_public_account' => '公众号',
 
-    'weixin_qr_code_bind' => '微信扫码绑定',
+    'weixin_qrcode_bind' => '微信扫码绑定',
+    'weixin_qrcode_login' => '微信扫码登录',
+    'weixin_qrcode_reg' => '微信扫码注册',
     'register_weixin_web_bind_notice' => "已成功注册<br />请扫码绑定微信号，如不绑定请点击跳过",
     'empty_email_bind_notice' => '未绑定邮箱，绑定即可用邮箱+密码进行登录',
     'empty_phone_number_bind_notice' => '未绑定手机号，绑定即可用手机号+密码进行登录',
@@ -30,8 +42,13 @@ return [
     'to_make_tea' => '去冲泡',
     'learn_more' => '了解更多',
     'reference_retail_price' => '参考零售价',
+    'generate_tea_qrcode' => '生成冲泡码',
+    'tea_qrcode_name' => '方案名称',
+    'tea_qrcode_name_empty' => '请输入方案名称',
+    'teas' => '茶类',
+    'my_tea_qrcode' => '我的冲泡码',
 
-    'official_qr_code' => '官方二维码',//Official QR Code
+    'official_qrcode' => '官方二维码',//Official QR Code
     'puzhen_recommend' => '朴真推荐',
 
     'collection' => '收藏',
@@ -43,11 +60,17 @@ return [
 
     // 系统错误提示
     'test'                                        => '测试',
+    'action_success' => '操作成功',
     'action_failed' => '操作失败',
+    'illegal_action' => '非法操作',
 
     'login' => '登录',
     'logout' => '退出',
     'register' => '注册',
+
+    'factory_entrance' => '厂家入口',
+
+    'I have read and accepted' => '我已阅读并接受',
 
     'login.success' => '登录成功',
     'login.failed' => '登录失败',
@@ -60,20 +83,29 @@ return [
     'send_success' => '发送成功',
 
     'account_empty' => '请输入账号',
-    'nickname_empty' => '请输入昵称',
+    'account_not_existing' => '账号不存在',
 
+    'nickname_empty' => '请输入昵称',
+    'user_login' => '用户登录',
+    'account_notice' => '请输入手机号/邮箱',
+    'forget_pass' => '忘记密码',
     'phone_number_empty' => '请输入手机号码',
-    'phone_number_existing' => '该手机号码已经被绑定',
+    'phone_number_existing' => '该手机号码已经被使用',
     'phone_number_error' => '手机号码格式错误',
     'email_empty' => '请输入邮箱',
-    'email_existing' => '该邮箱已经被绑定',
+    'email_existing' => '该邮箱已经被使用',
     'email_error' => '邮箱格式错误',
     'password_empty' => '请输入密码',
+    'old_password_error' => '旧密码错误',
     'old_password_empty' => '请输入旧密码',
     'new_password_empty' => '请输入新密码',
     'confirm_new_password' => '确认新密码',
     'password_confirm_error' => '确认密码不一致',
+    'password_notice' => '6-20位密码',
+    'password_confirm_length' => '确认密码长度不能小于 6 个字符',
+    'old_password_length' => '旧密码长度不能小于 6 个字符',
     'password_length' => '密码长度不能小于 6 个字符',
+    'password_unset' => '未设置登录密码',
 
     'verify_code_empty' => '请输入验证码',
     'send_verify_code' => '发送验证码',
@@ -88,7 +120,7 @@ return [
     'verify_code.error' => '验证码错误或过期',
 
     'skip' => '跳过',
-    'tea_qr_code' => '冲泡码',
+    'tea_qrcode' => '冲泡码',
     'setting' => '设置',
 
     'my_nickname'=> '我的昵称',

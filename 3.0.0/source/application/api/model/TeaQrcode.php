@@ -33,15 +33,24 @@ class TeaQrcode extends TeaQrcodeModel
     }
     public function add($user,$post)
     {
+        $post['url'] = $post['url'] ?? 'https://api.fspuzhen.cn?type=weapp';
         $teaQrCodeService = new TeaQrCodeService($post);
         $teaQrCodeService->user = $user;
+        $this->startTrans();
+        try {
+            $teaQrCodeService->generate();
+            $data = $teaQrCodeService->getTeaQrcodeData();
+            $data['wxapp_id'] = self::$wxapp_id;
+            $this->data($data)->save();
 
-        $teaQrCodeService->generate();
-        $data = $teaQrCodeService->getTeaQrcodeData();
-        $data['wxapp_id'] = self::$wxapp_id;
-        $this->data($data)->save();
+            $this->commit();
+            return $this;
+        } catch (\Exception $e) {
+            $this->error = $e->getMessage();
+            $this->rollback();
+            return false;
+        }
 
-        return $this;
     }
     /*
     public function detail($user_id,$tea_qrcode_id)

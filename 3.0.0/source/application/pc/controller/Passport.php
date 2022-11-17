@@ -103,31 +103,33 @@ class Passport extends Controller
         return $this->fetch('register_weixin_web_bind',compact('state','weixinLoginRedirectUrl'));
 
     }
-    /**
-     */
-    public function send_register_sms():array
+
+    public function send_code()
     {
         $data = $this->postData();
         $model = new UserModel;
-        if(!$model->sendRegisterSms($data))
+        if(!$model->sendCode($data))
         {
             return $this->renderError([],$model->getError());
         }
 
         return $this->renderSuccess([],lang('send_success'));
     }
-    /**
-     */
-    public function send_register_email():array
+
+    public function forget_pass()
     {
-        $data = $this->postData();
         $model = new UserModel;
-        if(!$model->sendRegisterEmail($data))
-        {
-            return $this->renderError([],$model->getError());
+        if ($this->request->isAjax()) {
+            if(!$model->resetPass($this->postData()))
+            {
+                return $this->renderError([],$model->getError() ?: lang('update_failed'));
+            }
+
+            return $this->renderSuccess([],lang('update_success'),url('passport/login'));
+
         }
 
-        return $this->renderSuccess([],lang('send_success'));
+        return $this->fetch('forget_pass');
     }
 
     /**

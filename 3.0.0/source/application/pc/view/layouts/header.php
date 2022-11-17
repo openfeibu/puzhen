@@ -31,16 +31,16 @@
 
                     </li>
                     <li>
-                        <a href="news.html">资讯中心</a>
+                        <a href="<?= url('article/detail','article_id=6') ?>">资讯中心</a>
                     </li>
                     <li>
 
                     </li>
                     <li>
-                        <a href="about.html">关于朴真</a>
+                        <a href="<?= url('article/detail','article_id=5') ?>">关于朴真</a>
                     </li>
                     <li>
-                        <a href="contact.html">联系我们</a>
+                        <a href="<?= url('article/contact') ?>"><?= lang('follow_us'); ?></a>
                     </li>
 
                 </ul>
@@ -48,7 +48,7 @@
             <div class="headerRight pull-right">
                 <div class="login-b pull-left">
                     <?php if(isset($pc['is_login']) && $pc['is_login']):?>
-                        <span><a href="<?= url('user/index') ?>"><?= $pc['user']['nickName']?></a></span><a href="<?= url('passport/logout') ?>"><?= lang('logout') ?></a>
+                        <a href="<?= url('user/index') ?>"><?= $pc['user']['nickName']?></a>
                     <?php else:?>
                     <a href="<?= url('passport/login') ?>"><?= lang('login') ?></a>
                     <?php endif;?>
@@ -56,12 +56,14 @@
                 <div class="headerRight-line pull-left hiddenh5">
 
                 </div>
+                <!--
                 <div class="login-b pull-left hiddenh5">
                     <a href="<?= url('/factory') ?>" target="_blank">厂家登录</a>
                 </div>
                 <div class="headerRight-line pull-left hiddenh5">
 
                 </div>
+                -->
                 <div class="search-b pull-left hiddenh5 fixed-nav-item-search">
 
                 </div>

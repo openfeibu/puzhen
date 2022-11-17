@@ -54,7 +54,7 @@ class Controller extends \think\Controller
     /* @var array $notLayoutAction 无需全局layout */
     protected $notLayoutAction = [
         // 登录页面
-        'passport/login',
+        //'passport/login',
     ];
 
     /**
@@ -102,7 +102,7 @@ class Controller extends \think\Controller
                 'pc_url' => url('/pc'),              // 模块url
                 'group' => $this->group,                       // 当前控制器分组
                 'request' => Request::instance(),              // Request对象
-                'setting' => Setting::getAll() ?: null,
+                'setting' => Setting::getAll($this->wxapp_id) ?: null,
                 'version' => get_version(),                    // 系统版本号
                 'pc' => $this->pc,
                 'routeUri' => $this->routeUri,

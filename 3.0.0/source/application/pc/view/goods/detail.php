@@ -40,7 +40,7 @@
             <div class="product-detail-right col-lg-3 col-md-3">
                 <?php if(isset($detail['goods_tea_qrcode']['tea_qrcode']) && $detail['goods_tea_qrcode']['tea_qrcode']): ?>
                 <div class="official-code">
-                    <div class="con-title"><?= lang('official_qr_code') ?></div>
+                    <div class="con-title"><?= lang('official_qrcode') ?></div>
                     <div class="official-code-img"><img src="<?= $detail['goods_tea_qrcode']['tea_qrcode']['detail_image'] ?>" alt=""></div>
                 </div>
                 <?php endif; ?>

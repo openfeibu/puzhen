@@ -209,161 +209,191 @@ class User extends UserModel
     {
         return self::detail(['user_id' => $user_id], ['address', 'addressDefault', 'grade']);
     }
+
     /**
      * 更新信息
      * @param $data
      * @return bool
+     * @throws BaseException
      */
     public function renew($data)
     {
         $updateData = [];
-        switch ($data['type'])
-        {
-            case 'info':
-                $allows = ['nickName','avatarUrl'];
-                foreach ($allows as $allow)
-                {
-                    if(isset($data[$allow]) && $data[$allow])
+        $verifyCodeService = new VerifyCodeService();
+        $this->startTrans();
+        try {
+            switch ($data['type'])
+            {
+                case 'info':
+                    $allows = ['nickName','avatarUrl'];
+                    foreach ($allows as $allow)
                     {
-                        $updateData[$allow] = $data[$allow];
+                        if(isset($data[$allow]) && $data[$allow])
+                        {
+                            $updateData[$allow] = $data[$allow];
+                        }
                     }
-                }
-                break;
-            case 'bind_phone_number':
-                break;
-            case 'bind_email':
-                break;
-            case 'set_password':
-                if ($data['password'] !== $data['password_confirm']) {
-                    $this->error = '确认密码不正确';
-                    return false;
-                }
-                $updateData['password'] = fbshop_hash($data['password']);
-                break;
+                    break;
+                case 'bind_phone_number':
+                    if($this['phone_number']){
+                        $this->error = lang('illegal_action');
+                        return false;
+                    }
+                    validate_phone($data);
+                    $this->validateExist('phone_number',$data['phone_number']);
 
-        }
-        // 更新管理员信息
-        if ($this->save($updateData) === false) {
-            return false;
-        }
+                    if(!$verifyCodeService->checkCode($data['phone_number'],$data['code'],'user_bind_phone_number'))
+                    {
+                        $this->error = $verifyCodeService->getError();
+                        return false;
+                    }
 
-        Session::set('fbshop_pc.user', [
-            'user_id' => $this['user_id'],
-            'phone_number' => $updateData['phone_number'] ?? $this['phone_number'],
-            'email' => $updateData['email'] ?? $this['email'],
-            'avatarUrl' => $updateData['avatarUrl'] ?? $this['avatarUrl'],
-            'nickName' => $updateData['nickName'] ?? $this['nickName'],
-        ]);
+                    $updateData['phone_number'] = $data['phone_number'];
+                    break;
+                case 'bind_email':
+                    if($this['email']){
+                        $this->error = lang('illegal_action');
+                        return false;
+                    }
+                    validate_email($data);
+                    $this->validateExist('email',$data['email']);
+                    if(!$verifyCodeService->checkCode($data['email'],$data['code'],'user_bind_email'))
+                    {
+                        $this->error = $verifyCodeService->getError();
+                        return false;
+                    }
+                    $updateData['email'] = $data['email'];
+                    break;
+                case 'set_password':
+                    if($data['password'] < 6)
+                    {
+                        $this->error = lang('password_length');
+                        return false;
+                    }
+                    if ($data['password'] !== $data['password_confirm']) {
+                        $this->error = lang('password_confirm_error');
+                        return false;
+                    }
+                    $updateData['password'] = fbshop_hash($data['password']);
+                    break;
+                case 'change_password':
+                    if($data['password'] < 6)
+                    {
+                        $this->error = lang('password_length');
+                        return false;
+                    }
+                    if(fbshop_hash($data['old_password']) != $this['password'])
+                    {
+                        $this->error = lang('old_password_error');
+                        return false;
+                    }
+                    if ($data['password'] !== $data['password_confirm']) {
+                        $this->error = '确认密码不正确';
+                        return false;
+                    }
+                    $updateData['password'] = fbshop_hash($data['password']);
+                    break;
+            }
+            // 更新管理员信息
+            if ($this->save($updateData) === false) {
+                return false;
+            }
 
-        return true;
-    }
-
-    public function sendRegisterSms($data): bool
-    {
-        $validate = new Validate($data,
-            [
-                'phone_number' =>  ['require','regex'=>'/^1(3[0-9]|4[01456879]|5[0-35-9]|6[2567]|7[0-8]|8[0-9]|9[0-35-9])\d{8}$/'],
-            ],
-            [
-                'phone_number.require' => lang('phone_number_empty'),
-                'phone_number.regex' => lang('phone_number_error'),
+            Session::set('fbshop_pc.user', [
+                'user_id' => $this['user_id'],
+                'phone_number' => $updateData['phone_number'] ?? $this['phone_number'],
+                'email' => $updateData['email'] ?? $this['email'],
+                'avatarUrl' => $updateData['avatarUrl'] ?? $this['avatarUrl'],
+                'nickName' => $updateData['nickName'] ?? $this['nickName'],
             ]);
-        if(!$validate->check($data)){
-            $this->error = $validate->getError();
-            return false;
-        }
-        if (self::useGlobalScope(false)->where([
-            'phone_number' => $data['phone_number']
-        ])->find()) {
-            $this->error = lang('register.failed.user_existing');
+
+            $this->commit();
+            return true;
+        }catch (\Exception $e){
+            $this->rollback();
+            $this->error = $e->getMessage();
             return false;
         }
 
-        MessageService::send('user.user', [
-            'msg_type' => 'user_register',
-            'phone_numbers' => $data['phone_number'],
-            'wxapp_id' => self::$wxapp_id,
-        ]);
-        return true;
-    }
-    public function sendRegisterEmail($data):bool
-    {
-        $validate = new Validate($data,
-            [
-                'email' =>  'require|email',
-            ],
-            [
-                'email.require' => lang('email_empty'),
-                'email.email' => lang('email_error'),
-            ]);
-        if(!$validate->check($data)){
-            $this->error = $validate->getError();
-            return false;
-        }
-
-        MessageService::send('user.user', [
-            'msg_type' => 'user_register',
-            'email' => $data['email'],
-            'wxapp_id' => self::$wxapp_id,
-        ]);
-        return true;
     }
 
     /**
      * @throws BaseException
      */
+    public function resetPass($data)
+    {
+        if(isset($data['phone_number']))
+        {
+            validate_phone($data);
+            $accountType = 'phone_number';
+        }elseif ($data['email'])
+        {
+            validate_email($data);
+            $accountType = 'email';
+        }else{
+            $this->error = lang('illegal_action');
+            return false;
+        }
+        validate_password($data);
+        $user = $this->validateExist($accountType,$data[$accountType],true);
+        $verifyCodeService = new VerifyCodeService();
+        if(!$verifyCodeService->checkCode($data[$accountType],$data['code'],'user_forget_pass'))
+        {
+            $this->error = $verifyCodeService->getError();
+            return false;
+        }
+        $user->save([
+           'password' => fbshop_hash($data['password'])
+        ]);
+        return true;
+    }
+    /**
+     * @throws BaseException
+     */
     public function sendCode($data)
     {
-        $isExist = 0;
         switch ($data['code_type'])
         {
+            case 'forget_pass_phone_number':
+                $field = 'phone_number';
+                validate_phone($data);
+                $this->validateExist('phone_number',$data['phone_number'],true);
+                $msgType = 'user_forget_pass';
+                break;
+            case 'forget_pass_email':
+                $field = 'email';
+                validate_email($data);
+                $this->validateExist('email',$data['email'],true);
+                $msgType = 'user_forget_pass';
+                break;
+            case 'register_phone_number':
+                $field = 'phone_number';
+                validate_phone($data);
+                $this->validateExist('phone_number',$data['phone_number']);
+                $msgType = 'user_register';
+                break;
+            case 'register_email':
+                $field = 'email';
+                validate_email($data);
+                $this->validateExist('email',$data['email']);
+                $msgType = 'user_register';
+                break;
             case 'bind_phone_number':
                 $field = 'phone_number';
-                $isExist = 1;
+                validate_phone($data);
+                $this->validateExist('phone_number',$data['phone_number']);
                 break;
             case 'bind_email':
                 $field = 'email';
-                $isExist = 1;
+                validate_email($data);
+                $this->validateExist('email',$data['email']);
                 break;
             default:
-                throw new BaseException(['msg' => '非法操作']);
+                throw new BaseException(['msg' => lang('illegal_action')]);
                 break;
         }
-        $msgType = 'user_'.$data['code_type'];
+        $msgType = $msgType ?? 'user_'.$data['code_type'];
         $to = $data[$field];
-        $rules = []; $messages= [];
-        switch ($field)
-        {
-            case 'email':
-                $rules = [
-                    'email' =>  'require|email'
-                ];
-                $messages = [
-                    'email.require' => lang('email_empty'),
-                    'email.email' => lang('email_error'),
-                ];
-                break;
-            case 'phone_number':
-                $rules = [
-                    'phone_number' =>  ['require','regex'=>'/^1(3[0-9]|4[01456879]|5[0-35-9]|6[2567]|7[0-8]|8[0-9]|9[0-35-9])\d{8}$/'],
-                ];
-                $messages =  [
-                    'phone_number.require' => lang('phone_number_empty'),
-                    'phone_number.regex' => lang('phone_number_error'),
-                ];
-                break;
-        }
-        $validate = new Validate($data, $rules, $messages);
-        if(!$validate->check($data)){
-            $this->error = $validate->getError();
-            return false;
-        }
-        if ($isExist && self::useGlobalScope(false)->where([
-            $field => $to
-        ])->find()) {
-            $this->error = lang($field.'.existing');
-            return false;
-        }
 
         MessageService::send('user.user', [
             'msg_type' => $msgType,
@@ -392,5 +422,32 @@ class User extends UserModel
         ]);
     }
 
+    /**
+     * @param $field
+     * @param $value
+     * @param $exist true,存在就报错，false，不存在就报错
+     * @return array|bool|\PDOStatement|string|\think\Model|null
+     * @throws BaseException
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
+     */
+    public function validateExist($field,$value,$exist=false)
+    {
+        if ($user = self::useGlobalScope(false)->where([
+            $field => $value
+        ])->find()) {
+            if(!$exist)
+            {
+                throw new BaseException(['msg' => lang($field.'_existing')]);
+            }
+            return $user;
+        }else{
+            if($exist)
+            {
+                throw new BaseException(['msg' => lang('account_not_existing')]);
+            }
+        }
+    }
 
 }

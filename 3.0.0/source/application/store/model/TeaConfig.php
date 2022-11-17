@@ -16,7 +16,7 @@ class TeaConfig extends TeaConfigModel
     {
         foreach ($data['configs'] as $key => $val)
         {
-            $this->allowField(true)->save($data[$val],['type' => $val]);
+            $this->where('type',$val)->update($data[$val]);
         }
         return true;
     }

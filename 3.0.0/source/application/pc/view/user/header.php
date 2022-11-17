@@ -4,7 +4,7 @@
         <div class="text">
             <div class="name"><?= $user['nickName'] ?></div>
             <div class="con">
-                <?= lang('tea_qr_code') ?>：<span><?= $teaQrCodeCount ?></span>
+                <?= lang('tea_qrcode') ?>：<span><?= $teaQrCodeCount ?></span>
                 <?= lang('collection') ?>：<span><?= $collectionCount ?></span>
             </div>
         </div>

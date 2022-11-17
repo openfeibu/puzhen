@@ -4,7 +4,7 @@
         <div class="login-box-bg clearfix">
             <div class="login-left fl">
                 <div class="login-code">
-                    <div class="login-code-title"><?= lang('weixin_qr_code_bind') ?></div>
+                    <div class="login-code-title"><?= lang('weixin_qrcode_bind') ?></div>
                     <div class="login-code-img" id="login_container">
 
                     </div>

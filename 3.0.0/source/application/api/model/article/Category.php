@@ -3,7 +3,7 @@
 namespace app\api\model\article;
 
 use think\Cache;
-use app\store\model\Article as ArticleModel;
+use app\api\model\Article as ArticleModel;
 use app\common\model\article\Category as CategoryModel;
 
 /**

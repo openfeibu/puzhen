@@ -63,9 +63,9 @@ class User extends Controller
         // 管理员详情
         if ($this->request->isAjax()) {
             if ($model->renew($this->postData())) {
-                return $this->renderSuccess(lang('update_success'));
+                return $this->renderSuccess([],lang('update_success'));
             }
-            return $this->renderError($model->getError() ?: lang('update_failed'));
+            return $this->renderError([],$model->getError() ?: lang('update_failed'));
         }
         return $this->fetch('renew', compact('model'));
     }

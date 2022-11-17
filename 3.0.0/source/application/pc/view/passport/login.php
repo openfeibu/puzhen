@@ -3,7 +3,7 @@
         <div class="login-box-bg clearfix">
             <div class="login-left fl">
                 <div class="login-code">
-                    <div class="login-code-title">微信扫码登录</div>
+                    <div class="login-code-title"><?= lang('weixin_qrcode_login') ?></div>
                     <div class="login-code-img"><img src="images/code.jpeg" alt=""></div>
                     <span>使用微信扫一扫 </br>使用泡臣小程序，泡茶更轻松</span>
                 </div>
@@ -12,21 +12,21 @@
                 <div class="login-tab"><a href="<?= url('passport/register')?>"><?= lang('register')?></a></div>
                 <div class="login-form">
                     <div class="login-form-title">
-                        用户登录
+                        <?= lang('user_login') ?>
                     </div>
                     <form action="" id="login-form">
                         <div class="form-input">
-                            <input name="account" type="text" placeholder="请输入手机号/邮箱" />
+                            <input name="account" type="text" placeholder="<?= lang('account_notice')?>" />
                         </div>
                         <div class="form-input">
-                            <input name="password" type="password" placeholder="8-20位密码，包含字母、数字" />
+                            <input name="password" type="password" placeholder="<?= lang('password_notice') ?>" />
                             <div class="form-eye "></div>
                         </div>
                         <div class="form-btn">
-                            <button type="submit">登录</button>
+                            <button type="submit"><?= lang('login')?></button>
                         </div>
                         <div class="form-des">
-                            <a class="fr forgotpassword" href="forgotpassword.html">忘记密码</a>
+                            <a class="fr forgotpassword" href="<?= url('passport/forget_pass')?>"><?= lang('forget_pass')?></a>
                         </div>
                     </form>
                 </div>
