@@ -80,8 +80,11 @@ class BaseModel extends Model
 
     protected static function setPcWxappId()
     {
-        $session = Session::get('fbshop_pc');
-        !empty($session) && self::$wxapp_id = $session['wxapp']['wxapp_id'] ?: '10001';
+        $request = Request::instance();
+        self::$wxapp_id = $request->param('wxapp_id','10001');
+
+//        $session = Session::get('fbshop_pc');
+//        !empty($session) && self::$wxapp_id =  $session['wxapp']['wxapp_id'] ?: '10001';
     }
 
     /**

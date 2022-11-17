@@ -72,7 +72,7 @@
     </div>
     <?php else: ?>
         <div class="nodata">
-            <div class="test">产品已下架或不存在</div>
+            <div class="test"><?= lang('nodata'); ?></div>
         </div>
     <?php endif; ?>
 </div>

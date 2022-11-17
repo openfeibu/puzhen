@@ -34,7 +34,9 @@
         </a>
     </div>
     <?php endforeach; ?>
-
+        <div class="nodata">
+            <div class="test"><?= lang('nodata'); ?></div>
+        </div>
     <?php endif; ?>
 </div>
 <div class="pagination-box">

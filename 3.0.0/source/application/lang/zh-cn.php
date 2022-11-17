@@ -126,6 +126,11 @@ return [
     'my_nickname'=> '我的昵称',
     'nickname' => '昵称',
 
+    'add_success' => '添加成功',
+    'add_failed' => '添加失败',
     'update_success' => '更新成功',
     'update_failed' => '更新失败',
+
+    'nodata' => '数据不存在',
+    'no_access' => '没有权限',
 ];

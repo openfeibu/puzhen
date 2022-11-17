@@ -194,6 +194,10 @@ class Controller extends \think\Controller
                 throw new NotAuthException(['msg' => '未登录']);
             }
         }
+        if(!isset($this->pc['user']['user_id']))
+        {
+            return false;
+        }
         if (!$user = UserModel::getUser($this->pc['user']['user_id'])) {
             if($is_force){
                 throw new NotAuthException(['msg' => '没有找到用户信息']);
@@ -247,7 +251,11 @@ class Controller extends \think\Controller
      */
     protected function renderError($data = [], $msg = 'error', $url = '')
     {
-        return $this->renderJson(0, $msg, $url, $data);
+        if ($this->request->isAjax()) {
+            return $this->renderJson(0, $msg, $url, $data);
+        }
+        $this->error($msg);
+        return false;
     }
 
     /**

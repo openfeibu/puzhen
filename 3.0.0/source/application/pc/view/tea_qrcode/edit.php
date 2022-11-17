@@ -37,7 +37,7 @@
                     <select name="tea_qrcode[weight]" class="fl" required="">
                         <option value="" selected><?= lang('please_select'); ?></option>
                         <?php foreach ($teaConfig['weight']['data'] as $config_data):?>
-                        <option value="<?= $config_data['value'] ?>" <?php if($teaConfig['weight']['default'] == $config_data['value']):?> selected<?php endif;?> ><?= $config_data['value'] ?></option>
+                            <option value="<?= $config_data['value'] ?>" <?php if($teaConfig['weight']['default'] == $config_data['value']):?> selected<?php endif;?> ><?= $config_data['value'] ?></option>
                         <?php endforeach;?>
                     </select>
                     <div class="unit fl"><?= $teaConfig['weight']['unit']?></div>

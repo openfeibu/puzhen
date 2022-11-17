@@ -8,6 +8,7 @@ use app\common\library\wechat\WxUser;
 use app\common\exception\BaseException;
 use app\common\model\TeaQrcode as TeaQrcodeModel;
 use app\common\service\TeaQrCode as TeaQrCodeService;
+use think\Session;
 
 /**
  * 用户模型类
@@ -42,7 +43,6 @@ class TeaQrcode extends TeaQrcodeModel
             $data = $teaQrCodeService->getTeaQrcodeData();
             $data['wxapp_id'] = self::$wxapp_id;
             $this->data($data)->save();
-
             $this->commit();
             return $this;
         } catch (\Exception $e) {
