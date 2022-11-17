@@ -29,8 +29,10 @@
                     </div>
                 </a>
             </div>
-            <?php endforeach; ?>
-
+            <?php endforeach; else: ?>
+                <div class="nodata">
+                    <div class="test"><?= lang('nodata'); ?></div>
+                </div>
             <?php endif; ?>
         </div>
         <div class="pagination-box">
