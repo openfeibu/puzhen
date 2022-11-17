@@ -37,7 +37,7 @@
                     <select name="tea_qrcode[weight]" class="fl" required="">
                         <option value="" selected><?= lang('please_select'); ?></option>
                         <?php foreach ($teaConfig['weight']['data'] as $config_data):?>
-                        <option value="<?= $config_data['value'] ?>" <?php if($teaConfig['weight']['default'] == $config_data['value']):?> selected<?php endif;?> ><?= $config_data['value'] ?></option>
+                        <option value="<?= $config_data['value'] ?>" <?= $teaConfig['weight']['default'] == $config_data['value'] ? "selected" : ''?> ><?= $config_data['value'] ?></option>
                         <?php endforeach;?>
                     </select>
                     <div class="unit fl"><?= $teaConfig['weight']['unit']?></div>
@@ -126,7 +126,7 @@
                             <select name="tea_qrcode[temperature][]" class="code-temperature fl" onchange="changetemperature(this)" required="" >
                                 <option value=""><?= lang('please_select'); ?></option>
                                <?php foreach ($teaConfig['temperature']['data'] as $config_data):?>
-                                <option value="<?= $config_data['value'] ?>" <?php if($teaConfig['temperature']['default'] == $config_data['value']):?> selected<?php endif;?> ><?= $config_data['value'] ?></option>
+                                <option value="<?= $config_data['value']; ?>" <?= $teaConfig['temperature']['default'] == $config_data['value'] ? "selected" : '';?> ><?= $config_data['value']; ?></option>
                                 <?php endforeach;?>
                             </select>
                             <div class="unit fl"><?= $teaConfig['temperature']['unit']?></div>
@@ -136,7 +136,7 @@
                             <select name="tea_qrcode[seconds][]" class="code-seconds fl" onchange="changeseconds(this)" required="" >
                                 <option value=""><?= lang('please_select'); ?></option>
                                   <?php foreach ($teaConfig['seconds']['data'] as $config_data):?>
-                                <option value="<?= $config_data['value'] ?>" <?php if($teaConfig['seconds']['default'] == $config_data['value']):?> selected<?php endif;?> ><?= $config_data['value'] ?></option>
+                                <option value="<?= $config_data['value']; ?>" <?= $teaConfig['seconds']['default'] == $config_data['value'] ? "selected" : '';?> ><?= $config_data['value']; ?></option>
                                 <?php endforeach;?>
                             </select>
                             <div class="unit fl"><?= $teaConfig['seconds']['unit']?></div>

@@ -73,8 +73,10 @@ class TeaQrcode extends Controller
                 $editPermission = 1;
             }
         }
-
-        return $this->fetch('detail',compact('detail','editPermission'));
+        $teaList = Tea::getAll();
+        $teaConfigModel = new TeaConfig;
+        $teaConfig = $teaConfigModel->getList();
+        return $this->fetch('detail',compact('detail','editPermission','teaList','teaConfig'));
     }
     /**
      * 获取二维码详情

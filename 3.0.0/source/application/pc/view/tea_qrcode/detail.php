@@ -15,29 +15,26 @@
                     <div class="name"><?= $detail['name']; ?></div>
                     <div class="des"><?= $detail['data']['tea_name'] ?> · <?= $detail['data']['weight'] ?><?= lang('g')?> · <?= $detail['data']['number'] ?><?= lang('tea.number')?></div>
                     <div class="codeDetail-data">
-                        <div class="codeDetail-data-title">详细方案</div>
+                        <div class="codeDetail-data-title"><?= lang('tea_qrcode_detail') ?></div>
                         <div class="codeDetail-data-con clearfix">
                             <?php foreach($detail['data']['temperature_arr'] as $k => $temperature): ?>
-                                <div class="codeDetail-data-item fl">第<?= $k+1; ?>泡：温度<?= $temperature ?>度3秒
-                                    ，时间<?= $detail['data']['seconds_arr'][$k] ?>秒；
+                                <div class="codeDetail-data-item fl">
+                                    <?= lang('tea_qrcode_detail_list_show',[
+                                            'sn' =>$k+1,
+                                        'temperature' => $temperature,
+                                        'seconds' => $detail['data']['seconds_arr'][$k] ?? '' ,
+                                        'frequency_unit' => $teaConfig['frequency']['unit'] ,
+                                        'temperature_unit' => $teaConfig['temperature']['unit'] ,
+                                        'seconds_unit' => $teaConfig['seconds']['unit']])?>
                                 </div>
-
                             <?php endforeach;?>
-                            <div class="codeDetail-data-item fl">第1泡：温度92度，时间3秒；</div>
-                            <div class="codeDetail-data-item fl">第2泡：温度92度，时间3秒；</div>
-                            <div class="codeDetail-data-item fl">第3泡：温度92度，时间3秒；</div>
-                            <div class="codeDetail-data-item fl">第4泡：温度92度，时间3秒；</div>
-                            <div class="codeDetail-data-item fl">第5泡：温度92度，时间3秒；</div>
-                            <div class="codeDetail-data-item fl">第6泡：温度92度，时间3秒；</div>
-                            <div class="codeDetail-data-item fl">第7泡：温度92度，时间3秒；</div>
-                            <div class="codeDetail-data-item fl">第8泡：温度92度，时间3秒；</div>
-                            <div class="codeDetail-data-item fl">第9泡：温度92度，时间3秒；</div>
+
                         </div>
                     </div>
                     <?php if($editPermission):?>
                         <div class="codeDetail-btn">
-                            <div class="codeDetail-updata fl"><a href="<?= url('tea_qrcode/edit','tea_qrcode_id='.$detail['tea_qrcode_id']);?>">修改</a></div>
-                            <div class="codeDetail-detele fl">删除</div>
+                            <div class="codeDetail-updata fl"><a href="<?= url('tea_qrcode/edit','tea_qrcode_id='.$detail['tea_qrcode_id']);?>"><?= lang('edit'); ?></a></div>
+                            <div class="codeDetail-detele fl"><?= lang('delete'); ?></div>
                         </div>
                     <?php endif;?>
                 </div>

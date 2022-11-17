@@ -4,6 +4,7 @@ return [
     ': ' => '：',
     'add' => '新增',
     'edit' => '修改',
+    'delete' => '删除',
     'bind' => '绑定',
     'home' => '首页',
     'address' => '地址',
@@ -45,6 +46,8 @@ return [
     'generate_tea_qrcode' => '生成冲泡码',
     'tea_qrcode_name' => '方案名称',
     'tea_qrcode_name_empty' => '请输入方案名称',
+    'tea_qrcode_detail' => '详细方案',
+    'tea_qrcode_detail_list_show' => '第{:sn}{:frequency_unit}：温度{:temperature}{:temperature_unit}，时间{:seconds}{:seconds_unit}；',
     'teas' => '茶类',
     'my_tea_qrcode' => '我的冲泡码',
 
