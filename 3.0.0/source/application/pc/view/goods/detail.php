@@ -28,7 +28,7 @@
                     <div class="pro-money fl">
                         <?= lang('reference_retail_price') ?>：<span>￥<?= $detail['first_money'] ?></span>
                     </div>
-                    <div class="pro-collection fr">
+                    <div class="pro-collection fr <?= $detail['is_collection']>0 ? 'active' : '' ?>">
                         <p class="fl"> <?= $detail['is_collection']>0 ? lang('collected') : lang('add_to_collection')?></p>
                         <span class="fl">|</span>
                         <div class="pro-collection-icon fl"></div>
@@ -98,9 +98,9 @@
                     layer.close(load);
                     if(data.data.is_collection == 1)
                     {
-                        that.find("p").text("<?= lang('collected') ?>");
+                        that.addClass("active").find("p").text("<?= lang('collected') ?>");
                     }else{
-                        that.find("p").text("<?= lang('add_to_collection') ?>");
+                        that.removeClass("active").find("p").text("<?= lang('add_to_collection') ?>");
                     }
                     layer.msg(data.msg);
                 },

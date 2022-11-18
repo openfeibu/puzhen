@@ -2,7 +2,7 @@
 <div class="main">
     <div class="login-box  w1400">
         <div class="login-box-bg clearfix">
-            <div class="login-left fl">
+            <div class="login-left reg-left fl">
                 <div class="login-code">
                     <div class="login-code-title"><?= lang('weixin_qrcode_bind') ?></div>
                     <div class="login-code-img" id="login_container">
@@ -11,7 +11,7 @@
                     <!-- <span>使用微信扫一扫 </br>使用泡臣小程序，泡茶更轻松</span> -->
                 </div>
             </div>
-            <div class="login-right fl">
+            <div class="login-right reg-right fl">
                 <div class="binding-box">
                     <div>
                         <div class="binding-test">
@@ -40,6 +40,6 @@
         redirect_uri: encodeURIComponent("<?= $weixinLoginRedirectUrl; ?>"),//回调地址
         state: "<?= $state; ?>",
         style: "black",
-        href:"data:text/css;base64,LmltcG93ZXJCb3ggLnFyY29kZSB7d2lkdGg6IDIwMHB4O30NCi5pbXBvd2VyQm94IC50aXRsZSB7ZGlzcGxheTogbm9uZTt9DQouaW1wb3dlckJveCAuaW5mbyB7d2lkdGg6IDIwMHB4O30NCi5zdGF0dXNfaWNvbiB7ZGlzcGxheTogbm9uZX0NCi5pbXBvd2VyQm94IC5zdGF0dXMge3RleHQtYWxpZ246IGNlbnRlcjt9"//自定义样式链接
+        href:"data:text/css;base64,LmltcG93ZXJCb3ggLnFyY29kZSB7d2lkdGg6IDIwMHB4O30KLmltcG93ZXJCb3ggLnRpdGxlIHtkaXNwbGF5OiBub25lO30KLmltcG93ZXJCb3ggLmluZm8ge3dpZHRoOiAyMDBweDt9Ci5zdGF0dXNfaWNvbiB7ZGlzcGxheTogbm9uZX0KLmltcG93ZXJCb3ggLnN0YXR1cyB7dGV4dC1hbGlnbjogY2VudGVyO2NvbG9yOiNmZmZ9IA=="//自定义样式链接
     });
 </script>
