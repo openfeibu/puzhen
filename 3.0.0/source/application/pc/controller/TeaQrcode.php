@@ -117,13 +117,13 @@ class TeaQrcode extends Controller
                 if(!$user)
                 {
                     $detail->delete();
-                    $tea_qrcode->save(['tea_qrcode_id' => $tea_qrcode_id]);
+                    $this->model->where('tea_qrcode_id',$tea_qrcode['tea_qrcode_id'])->update(['tea_qrcode_id' => $tea_qrcode_id]);
 
                     Session::set('fbshop_pc.guest', [
                         'tea_qrcode_id' => $tea_qrcode_id,
                     ]);
                 }
-                return $this->renderSuccess(['detail' => $tea_qrcode], lang('add_success'),url('tea_qrcode/detail','tea_qrcode_id='.$tea_qrcode['tea_qrcode_id']));
+                return $this->renderSuccess(['detail' => $tea_qrcode], lang('add_success'),url('tea_qrcode/detail','tea_qrcode_id='.$tea_qrcode_id));
             }
 
             return $this->renderError([],$detail->getError() ?:  lang('update_failed'));
@@ -134,21 +134,39 @@ class TeaQrcode extends Controller
         $teaList = Tea::getAll();
         $teaConfigModel = new TeaConfig;
         $teaConfig = $teaConfigModel->getList();
+        $detail = $detail->toArray();
         return $this->fetch('edit',compact('detail','teaList','teaConfig'));
     }
 
     public function delete($tea_qrcode_id)
     {
-        $user = $this->getUser();
-        $user_id = $user['user_id'];
-        $model = TeaQrcodeModel::get(compact('user_id','tea_qrcode_id'));
-        if (!$model) {
-            return $this->renderError($this->model->getError() ?: '数据不存在');
+        $user = $this->getUser(false);
+        $editPermission = 0;
+        if($user)
+        {
+            $user_id = $user['user_id'];
+            $detail = TeaQrcodeModel::get(compact('user_id','tea_qrcode_id'));
+            $editPermission = 1;
+        }else{
+
+            $detail = TeaQrcodeModel::get(compact('tea_qrcode_id'));
+
+            if(isset(Session::get('fbshop_pc.guest')['tea_qrcode_id']) && $tea_qrcode_id == Session::get('fbshop_pc.guest')['tea_qrcode_id'])
+            {
+                $editPermission = 1;
+            }
         }
-        if ($model->delete()) {
-            return $this->renderSuccess([], '删除成功');
+        if(!$editPermission)
+        {
+            return $this->renderError([],lang('no_access'));
         }
-        return $this->renderError($model->getError() ?: '删除失败');
+        if (!$detail) {
+            return $this->renderError($this->model->getError() ?: lang('nodata'));
+        }
+        if ($detail->delete()) {
+            return $this->renderSuccess([], lang('delete_success'));
+        }
+        return $this->renderError($detail->getError() ?: lang('delete_failed'));
     }
 
 

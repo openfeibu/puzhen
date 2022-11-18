@@ -18,7 +18,7 @@ return [
     'contact_us' => '联系方式',
     'follow_us' => '关注我们',
     'search' => '搜索',
-    'search_empty' => '请输入搜索的内容',
+    'search_empty' => '请输入搜索的产品关键词',
     'email' => '邮箱',
     'phone_number' => '手机号码',
     'please_select' => '请选择',
@@ -133,7 +133,13 @@ return [
     'add_failed' => '添加失败',
     'update_success' => '更新成功',
     'update_failed' => '更新失败',
+    'delete_success' => '删除成功',
+    'delete_failed' => '删除失败',
 
     'nodata' => '数据不存在',
     'no_access' => '没有权限',
+
+    'confirm_delete' => '确定要删除吗？',
+    'friendly_note' => '友情提示',
+
 ];

@@ -40,7 +40,7 @@
                         <a href="<?= url('article/detail','article_id=5') ?>">关于朴真</a>
                     </li>
                     <li>
-                        <a href="<?= url('article/contact') ?>"><?= lang('follow_us'); ?></a>
+                        <a href="<?= url('article/contact') ?>">联系我们</a>
                     </li>
 
                 </ul>

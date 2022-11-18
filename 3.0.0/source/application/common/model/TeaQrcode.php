@@ -33,7 +33,7 @@ class TeaQrcode extends BaseModel
     {
         $tea_qrcode_data = json_decode($data['data'], true);
         $tea_qrcode_data['tea_name'] = Tea::getTeaName($tea_qrcode_data['tea']);
-	      $tea_qrcode_data['name'] = $data['name'];
+        $tea_qrcode_data['name'] = $data['name'];
         return $tea_qrcode_data;
     }
     

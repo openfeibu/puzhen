@@ -12,7 +12,7 @@
                 <div class="pro-code-icon fl"></div>
             </a>
         </div>
-        <form action="" id="codeForm" onsubmit="return addCode()">
+        <form action="" id="codeForm" onsubmit="return editCode()">
             <div class="codeForm-item">
                 <label class="col-lg-2 col-md-2 col-sm-3 col-xs-3 codeForm-label "><?= lang('tea_qrcode_name'); ?><span>*</span></label>
                 <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 codeForm-con ">
@@ -55,28 +55,28 @@
             </div>
             <div class="codeForm-data">
                 <?php foreach($detail['data']['temperature_arr'] as $k => $temperature): ?>
-                <div class="codeForm-item">
-                    <label class="col-lg-2 col-md-2 col-sm-2 col-xs-2 codeForm-label ">第<?= $k+1;?>泡温度<span>*</span></label>
-                    <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3 codeForm-con clearfix">
-                        <select name="tea_qrcode[temperature][]" id="" class="code-temperature fl" <?php if($k == 0):?>onchange="changetemperature(this)" <?php endif; ?>>
-                            <option value=""><?= lang('please_select'); ?></option>
-                            <?php foreach ($teaConfig['temperature']['data'] as $config_data):?>
-                                <option value="<?= $config_data['value'] ?>" <?= $temperature == $config_data['value'] ? 'selected' : ''?> ><?= $config_data['value']; ?></option>
-                            <?php endforeach;?>
-                        </select>
-                        <div class="unit fl">℃</div>
+                    <div class="codeForm-item">
+                        <label class="col-lg-2 col-md-2 col-sm-2 col-xs-2 codeForm-label ">第<?= $k+1;?>泡温度<span>*</span></label>
+                        <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3 codeForm-con clearfix">
+                            <select name="tea_qrcode[temperature][]" id="" class="code-temperature fl" <?php if($k == 0):?>onchange="changetemperature(this)" <?php endif; ?>>
+                                <option value=""><?= lang('please_select'); ?></option>
+                                <?php foreach ($teaConfig['temperature']['data'] as $config_data):?>
+                                    <option value="<?= $config_data['value'] ?>" <?= $temperature == $config_data['value'] ? 'selected' : ''?> ><?= $config_data['value']; ?></option>
+                                <?php endforeach;?>
+                            </select>
+                            <div class="unit fl">℃</div>
+                        </div>
+                        <label class="col-lg-2 col-md-2 col-sm-2 col-xs-2 codeForm-label ">第<?= $k+1;?>泡秒数<span>*</span></label>
+                        <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3 codeForm-con clearfix">
+                            <select name="tea_qrcode[seconds][]" id="" class="code-seconds fl" <?php if($k == 0):?> onchange="changeseconds(this)" <?php endif; ?> >
+                                <option value=""><?= lang('please_select'); ?></option>
+                                <?php foreach ($teaConfig['seconds']['data'] as $config_data):?>
+                                    <option value="<?= $config_data['value'] ?>" <?= isset($detail['data']['seconds_arr'][$k]) && $detail['data']['seconds_arr'][$k] == $config_data['value'] ? 'selected' : ''; ?> ><?= $config_data['value']; ?></option>
+                                <?php endforeach;?>
+                            </select>
+                            <div class="unit fl">秒</div>
+                        </div>
                     </div>
-                    <label class="col-lg-2 col-md-2 col-sm-2 col-xs-2 codeForm-label ">第<?= $k+1;?>泡秒数<span>*</span></label>
-                    <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3 codeForm-con clearfix">
-                        <select name="tea_qrcode[seconds][]" id="" class="code-seconds fl" <?php if($k == 0):?> onchange="changeseconds(this)" <?php endif; ?> >
-                            <option value=""><?= lang('please_select'); ?></option>
-                            <?php foreach ($teaConfig['seconds']['data'] as $config_data):?>
-                            <option value="<?= $config_data['value'] ?>" <?= isset($detail['data']['seconds_arr'][$k]) && $detail['data']['seconds_arr'][$k] == $config_data['value'] ? 'selected' : ''; ?> ><?= $config_data['value']; ?></option>
-                            <?php endforeach;?>
-                        </select>
-                        <div class="unit fl">秒</div>
-                    </div>
-                </div>
                 <?php endforeach;?>
             </div>
             <div class="codeForm-btn">
@@ -90,11 +90,11 @@
 
 </div>
 <script>
-    function addCode()
+    function editCode()
     {
         let load = layer.load(2);
         $("#codeForm").ajaxSubmit({
-            url: "<?= url('tea_qrcode/add');?>",
+            url: "<?= url('tea_qrcode/edit','tea_qrcode_id='.$detail['tea_qrcode_id']);?>",
             type: 'post',
             success: function(data) { // data 保存提交后返回的数据，一般为 json 数据
                 layer.close(load);
@@ -130,7 +130,7 @@
                             <select name="tea_qrcode[temperature][]" class="code-temperature fl" onchange="changetemperature(this)" required="" >
                                 <option value=""><?= lang('please_select'); ?></option>
                                <?php foreach ($teaConfig['temperature']['data'] as $config_data):?>
-                                <option value="<?= $config_data['value'] ?>" <?php if($teaConfig['temperature']['default'] == $config_data['value']):?> selected<?php endif;?> ><?= $config_data['value'] ?></option>
+                                <option value="<?= $config_data['value'] ?>" <?= $teaConfig['temperature']['default'] == $config_data['value'] ? "selected" : '';?>  ><?= $config_data['value'] ?></option>
                                 <?php endforeach;?>
                             </select>
                             <div class="unit fl"><?= $teaConfig['temperature']['unit']?></div>
@@ -140,7 +140,7 @@
                             <select name="tea_qrcode[seconds][]" class="code-seconds fl" onchange="changeseconds(this)" required="" >
                                 <option value=""><?= lang('please_select'); ?></option>
                                   <?php foreach ($teaConfig['seconds']['data'] as $config_data):?>
-                                <option value="<?= $config_data['value'] ?>" <?php if($teaConfig['seconds']['default'] == $config_data['value']):?> selected<?php endif;?> ><?= $config_data['value'] ?></option>
+                                <option value="<?= $config_data['value'] ?>" <?= $teaConfig['seconds']['default'] == $config_data['value'] ? "selected" : '';?> ><?= $config_data['value'] ?></option>
                                 <?php endforeach;?>
                             </select>
                             <div class="unit fl"><?= $teaConfig['seconds']['unit']?></div>
