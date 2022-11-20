@@ -92,7 +92,26 @@
                                     <small>例如：验证码${code}，您正在注册成为${product}用户，感谢您的支持！</small>
                                 </div>
                             </div>
-
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-form-label form-require">
+                                    主题英文 <span class="tpl-form-line-small-title">Subject</span>
+                                </label>
+                                <div class="am-u-sm-9">
+                                    <input type="text" class="tpl-form-input"
+                                           name="email[template][user_register][en_subject]"
+                                           value="<?= $values['template']['user_register']['en_subject'] ?? '' ?>">
+                                    <small>例如：Thank you for your registration, please check your registration verification code!</small>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-form-label form-require">
+                                    内容英文 <span class="tpl-form-line-small-title">Body</span>
+                                </label>
+                                <div class="am-u-sm-9">
+                                    <textarea class=""  name="email[template][user_register][en_body]"><?= $values['template']['user_register']['en_body'] ?? '' ?></textarea>
+                                    <small>例如：The code is ${code}. Thank you for your support!</small>
+                                </div>
+                            </div>
                             <div class="widget-head am-cf">
                                 <div class="widget-title am-fl">用户忘记密码验证码</div>
                             </div>
@@ -118,6 +137,28 @@
                                 </div>
                             </div>
 
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-form-label form-require">
+                                    主题英文 <span class="tpl-form-line-small-title">Subject</span>
+                                </label>
+                                <div class="am-u-sm-9">
+                                    <input type="text" class="tpl-form-input"
+                                           name="email[template][user_forget_pass][en_subject]"
+                                           value="<?= $values['template']['user_forget_pass']['en_subject'] ?? '' ?>">
+                                    <small>例如：Reset the password!</small>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-form-label form-require">
+                                    内容英文 <span class="tpl-form-line-small-title">Body</span>
+                                </label>
+                                <div class="am-u-sm-9">
+                                    <textarea class=""  name="email[template][user_forget_pass][en_body]"><?= $values['template']['user_forget_pass']['en_body'] ?? ''?></textarea>
+                                    <small>例如：The code is ${code}, you are trying to change the login password, please keep the account information properly.</small>
+                                </div>
+                            </div>
+
+
                             <div class="widget-head am-cf">
                                 <div class="widget-title am-fl">用户绑定邮箱验证码</div>
                             </div>
@@ -142,7 +183,26 @@
                                     <small>例如：验证码${code}，您正在进行${product}身份验证，打死不要告诉别人哦！</small>
                                 </div>
                             </div>
-
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-form-label form-require">
+                                    主题英文 <span class="tpl-form-line-small-title">Subject</span>
+                                </label>
+                                <div class="am-u-sm-9">
+                                    <input type="text" class="tpl-form-input"
+                                           name="email[template][user_bind_email][en_subject]"
+                                           value="<?= $values['template']['user_bind_email']['en_subject'] ?? '' ?>">
+                                    <small>例如：Binding email!</small>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-form-label form-require">
+                                    内容英文 <span class="tpl-form-line-small-title">Body</span>
+                                </label>
+                                <div class="am-u-sm-9">
+                                    <textarea class=""  name="email[template][user_bind_email][en_body]"><?= $values['template']['user_bind_email']['en_body'] ?? ''?></textarea>
+                                    <small>例如：The code is ${code}, please keep the account information properly.</small>
+                                </div>
+                            </div>
                             <div class="am-form-group">
                                 <div class="am-u-sm-9 am-u-sm-push-3 am-margin-top-lg">
                                     <button type="submit" class="j-submit am-btn am-btn-secondary">提交

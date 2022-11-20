@@ -28,22 +28,13 @@
         margin-top: 32px;
     }
 </style>
-<div class="row-content am-cf">
-    <div class="row">
+<div class="main">
+    <div class="nodata">
+        <div class="test"><?= strip_tags($msg) ?></div>
 
-        <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
-            <div class="widget am-cf">
-                <div class="result-index">
-                    <div class="result-item result-index-icon">
-                        <i class="iconfont icon-unif060"></i>
-                    </div>
-                    <div class="result-item result-index-title">提交失败1</div>
-                    <div class="result-item result-index-description"><?= strip_tags($msg) ?></div>
-                    <div class="result-item result-index-action">
-                        <button type="submit" class="j-submit am-btn am-btn-sm am-btn-default">点击返回
-                        </button>
-                    </div>
-                </div>
+        <div class="codeForm-btn">
+            <div class="codeForm-submit">
+                <button type="submit" class="j-submit"><?= lang('go_back'); ?></button>
             </div>
         </div>
     </div>

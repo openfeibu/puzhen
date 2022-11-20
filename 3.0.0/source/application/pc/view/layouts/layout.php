@@ -7,16 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
     <meta name="format-detection" content="telephone=no">
-    <title>佛山朴真茶业有限公司</title>
-    <meta name="description" content="佛山朴真茶业有限公司">
-    <meta name="keywords" content="佛山朴真茶业有限公司">
+    <title><?= $setting['pc']['values'][$prefix.'name'] ?: $setting['pc']['values']['name'];?></title>
+    <meta name="description" content="<?= $setting['pc']['values'][$prefix.'name'] ?: $setting['pc']['values']['name'];?>">
+    <meta name="keywords" content="<?= $setting['pc']['values'][$prefix.'name'] ?: $setting['pc']['values']['name'];?>">
     <link rel="icon" type="image/png" href="assets/common/i/favicon.ico"/>
     <link rel="stylesheet" type="text/css" href="assets/pc/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/pc/css/fb-main.css">
     <link rel="stylesheet" type="text/css" href="assets/pc/css/animate.min.css">
     <script>
         BASE_URL = '<?= isset($base_url) ? $base_url : '' ?>';
-        STORE_URL = '<?= isset($store_url) ? $store_url : '' ?>';
+        PC_URL = '<?= isset($pc_url) ? $pc_url : '' ?>';
         lang_arr = <?= $lang_arr ?>;
         pc_root = BASE_URL + 'index.php?s=/pc/';
     </script>

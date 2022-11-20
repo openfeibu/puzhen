@@ -25,7 +25,15 @@ class User extends BaseModel
         $module = self::getCalledModule() ?: 'common';
         return $this->belongsTo("app\\{$module}\\model\\Wxapp");
     }
-
+    /**
+     * 文章详情：HTML实体转换回普通字符
+     * @param $value
+     * @return string
+     */
+    public function getAvatarUrlAttr($value)
+    {
+        return $value ?: default_avatar();
+    }
     /**
      * 关联会员等级表
      * @return \think\model\relation\BelongsTo

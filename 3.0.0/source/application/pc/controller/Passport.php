@@ -44,7 +44,7 @@ class Passport extends Controller
 
         $WxQrLogin = new WxQrLogin;
         $state = $WxQrLogin->getState();
-        $weixinLoginRedirectUrl = 'http://www.fspuzhen.cn/index.php?s=/pc/passport/register_weixin_web_bind';
+        $weixinLoginRedirectUrl = 'http://www.fspuzhen.cn/index.php?s=/pc/passport/wx_web_login';
 
         return $this->fetch('login',compact('state','weixinLoginRedirectUrl'));
     }
@@ -61,17 +61,20 @@ class Passport extends Controller
             switch ($lang) {
                 case 'zh-cn':
                     //跳到微信绑定
-                    $redirect_url = url('register_weixin_web_bind');
+                    $redirect_url = url('passport/register_weixin_web_bind');
                     break;
                 default :
-                    $redirect_url = $_SERVER["HTTP_REFERER"];
+                    $redirect_url = url('user/index');
                     break;
 
             }
             return $this->renderSuccess([],lang('register.success'),$redirect_url);
 
         }
-        return $this->fetch('register');
+        $WxQrLogin = new WxQrLogin;
+        $state = $WxQrLogin->getState();
+        $weixinLoginRedirectUrl = 'http://www.fspuzhen.cn/index.php?s=/pc/passport/wx_web_login';
+        return $this->fetch('register',compact('state','weixinLoginRedirectUrl'));
     }
 
     /**
@@ -103,7 +106,22 @@ class Passport extends Controller
         return $this->fetch('register_weixin_web_bind',compact('state','weixinLoginRedirectUrl'));
 
     }
-
+    public function wx_web_login()
+    {
+        $data = $this->getData();
+        $WxQrLogin = new WxQrLogin;
+        if(isset($data['code']) && isset($data['state']))
+        {
+            $userInfo = $WxQrLogin->getInfo($data['code'],$data['state']);
+            $userModel = new UserModel();
+            if(!$userModel->wxWebLogin($userInfo))
+            {
+                return redirect('passport/login', [],302, ['msg' => $userModel->getError() ?: lang('login.failed'), 'code' => 0]);
+            }
+            return redirect('user/index');
+        }
+        return redirect('passport/login');
+    }
     public function send_code()
     {
         $data = $this->postData();

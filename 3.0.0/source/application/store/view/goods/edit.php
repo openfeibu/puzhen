@@ -34,6 +34,13 @@
                                 </div>
                             </div>
                             <div class="am-form-group">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">产品英文名称 </label>
+                                <div class="am-u-sm-9 am-u-end">
+                                    <input type="text" class="tpl-form-input" name="goods[en_goods_name]"
+                                           value="<?= $model['en_goods_name'] ?>">
+                                </div>
+                            </div>
+                            <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">产品分类 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <select name="goods[category_id]" required
@@ -95,7 +102,13 @@
                                     <small>选填，产品卖点简述，例如：此款产品美观大方 性价比较高 不容错过</small>
                                 </div>
                             </div>
-
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">产品英文卖点 </label>
+                                <div class="am-u-sm-9 am-u-end">
+                                    <input type="text" class="tpl-form-input" name="goods[en_selling_point]"
+                                           value="<?= $model['en_selling_point'] ?>">
+                                </div>
+                            </div>
                             <div class="widget-head am-cf">
                                 <div class="widget-title am-fl">规格/库存</div>
                             </div>
@@ -289,6 +302,13 @@
                                     <textarea id="container" name="goods[content]"><?= $model['content'] ?></textarea>
                                 </div>
                             </div>
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">产品英文详情 </label>
+                                <div class="am-u-sm-9 am-u-end">
+                                    <!-- 加载编辑器的容器 -->
+                                    <textarea id="en_container" name="goods[en_content]"><?= $model['en_content'] ?></textarea>
+                                </div>
+                            </div>
                             <div class="widget-head am-cf">
                                 <div class="widget-title am-fl">其他设置</div>
                             </div>
@@ -351,7 +371,10 @@
             initialFrameWidth: 375 + 15,
             initialFrameHeight: 600
         });
-
+        UM.getEditor('en_container', {
+            initialFrameWidth: 375 + 15,
+            initialFrameHeight: 600
+        });
         // 选择图片
         $('.upload-file').selectImages({
             name: 'goods[images][]'

@@ -35,10 +35,13 @@
                             </div>
                             
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">链接类型 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">类型 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <label class="am-radio-inline">
-                                        <input type="radio" name="banner[link_type]" value="web" checked>网址
+                                        <input type="radio" name="banner[type]" value="pc" checked>电脑
+                                    </label>
+                                    <label class="am-radio-inline">
+                                        <input type="radio" name="banner[type]" value="mobile">手机
                                     </label>
                                 </div>
                             </div>

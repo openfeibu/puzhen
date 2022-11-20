@@ -17,7 +17,7 @@
                 </div>
                 <div class="about-page-contact-test-address">
                     <p><?= lang('address'); ?></p>
-                    <span><?= $setting['store']['values']['address'];?></span>
+                    <span><?= $setting['store']['values'][$prefix.'address'] ?: $setting['store']['values']['address'];;?></span>
                 </div>
                 <div class="about-page-contact-test-phone">
                     <p><?= lang('tel'); ?></p>
@@ -48,7 +48,7 @@
 <script type="text/javascript" src="http://api.map.baidu.com/getscript?v=2.0&amp;ak=5jCnjnCesElvVDufg6yjGMrlYimVXk5f&amp;services=&amp;t=20200327103013"></script>
 
 <script>
-    let sContent =`<h4 style='margin:0 0 5px 0;padding:0.1em 0;font-size:16px;text-align:center;'>佛山朴真茶业有限公司</h4>`
+    let sContent =`<h4 style='margin:0 0 5px 0;padding:0.1em 0;font-size:16px;text-align:center;'><?= $setting['store']['values'][$prefix.'company'] ?: $setting['store']['values']['company'];?></h4>`
     let map = new BMap.Map("allmap");
     let point2 = new BMap.Point("113.055517","23.138691");
     let marker2 = new BMap.Marker(point2);

@@ -24,10 +24,31 @@ use app\common\enum\DeliveryType as DeliveryTypeEnum;
                                 <div class="widget-title am-fl">联系方式</div>
                             </div>
                             <div class="am-form-group">
+                                <label class="am-u-sm-3 am-form-label "> 公司名称 </label>
+                                <div class="am-u-sm-9">
+                                    <input type="text" class="tpl-form-input" name="store[company]"
+                                           value="<?= $values['company']  ?? '' ?>" required>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-form-label "> 公司英文名称 </label>
+                                <div class="am-u-sm-9">
+                                    <input type="text" class="tpl-form-input" name="store[en_company]"
+                                           value="<?= $values['en_company']  ?? '' ?>" required>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
                                 <label class="am-u-sm-3 am-form-label "> 地址 </label>
                                 <div class="am-u-sm-9">
                                     <input type="text" class="tpl-form-input" name="store[address]"
                                            value="<?= $values['address']  ?? '' ?>" required>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-form-label "> 地址英文 </label>
+                                <div class="am-u-sm-9">
+                                    <input type="text" class="tpl-form-input" name="store[en_address]"
+                                           value="<?= $values['en_address']  ?? '' ?>" required>
                                 </div>
                             </div>
                             <div class="am-form-group">
@@ -49,6 +70,13 @@ use app\common\enum\DeliveryType as DeliveryTypeEnum;
                                 <div class="am-u-sm-9">
                                     <input type="text" class="tpl-form-input" name="store[right]"
                                            value="<?= $values['right'] ?? '' ?>" required>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-form-label "> 版权英文 </label>
+                                <div class="am-u-sm-9">
+                                    <input type="text" class="tpl-form-input" name="store[en_right]"
+                                           value="<?= $values['en_right'] ?? '' ?>" required>
                                 </div>
                             </div>
                             <!--

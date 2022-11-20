@@ -9,12 +9,12 @@
 			</div>
             <div class="test">
                 <div class="test-title">
-                    <div class="name fb-overflow-1"><?= $item['goods_name'] ?></div>
+                    <div class="name fb-overflow-1"><?= $item[$prefix.'goods_name'] ?: $item['goods_name']; ?></div>
                     <div class="collection <?= $item['is_collection']>0 ? "active" : ''?>" ></div>
 
                 </div>
                 <div class="test-des fb-overflow-2">
-                    <?= $item['selling_point'] ?>
+                    <?= $item[$prefix.'selling_point'] ?: $item['selling_point']; ?>
                 </div>
                 <div class="test-bottom">
                     <?php if(isset($item['goods_tea_qrcode']['tea_qrcode']) && $item['goods_tea_qrcode']['tea_qrcode']): ?>
@@ -22,7 +22,8 @@
                     <div class="test-code clearfix">
                         <div class="test-code-l fl">
                             <div class="n fb-overflow-1"><?= $item['goods_tea_qrcode']['tea_qrcode']['name'] ?></div>
-                            <div class="c"><?= $item['goods_tea_qrcode']['tea_qrcode']['data']['tea_name'] ?> · <?= $item['goods_tea_qrcode']['tea_qrcode']['data']['weight'] ?><?= lang('g')?> · <?= $item['goods_tea_qrcode']['tea_qrcode']['data']['number'] ?><?= lang('tea.number')?></div>
+                            <div class="c">
+                                <?= $item['goods_tea_qrcode']['tea_qrcode']['data'][$prefix.'tea_name'] ?: $item['goods_tea_qrcode']['tea_qrcode']['data']['tea_name'] ?> · <?= $item['goods_tea_qrcode']['tea_qrcode']['data']['weight'] ?><?= lang('g')?> · <?= $item['goods_tea_qrcode']['tea_qrcode']['data']['number'] ?><?= lang('tea.times')?></div>
                         </div>
                         <div class="test-code-r fr"><?= lang('to_make_tea')?></div>
                     </div>

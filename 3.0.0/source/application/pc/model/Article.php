@@ -14,5 +14,15 @@ use app\common\exception\BaseException;
 class Article extends ApiArticleModel
 {
 
+    public static function detail($article_id)
+    {
+        try{
+            return parent::detail($article_id);
+        }catch (\Exception $e)
+        {
+            return false;
+        }
+
+    }
 
 }

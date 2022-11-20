@@ -17,6 +17,13 @@
                                 </div>
                             </div>
                             <div class="am-form-group">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">文章英文标题 </label>
+                                <div class="am-u-sm-9 am-u-end">
+                                    <input type="text" class="tpl-form-input" name="article[en_article_title]"
+                                           value="" placeholder="请输入英文标题">
+                                </div>
+                            </div>
+                            <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">文章分类 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <select name="article[category_id]"
@@ -72,6 +79,14 @@
                                     <textarea id="container" name="article[article_content]"
                                               type="text/plain"></textarea>
                                 </div>
+                            </div>
+                            <div class="am-form-group am-padding-top">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">文章英文内容 </label>
+                                <div class="am-u-sm-9 am-u-end">
+                                    <!-- 加载编辑器的容器 -->
+                                    <textarea id="en_container" name="article[en_article_content]"
+                                              type="text/plain"></textarea>
+                                    </div>
                             </div>
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label">虚拟阅读量 </label>
@@ -148,7 +163,11 @@
             initialFrameWidth: 375 + 15,
             initialFrameHeight: 600
         });
-
+        // 富文本编辑器
+        UM.getEditor('en_container', {
+            initialFrameWidth: 375 + 15,
+            initialFrameHeight: 600
+        });
         /**
          * 表单验证提交
          * @type {*}

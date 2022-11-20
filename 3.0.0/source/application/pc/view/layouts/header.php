@@ -4,8 +4,8 @@
         <div class="container w1400">
             <div class="logo ">
                 <a href="<?= $base_url ?? url('') ?>">
-                    <h1 hidden="">佛山朴真茶业有限公司</h1>
-                    <img  src="assets/pc/images/logo.png" alt="佛山朴真茶业有限公司" class="block">
+                    <h1 hidden=""><?= $setting['store']['values'][$prefix.'company'] ?: $setting['store']['values']['company'];?></h1>
+                    <img  src="assets/pc/images/logo.png" alt="<?= $setting['store']['values'][$prefix.'company'] ?: $setting['store']['values']['company'];?>" class="block">
                 </a>
             </div>
             <div class="headerLeft pull-left">
@@ -26,22 +26,15 @@
 
             <div class="nav">
                 <ul>
-                    <li>
-                        <a href="<?= url('goods/index') ?>">产品中心</a>
+                    <?php if(!empty($navList)): foreach ($navList as $key => $item): ?>
+                    <li <?php if(request()->pathinfo() == 'pc/'.$item['url']): ?> class="active" <?php endif;?> >
+                        <a href="<?= $pc_url.'/'.$item['url'] ?>"><?= $item[$prefix.'name'] ?></a>
 
                     </li>
-                    <li>
-                        <a href="<?= url('article/detail','article_id=6') ?>">资讯中心</a>
-                    </li>
-                    <li>
-
-                    </li>
-                    <li>
-                        <a href="<?= url('article/detail','article_id=5') ?>">关于朴真</a>
-                    </li>
-                    <li>
-                        <a href="<?= url('article/contact') ?>">联系我们</a>
-                    </li>
+                    <?php if($key==1):?>
+                    <li></li>
+                    <?php endif;?>
+                    <?php endforeach; endif;?>
 
                 </ul>
             </div>

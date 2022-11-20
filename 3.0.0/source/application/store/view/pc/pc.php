@@ -16,7 +16,13 @@
                                            value="<?= $values['name'] ?? '' ?>" required>
                                 </div>
                             </div>
-
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-form-label form-require"> 网站英文名称 </label>
+                                <div class="am-u-sm-9">
+                                    <input type="text" class="tpl-form-input" name="pc[en_name]"
+                                           value="<?= $values['en_name'] ?? '' ?>" required>
+                                </div>
+                            </div>
 
                             <div class="am-form-group">
                                 <div class="am-u-sm-9 am-u-sm-push-3 am-margin-top-lg">

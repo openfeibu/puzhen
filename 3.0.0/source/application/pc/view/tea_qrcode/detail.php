@@ -13,7 +13,7 @@
                 </div>
                 <div class="codeDetail-test fb-inline-block">
                     <div class="name"><?= $detail['name']; ?></div>
-                    <div class="des"><?= $detail['data']['tea_name'] ?> · <?= $detail['data']['weight'] ?><?= lang('g')?> · <?= $detail['data']['number'] ?><?= lang('tea.number')?></div>
+                    <div class="des"><?= $detail['data'][$prefix.'tea_name'] ?: $detail['data']['tea_name']; ?> · <?= $detail['data']['weight'] ?><?= lang('g')?> · <?= $detail['data']['number'] ?><?= lang('tea.number')?></div>
                     <div class="codeDetail-data">
                         <div class="codeDetail-data-title"><?= lang('tea_qrcode_detail') ?></div>
                         <div class="codeDetail-data-con clearfix">

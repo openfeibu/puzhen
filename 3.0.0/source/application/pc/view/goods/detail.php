@@ -22,8 +22,8 @@
                 </div>
             </div>
             <div class="pro-test fb-inline-block">
-                <div class="name"><?= $detail['goods_name'] ?></div>
-                <div class="des"><?= $detail['selling_point'] ?></div>
+                <div class="name"><?= $detail[$prefix.'goods_name'] ?: $detail['goods_name'] ?></div>
+                <div class="des"><?= $detail[$prefix.'selling_point'] ?: $detail['selling_point'] ?></div>
                 <div class="pro-test-line clearfix">
                     <div class="pro-money fl">
                         <?= lang('reference_retail_price') ?>：<span>￥<?= $detail['first_money'] ?></span>
@@ -52,8 +52,8 @@
                             <a href="<?= url('goods/detail&goods_id='.$item['goods_id']) ?>">
                                 <div class="img fb-inline-block"><img src="<?= $item['goods_image'] ?>" alt=""></div>
                                 <div class="test fb-inline-block">
-                                    <div class="name fb-overflow-1"><?= $item['goods_name'] ?></div>
-                                    <div class="des fb-overflow-2"><?= $item['selling_point'] ?></div>
+                                    <div class="name fb-overflow-1"><?= $item[$prefix.'goods_name'] ?: $item['goods_name']; ?></div>
+                                    <div class="des fb-overflow-2"><?= $item[$prefix.'selling_point'] ?: $item['selling_point']; ?></div>
                                 </div>
                             </a>
                         </li>
@@ -65,7 +65,7 @@
 
             </div>
             <div class="product-detail-con nopadding col-lg-9 col-md-9">
-                <?= $detail['content'] ?>
+                <?= $detail[$prefix.'content'] ?: $detail['content'] ?>
             </div>
 
         </div>

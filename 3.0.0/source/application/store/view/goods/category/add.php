@@ -16,6 +16,13 @@
                                 </div>
                             </div>
                             <div class="am-form-group">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">分类英文名称 </label>
+                                <div class="am-u-sm-9 am-u-end">
+                                    <input type="text" class="tpl-form-input" name="category[en_name]"
+                                           value="" >
+                                </div>
+                            </div>
+                            <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">上级分类 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <select name="category[parent_id]"

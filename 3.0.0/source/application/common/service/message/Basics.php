@@ -36,7 +36,6 @@ abstract class Basics extends \app\common\service\Basics
      */
     protected function sendSms($msgType, $phoneNumbers, $templateParams, $wxappId)
     {
-        return true;
         $smsConfig = SettingModel::getItem('sms', $wxappId);
         return (new SmsDriver($smsConfig))->sendSms($msgType, $phoneNumbers, $templateParams);
     }
@@ -52,7 +51,6 @@ abstract class Basics extends \app\common\service\Basics
      */
     protected function sendEmail($msgType, $email, $templateParams, $wxappId)
     {
-        return true;
         $emailConfig = SettingModel::getItem('email', $wxappId);
         return (new EmailDriver($emailConfig))->sendEmail($msgType, $email, $templateParams);
     }

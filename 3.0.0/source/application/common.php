@@ -506,3 +506,11 @@ function validate_password($data)
         throw new \app\common\exception\BaseException(['msg' => $validate->getError()]);
     }
 }
+function default_avatar()
+{
+    return 'http://www.fspuzhen.cn/assets/common/i/user_default_avatar.png';
+}
+function default_nickname($id)
+{
+    return lang('puzhen').$id;
+}

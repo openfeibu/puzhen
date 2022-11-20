@@ -8,6 +8,7 @@ use app\common\exception\NotAuthException;
 use app\pc\model\Wxapp as WxappModel;
 use app\pc\model\User as UserModel;
 use app\pc\model\Setting;
+use app\pc\model\Nav as NavModel;
 use think\Cookie;
 use think\Lang;
 use think\Request;
@@ -36,6 +37,8 @@ class Controller extends \think\Controller
 
     /** @var string $route 当前路由：分组名称 */
     protected $group = '';
+
+    protected $prefix = '';
 
     /** @var array $allowAllAction 登录验证白名单 */
     protected $allowAllAction = [
@@ -82,7 +85,10 @@ class Controller extends \think\Controller
         if(!(Cookie::has('think_var'))){
             $this->lang();
         }
-        $this->assign('think_lang',Cookie::get('think_var'));
+        $think_lang = Cookie::get('think_var');
+        $this->prefix = $think_lang == 'zh-cn' ? '' : 'en_';
+        $this->assign('prefix',$this->prefix);
+        $this->assign('think_lang',$think_lang);
         $this->assign('wxapp_id', $this->wxapp_id);
         $this->assign('lang_arr', json_encode(Lang::get()));
     }
@@ -97,6 +103,8 @@ class Controller extends \think\Controller
         // 验证当前请求是否在白名单
         if (!in_array($this->routeUri, $this->notLayoutAction)) {
             // 输出到view
+            $navModel = new NavModel;
+            $navList = $navModel->getList();
             $this->assign([
                 'base_url' => base_url(),                      // 当前域名
                 'pc_url' => url('/pc'),              // 模块url
@@ -106,6 +114,7 @@ class Controller extends \think\Controller
                 'version' => get_version(),                    // 系统版本号
                 'pc' => $this->pc,
                 'routeUri' => $this->routeUri,
+                'navList' => $navList,
             ]);
         }
     }
@@ -254,7 +263,7 @@ class Controller extends \think\Controller
         if ($this->request->isAjax()) {
             return $this->renderJson(0, $msg, $url, $data);
         }
-        $this->error($msg);
+        $this->error($msg,$url,$data);
         return false;
     }
 
@@ -280,7 +289,7 @@ class Controller extends \think\Controller
 
     public function  lang()
     {
-        $lang = input('?get.lang') ?  input('get.lang') : 'cn';
+        $lang = input('?get.lang') ? input('get.lang') : 'cn';
         switch ($lang) {
             case 'en':
                 cookie('think_var', 'en-us');

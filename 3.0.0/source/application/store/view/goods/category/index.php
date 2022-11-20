@@ -40,7 +40,7 @@
                             <?php if (!empty($list)): foreach ($list as $first): ?>
                                 <tr>
                                     <td class="am-text-middle"><?= $first['category_id'] ?></td>
-                                    <td class="am-text-middle"><?= $first['name'] ?></td>
+                                    <td class="am-text-middle"><?= $first['name'] ?> <?= $first['en_name'] ?></td>
                                     <td class="am-text-middle"><?= $first['sort'] ?></td>
                                     <td class="am-text-middle"><?= $first['create_time'] ?></td>
                                     <td class="am-text-middle">
@@ -63,7 +63,7 @@
                                 <?php if (isset($first['child'])): foreach ($first['child'] as $two): ?>
                                     <tr>
                                         <td class="am-text-middle"><?= $two['category_id'] ?></td>
-                                        <td class="am-text-middle">　-- <?= $two['name'] ?></td>
+                                        <td class="am-text-middle">　-- <?= $two['name'] ?> <?= $two['en_name'] ?></td>
                                         <td class="am-text-middle"><?= $two['sort'] ?></td>
                                         <td class="am-text-middle"><?= $two['create_time'] ?></td>
                                         <td class="am-text-middle">
@@ -87,7 +87,7 @@
                                     <?php if (isset($two['child'])): foreach ($two['child'] as $three): ?>
                                         <tr>
                                             <td class="am-text-middle"><?= $three['category_id'] ?></td>
-                                            <td class="am-text-middle">　　　-- <?= $three['name'] ?></td>
+                                            <td class="am-text-middle">　　　-- <?= $three['name'] ?> <?= $three['en_name'] ?></td>
                                             <td class="am-text-middle"><?= $three['create_time'] ?></td>
                                             <td class="am-text-middle">
                                                 <div class="tpl-table-black-operation">

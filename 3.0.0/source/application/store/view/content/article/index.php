@@ -27,6 +27,7 @@
                             <tr>
                                 <th>文章ID</th>
                                 <th>文章标题</th>
+                                <th>文章英文标题</th>
                                 <th>封面图</th>
                                 <th>文章分类</th>
                                 <th>实际阅读量</th>
@@ -44,6 +45,10 @@
                                     <td class="am-text-middle">
                                         <p class="item-title"
                                            style="max-width: 400px;"><?= $item['article_title'] ?></p>
+                                    </td>
+                                    <td class="am-text-middle">
+                                        <p class="item-title"
+                                           style="max-width: 400px;"><?= $item['en_article_title'] ?></p>
                                     </td>
                                     <td class="am-text-middle">
                                         <a href="<?= $item['image']['file_path'] ?>" title="点击查看大图" target="_blank">

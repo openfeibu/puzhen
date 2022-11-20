@@ -38,7 +38,10 @@ class Goods extends GoodsModel
     {
         return htmlspecialchars_decode($value);
     }
-
+    public function getEnContentAttr($value)
+    {
+        return htmlspecialchars_decode($value);
+    }
     /**
      * 获取产品列表
      * @param $param

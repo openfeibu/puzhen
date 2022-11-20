@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'puzhen' => '朴真',
+    'about_puzhen' => '关于朴真',
     ': ' => '：',
     'add' => '新增',
     'edit' => '修改',
@@ -10,12 +12,13 @@ return [
     'address' => '地址',
     'tel' => '电话',
     'username' => '用户名',
+    'avatar' => '头像',
     'bind_phone_number' => '绑定手机号',
     'bind_email' => '绑定邮箱',
     'password' => '登录密码',
     'confirm' => '确认',
     'cancel' => '取消',
-    'contact_us' => '联系方式',
+    'contact_us' => '联系我们',
     'follow_us' => '关注我们',
     'search' => '搜索',
     'search_empty' => '请输入搜索的产品关键词',
@@ -39,8 +42,9 @@ return [
 
 
     'g' => '克',
-    'tea.number' => '泡',
+    'tea.times' => '泡',
     'to_make_tea' => '去冲泡',
+    'make_tea_way' => '泡法',
     'learn_more' => '了解更多',
     'reference_retail_price' => '参考零售价',
     'generate_tea_qrcode' => '生成冲泡码',
@@ -53,8 +57,11 @@ return [
 
     'official_qrcode' => '官方二维码',//Official QR Code
     'puzhen_recommend' => '朴真推荐',
+    'recommend' => '推荐',
+    'recommend_abbr' => '推荐',
 
     'collection' => '收藏',
+    'my_collection' => '我的收藏',
     'add_to_collection' => '添加到收藏',
     'collected' => '已收藏',
 
@@ -68,8 +75,10 @@ return [
     'illegal_action' => '非法操作',
 
     'login' => '登录',
+    'login_abbr' => '登录',
     'logout' => '退出',
     'register' => '注册',
+    'register_abbr' => '注册',
 
     'factory_entrance' => '厂家入口',
 
@@ -77,7 +86,7 @@ return [
 
     'login.success' => '登录成功',
     'login.failed' => '登录失败',
-    'login.failed.password_error' => '登录失败, 用户名或密码错误',
+    'login.failed.password_error' => '登录失败, 账号或密码错误',
 
     'server_error' => '很抱歉，服务器内部错误，请稍后重试',
     'sms_server_error' => '很抱歉，短信服务器内部错误，请稍后重试',
@@ -136,10 +145,19 @@ return [
     'delete_success' => '删除成功',
     'delete_failed' => '删除失败',
 
-    'nodata' => '数据不存在',
+    'nodata' => '未发现数据',
     'no_access' => '没有权限',
+    'go_back' => '点击返回',
 
     'confirm_delete' => '确定要删除吗？',
     'friendly_note' => '友情提示',
 
+    'diy_qrcode' => 'DIY冲泡码',
+    'product_center' => '产品中心',
+    'search_more' => '搜索更多内容',
+
+    'home_text_1' =>'<p>自定义泡茶程序</p><p>我的茶用我的泡法</p>',
+    'home_text_2' =>'<p>原创二维码冲泡技术</p><p>无须繁琐连接操作</p> <p>好茶也可以轻松放心泡</p>',
+    'home_text_3' => '朴真坚持制作好用且真材实料的产品',
+    'home_text_4' => '朴真秉持朴实真诚的原则，坚持制作好用且真材实料的产品，专注与通过科技为饮茶人化繁为简，提供轻松愉悦的用茶环境。',
 ];

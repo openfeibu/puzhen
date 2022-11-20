@@ -7,12 +7,18 @@ use app\store\model\Banner as BannerModel;
 
 class Banner extends Controller
 {
+    public function _initialize()
+    {
+        parent::_initialize();
+    }
+
     public function index()
     {
         // 获取全部产品列表
         $model = new BannerModel;
-        $param = array_merge($this->request->param(),['type' => 'pc']);
-        $list = $model->getList($param);
+        $list = $model->whereIn('type',['pc','mobile'])->order(['sort' => 'asc', 'type' => 'asc','create_time' => 'asc'])->paginate(20, false, [
+            'query' => \request()->request()
+        ]);
         // 产品分类
         return $this->fetch('index', compact('list'));
     }
@@ -22,7 +28,7 @@ class Banner extends Controller
             return $this->fetch('add');
         }
         $model = new BannerModel;
-        $data = array_merge($this->postData('banner'),['type' => 'pc']);
+        $data = array_merge($this->postData('banner'),['link_type' => 'web']);
         if ($model->add($data)) {
             return $this->renderSuccess('添加成功', url('pc.banner/index'));
         }

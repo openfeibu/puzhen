@@ -148,7 +148,6 @@ class User extends UserModel
         $fromWechatWebAccount = 0;
 	    $this->startTrans();
 	    try {
-	        //todo 应该先判断是否存在小程序用户
             //有微信用户直接登录
             $weappAccountModel = $weappAccount ?: new UserWechatAccountModel;
             //$from_weapp_account = 0;
@@ -182,8 +181,11 @@ class User extends UserModel
                 $model->allowField(true)->save(array_merge($data, [
                     'open_id' => $openId,
                     'wxapp_id' => self::$wxapp_id,
-                    'nickName' => '朴真'.$model['user_id'],
+                    'avatarUrl' => default_avatar(),
                 ]));
+                $model->allowField(true)->save([
+                    'nickName' => default_nickname($model['user_id']),
+                ]);
             }else{
                 $model->allowField(true)->save([
                     'open_id' => $openId,

@@ -1383,6 +1383,41 @@ header .nav ul li dl dd a:hover{color: #bf0123 !important;} */
     
 
 }
+
+
+
+/* 文件上传按钮 */
+.webuploader-container {
+    position: relative; }
+
+.webuploader-element-invisible {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px); }
+
+.webuploader-pick {
+    /*color: #2589ff;*/
+    background-color: #bc082800;
+    /*border-color: #2589ff;*/
+    font-size: 12px;
+    border-radius: 4px;
+    outline: 0;
+    font-weight: 400;
+    padding: .6em 1em;
+    width: 107px;
+    outline: none !important; }
+
+.webuploader-pick-hover {
+    /*background: #2589ff;*/
+    /*color: #fff; */
+}
+
+.webuploader-pick-disable {
+    opacity: 0.6;
+    pointer-events: none; }
+
+
 /* @media (max-width: 414px){
     
    

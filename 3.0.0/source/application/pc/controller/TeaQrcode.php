@@ -106,7 +106,7 @@ class TeaQrcode extends Controller
         }
         if(!$editPermission)
         {
-            return $this->renderError([],lang('no_access'));
+            return $this->renderError([],lang('no_access'),'tea_qrcode/add');
         }
         if($this->request->isPost() || $this->request->isAjax()) {
             if (!$detail) {
@@ -161,12 +161,12 @@ class TeaQrcode extends Controller
             return $this->renderError([],lang('no_access'));
         }
         if (!$detail) {
-            return $this->renderError($this->model->getError() ?: lang('nodata'));
+            return $this->renderError([],$this->model->getError() ?: lang('nodata'));
         }
         if ($detail->delete()) {
             return $this->renderSuccess([], lang('delete_success'));
         }
-        return $this->renderError($detail->getError() ?: lang('delete_failed'));
+        return $this->renderError([],$detail->getError() ?: lang('delete_failed'));
     }
 
 

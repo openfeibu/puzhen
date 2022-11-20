@@ -601,11 +601,15 @@ return [
         'name' => '网页端',
         'icon' => 'am-icon-television',
         'color' => '#36b313',
-        'index' => 'pc.banner/index',
+        'index' => 'pc/setting',
         'submenu' => [
             [
                 'name' => '网站设置',
                 'index' => 'pc/setting',
+            ],
+            [
+                'name' => '导航',
+                'index' => 'pc.nav/index',
             ],
             [
                 'name' => '页面管理',

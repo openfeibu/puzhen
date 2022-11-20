@@ -12,10 +12,10 @@
                             <input type="hidden" name="s" value="/<?= $request->pathinfo() ?>">
                             <div class="am-u-sm-12 am-u-md-3">
                                 <div class="am-form-group">
-                                    <?php if (checkPrivilege('wxapp.banner/add')): ?>
+                                    <?php if (checkPrivilege('pc.banner/add')): ?>
                                         <div class="am-btn-group am-btn-group-xs">
                                             <a class="am-btn am-btn-default am-btn-success"
-                                               href="<?= url('wxapp.banner/add') ?>">
+                                               href="<?= url('pc.banner/add') ?>">
                                                 <span class="am-icon-plus"></span> 新增
                                             </a>
                                         </div>
@@ -32,6 +32,7 @@
                                 <th>轮播图ID</th>
                                 <th>图片</th>
                                 <th>链接</th>
+                                <th>类型</th>
                                 <th>排序</th>
                                 <th>创建时间</th>
                                 <th>操作</th>
@@ -49,16 +50,17 @@
                                         <?php endif; ?>
                                     </td>
                                     <td class="am-text-middle"><?= $item['link'] ?></td>
+                                    <td class="am-text-middle"><?= $item['type'] == 'pc' ? '电脑' : '手机' ?></td>
                                     <td class="am-text-middle"><?= $item['sort'] ?></td>
                                     <td class="am-text-middle"><?= $item['create_time'] ?></td>
                                     <td class="am-text-middle">
                                         <div class="tpl-table-black-operation">
-                                            <?php if (checkPrivilege('wxapp.banner/edit')): ?>
-                                                <a href="<?= url('wxapp.banner/edit', ['banner_id' => $item['banner_id']]) ?>">
+                                            <?php if (checkPrivilege('pc.banner/edit')): ?>
+                                                <a href="<?= url('pc.banner/edit', ['banner_id' => $item['banner_id']]) ?>">
                                                     <i class="am-icon-pencil"></i> 编辑
                                                 </a>
                                             <?php endif; ?>
-                                            <?php if (checkPrivilege('wxapp.banner/delete')): ?>
+                                            <?php if (checkPrivilege('pc.banner/delete')): ?>
                                                 <a href="javascript:void(0);"
                                                    class="item-delete tpl-table-black-operation-del"
                                                    data-id="<?= $item['banner_id'] ?>">
@@ -91,7 +93,7 @@
     $(function () {
 
         // 删除元素
-        var url = "<?= url('wxapp.banner/delete') ?>";
+        var url = "<?= url('pc.banner/delete') ?>";
         $('.item-delete').delete('banner_id', url, '删除后不可恢复，确定要删除吗？');
 
     });

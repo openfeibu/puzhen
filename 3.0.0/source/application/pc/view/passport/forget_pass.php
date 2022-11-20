@@ -12,6 +12,7 @@
             <div class="login-right fl">
                 <div class="login-tab"><a href="<?= url('passport/login') ?>"><?= lang('login') ?></a></div>
                 <div class="login-form">
+                    <?php if($think_lang=='zh-cn'):?>
                     <div class="login-form-tab">
                         <div class="login-form-tab-item active">
                             手机号找回
@@ -21,7 +22,14 @@
                         </div>
 
                     </div>
-                    <form action="" id="reg-form" class="reg-form-item" style="display: block;">
+                    <?php else:?>
+                        <div class="login-form-tab">
+                            <div class="login-form-tab-item active">
+                                <?= lang('email') ?>
+                            </div>
+                        </div>
+                    <?php endif;?>
+                    <form action="" id="reg-form" class="reg-form-item" <?php if($think_lang=='zh-cn'): ?>style="display: block;"<?php endif;?>>
                         <div class="form-input">
                             <input name="phone_number" type="text" placeholder="<?= lang('phone_number_empty') ?>" />
                         </div>
@@ -41,7 +49,7 @@
 
 
                     </form>
-                    <form action="" id="reg-form-email" class="reg-form-item">
+                    <form action="" id="reg-form-email" class="reg-form-item"  <?php if($think_lang=='en-us'): ?>style="display: block;"<?php endif;?>>
                         <div class="form-input">
                             <input name="email" type="text" placeholder="<?= lang('email_empty') ?>" />
                         </div>

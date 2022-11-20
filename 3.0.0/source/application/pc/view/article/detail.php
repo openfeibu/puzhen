@@ -4,7 +4,8 @@
 </div>
 <!-- 主体 -->
 <div class="main">
-    <?= $detail['article_content']; ?>
+    <?php if($detail): ?>
+    <?= $detail[$prefix.'article_content'] ?: $detail['article_content']; ?>
 
     <?php if($detail['article_id'] == 5):?>
     <div class="about-page w1400 container" style="margin-top: 0px;">
@@ -16,7 +17,7 @@
                 </div>
                 <div class="about-page-contact-test-address">
                     <p><?= lang('address'); ?></p>
-                    <span><?= $setting['store']['values']['address'];?></span>
+                    <span><?= $setting['store']['values'][$prefix.'address'] ?: $setting['store']['values']['address'];;?></span>
                 </div>
                 <div class="about-page-contact-test-phone">
                     <p><?= lang('tel'); ?></p>
@@ -32,5 +33,10 @@
             </div>
         </div>
     </div>
-    <?php endif;?>
+    <?php endif; ?>
+    <?php else: ?>
+        <div class="nodata">
+            <div class="test"><?= lang('nodata'); ?></div>
+        </div>
+    <?php endif; ?>
 </div>

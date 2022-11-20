@@ -1,6 +1,7 @@
 <?php
 
 namespace app\pc\controller;
+use app\pc\model\Banner as BannerModel;
 
 class Index extends Controller
 {
@@ -11,7 +12,10 @@ class Index extends Controller
 
     public function index()
     {
-        return $this->fetch('index');
+        $bannerModel = new BannerModel;
+        $pcBannerList = $bannerModel->getList('pc');
+        $mobileBannerList = $bannerModel->getList('mobile');
+        return $this->fetch('index',compact('pcBannerList','mobileBannerList'));
     }
 
 }

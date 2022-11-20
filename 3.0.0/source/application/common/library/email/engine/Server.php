@@ -6,6 +6,7 @@ use app\common\exception\BaseException;
 use PHPMailer\PHPMailer\PHPMailer; //这个是发邮件的类，引入进来
 use PHPMailer\PHPMailer\Exception; //这个是发邮件失败了，报出异常
 use app\common\library\helper;
+use think\Cookie;
 
 class Server
 {
@@ -31,7 +32,10 @@ class Server
      */
     public function send($msgType, $email, $templateParams)
     {
-        $body = str_replace_template($this->template[$msgType]['body'],$templateParams);
+        $prefix = Cookie::get('think_var') == 'zh-cn' ? '' : 'en_';
+        $body = $this->template[$msgType][$prefix.'body'] ?? $this->template[$msgType]['body'];
+        $subject = $this->template[$msgType][$prefix.'subject'] ?? $this->template[$msgType]['subject'];
+        $body = str_replace_template($body,$templateParams);
         $mail = new PHPMailer(true); //实例化加载这个类，如果说邮件发送失败了，可以抛出异常
         //开发环境下，是需要打开异常抛出的，实际情况下可以false关闭
         try {
@@ -50,7 +54,7 @@ class Server
             $mail->addAddress($email, $email);    //收件人，可以设置好几个
 
             $mail->isHTML(true);                                  // 设置电子邮件格式为HTML
-            $mail->Subject = $this->template[$msgType]['subject'];
+            $mail->Subject = $subject;
             $mail->Body    = $body;
             //  $mail->AltBody='发送错误';          //表示isHTML发送失败，就发送这个内容。
 

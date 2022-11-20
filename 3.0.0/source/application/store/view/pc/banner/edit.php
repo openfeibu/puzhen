@@ -39,21 +39,20 @@
                                 <div class="am-u-sm-9 am-u-end">
                                     <input type="text" class="tpl-form-input" name="banner[link]"
                                            placeholder="请输入链接" value="<?= $model['link'] ?>">
-                                    <small>如需填写小程序链接地址请参考<a href="<?= url('wxapp.page/links') ?>" target="_blank">页面链接</a></small>
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">链接类型 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">类型 </label>
                                 <div class="am-u-sm-9 am-u-end">
-            
                                     <label class="am-radio-inline">
-                                        <input type="radio" name="banner[link_type]" value="weapp" <?= $model['link_type'] == 'weapp' ? 'checked' : '' ?>>小程序
+                                        <input type="radio" name="banner[type]" value="pc" <?= $model['type'] == 'pc' ? 'checked' : '' ?>>电脑
                                     </label>
                                     <label class="am-radio-inline">
-                                        <input type="radio" name="banner[link_type]" value="web" <?= $model['link_type'] == 'web' ? 'checked' : '' ?>>网址
+                                        <input type="radio" name="banner[type]" value="mobile" <?= $model['type'] == 'mobile' ? 'checked' : '' ?> >手机
                                     </label>
                                 </div>
                             </div>
+
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">轮播图排序 </label>
                                 <div class="am-u-sm-9 am-u-end">

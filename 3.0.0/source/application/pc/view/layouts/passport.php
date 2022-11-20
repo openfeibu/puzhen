@@ -26,7 +26,7 @@
     <![endif]-->
     <script>
         BASE_URL = '<?= isset($base_url) ? $base_url : '' ?>';
-        STORE_URL = '<?= isset($store_url) ? $store_url : '' ?>';
+        PC_URL = '<?= isset($pc_url) ? $pc_url : '' ?>';
     </script>
 </head>
 <!--[if lte IE 9]>

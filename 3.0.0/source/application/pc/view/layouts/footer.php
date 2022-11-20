@@ -3,15 +3,21 @@
         <div class="container w1060 clearfix">
             <div class="footer-con-left col-lg-10 col-md-10 col-sm-12 col-xs-12 " >
                 <div class="footer-info">
-                    <p><?= lang('address') ?><?= lang(': ') ?><?= $setting['store']['values']['address'];?></p>
+                    <p><?= lang('address') ?><?= lang(': ') ?><?= $setting['store']['values'][$prefix.'address'] ?: $setting['store']['values']['address'];?></p>
                     <p><?= lang('tel') ?><?= lang(': ') ?><?= $setting['store']['values']['tel'];?></p>
-                    <p><?= $setting['store']['values']['right'];?></p>
-                    <p><a href="http://www.feibu.info" target="_blank">广州飞步信息科技有限公司</a> 提供技术支持</p>
+                    <p><?= $setting['store']['values'][$prefix.'right'] ?: $setting['store']['values']['right'];?></p>
+                    <p>
+                        <?php if($think_lang == 'en-us'): ?>
+                        <a href="http://www.feibu.info" target="_blank">Guangzhou Feibu Information Technology Co., LTD</a> Provide Technical Support
+                        <?php else: ?>
+                        <a href="http://www.feibu.info" target="_blank">广州飞步信息科技有限公司</a> 提供技术支持
+                        <?php endif; ?>
+                    </p>
                 </div>
                 <div class="footer-link">
-                    <a href="<?= url('/factory') ?>"><?= lang('factory_entrance') ?></a>
-                    <a href="#">DIY冲泡码</a>
-                    <a href="#"><?= lang('follow_us'); ?></a>
+                    <a href="<?= url('/factory'); ?>"><?= lang('factory_entrance') ?></a>
+                    <a href="<?=url('tea_qrcode/add'); ?>"><?= lang('diy_qrcode'); ?></a>
+                    <a href="<?= url('article/contact');?>"><?= lang('contact_us'); ?></a>
                 </div>
             </div>
             <div class="footer-con-right col-lg-2 col-md-2 col-sm-12 col-xs-12  ">
@@ -23,7 +29,7 @@
 
         </div>
         <div class="container footer-logo w1060">
-            <p><?= \app\common\model\Setting::getItem('pc',$wxapp_id)['name'] ?></p>
+            <p><?= $setting['pc']['values'][$prefix.'name'];?></p>
         </div>
     </div>
 
@@ -37,26 +43,19 @@
         </div>
 
         <ul>
-            <li class="active">
-                <a href="index.html">首页</a>
+
+            <li <?php if(request()->pathinfo() == 'pc/index/index' || request()->pathinfo() == '/'): ?> class="active" <?php endif;?>>
+                <a href="<?= $base_url ?? url('') ?>"><?= lang('home');?></a>
                 <div class="line transition "></div>
             </li>
-            <li>
-                <a href="list.html">产品中心</a>
 
+            <?php if(!empty($navList)): foreach ($navList as $key => $item): ?>
+            <li <?php if(request()->pathinfo() == 'pc/'.$item['url']): ?> class="active" <?php endif;?>>
+                <a href="<?= $pc_url.'/'.$item['url'] ?>"><?= $item['name'] ?></a>
             </li>
+            <?php endforeach; endif;?>
             <li>
-                <a href="news.html">资讯中心</a>
-            </li>
-
-            <li>
-                <a href="about.html">关于朴真</a>
-            </li>
-            <li>
-                <a href="contact.html"><?= lang('follow_us'); ?></a>
-            </li>
-            <li>
-                <a href="#">厂家登录</a>
+                <a href="<?= url('/factory') ?>"><?= lang('factory_entrance') ?></a>
             </li>
             <li>
                 <div class="nav-search fixed-nav-item-search"><?= lang('search'); ?></div>

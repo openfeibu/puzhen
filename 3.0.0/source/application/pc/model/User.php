@@ -65,7 +65,7 @@ class User extends UserModel
                 $accountType = 'phone_number';
             }elseif (isset($data['email']))
             {
-                $accountType = 'number';
+                $accountType = 'email';
             }else{
                 $this->error = lang($accountType.'_empty');
                 return false;
@@ -102,15 +102,16 @@ class User extends UserModel
             $this->allowField(true)->save([
                 $accountType => $data[$accountType],
                 'password' => fbshop_hash($data['password']),
-                'wxapp_id' =>  self::$wxapp_id ?: 10001
+                'wxapp_id' =>  self::$wxapp_id ?: 10001,
+                'avatarUrl' => default_avatar(),
             ]);
-
-            $this->commit();
             $user = self::useGlobalScope(false)->with(['wxapp'])->where([
                 'user_id' => $this['user_id']
             ])->find();
+            $user->save(['nickName' => default_nickname($this['user_id'])]);
             // 保存登录状态
             $this->loginState($user);
+            $this->commit();
             return true;
         } catch (\Exception $e) {
             $this->error = $e->getMessage();
@@ -180,7 +181,49 @@ class User extends UserModel
 
 
     }
+    public function wxWebLogin($userInfo)
+    {
+        $this->startTrans();
+        try {
+            $webAccount = UserWechatAccountModel::detail(['open_id' => $userInfo['open_id'],'type' => 'web']);
+            if($webAccount)
+            {
+                if(!$webAccount['user_id'] || !($user = self::detail(['user_id' => $webAccount['user_id']])))
+                {
+                    $user = $this->wxWebLoginRegister($userInfo);
+                }
+            }else{
+                $user = $this->wxWebLoginRegister($userInfo);
+            }
+            $webAccountModel = $webAccount ?: new UserWechatAccountModel();
+            $webAccountModel->allowField(true)->save(array_merge($userInfo, [
+                'wxapp_id' => self::$wxapp_id,
+                'type' => 'web',
+                'user_id' => $user['user_id'],
+            ]));
+            $this->loginState($user);
+            $this->commit();
+            return true;
+        }catch (\Exception $e){
+            var_dump($e->getMessage());exit;
+            return false;
+        }
 
+    }
+    private function wxWebLoginRegister($userInfo)
+    {
+        //查找是否存在小程序用户
+        $weappAccount = UserWechatAccountModel::detail(['union_id' => $userInfo['union_id'],'type' => 'weapp','user_id' => ['>','0']]);
+
+        if(!$weappAccount || !($user = self::detail(['user_id' => $weappAccount['user_id']]))){
+            //不存在，直接生成新账号
+            $user = $this;
+            $user->allowField(true)->save(array_merge($userInfo, [
+                'wxapp_id' => self::$wxapp_id,
+            ]));
+        }
+        return $user;
+    }
     /**
      * 获取登录用户信息
      * @param $user_name
@@ -412,10 +455,10 @@ class User extends UserModel
         Session::set('fbshop_pc', [
             'user' => [
                 'user_id' => $user['user_id'],
-                'phone_number' => $user['phone_number'],
-                'email' => $user['email'],
-                'avatarUrl' => $user['avatarUrl'],
-                'nickName' => $user['nickName'],
+                'phone_number' => $user['phone_number'] ?? '',
+                'email' => $user['email'] ?? '',
+                'avatarUrl' => $user['avatarUrl'] ?? '',
+                'nickName' => $user['nickName'] ?? '',
             ],
             'wxapp' => $wxapp->toArray(),
             'is_login' => true,

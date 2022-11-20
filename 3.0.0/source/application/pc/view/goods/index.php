@@ -11,17 +11,25 @@
         <div class="product-list-tab w1400 container">
             <ul class="clearfix">
                 <?php if (!empty($categoryList)): foreach ($categoryList as $first_key=> $first): ?>
-                <li <?php if($first_key == 0): ?>class="active"<?php endif;?> category_id="<?= $first['category_id'] ?>"><?= $first['name'] ?></li>
+                <li <?php if($first_key == 0): ?>class="active"<?php endif;?> category_id="<?= $first['category_id'] ?>"><?= $first[$prefix.'name'] ?: $first['name'] ?></li>
                 <?php endforeach; endif; ?>
             </ul>
 
             <?php if (!empty($categoryList)): foreach ($categoryList as $first_key => $first): ?>
             <ol class="clearfix" <?php if($first_key == 0): ?>style="display:block"<?php endif;?> >
                 <?php if (isset($first['child'])): foreach ($first['child'] as $two_key => $two): ?>
-                <li <?php if($two_key == 0): ?>class="active"<?php endif;?> category_id="<?= $two['category_id'] ?>"><?= $two['name'] ?></li>
+                <li <?php if($two_key == 0): ?>class="active"<?php endif;?> category_id="<?= $two['category_id'] ?>"><?= $two[$prefix.'name'] ?: $two['name'] ?></li>
                 <?php endforeach; endif; ?>
             </ol>
             <?php endforeach; endif; ?>
+
+        </div>
+        <?php else:?>
+        <div class="product-search container">
+            <form action="<?= url('goods/index') ?>">
+                <div class="product-search-form-input"><input type="text" placeholder="<?= lang('search_empty'); ?>" value="<?= $param['search']; ?>" name="search"></div>
+                <div class="product-search-form-submit"><button type="submit"><?= lang('search'); ?></button></div>
+            </form>
 
         </div>
         <?php endif;?>

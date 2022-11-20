@@ -14,15 +14,15 @@
             <div class="product-list-con-item  col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
 
                 <a href="<?= url('goods/detail&goods_id='.$item['goods_id']) ?>">
-                    <div class="img"><img class="transition500" src="<?= $item['goods_image'] ?>" alt="<?= $item['goods_name'] ?>"></div>
+                    <div class="img"><img class="transition500" src="<?= $item['goods_image'] ?>" alt="<?= $item[$prefix.'goods_name'] ?: $item['goods_name']; ?>"></div>
                     <div class="test">
                         <div class="test-title">
-                            <div class="name fb-overflow-1"><?= $item['goods_name'] ?></div>
+                            <div class="name fb-overflow-1"><?= $item[$prefix.'goods_name'] ?: $item['goods_name']; ?></div>
                             <div class="collection active"></div>
 
                         </div>
                         <div class="test-des fb-overflow-2">
-                            <?= $item['selling_point'] ?>
+                            <?= $item[$prefix.'selling_point'] ?: $item['selling_point']; ?>
                         </div>
                         <div class="test-bottom">
                             <?php if(isset($item['goods_tea_qrcode']['tea_qrcode']) && $item['goods_tea_qrcode']['tea_qrcode']): ?>
@@ -44,8 +44,10 @@
                     </div>
                 </a>
             </div>
-            <?php endforeach; ?>
-
+            <?php endforeach; else: ?>
+                <div class="nodata">
+                    <div class="test"><?= lang('nodata'); ?></div>
+                </div>
             <?php endif; ?>
         </div>
         <div class="pagination-box">

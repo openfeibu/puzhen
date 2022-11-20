@@ -15,10 +15,17 @@
         </div>
         <div class="set-list w1400 clearfix">
             <div class="set-list-item clearfix">
+                <div class="set-label fl"><?= lang('avatar');?><?= lang(':') ?></div>
+                <div class="set-con fl"><img src="<?= $user['avatarUrl'];?>" alt="" class="avatarUrl"></div>
+                <div class="set-btn fr j-upload" ><?= lang('edit'); ?></div>
+            </div>
+
+            <div class="set-list-item clearfix">
                 <div class="set-label fl"><?= lang('username') ?><?= lang(':') ?></div>
                 <div class="set-con fl"><?= $user['nickName'] ?></div>
                 <div class="set-btn fr" onclick="$('.update-box-nickname').fadeIn(200)"><?= lang('edit') ?></div>
             </div>
+            <?php if($think_lang=='zh-cn'): ?>
             <div class="set-list-item clearfix">
                 <div class="set-label fl"><?= lang('bind_phone_number') ?><?= lang(':') ?></div>
                 <?php if($user['phone_number']): ?>
@@ -28,6 +35,7 @@
                 <div class="set-btn fr" onclick="$('.update-box-phone').fadeIn(200)"><?= lang('bind') ?></div>
                 <?php endif;?>
             </div>
+            <?php endif;?>
             <div class="set-list-item clearfix">
                 <div class="set-label fl"><?= lang('bind_email') ?><?= lang(':') ?></div>
                 <?php if($user['email']): ?>
@@ -185,7 +193,7 @@
     </div>
 </div>
 
-
+<script src="assets/common/js/webuploader.html5only.js"></script>
 <script>
     let url = "<?= url('user/renew')?>";
     function changeName(){
@@ -345,7 +353,96 @@
         $(".update-box-form-close").on("click",function(){
             $(this).parents(".update-box").fadeOut(200)
         })
+        var _this = this;
+        var loadIndex = null;
+        // 文件大小
+        var maxSize = 10;
+        // 初始化Web Uploader
+        var uploader = WebUploader.create({
+            // 选完文件后，是否自动上传。
+            auto: true,
+            // 文件接收服务端。
+            server: PC_URL + '/upload/image',
+            // 选择文件的按钮。可选。
+            // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+            pick: {
+                id: '.j-upload',
+                multiple: true
+            },
+            // 文件上传域的name
+            fileVal: 'iFile',
+            // 图片上传前不进行压缩
+            compress: false,
+            // 允许重复
+            duplicate: true,
+            // 文件总数量
+            // fileNumLimit: 10,
+            // 文件大小2m => 2097152
+            fileSingleSizeLimit: maxSize * 1024 * 1024,
+            // 只允许选择图片文件。
+            accept: {
+                title: 'Images',
+                extensions: 'gif,jpg,jpeg,bmp,png',
+                mimeTypes: 'image/*'
+            },
+            // 文件上传header扩展
+            headers: {
+                'Accept': 'application/json, text/javascript, */*; q=0.01',
+                'X-Requested-With': 'XMLHttpRequest'
+            }
+        });
+        //  验证大小
+        uploader.on('error', function (type) {
+            if (type === 'F_DUPLICATE') {
+                console.log('请不要重复选择文件！');
+            } else if (type === 'F_EXCEED_SIZE') {
+                alert('文件大小不可超过' + maxSize + 'm 哦！换个小点的文件吧！');
+            }
+        });
+        // 文件上传前触发,添加附带参数
+        uploader.on('uploadBeforeSend', function (obj, data) {
+            data.group_id = 0;
+            load = layer.load();
+        });
+        // 文件上传成功，给item添加成功class, 用样式标记上传成功。
+        uploader.on('uploadSuccess', function (file, response) {
+            if (response.code === 1) {
+                console.log(response.data.file_path);
 
+                $.ajax({
+                    url: url,
+                    type: 'post',
+                    data:{'type':'info','avatarUrl':response.data.file_path},
+                    success: function(data) { // data 保存提交后返回的数据，一般为 json 数据
+                        layer.close(load);
+                        if (data.code === 1) {
+                            layer.msg(data.msg);
+                            $(".avatarUrl").attr('src',response.data.file_path);
+                            return true;
+                        }
+                        layer.msg(data.msg);
+                    }
+                })
+            } else {
+                uploader.uploadError(file, response);
+            }
+        });
+        // 监听文件上传失败
+        uploader.on('uploadError', function (file, reason) {
+            uploader.uploadError(file, reason);
+        });
+        // 文件上传失败回调函数
+        uploader.uploadError = function (file, reason) {
+            layer.msg(reason.msg, {anim: 6});
+        };
+        // 文件开始上传
+        uploader.on('startUpload', function () {
+            loadIndex = layer.load();
+        });
+        // 文件上传结束
+        uploader.on('uploadFinished', function () {
+            layer.close(loadIndex);
+        });
     })
 
 

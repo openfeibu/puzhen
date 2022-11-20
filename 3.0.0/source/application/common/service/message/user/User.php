@@ -5,6 +5,7 @@ namespace app\common\service\message\user;
 use app\common\service\message\Basics;
 use app\common\model\Setting as SettingModel;
 use app\store\model\Setting;
+use think\Cookie;
 use think\Log;
 use think\Session;
 use app\common\exception\BaseException;
@@ -44,7 +45,8 @@ class User extends Basics
     {
         $wxappId = $this->param['wxapp_id'];
         $pcSetting = Setting::getItem('pc', $wxappId);
-        $this->param['product'] = $this->param['product'] ?? $pcSetting['name'];
+        $prefix = Cookie::get('think_var') == 'zh-cn' ? '' : 'en_';
+        $this->param['product'] = $this->param['product'] ?? ($pcSetting[$prefix.'name'] ?? $pcSetting['name']);
 
         if(isset($this->param['phone_numbers']) || isset($this->param['phone_number']))
         {
@@ -58,7 +60,7 @@ class User extends Basics
         }
         $seTime = time() - Session::get($account.'SMSLimit');
         if (Session::get($account.'SMSLimit') and ($seTime <= 60)) {
-            //throw new RequestTooFrequentException(['msg' => (60-$seTime)]);
+            throw new RequestTooFrequentException(['msg' => (60-$seTime)]);
         }
 
         $code = rand(1000, 9999);

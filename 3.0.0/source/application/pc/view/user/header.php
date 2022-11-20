@@ -1,6 +1,6 @@
 <div class="user-info w1400 container clearfix">
     <div class="user-info-left">
-        <div class="img"><img src="<?= $user['avatarUrl'] ?>" alt="" /></div>
+        <div class="img"><img src="<?= $user['avatarUrl'] ?>" alt="" class="avatarUrl" /></div>
         <div class="text">
             <div class="name"><?= $user['nickName'] ?></div>
             <div class="con">

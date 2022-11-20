@@ -41,6 +41,15 @@ class Article extends ArticleModel
     {
         return htmlspecialchars_decode($value);
     }
+    /**
+     * 文章详情：HTML实体转换回普通字符
+     * @param $value
+     * @return string
+     */
+    public function getEnArticleContentAttr($value)
+    {
+        return htmlspecialchars_decode($value);
+    }
 
     public function getViewTimeAttr($value, $data)
     {
