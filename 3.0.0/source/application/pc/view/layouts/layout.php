@@ -48,9 +48,10 @@
     <button type="button" class="close" aria-label="Close" data-dismiss="alert">
         <span>×</span>
     </button>
-    你正在使用一个 <strong>过时</strong> 的浏览器。请 <a href=https://browsehappy.com/ target=_blank>升级您的浏览器</a>，以提高您的体验。</div>
+    <?= lang('low_browser_version'); ?>
+</div>
 <![endif]-->
-<body>
+<body <?php if($think_lang=='en-us'): ?> class="body-en" <?php endif; ?> >
 
 <!-- 头部 -->
 {{include file="layouts/header" /}}

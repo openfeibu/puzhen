@@ -24,7 +24,7 @@
         </div>
         <?php else:?>
         <div class="product-search container">
-            <form action="<?= url('goods/index') ?>">
+            <form action="<?= url('goods/index') ?>" method="post">
                 <div class="product-search-form-input"><input type="text" placeholder="<?= lang('search_empty'); ?>" value="<?= $param['search']; ?>" name="search"></div>
                 <div class="product-search-form-submit"><button type="submit"><?= lang('search'); ?></button></div>
             </form>

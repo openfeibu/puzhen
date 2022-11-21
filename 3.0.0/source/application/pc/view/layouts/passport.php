@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
     <meta name="format-detection" content="telephone=no">
-    <title>佛山朴真茶业有限公司</title>
-    <meta name="description" content="佛山朴真茶业有限公司">
-    <meta name="keywords" content="佛山朴真茶业有限公司">
+    <title><?= $setting['pc']['values'][$prefix.'name'] ?: $setting['pc']['values']['name'];?></title>
+    <meta name="description" content="<?= $setting['pc']['values'][$prefix.'name'] ?: $setting['pc']['values']['name'];?>">
+    <meta name="keywords" content="<?= $setting['pc']['values'][$prefix.'name'] ?: $setting['pc']['values']['name'];?>">
     <link rel="icon" type="image/png" href="assets/common/i/favicon.ico"/>
     <link rel="stylesheet" type="text/css" href="assets/pc/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/pc/css/fb-main.css">
@@ -34,9 +34,10 @@
     <button type="button" class="close" aria-label="Close" data-dismiss="alert">
         <span>×</span>
     </button>
-    你正在使用一个 <strong>过时</strong> 的浏览器。请 <a href=https://browsehappy.com/ target=_blank>升级您的浏览器</a>，以提高您的体验。</div>
+    <?= lang('low_browser_version'); ?>
+</div>
 <![endif]-->
-<body>
+<body <?php if($think_lang=='en-us'): ?> class="body-en" <?php endif; ?>>
 <!-- 头部 -->
 {{include file="layouts/header" /}}
 <!-- 主体 -->
