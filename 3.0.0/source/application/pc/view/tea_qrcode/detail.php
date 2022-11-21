@@ -23,9 +23,9 @@
                                             'sn' =>$k+1,
                                         'temperature' => $temperature,
                                         'seconds' => $detail['data']['seconds_arr'][$k] ?? '' ,
-                                        'frequency_unit' => $teaConfig['frequency']['unit'] ,
-                                        'temperature_unit' => $teaConfig['temperature']['unit'] ,
-                                        'seconds_unit' => $teaConfig['seconds']['unit']])?>
+                                        'frequency_unit' => $teaConfig['frequency'][$prefix.'unit'] ,
+                                        'temperature_unit' => $teaConfig['temperature'][$prefix.'unit'] ,
+                                        'seconds_unit' => $teaConfig['seconds'][$prefix.'unit']])?>
                                 </div>
                             <?php endforeach;?>
 

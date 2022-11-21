@@ -72,15 +72,28 @@ class TeaQrCode
     }
     public function generateDetailQrCode()
     {
+        $bg_width = 1200;
+        //文字切割换行
+        $nameArr = utf8_str_split($this->post['name'],15);
+        $source_height = 200 - (count($nameArr)-1) * 40;
         //背景图片
-        $source = WEB_PATH.'assets/common/i/bg_code_style_1_600.jpg';
+        $source = WEB_PATH.'assets/common/i/bg_code_style_1_1200.jpg';
         $codeImg = new QrCodeService();
-        $codeImg->generateImg($source,$this->detail_image, $this->file, $source_width = 200, $source_height= 100, $code_width = 200, $code_height = 200);
+        $code_width = 600;
+        $code_height = 600;
+        $codeImg->generateImg($source,$this->detail_image, $this->file, $source_width = 300, $source_height, $code_width, $code_height);
         //新文件
         $text_file = WEB_PATH.'uploads'.$this->directory.DIRECTORY_SEPARATOR.$this->detail_image_name;
         $font = WEB_PATH.'/assets/common/fonts/SourceHanSerif-Medium.ttc';
-        $codeImg->generateFont($text_file,$this->detail_image, $this->post['name'], $text_width=200, $text_height=400,$font_size = 34, $cate1 = 0, $cate2 = 0, $cate3 = 0, $font);
-        $codeImg->generateFont($text_file,$this->detail_image,$this->text, $text_width=200, $text_height=450,$font_size = 20, $cate1 = 0, $cate2 = 0, $cate3 = 0, $font);
+
+        $nameArr = utf8_str_split($this->post['name'],15);
+        $text_height = $code_height + $source_height + 100;
+        foreach ($nameArr as $k => $name)
+        {
+            $codeImg->generateFont($text_file,$this->detail_image, $name, $text_width=200, $text_height,$font_size = 54, $cate1 = 0, $cate2 = 0, $cate3 = 0, $font);
+            $text_height += 80;
+        }
+        $codeImg->generateFont($text_file,$this->detail_image,$this->text, $text_width=200, $text_height,$font_size = 40, $cate1 = 0, $cate2 = 0, $cate3 = 0, $font);
 
     }
 
