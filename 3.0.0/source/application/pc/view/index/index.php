@@ -34,7 +34,7 @@
                 </div>
                 <div class="bagua-diy-test pull-left">
                     <?= lang('home_text_1');?>
-                    <a class="bagua-diy-more " href="#<?= url('tea_qrcode/add');?>">
+                    <a class="bagua-diy-more " href="<?= url('tea_qrcode/add');?>">
                         <?= lang('learn_more'); ?>>
                     </a>
                 </div>
