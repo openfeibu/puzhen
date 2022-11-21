@@ -27,6 +27,8 @@
     <script>
         BASE_URL = '<?= isset($base_url) ? $base_url : '' ?>';
         PC_URL = '<?= isset($pc_url) ? $pc_url : '' ?>';
+        lang_arr = <?= $lang_arr ?>;
+        pc_root = BASE_URL + 'index.php?s=/pc/';
     </script>
 </head>
 <!--[if lte IE 9]>
