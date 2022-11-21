@@ -161,4 +161,6 @@ return [
     'home_text_2' =>'<p>Original QR code make tea technology</p><p>Easy to use</p> <p>Good tea can be easily made</p>',
     'home_text_3' => 'PuZhen insists on making products that work well and are made from real materials.',
     'home_text_4' => 'Puzhen adheres to the principle of simple and sincere, insisting on the production of easy to use and real products, focusing on technology to make tea drinking complex to simple, to provide a relaxed and pleasant tea environment.',
+
+    'low_browser_version' => '你正在使用一个 <strong>过时</strong> 的浏览器。请 <a href=https://browsehappy.com/ target=_blank>升级您的浏览器</a>，以提高您的体验',
 ];

@@ -1,12 +1,9 @@
 <!-- 轮播图 -->
-<div class="min-banner">
-    <img src="assets/pc/images//banner2.png" alt="">
-</div>
+{{include file="layouts/banner" /}}
 <!-- 主体 -->
 <div class="main">
     <?php if($detail): ?>
     <?= $detail[$prefix.'article_content'] ?: $detail['article_content']; ?>
-
     <?php if($detail['article_id'] == 5):?>
     <div class="about-page w1400 container" style="margin-top: 0px;">
         <div class="about-page-contact clearfix">

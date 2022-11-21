@@ -1,8 +1,6 @@
 
 <!-- 轮播图 -->
-<div class="min-banner">
-    <img src="assets/pc/images/banner2.png" alt="">
-</div>
+{{include file="layouts/banner" /}}
 
 <div class="main">
     <!-- 列表 -->

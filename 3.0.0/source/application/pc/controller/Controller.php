@@ -91,6 +91,12 @@ class Controller extends \think\Controller
         $this->assign('think_lang',$think_lang);
         $this->assign('wxapp_id', $this->wxapp_id);
         $this->assign('lang_arr', json_encode(Lang::get()));
+
+        $pathinfo = request()->pathinfo();
+        $navModel = new NavModel;
+        $link = str_replace('pc/','',$pathinfo);
+        $current_nav =  $navModel->with(['image'])->where('url',$link)->find();
+        $this->assign('currentNav', $current_nav);
     }
 
     /**
