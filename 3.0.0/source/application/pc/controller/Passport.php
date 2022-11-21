@@ -45,7 +45,7 @@ class Passport extends Controller
 
         $WxQrLogin = new WxQrLogin;
         $state = $WxQrLogin->getState();
-        $weixinLoginRedirectUrl = 'http://www.fspuzhen.cn/index.php?s=/pc/passport/wx_web_login';
+        $weixinLoginRedirectUrl = config('web_domain').'index.php?s=/pc/passport/wx_web_login';
 
         return $this->fetch('login',compact('state','weixinLoginRedirectUrl'));
     }
@@ -74,7 +74,7 @@ class Passport extends Controller
         }
         $WxQrLogin = new WxQrLogin;
         $state = $WxQrLogin->getState();
-        $weixinLoginRedirectUrl = 'http://www.fspuzhen.cn/index.php?s=/pc/passport/wx_web_login';
+        $weixinLoginRedirectUrl = config('web_domain').'index.php?s=/pc/passport/wx_web_login';
 
 
         $privacyPolicy = ArticleModel::detail(4);
@@ -106,7 +106,7 @@ class Passport extends Controller
             return redirect('user/index');
         }
         $state = $WxQrLogin->getState();
-        $weixinLoginRedirectUrl = 'http://www.fspuzhen.cn/index.php?s=/pc/passport/register_weixin_web_bind';
+        $weixinLoginRedirectUrl = config('web_domain').'index.php?s=/pc/passport/register_weixin_web_bind';
 
         return $this->fetch('register_weixin_web_bind',compact('state','weixinLoginRedirectUrl'));
 

@@ -238,4 +238,6 @@ return [
         'var_page' => 'page',
         'list_rows' => 15,
     ],
+
+    'web_domain' => 'http://www.prozen.cn/',
 ];
