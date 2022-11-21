@@ -167,4 +167,8 @@ return [
 
     'select_files_repeatedly' => '请不要重复选择文件！',
     'file_large' => '文件大小不可超过',
+
+    'no.' => '第',
+    'no.temp' => '泡温度',
+    'no.seconds' => '泡秒数',
 ];

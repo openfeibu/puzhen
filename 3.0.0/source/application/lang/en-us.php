@@ -49,12 +49,12 @@ return [
     'learn_more' => 'More',
     'reference_retail_price' => 'Reference Retail Price',
     'generate_tea_qrcode' => 'Generate',
-    'tea_qrcode_name' => 'Tea Qr Code Name',
+    'tea_qrcode_name' => 'Tea Name',
     'tea_qrcode_name_empty' => 'Please enter the name of tea QR Code',
     'tea_qrcode_detail' => 'Tea Detail',
     'tea_qrcode_detail_list_show' => 'No.{:sn}：{:temperature}{:temperature_unit}，{:seconds}{:seconds_unit}；',
     'teas' => 'Teas',
-    'my_tea_qrcode' => 'My Tea QR Code',
+    'my_tea_qrcode' => 'My QR Code',
 
     'official_qrcode' => 'official_qrcode',//Official QR Code
     'puzhen_recommend' => 'PuZhen Recommend',
@@ -168,4 +168,7 @@ return [
 
     'select_files_repeatedly' => 'Please do not select files repeatedly',
     'file_large' => 'The file size cannot exceed',
+    'no.' => 'No.',
+    'no.temp' => ' Temp',
+    'no.seconds' => ' S',
 ];
