@@ -47,7 +47,7 @@ return [
     'to_make_tea' => 'Make Tea',
     'make_tea_way' => 'Tea',
     'learn_more' => 'More',
-    'reference_retail_price' => 'Reference Retail Price',
+    'reference_retail_price' => 'Reference Price',
     'generate_tea_qrcode' => 'Generate',
     'tea_qrcode_name' => 'Tea Name',
     'tea_qrcode_name_empty' => 'Please enter the name of tea QR Code',

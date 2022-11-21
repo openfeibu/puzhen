@@ -11,7 +11,11 @@
             <div class="product-list-con-item  col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
 
                 <a href="<?= url('goods/detail&goods_id='.$item['goods_id']) ?>">
-                    <div class="img"><img class="transition500" src="<?= $item['goods_image'] ?>" alt="<?= $item[$prefix.'goods_name'] ?: $item['goods_name']; ?>"></div>
+                    <div class="img">
+						
+						<div class="imgPic transition500" style="background:url(<?= $item['goods_image'] ?>) no-repeat center/cover"></div>
+						<img  src="assets/pc/images/proBg.png" alt="<?= $item['goods_image'] ?>">
+					</div>
                     <div class="test">
                         <div class="test-title">
                             <div class="name fb-overflow-1"><?= $item[$prefix.'goods_name'] ?: $item['goods_name']; ?></div>
