@@ -11,7 +11,10 @@
                     <div class="swiper-wrapper">
                         <?php if (!empty($detail['image'])): foreach ($detail['image'] as $image): ?>
                         <div class="swiper-slide">
-                            <a href="#"><img src="<?= $image['file_path'] ?>" width="100%"></a>
+                           <div class="imgPic transition500" style="background:url(<?= $image['file_path'] ?>) no-repeat center/cover"></div>
+							<img  src="assets/pc/images/proBg.png" width="100%" alt="">
+							
+							
                         </div>
                         <?php endforeach; endif; ?>
                     </div>
@@ -34,7 +37,7 @@
             </div>
         </div>
         <div class="product-detail-bottom clearfix ">
-            <div class="product-detail-right col-lg-3 col-md-3">
+            <div class="product-detail-right col-lg-3 col-md-4 col-sm-12">
                 <?php if(isset($detail['goods_tea_qrcode']['tea_qrcode']) && $detail['goods_tea_qrcode']['tea_qrcode']): ?>
                 <div class="official-code">
                     <div class="con-title"><?= lang('official_qrcode') ?></div>
@@ -47,7 +50,12 @@
                         <?php if (!$recommend_list->isEmpty()): foreach ($recommend_list as $item): ?>
                         <li>
                             <a href="<?= url('goods/detail&goods_id='.$item['goods_id']) ?>">
-                                <div class="img fb-inline-block"><img src="<?= $item['goods_image'] ?>" alt=""></div>
+                                <div class="img fb-inline-block">
+									 <div class="imgPic transition500" style="background:url(<?= $item['goods_image'] ?>) no-repeat center/cover"></div>
+									<img  src="assets/pc/images/proBg.png" width="100%" alt="">
+								 
+								   
+								</div>
                                 <div class="test fb-inline-block">
                                     <div class="name fb-overflow-1"><?= $item[$prefix.'goods_name'] ?: $item['goods_name']; ?></div>
                                     <div class="des fb-overflow-2"><?= $item[$prefix.'selling_point'] ?: $item['selling_point']; ?></div>
@@ -61,7 +69,7 @@
                 </div>
 
             </div>
-            <div class="product-detail-con nopadding col-lg-9 col-md-9">
+            <div class="product-detail-con nopadding col-lg-9 col-md-8 col-sm-12 ">
                 <?= $detail[$prefix.'content'] ?: $detail['content'] ?>
             </div>
 
