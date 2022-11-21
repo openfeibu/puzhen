@@ -394,9 +394,9 @@
         //  验证大小
         uploader.on('error', function (type) {
             if (type === 'F_DUPLICATE') {
-                console.log('请不要重复选择文件！');
+                console.log("<?= lang('select_files_repeatedly')?>");
             } else if (type === 'F_EXCEED_SIZE') {
-                alert('文件大小不可超过' + maxSize + 'm 哦！换个小点的文件吧！');
+                layer.msg("<?= lang('file_large');?>" + maxSize + ' m');
             }
         });
         // 文件上传前触发,添加附带参数

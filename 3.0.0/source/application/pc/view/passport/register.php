@@ -116,7 +116,7 @@
                 },
                 check: {
                     required: function(){
-                        fb_alert("请先同意 用户协议 和 隐私政策")
+                        layer.msg("<?= lang('select_agreement_policy'); ?>")
                     }
 
                 },
@@ -168,7 +168,7 @@
                 },
                 check: {
                     required: function(){
-                        fb_alert("请先同意 用户协议 和 隐私政策")
+                        layer.msg("<?= lang('select_agreement_policy'); ?>")
                     }
 
                 },

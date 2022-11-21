@@ -162,4 +162,9 @@ return [
     'home_text_4' => '朴真秉持朴实真诚的原则，坚持制作好用且真材实料的产品，专注与通过科技为饮茶人化繁为简，提供轻松愉悦的用茶环境。',
 
     'low_browser_version' => '你正在使用一个 <strong>过时</strong> 的浏览器。请 <a href=https://browsehappy.com/ target=_blank>升级您的浏览器</a>，以提高您的体验',
+
+    'select_agreement_policy' => '请先同意 用户协议 和 隐私政策',
+
+    'select_files_repeatedly' => '请不要重复选择文件！',
+    'file_large' => '文件大小不可超过',
 ];

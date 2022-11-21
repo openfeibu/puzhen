@@ -51,7 +51,7 @@
 
             <?php if(!empty($navList)): foreach ($navList as $key => $item): ?>
             <li <?php if(request()->pathinfo() == 'pc/'.$item['url']): ?> class="active" <?php endif;?>>
-                <a href="<?= $pc_url.'/'.$item['url'] ?>"><?= $item['name'] ?></a>
+                <a href="<?= $pc_url.'/'.$item['url'] ?>"><?= $item[$prefix.'name'] ?: $item['name'] ?></a>
             </li>
             <?php endforeach; endif;?>
             <li>
