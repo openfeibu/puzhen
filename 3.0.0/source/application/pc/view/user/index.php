@@ -19,7 +19,7 @@
                             <div class="test-code clearfix">
                                 <div class="test-code-l fl">
                                     <div class="n fb-overflow-1"><?= $item['name'] ?></div>
-                                    <div class="c"><?= $item['data'][$prefix.'tea_name'] ?: $item['data']['tea_name']; ?> · <?= $item['data']['weight'] ?><?= lang('g')?> · <?= $item['data']['number'] ?><?= lang('tea.number')?></div>
+                                    <div class="c"><?= $item['data'][$prefix.'tea_name'] ?: $item['data']['tea_name']; ?> · <?= $item['data']['weight'] ?><?= lang('g')?> · <?= $item['data']['number'] ?><?= lang('tea.times')?></div>
                                 </div>
                                 <div class="test-code-r fr"><?= lang('to_make_tea')?></div>
                             </div>
