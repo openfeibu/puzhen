@@ -238,8 +238,15 @@ class Lang
             Cookie::set(self::$langCookieVar, $langSet, 3600);
         } elseif (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
             // 自动侦测浏览器语言
-            preg_match('/^([a-z\d\-]+)/i', $_SERVER['HTTP_ACCEPT_LANGUAGE'], $matches);
-            $langSet = strtolower($matches[1]);
+            //preg_match('/^([a-z\d\-]+)/i', $_SERVER['HTTP_ACCEPT_LANGUAGE'], $matches);
+            //$langSet = strtolower($matches[1]);
+            $lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 4);
+            if (preg_match("/zh/", $lang))
+            {
+                $langSet = 'zh-cn';
+            }else{
+                $langSet = 'en-us';
+            }
             Cookie::set(self::$langCookieVar, $langSet, 3600);
         }
         if (empty(self::$allowLangList) || in_array($langSet, self::$allowLangList)) {
