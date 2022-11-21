@@ -34,7 +34,7 @@
                 </div>
                 <div class="bagua-diy-test pull-left">
                     <?= lang('home_text_1');?>
-                    <a class="bagua-diy-more " href="#">
+                    <a class="bagua-diy-more " href="#<?= url('tea_qrcode/add');?>">
                         <?= lang('learn_more'); ?>>
                     </a>
                 </div>
@@ -44,7 +44,7 @@
 
                 <div class="bagua-tuijian-test pull-left">
                     <?= lang('home_text_2');?>
-                    <a class="bagua-tuijian-more " href="#">
+                    <a class="bagua-tuijian-more " href="<?= url('goods/index');?>">
                         <?= lang('learn_more'); ?>>
                     </a>
                 </div>
