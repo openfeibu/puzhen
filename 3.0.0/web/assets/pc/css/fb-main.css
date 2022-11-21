@@ -209,7 +209,7 @@ header .nav ul li dl dd a:hover{color: #bf0123 !important;} */
     cursor: pointer;
     height: 50px;
     line-height: 50px;
-    padding-left: 15px;
+    padding: 0 5px 0 20px;
     margin:0 10px 0 0;
 }
 .product-list-tab ul li a{color: #000;display: block;}
@@ -238,6 +238,7 @@ header .nav ul li dl dd a:hover{color: #bf0123 !important;} */
     height: 40px;
     line-height: 40px;
     margin:0 10px 0 0;
+	padding:0 10px;
 }
 .product-list-tab ul li:hover{
     color: #bf0123;
@@ -246,7 +247,7 @@ header .nav ul li dl dd a:hover{color: #bf0123 !important;} */
     color: #bf0123;
 }
 .product-list-tab ol li.active{
-    background: url(../images/tab_bg2.png) no-repeat center /auto 38px;
+    background: url(../images/tab_bg2.png) no-repeat center /100% 100%;
     color: #fff;
 }
 .product-list-con{
@@ -327,6 +328,9 @@ header .nav ul li dl dd a:hover{color: #bf0123 !important;} */
 .product-detail{margin: 32px auto;}
 .product-detail-top{vertical-align: middle;}
 .product-detail-top .pro-img{width: 425px;height: 425px;vertical-align: middle;}
+.product-detail-top .swiper-slide{position:relative;}
+	
+.product-detail-top .imgPic{position:absolute;width:100%;height:100%}
 .product-detail-top .pro-test{margin-left: 85px;width: 850px;}
 .product-detail-top .pro-test .name{font-size: 32px;color: #1E1E1E;}
 .product-detail-top .pro-test .des{font-size: 16px;line-height: 26px;color: #666;margin: 20px 0;min-height: 104px;}
@@ -354,13 +358,15 @@ header .nav ul li dl dd a:hover{color: #bf0123 !important;} */
 .product-detail-con img{width: 100%;}
 .product-detail-right{float: right;}
 .product-detail-right .con-title{font-size: 18px;color: #333;line-height: 36px;height: 36px;border-bottom: 1px solid #C0B7AA;}
-.product-detail-right .recommended{}
+.product-detail-right .recommended .img{position:relative;}
+.product-detail-right .recommended .imgPic{position:absolute;width:100%;height:100%}
 .product-detail-right .recommended ul{margin-top: 20px;}
 .product-detail-right .recommended ul li{margin-bottom: 20px;}
 .product-detail-right .recommended ul li .img{width: 30%;vertical-align: middle;}
-.product-detail-right .recommended ul li .test{width: 65%;vertical-align: middle;margin-left: 4%;}
+.product-detail-right .recommended ul li .test{width: 65%;vertical-align: middle;margin-left: 3%;}
 .product-detail-right .recommended ul li .test .name{font-size: 18px;color: #333;line-height: 24px;}
 .product-detail-right .recommended ul li .test .des{font-size: 14px;color: #666;line-height: 20px;margin-top: 10px;}
+.product-detail-right .recommended ul li:hover .name{color:#B90324}
 .official-code-img{margin: 20px 0;}
 /* 搜索 */
 .fixed-search{position: fixed;width: 100%;height: 100%;top: 0;left: 0;background: rgba(0,0,0,0.7);z-index: 100000;display: none;}
@@ -721,6 +727,7 @@ header .nav ul li dl dd a:hover{color: #bf0123 !important;} */
 
     /* 详情页 */
     .product-detail-top .pro-img{width: 380px;height: 380px;vertical-align: middle;}
+	
     .product-detail-top .pro-test{margin-left: 85px;width:650px;}
     .product-detail-top .pro-test .name{font-size: 30px;color: #1E1E1E;}
     .product-detail-right .recommended ul li .test{margin-left: 3%;}
@@ -880,13 +887,15 @@ header .nav ul li dl dd a:hover{color: #bf0123 !important;} */
 
 
     /* 八卦 */
-    .bagua{width: 81.5%;margin: 0.4rem auto;position: relative}
+    .bagua{width: 90%;margin: 0.4rem auto;position: relative}
 
     .bagua .bagua-diy-title{width: 1.15rem;height: 1.15rem;background: url(../images/yuanBg.png) no-repeat center/100% 100%;text-align: center;margin-left: 40%;margin-top: 10%;}
     .bagua .bagua-diy-title p{display: inline-block;vertical-align: middle;color: #fff;font-size: 0.32rem;line-height: 0.4rem;}
     .bagua .bagua-diy-title p a{color: #fff;}
     .bagua .bagua-diy-title::after{content: "1";display: inline-block;vertical-align: middle;line-height: 1.15rem;opacity: 0;font-size: 0;}
     .bagua-diy-test{font-size: 0.22rem;color: #fff;margin-top: 1.5rem;line-height: 0.32rem;margin-left: 1%;}
+	.bagua-diy .bagua-diy-test{width:40%;margin-left:0;}
+	.bagua-diy  .bagua-diy-title{margin-left:40%}
     .bagua-diy-more{display: block;color: #fff;font-size: 0.22rem;margin-top: 0.15rem;}
 
 
@@ -902,7 +911,7 @@ header .nav ul li dl dd a:hover{color: #bf0123 !important;} */
     .producCenter{width: 92%;max-width: 100%;margin:-0.8rem 0.3rem 0.3rem 0.3rem;position: relative}
     .producCenter > img{width: 100%;}
     .producCenter-test{position: absolute;bottom: 0.2rem;left: 0.2rem;}
-    .producCenter-test-t{font-size: 0.3rem;color: #000;}
+    .producCenter-test-t{font-size: 0.4rem;color: #000;}
     .producCenter-test-des{font-size: 0.24rem;color: #000;}
     .producCenter-test-more{height: 0.3rem;background: url(../images/more.png)no-repeat left center /auto 100%;margin-top: 0.1rem;}
     .producCenter-test-more a{padding-left: 0.4rem;line-height: 0.3rem;font-size: 0.24rem;}
@@ -932,12 +941,14 @@ header .nav ul li dl dd a:hover{color: #bf0123 !important;} */
     height: 0.5rem;
     line-height: 0.5rem;
     padding-left: 0.15rem;
+	padding:0 0.05rem 0 0.25rem;
     margin: 0.1rem ;
 }
 
 
 .product-list-tab ol {
     margin-top: 0.3rem;
+	background:rgba(255,255,255,0.3)
   
 }
 .product-list-tab ol li{
@@ -946,12 +957,13 @@ header .nav ul li dl dd a:hover{color: #bf0123 !important;} */
     height: 0.5rem;
     line-height: 0.5rem;
     margin:0.1rem ;
+	padding:0 0.2rem;
 }
 .product-list-tab ul li:hover{
     color: #bf0123;
 }
 .product-list-tab ol li.active{
-    background: url(../images/tab_bg2.png) no-repeat center /auto 0.48rem;
+  
     color: #fff;
 }
 .product-list-con{
@@ -1064,7 +1076,7 @@ header .nav ul li dl dd a:hover{color: #bf0123 !important;} */
 .product-detail-right .recommended ul{margin-top: 20px;}
 .product-detail-right .recommended ul li{margin-bottom: 20px;}
 .product-detail-right .recommended ul li .img{width: 30%;vertical-align: middle;}
-.product-detail-right .recommended ul li .test{width: 65%;vertical-align: middle;margin-left: 4%;}
+.product-detail-right .recommended ul li .test{width: 65%;vertical-align: middle;margin-left: 3%;}
 .product-detail-right .recommended ul li .test .name{font-size: 18px;color: #333;line-height: 24px;}
 .product-detail-right .recommended ul li .test .des{font-size: 14px;color: #666;line-height: 20px;margin-top: 10px;}
 .official-code-img{margin: 0.2rem 0;}
