@@ -3,7 +3,9 @@
 <!-- 主体 -->
 <div class="main">
     <?php if($detail): ?>
+    <div class="about-page w1400 container">
     <?= $detail[$prefix.'article_content'] ?: $detail['article_content']; ?>
+    </div>
     <?php if($detail['article_id'] == 5):?>
     <div class="about-page w1400 container" style="margin-top: 0px;">
         <div class="about-page-contact clearfix">

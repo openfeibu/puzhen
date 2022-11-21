@@ -9,6 +9,7 @@ use app\store\model\Setting;
 use think\Lang;
 use think\Session;
 use app\common\library\wechat\WxQrLogin;
+use app\pc\model\Article as ArticleModel;
 
 /**
  * 认证
@@ -74,7 +75,11 @@ class Passport extends Controller
         $WxQrLogin = new WxQrLogin;
         $state = $WxQrLogin->getState();
         $weixinLoginRedirectUrl = 'http://www.fspuzhen.cn/index.php?s=/pc/passport/wx_web_login';
-        return $this->fetch('register',compact('state','weixinLoginRedirectUrl'));
+
+
+        $privacyPolicy = ArticleModel::detail(4);
+        $userAgreement = ArticleModel::detail(3);
+        return $this->fetch('register',compact('state','weixinLoginRedirectUrl','userAgreement','privacyPolicy'));
     }
 
     /**

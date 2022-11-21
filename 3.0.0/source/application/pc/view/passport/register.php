@@ -67,12 +67,10 @@
                         <div class="form-btn" >
                             <div class="form-des" style="margin-bottom: 10px;">
                                 <input class="fb-inline-block" type="checkbox" name="check" />
-                                <p class="fb-inline-block"><?= lang('I have read and accepted') ?> <a href="#">用户协议</a> 和 <a href="#">隐私政策</a> </p>
+                                <p class="fb-inline-block"><?= lang('I have read and accepted') ?> <a href="<?= url('article/detail','article_id='.$userAgreement['article_id']);?>"><?= $userAgreement[$prefix.'article_title'] ?: $userAgreement['article_title'];?></a> <?= lang('and');?>  <a href="<?= url('article/detail','article_id='.$privacyPolicy['article_id']);?>"><?= $privacyPolicy[$prefix.'article_title'] ?: $privacyPolicy['article_title'];?></a> </p>
                             </div>
                             <button type="submit"><?= lang('register') ?></button>
                         </div>
-
-
 
                     </form>
                 </div>
