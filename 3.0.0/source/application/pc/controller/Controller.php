@@ -96,7 +96,11 @@ class Controller extends \think\Controller
         $navModel = new NavModel;
         $link = str_replace('pc/','',$pathinfo);
         $current_nav =  $navModel->with(['image'])->where('url',$link)->find();
-        $this->assign('currentNav', $current_nav);
+        if(!$current_nav)
+        {
+            $current_nav = $navModel->with(['image'])->where('url','like',$this->controller.'/%')->find();
+        }
+        $this->assign('current_nav', $current_nav);
     }
 
     /**
