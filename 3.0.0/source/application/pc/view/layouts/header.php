@@ -19,7 +19,7 @@
                     </dl>
 
                 </div>
-                <div class="home-btn pull-left">
+                <div class="home-btn pull-left <?php if(request()->pathinfo() == 'pc/index/index' || request()->pathinfo() == '/'): ?>active <?php endif;?> ">
                     <a href="<?= $base_url ?? url('') ?>"><?= lang('home') ?></a>
                 </div>
             </div>
