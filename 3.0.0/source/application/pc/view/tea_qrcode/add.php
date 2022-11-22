@@ -95,7 +95,7 @@
             success: function(data) { // data 保存提交后返回的数据，一般为 json 数据
                 layer.close(load);
                 if (data.code === 1) {
-                    layer.msg(data.msg, {time: 1500, anim: 1}, function () {
+                    layer.msg("生成冲泡码成功", {time: 1500, anim: 1}, function () {
                         window.location.href=data.url;
                     });
                     return true;

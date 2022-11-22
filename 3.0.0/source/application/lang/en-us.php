@@ -43,7 +43,7 @@ return [
 
 
     'g' => 'g',
-    'tea.times' => 'times',
+    'tea.times' => 's',
     'to_make_tea' => 'Make Tea',
     'make_tea_way' => 'Tea',
     'learn_more' => 'More',
