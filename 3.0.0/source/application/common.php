@@ -514,3 +514,8 @@ function default_nickname($id)
 {
     return lang('puzhen').$id;
 }
+function getCategoryIdBySlug($slug)
+{
+    $model = new \app\common\model\Category;
+    return $model->where('slug',$slug)->value('category_id') ?: $model->order(['sort' => 'asc', 'create_time' => 'asc'])->value('category_id');
+}

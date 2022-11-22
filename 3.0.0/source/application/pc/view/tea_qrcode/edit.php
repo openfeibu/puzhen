@@ -55,9 +55,9 @@
             </div>
             <div class="codeForm-data">
                 <?php foreach($detail['data']['temperature_arr'] as $k => $temperature): ?>
-                    <div class="codeForm-item">
-                        <label class="col-lg-2 col-md-2 col-sm-2 col-xs-2 codeForm-label "><?= lang('no.'); ?><?= $k+1;?><?= lang('no.temp'); ?><span>*</span></label>
-                        <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3 codeForm-con clearfix">
+                    <div class="codeForm-item clearfix">
+                        <label class="col-lg-2 col-md-2 col-sm-3 col-xs-3  codeForm-label "><?= lang('no.'); ?><?= $k+1;?><?= lang('no.temp'); ?><span>*</span></label>
+                        <div class="col-lg-4 col-md-4 col-sm-8 col-xs-8 codeForm-con clearfix">
                             <select name="tea_qrcode[temperature][]" id="" class="code-temperature fl" <?php if($k == 0):?>onchange="changetemperature(this)" <?php endif; ?>>
                                 <option value=""><?= lang('please_select'); ?></option>
                                 <?php foreach ($teaConfig['temperature']['data'] as $config_data):?>
@@ -66,8 +66,8 @@
                             </select>
                             <div class="unit fl"><?= $teaConfig['temperature'][$prefix.'unit']?></div>
                         </div>
-                        <label class="col-lg-2 col-md-2 col-sm-2 col-xs-2 codeForm-label "><?= lang('no.'); ?><?= $k+1;?><?= lang('no.seconds'); ?><span>*</span></label>
-                        <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3 codeForm-con clearfix">
+                        <label class="col-lg-2 col-md-2 col-sm-3 col-xs-3  codeForm-label "><?= lang('no.'); ?><?= $k+1;?><?= lang('no.seconds'); ?><span>*</span></label>
+                        <div class="col-lg-4 col-md-4 col-sm-8 col-xs-8 codeForm-con clearfix">
                             <select name="tea_qrcode[seconds][]" id="" class="code-seconds fl" <?php if($k == 0):?> onchange="changeseconds(this)" <?php endif; ?> >
                                 <option value=""><?= lang('please_select'); ?></option>
                                 <?php foreach ($teaConfig['seconds']['data'] as $config_data):?>

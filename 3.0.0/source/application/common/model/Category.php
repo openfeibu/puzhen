@@ -67,6 +67,47 @@ class Category extends BaseModel
         return self::getALL()['all'];
     }
 
+    public static function getCacheTreeActive(&$categoryId=0, $isAutoId=true)
+    {
+        $tree = array_values(static::getCacheTree());
+        if(!$categoryId && $isAutoId){
+            $categoryId = $tree[0]['child'][0]['category_id'];
+        }
+        foreach ($tree as $first_key => &$first) {
+            $first['active'] = 0;
+            if(!empty($first['child']))
+            {
+                foreach ($first['child'] as $two_key => &$two)
+                {
+                    $two['active'] = 0;
+                    if(!empty($two['child']))
+                    {
+                        foreach ($two['child'] as $three_key => &$three)
+                        {
+                            $three['active'] = 0;
+                            if($three['category_id'] == $categoryId)
+                            {
+                                $first['active'] = 1;
+                                $two['active'] = 1;
+                                $three['active'] = 1;
+                            }
+                        }
+                    }
+                    if($two['category_id'] == $categoryId)
+                    {
+                        $first['active'] = 1;
+                        $two['active'] = 1;
+                    }
+                }
+            }
+            if($first['category_id'] == $categoryId)
+            {
+                $first['active'] = 1;
+            }
+
+        }
+        return $tree;
+    }
     /**
      * 获取所有分类(树状结构)
      * @return mixed

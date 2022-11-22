@@ -54,26 +54,6 @@
                 </div>
             </div>
             <div class="codeForm-data">
-                <!-- <div class="codeForm-item">
-                    <label class="col-lg-2 col-md-2 col-sm-2 col-xs-2 codeForm-label ">第1泡温度<span>*</span></label>
-                    <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3 codeForm-con clearfix">
-                        <select name="tea_qrcode[temperature][]" id="" class="code-temperature fl" onchange="changetemperature(this)">
-                            <option value=""><?= lang('please_select'); ?></option>
-                            <option value="50">50</option>
-                            <option value="51">51</option>
-                        </select>
-                        <div class="unit fl">℃</div>
-                    </div>
-                    <label class="col-lg-2 col-md-2 col-sm-2 col-xs-2 codeForm-label ">第1泡秒数<span>*</span></label>
-                    <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3 codeForm-con clearfix">
-                        <select name="tea_qrcode[seconds][]" id="" class="fl">
-                            <option value=""><?= lang('please_select'); ?></option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                        </select>
-                        <div class="unit fl">秒</div>
-                    </div>
-            </div> -->
             </div>
             <div class="codeForm-btn">
                 <div class="codeForm-submit">

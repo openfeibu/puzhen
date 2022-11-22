@@ -22,19 +22,19 @@ class Goods extends Controller
      */
     public function index()
     {
+        //var_dump(getCategoryIdBySlug('tea_machine'));exit;
         $param = array_merge($this->request->param(), [
             'status' => 10
         ]);
-        // 产品分类列表
-        $categoryList = array_values(CategoryModel::getCacheTree());
-        if(!isset($param['category_id']) || !$param['category_id'])
-        {
-            $param['category_id'] = $categoryList[0]['child'][0]['category_id'];
-        }
+        $param['category_id'] = isset($param['category_id']) &&  $param['category_id'] ? $param['category_id'] : 0;
+        $isAutoId = true;
         if(isset($param['search']) && $param['search'])
         {
             $param['category_id'] = 0;
+            $isAutoId = false;
         }
+        $categoryList = CategoryModel::getCacheTreeActive($param['category_id'],$isAutoId);
+
         if ($this->request->isAjax()) {
             // 获取列表数据
             $model = new GoodsModel;
