@@ -57,7 +57,7 @@ return [
     'teas' => 'Teas',
     'my_tea_qrcode' => 'My QR Code',
 
-    'official_qrcode' => 'official_qrcode',//Official QR Code
+    'official_qrcode' => 'Official QR Code',//Official QR Code
     'puzhen_recommend' => 'PuZhen Recommend',
     'recommend' => 'Recommend',
     'recommend_abbr' => 'REC',
