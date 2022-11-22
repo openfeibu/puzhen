@@ -37,7 +37,7 @@ class Passport extends Controller
             }
             return $this->renderError([],$model->getError() ?: lang('login.failed'));
         }
-        if($this->pc && $this->pc['is_login'])
+        if($this->pc && isset($this->pc['is_login']) && $this->pc['is_login'])
         {
             return redirect('user/index');
         }

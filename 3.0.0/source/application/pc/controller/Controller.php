@@ -187,7 +187,7 @@ class Controller extends \think\Controller
         {
             // 验证登录状态
             if (empty($this->pc)
-                || (int)$this->pc['is_login'] !== 1
+                || !isset($this->pc['is_login']) || (int)$this->pc['is_login'] !== 1
             ) {
                 throw new NotAuthException(['msg' => lang('no_login')]);
             }
@@ -208,7 +208,7 @@ class Controller extends \think\Controller
         if ($is_force) {
             // 验证登录状态
             if (empty($this->pc)
-                || (int)$this->pc['is_login'] !== 1
+                || !isset($this->pc['is_login']) || (int)$this->pc['is_login'] !== 1
             ) {
                 throw new NotAuthException(['msg' => lang('no_login')]);
             }
