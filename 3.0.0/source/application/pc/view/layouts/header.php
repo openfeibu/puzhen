@@ -27,9 +27,8 @@
             <div class="nav">
                 <ul>
                     <?php if(!empty($navList)): foreach ($navList as $key => $item): ?>
-                    <li <?php if(request()->pathinfo() == 'pc/'.$item['url']): ?> class="active" <?php endif;?> >
+                    <li <?php if(isset($item['active']) && $item['active']): ?> class="active" <?php endif;?> >
                         <a href="<?= $pc_url.'/'.$item['url'] ?>"><?= $item[$prefix.'name'] ?: $item['name'] ?></a>
-
                     </li>
                     <?php if($key==1):?>
                     <li></li>

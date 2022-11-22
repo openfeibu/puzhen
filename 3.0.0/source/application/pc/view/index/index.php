@@ -44,12 +44,12 @@
 
                 <div class="bagua-tuijian-test pull-left">
                     <?= lang('home_text_2');?>
-                    <a class="bagua-tuijian-more " href="<?= url('goods/index');?>">
+                    <a class="bagua-tuijian-more " href="<?= url('goods/index&category_id='.getCategoryIdBySlug('tea_qrcode')); ?>">
                         <?= lang('learn_more'); ?>>
                     </a>
                 </div>
                 <div class="bagua-tuijian-title pull-left">
-                    <p><a href="<?= url('goods/index');?>"><?= lang('make_tea_way'); ?><br/><?= lang('recommend_abbr'); ?></a></p>
+                    <p><a href="<?= url('goods/index&category_id='.getCategoryIdBySlug('tea_qrcode')); ?>"><?= lang('make_tea_way'); ?><br/><?= lang('recommend_abbr'); ?></a></p>
                 </div>
             </div>
         </div>
@@ -66,7 +66,7 @@
                 <?= lang('home_text_3');?>
             </div>
             <div class="producCenter-test-more">
-                <a href="<?= url('goods/index'); ?>"><?= lang('search_more'); ?></a>
+                <a href="<?= url('goods/index&category_id='.getCategoryIdBySlug('tea_machine')); ?>"><?= lang('search_more'); ?></a>
             </div>
         </div>
 

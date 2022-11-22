@@ -33,6 +33,25 @@ class Nav extends NavModel
     public function getList()
     {
         $all = static::getAll(['status' => 1]);
+        $pathinfo = request()->pathinfo();
+        foreach ($all as $key => &$item)
+        {
+            if($pathinfo == 'pc/'.$item['url'])
+            {
+                $item['active'] = 1;
+                break;
+            }
+            if(strpos($item['url'],'&') !== false){
+                $arr = explode('&',$item['url']);
+                $url = $arr[0];
+                if($pathinfo == 'pc/'.$url)
+                {
+                    $item['active'] = 1;
+                    break;
+                }
+            }
+
+        }
         return $this->formatTreeData($all);
     }
 }
