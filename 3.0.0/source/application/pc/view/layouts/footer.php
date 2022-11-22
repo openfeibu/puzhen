@@ -15,7 +15,7 @@
                     </p>
                 </div>
                 <div class="footer-link">
-                    <a href="<?= url('/factory'); ?>"><?= lang('factory_entrance') ?></a>
+                    <a href="http://weapp.fspuzhen.cn/index.php?s=/factory"><?= lang('factory_entrance') ?></a>
                     <a href="<?=url('tea_qrcode/add'); ?>"><?= lang('diy_qrcode'); ?></a>
                     <a href="<?= url('article/contact');?>"><?= lang('contact_us'); ?></a>
                 </div>
@@ -55,7 +55,7 @@
             </li>
             <?php endforeach; endif;?>
             <li>
-                <a href="<?= url('/factory') ?>"><?= lang('factory_entrance') ?></a>
+                <a href="http://weapp.fspuzhen.cn/index.php?s=/factory"><?= lang('factory_entrance') ?></a>
             </li>
             <li>
                 <div class="nav-search fixed-nav-item-search"><?= lang('search'); ?></div>
