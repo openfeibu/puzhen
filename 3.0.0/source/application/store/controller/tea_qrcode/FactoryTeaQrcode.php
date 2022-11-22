@@ -6,6 +6,7 @@ use app\common\model\Tea;
 use app\store\model\Factory;
 use app\store\model\TeaQrcode as TeaQrcodeModel;
 use app\store\model\Goods as GoodsModel;
+use app\store\model\TeaConfig;
 use app\store\controller\Controller;
 
 /**
@@ -41,11 +42,13 @@ class FactoryTeaQrcode extends Controller
         $factory = $goods ? $goods['factory'] : Factory::detail($this->postData('tea_qrcode')['factory_id']);
         if (!$this->request->isAjax()) {
             $teaList = Tea::getAll();
+            $teaConfigModel = new TeaConfig;
+            $teaConfig = $teaConfigModel->getList();
             $factoryList = Factory::getAllList();
-            return $this->fetch('add',compact('goods','teaList','factoryList'));
+            return $this->fetch('add',compact('goods','teaList','factoryList','teaConfig'));
         }
         // 新增记录
-        if ($model->add($this->postData('tea_qrcode'),$factory)) {
+        if ($modesl->add($this->postData('tea_qrcode'),$factory)) {
             return $this->renderSuccess('添加成功', url('index'));
         }
         return $this->renderError($model->getError() ?: '添加失败');

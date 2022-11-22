@@ -3,6 +3,7 @@
 namespace app\factory\controller\tea_qrcode;
 
 use app\common\model\Tea;
+use app\common\model\TeaConfig;
 use app\factory\model\TeaQrcode as TeaQrcodeModel;
 use app\factory\model\Goods as GoodsModel;
 use app\factory\controller\Controller;
@@ -39,7 +40,9 @@ class FactoryTeaQrcode extends Controller
         $factory = $this->factory['factory'];
         if (!$this->request->isAjax()) {
             $teaList = Tea::getAll();
-            return $this->fetch('add',compact('goods','teaList'));
+            $teaConfigModel = new TeaConfig;
+            $teaConfig = $teaConfigModel->getList();
+            return $this->fetch('add',compact('goods','teaList','teaConfig'));
         }
         // 新增记录
         if ($model->add($this->postData('tea_qrcode'),$factory)) {

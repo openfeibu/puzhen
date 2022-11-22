@@ -14,5 +14,23 @@ class TeaConfig extends BaseModel
     {
         return self::order('tea_config_id','asc')->select();
     }
+    public function getList()
+    {
+        $list = self::getAll()->toArray();
+        $data = [];
+        foreach ($list as $key => $item)
+        {
+            $data[$item['type']] = $item;
+            $data[$item['type']]['data'] = [];
+            $arr = [];
+            for($i = (float)$item['min']; $i <= (float)$item['max']; $i=$i+(float)$item['interval'])
+            {
+                $arr['name'] = $i.$item['unit'];
+                $arr['value'] = $i;
+                $data[$item['type']]['data'][] = $arr;
+            }
 
+        }
+        return $data;
+    }
 }

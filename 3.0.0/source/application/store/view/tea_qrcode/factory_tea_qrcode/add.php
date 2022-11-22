@@ -76,29 +76,9 @@
 										<select name="tea_qrcode[weight]"
 												data-am-selected="{searchBox: 0, btnSize: 'sm',
 												 placeholder:'请选择', maxHeight: 400}">
-												 <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                           
-                                            <option value="5" selected >5</option>
-                                         
-                                            <option value="6">6</option>
-                                         
-                                            <option value="7">7</option>
-                                           
-                                            <option value="8">8</option>
-                                          
-                                            <option value="9">9</option>
-                                           
-                                            <option value="11">11</option>
-                                           
-                                            <option value="12">12</option>
-                                            
-                                            <option value="13">13</option>
-                                     
-                                            <option value="14">14</option>
-                                           
-                                            <option value="15">15</option>
+                                            <?php foreach ($teaConfig['weight']['data'] as $config_data):?>
+                                                <option value="<?= $config_data['value'] ?>" <?= $teaConfig['weight']['default'] == $config_data['value'] ? "selected" : ''?> ><?= $config_data['value'] ?></option>
+                                            <?php endforeach;?>
 										       
 										</select>
 										 <label class="am-form-label am-text-left">克</label>
@@ -114,27 +94,9 @@
 										<select id="changeNumber" name="tea_qrcode[number]"
 												data-am-selected="{searchBox: 0, btnSize: 'sm',
 												 placeholder:'请选择', maxHeight: 400}">
-												<option value="5">5</option>
-												<option value="6">6</option>
-												<option value="7">7</option>
-												<option value="8" selected>8</option>
-												<option value="9">9</option>
-												<option value="10">10</option>
-												<option value="11">11</option>
-												<option value="12">12</option>
-												<option value="13">13</option>
-												<option value="14">14</option>
-												<option value="15">15</option>
-												<option value="16">16</option>
-												<option value="17">17</option>
-												<option value="18">18</option>
-												<option value="19">19</option>
-												<option value="20">20</option>
-												<option value="21">21</option>
-												<option value="22">22</option>
-												<option value="23">23</option>
-												<option value="24">24</option>
-												<option value="25">25</option>
+                                            <?php foreach ($teaConfig['frequency']['data'] as $config_data):?>
+                                                <option value="<?= $config_data['value'] ?>" ><?= $config_data['value'] ?></option>
+                                            <?php endforeach;?>
 										       
 										</select>
 										 <label class="am-form-label am-text-left">泡</label>
