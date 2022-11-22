@@ -143,7 +143,7 @@
                         </div>
                     </div>`;
                 }
-                console.log(html)
+               
                 $(".codeForm-data").append(html)
             }else if(number < nowNumber){
 
