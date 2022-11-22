@@ -3,6 +3,7 @@
 return [
     'puzhen' => 'PuZhen',
     'about_puzhen' => 'About PuZhen',
+    'no_login' => 'Please login',
     ': ' => ': ',
     'add' => 'Add',
     'edit' => 'Edit',

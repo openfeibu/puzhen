@@ -3,6 +3,7 @@
 return [
     'puzhen' => '朴真',
     'about_puzhen' => '关于朴真',
+    'no_login' => '请先登录',
     ': ' => '：',
     'add' => '新增',
     'edit' => '修改',

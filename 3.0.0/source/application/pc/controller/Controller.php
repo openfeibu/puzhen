@@ -189,7 +189,7 @@ class Controller extends \think\Controller
             if (empty($this->pc)
                 || (int)$this->pc['is_login'] !== 1
             ) {
-                throw new NotAuthException(['msg' => '未登录']);
+                throw new NotAuthException(['msg' => lang('no_login')]);
             }
             return true;
         }
@@ -210,7 +210,7 @@ class Controller extends \think\Controller
             if (empty($this->pc)
                 || (int)$this->pc['is_login'] !== 1
             ) {
-                throw new NotAuthException(['msg' => '未登录']);
+                throw new NotAuthException(['msg' => lang('no_login')]);
             }
         }
         if(!isset($this->pc['user']['user_id']))
