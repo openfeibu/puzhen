@@ -21,7 +21,7 @@
             </div>
             <div class="codeForm-item">
                 <label class="col-lg-2 col-md-2 col-sm-3 col-xs-3 codeForm-label "><?= lang('teas');?><span>*</span></label>
-                <div class="col-lg-4 col-md-4 col-sm-8 col-xs-8 codeForm-con ">
+                <div class="col-lg-4 col-md-4 col-sm-9 col-xs-9 codeForm-con ">
                     <select name="tea_qrcode[tea]" id="" required="">
                         <option value=""><?= lang('please_select'); ?></option>
                         <?php if (isset($teaList)): foreach ($teaList as $item): ?>
@@ -33,7 +33,7 @@
             </div>
             <div class="codeForm-item clearfix">
                 <label class="col-lg-2 col-md-2 col-sm-3 col-xs-3 codeForm-label "><?= $teaConfig['weight'][$prefix.'name']?><span>*</span></label>
-                <div class="col-lg-4 col-md-4 col-sm-8 col-xs-8 codeForm-con clearfix">
+                <div class="col-lg-4 col-md-4 col-sm-9 col-xs-9 codeForm-con clearfix">
                     <select name="tea_qrcode[weight]" class="fl" required="">
                         <option value="" selected><?= lang('please_select'); ?></option>
                         <?php foreach ($teaConfig['weight']['data'] as $config_data):?>
@@ -43,7 +43,7 @@
                     <div class="unit fl"><?= $teaConfig['weight'][$prefix.'unit']?></div>
                 </div>
                 <label class="col-lg-2 col-md-2 col-sm-3 col-xs-3 codeForm-label "><?= $teaConfig['frequency'][$prefix.'name']?><span>*</span></label>
-                <div class="col-lg-4 col-md-4 col-sm-8 col-xs-8 codeForm-con clearfix">
+                <div class="col-lg-4 col-md-4 col-sm-9 col-xs-9 codeForm-con clearfix">
                     <select name='tea_qrcode[number]' id="changeNumber" class="fl" required="">
                         <option value="" selected><?= lang('please_select'); ?></option>
                         <?php foreach ($teaConfig['frequency']['data'] as $config_data):?>
@@ -57,7 +57,7 @@
                 <?php foreach($detail['data']['temperature_arr'] as $k => $temperature): ?>
                     <div class="codeForm-item clearfix">
                         <label class="col-lg-2 col-md-2 col-sm-3 col-xs-3  codeForm-label "><?= lang('no.'); ?><?= $k+1;?><?= lang('no.temp'); ?><span>*</span></label>
-                        <div class="col-lg-4 col-md-4 col-sm-8 col-xs-8 codeForm-con clearfix">
+                        <div class="col-lg-4 col-md-4 col-sm-9 col-xs-9 codeForm-con clearfix">
                             <select name="tea_qrcode[temperature][]" id="" class="code-temperature fl" <?php if($k == 0):?>onchange="changetemperature(this)" <?php endif; ?>>
                                 <option value=""><?= lang('please_select'); ?></option>
                                 <?php foreach ($teaConfig['temperature']['data'] as $config_data):?>
@@ -67,7 +67,7 @@
                             <div class="unit fl"><?= $teaConfig['temperature'][$prefix.'unit']?></div>
                         </div>
                         <label class="col-lg-2 col-md-2 col-sm-3 col-xs-3  codeForm-label "><?= lang('no.'); ?><?= $k+1;?><?= lang('no.seconds'); ?><span>*</span></label>
-                        <div class="col-lg-4 col-md-4 col-sm-8 col-xs-8 codeForm-con clearfix">
+                        <div class="col-lg-4 col-md-4 col-sm-9 col-xs-9 codeForm-con clearfix">
                             <select name="tea_qrcode[seconds][]" id="" class="code-seconds fl" <?php if($k == 0):?> onchange="changeseconds(this)" <?php endif; ?> >
                                 <option value=""><?= lang('please_select'); ?></option>
                                 <?php foreach ($teaConfig['seconds']['data'] as $config_data):?>
@@ -126,7 +126,7 @@
                 for(var i=1;i<=j;i++){
                     html += `<div class="codeForm-item clearfix">
                         <label class="col-lg-2 col-md-2 col-sm-3 col-xs-3 codeForm-label "><?= lang('no.'); ?>`+(i+nowNumber)+`<?= lang('no.temp'); ?><span>*</span></label>
-                        <div class="col-lg-4 col-md-4 col-sm-8 col-xs-8 codeForm-con clearfix">
+                        <div class="col-lg-4 col-md-4 col-sm-9 col-xs-9 codeForm-con clearfix">
                             <select name="tea_qrcode[temperature][]" class="code-temperature fl" onchange="changetemperature(this)" required="" >
                                 <option value=""><?= lang('please_select'); ?></option>
                                <?php foreach ($teaConfig['temperature']['data'] as $config_data):?>
@@ -136,7 +136,7 @@
                             <div class="unit fl"><?= $teaConfig['temperature'][$prefix.'unit']?></div>
                         </div>
                         <label class="col-lg-2 col-md-2 col-sm-3 col-xs-3 codeForm-label "><?= lang('no.'); ?>`+(i+nowNumber)+`<?= lang('no.seconds'); ?><span>*</span></label>
-                        <div class="col-lg-4 col-md-4 col-sm-8 col-xs-8 codeForm-con clearfix">
+                        <div class="col-lg-4 col-md-4 col-sm-9 col-xs-9 codeForm-con clearfix">
                             <select name="tea_qrcode[seconds][]" class="code-seconds fl" onchange="changeseconds(this)" required="" >
                                 <option value=""><?= lang('please_select'); ?></option>
                                   <?php foreach ($teaConfig['seconds']['data'] as $config_data):?>
