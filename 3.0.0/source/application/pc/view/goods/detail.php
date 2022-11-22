@@ -25,9 +25,9 @@
                 <div class="name"><?= $detail[$prefix.'goods_name'] ?: $detail['goods_name'] ?></div>
                 <div class="des"><?= $detail[$prefix.'selling_point'] ?: $detail['selling_point'] ?></div>
                 <div class="pro-test-line clearfix">
-                    <div class="pro-money fl">
+                    <!-- <div class="pro-money fl">
                         <?= lang('reference_retail_price') ?>：<span>￥<?= $detail['first_money'] ?></span>
-                    </div>
+                    </div> -->
                     <div class="pro-collection fr <?= $detail['is_collection']>0 ? 'active' : '' ?>">
                         <p class="fl"> <?= $detail['is_collection']>0 ? lang('collected') : lang('add_to_collection')?></p>
                         <span class="fl">|</span>
