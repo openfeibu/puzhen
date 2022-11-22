@@ -101,11 +101,14 @@
                 type : 'post',
                 success : function (data) {
                     layer.close(load);
-                    if(data.data.is_collection == 1)
+                    if(data.code ===1)
                     {
-                        that.addClass("active").find("p").text("<?= lang('collected') ?>");
-                    }else{
-                        that.removeClass("active").find("p").text("<?= lang('add_to_collection') ?>");
+                        if(data.data.is_collection == 1)
+                        {
+                            that.addClass("active").find("p").text("<?= lang('collected') ?>");
+                        }else{
+                            that.removeClass("active").find("p").text("<?= lang('add_to_collection') ?>");
+                        }
                     }
                     layer.msg(data.msg);
                 },
