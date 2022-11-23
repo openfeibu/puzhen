@@ -80,7 +80,7 @@
             </div>
             <div class="about-company"><?= $setting['store']['values'][$prefix.'company'] ?: $setting['store']['values']['company'];?></div>
             <div class="clearfix"></div>
-            <div class="about-des"><?= lang('home_text_4'); ?></div>
+            <div class="about-des"><?= $setting['pc']['values'][$prefix.'intro'] ?: $setting['pc']['values']['intro'];?></div>
             <div class="about-more">
                 <a href="#"><?= lang('learn_more'); ?></a>
             </div>

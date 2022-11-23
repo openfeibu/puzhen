@@ -23,7 +23,18 @@
                                            value="<?= $values['en_name'] ?? '' ?>" required>
                                 </div>
                             </div>
-
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-form-label form-require"> 公司简介 </label>
+                                <div class="am-u-sm-9">
+                                    <textarea class=""  name="pc[intro]"><?= $values['intro'] ?? '' ?></textarea>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-form-label form-require"> 公司英文简介 </label>
+                                <div class="am-u-sm-9">
+                                    <textarea class=""  name="pc[en_intro]"><?= $values['en_intro'] ?? '' ?></textarea>
+                                </div>
+                            </div>
                             <div class="am-form-group">
                                 <div class="am-u-sm-9 am-u-sm-push-3 am-margin-top-lg">
                                     <button type="submit" class="j-submit am-btn am-btn-secondary">提交
