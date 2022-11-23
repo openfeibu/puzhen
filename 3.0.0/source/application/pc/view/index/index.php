@@ -82,7 +82,7 @@
             <div class="clearfix"></div>
             <div class="about-des"><?= $setting['pc']['values'][$prefix.'intro'] ?: $setting['pc']['values']['intro'];?></div>
             <div class="about-more">
-                <a href="#"><?= lang('learn_more'); ?></a>
+                <a href="<?= url('article/detail','article_id=5')?>"><?= lang('learn_more'); ?></a>
             </div>
         </div>
     </div>
