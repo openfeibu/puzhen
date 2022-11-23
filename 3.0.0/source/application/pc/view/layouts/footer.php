@@ -79,6 +79,16 @@
         <div></div>
     </div>
 </div>
+
+<!-- 悬浮搜索 -->
+<div class="fixed-nav">
+    <div class="fixed-nav-item">
+        <div class="fixed-nav-item-search">
+			
+        </div>
+    </div>
+</div>
+
 <script>
     $(function(){
         //获取手机验证码
