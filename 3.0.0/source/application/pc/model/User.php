@@ -205,7 +205,7 @@ class User extends UserModel
             $this->commit();
             return true;
         }catch (\Exception $e){
-            var_dump($e->getMessage());exit;
+            throw new BaseException(['msg' => lang('server_error')]);
             return false;
         }
 
