@@ -150,7 +150,7 @@ class Goods extends BaseModel
         $params['goods_id'] > 0 && $filter['goods.goods_id'] = $params['goods_id'];
 	      !empty($params['no_goods_id']) && $filter['goods.goods_id'] = ['NOT IN', $params['no_goods_id']];
         $params['factory_id'] > 0 && $filter['goods.factory_id'] = $params['factory_id'];
-        !empty($params['search']) && $filter['goods.goods_name'] = ['like', '%' . trim($params['search']) . '%'];
+        //!empty($params['search']) && $filter['goods.goods_name'] = ['like', '%' . trim($params['search']) . '%'];
         $params['factory.status'] > -1 && $filter['factory.status'] = $params['factory.status'];
         // 排序规则
         $sort = [];
