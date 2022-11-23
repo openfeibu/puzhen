@@ -194,6 +194,12 @@ class Goods extends BaseModel
             ->where('factory.is_delete', '=', 0)
             ->where('goods.is_delete', '=', 0)
             ->where($filter)
+            ->where(function ($query) use ($params) {
+                if(!empty($params['search']))
+                {
+                    $query->where('goods.goods_name','like','%' . trim($params['search']) . '%')->whereOr('goods.en_goods_name','like','%' . trim($params['search']) . '%');
+                }
+            })
             ->order($sort)
             ->paginate($params['listRows'], false, [
                 'query' => \request()->request()
