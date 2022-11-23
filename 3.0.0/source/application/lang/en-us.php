@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'Prozen' => 'Prozen',
-    'about_Prozen' => 'About Prozen',
+    'puzhen' => 'Prozen',
+    'about_puzhen' => 'About Prozen',
     'no_login' => 'Please login',
     ': ' => ': ',
     'add' => 'Add',
@@ -58,7 +58,7 @@ return [
     'my_tea_qrcode' => 'My QR Code',
 
     'official_qrcode' => 'Official QR Code',//Official QR Code
-    'Prozen_recommend' => 'Prozen Recommend',
+    'puzhen_recommend' => 'Prozen Recommend',
     'recommend' => 'Recommend',
     'recommend_abbr' => 'REC',
 
