@@ -48,7 +48,7 @@ class User extends UserModel
         }
         // 验证用户名密码是否正确
         if (!$user = $this->getLoginUser($data['account'], $data['password'], $accountType)) {
-            $this->error = '登录失败, 用户名或密码错误';
+            $this->error = lang('login.failed.password_error');
             return false;
         }
 

@@ -165,7 +165,7 @@ return [
 
     'select_agreement_policy' => '请先同意 用户协议 和 隐私政策',
 
-    'select_files_repeatedly' => '请不要重复选择文件！',
+    'select_files_repeatedly' => '请不要重复选择文件！登录失败',
     'file_large' => '文件大小不可超过',
 
     'no.' => '第',
