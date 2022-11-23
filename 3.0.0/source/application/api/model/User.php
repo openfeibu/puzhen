@@ -180,6 +180,7 @@ class User extends UserModel
             {
                 $model->allowField(true)->save(array_merge($data, [
                     'open_id' => $openId,
+                    'union_id' => $unionId,
                     'wxapp_id' => self::$wxapp_id,
                     'avatarUrl' => default_avatar(),
                 ]));
@@ -189,6 +190,7 @@ class User extends UserModel
             }else{
                 $model->allowField(true)->save([
                     'open_id' => $openId,
+                    'union_id' => $unionId,
                     'wxapp_id' => self::$wxapp_id
                 ]);
             }
