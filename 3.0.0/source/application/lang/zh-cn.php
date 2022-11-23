@@ -160,8 +160,7 @@ return [
     'home_text_1' =>'<p>自定义泡茶程序</p><p>我的茶用我的泡法</p>',
     'home_text_2' =>'<p>原创二维码冲泡技术</p><p>无须繁琐连接操作</p> <p>好茶也可以轻松放心泡</p>',
     'home_text_3' => '朴真坚持制作好用且真材实料的产品',
-    'home_text_4' => '朴真秉持朴实真诚的原则，坚持制作好用且真材实料的产品，专注与通过科技为饮茶人化繁为简，提供轻松愉悦的用茶环境。',
-
+    
     'low_browser_version' => '你正在使用一个 <strong>过时</strong> 的浏览器。请 <a href=https://browsehappy.com/ target=_blank>升级您的浏览器</a>，以提高您的体验',
 
     'select_agreement_policy' => '请先同意 用户协议 和 隐私政策',
