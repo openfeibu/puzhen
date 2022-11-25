@@ -157,14 +157,21 @@ class User extends UserModel
                 $model = $user ?: $this;
                 $existUser = $user ? 1 : 0;
                 //$from_weapp_account = 1;
+                //如果也有微信网页用户，整合处理
+                /*
+                if($wechatWebAccount)
+                {
+                    $user_from_web = self::detail(['user_id' => $wechatWebAccount['user_id']]);
+
+                }*/
             }else{
                 //判断是否注册过网页
                 if($wechatWebAccount)
                 {
                     //主用户
-                    $user = self::detail(['user_id' => $wechatWebAccount['user_id']]);
-                    $model = $user ?: $this;
-                    $existUser = $user ? 1 : 0;
+                    $user_from_web = self::detail(['user_id' => $wechatWebAccount['user_id']]);
+                    $model = $user_from_web ?: $this;
+                    $existUser = $user_from_web ? 1 : 0;
                     $fromWechatWebAccount = 1;
                 }else{
                     $model = $this;

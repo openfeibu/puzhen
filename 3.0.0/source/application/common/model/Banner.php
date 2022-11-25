@@ -27,4 +27,14 @@ class Banner extends BaseModel
         $module = self::getCalledModule() ?: 'common';
         return $this->hasOne("app\\{$module}\\model\\UploadFile", 'file_id', 'image_id');
     }
+
+    public function getList($type)
+    {
+        $data = $this->with(['image'])
+            ->where('type',$type)
+            ->order(['sort' => 'asc', 'create_time' => 'asc'])
+            ->select();
+
+        return $data;
+    }
 }

@@ -22,13 +22,5 @@ class Banner extends BannerModel
         'update_time'
     ];
 
-    public function getList($type)
-    {
-        $data = $this->with(['image'])
-            ->where('type',$type)
-            ->order(['sort' => 'asc', 'create_time' => 'asc'])
-            ->select();
 
-        return $data;
-    }
 }

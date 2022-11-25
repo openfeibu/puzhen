@@ -30,7 +30,7 @@ class Page extends Controller
     public function banner()
     {
         $model = new BannerModel;
-        $list = $model->getAllList();
+        $list = $model->getList('weapp');
 
         return $this->renderSuccess(compact('list'));
     }

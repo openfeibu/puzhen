@@ -45,4 +45,5 @@ class PointsLog extends BaseModel
         return $this->isUpdate(false)->saveAll($saveData);
     }
 
+
 }

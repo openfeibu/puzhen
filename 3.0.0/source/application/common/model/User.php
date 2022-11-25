@@ -172,5 +172,8 @@ class User extends BaseModel
         // 更新用户可用积分
         return $this->setInc('points', $points);
     }
+    public static function mergerUser($oldUserId, $newUserId)
+    {
 
+    }
 }
