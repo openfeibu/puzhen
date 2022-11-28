@@ -56,7 +56,6 @@
             $.loadProduct();
         })
         var ajax_data = <?= json_encode($param) ?>;
-        ajax_data.listRows = 2;
         $.loadProduct = function (url){
             ajax_data.category_id = category_id;
             var load = layer.load(2);

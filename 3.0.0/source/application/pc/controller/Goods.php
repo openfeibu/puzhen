@@ -24,7 +24,8 @@ class Goods extends Controller
     {
         //var_dump(getCategoryIdBySlug('tea_machine'));exit;
         $param = array_merge($this->request->param(), [
-            'status' => 10
+            'status' => 10,
+            'listRows' => 12,
         ]);
         $param['category_id'] = isset($param['category_id']) &&  $param['category_id'] ? $param['category_id'] : 0;
         $isAutoId = true;
