@@ -9,7 +9,7 @@ return [
     'edit' => 'Edit',
     'delete' => 'Delete',
     'bind' => 'Bind',
-    'home' => 'Home',
+    'home' => 'HOME',
     'address' => 'Address',
     'tel' => 'Tel',
     'username' => 'Username',
