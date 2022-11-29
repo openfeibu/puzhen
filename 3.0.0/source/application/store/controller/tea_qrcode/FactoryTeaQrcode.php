@@ -48,7 +48,7 @@ class FactoryTeaQrcode extends Controller
             return $this->fetch('add',compact('goods','teaList','factoryList','teaConfig'));
         }
         // 新增记录
-        if ($modesl->add($this->postData('tea_qrcode'),$factory)) {
+        if ($model->add($this->postData('tea_qrcode'),$factory)) {
             return $this->renderSuccess('添加成功', url('index'));
         }
         return $this->renderError($model->getError() ?: '添加失败');
