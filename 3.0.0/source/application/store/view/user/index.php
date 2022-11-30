@@ -56,6 +56,8 @@
                                 <th>用户ID</th>
                                 <th>微信头像</th>
                                 <th>微信昵称</th>
+                                <th>手机号码</th>
+                                <th>邮箱</th>
                                 <!--
                                 <th>性别</th>
                                 <th>国家</th>
@@ -76,6 +78,8 @@
                                         </a>
                                     </td>
                                     <td class="am-text-middle"><?= $item['nickName'] ?></td>
+                                    <td class="am-text-middle"><?= $item['phone_number'] ?></td>
+                                    <td class="am-text-middle"><?= $item['email'] ?></td>
                                     <!--
                                     <td class="am-text-middle"><?= $item['gender'] ?></td>
                                     <td class="am-text-middle"><?= $item['country'] ?: '--' ?></td>
