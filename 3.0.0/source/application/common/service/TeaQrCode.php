@@ -61,7 +61,7 @@ class TeaQrCode
             $qrCode->setWriterByName('png');
             $qrCode->setSize($this->size);
             $qrCode->setMargin(1);
-            //$qrCode->setLogoPath(WEB_PATH . 'assets/common/i/codelogo_20220617.jpg');
+            $qrCode->setLogoPath(WEB_PATH . 'assets/common/i/codelogo_20220617.jpg');
             $qrCode->setLogoSize(60, 60);
             $qrCode->setEncoding('UTF-8');
             $qrCode->setRoundBlockSize(true);
