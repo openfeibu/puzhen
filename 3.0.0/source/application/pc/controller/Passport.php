@@ -92,12 +92,6 @@ class Passport extends Controller
         if(isset($data['code']) && isset($data['state']))
         {
             $userInfo = $WxQrLogin->getInfo($data['code'],$data['state']);
-//            $userInfo = [
-//                'open_id' => '123',
-//                'union_id' => 'olT6O59tHxnM_sITNCYrbU7RENFw',
-//                'nickName' => 'G',
-//                'avatarUrl' => 'https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJUzv6S9wroyYD3mlLrBU0b6CfbpJJicibJeQf9vsK1EReVb9vaJKL1jcDaGZIiaR1ZRPZicxclmoWZfw/132'
-//            ];
             $userModel = new UserModel();
             if(!$userModel->wxRegisterBind($this->pc['user'],$userInfo))
             {

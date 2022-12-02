@@ -2,7 +2,9 @@
 
 namespace app\common\model;
 
+use app\common\exception\BaseException;
 use app\common\model\user\PointsLog as PointsLogModel;
+use think\Db;
 
 /**
  * 用户模型类
@@ -172,8 +174,45 @@ class User extends BaseModel
         // 更新用户可用积分
         return $this->setInc('points', $points);
     }
-    public static function mergerUser($oldUserId, $newUserId)
+
+    /**
+     * @throws BaseException
+     */
+    public static function mergerUser($fromUser, $toUser)
     {
+        try {
+            $toUser->save([
+                'nickName' => $toUser['avatarUrl'] && $toUser['nickName'] ? $toUser['nickName'] : $fromUser['nickName'],
+                'avatarUrl' => $toUser['avatarUrl'] ?: $fromUser['avatarUrl'],
+                'phone_number' => $toUser['phone_number'] ?: $fromUser['phone_number'],
+                'email' => $toUser['email'] ?: $fromUser['email'],
+                'password' => $toUser['password'] ?: $fromUser['password'],
+            ]);
+
+            TeaQrcode::where('user_id',$fromUser['user_id'])->update([
+                'user_id' => $toUser['user_id'],
+            ]);
+            Collection::where('user_id',$fromUser['user_id'])->update([
+                'user_id' => $toUser['user_id'],
+            ]);
+            Comment::where('user_id',$fromUser['user_id'])->update([
+                'user_id' => $toUser['user_id'],
+            ]);
+            TeaQrcodeComment::where('user_id',$fromUser['user_id'])->update([
+                'user_id' => $toUser['user_id'],
+            ]);
+            UserEquipment::where('user_id',$fromUser['user_id'])->update([
+                'user_id' => $toUser['user_id'],
+            ]);
+            UserWechatAccount::where('user_id',$fromUser['user_id'])->update([
+                'user_id' => $toUser['user_id'],
+            ]);
+            $fromUser->delete();
+            return true;
+        }catch (\Exception $e)
+        {
+            throw new BaseException(['msg' => lang('server_error')]);
+        }
 
     }
 }

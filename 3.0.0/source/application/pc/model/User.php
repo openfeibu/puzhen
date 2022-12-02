@@ -147,16 +147,9 @@ class User extends UserModel
                     {
                         //已经存在用户，删除新建的用户，合并到旧用户
                         $newUser = self::detail(['user_id' => $user['user_id']]);
-                        $originalUser->save([
-                            'union_id' => $userInfo['union_id'],
-                            'phone_number' => $originalUser['phone_number'] ?: $newUser['phone_number'],
-                            'email' => $originalUser['email'] ?: $newUser['email'],
-                            'password' => $newUser['password'] ?: $originalUser['password'], //相当于密码用新密码
-                        ]);
-                        $user_id = $originalUser['user_id'];
-                        $newUser->delete();
+                        UserModel::mergerUser($originalUser,$newUser);
                         //更新登录用户
-                        $this->loginState($originalUser);
+                        $this->loginState($newUser);
                     }
                 }else{
                     $weappAccount->allowField(true)->save([

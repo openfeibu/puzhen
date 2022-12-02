@@ -219,6 +219,7 @@ class Controller extends \think\Controller
         }
         if (!$user = UserModel::getUser($this->pc['user']['user_id'])) {
             if($is_force){
+                Session::clear('fbshop_pc');
                 throw new NotAuthException(['msg' => '没有找到用户信息']);
             }
             return false;

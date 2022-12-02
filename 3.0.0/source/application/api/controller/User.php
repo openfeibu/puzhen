@@ -26,7 +26,16 @@ class User extends Controller
             'token' => $model->getToken()
         ]);
     }
-
+    //静默登录
+    public function code()
+    {
+        $model = new UserModel;
+        $user_id = $model->code($this->request->post());
+        return $this->renderSuccess([
+            'user_id' => $user_id,
+            'token' => $user_id ? $model->getToken() : ''
+        ]);
+    }
     /**
      * 当前用户详情
      * @return array

@@ -55,12 +55,29 @@ class User extends UserModel
      */
     public function login($post)
     {
+        $session['openid'] = 'oV20U586VSmIV_UiKTC4sNCBxP2E';
+                    $userInfo = [
+                'open_id' => 'oV20U586VSmIV_UiKTC4sNCBxP2E',
+                'union_id' => 'olT6O59tHxnM_sITNCYrbU7RENFw',
+                'nickName' => 'G',
+                'avatarUrl' => 'https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJUzv6S9wroyYD3mlLrBU0b6CfbpJJicibJeQf9vsK1EReVb9vaJKL1jcDaGZIiaR1ZRPZicxclmoWZfw/132'
+            ];
+        $user_id = $this->register($userInfo['open_id'], $userInfo['union_id'], $userInfo);
+
+        // 生成token (session3rd)
+        $session['user_id'] = $user_id;
+        $this->token = $this->token($session['openid']);
+        // 记录缓存, 7天
+        Cache::set($this->token, $session, 86400 * 7);
+        return $user_id;
+
         // 微信登录 获取session_key
         $session = $this->wxlogin($post['code']);
         // 自动注册用户
         $refereeId = $post['referee_id'] ?? null;
         $userInfo = json_decode(htmlspecialchars_decode($post['user_info']), true);
         $user_id = $this->register($session['openid'], $session['unionid'], $userInfo, $refereeId);
+
         // 生成token (session3rd)
         $session['user_id'] = $user_id;
         $this->token = $this->token($session['openid']);
@@ -69,6 +86,28 @@ class User extends UserModel
         return $user_id;
     }
 
+    public function code($post)
+    {
+        // 微信登录 获取session_key
+        $session = $this->wxlogin($post['code']);
+        $weappAccount = UserWechatAccountModel::detail(['open_id' => $session['openid'],'type' => 'weapp','user_id' => ['>','0']]);
+        if(!$weappAccount)
+        {
+            return false;
+        }
+        $user = self::detail(['user_id' => $weappAccount['user_id']]);
+        if(!$user)
+        {
+            return false;
+        }
+        // 生成token (session3rd)
+        $session['user_id'] = $user['user_id'];
+        $this->token = $this->token($session['openid']);
+        // 记录缓存, 7天
+        Cache::set($this->token, $session, 86400 * 7);
+        return $user['user_id'];
+
+    }
     /**
      * 获取token
      * @return mixed
@@ -158,12 +197,11 @@ class User extends UserModel
                 $existUser = $user ? 1 : 0;
                 //$from_weapp_account = 1;
                 //如果也有微信网页用户，整合处理
-                /*
-                if($wechatWebAccount)
+                if($wechatWebAccount && $weappAccount['user_id'] != $wechatWebAccount['user_id'])
                 {
-                    $user_from_web = self::detail(['user_id' => $wechatWebAccount['user_id']]);
-
-                }*/
+                    $fromUser = self::detail(['user_id' => $wechatWebAccount['user_id']]);
+                    UserModel::mergerUser($fromUser,$user);
+                }
             }else{
                 //判断是否注册过网页
                 if($wechatWebAccount)

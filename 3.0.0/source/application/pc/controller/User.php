@@ -2,6 +2,7 @@
 
 namespace app\pc\controller;
 
+use app\common\library\wechat\WxQrLogin;
 use app\pc\model\User as UserModel;
 use app\pc\model\TeaQrcode as TeaQrcodeModel;
 use app\pc\model\Collection as CollectionModel;
@@ -80,5 +81,26 @@ class User extends Controller
         }
 
         return $this->renderSuccess([],lang('send_success'));
+    }
+
+    public function weixin_web_bind()
+    {
+        $data = $this->getData();
+        $WxQrLogin = new WxQrLogin;
+        if(isset($data['code']) && isset($data['state']))
+        {
+            $userInfo = $WxQrLogin->getInfo($data['code'],$data['state']);
+            $userModel = new UserModel();
+            if(!$userModel->wxRegisterBind($this->pc['user'],$userInfo))
+            {
+                return redirect('weixin_web_bind', [],302, ['msg' => $userModel->getError() ?: lang('register.failed'), 'code' => 0]);
+            }
+            return redirect('user/index');
+        }
+        $state = $WxQrLogin->getState();
+        $weixinLoginRedirectUrl = config('web_domain').'index.php?s=/pc/passport/weixin_web_bind';
+
+        return $this->fetch('weixin_web_bind',compact('state','weixinLoginRedirectUrl'));
+
     }
 }
