@@ -55,13 +55,30 @@ class User extends UserModel
      */
     public function login($post)
     {
+        /*
+         * 测试
+        $session['openid'] = 'oV20U586VSmIV_UiKTC4sNCBxP2E';
+                    $userInfo = [
+                'open_id' => 'oV20U586VSmIV_UiKTC4sNCBxP2E',
+                'union_id' => 'olT6O59tHxnM_sITNCYrbU7RENFw',
+                'nickName' => 'G',
+                'avatarUrl' => 'https://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJUzv6S9wroyYD3mlLrBU0b6CfbpJJicibJeQf9vsK1EReVb9vaJKL1jcDaGZIiaR1ZRPZicxclmoWZfw/132'
+            ];
+        $user_id = $this->register($userInfo['open_id'], $userInfo['union_id'], $userInfo);
 
+        // 生成token (session3rd)
+        $session['user_id'] = $user_id;
+        $this->token = $this->token($session['openid']);
+        // 记录缓存, 7天
+        Cache::set($this->token, $session, 86400 * 7);
+        return $user_id;
+        */
         // 微信登录 获取session_key
         $session = $this->wxlogin($post['code']);
         // 自动注册用户
         $refereeId = $post['referee_id'] ?? null;
-        $userInfo = json_decode(htmlspecialchars_decode($post['user_info']), true);
-        $user_id = $this->register($session['openid'], $session['unionid'], $userInfo, $refereeId);
+        //$userInfo = json_decode(htmlspecialchars_decode($post['user_info']), true);
+        $user_id = $this->register($session['openid'], $session['unionid'], [], $refereeId);
 
         // 生成token (session3rd)
         $session['user_id'] = $user_id;
@@ -152,7 +169,7 @@ class User extends UserModel
      * @throws \Exception
      * @throws \think\exception\DbException
      */
-    private function register($openId, $unionId, $data, $refereeId = null)
+    private function register($openId, $unionId, $data=[], $refereeId = null)
     {
         $weappAccount = UserWechatAccountModel::detail(['open_id' => $openId,'type' => 'weapp']);
         // 老系统没有union_id，做兼容更新

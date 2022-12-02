@@ -56,7 +56,17 @@
                 <div class="set-btn fr" onclick="$('.update-box-password').fadeIn(200)"><?= lang('setting') ?></div>
                 <?php endif;?>
             </div>
-
+            <?php if($think_lang=='zh-cn'): ?>
+                <div class="set-list-item clearfix">
+                    <div class="set-label fl"><?= lang('weixin_bind') ?><?= lang(':') ?></div>
+                    <?php if($webAccount): ?>
+                        <div class="set-con fl"><?= $webAccount['nickName']; ?></div>
+                    <?php else: ?>
+                        <div class="set-con fl"></div>
+                        <div class="set-btn fr" onclick="window.location.href='<?= url('user/weixin_web_bind')?>';"><?= lang('bind') ?></div>
+                    <?php endif;?>
+                </div>
+            <?php endif;?>
         </div>
         <div class="loginout-btn" onclick="window.location.href='<?= url('passport/logout') ?>'"><?= lang('logout') ?></div>
 

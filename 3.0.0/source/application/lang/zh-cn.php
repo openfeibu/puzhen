@@ -32,6 +32,7 @@ return [
 
     'wechat_public_account' => '公众号',
 
+    'weixin_bind' => '微信绑定',
     'weixin_qrcode_bind' => '微信扫码绑定',
     'weixin_qrcode_login' => '微信扫码登录',
     'weixin_qrcode_reg' => '微信扫码注册',

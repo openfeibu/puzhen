@@ -3,6 +3,7 @@
 namespace app\pc\controller;
 
 use app\common\library\wechat\WxQrLogin;
+use app\common\model\UserWechatAccount;
 use app\pc\model\User as UserModel;
 use app\pc\model\TeaQrcode as TeaQrcodeModel;
 use app\pc\model\Collection as CollectionModel;
@@ -50,7 +51,8 @@ class User extends Controller
         $collectionCount = $collectionModel->where('user_id',$this->user['user_id'])->where('collectionable_type','Goods')->count();
         $teaQrcodeModel = new TeaQrcodeModel;
         $teaQrCodeCount = $teaQrcodeModel->where('user_id',$this->user['user_id'])->count();
-        return $this->fetch('detail',compact('teaQrCodeCount','collectionCount'));
+        $webAccount = UserWechatAccount::detail(['user_id' => $this->user['user_id'],'type' => 'web']);
+        return $this->fetch('detail',compact('teaQrCodeCount','collectionCount','webAccount'));
     }
 
     /**
