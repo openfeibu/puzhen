@@ -52,7 +52,11 @@ class User extends Controller
         $teaQrcodeModel = new TeaQrcodeModel;
         $teaQrCodeCount = $teaQrcodeModel->where('user_id',$this->user['user_id'])->count();
         $webAccount = UserWechatAccount::detail(['user_id' => $this->user['user_id'],'type' => 'web']);
-        return $this->fetch('detail',compact('teaQrCodeCount','collectionCount','webAccount'));
+
+        $weixinLoginRedirectUrl = urlencode(config('web_domain').'index.php?s=/pc/user/detail');
+        $appid =
+        $weixinLoginRedirectUrl = "https://open.weixin.qq.com/connect/qrconnect?appid=APPID&redirect_uri=$weixinLoginRedirectUrl&response_type=code&scope=snsapi_login&state=1#wechat_redirect";
+        return $this->fetch('detail',compact('teaQrCodeCount','collectionCount','webAccount','weixinLoginRedirectUrl'));
     }
 
     /**

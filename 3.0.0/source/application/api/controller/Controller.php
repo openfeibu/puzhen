@@ -5,6 +5,7 @@ namespace app\api\controller;
 use app\api\model\User as UserModel;
 use app\api\model\Wxapp as WxappModel;
 use app\common\exception\BaseException;
+use app\common\exception\NotAuthException;
 
 /**
  * API控制器基类
@@ -75,7 +76,9 @@ class Controller extends \think\Controller
             return false;
         }
         if (!$user = UserModel::getUser($token)) {
-            $is_force && $this->throwError('没有找到用户信息', -1);
+            if($is_force){
+                throw new NotAuthException(['msg' => '没有找到用户信息']);
+            }
             return false;
         }
         return $user;
