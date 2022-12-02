@@ -17,7 +17,7 @@ class WxQrLogin extends WxBase
 {
     //配置APP参数
 
-    private $re_url        = '';
+    public $re_url        = '';
     private $state         = 'state';
     private $openid        = '';
     private $code        = '';
@@ -30,8 +30,8 @@ class WxQrLogin extends WxBase
 
     public function getCode()
     {
-        $this->getState();
-        $url = 'https://open.weixin.qq.com/connect/qrconnect?appId='.$this->appId.'&redirect_uri='.urlencode($this->re_url).'&response_type=code&scope=snsapi_login&state='.$_SESSION[$this->state].'#wechat_redirect';
+        $state = $this->getState();
+        $url = 'https://open.weixin.qq.com/connect/qrconnect?appId='.$this->appId.'&redirect_uri='.urlencode($this->re_url).'&response_type=code&scope=snsapi_login&state='.$state.'#wechat_redirect';
         header('Location: '.$url);
     }
 
@@ -124,4 +124,5 @@ class WxQrLogin extends WxBase
             throw new BaseException(['msg' => '非法访问']);
         }
     }
+
 }

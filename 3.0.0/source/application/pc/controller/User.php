@@ -53,10 +53,7 @@ class User extends Controller
         $teaQrCodeCount = $teaQrcodeModel->where('user_id',$this->user['user_id'])->count();
         $webAccount = UserWechatAccount::detail(['user_id' => $this->user['user_id'],'type' => 'web']);
 
-        $weixinLoginRedirectUrl = urlencode(config('web_domain').'index.php?s=/pc/user/detail');
-        $appid =
-        $weixinLoginRedirectUrl = "https://open.weixin.qq.com/connect/qrconnect?appid=APPID&redirect_uri=$weixinLoginRedirectUrl&response_type=code&scope=snsapi_login&state=1#wechat_redirect";
-        return $this->fetch('detail',compact('teaQrCodeCount','collectionCount','webAccount','weixinLoginRedirectUrl'));
+        return $this->fetch('detail',compact('teaQrCodeCount','collectionCount','webAccount'));
     }
 
     /**
@@ -99,14 +96,13 @@ class User extends Controller
             $userModel = new UserModel();
             if(!$userModel->wxRegisterBind($this->pc['user'],$userInfo))
             {
-                return redirect('weixin_web_bind', [],302, ['msg' => $userModel->getError() ?: lang('register.failed'), 'code' => 0]);
+                return redirect('user/detail', [],302, ['msg' => $userModel->getError() ?: lang('register.failed'), 'code' => 0]);
             }
-            return redirect('user/index');
+            return redirect('user/detail');
+        }else{
+            $WxQrLogin->re_url = config('web_domain').'index.php?s=/pc/user/weixin_web_bind';
+            return $WxQrLogin->getCode();
         }
-        $state = $WxQrLogin->getState();
-        $weixinLoginRedirectUrl = config('web_domain').'index.php?s=/pc/passport/weixin_web_bind';
-
-        return $this->fetch('weixin_web_bind',compact('state','weixinLoginRedirectUrl'));
 
     }
 }
