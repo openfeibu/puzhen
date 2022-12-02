@@ -50,13 +50,7 @@ class ExceptionHandler extends Handle
 
         }
 
-        if(Request::instance()->isAjax() || strpos(Request::instance()->contentType(),'json'))
-        {
-            return json(['msg' => $this->message, 'code' => $this->code]);
-        }
-        else{
-            return parent::render($e);
-        }
+        return json(['msg' => $this->message, 'code' => $this->code]);
 
     }
 
