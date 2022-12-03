@@ -259,18 +259,9 @@ class User extends UserModel
         $verifyCodeService = new VerifyCodeService();
         $this->startTrans();
         try {
-            switch ($data['type'])
+            switch ($data['type'] ?? 'info')
             {
-                case 'info':
-                    $allows = ['nickName','avatarUrl'];
-                    foreach ($allows as $allow)
-                    {
-                        if(isset($data[$allow]) && $data[$allow])
-                        {
-                            $updateData[$allow] = $data[$allow];
-                        }
-                    }
-                    break;
+
                 case 'bind_phone_number':
                     if($this['phone_number']){
                         $this->error = lang('illegal_action');
@@ -329,6 +320,16 @@ class User extends UserModel
                         return false;
                     }
                     $updateData['password'] = fbshop_hash($data['password']);
+                    break;
+                case 'info':
+                    $allows = ['nickName','avatarUrl'];
+                    foreach ($allows as $allow)
+                    {
+                        if(isset($data[$allow]) && $data[$allow])
+                        {
+                            $updateData[$allow] = $data[$allow];
+                        }
+                    }
                     break;
             }
             // 更新管理员信息

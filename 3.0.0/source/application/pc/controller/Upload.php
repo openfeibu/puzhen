@@ -14,7 +14,7 @@ use app\pc\model\Setting as SettingModel;
 class Upload extends Controller
 {
     private $config;
-
+    private $user;
     /**
      * 构造方法
      * @throws \app\common\exception\BaseException
@@ -27,6 +27,7 @@ class Upload extends Controller
         parent::_initialize();
         // 存储配置信息
         $this->config = SettingModel::getItem('storage');
+        $this->user = $this->getUser();
     }
 
     /**
@@ -43,7 +44,7 @@ class Upload extends Controller
         $StorageDriver->setUploadFile('iFile');
         // 上传图片
         if (!$StorageDriver->upload()) {
-            return json(['code' => 0, 'msg' => '图片上传失败' . $StorageDriver->getError()]);
+            return $this->renderError([],lang('upload_image.failed'. ' '.$StorageDriver->getError()));
         }
 
         // 图片上传路径
@@ -51,26 +52,37 @@ class Upload extends Controller
         // 图片信息
         $fileInfo = $StorageDriver->getFileInfo();
         // 添加文件库记录
-        $uploadFile = $this->addUploadFile($group_id, $fileName, $fileInfo, 'image');
+        $uploadFile = $this->addUploadFile($fileName, $fileInfo, 'image');
         // 图片上传成功
-        return json(['code' => 1, 'msg' => '图片上传成功', 'data' => $uploadFile]);
+        return $this->renderSuccess($uploadFile->visible(['file_id','file_path']),lang('upload_image.success'));
     }
 
     /**
      * 添加文件库上传记录
-     * @param $group_id
      * @param $fileName
      * @param $fileInfo
      * @param $fileType
      * @return array
      */
-    private function addUploadFile($group_id, $fileName, $fileInfo, $fileType)
+    private function addUploadFile($fileName, $fileInfo, $fileType)
     {
         // 存储引擎
         $storage = $this->config['default'];
         // 存储域名
-        $fileUrl = isset($this->config['engine'][$storage]['domain'])
-            ? $this->config['engine'][$storage]['domain'] : '';
+        $fileUrl = $this->config['engine'][$storage]['domain'] ?? '';
+        $model = new UploadFile;
+        $model->add([
+            'storage' => $storage,
+            'file_url' => $fileUrl,
+            'file_name' => $fileName,
+            'file_size' => $fileInfo['size'],
+            'file_type' => $fileType,
+            'extension' => pathinfo($fileInfo['name'], PATHINFO_EXTENSION),
+            'is_user' => 1,
+            'user_id' => $this->user['user_id'],
+        ]);
+        return $model;
+        /*
         if ($storage === 'local') {
             $filePath = base_url() . 'uploads/' . $fileName;
         }else{
@@ -87,6 +99,7 @@ class Upload extends Controller
             'file_path' => $filePath,
             'extension' => pathinfo($fileInfo['name'], PATHINFO_EXTENSION),
         ];
+        */
     }
 
 }

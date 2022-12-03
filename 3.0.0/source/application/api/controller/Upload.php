@@ -43,7 +43,7 @@ class Upload extends Controller
         $StorageDriver->setUploadFile('iFile');
         // 上传图片
         if (!$StorageDriver->upload()) {
-            return json(['code' => 0, 'msg' => '图片上传失败' . $StorageDriver->getError()]);
+            return $this->renderError('图片上传失败'. ' '.$StorageDriver->getError());
         }
         // 图片上传路径
         $fileName = $StorageDriver->getFileName();
@@ -52,7 +52,7 @@ class Upload extends Controller
         // 添加文件库记录
         $uploadFile = $this->addUploadFile($fileName, $fileInfo, 'image');
         // 图片上传成功
-        return json(['code' => 1, 'msg' => '图片上传成功', 'data' => $uploadFile->visible(['file_id'])]);
+        return $this->renderSuccess($uploadFile->visible(['file_id','file_path']),'图片上传成功');
     }
 
     /**
@@ -66,9 +66,8 @@ class Upload extends Controller
     {
         // 存储引擎
         $storage = $this->config['default'];
-        // 存储域名
-        $fileUrl = isset($this->config['engine'][$storage]['domain'])
-            ? $this->config['engine'][$storage]['domain'] : '';
+        // 存储域名s
+        $fileUrl = $this->config['engine'][$storage]['domain'] ?? '';
         // 添加文件库记录
         $model = new UploadFile;
         $model->add([
@@ -78,7 +77,8 @@ class Upload extends Controller
             'file_size' => $fileInfo['size'],
             'file_type' => $fileType,
             'extension' => pathinfo($fileInfo['name'], PATHINFO_EXTENSION),
-            'is_user' => 1
+            'is_user' => 1,
+            'user_id' => $this->user['user_id'],
         ]);
         return $model;
     }

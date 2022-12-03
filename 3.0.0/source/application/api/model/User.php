@@ -2,6 +2,7 @@
 
 namespace app\api\model;
 
+use app\common\service\VerifyCode as VerifyCodeService;
 use think\Cache;
 use app\common\library\wechat\WxUser;
 use app\common\exception\BaseException;
@@ -9,6 +10,7 @@ use app\common\model\User as UserModel;
 use app\api\model\dealer\Referee as RefereeModel;
 use app\api\model\dealer\Setting as DealerSettingModel;
 use app\api\model\UserWechatAccount as UserWechatAccountModel;
+use think\Session;
 
 /**
  * 用户模型类
@@ -378,4 +380,42 @@ class User extends UserModel
         return $menus;
     }
 
+    /**
+     * 更新信息
+     * @param $data
+     * @return bool
+     * @throws BaseException
+     */
+    public function renew($data)
+    {
+        $updateData = [];
+        $this->startTrans();
+        try {
+            switch ($data['type'] ?? 'info')
+            {
+                case 'info':
+                    $allows = ['nickName','avatarUrl'];
+                    foreach ($allows as $allow)
+                    {
+                        if(isset($data[$allow]) && $data[$allow])
+                        {
+                            $updateData[$allow] = $data[$allow];
+                        }
+                    }
+                    break;
+            }
+            // 更新管理员信息
+            if ($this->save($updateData) === false) {
+                return false;
+            }
+
+            $this->commit();
+            return true;
+        }catch (\Exception $e){
+            $this->rollback();
+            $this->error = $e->getMessage();
+            return false;
+        }
+
+    }
 }

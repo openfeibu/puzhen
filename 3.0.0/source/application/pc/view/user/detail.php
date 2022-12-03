@@ -79,7 +79,6 @@
         <div class="update-box-title">修改用户名</div>
         <div class="update-box-form">
             <form action="#" onsubmit="return changeName()" id="update-nickname-form">
-                <input type="hidden" name="type" value="info">
                 <div class="update-box-form-input">
                     <input name="nickName" type="text" placeholder="" value="<?= $user['nickName'] ?>"/>
                 </div>
@@ -422,7 +421,7 @@
                 $.ajax({
                     url: url,
                     type: 'post',
-                    data:{'type':'info','avatarUrl':response.data.file_path},
+                    data:{'avatarUrl':response.data.file_path},
                     success: function(data) { // data 保存提交后返回的数据，一般为 json 数据
                         layer.close(load);
                         if (data.code === 1) {

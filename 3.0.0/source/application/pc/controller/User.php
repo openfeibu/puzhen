@@ -57,7 +57,7 @@ class User extends Controller
     }
 
     /**
-     * 更新当前管理员信息
+     * 更新当前用户信息
      * @return array|mixed
      * @throws \think\exception\DbException
      */

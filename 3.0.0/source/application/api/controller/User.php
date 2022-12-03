@@ -48,5 +48,20 @@ class User extends Controller
         $userInfo = $this->getUser();
         return $this->renderSuccess(compact('userInfo'));
     }
+    /**
+     * 更新当前用户信息
+     * @return array|mixed
+     * @throws \think\exception\DbException
+     */
+    public function renew()
+    {
+        $model = $this->getUser();
+        // 管理员详情
 
+        if ($model->renew($this->postData())) {
+            return $this->renderSuccess([],lang('更新失败'));
+        }
+        return $this->renderError([],$model->getError() ?: '更新成功');
+
+    }
 }

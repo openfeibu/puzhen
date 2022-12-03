@@ -172,4 +172,7 @@ return [
     'no.' => '第',
     'no.temp' => '泡温度',
     'no.seconds' => '泡秒数',
+
+    'upload_image.success' => '图片上传成功',
+    'upload_image.failed' => '图片上传失败',
 ];
