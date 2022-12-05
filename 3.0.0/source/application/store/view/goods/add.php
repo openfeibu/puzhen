@@ -69,10 +69,28 @@
                                     <div class="am-form-file">
                                         <div class="am-form-file">
                                             <button type="button"
-                                                    class="upload-file am-btn am-btn-secondary am-radius">
+                                                    class="upload-file upload-file-image am-btn am-btn-secondary am-radius">
                                                 <i class="am-icon-cloud-upload"></i> 选择图片
                                             </button>
-                                            <div class="uploader-list am-cf">
+                                            <div class="uploader-list uploader-list-image am-cf">
+                                            </div>
+                                        </div>
+                                        <div class="help-block am-margin-top-sm">
+                                            <small>尺寸750x750像素以上，大小2M以下 (可拖拽图片调整显示顺序 )</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">产品英文图片 </label>
+                                <div class="am-u-sm-9 am-u-end">
+                                    <div class="am-form-file">
+                                        <div class="am-form-file">
+                                            <button type="button"
+                                                    class="upload-file upload-file-en-image am-btn am-btn-secondary am-radius">
+                                                <i class="am-icon-cloud-upload"></i> 选择图片
+                                            </button>
+                                            <div class="uploader-list uploader-list-en-image am-cf">
                                             </div>
                                         </div>
                                         <div class="help-block am-margin-top-sm">
@@ -371,8 +389,15 @@
             initialFrameHeight: 600
         });
         // 选择图片
-        $('.upload-file').selectImages({
+        $('.upload-file-image').selectImages({
             name: 'goods[images][]'
+            , imagesList: '.uploader-list-image'
+            , multiple: true
+        });
+        // 选择图片
+        $('.upload-file-en-image').selectImages({
+            name: 'goods[en_images][]'
+            , imagesList: '.uploader-list-en-image'
             , multiple: true
         });
 
@@ -385,6 +410,8 @@
                 'background-color': '#fff'
             }
         });
+
+
 
         // 切换单/多规格
         $('input:radio[name="goods[spec_type]"]').change(function (e) {

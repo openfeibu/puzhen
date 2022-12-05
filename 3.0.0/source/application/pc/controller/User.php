@@ -33,8 +33,7 @@ class User extends Controller
         $list = $model->getList($this->user['user_id'],12);
         $teaQrCodeCount = $list->total();
 
-        $collectionModel = new CollectionModel;
-        $collectionCount = $collectionModel->where('user_id',$this->user['user_id'])->where('collectionable_type','Goods')->count();
+        $collectionCount = CollectionModel::collectionCount($this->user['user_id']);
 
         return $this->fetch('index',compact('list','teaQrCodeCount','collectionCount'));
     }
@@ -47,8 +46,8 @@ class User extends Controller
      */
     public function detail()
     {
-        $collectionModel = new CollectionModel;
-        $collectionCount = $collectionModel->where('user_id',$this->user['user_id'])->where('collectionable_type','Goods')->count();
+        $collectionCount = CollectionModel::collectionCount($this->user['user_id']);
+
         $teaQrcodeModel = new TeaQrcodeModel;
         $teaQrCodeCount = $teaQrcodeModel->where('user_id',$this->user['user_id'])->count();
         $webAccount = UserWechatAccount::detail(['user_id' => $this->user['user_id'],'type' => 'web']);

@@ -71,11 +71,14 @@ class Collection extends CollectionModel
             case 'Goods':
                 $goodsModel = new GoodsModel;
                 $list = $goodsModel->alias('goods')
+                    ->join('category','category.category_id = goods.category_id')
                     ->with(['category', 'image.file', 'sku'])
                     ->join('collection','goods.goods_id = collection.collectionable_id')
                     ->where('collection.collectionable_type',$type)
                     ->where('collection.user_id',$user['user_id'])
                     ->where('goods.is_delete',0)
+                    ->where('goods.show_web',1)
+                    ->where('category.show_web',1)
                     ->where('goods.goods_status',10)
                     ->order(['collection.create_time' => 'desc'])
                     ->paginate($listRows, false, [

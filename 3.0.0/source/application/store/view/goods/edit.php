@@ -73,10 +73,10 @@
                                 <div class="am-u-sm-9 am-u-end">
                                     <div class="am-form-file">
                                         <button type="button"
-                                                class="upload-file am-btn am-btn-secondary am-radius">
+                                                class="upload-file upload-file-image am-btn am-btn-secondary am-radius">
                                             <i class="am-icon-cloud-upload"></i> 选择图片
                                         </button>
-                                        <div class="uploader-list am-cf">
+                                        <div class="uploader-list uploader-list-image am-cf">
                                             <?php foreach ($model['image'] as $key => $item): ?>
                                                 <div class="file-item">
                                                     <a href="<?= $item['file_path'] ?>" title="点击查看大图" target="_blank">
@@ -94,6 +94,34 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">产品英文图片 </label>
+                                <div class="am-u-sm-9 am-u-end">
+                                    <div class="am-form-file">
+                                        <button type="button"
+                                                class="upload-file upload-file-en-image am-btn am-btn-secondary am-radius">
+                                            <i class="am-icon-cloud-upload"></i> 选择图片
+                                        </button>
+                                        <div class="uploader-list uploader-list-en-image am-cf">
+                                            <?php foreach ($model['en_image'] as $key => $item): ?>
+                                                <div class="file-item">
+                                                    <a href="<?= $item['file_path'] ?>" title="点击查看大图" target="_blank">
+                                                        <img src="<?= $item['file_path'] ?>">
+                                                    </a>
+                                                    <input type="hidden" name="goods[en_images][]"
+                                                           value="<?= $item['image_id'] ?>">
+                                                    <i class="iconfont icon-shanchu file-item-delete"></i>
+                                                </div>
+                                            <?php endforeach; ?>
+                                        </div>
+                                    </div>
+                                    <div class="help-block am-margin-top-sm">
+                                        <small>尺寸750x750像素以上，大小2M以下 (可拖拽图片调整显示顺序 )</small>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label">产品卖点 </label>
                                 <div class="am-u-sm-9 am-u-end">
@@ -391,8 +419,15 @@
             initialFrameHeight: 600
         });
         // 选择图片
-        $('.upload-file').selectImages({
+        $('.upload-file-image').selectImages({
             name: 'goods[images][]'
+            , imagesList: '.uploader-list-image'
+            , multiple: true
+        });
+        // 选择图片
+        $('.upload-file-en-image').selectImages({
+            name: 'goods[en_images][]'
+            , imagesList: '.uploader-list-en-image'
             , multiple: true
         });
 

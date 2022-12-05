@@ -91,6 +91,14 @@ class Goods extends BaseModel
     {
         return $this->hasMany('GoodsImage')->order(['id' => 'asc']);
     }
+    /**
+     * 关联产品英文图片表
+     * @return \think\model\relation\HasMany
+     */
+    public function enImage()
+    {
+        return $this->hasMany('GoodsEnImage')->order(['id' => 'asc']);
+    }
 
     /**
      * 关联运费模板表
@@ -194,7 +202,7 @@ class Goods extends BaseModel
                 "$minRefPriceSql AS goods_min_ref_price",
                 "$maxRefPriceSql AS goods_max_ref_price"
             ])
-            ->with(['category', 'image.file', 'sku','goods_tea_qrcode' => ['tea_qrcode']])
+            ->with(['category', 'image.file','en_image.file', 'sku','goods_tea_qrcode' => ['tea_qrcode']])
             ->where('factory.is_delete', '=', 0)
             ->where('goods.is_delete', '=', 0)
             ->where($filter)
@@ -226,6 +234,7 @@ class Goods extends BaseModel
         foreach ($dataSource as &$goods) {
             // 产品主图
             $goods['goods_image'] = $goods['image'][0]['file_path'] ?? '';
+            $goods['goods_en_image'] = $goods['en_image'][0]['file_path'] ?? '';
             // 产品默认规格
             $goods['goods_sku'] = $goods['sku'][0];
             // 回调函数
@@ -254,7 +263,7 @@ class Goods extends BaseModel
         // 获取产品列表数据
 //        ['category', 'image.file', 'sku', 'spec_rel.spec', 'delivery.rule']
         $data = $this->field(['content'], true)
-            ->with(['category', 'image.file', 'sku'])
+            ->with(['category', 'image.file', 'en_image.file','sku'])
             ->where($filter)
             ->select();
         // 整理列表数据并返回
@@ -349,6 +358,7 @@ class Goods extends BaseModel
         $model = (new static)->with([
             'category',
             'image.file',
+            'en_image.file',
             'sku.image',
             'spec_rel.spec',
         ])->where('goods_id', '=', $goodsId)

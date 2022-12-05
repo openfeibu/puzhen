@@ -16,5 +16,15 @@ use app\common\model\Goods;
  */
 class Collection extends ApiCollectionModel
 {
-
+    public static function collectionCount($user_id)
+    {
+        return self::alias('collection')
+            ->join('goods','goods.goods_id = collection.collectionable_id')
+            ->join('category','category.category_id = goods.category_id')
+            ->where('category.show_web',1)
+            ->where('goods.show_web',1)
+            ->where('collection.user_id',$user_id)
+            ->where('collectionable_type','Goods')
+            ->count();
+    }
 }

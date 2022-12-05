@@ -43,6 +43,10 @@ class Goods extends GoodsModel
                 // 产品图片
                 $this->addGoodsImages($data['images']);
             }
+            if (isset($data['en_images']) && !empty($data['en_images'])) {
+                // 产品图片
+                $this->addGoodsEnImages($data['en_images']);
+            }
             $this->commit();
             return true;
         } catch (\Exception $e) {
@@ -71,6 +75,18 @@ class Goods extends GoodsModel
         }, $images);
         return $this->image()->saveAll($data);
     }
+    private function addGoodsEnImages($images)
+    {
+        $this->enImage()->delete();
+        $data = array_map(function ($image_id) {
+            return [
+                'image_id' => $image_id,
+                'wxapp_id' => self::$wxapp_id,
+                'factory_id' => self::$factory_id
+            ];
+        }, $images);
+        return $this->enImage()->saveAll($data);
+    }
 
     /**
      * 编辑产品
@@ -95,6 +111,8 @@ class Goods extends GoodsModel
             $this->addGoodsSpec($data, true);
             // 产品图片
             $this->addGoodsImages($data['images']);
+
+            $this->addGoodsEnImages($data['en_images']);
             return true;
         });
     }
