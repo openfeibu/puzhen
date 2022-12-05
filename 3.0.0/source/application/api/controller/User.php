@@ -58,10 +58,10 @@ class User extends Controller
         $model = $this->getUser();
         // 管理员详情
 
-        if (!$model->renew($this->postData())) {
-            return $this->renderSuccess([],lang('更新失败'));
+        if ($model->renew($this->postData())) {
+            return $this->renderSuccess([],'更新成功');
         }
-        return $this->renderError([],$model->getError() ?: '更新成功');
+        return $this->renderError([],$model->getError() ?: '更新失败');
 
     }
 }
