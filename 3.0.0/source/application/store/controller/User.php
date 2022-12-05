@@ -14,16 +14,13 @@ class User extends Controller
 {
     /**
      * 用户列表
-     * @param string $nickName 昵称
-     * @param int $gender 性别
-     * @param int $grade 会员等级
      * @return mixed
      * @throws \think\exception\DbException
      */
-    public function index($nickName = '', $gender = null, $grade = null)
+    public function index()
     {
         $model = new UserModel;
-        $list = $model->getList($nickName, $gender, $grade);
+        $list = $model->getList($this->request->param());
         // 会员等级列表
         $gradeList = GradeModel::getUsableList();
         return $this->fetch('index', compact('list', 'gradeList'));
@@ -78,6 +75,21 @@ class User extends Controller
             return $this->renderSuccess('操作成功');
         }
         return $this->renderError($model->getError() ?: '操作失败');
+    }
+
+    /**
+     * @param $user_id
+     * @param boolean $permissionDistributor
+     * @return array
+     */
+    public function permissionDistributor($user_id, $permissionDistributor)
+    {
+        // 用户详情
+        $model = UserModel::detail($user_id);
+        if (!$model->setPermissionDistributor($user_id,$permissionDistributor)) {
+            return $this->renderError('操作失败');
+        }
+        return $this->renderSuccess('操作成功');
     }
 
 }

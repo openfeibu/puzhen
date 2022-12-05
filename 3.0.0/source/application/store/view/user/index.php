@@ -35,6 +35,20 @@
                                     </div>
                                     <div class="am-form-group am-fl">
                                         <div class="am-input-group am-input-group-sm tpl-form-border-form">
+                                            <input type="text" class="am-form-field" name="phone_number"
+                                                   placeholder="请输入手机号码"
+                                                   value="<?= $request->get('phone_number') ?>">
+                                        </div>
+                                    </div>
+                                    <div class="am-form-group am-fl">
+                                        <div class="am-input-group am-input-group-sm tpl-form-border-form">
+                                            <input type="text" class="am-form-field" name="email"
+                                                   placeholder="请输入邮箱"
+                                                   value="<?= $request->get('email') ?>">
+                                        </div>
+                                    </div>
+                                    <div class="am-form-group am-fl">
+                                        <div class="am-input-group am-input-group-sm tpl-form-border-form">
                                             <input type="text" class="am-form-field" name="nickName"
                                                    placeholder="请输入微信昵称"
                                                    value="<?= $request->get('nickName') ?>">
@@ -44,6 +58,7 @@
                                             </div>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                         </form>
@@ -58,6 +73,7 @@
                                 <th>微信昵称</th>
                                 <th>手机号码</th>
                                 <th>邮箱</th>
+                                <th>服务网点权限</th>
                                 <!--
                                 <th>性别</th>
                                 <th>国家</th>
@@ -80,6 +96,14 @@
                                     <td class="am-text-middle"><?= $item['nickName'] ?></td>
                                     <td class="am-text-middle"><?= $item['phone_number'] ?></td>
                                     <td class="am-text-middle"><?= $item['email'] ?></td>
+                                    <td class="am-text-middle">
+                                           <span class="j-state am-badge x-cur-p
+                                           am-badge-<?= $item['permission_distributor'] == 1 ? 'success' : 'warning' ?>"
+                                                 data-id="<?= $item['user_id'] ?>"
+                                                 data-permission_distributor="<?= $item['permission_distributor'] ?>">
+                                              <?= $item['permission_distributor'] == 1 ? '是' : '否' ?>
+                                           </span>
+                                    </td>
                                     <!--
                                     <td class="am-text-middle"><?= $item['gender'] ?></td>
                                     <td class="am-text-middle"><?= $item['country'] ?: '--' ?></td>
@@ -347,6 +371,25 @@
         // 删除元素
         var url = "<?= url('user/delete') ?>";
         $('.j-delete').delete('user_id', url, '删除后不可恢复，确定要删除吗？');
+
+        // 产品状态
+        $('.j-state').click(function () {
+            var data = $(this).data();
+            layer.confirm('确定' + (parseInt(data.state) === 1 ? '取消' : '赋予') + '该用户查看服务网点的权限吗？'
+                , {title: '友情提示'}
+                , function (index) {
+                    $.post("<?= url('user/permissionDistributor') ?>"
+                        , {
+                            user_id: data.id,
+                            permissionDistributor: Number(!(parseInt(data.permission_distributor) === 1))
+                        }
+                        , function (result) {
+                            result.code === 1 ? $.show_success(result.msg, result.url)
+                                : $.show_error(result.msg);
+                        });
+                    layer.close(index);
+                });
+        });
 
     });
 </script>

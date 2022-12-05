@@ -33,17 +33,14 @@ class User extends Controller
     /**
      * 用户列表
      * @return mixed
-     * @param string $nickName 昵称
-     * @param int $gender 性别
-     * @param int $grade 会员等级
      * @throws \think\exception\DbException
      */
-    public function lists($nickName = '', $gender = null, $grade = null)
+    public function lists()
     {
         // 会员等级列表
         $gradeList = GradeModel::getUsableList();
         // 用户列表
-        $list = $this->model->getList($nickName, $gender, $grade);
+        $list = $this->model->getList($this->request->param());
         return $this->fetch('list', compact('list', 'gradeList'));
     }
 

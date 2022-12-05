@@ -37,22 +37,31 @@ class User extends UserModel
 
     /**
      * 获取用户列表
-     * @param string $nickName 昵称
-     * @param int $gender 性别
-     * @param int $grade 会员等级
+     * @param array $param 参数
      * @return \think\Paginator
      * @throws \think\exception\DbException
      */
-    public function getList($nickName = '', $gender = -1, $grade = null)
+    public function getList($param)
     {
-        // 检索：微信昵称
-        !empty($nickName) && $this->where('nickName', 'like', "%$nickName%");
+        // 产品列表获取条件
+        $params = array_merge([
+            'nickName' => '',
+            'gender' => -1,
+            'grade' => null,
+            'phone_number' => '',
+            'email' => '',
+        ], $param);
+
+        !empty($params['nickName']) && $this->where('nickName', 'like', "%".$params['nickName']."%");
+        !empty($params['phone_number']) && $this->where('phone_number', 'like', "%".$params['phone_number']."%");
+        !empty($params['email']) && $this->where('email', 'like', "%".$params['email']."%");
+
         // 检索：性别
-        if ($gender !== '' && $gender > -1) {
-            $this->where('gender', '=', (int)$gender);
+        if ($params['gender'] !== '' && $params['gender'] > -1) {
+            $this->where('gender', '=', (int)$params['gender']);
         }
         // 检索：会员等级
-        $grade > 0 && $this->where('grade_id', '=', (int)$grade);
+        $params['grade'] > 0 && $this->where('grade_id', '=', (int)$params['grade']);
         // 获取用户列表
         return $this->with(['grade'])
             ->where('is_delete', '=', '0')
@@ -203,6 +212,11 @@ class User extends UserModel
     public function setDecUserExpend($userId, $expendMoney)
     {
         return $this->where(['user_id' => $userId])->setDec('expend_money', $expendMoney);
+    }
+
+    public function setPermissionDistributor($userId,$permissionDistributor)
+    {
+        return $this->where(['user_id' => $userId])->update(['permission_distributor' => $permissionDistributor ? 1 : 0]) !== false;
     }
 
 }
