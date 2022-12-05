@@ -73,5 +73,9 @@ class Category extends CategoryModel
     {
         return Cache::rm('category_' . static::$wxapp_id);
     }
-
+    public function setShowWeb($showWeb)
+    {
+        $this->deleteCache();
+        return $this->allowField(true)->save(['show_web' => $showWeb ? 1 : 0]) !== false;
+    }
 }

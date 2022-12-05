@@ -26,6 +26,7 @@ class Goods extends Controller
         $param = array_merge($this->request->param(), [
             'status' => 10,
             'listRows' => 12,
+            'show_web' => 1,
         ]);
         $param['category_id'] = isset($param['category_id']) &&  $param['category_id'] ? $param['category_id'] : 0;
         $isAutoId = true;

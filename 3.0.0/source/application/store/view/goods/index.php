@@ -112,7 +112,7 @@
                                 <th>收藏量</th>
                                 <th>产品排序</th>
                                 <th>产品状态</th>
-                                <th>官网</th>
+                                <th>官网状态</th>
                                 <th>冲泡码</th>
                                 <th>添加时间</th>
                                 <th>操作</th>
@@ -150,7 +150,7 @@
                                            am-badge-<?= $item['show_web']  ? 'success' : 'warning' ?>"
                                                  data-id="<?= $item['goods_id'] ?>"
                                                  data-show_web="<?= $item['show_web'] ?>">
-                                                <?= $item['show_web'] ? '显示' : '隐藏' ?>
+                                                <?= $item['show_web'] ? '官网显示' : '官网隐藏' ?>
                                            </span>
                                     </td>
 
@@ -252,16 +252,16 @@
                     layer.close(index);
                 });
         });
-        // 产品状态
+
         $('.j-show_web').click(function () {
             var data = $(this).data();
-            layer.confirm('确定官网' + (parseInt(data.show_web) ? '显示' : '隐藏') + '该产品吗？'
+            layer.confirm('确定官网' + (parseInt(data.show_web) ? '隐藏' : '显示') + '该产品吗？'
                 , {title: '友情提示'}
                 , function (index) {
                     $.post("<?= url('goods/showWeb') ?>"
                         , {
                             goods_id: data.id,
-                            state: Number(!(parseInt(data.state) === 10))
+                            showWeb: Number(!(parseInt(data.show_web) === 1))
                         }
                         , function (result) {
                             result.code === 1 ? $.show_success(result.msg, result.url)

@@ -32,6 +32,7 @@
                                 <th>分类ID</th>
                                 <th>分类名称</th>
                                 <th>分类排序</th>
+                                <th>官网状态</th>
                                 <th>添加时间</th>
                                 <th>操作</th>
                             </tr>
@@ -42,6 +43,14 @@
                                     <td class="am-text-middle"><?= $first['category_id'] ?></td>
                                     <td class="am-text-middle"><?= $first['name'] ?> <?= $first['en_name'] ?></td>
                                     <td class="am-text-middle"><?= $first['sort'] ?></td>
+                                    <td class="am-text-middle">
+                                           <span class="j-show_web am-badge x-cur-p
+                                           am-badge-<?= $first['show_web']  ? 'success' : 'warning' ?>"
+                                                 data-id="<?= $first['category_id'] ?>"
+                                                 data-show_web="<?= $first['show_web'] ?>">
+                                                <?= $first['show_web'] ? '官网显示' : '官网隐藏' ?>
+                                           </span>
+                                    </td>
                                     <td class="am-text-middle"><?= $first['create_time'] ?></td>
                                     <td class="am-text-middle">
                                         <div class="tpl-table-black-operation">
@@ -65,6 +74,14 @@
                                         <td class="am-text-middle"><?= $two['category_id'] ?></td>
                                         <td class="am-text-middle">　-- <?= $two['name'] ?> <?= $two['en_name'] ?></td>
                                         <td class="am-text-middle"><?= $two['sort'] ?></td>
+                                        <td class="am-text-middle">
+                                           <span class="j-show_web am-badge x-cur-p
+                                           am-badge-<?= $two['show_web']  ? 'success' : 'warning' ?>"
+                                                 data-id="<?= $two['category_id'] ?>"
+                                                 data-show_web="<?= $two['show_web'] ?>">
+                                                <?= $two['show_web'] ? '官网显示' : '官网隐藏' ?>
+                                           </span>
+                                        </td>
                                         <td class="am-text-middle"><?= $two['create_time'] ?></td>
                                         <td class="am-text-middle">
                                             <div class="tpl-table-black-operation">
@@ -88,6 +105,14 @@
                                         <tr>
                                             <td class="am-text-middle"><?= $three['category_id'] ?></td>
                                             <td class="am-text-middle">　　　-- <?= $three['name'] ?> <?= $three['en_name'] ?></td>
+                                            <td class="am-text-middle">
+                                           <span class="j-show_web am-badge x-cur-p
+                                           am-badge-<?= $three['show_web']  ? 'success' : 'warning' ?>"
+                                                 data-id="<?= $three['category_id'] ?>"
+                                                 data-show_web="<?= $three['show_web'] ?>">
+                                                <?= $three['show_web'] ? '官网显示' : '官网隐藏' ?>
+                                           </span>
+                                            </td>
                                             <td class="am-text-middle"><?= $three['create_time'] ?></td>
                                             <td class="am-text-middle">
                                                 <div class="tpl-table-black-operation">
@@ -127,7 +152,23 @@
         // 删除元素
         var url = "<?= url('goods.category/delete') ?>";
         $('.item-delete').delete('category_id', url);
-
+        $('.j-show_web').click(function () {
+            var data = $(this).data();
+            layer.confirm('确定官网' + (parseInt(data.show_web) ? '隐藏' : '显示') + '该分类吗？'
+                , {title: '友情提示'}
+                , function (index) {
+                    $.post("<?= url('goods.category/showWeb') ?>"
+                        , {
+                            category_id: data.id,
+                            showWeb: Number(!(parseInt(data.show_web) === 1))
+                        }
+                        , function (result) {
+                            result.code === 1 ? $.show_success(result.msg, result.url)
+                                : $.show_error(result.msg);
+                        });
+                    layer.close(index);
+                });
+        });
     });
 </script>
 

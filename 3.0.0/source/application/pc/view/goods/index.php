@@ -9,16 +9,22 @@
         <div class="product-list-tab w1400 container">
             <ul class="clearfix">
                 <?php if (!empty($categoryList)): foreach ($categoryList as $first_key=> $first): ?>
+                <?php if($first['show_web']):?>
                 <li <?php if(isset($first['active']) && $first['active']): ?>class="active"<?php endif;?> category_id="<?= $first['category_id'] ?>"><?= $first[$prefix.'name'] ?: $first['name'] ?></li>
+                <?php endif; ?>
                 <?php endforeach; endif; ?>
             </ul>
 
             <?php if (!empty($categoryList)): foreach ($categoryList as $first_key => $first): ?>
+            <?php if($first['show_web']):?>
             <ol class="clearfix" <?php if(isset($first['active']) && $first['active']): ?>style="display:block"<?php endif;?> >
                 <?php if (isset($first['child'])): foreach ($first['child'] as $two_key => $two): ?>
+                <?php if($two['show_web']):?>
                 <li <?php if(isset($two['active']) && $two['active']): ?>class="active"<?php endif;?> category_id="<?= $two['category_id'] ?>"><?= $two[$prefix.'name'] ?: $two['name'] ?></li>
+                <?php endif; ?>
                 <?php endforeach; endif; ?>
             </ol>
+            <?php endif; ?>
             <?php endforeach; endif; ?>
 
         </div>

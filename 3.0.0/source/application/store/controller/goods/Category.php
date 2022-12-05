@@ -80,4 +80,12 @@ class Category extends Controller
         return $this->renderError($model->getError() ?: '更新失败');
     }
 
+    public function showWeb($category_id, $showWeb)
+    {
+        $model = CategoryModel::get($category_id);
+        if (!$model->setShowWeb($showWeb)) {
+            return $this->renderError('操作失败');
+        }
+        return $this->renderSuccess('操作成功');
+    }
 }
