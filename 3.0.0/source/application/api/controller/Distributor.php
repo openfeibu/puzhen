@@ -18,18 +18,25 @@ class Distributor extends Controller
      */
     public function lists()
     {
+        $user = $this->getUser();
+        if(!$user['permission_distributor'])
+        {
+            return $this->renderError('没有权限');
+        }
         $model = new DistributorModel;
         $param = $this->request->param();
         $list = $model->getList($param);
         return $this->renderSuccess(compact('list'));
     }
-		public function all_lists()
-		{
-				$model = new DistributorModel;
-				$param = $this->request->param();
-				$list = $model->getList($param,0);
-				return $this->renderSuccess(compact('list'));
-		}
+
+    public function all_lists()
+    {
+        $model = new DistributorModel;
+        $param = $this->request->param();
+        $list = $model->getList($param,0);
+        return $this->renderSuccess(compact('list'));
+    }
+
     /**
      * 服务网点详情
      * @param $distributor_id

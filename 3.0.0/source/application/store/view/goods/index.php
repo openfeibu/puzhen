@@ -112,6 +112,7 @@
                                 <th>收藏量</th>
                                 <th>产品排序</th>
                                 <th>产品状态</th>
+                                <th>官网</th>
                                 <th>冲泡码</th>
                                 <th>添加时间</th>
                                 <th>操作</th>
@@ -144,6 +145,15 @@
                                                <?= $item['goods_status']['text'] ?>
                                            </span>
                                     </td>
+                                    <td class="am-text-middle">
+                                           <span class="j-show_web am-badge x-cur-p
+                                           am-badge-<?= $item['show_web']  ? 'success' : 'warning' ?>"
+                                                 data-id="<?= $item['goods_id'] ?>"
+                                                 data-show_web="<?= $item['show_web'] ?>">
+                                                <?= $item['show_web'] ? '显示' : '隐藏' ?>
+                                           </span>
+                                    </td>
+
                                     <td class="am-text-middle">
                                         <?php if (isset($item['goods_tea_qrcode']) && $item['goods_tea_qrcode']): ?>
                                             <?php if (checkPrivilege('tea_qrcode.factory_tea_qrcode/edit')): ?>
@@ -242,6 +252,25 @@
                     layer.close(index);
                 });
         });
+        // 产品状态
+        $('.j-show_web').click(function () {
+            var data = $(this).data();
+            layer.confirm('确定官网' + (parseInt(data.show_web) ? '显示' : '隐藏') + '该产品吗？'
+                , {title: '友情提示'}
+                , function (index) {
+                    $.post("<?= url('goods/showWeb') ?>"
+                        , {
+                            goods_id: data.id,
+                            state: Number(!(parseInt(data.state) === 10))
+                        }
+                        , function (result) {
+                            result.code === 1 ? $.show_success(result.msg, result.url)
+                                : $.show_error(result.msg);
+                        });
+                    layer.close(index);
+                });
+        });
+
 
         // 删除元素
         var url = "<?= url('goods/delete') ?>";

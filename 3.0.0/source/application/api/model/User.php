@@ -405,7 +405,7 @@ class User extends UserModel
                     break;
             }
             // 更新管理员信息
-            if ($this->save($updateData) === false) {
+            if ($this->allowField(true)->save($updateData) === false) {
                 return false;
             }
 

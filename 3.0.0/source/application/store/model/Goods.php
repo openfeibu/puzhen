@@ -133,6 +133,11 @@ class Goods extends GoodsModel
         return $this->allowField(true)->save(['goods_status' => $state ? 10 : 20]) !== false;
     }
 
+    public function setShowWeb($showWeb)
+    {
+        return $this->allowField(true)->save(['show_web' => $showWeb ? 1 : 0]) !== false;
+    }
+
     /**
      * 软删除
      * @return false|int

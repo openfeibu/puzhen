@@ -116,6 +116,14 @@ class Goods extends Controller
         }
         return $this->renderSuccess('操作成功');
     }
+    public function showWeb($goods_id, $showWeb)
+    {
+        $model = GoodsModel::detail($goods_id);
+        if (!$model->setShowWeb($showWeb)) {
+            return $this->renderError('操作失败');
+        }
+        return $this->renderSuccess('操作成功');
+    }
 
     /**
      * 删除产品

@@ -375,7 +375,7 @@
         // 产品状态
         $('.j-state').click(function () {
             var data = $(this).data();
-            layer.confirm('确定' + (parseInt(data.state) === 1 ? '取消' : '赋予') + '该用户查看服务网点的权限吗？'
+            layer.confirm('确定' + (parseInt(data.permission_distributor) === 1 ? '取消' : '赋予') + '该用户查看服务网点的权限吗？'
                 , {title: '友情提示'}
                 , function (index) {
                     $.post("<?= url('user/permissionDistributor') ?>"
