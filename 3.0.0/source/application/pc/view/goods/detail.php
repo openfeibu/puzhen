@@ -10,7 +10,7 @@
                 <div class="swiper-container swiper-container-pro ">
                     <div class="swiper-wrapper">
                         <?php $images = count($detail[$prefix.'image']) ? $detail[$prefix.'image'] : $detail['image']; ?>
-                        <?php if(!empty($images)): foreach ($images as $image): ?>
+                        <?php if(count($images)): foreach ($images as $image): ?>
                         <div class="swiper-slide">
                            <div class="imgPic transition500" style="background:url(<?= $image['file_path'] ?>) no-repeat center/cover"></div>
 							<img  src="assets/pc/images/proBg.png" width="100%" alt="">
