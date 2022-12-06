@@ -103,7 +103,7 @@ class User extends UserModel
                 $accountType => $data[$accountType],
                 'password' => fbshop_hash($data['password']),
                 'wxapp_id' =>  self::$wxapp_id ?: 10001,
-                'avatarUrl' => default_avatar(),
+                //'avatarUrl' => default_avatar(),
             ]);
             $user = self::useGlobalScope(false)->with(['wxapp'])->where([
                 'user_id' => $this['user_id']
