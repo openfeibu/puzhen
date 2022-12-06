@@ -90,6 +90,7 @@ class Goods extends GoodsModel
             'category',
             'goods_tea_qrcode' => ['tea_qrcode'],
             'image' => ['file'],
+            'en_image' => ['file'],
             'sku' => ['image'],
             'spec_rel' => ['spec'],
             'delivery' => ['rule'],

@@ -234,7 +234,7 @@ class Goods extends BaseModel
         foreach ($dataSource as &$goods) {
             // 产品主图
             $goods['goods_image'] = $goods['image'][0]['file_path'] ?? '';
-            $goods['goods_en_image'] = $goods['en_image'][0]['file_path'] ?? '';
+            $goods['en_goods_image'] = $goods['en_image'][0]['file_path'] ?? '';
             // 产品默认规格
             $goods['goods_sku'] = $goods['sku'][0];
             // 回调函数

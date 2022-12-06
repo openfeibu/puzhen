@@ -9,14 +9,14 @@
             <div class="pro-img fb-inline-block">
                 <div class="swiper-container swiper-container-pro ">
                     <div class="swiper-wrapper">
-                        <?php if (!empty($detail['image'])): foreach ($detail['image'] as $image): ?>
+                        <?php $images = $detail[$prefix.'image'] ?: $detail['image']; ?>
+                        <?php if(!empty($images)): foreach ($images as $image): ?>
                         <div class="swiper-slide">
                            <div class="imgPic transition500" style="background:url(<?= $image['file_path'] ?>) no-repeat center/cover"></div>
 							<img  src="assets/pc/images/proBg.png" width="100%" alt="">
-							
-							
                         </div>
                         <?php endforeach; endif; ?>
+
                     </div>
                     <div class="swiper-pagination swiper-pagination-pro"></div>
                 </div>

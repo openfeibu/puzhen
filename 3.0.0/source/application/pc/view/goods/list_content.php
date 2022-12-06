@@ -3,9 +3,8 @@
     <div class="product-list-con-item  col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
         <a href="<?= url('goods/detail&goods_id='.$item['goods_id']) ?>">
             <div class="img ">
-				<div class="imgPic transition500" style="background:url(<?= $item['goods_image'] ?>) no-repeat center/cover"></div>
+				<div class="imgPic transition500" style="background:url(<?= $item[$prefix.'goods_image'] ?: $item['goods_image'] ?>) no-repeat center/cover"></div>
 				<img  src="assets/pc/images/proBg.png" alt="">
-				<!-- <img class="transition500" src="<?= $item['goods_image'] ?>" alt="">-->
 			</div>
             <div class="test">
                 <div class="test-title">
