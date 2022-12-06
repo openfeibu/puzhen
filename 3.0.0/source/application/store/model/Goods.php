@@ -112,7 +112,7 @@ class Goods extends GoodsModel
             // 产品图片
             $this->addGoodsImages($data['images']);
 
-            $this->addGoodsEnImages($data['en_images']);
+            $data['en_images'] ?? $this->addGoodsEnImages($data['en_images']);
             return true;
         });
     }
