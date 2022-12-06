@@ -508,7 +508,7 @@ function validate_password($data)
 }
 function default_avatar()
 {
-    return 'http://www.fspuzhen.cn/assets/common/i/user_default_avatar.png';
+    return config('web_domain').'assets/common/i/user_default_avatar.png';
 }
 function default_nickname($id)
 {
