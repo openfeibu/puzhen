@@ -82,7 +82,7 @@
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">产品英文图片 </label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">产品英文图片 </label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <div class="am-form-file">
                                         <div class="am-form-file">
@@ -297,9 +297,7 @@
                                     <textarea id="container" name="goods[content]" type="text/plain"></textarea>
                                 </div>
                             </div>
-                            <div class="widget-head am-cf">
-                                <div class="widget-title am-fl">产品英文详情</div>
-                            </div>
+
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label">产品英文详情 </label>
                                 <div class="am-u-sm-9 am-u-end">
