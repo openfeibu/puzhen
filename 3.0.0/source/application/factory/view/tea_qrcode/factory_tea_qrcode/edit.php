@@ -9,10 +9,17 @@
                                 <div class="widget-title am-fl">编辑冲泡码</div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-4 am-u-md-3  am-u-lg-2 am-form-label form-require"> 冲泡码名称 </label>
+                                <label class="am-u-sm-4 am-u-md-3  am-u-lg-2 am-form-label form-require"> 冲泡码方案名称 </label>
                                 <div class="am-u-sm-8 am-u-md-9 am-u-end">
                                     <input type="text" class="tpl-form-input" name="tea_qrcode[name]"
-                                           placeholder="请输入门店名称" value="<?= $model['name'] ?>" required>
+                                           placeholder="请输入冲泡码方案名称" value="<?= $model['name'] ?>" required>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label"> 英文冲泡码方案名称 </label>
+                                <div class="am-u-sm-9 am-u-end">
+                                    <input type="text" class="tpl-form-input" name="tea_qrcode[en_name]"
+                                           placeholder="请输入英文冲泡码方案名称" value="<?= $model['en_name'] ?>">
                                 </div>
                             </div>
                             <div class="am-form-group">

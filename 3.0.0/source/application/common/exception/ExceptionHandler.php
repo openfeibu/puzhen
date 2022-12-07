@@ -50,6 +50,9 @@ class ExceptionHandler extends Handle
 
         }
 
+        if (config('app_debug')) {
+            return parent::render($e);
+        }
         return json(['msg' => $this->message, 'code' => $this->code]);
 
     }

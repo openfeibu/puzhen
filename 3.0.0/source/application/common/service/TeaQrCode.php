@@ -1,6 +1,7 @@
 <?php
 namespace app\common\service;
 
+use app\common\model\TeaConfig;
 use app\common\service\QrCodeService;
 use Endroid\QrCode\QrCode;
 use app\common\model\Tea;
@@ -12,15 +13,25 @@ class TeaQrCode
     public $factory;
     private $post;
     private $size = 400;
+    private $font = WEB_PATH.'/assets/common/fonts/SourceHanSerif-Medium.ttc';
+    protected $bg = WEB_PATH.'assets/common/i/bg_code_style_1_1200.jpg';
+    protected $code_left_width = 300; // 二维码离左边距离
+    protected $code_width = 600;
+    protected $code_height = 600;
     public $data;
     public $file;
     public $directory;
-    public $image_name;
-    public $image_url;
-    public $text;
-    public $detail_image;
-    public $detail_image_name;
-    public $qrcode_url;
+    public $image_name = '';
+    public $image_url = '';
+    public $text = '';
+    public $en_text = '';
+    public $detail_image = '';
+    public $detail_image_name = '';
+    public $en_detail_image = '';
+    public $en_detail_image_name = '';
+    public $qrcode_url = '';
+    private $teaConfig;
+
     /**
      * 构造方法
      *
@@ -28,7 +39,9 @@ class TeaQrCode
     public function __construct($post)
     {
         $this->post = $post;
-
+        $teaConfigModel = new TeaConfig;
+        $this->teaConfig = $teaConfigModel->getList();
+        $this->getText();
     }
     public function generate()
     {
@@ -38,17 +51,19 @@ class TeaQrCode
         $this->getImageName();
         $this->getFile();
         $this->getImageUrl();
-        $this->getText();
         $this->getDetailImageName();
         $this->getDetailImage();
         $this->generateQrCode();
         $this->generateDetailQrCode();
+        $this->generateEnDetailQrCode();
     }
     public function generateDetail()
     {
         $this->getDirectory();
+        $this->getDetailImageName();
         $this->getDetailImage();
         $this->generateDetailQrCode();
+        $this->generateEnDetailQrCode();
     }
 
     public function generateQrCode()
@@ -72,31 +87,53 @@ class TeaQrCode
     }
     public function generateDetailQrCode()
     {
-        $bg_width = 1200;
         //文字切割换行
         $nameArr = utf8_str_split($this->post['name'],15);
-        $source_height = 200 - (count($nameArr)-1) * 40;
+        $bg_height = 200 - (count($nameArr)-1) * 40;
         //背景图片
-        $source = WEB_PATH.'assets/common/i/bg_code_style_1_1200.jpg';
+
         $codeImg = new QrCodeService();
-        $code_width = 600;
-        $code_height = 600;
-        $codeImg->generateImg($source,$this->detail_image, $this->file, $source_width = 300, $source_height, $code_width, $code_height);
+
+        $codeImg->generateImg($this->bg,$this->detail_image, $this->file, $this->code_left_width, $bg_height, $this->code_width, $this->code_height);
         //新文件
         $text_file = WEB_PATH.'uploads'.$this->directory.DIRECTORY_SEPARATOR.$this->detail_image_name;
-        $font = WEB_PATH.'/assets/common/fonts/SourceHanSerif-Medium.ttc';
 
-        $nameArr = utf8_str_split($this->post['name'],15);
-        $text_height = $code_height + $source_height + 100;
+        $text_height = $this->code_height + $bg_height + 100;
         foreach ($nameArr as $k => $name)
         {
-            $codeImg->generateFont($text_file,$this->detail_image, $name, $text_width=200, $text_height,$font_size = 54, $cate1 = 0, $cate2 = 0, $cate3 = 0, $font);
+            $codeImg->generateFont($text_file,$this->detail_image, $name, $text_width=200, $text_height,$font_size = 54, $cate1 = 0, $cate2 = 0, $cate3 = 0, $this->font);
             $text_height += 80;
         }
-        $codeImg->generateFont($text_file,$this->detail_image,$this->text, $text_width=200, $text_height,$font_size = 40, $cate1 = 0, $cate2 = 0, $cate3 = 0, $font);
+        $codeImg->generateFont($text_file,$this->detail_image,$this->text, $text_width=200, $text_height,$font_size = 40, $cate1 = 0, $cate2 = 0, $cate3 = 0, $this->font);
 
     }
+    public function generateEnDetailQrCode()
+    {
 
+        if(!isset($this->post['en_name']) || !$this->post['en_name'])
+        {
+            return ;
+        }
+        //文字切割换行
+        $nameArr = utf8_str_split($this->post['en_name'],25);
+        $bg_height = 200 - (count($nameArr)-1) * 40;
+        //背景图片
+
+        $codeImg = new QrCodeService();
+
+        $codeImg->generateImg($this->bg,$this->en_detail_image, $this->file, $this->code_left_width, $bg_height, $this->code_width, $this->code_height);
+        //新文件
+        $text_file = WEB_PATH.'uploads'.$this->directory.DIRECTORY_SEPARATOR.$this->en_detail_image_name;
+
+        $text_height = $this->code_height + $bg_height + 100;
+        foreach ($nameArr as $k => $name)
+        {
+            $codeImg->generateFont($text_file,$this->en_detail_image, $name, $text_width=200, $text_height,$font_size = 54, $cate1 = 0, $cate2 = 0, $cate3 = 0, $this->font);
+            $text_height += 80;
+        }
+        $codeImg->generateFont($text_file,$this->en_detail_image,$this->en_text, $text_width=200, $text_height,$font_size = 40, $cate1 = 0, $cate2 = 0, $cate3 = 0, $this->font);
+
+    }
     public function getQrcodeUrl(){
 
         $this->post['seconds_arr'] = is_array($this->post['seconds']) ? $this->post['seconds'] : explode(',',$this->post['seconds']);
@@ -113,9 +150,11 @@ class TeaQrCode
             'factory_id' => isset($this->factory) && $this->factory ? $this->factory['factory_id'] : 0,
             'user_id' => isset($this->user) && $this->user ? $this->user['user_id'] : 0,
             'name' => $this->post['name'],
+            'en_name' => $this->post['en_name'] ?? '',
             'data' => json_encode($this->data),
             'image' => $this->image_url,
             'detail_image' => $this->detail_image,
+            'en_detail_image' => $this->en_detail_image ?? '',
         ] ;
     }
 
@@ -134,7 +173,10 @@ class TeaQrCode
 
     public function getDirectory()
     {
-        if(isset($this->factory) && $this->factory)
+        if(isset($this->directory) && $this->directory)
+        {
+            return $this->directory;
+        }else if(isset($this->factory) && $this->factory)
         {
             $this->directory = '/factory_qrcode/'.$this->factory['factory_id'];
         }elseif(isset($this->user) && $this->user){
@@ -142,7 +184,7 @@ class TeaQrCode
         }else{
             $this->directory = '/qrcode/guest';
         }
-
+        return $this->directory;
     }
     public function setDirectory($directory)
     {
@@ -151,7 +193,9 @@ class TeaQrCode
 
     public function getImageName()
     {
-        $this->image_name = $this->size.'-'.md5($this->qrcode_url).'.png';
+        if(!$this->image_name) {
+            $this->image_name = $this->size . '-' . md5($this->qrcode_url) . '.png';
+        }
     }
     public function getFile()
     {
@@ -168,29 +212,32 @@ class TeaQrCode
 
     public function getText()
     {
-        if($this->text)
+        if(!$this->text)
         {
-            return $this->text;
+            $tea = Tea::get(['code' => $this->post['tea']]);
+            $this->text = $tea['name'].'·'.$this->post['weight'].$this->teaConfig['weight']['unit'].'·'.$this->post['number'].$this->teaConfig['frequency']['unit'];
+            $this->en_text = $tea['en_name'].'·'.$this->post['weight'].$this->teaConfig['weight']['en_unit'].'·'.$this->post['number'].$this->teaConfig['frequency']['en_unit'];
         }
-        $tea_name = Tea::getTeaName($this->post['tea']);
-        $this->text = $tea_name.'·'.$this->post['weight'].'g·'.$this->post['number'].'泡';
+
     }
 
     public function getDetailImageName()
     {
-        if($this->detail_image_name)
+        if(!$this->detail_image_name)
         {
-            return $this->detail_image_name;
+            $this->detail_image_name = 'detail-'.md5($this->post['name']).'-'.$this->image_name;
+            $this->post['en_name'] ? $this->en_detail_image_name = 'detail-'.md5($this->post['en_name']).'-'.$this->image_name : '';
         }
-        $this->detail_image_name = 'detail-'.md5($this->post['name']).'-'.$this->image_name;
+
     }
     public function getDetailImage()
     {
-        if($this->detail_image)
+        if(!$this->detail_image)
         {
-            return $this->detail_image;
+            $this->detail_image = $this->directory.'/'.$this->detail_image_name;
+            $this->post['en_name'] ? $this->en_detail_image = $this->directory.'/'.$this->en_detail_image_name  : '';
         }
-        $this->detail_image = $this->directory.'/'.$this->detail_image_name;
+
     }
 
     public function __get($name){

@@ -73,4 +73,8 @@ class TeaQrcode extends TeaQrcodeModel
     {
         return self::$base_url . 'uploads' . $data['detail_image'];
     }
+    public function getEnDetailImageAttr($value, $data)
+    {
+        return self::$base_url . 'uploads' . $data['en_detail_image'];
+    }
 }

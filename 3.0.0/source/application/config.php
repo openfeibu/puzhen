@@ -239,5 +239,5 @@ return [
         'list_rows' => 15,
     ],
 
-    'web_domain' => 'http://weapp.fspuzhen.cn/',
+    'web_domain' => 'http://www.prozen.cn/',
 ];

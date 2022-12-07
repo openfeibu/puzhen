@@ -61,6 +61,7 @@
                                 <th>冲泡码ID</th>
                                 <th>方案名称</th>
                                 <th>冲泡码</th>
+                                <th>英文冲泡码</th>
                                 <th>创建时间</th>
                                 <th>操作</th>
                             </tr>
@@ -81,6 +82,15 @@
                                             <img src="<?= $item['detail_image_url'] ?>"
                                                  width="50"  alt="冲泡码">
                                         </a>
+                                    </td>
+                                    <td class="am-text-middle">
+                                        <?php if($item['en_detail_image_url']): ?>
+                                            <a href="<?= $item['en_detail_image_url'] ?>"
+                                               title="点击查看大图" target="_blank">
+                                                <img src="<?= $item['en_detail_image_url'] ?>"
+                                                     width="50"  alt="冲泡码">
+                                            </a>
+                                        <?php endif; ?>
                                     </td>
                                     <!--
                                     <td class="am-text-middle">

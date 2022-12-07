@@ -15,6 +15,13 @@
                                            placeholder="请输入冲泡码方案名称" required>
                                 </div>
                             </div>
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label"> 英文冲泡码方案名称 </label>
+                                <div class="am-u-sm-9 am-u-end">
+                                    <input type="text" class="tpl-form-input" name="tea_qrcode[en_name]"
+                                           placeholder="请输入英文冲泡码方案名称">
+                                </div>
+                            </div>
                             <?php if($goods):?>
                                 <div class="am-form-group">
                                     <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require"> 产品 </label>
