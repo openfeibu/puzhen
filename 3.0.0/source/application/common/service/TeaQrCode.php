@@ -226,7 +226,7 @@ class TeaQrCode
         if(!$this->detail_image_name)
         {
             $this->detail_image_name = 'detail-'.md5($this->post['name']).'-'.$this->image_name;
-            $this->post['en_name'] ? $this->en_detail_image_name = 'detail-'.md5($this->post['en_name']).'-'.$this->image_name : '';
+            isset($this->post['en_name']) && $this->post['en_name'] ? $this->en_detail_image_name = 'detail-'.md5($this->post['en_name']).'-'.$this->image_name : '';
         }
 
     }
@@ -235,7 +235,7 @@ class TeaQrCode
         if(!$this->detail_image)
         {
             $this->detail_image = $this->directory.'/'.$this->detail_image_name;
-            $this->post['en_name'] ? $this->en_detail_image = $this->directory.'/'.$this->en_detail_image_name  : '';
+            isset($this->post['en_name']) && $this->post['en_name'] ? $this->en_detail_image = $this->directory.'/'.$this->en_detail_image_name  : '';
         }
 
     }
