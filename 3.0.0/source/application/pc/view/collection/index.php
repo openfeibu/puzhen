@@ -29,8 +29,8 @@
                             <?php if(isset($item['goods_tea_qrcode']['tea_qrcode']) && $item['goods_tea_qrcode']['tea_qrcode']): ?>
                             <div class="test-code clearfix">
                                 <div class="test-code-l fl">
-                                    <div class="n fb-overflow-1"><?= $item['goods_tea_qrcode']['tea_qrcode']['name'] ?></div>
-                                    <div class="c"><?= $item['goods_tea_qrcode']['tea_qrcode']['data']['tea_name'] ?> · <?= $item['goods_tea_qrcode']['tea_qrcode']['data']['weight'] ?><?= lang('g')?> · <?= $item['goods_tea_qrcode']['tea_qrcode']['data']['number'] ?><?= lang('tea.times')?></div>
+                                    <div class="n fb-overflow-1"><?= $item['goods_tea_qrcode']['tea_qrcode'][$prefix.'name'] ?: $item['goods_tea_qrcode']['tea_qrcode']['name'] ?></div>
+                                    <div class="c"><?= $item['goods_tea_qrcode']['tea_qrcode']['data'][$prefix.'tea_name'] ?: $item['goods_tea_qrcode']['tea_qrcode']['data']['tea_name'] ?> · <?= $item['goods_tea_qrcode']['tea_qrcode']['data']['weight'] ?><?= lang('g')?> · <?= $item['goods_tea_qrcode']['tea_qrcode']['data']['number'] ?><?= lang('tea.times')?></div>
                                 </div>
                                 <div class="test-code-r fr"><?= lang('to_make_tea')?></div>
                             </div>

@@ -41,7 +41,7 @@
                 <?php if(isset($detail['goods_tea_qrcode']['tea_qrcode']) && $detail['goods_tea_qrcode']['tea_qrcode']): ?>
                 <div class="official-code">
                     <div class="con-title"><?= lang('official_qrcode') ?></div>
-                    <div class="official-code-img"><img src="<?= $detail['goods_tea_qrcode']['tea_qrcode']['detail_image'] ?>" alt=""></div>
+                    <div class="official-code-img"><img src="<?= $detail['goods_tea_qrcode']['tea_qrcode'][$prefix.'detail_image'] ?: $detail['goods_tea_qrcode']['tea_qrcode']['detail_image'] ?>" alt=""></div>
                 </div>
                 <?php endif; ?>
                 <div class="recommended">
