@@ -99,16 +99,18 @@ class TeaQrcode extends BaseModel
     public function edit($post)
     {
         if($post['name']) {
-            $post['en_name'] =  $post['en_name'] ?? '';
+
             $file = WEB_PATH . 'uploads/' . $this->getData('image');
             $image_name = basename($this->getData('image'));
             $directory = dirname($this->getData('image'));
 
             $detail_image = $this->getData('detail_image');
             $en_detail_image = $this->getData('en_detail_image');
+
             if (file_exists($file)) {
                 $tea_data = json_decode($this->getData('data'),true);
                 $data = array_merge($tea_data,$post);
+                $data['en_name'] =  $data['en_name'] ?? '';
                 $teaQrCodeService = new TeaQrCodeService($data);
                 $teaQrCodeService->setDirectory($directory);
                 $teaQrCodeService->file = $file;
