@@ -11,13 +11,16 @@
             <div class="headerLeft pull-left">
                 <div class="lang pull-left">
                     <div class="lang-con">
-                        <?= $think_lang =='zh-cn' ? '中文':'English'?><span class="caret"></span>
-                    </div>
-                    <dl>
-                        <dd class="active"><a href="<?= url('index/index&lang=zh-cn')?>">中文</a></dd>
-                        <dd><a href="<?= url('index/index&lang=en-us')?>">English</a></dd>
-                    </dl>
+					    
+						
+						<?php if($think_lang =='zh-cn'): ?>
+						<a href="<?= url('index/index&lang=en-us')?>">English</a>
+						<?php else: ?>
+						<a href="<?= url('index/index&lang=zh-cn')?>">中文</a>
+						<?php endif; ?>
 
+						
+                    </div>
                 </div>
                 <div class="home-btn pull-left <?php if(request()->pathinfo() == 'pc/index/index' || request()->pathinfo() == '/'): ?>active <?php endif;?> ">
                     <a href="<?= $base_url ?? url('') ?>"><?= lang('home') ?></a>
