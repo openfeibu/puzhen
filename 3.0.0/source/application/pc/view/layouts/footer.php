@@ -3,10 +3,15 @@
         <div class="container w1060 clearfix">
             <div class="footer-con-left col-lg-10 col-md-10 col-sm-12 col-xs-12 " >
                 <div class="footer-info">
+				    <p>佛山朴真茶业有限公司</p>
                     <p><?= lang('address') ?><?= lang(': ') ?><?= $setting['store']['values'][$prefix.'address'] ?: $setting['store']['values']['address'];?></p>
                     <p><?= lang('tel') ?><?= lang(': ') ?><?= $setting['store']['values']['tel'];?></p>
-                    <p><?= $setting['store']['values'][$prefix.'right'] ?: $setting['store']['values']['right'];?></p>
-                    <p>
+                    <p class="p14">
+					<a target="_blank" href="https://beian.miit.gov.cn/">
+					<?= $setting['store']['values'][$prefix.'right'] ?: $setting['store']['values']['right'];?>
+					</a>
+					</p>
+                    <p class="p14">
                         <?php if($think_lang == 'en-us'): ?>
                         <a href="http://www.feibu.info" target="_blank">Guangzhou Feibu Information Technology Co., LTD</a> Provide Technical Support
                         <?php else: ?>
