@@ -3,7 +3,7 @@
         <div class="container w1060 clearfix">
             <div class="footer-con-left col-lg-10 col-md-10 col-sm-12 col-xs-12 " >
                 <div class="footer-info">
-				    <p>佛山朴真茶业有限公司</p>
+				    <p><?= $setting['store']['values'][$prefix.'company'] ?: $setting['store']['values']['company'];?></p>
                     <p><?= lang('address') ?><?= lang(': ') ?><?= $setting['store']['values'][$prefix.'address'] ?: $setting['store']['values']['address'];?></p>
                     <p><?= lang('tel') ?><?= lang(': ') ?><?= $setting['store']['values']['tel'];?></p>
                     <p class="p14">
