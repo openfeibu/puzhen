@@ -67,14 +67,14 @@ class TeaQrcode extends TeaQrcodeModel
 
     public function getImageAttr($value, $data)
     {
-        return self::$base_url . 'uploads' . $data['image'];
+        return  $data['image'] ? self::$base_url . 'uploads' . $data['image'] : '';
     }
     public function getDetailImageAttr($value, $data)
     {
-        return self::$base_url . 'uploads' . $data['detail_image'];
+        return $data['detail_image'] ? self::$base_url . 'uploads' . $data['detail_image'] : '';
     }
     public function getEnDetailImageAttr($value, $data)
     {
-        return self::$base_url . 'uploads' . $data['en_detail_image'];
+        return $data['en_detail_image'] ? self::$base_url . 'uploads' . $data['en_detail_image'] : '';
     }
 }
