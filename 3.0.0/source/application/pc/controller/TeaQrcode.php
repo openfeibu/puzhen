@@ -41,9 +41,9 @@ class TeaQrcode extends Controller
                         'tea_qrcode_id' => $tea_qrcode['tea_qrcode_id'],
                     ]);
                 }
-                return $this->renderSuccess(['detail' => $tea_qrcode], lang('add_success'),url('tea_qrcode/detail','tea_qrcode_id='.$tea_qrcode['tea_qrcode_id']));
+                return $this->renderSuccess(['detail' => $tea_qrcode], lang('tea_qrcode_add_success'),url('tea_qrcode/detail','tea_qrcode_id='.$tea_qrcode['tea_qrcode_id']));
             }
-            return $this->renderError([],$this->model->getError() ?: lang('add_failed'));
+            return $this->renderError([],$this->model->getError() ?: lang('tea_qrcode_add_failed'));
         }
         $teaList = Tea::getAll();
         $teaConfigModel = new TeaConfig;

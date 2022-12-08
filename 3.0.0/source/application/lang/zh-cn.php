@@ -176,4 +176,7 @@ return [
     'upload_image.success' => '图片上传成功',
     'upload_image.failed' => '图片上传失败',
     'and' => '和',
+
+    'tea_qrcode_add_success' => '生成冲泡码成功',
+    'tea_qrcode_add_failed' => '生成冲泡码失败',
 ];

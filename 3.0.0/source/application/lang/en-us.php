@@ -171,4 +171,7 @@ return [
     'no.' => 'No.',
     'no.temp' => ' Temp',
     'no.seconds' => ' S',
+
+    'tea_qrcode_add_success' => 'Generated successfully',
+    'tea_qrcode_add_failed' => 'Generated failed',
 ];
