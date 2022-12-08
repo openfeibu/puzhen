@@ -57,7 +57,7 @@ return [
     'teas' => '茶类',
     'my_tea_qrcode' => '我的冲泡码',
 
-    'official_qrcode' => '官方二维码',//Official QR Code
+    'official_qrcode' => '推荐泡法',//Official QR Code
     'puzhen_recommend' => '朴真推荐',
     'recommend' => '推荐',
     'recommend_abbr' => '推荐',
