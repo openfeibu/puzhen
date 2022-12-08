@@ -41,7 +41,7 @@ class User extends FactoryUserModel
             $this->error = '很抱歉，账号被禁止，没有访问权限';
             return false;
         }
-        if ($user['factory']['is_delete'] == 1) {
+        if ($user['factory']['is_delete'] != 0) {
             $this->error = '很抱歉，工厂被删除，没有访问权限';
             return false;
         }
