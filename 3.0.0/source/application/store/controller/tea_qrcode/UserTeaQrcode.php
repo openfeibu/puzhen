@@ -10,7 +10,7 @@ use app\store\controller\Controller;
 
 /**
  * 用户冲泡二维码管理
- * Class TeaQrcode
+ * Class UserTeaQrcode
  * @package app\store\controller
  */
 class UserTeaQrcode extends Controller

@@ -19,4 +19,8 @@ class Tea extends BaseModel
     {
         return self::order('code','asc')->select();
     }
+    public static function detail($tea_id)
+    {
+        return static::get($tea_id);
+    }
 }

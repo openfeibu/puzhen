@@ -11,7 +11,7 @@ use app\store\controller\Controller;
 
 /**
  * 工厂冲泡二维码管理
- * Class TeaQrcode
+ * Class FactoryTeaQrcode
  * @package app\store\controller
  */
 class FactoryTeaQrcode extends Controller

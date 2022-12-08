@@ -170,6 +170,10 @@ return [
                 'name' => '冲泡码配置',
                 'index' => 'tea_qrcode.tea_config/index',
             ],
+            [
+                'name' => '茶配置',
+                'index' => 'tea_qrcode.tea/index',
+            ],
         ]
     ],
     'equipment' => [
