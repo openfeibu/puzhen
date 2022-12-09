@@ -9,10 +9,10 @@
         <?php if($detail):?>
             <div class="codeDetail-detail-top clearfix">
                 <div class="codeDetail-img fb-inline-block">
-                    <img src="<?= $detail['detail_image']; ?>" width="100%">
+                    <img src="<?= $detail[$prefix.'detail_image'] ? $detail[$prefix.'detail_image'] : ($detail['detail_image'] ?: $detail['en_detail_image']); ?>" width="100%">
                 </div>
                 <div class="codeDetail-test fb-inline-block">
-                    <div class="name"><?= $detail['name']; ?></div>
+                    <div class="name"><?= $detail[$prefix.'name'] ? $detail[$prefix.'name'] : ($detail['name'] ?: $detail['en_name']); ?></div>
                     <div class="des"><?= $detail['data'][$prefix.'tea_name'] ?: $detail['data']['tea_name']; ?> · <?= $detail['data']['weight'] ?><?= lang('g')?> · <?= $detail['data']['number'] ?><?= lang('tea.times')?></div>
                     <div class="codeDetail-data">
                         <div class="codeDetail-data-title"><?= lang('tea_qrcode_detail') ?></div>

@@ -123,7 +123,7 @@ class TeaQrcode extends Controller
                         'tea_qrcode_id' => $tea_qrcode_id,
                     ]);
                 }
-                return $this->renderSuccess(['detail' => $tea_qrcode], lang('add_success'),url('tea_qrcode/detail','tea_qrcode_id='.$tea_qrcode_id));
+                return $this->renderSuccess(['detail' => $tea_qrcode], lang('add_success'),url('tea_qrcode/detail','tea_qrcode_id='.$tea_qrcode['tea_qrcode_id']));
             }
 
             return $this->renderError([],$detail->getError() ?:  lang('update_failed'));

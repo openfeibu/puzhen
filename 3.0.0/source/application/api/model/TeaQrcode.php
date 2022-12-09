@@ -35,12 +35,16 @@ class TeaQrcode extends TeaQrcodeModel
     public function add($user,$post)
     {
         $post['url'] = $post['url'] ?? 'https://api.fspuzhen.cn?type=weapp';
-        $teaQrCodeService = new TeaQrCodeService($post);
-        $teaQrCodeService->user = $user;
+
         $this->startTrans();
         try {
-            $teaQrCodeService->generate();
-            $data = $teaQrCodeService->getTeaQrcodeData();
+            $data = [];
+            if(isset($post['name']) && $post['name']) {
+                $teaQrCodeService = new TeaQrCodeService($post);
+                $teaQrCodeService->user = $user;
+                $teaQrCodeService->generate();
+                $data = $teaQrCodeService->getTeaQrcodeData();
+            }
             if(isset($post['en_name']) && $post['en_name'])
             {
                 $post['name'] = $post['en_name'];

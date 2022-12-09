@@ -13,12 +13,12 @@
             <div class="product-list-con-item  col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
 
                 <a href="<?= url('tea_qrcode/detail','tea_qrcode_id='.$item['tea_qrcode_id']);?>">
-                    <div class="img"><img class="transition500" src="<?= $item['detail_image'] ?>" alt="<?= $item['name'] ?>"></div>
+                    <div class="img"><img class="transition500" src="<?= $item[$prefix.'detail_image'] ? $item[$prefix.'detail_image'] : ($item['detail_image'] ?: $item['en_detail_image']); ?>" ></div>
                     <div class="test">
                         <div class="test-bottom">
                             <div class="test-code clearfix">
                                 <div class="test-code-l fl">
-                                    <div class="n fb-overflow-1"><?= $item['name'] ?></div>
+                                    <div class="n fb-overflow-1"><?= $item[$prefix.'name'] ? $item[$prefix.'name'] : ($item['name'] ?: $item['en_name']); ?></div>
                                     <div class="c"><?= $item['data'][$prefix.'tea_name'] ?: $item['data']['tea_name']; ?> · <?= $item['data']['weight'] ?><?= lang('g')?> · <?= $item['data']['number'] ?><?= lang('tea.times')?></div>
                                 </div>
                                 <div class="test-code-r fr"><?= lang('to_make_tea')?></div>

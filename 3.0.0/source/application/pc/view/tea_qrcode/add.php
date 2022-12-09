@@ -16,7 +16,7 @@
             <div class="codeForm-item">
                 <label class="col-lg-2 col-md-2 col-sm-3 col-xs-3 codeForm-label "><?= lang('tea_qrcode_name'); ?><span>*</span></label>
                 <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 codeForm-con ">
-                    <input type="text" class="tpl-form-input" name="tea_qrcode[name]" placeholder="<?= lang('tea_qrcode_name_empty'); ?>" required="">
+                    <input type="text" class="tpl-form-input" name="tea_qrcode[<?= $prefix;?>name]" placeholder="<?= lang('tea_qrcode_name_empty'); ?>" required="">
                 </div>
             </div>
             <div class="codeForm-item">
