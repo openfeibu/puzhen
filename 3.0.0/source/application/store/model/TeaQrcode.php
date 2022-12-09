@@ -48,12 +48,21 @@ class TeaQrcode extends TeaQrcodeModel
             $teaQrCodeService->factory = $factory;
             $teaQrCodeService->generate();
             $data = $teaQrCodeService->getTeaQrcodeData();
+            if(isset($post['en_name']) && $post['en_name'])
+            {
+                $post['name'] = $post['en_name'];
+                $teaQrCodeService = new TeaQrCodeService($post,'en_');
+                $teaQrCodeService->factory = $factory;
+                $teaQrCodeService->generate();
+                $en_data = $teaQrCodeService->getTeaQrcodeData();
+                $data = array_merge($data,$en_data);
+            }
             $data['wxapp_id'] = self::$wxapp_id;
 
             $this->data($data)->save() ;
             if(isset($post['goods_id'])){
                 $this->goodsTeaQrcode()->save([
-	                  'factory_id' => $factory['factory_id'],
+                    'factory_id' => $factory['factory_id'],
                     'goods_id' => $post['goods_id'],
                     'wxapp_id' => self::$wxapp_id
                 ]);

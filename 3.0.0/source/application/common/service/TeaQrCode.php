@@ -18,11 +18,15 @@ class TeaQrCode
     protected $code_left_width = 300; // 二维码离左边距离
     protected $code_width = 600;
     protected $code_height = 600;
+    public $split_len = 15;
     public $data;
     public $file;
+    public $en_file;
     public $directory;
     public $image_name = '';
+    public $en_image_name = '';
     public $image_url = '';
+    public $en_image_url = '';
     public $text = '';
     public $en_text = '';
     public $detail_image = '';
@@ -30,17 +34,19 @@ class TeaQrCode
     public $en_detail_image = '';
     public $en_detail_image_name = '';
     public $qrcode_url = '';
+    public $prefix = '';
     private $teaConfig;
 
     /**
      * 构造方法
      *
      */
-    public function __construct($post)
+    public function __construct($post,$prefix='')
     {
         $this->post = $post;
         $teaConfigModel = new TeaConfig;
         $this->teaConfig = $teaConfigModel->getList();
+        $this->prefix = $prefix;
         $this->getText();
     }
     public function generate()
@@ -55,7 +61,6 @@ class TeaQrCode
         $this->getDetailImage();
         $this->generateQrCode();
         $this->generateDetailQrCode();
-        $this->generateEnDetailQrCode();
     }
     public function generateDetail()
     {
@@ -63,11 +68,14 @@ class TeaQrCode
         $this->getDetailImageName();
         $this->getDetailImage();
         $this->generateDetailQrCode();
-        $this->generateEnDetailQrCode();
     }
 
     public function generateQrCode()
     {
+        if(!isset($this->post['name']) || !$this->post['name'])
+        {
+            return ;
+        }
         //if(!file_exists($this->file)) {
             if (!is_dir(WEB_PATH . 'uploads' . DIRECTORY_SEPARATOR . $this->directory)) {
                 mkdir(WEB_PATH . 'uploads' . DIRECTORY_SEPARATOR . $this->directory, 0755, true);
@@ -76,7 +84,7 @@ class TeaQrCode
             $qrCode->setWriterByName('png');
             $qrCode->setSize($this->size);
             $qrCode->setMargin(1);
-            $qrCode->setLogoPath(WEB_PATH . 'assets/common/i/codelogo_20220617.jpg');
+            $qrCode->setLogoPath(WEB_PATH . 'assets/common/i/'.$this->prefix.'codelogo_20220617.jpg');
             $qrCode->setLogoSize(60, 60);
             $qrCode->setEncoding('UTF-8');
             $qrCode->setRoundBlockSize(true);
@@ -85,10 +93,15 @@ class TeaQrCode
             $qrCode->writeFile($this->file);
        // }
     }
+
     public function generateDetailQrCode()
     {
+        if(!isset($this->post['name']) || !$this->post['name'])
+        {
+            return ;
+        }
         //文字切割换行
-        $nameArr = utf8_str_split($this->post['name'],15);
+        $nameArr = utf8_str_split($this->post['name'],$this->split_len);
         $bg_height = 200 - (count($nameArr)-1) * 40;
         //背景图片
 
@@ -107,33 +120,7 @@ class TeaQrCode
         $codeImg->generateFont($text_file,$this->detail_image,$this->text, $text_width=200, $text_height,$font_size = 40, $cate1 = 0, $cate2 = 0, $cate3 = 0, $this->font);
 
     }
-    public function generateEnDetailQrCode()
-    {
 
-        if(!isset($this->post['en_name']) || !$this->post['en_name'])
-        {
-            return ;
-        }
-        //文字切割换行
-        $nameArr = utf8_str_split($this->post['en_name'],25);
-        $bg_height = 200 - (count($nameArr)-1) * 40;
-        //背景图片
-
-        $codeImg = new QrCodeService();
-
-        $codeImg->generateImg($this->bg,$this->en_detail_image, $this->file, $this->code_left_width, $bg_height, $this->code_width, $this->code_height);
-        //新文件
-        $text_file = WEB_PATH.'uploads'.$this->directory.DIRECTORY_SEPARATOR.$this->en_detail_image_name;
-
-        $text_height = $this->code_height + $bg_height + 100;
-        foreach ($nameArr as $k => $name)
-        {
-            $codeImg->generateFont($text_file,$this->en_detail_image, $name, $text_width=200, $text_height,$font_size = 54, $cate1 = 0, $cate2 = 0, $cate3 = 0, $this->font);
-            $text_height += 80;
-        }
-        $codeImg->generateFont($text_file,$this->en_detail_image,$this->en_text, $text_width=200, $text_height,$font_size = 40, $cate1 = 0, $cate2 = 0, $cate3 = 0, $this->font);
-
-    }
     public function getQrcodeUrl(){
 
         $this->post['seconds_arr'] = is_array($this->post['seconds']) ? $this->post['seconds'] : explode(',',$this->post['seconds']);
@@ -149,19 +136,16 @@ class TeaQrCode
         return [
             'factory_id' => isset($this->factory) && $this->factory ? $this->factory['factory_id'] : 0,
             'user_id' => isset($this->user) && $this->user ? $this->user['user_id'] : 0,
-            'name' => $this->post['name'],
-            'en_name' => $this->post['en_name'] ?? '',
+            $this->prefix.'name' => $this->post['name'],
             'data' => json_encode($this->data),
-            'image' => $this->image_url,
-            'detail_image' => $this->detail_image,
-            'en_detail_image' => $this->en_detail_image ?? '',
+            $this->prefix.'image' => $this->image_url,
+            $this->prefix.'detail_image' => $this->detail_image,
         ] ;
     }
 
     public function getData()
     {
         $this->data = array(
-            'name' => $this->post['name'],
             'url' => $this->post['url'],
             'tea' => $this->post['tea'],
             'weight' => $this->post['weight'],
@@ -194,7 +178,7 @@ class TeaQrCode
     public function getImageName()
     {
         if(!$this->image_name) {
-            $this->image_name = $this->size . '-' . md5($this->qrcode_url) . '.png';
+            $this->image_name = $this->prefix.$this->size . '-' . md5($this->qrcode_url) . '.png';
         }
     }
     public function getFile()
@@ -215,8 +199,7 @@ class TeaQrCode
         if(!$this->text)
         {
             $tea = Tea::get(['code' => $this->post['tea']]);
-            $this->text = $tea['name'].'·'.$this->post['weight'].$this->teaConfig['weight']['unit'].'·'.$this->post['number'].$this->teaConfig['frequency']['unit'];
-            $this->en_text = $tea['en_name'].'·'.$this->post['weight'].$this->teaConfig['weight']['en_unit'].'·'.$this->post['number'].$this->teaConfig['frequency']['en_unit'];
+            $this->text = $tea[$this->prefix.'name'].'·'.$this->post['weight'].$this->teaConfig['weight'][$this->prefix.'unit'].'·'.$this->post['number'].$this->teaConfig['frequency'][$this->prefix.'unit'];
         }
 
     }
@@ -225,8 +208,7 @@ class TeaQrCode
     {
         if(!$this->detail_image_name)
         {
-            $this->detail_image_name = 'detail-'.md5($this->post['name']).'-'.$this->image_name;
-            isset($this->post['en_name']) && $this->post['en_name'] ? $this->en_detail_image_name = 'detail-'.md5($this->post['en_name']).'-'.$this->image_name : '';
+            $this->detail_image_name = isset($this->post['name']) && $this->post['name'] ? $this->prefix.'detail-'.md5($this->post['name']).'-'.$this->image_name : '';
         }
 
     }
@@ -234,8 +216,7 @@ class TeaQrCode
     {
         if(!$this->detail_image)
         {
-            $this->detail_image = $this->directory.'/'.$this->detail_image_name;
-            isset($this->post['en_name']) && $this->post['en_name'] ? $this->en_detail_image = $this->directory.'/'.$this->en_detail_image_name  : '';
+            $this->detail_image = isset($this->post['name']) && $this->post['name'] ?  $this->directory.'/'.$this->detail_image_name : '';
         }
 
     }

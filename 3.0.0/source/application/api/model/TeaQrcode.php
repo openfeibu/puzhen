@@ -41,6 +41,15 @@ class TeaQrcode extends TeaQrcodeModel
         try {
             $teaQrCodeService->generate();
             $data = $teaQrCodeService->getTeaQrcodeData();
+            if(isset($post['en_name']) && $post['en_name'])
+            {
+                $post['name'] = $post['en_name'];
+                $teaQrCodeService = new TeaQrCodeService($post,'en_');
+                $teaQrCodeService->user = $user;
+                $teaQrCodeService->generate();
+                $en_data = $teaQrCodeService->getTeaQrcodeData();
+                $data = array_merge($data,$en_data);
+            }
             $data['wxapp_id'] = self::$wxapp_id;
             $this->data($data)->save();
             $this->commit();
@@ -68,6 +77,10 @@ class TeaQrcode extends TeaQrcodeModel
     public function getImageAttr($value, $data)
     {
         return  $data['image'] ? self::$base_url . 'uploads' . $data['image'] : '';
+    }
+    public function getEnImageAttr($value, $data)
+    {
+        return  $data['en_image'] ? self::$base_url . 'uploads' . $data['en_image'] : '';
     }
     public function getDetailImageAttr($value, $data)
     {

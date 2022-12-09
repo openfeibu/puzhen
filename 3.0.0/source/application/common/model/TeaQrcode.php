@@ -98,42 +98,54 @@ class TeaQrcode extends BaseModel
     }
     public function edit($post)
     {
-        if($post['name']) {
+        if(isset($post['name']) && $post['name']) {
 
-            $file = WEB_PATH . 'uploads/' . $this->getData('image');
+            $file = $this->getData('image') ? WEB_PATH . 'uploads/' . $this->getData('image') : '';
             $image_name = basename($this->getData('image'));
             $directory = dirname($this->getData('image'));
-
             $detail_image = $this->getData('detail_image');
-            $en_detail_image = $this->getData('en_detail_image');
+            $tea_data = json_decode($this->getData('data'),true);
+            $data = array_merge($tea_data,$post);
 
-            if (file_exists($file)) {
-                $tea_data = json_decode($this->getData('data'),true);
-                $data = array_merge($tea_data,$post);
-                $data['en_name'] =  $data['en_name'] ?? '';
-                $teaQrCodeService = new TeaQrCodeService($data);
-                $teaQrCodeService->setDirectory($directory);
-                $teaQrCodeService->file = $file;
-                //$teaQrCodeService->text = $this['data']['tea_name'] . '·' . $this['data']['weight'] . 'g·' . $this['data']['number'] . '泡';
-                $teaQrCodeService->image_name = $image_name;
-                $teaQrCodeService->generateDetail();
-                $detail_image = $teaQrCodeService->detail_image;
-                $en_detail_image = $teaQrCodeService->en_detail_image ?: $en_detail_image;
-            }
+            $teaQrCodeService = new TeaQrCodeService($data);
+            $teaQrCodeService->setDirectory($directory);
+            $teaQrCodeService->file = $file;
+            $teaQrCodeService->image_name = $image_name;
+            $teaQrCodeService->generateDetail();
+            $detail_image = $teaQrCodeService->detail_image ?: $detail_image;
+
             $post['detail_image'] = $detail_image;
-            $post['en_detail_image'] = $post['en_name'] ? $en_detail_image : '';
-            //$this->allowField(true)->save(['name' => $post['name'],'detail_image' => $detail_image]) !== false;
         }
+        if(isset($post['en_name']) && $post['en_name']){
 
+            $en_file = $this->getData('image') ? WEB_PATH . 'uploads/' . $this->getData('en_image') : '';
+            $en_image_name = basename($this->getData('en_image'));
+            $en_directory = dirname($this->getData('en_image'));
+            $en_detail_image = $this->getData('en_detail_image');
+            $tea_data = json_decode($this->getData('data'),true);
+            $data = array_merge($tea_data,$post);
+            $data['name'] = $post['en_name'];
+            $teaQrCodeService = new TeaQrCodeService($data,'en_');
+            $teaQrCodeService->setDirectory($en_directory);
+            $teaQrCodeService->file = $en_file;
+            $teaQrCodeService->image_name = $en_image_name;
+            $teaQrCodeService->generateDetail();
+            $en_detail_image = $teaQrCodeService->detail_image ?: $en_detail_image;
+            $post['en_detail_image'] = $en_detail_image;
+        }
         return $this->allowField(true)->save($post) !== false;
     }
     public function getImageUrlAttr($value, $data)
     {
-        return self::$base_url . 'uploads' . $data['image'];
+        return $data['image'] ? self::$base_url . 'uploads' . $data['image'] : '';
+    }
+    public function getEnImageUrlAttr($value, $data)
+    {
+        return $data['en_image'] ? self::$base_url . 'uploads' . $data['en_image'] : '';
     }
     public function getDetailImageUrlAttr($value, $data)
     {
-        return self::$base_url . 'uploads' . $data['detail_image'];
+        return $data['detail_image'] ? self::$base_url . 'uploads' . $data['detail_image'] : '';
     }
 
     public function getEnDetailImageUrlAttr($value, $data)
