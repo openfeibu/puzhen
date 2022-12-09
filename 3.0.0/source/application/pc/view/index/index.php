@@ -3,9 +3,11 @@
     <div class="swiper-container swiper-container-banner-pc ">
         <div class="swiper-wrapper">
             <?php if(!empty($pcBannerList)): foreach($pcBannerList as $item): ?>
-            <div class="swiper-slide">
-                <a href="<?= $item['link'] ?: 'javascript:;'; ?>"><img src="<?= $item['image']['file_path'] ?? ''; ?>" width="100%"></a>
-            </div>
+                <?php if(isset($item[$prefix.'image']['file_path']) && $item[$prefix.'image']['file_path']): ?>
+                    <div class="swiper-slide">
+                        <a href="<?= $item['link'] ?: 'javascript:;'; ?>"><img src="<?= $item[$prefix.'image']['file_path']; ?>" width="100%"></a>
+                    </div>
+                <?php endif;?>
             <?php endforeach; endif;?>
         </div>
         <div class="swiper-pagination swiper-pagination-banner swiper-pagination-banner-pc"></div>
@@ -13,9 +15,11 @@
     <div class="swiper-container swiper-container-banner-h5">
         <div class="swiper-wrapper">
             <?php if(!empty($mobileBannerList)): foreach($mobileBannerList as $item): ?>
+                <?php if(isset($item[$prefix.'image']['file_path']) && $item[$prefix.'image']['file_path']): ?>
                 <div class="swiper-slide">
-                    <a href="<?= $item['link'] ?: 'javascript:;'; ?>"><img src="<?= $item['image']['file_path'] ?? ''; ?>" width="100%"></a>
+                    <a href="<?= $item['link'] ?: 'javascript:;'; ?>"><img src="<?= $item[$prefix.'image']['file_path']; ?>" width="100%"></a>
                 </div>
+                <?php endif;?>
             <?php endforeach; endif;?>
         </div>
         <div class="swiper-pagination swiper-pagination-banner swiper-pagination-banner-h5"></div>

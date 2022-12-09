@@ -46,6 +46,10 @@ class TeaQrCode
         $teaConfigModel = new TeaConfig;
         $this->teaConfig = $teaConfigModel->getList();
         $this->prefix = $prefix;
+        if($this->prefix == 'en_')
+        {
+            $this->split_len = 30;
+        }
         $this->getText();
     }
     public function generate()
