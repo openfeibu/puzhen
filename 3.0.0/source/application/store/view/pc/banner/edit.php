@@ -15,10 +15,10 @@
                                     <div class="am-form-file">
                                         <div class="am-form-file">
                                             <button type="button"
-                                                    class="upload-file upload-file-face am-btn am-btn-secondary am-radius">
+                                                    class="upload-file upload-file-image am-btn am-btn-secondary am-radius">
                                                 <i class="am-icon-cloud-upload"></i> 选择图片
                                             </button>
-                                            <div class="uploader-list uploader-list-face am-cf">
+                                            <div class="uploader-list uploader-list-image am-cf">
                                                 <div class="file-item face-item">
                                                     <a href="<?= $model['image']['file_path'] ?>"
                                                        title="点击查看大图" target="_blank">
@@ -33,7 +33,30 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label"> 英文图片 </label>
+                                <div class="am-u-sm-9 am-u-end">
+                                    <div class="am-form-file">
+                                        <div class="am-form-file">
+                                            <button type="button"
+                                                    class="upload-file upload-file-en-image am-btn am-btn-secondary am-radius">
+                                                <i class="am-icon-cloud-upload"></i> 选择图片
+                                            </button>
+                                            <div class="uploader-list uploader-list-en-image am-cf">
+                                                <div class="file-item face-item">
+                                                    <a href="<?= $model['en_image']['file_path'] ?>"
+                                                       title="点击查看大图" target="_blank">
+                                                        <img src="<?= $model['en_image']['file_path'] ?>">
+                                                    </a>
+                                                    <input type="hidden" name="banner[en_image_id]"
+                                                           value="<?= $model['en_image_id'] ?>">
+                                                    <i class="iconfont icon-shanchu file-item-delete face-item-delete"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="am-form-group">
                                 <label class="am-u-sm-3 am-u-lg-2 am-form-label">链接 </label>
                                 <div class="am-u-sm-9 am-u-end">
@@ -89,8 +112,13 @@
 
 
         // 选择图片
-        $('.upload-file-face').selectImages({
+        $('.upload-file-image').selectImages({
             name: 'banner[image_id]'
+            , imagesList: '.uploader-list-image'
+        });
+        $('.upload-file-en-image').selectImages({
+            name: 'banner[en_image_id]'
+            , imagesList: '.uploader-list-en-image'
         });
 
         /**

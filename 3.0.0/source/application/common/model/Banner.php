@@ -27,7 +27,15 @@ class Banner extends BaseModel
         $module = self::getCalledModule() ?: 'common';
         return $this->hasOne("app\\{$module}\\model\\UploadFile", 'file_id', 'image_id');
     }
-
+    /**
+     * 关联图片
+     * @return \think\model\relation\HasOne
+     */
+    public function enImage()
+    {
+        $module = self::getCalledModule() ?: 'common';
+        return $this->hasOne("app\\{$module}\\model\\UploadFile", 'file_id', 'en_image_id');
+    }
     public function getList($type)
     {
         $data = $this->with(['image'])
