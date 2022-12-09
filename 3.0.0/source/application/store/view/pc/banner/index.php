@@ -31,6 +31,7 @@
                             <tr>
                                 <th>轮播图ID</th>
                                 <th>图片</th>
+                                <th>英文图片</th>
                                 <th>链接</th>
                                 <th>类型</th>
                                 <th>排序</th>
@@ -47,6 +48,13 @@
                                         <a href="<?= $item['image']['file_path'] ?>" title="点击查看大图" target="_blank">
                                             <img src="<?= $item['image']['file_path'] ?>" width="72" height="" alt="">
                                         </a>
+                                        <?php endif; ?>
+                                    </td>
+                                    <td class="am-text-middle">
+                                        <?php if ($item['en_image']['file_path']): ?>
+                                            <a href="<?= $item['en_image']['file_path'] ?>" title="点击查看大图" target="_blank">
+                                                <img src="<?= $item['en_image']['file_path'] ?>" width="72" height="" alt="">
+                                            </a>
                                         <?php endif; ?>
                                     </td>
                                     <td class="am-text-middle"><?= $item['link'] ?></td>
