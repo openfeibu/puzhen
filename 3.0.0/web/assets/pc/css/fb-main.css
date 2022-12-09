@@ -98,8 +98,8 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #
     -ms-transform: scale(1.1);
     transform: scale(1.1);
 }
-
-
+.p14{font-size:14px}
+.p12{font-size:12px}
 
 header{height: 109px;background: url(../images/nav_bg.png) repeat-x bottom left/auto 17px;}
 .headerBg{height: 92px;background-color:#fff9f6;} 
@@ -125,7 +125,7 @@ header .nav ul li dl dd a:hover{color: #bf0123 !important;} */
 .lang  dl{background-color: #f9f9f9;color: #000000;position: absolute;top: 50px;width: 120px;padding:10px 20px;left: 50%;margin-left: -60px;text-align: center;border-radius: 5px;display: none;}
 .lang  dl dd {line-height: 40px;font-size: 14px;}
 .lang  dl dd a{color: #333;}
-.lang  dl dd a:hover{color: #bf0123;}
+.lang a:hover{color: #bf0123;}
 .home-btn{line-height: 40px;font-size: 20px;margin-top: 20px;margin-left: 34px;}
 .home-btn a{color: #000;}
 .headerRight{position: relative;z-index: 999;top: 20px;line-height: 40px;}
@@ -265,7 +265,8 @@ header .nav ul li dl dd a:hover{color: #bf0123 !important;} */
     width: 90%;
     color: #333;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 22px;
+	height:44px;
 }
 .product-list-con-item .test-title .collection{
     position: absolute;
@@ -295,7 +296,7 @@ header .nav ul li dl dd a:hover{color: #bf0123 !important;} */
     line-height: 36px;
     color: #fff;
     font-size:14px;
-    margin-top: 5px;
+    margin: 10px auto 0 auto;
 
    
 }
@@ -321,7 +322,7 @@ header .nav ul li dl dd a:hover{color: #bf0123 !important;} */
     font-size:14px;
     width: 100px;
     height: 36px;
-    margin-top:5px ;
+    margin: 10px auto 0;
 }
 
 /* 详情页 */
@@ -718,7 +719,7 @@ header .nav ul li dl dd a:hover{color: #bf0123 !important;} */
 .footer-logo p{font-size: 30px;color: #fff;opacity: 0.6;}
 #wap-nav{display: none;}
 .footer-link{padding-top: 10px;margin-top:10px;border-top: 1px solid #c66065;}
-.footer-link a{ color: #fff;font-size: 14px;margin-right: 5px;}
+.footer-link a{ color: #fff;font-size: 14px;margin-right: 5px;text-decoration:underline}
 .footer-link a:hover{opacity: 0.8;}
 
 
@@ -988,7 +989,7 @@ header .nav ul li dl dd a:hover{color: #bf0123 !important;} */
 .product-list-con-item .test-title {margin:0.1rem 0;}
 .product-list-con-item .test-title .name{
     width: 90%;
-    color: #333;font-size: 0.28rem;line-height: 0.4rem;
+    color: #333;font-size: 0.26rem;line-height: 0.36rem;height:0.72rem;
 }
 .product-list-con-item .test-des{
     color: #666;font-size: 0.24rem;
@@ -1041,6 +1042,7 @@ header .nav ul li dl dd a:hover{color: #bf0123 !important;} */
     width: 1.2rem;
     height: 0.45rem;
     margin-top:0 ;
+	 margin-left:0;
     /*float: none;*/
 }
 .product-list-con-item .test-title .collection{
@@ -1363,7 +1365,7 @@ header .nav ul li dl dd a:hover{color: #bf0123 !important;} */
 
 .footer-con{background: url(../images/footer_bg.jpg);padding: 0.4rem 0.2rem;}
 .footer-con-left{padding: 0;}
-.footer-con-left .footer-info{font-size: 0.22rem;color: #fff;line-height: 0.36rem;}
+.footer-con-left .footer-info{font-size: 0.26rem;color: #fff;line-height: 0.4rem;}
 .footer-con-left .footer-info a{color: #fff;}
 .footer-con-right{}
 .footer-ewm{margin: 0.3rem 0;}
