@@ -24,18 +24,17 @@ class TeaQrCode
     public $en_file;
     public $directory;
     public $image_name = '';
-    public $en_image_name = '';
-    public $image_url = '';
-    public $en_image_url = '';
+    public $image = '';
     public $text = '';
     public $en_text = '';
     public $detail_image = '';
     public $detail_image_name = '';
-    public $en_detail_image = '';
-    public $en_detail_image_name = '';
     public $qrcode_url = '';
     public $prefix = '';
     private $teaConfig;
+    /**
+     * @var false
+     */
 
     /**
      * 构造方法
@@ -56,7 +55,7 @@ class TeaQrCode
         $this->getDirectory();
         $this->getImageName();
         $this->getFile();
-        $this->getImageUrl();
+        $this->getImage();
         $this->getDetailImageName();
         $this->getDetailImage();
         $this->generateQrCode();
@@ -123,8 +122,9 @@ class TeaQrCode
 
     public function getQrcodeUrl(){
 
-        $this->post['seconds_arr'] = is_array($this->post['seconds']) ? $this->post['seconds'] : explode(',',$this->post['seconds']);
-        $this->post['temperature_arr'] = is_array($this->post['temperature']) ? $this->post['temperature'] : explode(',',$this->post['temperature']);
+
+        $this->post['seconds_arr'] = $this->post['seconds_arr'] ?? (is_array($this->post['seconds']) ? $this->post['seconds'] : explode(',',$this->post['seconds']));
+        $this->post['temperature_arr'] = $this->post['temperature_arr'] ?? (is_array($this->post['temperature']) ? $this->post['temperature'] : explode(',',$this->post['temperature']));
 
         $temperature = implode(' ',$this->post['temperature_arr']);
         $second = implode(' ',$this->post['seconds_arr']);
@@ -138,7 +138,7 @@ class TeaQrCode
             'user_id' => isset($this->user) && $this->user ? $this->user['user_id'] : 0,
             $this->prefix.'name' => $this->post['name'],
             'data' => json_encode($this->data),
-            $this->prefix.'image' => $this->image_url,
+            $this->prefix.'image' => $this->image,
             $this->prefix.'detail_image' => $this->detail_image,
         ] ;
     }
@@ -189,9 +189,9 @@ class TeaQrCode
     {
         $this->file = $file;
     }
-    public function getImageUrl()
+    public function getImage()
     {
-        $this->image_url = $this->directory.'/'.$this->image_name;
+        $this->image = $this->directory.'/'.$this->image_name;
     }
 
     public function getText()

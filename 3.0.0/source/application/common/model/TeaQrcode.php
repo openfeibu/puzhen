@@ -106,19 +106,25 @@ class TeaQrcode extends BaseModel
             $detail_image = $this->getData('detail_image');
             $tea_data = json_decode($this->getData('data'),true);
             $data = array_merge($tea_data,$post);
-
             $teaQrCodeService = new TeaQrCodeService($data);
-            $teaQrCodeService->setDirectory($directory);
-            $teaQrCodeService->file = $file;
-            $teaQrCodeService->image_name = $image_name;
-            $teaQrCodeService->generateDetail();
-            $detail_image = $teaQrCodeService->detail_image ?: $detail_image;
+            if(!file_exists($file))
+            {
+                $teaQrCodeService->generate();
+                $post['image'] = $teaQrCodeService->image;
+            }
+            else{
+                $teaQrCodeService->setDirectory($directory);
+                $teaQrCodeService->file = $file;
+                $teaQrCodeService->image_name = $image_name;
+                $teaQrCodeService->generateDetail();
+            }
 
+            $detail_image = $teaQrCodeService->detail_image ?: $detail_image;
             $post['detail_image'] = $detail_image;
         }
         if(isset($post['en_name']) && $post['en_name']){
 
-            $en_file = $this->getData('image') ? WEB_PATH . 'uploads/' . $this->getData('en_image') : '';
+            $en_file = $this->getData('en_image') ? WEB_PATH . 'uploads/' . $this->getData('en_image') : '';
             $en_image_name = basename($this->getData('en_image'));
             $en_directory = dirname($this->getData('en_image'));
             $en_detail_image = $this->getData('en_detail_image');
@@ -126,10 +132,17 @@ class TeaQrcode extends BaseModel
             $data = array_merge($tea_data,$post);
             $data['name'] = $post['en_name'];
             $teaQrCodeService = new TeaQrCodeService($data,'en_');
-            $teaQrCodeService->setDirectory($en_directory);
-            $teaQrCodeService->file = $en_file;
-            $teaQrCodeService->image_name = $en_image_name;
-            $teaQrCodeService->generateDetail();
+            if(!file_exists($en_file))
+            {
+                $teaQrCodeService->generate();
+                $post['en_image'] = $teaQrCodeService->image;
+            }
+            else{
+                $teaQrCodeService->setDirectory($en_directory);
+                $teaQrCodeService->file = $en_file;
+                $teaQrCodeService->image_name = $en_image_name;
+                $teaQrCodeService->generateDetail();
+            }
             $en_detail_image = $teaQrCodeService->detail_image ?: $en_detail_image;
             $post['en_detail_image'] = $en_detail_image;
         }
