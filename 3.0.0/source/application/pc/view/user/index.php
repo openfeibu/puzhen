@@ -17,11 +17,11 @@
                     <div class="test">
                         <div class="test-bottom">
                             <div class="test-code clearfix">
-                                <div class="test-code-l fl">
+                                <div class="test-code-l ">
                                     <div class="n fb-overflow-1"><?= $item[$prefix.'name'] ? $item[$prefix.'name'] : ($item['name'] ?: $item['en_name']); ?></div>
                                     <div class="c"><?= $item['data'][$prefix.'tea_name'] ?: $item['data']['tea_name']; ?> · <?= $item['data']['weight'] ?><?= lang('g')?> · <?= $item['data']['number'] ?><?= lang('tea.times')?></div>
                                 </div>
-                                <div class="test-code-r fr"><?= lang('to_make_tea')?></div>
+                                <div class="test-code-r "><?= lang('to_make_tea')?></div>
                             </div>
                         </div>
                     </div>
