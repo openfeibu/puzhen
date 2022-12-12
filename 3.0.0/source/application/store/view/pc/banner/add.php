@@ -9,7 +9,7 @@
                                 <div class="widget-title am-fl">编辑轮播图</div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-u-lg-2 am-form-label form-require">图片</label>
+                                <label class="am-u-sm-3 am-u-lg-2 am-form-label">图片</label>
                                 <div class="am-u-sm-9 am-u-end">
                                     <div class="am-form-file">
                                         <div class="am-form-file">

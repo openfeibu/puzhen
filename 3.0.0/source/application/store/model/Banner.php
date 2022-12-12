@@ -14,9 +14,9 @@ class Banner extends BannerModel
 
     public function add($data)
     {
-        if (!$this->validateForm($data)) {
-            return false;
-        }
+//        if (!$this->validateForm($data)) {
+//            return false;
+//        }
         $data['wxapp_id'] = self::$wxapp_id;
         // 开启事务
         $this->startTrans();
@@ -33,9 +33,9 @@ class Banner extends BannerModel
     }
     public function edit($data)
     {
-        if (!$this->validateForm($data)) {
-            return false;
-        }
+//        if (!$this->validateForm($data)) {
+//            return false;
+//        }
         $data['wxapp_id'] = self::$wxapp_id;
         return $this->transaction(function () use ($data) {
             // 保存
