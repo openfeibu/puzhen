@@ -24,7 +24,7 @@
                 </div>
                 <div class="about-page-contact-test-email">
                     <p><?= lang('email'); ?></p>
-                    <span><?= $setting['store']['values']['email'];?></span>
+                    <span><?= $setting['store']['values'][$prefix.'email'];?></span>
                 </div>
             </div>
             <div class="about-page-contact-img fb-inline-block">

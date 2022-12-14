@@ -31,7 +31,7 @@ use app\common\enum\DeliveryType as DeliveryTypeEnum;
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-form-label "> 公司英文名称 </label>
+                                <label class="am-u-sm-3 am-form-label "> 英文公司名称 </label>
                                 <div class="am-u-sm-9">
                                     <input type="text" class="tpl-form-input" name="store[en_company]"
                                            value="<?= $values['en_company']  ?? '' ?>" required>
@@ -45,7 +45,7 @@ use app\common\enum\DeliveryType as DeliveryTypeEnum;
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-form-label "> 地址英文 </label>
+                                <label class="am-u-sm-3 am-form-label "> 英文地址 </label>
                                 <div class="am-u-sm-9">
                                     <input type="text" class="tpl-form-input" name="store[en_address]"
                                            value="<?= $values['en_address']  ?? '' ?>" required>
@@ -63,6 +63,13 @@ use app\common\enum\DeliveryType as DeliveryTypeEnum;
                                 <div class="am-u-sm-9">
                                     <input type="text" class="tpl-form-input" name="store[email]"
                                            value="<?= $values['email'] ?? '' ?>" required>
+                                </div>
+                            </div>
+                            <div class="am-form-group">
+                                <label class="am-u-sm-3 am-form-label "> 英文邮箱 </label>
+                                <div class="am-u-sm-9">
+                                    <input type="text" class="tpl-form-input" name="store[en_email]"
+                                           value="<?= $values['en_email'] ?? '' ?>" required>
                                 </div>
                             </div>
                             <div class="am-form-group">
