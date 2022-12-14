@@ -47,7 +47,10 @@ class User extends Basics
         $pcSetting = Setting::getItem('pc', $wxappId);
         $prefix = Cookie::get('think_var') == 'zh-cn' ? '' : 'en_';
         $this->param['product'] = $this->param['product'] ?? ($pcSetting[$prefix.'name'] ?? $pcSetting['name']);
-
+        $code = rand(1000, 9999);
+        $send_params = [
+            'code' => $code
+        ];
         if(isset($this->param['phone_numbers']) || isset($this->param['phone_number']))
         {
             $fun = "sendSms";
@@ -57,15 +60,14 @@ class User extends Basics
             $fun = "sendEmail";
             $account = $this->param['email'];
             $accountType = 'email';
+            $send_params['product'] = $this->param['product'] ?? '';
         }
         $seTime = time() - Session::get($account.'SMSLimit');
         if (Session::get($account.'SMSLimit') and ($seTime <= 60)) {
             throw new RequestTooFrequentException(['msg' => (60-$seTime)]);
         }
 
-        $code = rand(1000, 9999);
-
-        if($this->$fun($this->param['msg_type'],$account, ['code' => $code, 'product' => $this->param['product']], $wxappId))
+        if($this->$fun($this->param['msg_type'],$account, $send_params, $wxappId))
         {
             $verifyCodeModel = new VerifyCodeModel();
             $verifyCodeModel->save([

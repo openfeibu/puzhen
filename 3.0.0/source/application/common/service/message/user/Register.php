@@ -38,7 +38,15 @@ class Register extends Basics
     {
         //此处处理逻辑 todo
         $wxappId = $this->param['wxapp_id'];
-        return $this->sendSms('reg',$this->param['phone_numbers'], ['code' => $this->param['code'], 'product' => '泡臣'], $wxappId);
+        return $this->sendSms(
+            'reg',
+            $this->param['phone_numbers'],
+            [
+                'code' => $this->param['code'],
+                //'product' => '泡臣'
+            ], $wxappId
+        );
+
     }
 
 
