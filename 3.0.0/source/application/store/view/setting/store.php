@@ -80,7 +80,7 @@ use app\common\enum\DeliveryType as DeliveryTypeEnum;
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label class="am-u-sm-3 am-form-label "> 版权英文 </label>
+                                <label class="am-u-sm-3 am-form-label "> 英文版权 </label>
                                 <div class="am-u-sm-9">
                                     <input type="text" class="tpl-form-input" name="store[en_right]"
                                            value="<?= $values['en_right'] ?? '' ?>" required>
