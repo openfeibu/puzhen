@@ -204,7 +204,7 @@ class User extends UserModel
                 if($wechatWebAccount && $weappAccount['user_id'] != $wechatWebAccount['user_id'])
                 {
                     $fromUser = self::detail(['user_id' => $wechatWebAccount['user_id']]);
-                    UserModel::mergerUser($fromUser,$user);
+                    $fromUser ? UserModel::mergerUser($fromUser,$user) : '';
                 }
             }else{
                 //判断是否注册过网页
