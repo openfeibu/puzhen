@@ -20,8 +20,8 @@
 
                     <div class="test-code clearfix">
                         <div class="test-code-l ">
-                            <div class="n fb-overflow-2"><?= $item['goods_tea_qrcode']['tea_qrcode'][$prefix.'name'] ?: $item['goods_tea_qrcode']['tea_qrcode']['name'] ?></div>
-                            <div class="c">
+                            <div class="n fb-overflow-1"><?= $item['goods_tea_qrcode']['tea_qrcode'][$prefix.'name'] ?: $item['goods_tea_qrcode']['tea_qrcode']['name'] ?></div>
+                            <div class="c fb-overflow-1">
                                 <?= $item['goods_tea_qrcode']['tea_qrcode']['data'][$prefix.'tea_name'] ?: $item['goods_tea_qrcode']['tea_qrcode']['data']['tea_name'] ?> · <?= $item['goods_tea_qrcode']['tea_qrcode']['data']['weight'] ?><?= lang('g')?> · <?= $item['goods_tea_qrcode']['tea_qrcode']['data']['number'] ?><?= lang('tea.times')?></div>
                         </div>
                         <div class="test-code-r "><?= lang('to_make_tea')?></div>
